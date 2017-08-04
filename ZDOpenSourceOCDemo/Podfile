@@ -1,0 +1,31 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '8.0'
+
+def pods_oc
+  pod 'ReactiveObjC', '~> 3.0.0'
+  pod 'JLRoutes', '~> 2.0.5'
+  pod 'IGListKit', '~> 3.0.0'
+  pod 'YYModel'
+  pod 'YTKNetwork'
+  pod 'Masonry'
+  pod 'YogaKit', '~> 1.6.0'  
+end
+
+target 'ZDOpenSourceOCDemo' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ZDOpenSourceOCDemo
+  pods_oc
+
+  target 'ZDOpenSourceOCDemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ZDOpenSourceOCDemoUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

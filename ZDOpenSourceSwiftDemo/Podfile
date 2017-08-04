@@ -1,0 +1,35 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '8.0'
+
+def pods_swift
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'PromiseKit'
+  pod 'Texture'
+  pod 'IGListKit'
+  pod 'Alamofire'
+  pod 'ObjectMapper'
+  pod 'Kingfisher'
+  pod 'SnapKit'
+  pod 'lottie-ios'
+  pod 'MBProgressHUD'
+end
+
+target 'ZDOpenSourceSwiftDemo' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ZDOpenSourceSwiftDemo
+  pods_swift
+  
+  target 'ZDOpenSourceSwiftDemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ZDOpenSourceSwiftDemoUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
