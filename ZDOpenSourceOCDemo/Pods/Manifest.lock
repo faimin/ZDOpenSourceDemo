@@ -21,7 +21,29 @@ PODS:
   - IGListKit/Diffing (3.0.0)
   - JLRoutes (2.0.5)
   - Masonry (1.0.2)
+  - PINCache (3.0.1-beta.5):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.5)
+    - PINCache/Core (= 3.0.1-beta.5)
+  - PINCache/Arc-exception-safe (3.0.1-beta.5):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.5):
+    - PINOperation (= 1.0.3)
+  - PINOperation (1.0.3)
+  - PINRemoteImage/Core (3.0.0-beta.11):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.0-beta.11):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0-beta.11):
+    - PINCache (= 3.0.1-beta.5)
+    - PINRemoteImage/Core
   - ReactiveObjC (3.0.0)
+  - Texture (2.3.4):
+    - Texture/PINRemoteImage (= 2.3.4)
+  - Texture/Core (2.3.4)
+  - Texture/PINRemoteImage (2.3.4):
+    - PINRemoteImage/iOS (= 3.0.0-beta.11)
+    - PINRemoteImage/PINCache
+    - Texture/Core
   - Yoga (1.6.0)
   - YogaKit (1.6.0):
     - Yoga (~> 1.6)
@@ -30,11 +52,12 @@ PODS:
   - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - IGListKit (~> 3.0.0)
-  - JLRoutes (~> 2.0.5)
+  - IGListKit
+  - JLRoutes
   - Masonry
-  - ReactiveObjC (~> 3.0.0)
-  - YogaKit (~> 1.6.0)
+  - ReactiveObjC
+  - Texture
+  - YogaKit
   - YTKNetwork
   - YYModel
 
@@ -43,12 +66,16 @@ SPEC CHECKSUMS:
   IGListKit: 9eab6856a15fa25ad72018ff9d9eb2178c240fff
   JLRoutes: 2a5ee61d739b51a98c9d8112bee5149a19de8854
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  PINCache: 98e7b1ef782824ad231ade51987c218b758c30d8
+  PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
+  PINRemoteImage: d71988f11914a050d6d4cf51efc4ad1de8c0a9d8
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
+  Texture: 8cf0872fe33328c20d7e6c1fcbf1f23a82162f2f
   Yoga: 81670877477311136b1b3f69a6307ce62e1c89cf
   YogaKit: 8fe0ddd21673226c0b6077fc3ad5c8fa6cda722e
   YTKNetwork: c4b0c29c9d639dc050d475de69ee626d53eac598
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 42f3272def618cf98080125f47f6dd4a78ac454c
+PODFILE CHECKSUM: df8ddd6e666878a24ed3c90f7ac35beb7914210a
 
 COCOAPODS: 1.2.1
