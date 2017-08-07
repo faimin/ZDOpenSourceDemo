@@ -10,6 +10,8 @@ def pods_oc
   pod 'YYModel'
   pod 'YTKNetwork'
   pod 'Masonry'
+  pod 'PromiseKit'
+  pod 'KZPlayground'
 end
 
 target 'ZDOpenSourceOCDemo' do

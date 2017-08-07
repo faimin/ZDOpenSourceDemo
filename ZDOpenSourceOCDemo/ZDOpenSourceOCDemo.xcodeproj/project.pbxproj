@@ -18,6 +18,14 @@
 		DA2512961F349AF300633093 /* ZDOpenSourceOCDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2512951F349AF300633093 /* ZDOpenSourceOCDemoTests.m */; };
 		DA2512A11F349AF300633093 /* ZDOpenSourceOCDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2512A01F349AF300633093 /* ZDOpenSourceOCDemoUITests.m */; };
 		DA2512B31F349B5700633093 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2512B01F349B5700633093 /* ViewController.m */; };
+		DA4005A91F36C16E00260064 /* ZDBaseSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4005981F36C16E00260064 /* ZDBaseSectionView.m */; };
+		DA4005AA1F36C16E00260064 /* ZDBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA40059A1F36C16E00260064 /* ZDBaseTableViewCell.m */; };
+		DA4005AB1F36C16E00260064 /* ZDTableViewBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = DA40059E1F36C16E00260064 /* ZDTableViewBinding.m */; };
+		DA4005AC1F36C16E00260064 /* ZDCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4005A61F36C16E00260064 /* ZDCellViewModel.m */; };
+		DA4005AD1F36C16E00260064 /* ZDSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4005A81F36C16E00260064 /* ZDSectionViewModel.m */; };
+		DA4005B31F36C52500260064 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4005B01F36C52500260064 /* YYFPSLabel.m */; };
+		DA4005B41F36C52500260064 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4005B21F36C52500260064 /* YYWeakProxy.m */; };
+		DA4005B81F36C63D00260064 /* ZDCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4005B71F36C63D00260064 /* ZDCellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +69,27 @@
 		DA2512A21F349AF300633093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA2512AF1F349B5700633093 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DA2512B01F349B5700633093 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DA4005971F36C16E00260064 /* ZDBaseSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDBaseSectionView.h; sourceTree = "<group>"; };
+		DA4005981F36C16E00260064 /* ZDBaseSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDBaseSectionView.m; sourceTree = "<group>"; };
+		DA4005991F36C16E00260064 /* ZDBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDBaseTableViewCell.h; sourceTree = "<group>"; };
+		DA40059A1F36C16E00260064 /* ZDBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDBaseTableViewCell.m; sourceTree = "<group>"; };
+		DA40059C1F36C16E00260064 /* ZDBindingDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDBindingDefine.h; sourceTree = "<group>"; };
+		DA40059D1F36C16E00260064 /* ZDTableViewBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDTableViewBinding.h; sourceTree = "<group>"; };
+		DA40059E1F36C16E00260064 /* ZDTableViewBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDTableViewBinding.m; sourceTree = "<group>"; };
+		DA4005A01F36C16E00260064 /* ZDCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDCellProtocol.h; sourceTree = "<group>"; };
+		DA4005A11F36C16E00260064 /* ZDCellViewModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDCellViewModelProtocol.h; sourceTree = "<group>"; };
+		DA4005A21F36C16E00260064 /* ZDSectionProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDSectionProtocol.h; sourceTree = "<group>"; };
+		DA4005A31F36C16E00260064 /* ZDSectionViewModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDSectionViewModelProtocol.h; sourceTree = "<group>"; };
+		DA4005A51F36C16E00260064 /* ZDCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDCellViewModel.h; sourceTree = "<group>"; };
+		DA4005A61F36C16E00260064 /* ZDCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDCellViewModel.m; sourceTree = "<group>"; };
+		DA4005A71F36C16E00260064 /* ZDSectionViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDSectionViewModel.h; sourceTree = "<group>"; };
+		DA4005A81F36C16E00260064 /* ZDSectionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDSectionViewModel.m; sourceTree = "<group>"; };
+		DA4005AF1F36C52500260064 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		DA4005B01F36C52500260064 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		DA4005B11F36C52500260064 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		DA4005B21F36C52500260064 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		DA4005B61F36C63D00260064 /* ZDCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDCellModel.h; sourceTree = "<group>"; };
+		DA4005B71F36C63D00260064 /* ZDCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDCellModel.m; sourceTree = "<group>"; };
 		DED6398BF0F3395E7AE1408D /* Pods-ZDOpenSourceOCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FA52023809EA456FA45299D9 /* Pods-ZDOpenSourceOCDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemoUITests/Pods-ZDOpenSourceOCDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,9 +160,11 @@
 		DA25127A1F349AF300633093 /* ZDOpenSourceOCDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DA40057B1F36C11600260064 /* Vendor */,
 				DA2512AE1F349B5700633093 /* Controllers */,
 				DA2512B11F349B5700633093 /* ViewModels */,
 				DA2512B21F349B5700633093 /* Views */,
+				DA4005B51F36C60900260064 /* Models */,
 				DA25127E1F349AF300633093 /* AppDelegate.h */,
 				DA25127F1F349AF300633093 /* AppDelegate.m */,
 				DA2512841F349AF300633093 /* Main.storyboard */,
@@ -192,6 +223,89 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DA40057B1F36C11600260064 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				DA4005951F36C16E00260064 /* ZDTableViewBinding */,
+				DA4005AE1F36C52500260064 /* YYKit */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		DA4005951F36C16E00260064 /* ZDTableViewBinding */ = {
+			isa = PBXGroup;
+			children = (
+				DA4005961F36C16E00260064 /* ZDBaseViews */,
+				DA40059B1F36C16E00260064 /* ZDBinding */,
+				DA40059F1F36C16E00260064 /* ZDProtocols */,
+				DA4005A41F36C16E00260064 /* ZDViewModels */,
+			);
+			path = ZDTableViewBinding;
+			sourceTree = "<group>";
+		};
+		DA4005961F36C16E00260064 /* ZDBaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				DA4005971F36C16E00260064 /* ZDBaseSectionView.h */,
+				DA4005981F36C16E00260064 /* ZDBaseSectionView.m */,
+				DA4005991F36C16E00260064 /* ZDBaseTableViewCell.h */,
+				DA40059A1F36C16E00260064 /* ZDBaseTableViewCell.m */,
+			);
+			path = ZDBaseViews;
+			sourceTree = "<group>";
+		};
+		DA40059B1F36C16E00260064 /* ZDBinding */ = {
+			isa = PBXGroup;
+			children = (
+				DA40059C1F36C16E00260064 /* ZDBindingDefine.h */,
+				DA40059D1F36C16E00260064 /* ZDTableViewBinding.h */,
+				DA40059E1F36C16E00260064 /* ZDTableViewBinding.m */,
+			);
+			path = ZDBinding;
+			sourceTree = "<group>";
+		};
+		DA40059F1F36C16E00260064 /* ZDProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				DA4005A01F36C16E00260064 /* ZDCellProtocol.h */,
+				DA4005A11F36C16E00260064 /* ZDCellViewModelProtocol.h */,
+				DA4005A21F36C16E00260064 /* ZDSectionProtocol.h */,
+				DA4005A31F36C16E00260064 /* ZDSectionViewModelProtocol.h */,
+			);
+			path = ZDProtocols;
+			sourceTree = "<group>";
+		};
+		DA4005A41F36C16E00260064 /* ZDViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DA4005A51F36C16E00260064 /* ZDCellViewModel.h */,
+				DA4005A61F36C16E00260064 /* ZDCellViewModel.m */,
+				DA4005A71F36C16E00260064 /* ZDSectionViewModel.h */,
+				DA4005A81F36C16E00260064 /* ZDSectionViewModel.m */,
+			);
+			path = ZDViewModels;
+			sourceTree = "<group>";
+		};
+		DA4005AE1F36C52500260064 /* YYKit */ = {
+			isa = PBXGroup;
+			children = (
+				DA4005AF1F36C52500260064 /* YYFPSLabel.h */,
+				DA4005B01F36C52500260064 /* YYFPSLabel.m */,
+				DA4005B11F36C52500260064 /* YYWeakProxy.h */,
+				DA4005B21F36C52500260064 /* YYWeakProxy.m */,
+			);
+			path = YYKit;
+			sourceTree = "<group>";
+		};
+		DA4005B51F36C60900260064 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA4005B61F36C63D00260064 /* ZDCellModel.h */,
+				DA4005B71F36C63D00260064 /* ZDCellModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E0D8AB0F380C55A6F21C13B8 /* Frameworks */ = {
@@ -484,9 +598,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4005B31F36C52500260064 /* YYFPSLabel.m in Sources */,
+				DA4005AA1F36C16E00260064 /* ZDBaseTableViewCell.m in Sources */,
+				DA4005AB1F36C16E00260064 /* ZDTableViewBinding.m in Sources */,
 				DA2512801F349AF300633093 /* AppDelegate.m in Sources */,
+				DA4005B41F36C52500260064 /* YYWeakProxy.m in Sources */,
 				DA2512B31F349B5700633093 /* ViewController.m in Sources */,
 				DA25127D1F349AF300633093 /* main.m in Sources */,
+				DA4005B81F36C63D00260064 /* ZDCellModel.m in Sources */,
+				DA4005A91F36C16E00260064 /* ZDBaseSectionView.m in Sources */,
+				DA4005AD1F36C16E00260064 /* ZDSectionViewModel.m in Sources */,
+				DA4005AC1F36C16E00260064 /* ZDCellViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

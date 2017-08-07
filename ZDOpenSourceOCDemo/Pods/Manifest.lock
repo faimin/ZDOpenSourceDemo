@@ -14,13 +14,21 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - dyci (0.1.5.6):
+    - dyci/Injections (= 0.1.5.6)
+  - dyci/Injections (0.1.5.6)
   - IGListKit (3.0.0):
     - IGListKit/Default (= 3.0.0)
   - IGListKit/Default (3.0.0):
     - IGListKit/Diffing
   - IGListKit/Diffing (3.0.0)
   - JLRoutes (2.0.5)
+  - KZPlayground (0.3.3):
+    - dyci (~> 0.1.5.6)
+    - NHBalancedFlowLayout (~> 0.2)
+    - RSSwizzle (~> 0.1.0)
   - Masonry (1.0.2)
+  - NHBalancedFlowLayout (0.2)
   - PINCache (3.0.1-beta.5):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.5)
     - PINCache/Core (= 3.0.1-beta.5)
@@ -36,7 +44,19 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0-beta.11):
     - PINCache (= 3.0.1-beta.5)
     - PINRemoteImage/Core
+  - PromiseKit (4.3.1):
+    - PromiseKit/Foundation (= 4.3.1)
+    - PromiseKit/QuartzCore (= 4.3.1)
+    - PromiseKit/UIKit (= 4.3.1)
+  - PromiseKit/CorePromise (4.3.1)
+  - PromiseKit/Foundation (4.3.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.3.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.3.1):
+    - PromiseKit/CorePromise
   - ReactiveObjC (3.0.0)
+  - RSSwizzle (0.1.0)
   - Texture (2.3.4):
     - Texture/PINRemoteImage (= 2.3.4)
   - Texture/Core (2.3.4)
@@ -54,7 +74,9 @@ PODS:
 DEPENDENCIES:
   - IGListKit
   - JLRoutes
+  - KZPlayground
   - Masonry
+  - PromiseKit
   - ReactiveObjC
   - Texture
   - YogaKit
@@ -63,19 +85,24 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  dyci: '099c2e6dc98abb8f21b370cabbf1443ff700608a'
   IGListKit: 9eab6856a15fa25ad72018ff9d9eb2178c240fff
   JLRoutes: 2a5ee61d739b51a98c9d8112bee5149a19de8854
+  KZPlayground: '079127ffc487adb682d3407f68cc63e92927de97'
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  NHBalancedFlowLayout: fd253023c6754e605acdb180d50123e582cc62bb
   PINCache: 98e7b1ef782824ad231ade51987c218b758c30d8
   PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
   PINRemoteImage: d71988f11914a050d6d4cf51efc4ad1de8c0a9d8
+  PromiseKit: 25a114b90b932ec8169b5736bd0881fe0efa93b5
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
+  RSSwizzle: d561958f595028bfcef98c7d55c318b3878a61c6
   Texture: 8cf0872fe33328c20d7e6c1fcbf1f23a82162f2f
   Yoga: 81670877477311136b1b3f69a6307ce62e1c89cf
   YogaKit: 8fe0ddd21673226c0b6077fc3ad5c8fa6cda722e
   YTKNetwork: c4b0c29c9d639dc050d475de69ee626d53eac598
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: df8ddd6e666878a24ed3c90f7ac35beb7914210a
+PODFILE CHECKSUM: b6a06f275d9cb72ce1d0bd5ea2c301b4c4b7e09e
 
 COCOAPODS: 1.2.1
