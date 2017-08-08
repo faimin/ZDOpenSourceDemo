@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import <objc/runtime.h>
+#import <objc/message.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -33,7 +35,7 @@
 }
 
 - (void)setupData {
-    NSArray<NSString *> *data = @[@"YogaKit", @"IGListKit", @"Texture", @"JLRoute", @"其他"];
+    NSArray<NSString *> *data = @[@"YogaKit", @"IGListKit", @"Texture", @"JLRoute", @"Lottie"];
     self.data = data;
 }
 
@@ -54,7 +56,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    NSString *text = self.data[indexPath.row];
+    Class aClass = objc_getClass([text stringByAppendingString:@"ViewController"].UTF8String);
+    if (!aClass) return;
+
+    [self.navigationController showViewController:[aClass new] sender:tableView];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

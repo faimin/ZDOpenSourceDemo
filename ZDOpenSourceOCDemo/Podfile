@@ -12,6 +12,7 @@ def pods_oc
   pod 'Masonry'
   pod 'PromiseKit'
   pod 'KZPlayground'
+  pod 'lottie-ios'
 end
 
 target 'ZDOpenSourceOCDemo' do

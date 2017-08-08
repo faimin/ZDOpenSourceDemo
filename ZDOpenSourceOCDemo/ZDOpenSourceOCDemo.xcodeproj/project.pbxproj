@@ -26,6 +26,11 @@
 		DA4005B31F36C52500260064 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4005B01F36C52500260064 /* YYFPSLabel.m */; };
 		DA4005B41F36C52500260064 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4005B21F36C52500260064 /* YYWeakProxy.m */; };
 		DA4005B81F36C63D00260064 /* ZDCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4005B71F36C63D00260064 /* ZDCellModel.m */; };
+		DAE26CBD1F3986590072973F /* play_and_like_it.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE26CB91F3986590072973F /* play_and_like_it.json */; };
+		DAE26CBE1F3986590072973F /* progress_success.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE26CBA1F3986590072973F /* progress_success.json */; };
+		DAE26CBF1F3986590072973F /* vcTransition1.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE26CBB1F3986590072973F /* vcTransition1.json */; };
+		DAE26CC01F3986590072973F /* vcTransition2.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE26CBC1F3986590072973F /* vcTransition2.json */; };
+		DAE26CC31F3989850072973F /* LottieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE26CC21F3989850072973F /* LottieViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +95,12 @@
 		DA4005B21F36C52500260064 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
 		DA4005B61F36C63D00260064 /* ZDCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDCellModel.h; sourceTree = "<group>"; };
 		DA4005B71F36C63D00260064 /* ZDCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDCellModel.m; sourceTree = "<group>"; };
+		DAE26CB91F3986590072973F /* play_and_like_it.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = play_and_like_it.json; sourceTree = "<group>"; };
+		DAE26CBA1F3986590072973F /* progress_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = progress_success.json; sourceTree = "<group>"; };
+		DAE26CBB1F3986590072973F /* vcTransition1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcTransition1.json; sourceTree = "<group>"; };
+		DAE26CBC1F3986590072973F /* vcTransition2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcTransition2.json; sourceTree = "<group>"; };
+		DAE26CC11F3989850072973F /* LottieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LottieViewController.h; sourceTree = "<group>"; };
+		DAE26CC21F3989850072973F /* LottieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LottieViewController.m; sourceTree = "<group>"; };
 		DED6398BF0F3395E7AE1408D /* Pods-ZDOpenSourceOCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FA52023809EA456FA45299D9 /* Pods-ZDOpenSourceOCDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemoUITests/Pods-ZDOpenSourceOCDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +182,7 @@
 				DA2512871F349AF300633093 /* Assets.xcassets */,
 				DA2512891F349AF300633093 /* LaunchScreen.storyboard */,
 				DA25128C1F349AF300633093 /* Info.plist */,
+				DAE26CB71F3985F50072973F /* Resource */,
 				DA25127B1F349AF300633093 /* Supporting Files */,
 			);
 			path = ZDOpenSourceOCDemo;
@@ -207,6 +219,11 @@
 			children = (
 				DA2512AF1F349B5700633093 /* ViewController.h */,
 				DA2512B01F349B5700633093 /* ViewController.m */,
+				DAE26CB21F3985A40072973F /* IGListKitController */,
+				DAE26CB31F3985A40072973F /* JLRoteController */,
+				DAE26CB41F3985A40072973F /* LottieController */,
+				DAE26CB51F3985A40072973F /* TextureController */,
+				DAE26CB61F3985A40072973F /* YogaController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -306,6 +323,62 @@
 				DA4005B71F36C63D00260064 /* ZDCellModel.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DAE26CB21F3985A40072973F /* IGListKitController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IGListKitController;
+			sourceTree = "<group>";
+		};
+		DAE26CB31F3985A40072973F /* JLRoteController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JLRoteController;
+			sourceTree = "<group>";
+		};
+		DAE26CB41F3985A40072973F /* LottieController */ = {
+			isa = PBXGroup;
+			children = (
+				DAE26CC11F3989850072973F /* LottieViewController.h */,
+				DAE26CC21F3989850072973F /* LottieViewController.m */,
+			);
+			path = LottieController;
+			sourceTree = "<group>";
+		};
+		DAE26CB51F3985A40072973F /* TextureController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TextureController;
+			sourceTree = "<group>";
+		};
+		DAE26CB61F3985A40072973F /* YogaController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = YogaController;
+			sourceTree = "<group>";
+		};
+		DAE26CB71F3985F50072973F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DAE26CB81F3986460072973F /* LottieJson */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		DAE26CB81F3986460072973F /* LottieJson */ = {
+			isa = PBXGroup;
+			children = (
+				DAE26CB91F3986590072973F /* play_and_like_it.json */,
+				DAE26CBA1F3986590072973F /* progress_success.json */,
+				DAE26CBB1F3986590072973F /* vcTransition1.json */,
+				DAE26CBC1F3986590072973F /* vcTransition2.json */,
+			);
+			path = LottieJson;
 			sourceTree = "<group>";
 		};
 		E0D8AB0F380C55A6F21C13B8 /* Frameworks */ = {
@@ -433,7 +506,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE26CBE1F3986590072973F /* progress_success.json in Resources */,
+				DAE26CC01F3986590072973F /* vcTransition2.json in Resources */,
 				DA25128B1F349AF300633093 /* LaunchScreen.storyboard in Resources */,
+				DAE26CBD1F3986590072973F /* play_and_like_it.json in Resources */,
+				DAE26CBF1F3986590072973F /* vcTransition1.json in Resources */,
 				DA2512881F349AF300633093 /* Assets.xcassets in Resources */,
 				DA2512861F349AF300633093 /* Main.storyboard in Resources */,
 			);
@@ -603,6 +680,7 @@
 				DA4005AB1F36C16E00260064 /* ZDTableViewBinding.m in Sources */,
 				DA2512801F349AF300633093 /* AppDelegate.m in Sources */,
 				DA4005B41F36C52500260064 /* YYWeakProxy.m in Sources */,
+				DAE26CC31F3989850072973F /* LottieViewController.m in Sources */,
 				DA2512B31F349B5700633093 /* ViewController.m in Sources */,
 				DA25127D1F349AF300633093 /* main.m in Sources */,
 				DA4005B81F36C63D00260064 /* ZDCellModel.m in Sources */,

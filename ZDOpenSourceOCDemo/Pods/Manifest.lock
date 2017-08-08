@@ -27,6 +27,7 @@ PODS:
     - dyci (~> 0.1.5.6)
     - NHBalancedFlowLayout (~> 0.2)
     - RSSwizzle (~> 0.1.0)
+  - lottie-ios (2.0.3)
   - Masonry (1.0.2)
   - NHBalancedFlowLayout (0.2)
   - PINCache (3.0.1-beta.5):
@@ -75,6 +76,7 @@ DEPENDENCIES:
   - IGListKit
   - JLRoutes
   - KZPlayground
+  - lottie-ios
   - Masonry
   - PromiseKit
   - ReactiveObjC
@@ -89,6 +91,7 @@ SPEC CHECKSUMS:
   IGListKit: 9eab6856a15fa25ad72018ff9d9eb2178c240fff
   JLRoutes: 2a5ee61d739b51a98c9d8112bee5149a19de8854
   KZPlayground: '079127ffc487adb682d3407f68cc63e92927de97'
+  lottie-ios: 445f77c7f661f95587e49095a1ac7de43f0da896
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   NHBalancedFlowLayout: fd253023c6754e605acdb180d50123e582cc62bb
   PINCache: 98e7b1ef782824ad231ade51987c218b758c30d8
@@ -103,6 +106,6 @@ SPEC CHECKSUMS:
   YTKNetwork: c4b0c29c9d639dc050d475de69ee626d53eac598
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: b6a06f275d9cb72ce1d0bd5ea2c301b4c4b7e09e
+PODFILE CHECKSUM: 25ff9ded91a547ddde7826c5d3733cca9dc56863
 
 COCOAPODS: 1.2.1
