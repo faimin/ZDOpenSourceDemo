@@ -33,7 +33,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Z2V-Ob-nbF"/>
+                    <navigationItem key="navigationItem" id="Z2V-Ob-nbF">
+                        <barButtonItem key="rightBarButtonItem" title="KZPlayground" id="Gg1-Yg-6V2">
+                            <connections>
+                                <action selector="present:" destination="BYZ-38-t0r" id="IjA-u6-qGZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="bcj-yD-eqD" id="S9Z-gS-FhY"/>
                     </connections>

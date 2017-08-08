@@ -10,6 +10,7 @@
 		870603423EDEE8084C82B37D /* Pods_ZDOpenSourceOCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4875C92958445E434DA6A0B /* Pods_ZDOpenSourceOCDemo.framework */; };
 		8AD3EBF0E4449A78434589A7 /* Pods_ZDOpenSourceOCDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD9BC8843CBDE553105876E /* Pods_ZDOpenSourceOCDemoTests.framework */; };
 		B2D0033075F39DA1BD94CE52 /* Pods_ZDOpenSourceOCDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A25D25693BAD3A5A676D4DF /* Pods_ZDOpenSourceOCDemoUITests.framework */; };
+		DA053D361F39E5FC00F99582 /* ZDPlayground.m in Sources */ = {isa = PBXBuildFile; fileRef = DA053D351F39E5FC00F99582 /* ZDPlayground.m */; };
 		DA25127D1F349AF300633093 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA25127C1F349AF300633093 /* main.m */; };
 		DA2512801F349AF300633093 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA25127F1F349AF300633093 /* AppDelegate.m */; };
 		DA2512861F349AF300633093 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA2512841F349AF300633093 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		DAE26CBF1F3986590072973F /* vcTransition1.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE26CBB1F3986590072973F /* vcTransition1.json */; };
 		DAE26CC01F3986590072973F /* vcTransition2.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE26CBC1F3986590072973F /* vcTransition2.json */; };
 		DAE26CC31F3989850072973F /* LottieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE26CC21F3989850072973F /* LottieViewController.m */; };
+		DAE26CC61F398E170072973F /* YogaKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE26CC51F398E170072973F /* YogaKitViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		8130AE0D880F2830B6FF140A /* Pods-ZDOpenSourceOCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9DD9BC8843CBDE553105876E /* Pods_ZDOpenSourceOCDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZDOpenSourceOCDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4875C92958445E434DA6A0B /* Pods_ZDOpenSourceOCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZDOpenSourceOCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA053D341F39E5FC00F99582 /* ZDPlayground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDPlayground.h; sourceTree = "<group>"; };
+		DA053D351F39E5FC00F99582 /* ZDPlayground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDPlayground.m; sourceTree = "<group>"; };
 		DA2512781F349AF300633093 /* ZDOpenSourceOCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZDOpenSourceOCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA25127C1F349AF300633093 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA25127E1F349AF300633093 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 		DAE26CBC1F3986590072973F /* vcTransition2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcTransition2.json; sourceTree = "<group>"; };
 		DAE26CC11F3989850072973F /* LottieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LottieViewController.h; sourceTree = "<group>"; };
 		DAE26CC21F3989850072973F /* LottieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LottieViewController.m; sourceTree = "<group>"; };
+		DAE26CC41F398E170072973F /* YogaKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogaKitViewController.h; sourceTree = "<group>"; };
+		DAE26CC51F398E170072973F /* YogaKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogaKitViewController.m; sourceTree = "<group>"; };
 		DED6398BF0F3395E7AE1408D /* Pods-ZDOpenSourceOCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FA52023809EA456FA45299D9 /* Pods-ZDOpenSourceOCDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemoUITests/Pods-ZDOpenSourceOCDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,6 +237,8 @@
 		DA2512B11F349B5700633093 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DA053D341F39E5FC00F99582 /* ZDPlayground.h */,
+				DA053D351F39E5FC00F99582 /* ZDPlayground.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -358,6 +366,8 @@
 		DAE26CB61F3985A40072973F /* YogaController */ = {
 			isa = PBXGroup;
 			children = (
+				DAE26CC41F398E170072973F /* YogaKitViewController.h */,
+				DAE26CC51F398E170072973F /* YogaKitViewController.m */,
 			);
 			path = YogaController;
 			sourceTree = "<group>";
@@ -677,6 +687,7 @@
 			files = (
 				DA4005B31F36C52500260064 /* YYFPSLabel.m in Sources */,
 				DA4005AA1F36C16E00260064 /* ZDBaseTableViewCell.m in Sources */,
+				DA053D361F39E5FC00F99582 /* ZDPlayground.m in Sources */,
 				DA4005AB1F36C16E00260064 /* ZDTableViewBinding.m in Sources */,
 				DA2512801F349AF300633093 /* AppDelegate.m in Sources */,
 				DA4005B41F36C52500260064 /* YYWeakProxy.m in Sources */,
@@ -685,6 +696,7 @@
 				DA25127D1F349AF300633093 /* main.m in Sources */,
 				DA4005B81F36C63D00260064 /* ZDCellModel.m in Sources */,
 				DA4005A91F36C16E00260064 /* ZDBaseSectionView.m in Sources */,
+				DAE26CC61F398E170072973F /* YogaKitViewController.m in Sources */,
 				DA4005AD1F36C16E00260064 /* ZDSectionViewModel.m in Sources */,
 				DA4005AC1F36C16E00260064 /* ZDCellViewModel.m in Sources */,
 			);

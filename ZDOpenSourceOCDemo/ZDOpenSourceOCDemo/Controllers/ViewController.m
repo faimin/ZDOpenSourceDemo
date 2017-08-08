@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import <ReactiveObjC/ReactiveObjC.h>
+#import <KZPlayground/KZPPlayground.h>
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
@@ -40,6 +41,7 @@
 }
 
 - (void)setupUI {
+    self.view.backgroundColor = [UIColor yellowColor];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
 }
 
@@ -62,6 +64,10 @@
 
     [self.navigationController showViewController:[aClass new] sender:tableView];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (IBAction)present:(UIBarButtonItem *)sender {
+    [self.navigationController showViewController:[KZPPlaygroundViewController playgroundViewController] sender:sender];
 }
 
 @end

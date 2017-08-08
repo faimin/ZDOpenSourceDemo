@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <KZPlayground/KZPPlayground.h>
 
 @interface AppDelegate ()
 

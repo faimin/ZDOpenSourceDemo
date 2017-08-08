@@ -10,9 +10,16 @@ def pods_swift
   pod 'Alamofire'
   pod 'ObjectMapper'
   pod 'Kingfisher'
-  pod 'SnapKit'
   pod 'lottie-ios'
   pod 'MBProgressHUD'
+  # autolayout
+  pod 'Cartography', '~> 1.1.0'
+  pod 'SnapKit', '~> 3.2.0'
+  pod 'TinyConstraints', '~> 2.1.1'
+  # framelayout
+  pod 'YogaKit'
+  pod 'Neon', '~> 0.4.0'
+  pod 'LayoutKit', '~> 5.0.0'
 end
 
 target 'ZDOpenSourceSwiftDemo' do
