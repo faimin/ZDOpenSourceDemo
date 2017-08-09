@@ -1,17 +1,20 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 def pods_swift
+  # reactive
   pod 'RxSwift'
   pod 'RxCocoa'
+  # promise
   pod 'PromiseKit'
+  # optimize
   pod 'Texture'
   pod 'IGListKit'
+  # network
   pod 'Alamofire'
   pod 'ObjectMapper'
+  pod 'AlamofireObjectMapper'
   pod 'Kingfisher'
-  pod 'lottie-ios'
-  pod 'MBProgressHUD'
   # autolayout
   pod 'Cartography', '~> 1.1.0'
   pod 'SnapKit', '~> 3.2.0'
@@ -20,10 +23,14 @@ def pods_swift
   pod 'YogaKit'
   pod 'Neon', '~> 0.4.0'
   pod 'LayoutKit', '~> 5.0.0'
+  # animation
+  pod 'lottie-ios'
+  pod 'MBProgressHUD'
 end
 
 target 'ZDOpenSourceSwiftDemo' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  inhibit_all_warnings!
   use_frameworks!
 
   # Pods for ZDOpenSourceSwiftDemo

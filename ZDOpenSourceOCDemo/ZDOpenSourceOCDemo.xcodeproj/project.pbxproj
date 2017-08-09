@@ -177,6 +177,7 @@
 		DA25127A1F349AF300633093 /* ZDOpenSourceOCDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DAA0981A1F39F2AA00303DD4 /* Frameworks */,
 				DA40057B1F36C11600260064 /* Vendor */,
 				DA2512AE1F349B5700633093 /* Controllers */,
 				DA2512B11F349B5700633093 /* ViewModels */,
@@ -331,6 +332,13 @@
 				DA4005B71F36C63D00260064 /* ZDCellModel.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DAA0981A1F39F2AA00303DD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		DAE26CB21F3985A40072973F /* IGListKitController */ = {
