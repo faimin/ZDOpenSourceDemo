@@ -30,17 +30,25 @@
 
 - (void)setup {
     self.edgesForExtendedLayout = UIRectEdgeNone;
-    [self setupUI1];
-    [self setupUI2];
+    [self setupUI];
 }
 
-- (void)setupUI1 {
+- (void)setupUI {
     self.view.backgroundColor = [UIColor grayColor];
-    self.view.yoga.isEnabled = YES;
     
-    UIView *containerView = [UIView new];
-    containerView.backgroundColor = [UIColor cyanColor];
-    [containerView configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
+    [self.view configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
+        layout.isEnabled = YES;
+        layout.justifyContent = YGJustifySpaceBetween;
+        layout.flexDirection = YGFlexDirectionColumn;
+        layout.flexWrap = YGWrapWrap;
+        layout.alignItems = YGAlignCenter;
+        
+        layout.paddingBottom = YGPointValue(50 + 64); // 调整self.view与其子视图之间的间距
+    }];
+    
+    UIView *containerView1 = [UIView new];
+    containerView1.backgroundColor = [UIColor cyanColor];
+    [containerView1 configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
         layout.isEnabled = YES;
         layout.width = YGPointValue(CGRectGetWidth(self.view.bounds));
         layout.height = layout.width;
@@ -57,9 +65,24 @@
     [child1 configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
         layout.isEnabled = YES;
         layout.width = YGPointValue(200);
-        layout.height = YGPointValue(100);
+        layout.height = YGPointValue(200);
         //layout.alignSelf = YGAlignFlexEnd; // 单独指定自己的align,有点通过子类覆写父类的方法来达到修改的目的
+        
+        layout.justifyContent = YGJustifyFlexEnd;
+        layout.alignItems = YGAlignFlexEnd;
     }];
+    
+    UIView *leaf = [UIView new];
+    leaf.backgroundColor = [UIColor yellowColor];
+    [leaf configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
+        layout.isEnabled = YES;
+        layout.width = YGPointValue(50);
+        layout.height = YGPointValue(50);
+        layout.marginRight = YGPointValue(20);
+        layout.marginBottom = YGPointValue(10);
+    }];
+    [child1 addSubview:leaf];
+
     
     UIView *child2 = [UIView new];
     child2.backgroundColor = [UIColor greenColor];
@@ -77,30 +100,35 @@
         layout.height = YGPointValue(200);
     }];
     
-    [containerView addSubview:child1];
-    [containerView addSubview:child2];
-    [containerView addSubview:child3];
-    [self.view addSubview:containerView];
+    [containerView1 addSubview:child1];
+    [containerView1 addSubview:child2];
+    [containerView1 addSubview:child3];
+    [self.view addSubview:containerView1];
     
-    [containerView.yoga applyLayoutPreservingOrigin:NO dimensionFlexibility:YGDimensionFlexibilityFlexibleHeigth];
+    //[containerView1.yoga applyLayoutPreservingOrigin:NO dimensionFlexibility:YGDimensionFlexibilityFlexibleHeigth];
     
-    CGSize size = [containerView.yoga calculateLayoutWithSize:CGSizeMake(CGRectGetWidth(self.view.bounds), CGRectGetWidth(self.view.bounds))];
-    CGSize intrinsicSize = containerView.yoga.intrinsicSize;
+    CGSize size = [containerView1.yoga calculateLayoutWithSize:CGSizeMake(CGRectGetWidth(self.view.bounds), CGRectGetWidth(self.view.bounds))];
+    CGSize intrinsicSize = containerView1.yoga.intrinsicSize;
     NSLog(@"size = %@, intrinsicSize = %@", NSStringFromCGSize(size), NSStringFromCGSize(intrinsicSize));
-}
-
-- (void)setupUI2 {
+    
+    //--------------------------------------------------------
+    
     UIView *containerView2 = [UIView new];
-    containerView2.backgroundColor = [UIColor magentaColor];
+    containerView2.backgroundColor = [UIColor yellowColor];
     [containerView2 configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
         layout.isEnabled = YES;
         layout.width = YGPointValue(100);
         layout.height = YGPointValue(100);
-        layout.paddingRight = YGPointValue(-10);
-        layout.paddingBottom = YGPointValue(-10);
+        // margin是相对于其他视图的,下面的代码代表他与其父视图之间的间距.
+        // 等价于其父视图设置padding属性
+        layout.marginRight = YGPointValue(-50); // 向右移50pt
+        layout.marginBottom = YGPointValue(30 + 64);    // 上移30pt
     }];
     [self.view addSubview:containerView2];
+
+    [self.view.yoga applyLayoutPreservingOrigin:NO];
 }
+
 
 /*
 #pragma mark - Navigation
