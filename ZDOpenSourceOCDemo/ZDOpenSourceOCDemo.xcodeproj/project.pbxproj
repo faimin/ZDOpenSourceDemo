@@ -857,6 +857,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DED6398BF0F3395E7AE1408D /* Pods-ZDOpenSourceOCDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZDOpenSourceOCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -870,6 +871,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8130AE0D880F2830B6FF140A /* Pods-ZDOpenSourceOCDemo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZDOpenSourceOCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

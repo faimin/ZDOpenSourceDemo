@@ -5,11 +5,13 @@
 //  Created by Zero.D.Saber on 2017/8/8.
 //  Copyright © 2017年 Zero.D.Saber. All rights reserved.
 //
+//  布局说明:
 //  http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+//  https://github.com/jakemarsh/core-layout
+//  https://github.com/mwlio/YogaDemo
 
 #import "YogaKitViewController.h"
 #import <YogaKit/UIView+Yoga.h>
-#import <KZPlayground/KZPPlayground.h>
 
 @interface YogaKitViewController ()
 
@@ -43,8 +45,10 @@
         layout.flexWrap = YGWrapWrap;
         layout.alignItems = YGAlignCenter;
         
-        layout.paddingBottom = YGPointValue(50 + 64); // 调整self.view与其子视图之间的间距
+        //layout.paddingLeft = layout.paddingRight = YGPointValue(20); // self.view的左右内边距
+        layout.paddingBottom = YGPointValue(50 + 64); // 调整self.view与其子视图之间的间距(这个64是导航栏的高度)
     }];
+    
     
     UIView *containerView1 = [UIView new];
     containerView1.backgroundColor = [UIColor cyanColor];
@@ -59,6 +63,7 @@
         layout.alignItems = YGAlignCenter;  // 交叉轴(跟主轴相对的轴)上的对齐方式,此属性只是针对一条主轴的情况
         layout.alignContent = YGAlignSpaceBetween;  // 此属性跟上面的一样,只是这个针对的是多根主轴的情况,所以只有一根主轴时,此属性不起作用
     }];
+    
     
     UIView *child1 = [UIView new];
     child1.backgroundColor = [UIColor redColor];
@@ -80,9 +85,27 @@
         layout.height = YGPointValue(50);
         layout.marginRight = YGPointValue(20);
         layout.marginBottom = YGPointValue(10);
+        layout.borderWidth = 50; // 扩大视图的大小,此时视图的size将会变成{100, 100}
+        
+        layout.flexDirection = YGFlexDirectionRow;
+        layout.alignContent = YGAlignStretch;   // 针对多个主轴
+        layout.alignItems = YGAlignStretch;     //
     }];
     [child1 addSubview:leaf];
 
+    //TODO: 使其居中显示,类似于CGRectInset()函数
+    UIView *leafleaf = [UIView new];
+    leafleaf.backgroundColor = [UIColor purpleColor];
+    [leafleaf configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
+        layout.isEnabled = YES;
+        layout.flexGrow = 1;
+        //layout.width = layout.height = YGPointValue(30);
+        layout.margin = YGPointValue(6);
+        //layout.padding = YGPointValue(5);
+        layout.borderWidth = 20;
+    }];
+    [leaf addSubview:leafleaf];
+    
     
     UIView *child2 = [UIView new];
     child2.backgroundColor = [UIColor greenColor];
@@ -105,7 +128,6 @@
     [containerView1 addSubview:child3];
     [self.view addSubview:containerView1];
     
-    //[containerView1.yoga applyLayoutPreservingOrigin:NO dimensionFlexibility:YGDimensionFlexibilityFlexibleHeigth];
     
     CGSize size = [containerView1.yoga calculateLayoutWithSize:CGSizeMake(CGRectGetWidth(self.view.bounds), CGRectGetWidth(self.view.bounds))];
     CGSize intrinsicSize = containerView1.yoga.intrinsicSize;
@@ -113,16 +135,16 @@
     
     //--------------------------------------------------------
     
-    UIView *containerView2 = [UIView new];
+    UIView *containerView2 = [[UIView alloc] initWithFrame:(CGRect){CGPointZero, 100, 100}];
     containerView2.backgroundColor = [UIColor yellowColor];
     [containerView2 configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
         layout.isEnabled = YES;
-        layout.width = YGPointValue(100);
-        layout.height = YGPointValue(100);
         // margin是相对于其他视图的,下面的代码代表他与其父视图之间的间距.
         // 等价于其父视图设置padding属性
-        layout.marginRight = YGPointValue(-50); // 向右移50pt
+        //layout.marginRight = YGPointValue(-50); // 向右移50pt, 设置stretch之后此属性失效了
         layout.marginBottom = YGPointValue(30 + 64);    // 上移30pt
+        layout.margin = YGPointValue(10);
+        layout.alignSelf = YGAlignStretch;
     }];
     [self.view addSubview:containerView2];
 
