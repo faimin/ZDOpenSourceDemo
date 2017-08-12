@@ -83,26 +83,28 @@
         layout.isEnabled = YES;
         layout.width = YGPointValue(50);
         layout.height = YGPointValue(50);
+        /* 这几个属性的设置影响其子视图的显示
         layout.marginRight = YGPointValue(20);
         layout.marginBottom = YGPointValue(10);
-        layout.borderWidth = 50; // 扩大视图的大小,此时视图的size将会变成{100, 100}
+        layout.borderWidth = 50; // 扩大视图的大小,此时视图的size将会变成{100, 100},负数不起作用
+        */
         
         layout.flexDirection = YGFlexDirectionRow;
         layout.alignContent = YGAlignStretch;   // 针对多个主轴
-        layout.alignItems = YGAlignStretch;     //
+        layout.alignItems = YGAlignStretch;     // 让子视图达到填充效果
     }];
     [child1 addSubview:leaf];
 
-    //TODO: 使其居中显示,类似于CGRectInset()函数
     UIView *leafleaf = [UIView new];
     leafleaf.backgroundColor = [UIColor purpleColor];
     [leafleaf configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
         layout.isEnabled = YES;
+        // flex-grow的默认值为0,如果没有显示定义该属性,是不会拥有分配剩余空间权利的.
+        // 如果要视图填充父视图,需要设置flexGrow (默认为0).
+        // 这个属性是谁要拉伸,就谁自己设置,而不是其父视图设置.
         layout.flexGrow = 1;
-        //layout.width = layout.height = YGPointValue(30);
-        layout.margin = YGPointValue(6);
-        //layout.padding = YGPointValue(5);
-        layout.borderWidth = 20;
+        layout.margin = YGPointValue(10);
+        //layout.borderWidth = 20;
     }];
     [leaf addSubview:leafleaf];
     

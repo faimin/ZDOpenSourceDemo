@@ -6,12 +6,12 @@ import YogaKit
 
 var str = "Hello, playground"
 
-
+//: YogaKit
 let contentView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-contentView.backgroundColor = UIColor.white
+contentView.backgroundColor = .white
 contentView.configureLayout { (layout) in
     layout.isEnabled = true
-    layout.alignItems = .center
+    layout.alignItems = .stretch
     layout.justifyContent = .center
 }
 
@@ -21,24 +21,23 @@ subContent.configureLayout { (layout) in
     layout.isEnabled = true
     layout.flexDirection = .row
     layout.alignItems = .stretch
-    layout.width = 180
-    layout.height = 50
     layout.margin = 20
+    layout.flexGrow = 1
 }
 
-let child1 = UIView()
-child1.backgroundColor = .yellow
-child1.configureLayout { (layout) in
+let leaf = UIView()
+leaf.backgroundColor = .yellow
+leaf.configureLayout { (layout) in
     layout.isEnabled = true
     layout.flexGrow = 1
-    layout.margin = 6
-    layout.padding = 5
-    layout.borderWidth = 10
+    layout.margin = 30
+    //layout.borderWidth = 10
 }
 
-subContent.addSubview(child1)
+subContent.addSubview(leaf)
 contentView.addSubview(subContent)
 contentView.yoga.applyLayout(preservingOrigin: false)
- 
 
+subContent
+contentView
  
