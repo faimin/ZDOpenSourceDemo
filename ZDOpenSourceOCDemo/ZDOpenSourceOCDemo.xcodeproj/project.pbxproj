@@ -27,6 +27,7 @@
 		DA4005B31F36C52500260064 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4005B01F36C52500260064 /* YYFPSLabel.m */; };
 		DA4005B41F36C52500260064 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4005B21F36C52500260064 /* YYWeakProxy.m */; };
 		DA4005B81F36C63D00260064 /* ZDCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4005B71F36C63D00260064 /* ZDCellModel.m */; };
+		DAA098451F42C86400303DD4 /* TextureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA098441F42C86400303DD4 /* TextureViewController.m */; };
 		DAE26CBD1F3986590072973F /* play_and_like_it.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE26CB91F3986590072973F /* play_and_like_it.json */; };
 		DAE26CBE1F3986590072973F /* progress_success.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE26CBA1F3986590072973F /* progress_success.json */; };
 		DAE26CBF1F3986590072973F /* vcTransition1.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE26CBB1F3986590072973F /* vcTransition1.json */; };
@@ -99,6 +100,8 @@
 		DA4005B21F36C52500260064 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
 		DA4005B61F36C63D00260064 /* ZDCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDCellModel.h; sourceTree = "<group>"; };
 		DA4005B71F36C63D00260064 /* ZDCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDCellModel.m; sourceTree = "<group>"; };
+		DAA098431F42C86400303DD4 /* TextureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureViewController.h; sourceTree = "<group>"; };
+		DAA098441F42C86400303DD4 /* TextureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureViewController.m; sourceTree = "<group>"; };
 		DAE26CB91F3986590072973F /* play_and_like_it.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = play_and_like_it.json; sourceTree = "<group>"; };
 		DAE26CBA1F3986590072973F /* progress_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = progress_success.json; sourceTree = "<group>"; };
 		DAE26CBB1F3986590072973F /* vcTransition1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcTransition1.json; sourceTree = "<group>"; };
@@ -367,6 +370,8 @@
 		DAE26CB51F3985A40072973F /* TextureController */ = {
 			isa = PBXGroup;
 			children = (
+				DAA098431F42C86400303DD4 /* TextureViewController.h */,
+				DAA098441F42C86400303DD4 /* TextureViewController.m */,
 			);
 			path = TextureController;
 			sourceTree = "<group>";
@@ -695,6 +700,7 @@
 			files = (
 				DA4005B31F36C52500260064 /* YYFPSLabel.m in Sources */,
 				DA4005AA1F36C16E00260064 /* ZDBaseTableViewCell.m in Sources */,
+				DAA098451F42C86400303DD4 /* TextureViewController.m in Sources */,
 				DA053D361F39E5FC00F99582 /* ZDPlayground.m in Sources */,
 				DA4005AB1F36C16E00260064 /* ZDTableViewBinding.m in Sources */,
 				DA2512801F349AF300633093 /* AppDelegate.m in Sources */,
