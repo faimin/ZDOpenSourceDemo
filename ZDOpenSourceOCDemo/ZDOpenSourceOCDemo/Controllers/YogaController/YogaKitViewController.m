@@ -54,14 +54,13 @@
     containerView1.backgroundColor = [UIColor cyanColor];
     [containerView1 configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
         layout.isEnabled = YES;
-        layout.width = YGPointValue(CGRectGetWidth(self.view.bounds));
-        layout.height = layout.width;
+        layout.width = layout.height = YGPointValue(CGRectGetWidth(self.view.bounds));
         layout.direction = YGDirectionLTR;
-        layout.flexDirection = YGFlexDirectionRow;  // 主轴方向
-        layout.flexWrap = YGWrapWrap;   // 是否换行
-        layout.justifyContent = YGJustifySpaceAround; // 主轴上的两端对齐方式
-        layout.alignItems = YGAlignCenter;  // 交叉轴(跟主轴相对的轴)上的对齐方式,此属性只是针对一条主轴的情况
-        layout.alignContent = YGAlignSpaceBetween;  // 此属性跟上面的一样,只是这个针对的是多根主轴的情况,所以只有一根主轴时,此属性不起作用
+        layout.flexDirection = YGFlexDirectionRow;      // 主轴方向(默认为Column类型)
+        layout.flexWrap = YGWrapWrap;                   // 是否换行
+        layout.justifyContent = YGJustifySpaceAround;   // 主轴上的两端对齐方式
+        layout.alignItems = YGAlignCenter;              // 交叉轴(跟主轴相对的轴)上的对齐方式,此属性只是针对一条主轴的情况
+        layout.alignContent = YGAlignSpaceBetween;      // 此属性跟上面的一样,只是这个针对的是多根主轴的情况,所以只有一根主轴时,此属性不起作用
     }];
     
     
@@ -104,7 +103,7 @@
         // 这个属性是谁要拉伸,就谁自己设置,而不是其父视图设置.
         layout.flexGrow = 1;
         layout.margin = YGPointValue(10);
-        //layout.borderWidth = 20;
+        // layout.borderWidth = 20;
     }];
     [leaf addSubview:leafleaf];
     
@@ -143,7 +142,7 @@
         layout.isEnabled = YES;
         // margin是相对于其他视图的,下面的代码代表他与其父视图之间的间距.
         // 等价于其父视图设置padding属性
-        //layout.marginRight = YGPointValue(-50); // 向右移50pt, 设置stretch之后此属性失效了
+        // layout.marginRight = YGPointValue(-50); // 向右移50pt, 设置stretch之后此属性失效了
         layout.marginBottom = YGPointValue(30 + 64);    // 上移30pt
         layout.margin = YGPointValue(10);
         layout.alignSelf = YGAlignStretch;
