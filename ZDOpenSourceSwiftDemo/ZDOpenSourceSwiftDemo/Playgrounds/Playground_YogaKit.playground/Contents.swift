@@ -19,7 +19,7 @@ let subContent = UIView()
 subContent.backgroundColor = .red
 subContent.configureLayout { (layout) in
     layout.isEnabled = true
-    layout.flexDirection = .row
+    layout.flexDirection = .row // default is column
     layout.alignItems = .stretch
     layout.margin = 20
     layout.flexGrow = 1
@@ -40,4 +40,8 @@ contentView.yoga.applyLayout(preservingOrigin: false)
 
 subContent
 contentView
+
+// create button
+
+
  

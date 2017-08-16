@@ -6,6 +6,8 @@
 //  Copyright © 2017年 Zero.D.Saber. All rights reserved.
 //
 
+#if __has_include(<KZPlayground/KZPPlayground.h>)
+
 #import "ZDPlayground.h"
 #import <YogaKit/UIView+Yoga.h>
 
@@ -79,3 +81,5 @@
 }
 
 @end
+
+#endif

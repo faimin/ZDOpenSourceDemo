@@ -25,7 +25,13 @@ def pods_swift
   pod 'LayoutKit', '~> 5.0.0'
   # animation
   pod 'lottie-ios'
+  pod 'Hero'
+  pod 'PeekPop'
+  pod "Gemini"
   pod 'MBProgressHUD'
+  # extensition
+  # tools
+  pod 'GDPerformanceView-Swift'
 end
 
 target 'ZDOpenSourceSwiftDemo' do

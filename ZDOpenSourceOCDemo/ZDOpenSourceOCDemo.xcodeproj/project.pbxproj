@@ -10,7 +10,6 @@
 		870603423EDEE8084C82B37D /* Pods_ZDOpenSourceOCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4875C92958445E434DA6A0B /* Pods_ZDOpenSourceOCDemo.framework */; };
 		8AD3EBF0E4449A78434589A7 /* Pods_ZDOpenSourceOCDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD9BC8843CBDE553105876E /* Pods_ZDOpenSourceOCDemoTests.framework */; };
 		B2D0033075F39DA1BD94CE52 /* Pods_ZDOpenSourceOCDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A25D25693BAD3A5A676D4DF /* Pods_ZDOpenSourceOCDemoUITests.framework */; };
-		DA053D361F39E5FC00F99582 /* ZDPlayground.m in Sources */ = {isa = PBXBuildFile; fileRef = DA053D351F39E5FC00F99582 /* ZDPlayground.m */; };
 		DA25127D1F349AF300633093 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA25127C1F349AF300633093 /* main.m */; };
 		DA2512801F349AF300633093 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA25127F1F349AF300633093 /* AppDelegate.m */; };
 		DA2512861F349AF300633093 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA2512841F349AF300633093 /* Main.storyboard */; };
@@ -28,6 +27,7 @@
 		DA4005B41F36C52500260064 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4005B21F36C52500260064 /* YYWeakProxy.m */; };
 		DA4005B81F36C63D00260064 /* ZDCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4005B71F36C63D00260064 /* ZDCellModel.m */; };
 		DAA098451F42C86400303DD4 /* TextureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA098441F42C86400303DD4 /* TextureViewController.m */; };
+		DAA0984A1F442D5800303DD4 /* ZDPlayground.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA098491F442D5800303DD4 /* ZDPlayground.m */; };
 		DAE26CBD1F3986590072973F /* play_and_like_it.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE26CB91F3986590072973F /* play_and_like_it.json */; };
 		DAE26CBE1F3986590072973F /* progress_success.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE26CBA1F3986590072973F /* progress_success.json */; };
 		DAE26CBF1F3986590072973F /* vcTransition1.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE26CBB1F3986590072973F /* vcTransition1.json */; };
@@ -61,8 +61,6 @@
 		8130AE0D880F2830B6FF140A /* Pods-ZDOpenSourceOCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9DD9BC8843CBDE553105876E /* Pods_ZDOpenSourceOCDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZDOpenSourceOCDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4875C92958445E434DA6A0B /* Pods_ZDOpenSourceOCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZDOpenSourceOCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA053D341F39E5FC00F99582 /* ZDPlayground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDPlayground.h; sourceTree = "<group>"; };
-		DA053D351F39E5FC00F99582 /* ZDPlayground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDPlayground.m; sourceTree = "<group>"; };
 		DA2512781F349AF300633093 /* ZDOpenSourceOCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZDOpenSourceOCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA25127C1F349AF300633093 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA25127E1F349AF300633093 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,6 +100,8 @@
 		DA4005B71F36C63D00260064 /* ZDCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDCellModel.m; sourceTree = "<group>"; };
 		DAA098431F42C86400303DD4 /* TextureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureViewController.h; sourceTree = "<group>"; };
 		DAA098441F42C86400303DD4 /* TextureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextureViewController.m; sourceTree = "<group>"; };
+		DAA098481F442D5800303DD4 /* ZDPlayground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDPlayground.h; sourceTree = "<group>"; };
+		DAA098491F442D5800303DD4 /* ZDPlayground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDPlayground.m; sourceTree = "<group>"; };
 		DAE26CB91F3986590072973F /* play_and_like_it.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = play_and_like_it.json; sourceTree = "<group>"; };
 		DAE26CBA1F3986590072973F /* progress_success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = progress_success.json; sourceTree = "<group>"; };
 		DAE26CBB1F3986590072973F /* vcTransition1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcTransition1.json; sourceTree = "<group>"; };
@@ -241,8 +241,6 @@
 		DA2512B11F349B5700633093 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				DA053D341F39E5FC00F99582 /* ZDPlayground.h */,
-				DA053D351F39E5FC00F99582 /* ZDPlayground.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -250,6 +248,8 @@
 		DA2512B21F349B5700633093 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DAA098481F442D5800303DD4 /* ZDPlayground.h */,
+				DAA098491F442D5800303DD4 /* ZDPlayground.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -577,9 +577,56 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/GDPerformanceView/GDPerformanceView.framework",
+				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/JLRoutes/JLRoutes.framework",
+				"${BUILT_PRODUCTS_DIR}/KZPlayground/KZPlayground.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/NHBalancedFlowLayout/NHBalancedFlowLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectiveSugar/ObjectiveSugar.framework",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RDVTabBarController/RDVTabBarController.framework",
+				"${BUILT_PRODUCTS_DIR}/RSSwizzle/RSSwizzle.framework",
+				"${BUILT_PRODUCTS_DIR}/RTRootNavigationController/RTRootNavigationController.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
+				"${BUILT_PRODUCTS_DIR}/dyci/dyci.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JLRoutes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KZPlayground.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NHBalancedFlowLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectiveSugar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RDVTabBarController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSSwizzle.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RTRootNavigationController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/dyci.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -592,13 +639,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZDOpenSourceOCDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A5CAEBEF8523207B60A03A44 /* [CP] Check Pods Manifest.lock */ = {
@@ -607,13 +657,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZDOpenSourceOCDemoUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C2DB02001CE32615ADA8C6F8 /* [CP] Copy Pods Resources */ = {
@@ -652,13 +705,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZDOpenSourceOCDemoTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F9D6AEF3C9EDF1578929A71A /* [CP] Embed Pods Frameworks */ = {
@@ -701,11 +757,11 @@
 				DA4005B31F36C52500260064 /* YYFPSLabel.m in Sources */,
 				DA4005AA1F36C16E00260064 /* ZDBaseTableViewCell.m in Sources */,
 				DAA098451F42C86400303DD4 /* TextureViewController.m in Sources */,
-				DA053D361F39E5FC00F99582 /* ZDPlayground.m in Sources */,
 				DA4005AB1F36C16E00260064 /* ZDTableViewBinding.m in Sources */,
 				DA2512801F349AF300633093 /* AppDelegate.m in Sources */,
 				DA4005B41F36C52500260064 /* YYWeakProxy.m in Sources */,
 				DAE26CC31F3989850072973F /* LottieViewController.m in Sources */,
+				DAA0984A1F442D5800303DD4 /* ZDPlayground.m in Sources */,
 				DA2512B31F349B5700633093 /* ViewController.m in Sources */,
 				DA25127D1F349AF300633093 /* main.m in Sources */,
 				DA4005B81F36C63D00260064 /* ZDCellModel.m in Sources */,

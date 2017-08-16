@@ -1,18 +1,32 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '8.0'
+inhibit_all_warnings!
 
 def pods_oc
+  # sync
   pod 'ReactiveObjC'
-  pod 'JLRoutes'
+  pod 'PromiseKit'
+  # layout
   pod 'IGListKit'
   pod 'Texture'
   pod 'YogaKit'
-  pod 'YYModel'
-  pod 'YTKNetwork'
   pod 'Masonry'
-  pod 'PromiseKit'
-  pod 'KZPlayground'
+  # router
+  pod 'JLRoutes'
+  # network
+  pod 'YTKNetwork'
+  pod 'YYModel'
+  # animation
   pod 'lottie-ios'
+  # tabbarController
+  pod 'RDVTabBarController'
+  pod 'RTRootNavigationController'
+  # extension
+  pod 'ObjectiveSugar', :inhibit_warnings => true
+  # tools
+  pod 'GDPerformanceView'
+  # playground
+  pod 'KZPlayground', :inhibit_warnings => true
 end
 
 target 'ZDOpenSourceOCDemo' do
