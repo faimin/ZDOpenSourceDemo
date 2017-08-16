@@ -4,6 +4,9 @@ PODS:
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
   - Cartography (1.1.0)
+  - GDPerformanceView-Swift (1.2.0)
+  - Gemini (1.1.2)
+  - Hero (0.3.6)
   - IGListKit (3.0.0):
     - IGListKit/Default (= 3.0.0)
   - IGListKit/Default (3.0.0):
@@ -11,10 +14,11 @@ PODS:
   - IGListKit/Diffing (3.0.0)
   - Kingfisher (3.10.4)
   - LayoutKit (5.0.0)
-  - lottie-ios (2.0.3)
+  - lottie-ios (2.0.5)
   - MBProgressHUD (1.0.0)
   - Neon (0.4.0)
   - ObjectMapper (2.2.8)
+  - PeekPop (1.0.0)
   - PINCache (3.0.1-beta.5):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.5)
     - PINCache/Core (= 3.0.1-beta.5)
@@ -30,25 +34,25 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0-beta.11):
     - PINCache (= 3.0.1-beta.5)
     - PINRemoteImage/Core
-  - PromiseKit (4.3.1):
-    - PromiseKit/Foundation (= 4.3.1)
-    - PromiseKit/QuartzCore (= 4.3.1)
-    - PromiseKit/UIKit (= 4.3.1)
-  - PromiseKit/CorePromise (4.3.1)
-  - PromiseKit/Foundation (4.3.1):
+  - PromiseKit (4.3.2):
+    - PromiseKit/Foundation (= 4.3.2)
+    - PromiseKit/QuartzCore (= 4.3.2)
+    - PromiseKit/UIKit (= 4.3.2)
+  - PromiseKit/CorePromise (4.3.2)
+  - PromiseKit/Foundation (4.3.2):
     - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (4.3.1):
+  - PromiseKit/QuartzCore (4.3.2):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (4.3.1):
+  - PromiseKit/UIKit (4.3.2):
     - PromiseKit/CorePromise
   - RxCocoa (3.6.1):
     - RxSwift (~> 3.6)
   - RxSwift (3.6.1)
   - SnapKit (3.2.0)
-  - Texture (2.3.4):
-    - Texture/PINRemoteImage (= 2.3.4)
-  - Texture/Core (2.3.4)
-  - Texture/PINRemoteImage (2.3.4):
+  - Texture (2.4):
+    - Texture/PINRemoteImage (= 2.4)
+  - Texture/Core (2.4)
+  - Texture/PINRemoteImage (2.4):
     - PINRemoteImage/iOS (= 3.0.0-beta.11)
     - PINRemoteImage/PINCache
     - Texture/Core
@@ -60,45 +64,53 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireObjectMapper
-  - Cartography (~> 1.1.0)
+  - Cartography
+  - GDPerformanceView-Swift
+  - Gemini
+  - Hero
   - IGListKit
   - Kingfisher
-  - LayoutKit (~> 5.0.0)
+  - LayoutKit
   - lottie-ios
   - MBProgressHUD
-  - Neon (~> 0.4.0)
+  - Neon
   - ObjectMapper
+  - PeekPop
   - PromiseKit
   - RxCocoa
   - RxSwift
-  - SnapKit (~> 3.2.0)
+  - SnapKit
   - Texture
-  - TinyConstraints (~> 2.1.1)
+  - TinyConstraints
   - YogaKit
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
-  Cartography: '0538ccb4044acbbda2266335fc58cb4228794d90'
+  Cartography: 0538ccb4044acbbda2266335fc58cb4228794d90
+  GDPerformanceView-Swift: 5f12f13dcdca4cb87f91ef91ba6b50981421c57f
+  Gemini: 7f80994a565fb417c08c1442bd236d6407f88a79
+  Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   IGListKit: 9eab6856a15fa25ad72018ff9d9eb2178c240fff
   Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
-  LayoutKit: '09e015b77fe5cd58696c427d496704b9226876cf'
-  lottie-ios: 445f77c7f661f95587e49095a1ac7de43f0da896
+  LayoutKit: 09e015b77fe5cd58696c427d496704b9226876cf
+  lottie-ios: d574e45532c6c06ac03c6d6649f759fb1137297b
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Neon: 7fb5a9327e7e57911843f608e08f4893a74deaf9
   ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
+  PeekPop: dcac0f339476b99eb50f8e3bc584f332c744ecf1
   PINCache: 98e7b1ef782824ad231ade51987c218b758c30d8
   PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
   PINRemoteImage: d71988f11914a050d6d4cf51efc4ad1de8c0a9d8
-  PromiseKit: 25a114b90b932ec8169b5736bd0881fe0efa93b5
+  PromiseKit: 32430ae679605b17c15d6193679cae7bf60147f7
   RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
   RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
-  Texture: 8cf0872fe33328c20d7e6c1fcbf1f23a82162f2f
+  Texture: a5526314780eab35f642d956627f09316b9514e8
   TinyConstraints: 4162762831c5e2001f7eefb07056db14e3dcc422
   Yoga: 81670877477311136b1b3f69a6307ce62e1c89cf
   YogaKit: 8fe0ddd21673226c0b6077fc3ad5c8fa6cda722e
 
-PODFILE CHECKSUM: b79d1bdf24ab43eb0997fb5c8d8f42f7d40b1d73
+PODFILE CHECKSUM: be39e630ea655ecd84d076f7f6b7cb911578d86f
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1
