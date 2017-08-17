@@ -142,7 +142,6 @@
 		DA2512FE1F349CAF00633093 /* ZDOpenSourceSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
-				DAA098191F39F29800303DD4 /* Frameworks */,
 				DAA098171F39F19700303DD4 /* Playgrounds */,
 				DA25132D1F349D0B00633093 /* ViewControllers */,
 				DA25132F1F349D0B00633093 /* ViewModels */,
@@ -153,6 +152,7 @@
 				DA2513081F349CAF00633093 /* LaunchScreen.storyboard */,
 				DA25130B1F349CAF00633093 /* Info.plist */,
 				DAA098201F39FAFC00303DD4 /* ZDOpenSourceSwiftDemo-Bridging-Header.h */,
+				DAA098191F39F29800303DD4 /* Frameworks */,
 			);
 			path = ZDOpenSourceSwiftDemo;
 			sourceTree = "<group>";

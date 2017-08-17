@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import GDPerformanceView_Swift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    private func showPerformanceMonitor() {
+        GDPerformanceMonitor.sharedInstance.startMonitoring { (label) in
+            label?.backgroundColor = .red
+            label?.textColor = .yellow
+            label?.layer.borderColor = UIColor.brown.cgColor
+        }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        showPerformanceMonitor()
         return true
     }
 

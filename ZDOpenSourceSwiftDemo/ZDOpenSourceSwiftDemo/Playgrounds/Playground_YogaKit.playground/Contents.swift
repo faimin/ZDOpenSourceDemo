@@ -41,46 +41,37 @@ contentView.yoga.applyLayout(preservingOrigin: false)
 subContent
 contentView
 
-// create button
-let tabbarView = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-tabbarView.backgroundColor = UIColor.cyan
-tabbarView.configureLayout { (layout) in
-    layout.isEnabled = true
-    layout.flexDirection = .row
-}
-
-let barItem1 = createBarItem()
-let barItem2 = createBarItem()
-tabbarView.addSubview(barItem1)
-tabbarView.addSubview(barItem2)
-
-tabbarView.yoga.applyLayout(preservingOrigin: false)
-tabbarView
-
-func createBarItem() -> UIView {
-    let barItem = UIView() //UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 50))
+// Create custom button
+func createBarItem() -> UIControl {
+    let barItem = UIControl()
     barItem.backgroundColor = UIColor.yellow
     barItem.configureLayout { (layout) in
         layout.isEnabled = true
         layout.width = 100
-        layout.height = 180
+        layout.height = 200
         layout.padding = 10
         
         layout.flexGrow = 1
-        layout.marginRight = 20
     }
     
     let imageView = UIImageView()
-    imageView.backgroundColor = .red
+    imageView.backgroundColor = .green
+    imageView.contentMode = .scaleToFill
+    imageView.image = #imageLiteral(resourceName: "hami.gif")
     imageView.configureLayout { (layout) in
         layout.isEnabled = true
-        layout.flexGrow = 1
+        layout.flexGrow = 2
+        layout.aspectRatio = 1.0/1.2   // width / height
         layout.marginBottom = 10
     }
     barItem.addSubview(imageView)
     
     let label = UILabel()
     label.backgroundColor = .red
+    label.text = "button title"
+    label.textAlignment = .center
+    label.textColor = .blue
+    label.numberOfLines = 0
     label.configureLayout { (layout) in
         label.isEnabled = true
         layout.flexGrow = 1
@@ -89,6 +80,28 @@ func createBarItem() -> UIView {
     
     return barItem
 }
+
+
+let tabbarView = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+tabbarView.backgroundColor = UIColor.cyan
+tabbarView.configureLayout { (layout) in
+    layout.isEnabled = true
+    layout.flexDirection = .row
+    layout.paddingHorizontal = 10
+    layout.paddingTop = 10
+}
+
+let barItem1 = createBarItem()
+let barItem2 = createBarItem()
+barItem1.yoga.marginRight = 10
+barItem2.yoga.marginLeft = 10   // 这样一来,1和2之间的间距变为了20
+tabbarView.addSubview(barItem1)
+tabbarView.addSubview(barItem2)
+
+tabbarView.yoga.applyLayout(preservingOrigin: false)
+tabbarView
+
+
 
 
 

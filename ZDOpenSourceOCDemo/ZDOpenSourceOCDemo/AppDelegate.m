@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <KZPlayground/KZPPlayground.h>
+#import <GDPerformanceView/GDPerformanceMonitor.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    GDPerformanceMonitor.sharedInstance.appVersionHidden = YES;
+    [[GDPerformanceMonitor sharedInstance] startMonitoring];
     return YES;
 }
 
