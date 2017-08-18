@@ -12,7 +12,7 @@ PODS:
   - IGListKit/Default (3.0.0):
     - IGListKit/Diffing
   - IGListKit/Diffing (3.0.0)
-  - Kingfisher (3.10.4)
+  - Kingfisher (3.11.0)
   - LayoutKit (5.0.0)
   - lottie-ios (2.0.5)
   - MBProgressHUD (1.0.0)
@@ -45,6 +45,7 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (4.3.2):
     - PromiseKit/CorePromise
+  - ResponseDetective (1.1)
   - RxCocoa (3.6.1):
     - RxSwift (~> 3.6)
   - RxSwift (3.6.1)
@@ -77,6 +78,7 @@ DEPENDENCIES:
   - ObjectMapper
   - PeekPop
   - PromiseKit
+  - ResponseDetective
   - RxCocoa
   - RxSwift
   - SnapKit
@@ -92,7 +94,7 @@ SPEC CHECKSUMS:
   Gemini: 7f80994a565fb417c08c1442bd236d6407f88a79
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
   IGListKit: 9eab6856a15fa25ad72018ff9d9eb2178c240fff
-  Kingfisher: dc3a4983e86d2dfa89513664983a82340c11a289
+  Kingfisher: c8911a7672c6217dec8c0520fb6e76ec4b7e0780
   LayoutKit: 09e015b77fe5cd58696c427d496704b9226876cf
   lottie-ios: d574e45532c6c06ac03c6d6649f759fb1137297b
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
@@ -103,6 +105,7 @@ SPEC CHECKSUMS:
   PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
   PINRemoteImage: d71988f11914a050d6d4cf51efc4ad1de8c0a9d8
   PromiseKit: 32430ae679605b17c15d6193679cae7bf60147f7
+  ResponseDetective: 58281558cda442747b3c4c711edf20b647018240
   RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
   RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
@@ -111,6 +114,6 @@ SPEC CHECKSUMS:
   Yoga: 81670877477311136b1b3f69a6307ce62e1c89cf
   YogaKit: 8fe0ddd21673226c0b6077fc3ad5c8fa6cda722e
 
-PODFILE CHECKSUM: be39e630ea655ecd84d076f7f6b7cb911578d86f
+PODFILE CHECKSUM: 5a7b34bd6f006dac29ba570e3a6f6401ee6414f4
 
 COCOAPODS: 1.3.1

@@ -16,6 +16,7 @@ def pods_oc
   # network
   pod 'YTKNetwork'
   pod 'YYModel'
+  pod 'ResponseDetective'
   # animation
   pod 'lottie-ios'
   # tabbarController

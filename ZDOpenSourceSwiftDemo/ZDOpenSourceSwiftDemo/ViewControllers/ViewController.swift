@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import SnapKit
 
 class ViewController: UIViewController {
 
     let ZDReuseCellIndentifier = "ReuseCell"
+    // 每当这个类的新实例被创建时,这个闭包就会被调用,而闭包的返回值就会当做默认值赋值给这个属性
     private let tableView: UITableView = {
         let view = UITableView(frame: .zero, style: UITableViewStyle.plain)
         view.register(UITableViewCell.self, forCellReuseIdentifier: "ReuseCell")
@@ -42,9 +42,11 @@ class ViewController: UIViewController {
         tableView.delegate = self
         view.addSubview(tableView)
         
-        tableView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
-        }
+        // add constraint
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        let viewDict = ["tableView": tableView]
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[tableView]-0-|", options: .directionLeadingToTrailing, metrics: nil, views: viewDict))
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[tableView]-0-|", options: .directionLeadingToTrailing, metrics: nil, views: viewDict))
     }
     
 }

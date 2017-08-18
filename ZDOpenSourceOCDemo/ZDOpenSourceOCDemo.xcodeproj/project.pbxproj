@@ -180,7 +180,6 @@
 		DA25127A1F349AF300633093 /* ZDOpenSourceOCDemo */ = {
 			isa = PBXGroup;
 			children = (
-				DAA0981A1F39F2AA00303DD4 /* Frameworks */,
 				DA40057B1F36C11600260064 /* Vendor */,
 				DA2512AE1F349B5700633093 /* Controllers */,
 				DA2512B11F349B5700633093 /* ViewModels */,
@@ -193,6 +192,7 @@
 				DA2512891F349AF300633093 /* LaunchScreen.storyboard */,
 				DA25128C1F349AF300633093 /* Info.plist */,
 				DAE26CB71F3985F50072973F /* Resource */,
+				DAA0981A1F39F2AA00303DD4 /* Frameworks */,
 				DA25127B1F349AF300633093 /* Supporting Files */,
 			);
 			path = ZDOpenSourceOCDemo;
@@ -594,6 +594,7 @@
 				"${BUILT_PRODUCTS_DIR}/RSSwizzle/RSSwizzle.framework",
 				"${BUILT_PRODUCTS_DIR}/RTRootNavigationController/RTRootNavigationController.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/ResponseDetective/ResponseDetective.framework",
 				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
@@ -620,6 +621,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSSwizzle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RTRootNavigationController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ResponseDetective.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",

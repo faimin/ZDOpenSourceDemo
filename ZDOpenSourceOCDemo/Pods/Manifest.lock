@@ -60,6 +60,7 @@ PODS:
     - PromiseKit/CorePromise
   - RDVTabBarController (1.1.9)
   - ReactiveObjC (3.0.0)
+  - ResponseDetective (1.1)
   - RSSwizzle (0.1.0)
   - RTRootNavigationController (0.6.3):
     - RTRootNavigationController/Core (= 0.6.3)
@@ -89,6 +90,7 @@ DEPENDENCIES:
   - PromiseKit
   - RDVTabBarController
   - ReactiveObjC
+  - ResponseDetective
   - RTRootNavigationController
   - Texture
   - YogaKit
@@ -112,6 +114,7 @@ SPEC CHECKSUMS:
   PromiseKit: 32430ae679605b17c15d6193679cae7bf60147f7
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
+  ResponseDetective: 58281558cda442747b3c4c711edf20b647018240
   RSSwizzle: d561958f595028bfcef98c7d55c318b3878a61c6
   RTRootNavigationController: 09e3a113feecf21c194a83ad6755f5f319723c54
   Texture: a5526314780eab35f642d956627f09316b9514e8
@@ -120,6 +123,6 @@ SPEC CHECKSUMS:
   YTKNetwork: c4b0c29c9d639dc050d475de69ee626d53eac598
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: b694fb63c59d7f00fbc6550b937410fe417c7079
+PODFILE CHECKSUM: 71ff053659fb52409e1d8d5d02ec39552dcc7898
 
 COCOAPODS: 1.3.1
