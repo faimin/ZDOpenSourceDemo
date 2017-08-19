@@ -68,7 +68,7 @@ func createBarItem() -> UIControl {
     
     let label = UILabel()
     label.backgroundColor = .red
-    label.text = "button title"
+    label.text = "阿尔托莉雅·潘德拉贡" // button title
     label.textAlignment = .center
     label.textColor = .blue
     label.numberOfLines = 0

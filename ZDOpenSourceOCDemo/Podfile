@@ -24,6 +24,10 @@ def pods_oc
   pod 'RTRootNavigationController'
   # extension
   pod 'ObjectiveSugar', :inhibit_warnings => true
+  # color
+  pod 'ChameleonFramework'
+  # toast
+  pod 'SVProgressHUD'
   # tools
   pod 'GDPerformanceView'
   # playground
