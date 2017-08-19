@@ -28,6 +28,7 @@ def pods_oc
   pod 'ChameleonFramework'
   # toast
   pod 'SVProgressHUD'
+  pod 'MBProgressHUD'
   # tools
   pod 'GDPerformanceView'
   # playground

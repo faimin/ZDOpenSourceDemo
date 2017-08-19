@@ -4,6 +4,9 @@ PODS:
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
   - Cartography (1.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
   - GDPerformanceView-Swift (1.2.0)
   - Gemini (1.1.2)
   - Hero (0.3.6)
@@ -66,6 +69,7 @@ DEPENDENCIES:
   - Alamofire
   - AlamofireObjectMapper
   - Cartography
+  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - GDPerformanceView-Swift
   - Gemini
   - Hero
@@ -86,10 +90,20 @@ DEPENDENCIES:
   - TinyConstraints
   - YogaKit
 
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 6dd284bde21ea2e7f9fd89bc36f40df16e16369d
+    :git: https://github.com/ViccAlexander/Chameleon.git
+
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
   Cartography: 0538ccb4044acbbda2266335fc58cb4228794d90
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   GDPerformanceView-Swift: 5f12f13dcdca4cb87f91ef91ba6b50981421c57f
   Gemini: 7f80994a565fb417c08c1442bd236d6407f88a79
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
@@ -114,6 +128,6 @@ SPEC CHECKSUMS:
   Yoga: 81670877477311136b1b3f69a6307ce62e1c89cf
   YogaKit: 8fe0ddd21673226c0b6077fc3ad5c8fa6cda722e
 
-PODFILE CHECKSUM: 5a7b34bd6f006dac29ba570e3a6f6401ee6414f4
+PODFILE CHECKSUM: 6bdd3ea167c29d1ff27e4c6dd6fd856d6c1f7ff5
 
 COCOAPODS: 1.3.1
