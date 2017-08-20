@@ -68,14 +68,20 @@ func createBarItem() -> UIControl {
     
     let label = UILabel()
     label.backgroundColor = .red
+    label.tag = 10
     label.text = "阿尔托莉雅·潘德拉贡" // button title
     label.textAlignment = .center
     label.textColor = .blue
     label.numberOfLines = 0
+#if false
     label.configureLayout { (layout) in
         label.isEnabled = true
         layout.flexGrow = 1
     }
+#else
+    label.yoga.isEnabled = true
+    label.yoga.flexGrow = 1
+#endif
     barItem.addSubview(label)
     
     return barItem
@@ -101,6 +107,14 @@ tabbarView.addSubview(barItem2)
 tabbarView.yoga.applyLayout(preservingOrigin: false)
 tabbarView
 
+if let label = barItem1.viewWithTag(10) as? UILabel {
+    if label.yoga.isEnabled {
+        print(label.text! + "😆")
+        
+        let frame = label.frame
+        print("left label's frame:: " + "\(frame)")
+    }
+}
 
 
 
