@@ -15,3 +15,18 @@ import RxCocoa
 var str = "Hello, playground"
 
 let numberArr = [1, 2, 3, 4, 5]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
