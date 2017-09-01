@@ -108,6 +108,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JLRoutes/JLRoutes.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KZPlayground/KZPlayground.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LinqToObjectiveC/LinqToObjectiveC.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/NHBalancedFlowLayout/NHBalancedFlowLayout.framework"
@@ -128,6 +129,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/dyci/dyci.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/libextobjc/libextobjc.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -137,6 +139,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JLRoutes/JLRoutes.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KZPlayground/KZPlayground.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LinqToObjectiveC/LinqToObjectiveC.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/NHBalancedFlowLayout/NHBalancedFlowLayout.framework"
@@ -157,6 +160,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/dyci/dyci.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/libextobjc/libextobjc.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
