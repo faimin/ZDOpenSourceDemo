@@ -35,6 +35,7 @@ def pods_swift
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   # tools
   pod 'GDPerformanceView-Swift'
+  pod 'LifetimeTracker'     # 监听内存泄露
 end
 
 target 'ZDOpenSourceSwiftDemo' do

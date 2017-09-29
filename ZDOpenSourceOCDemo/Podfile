@@ -23,10 +23,12 @@ def pods_oc
   pod 'RDVTabBarController'
   pod 'RTRootNavigationController'
   # extension
-  pod 'libextobjc'
-  # pod 'ProtocolKit', '~> 0.1.0'
   pod 'ObjectiveSugar', :inhibit_warnings => true
   pod 'LinqToObjectiveC'
+  # injection
+  pod 'libextobjc'
+  pod 'Objection'
+  pod 'Typhoon'
   # color
   pod 'ChameleonFramework'
   # toast
