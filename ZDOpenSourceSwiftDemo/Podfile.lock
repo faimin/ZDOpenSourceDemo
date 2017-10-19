@@ -1,26 +1,27 @@
 PODS:
-  - Alamofire (4.5.0)
-  - AlamofireObjectMapper (4.1.0):
+  - Alamofire (4.5.1)
+  - AlamofireObjectMapper (5.0.0):
     - Alamofire (~> 4.1)
-    - ObjectMapper (~> 2.0)
-  - Cartography (1.1.0)
+    - ObjectMapper (~> 3.0)
+  - Cartography (2.1.0)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - GDPerformanceView-Swift (1.2.0)
   - Gemini (1.1.2)
   - Hero (0.3.6)
-  - IGListKit (3.0.0):
-    - IGListKit/Default (= 3.0.0)
-  - IGListKit/Default (3.0.0):
+  - IGListKit (3.1.1):
+    - IGListKit/Default (= 3.1.1)
+  - IGListKit/Default (3.1.1):
     - IGListKit/Diffing
-  - IGListKit/Diffing (3.0.0)
-  - Kingfisher (3.11.0)
-  - LayoutKit (5.0.0)
-  - lottie-ios (2.0.5)
+  - IGListKit/Diffing (3.1.1)
+  - Kingfisher (4.1.1)
+  - LayoutKit (6.0.1)
+  - LifetimeTracker (1.0.9)
+  - lottie-ios (2.1.3)
   - MBProgressHUD (1.0.0)
   - Neon (0.4.0)
-  - ObjectMapper (2.2.8)
+  - ObjectMapper (3.0.0)
   - PeekPop (1.0.0)
   - PINCache (3.0.1-beta.5):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.5)
@@ -30,37 +31,37 @@ PODS:
   - PINCache/Core (3.0.1-beta.5):
     - PINOperation (= 1.0.3)
   - PINOperation (1.0.3)
-  - PINRemoteImage/Core (3.0.0-beta.11):
+  - PINRemoteImage/Core (3.0.0-beta.12):
     - PINOperation
-  - PINRemoteImage/iOS (3.0.0-beta.11):
+  - PINRemoteImage/iOS (3.0.0-beta.12):
     - PINRemoteImage/Core
-  - PINRemoteImage/PINCache (3.0.0-beta.11):
+  - PINRemoteImage/PINCache (3.0.0-beta.12):
     - PINCache (= 3.0.1-beta.5)
     - PINRemoteImage/Core
-  - PromiseKit (4.3.2):
-    - PromiseKit/Foundation (= 4.3.2)
-    - PromiseKit/QuartzCore (= 4.3.2)
-    - PromiseKit/UIKit (= 4.3.2)
-  - PromiseKit/CorePromise (4.3.2)
-  - PromiseKit/Foundation (4.3.2):
+  - PromiseKit (4.4.3):
+    - PromiseKit/Foundation (= 4.4.3)
+    - PromiseKit/QuartzCore (= 4.4.3)
+    - PromiseKit/UIKit (= 4.4.3)
+  - PromiseKit/CorePromise (4.4.3)
+  - PromiseKit/Foundation (4.4.3):
     - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (4.3.2):
+  - PromiseKit/QuartzCore (4.4.3):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (4.3.2):
+  - PromiseKit/UIKit (4.4.3):
     - PromiseKit/CorePromise
-  - ResponseDetective (1.1)
-  - RxCocoa (3.6.1):
-    - RxSwift (~> 3.6)
-  - RxSwift (3.6.1)
-  - SnapKit (3.2.0)
-  - Texture (2.4):
-    - Texture/PINRemoteImage (= 2.4)
-  - Texture/Core (2.4)
-  - Texture/PINRemoteImage (2.4):
-    - PINRemoteImage/iOS (= 3.0.0-beta.11)
+  - ResponseDetective (1.2.0)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
+  - SnapKit (4.0.0)
+  - Texture (2.5):
+    - Texture/PINRemoteImage (= 2.5)
+  - Texture/Core (2.5)
+  - Texture/PINRemoteImage (2.5):
+    - PINRemoteImage/iOS (= 3.0.0-beta.12)
     - PINRemoteImage/PINCache
     - Texture/Core
-  - TinyConstraints (2.1.1)
+  - TinyConstraints (3.0.1)
   - Yoga (1.6.0)
   - YogaKit (1.6.0):
     - Yoga (~> 1.6)
@@ -76,6 +77,7 @@ DEPENDENCIES:
   - IGListKit
   - Kingfisher
   - LayoutKit
+  - LifetimeTracker
   - lottie-ios
   - MBProgressHUD
   - Neon
@@ -100,34 +102,35 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ViccAlexander/Chameleon.git
 
 SPEC CHECKSUMS:
-  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
-  AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
-  Cartography: 0538ccb4044acbbda2266335fc58cb4228794d90
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  AlamofireObjectMapper: 5fafc816351cbbc0d486611aaeba7461c0cbad49
+  Cartography: 19c2223a8dfed35d82b098d365213b7ceb25ab2b
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   GDPerformanceView-Swift: 5f12f13dcdca4cb87f91ef91ba6b50981421c57f
   Gemini: 7f80994a565fb417c08c1442bd236d6407f88a79
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
-  IGListKit: 9eab6856a15fa25ad72018ff9d9eb2178c240fff
-  Kingfisher: c8911a7672c6217dec8c0520fb6e76ec4b7e0780
-  LayoutKit: 09e015b77fe5cd58696c427d496704b9226876cf
-  lottie-ios: d574e45532c6c06ac03c6d6649f759fb1137297b
+  IGListKit: cb97f405ae43e59fe1da74271e19427ec20d3c07
+  Kingfisher: 6793a473357b5dbee42b0068ef203fe8325f259e
+  LayoutKit: 3ab428d34ab74b8019986ba5f7d830fed07adb22
+  LifetimeTracker: 5cbf96cb122ab51e5f5c896ed848b986d76fa43b
+  lottie-ios: 8c150606598931621e927377f1426d2d3e99282d
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   Neon: 7fb5a9327e7e57911843f608e08f4893a74deaf9
-  ObjectMapper: 3d571bb5af471c779e1160828cd9ad5c4ef90958
+  ObjectMapper: 92230db59bf8f341a5c3a3cf0b9fbdde3cf0d87f
   PeekPop: dcac0f339476b99eb50f8e3bc584f332c744ecf1
   PINCache: 98e7b1ef782824ad231ade51987c218b758c30d8
   PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
-  PINRemoteImage: d71988f11914a050d6d4cf51efc4ad1de8c0a9d8
-  PromiseKit: 32430ae679605b17c15d6193679cae7bf60147f7
-  ResponseDetective: 58281558cda442747b3c4c711edf20b647018240
-  RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
-  RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
-  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
-  Texture: a5526314780eab35f642d956627f09316b9514e8
-  TinyConstraints: 4162762831c5e2001f7eefb07056db14e3dcc422
+  PINRemoteImage: 0cefe720c2612960bd360710efbd6c73a1991d5f
+  PromiseKit: fbb52a0d154402c57eeb6eccd36dd7724fcf6117
+  ResponseDetective: c05479b4ab72659bdb20d8a6e2c5cd828ac22f26
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  Texture: 12eb0807c117aaa21ef86f7f52dc61cc13e59739
+  TinyConstraints: 77cb4735982941687268bb6f324badd0ae29ad46
   Yoga: 81670877477311136b1b3f69a6307ce62e1c89cf
   YogaKit: 8fe0ddd21673226c0b6077fc3ad5c8fa6cda722e
 
-PODFILE CHECKSUM: 6bdd3ea167c29d1ff27e4c6dd6fd856d6c1f7ff5
+PODFILE CHECKSUM: 26d064a4a9ffe51db9eeed75e7b3be586af36c00
 
 COCOAPODS: 1.3.1

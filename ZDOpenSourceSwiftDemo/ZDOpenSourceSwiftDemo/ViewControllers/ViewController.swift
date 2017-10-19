@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[tableView]-0-|", options: .directionLeadingToTrailing, metrics: nil, views: viewDict))
     }
     
-    func click() {}
+    @objc func click() {}
     
 }
 
