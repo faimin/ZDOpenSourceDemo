@@ -68,9 +68,10 @@ PODS:
   - libextobjc/UmbrellaHeader (0.4.1)
   - LinqToObjectiveC (2.1.0)
   - lottie-ios (2.1.3)
-  - Masonry (1.0.2)
+  - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
   - NHBalancedFlowLayout (0.2)
+  - Objection (1.6.1)
   - ObjectiveSugar (1.1.0)
   - PINCache (3.0.1-beta.5):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.5)
@@ -80,43 +81,51 @@ PODS:
   - PINCache/Core (3.0.1-beta.5):
     - PINOperation (= 1.0.3)
   - PINOperation (1.0.3)
-  - PINRemoteImage/Core (3.0.0-beta.11):
+  - PINRemoteImage/Core (3.0.0-beta.12):
     - PINOperation
-  - PINRemoteImage/iOS (3.0.0-beta.11):
+  - PINRemoteImage/iOS (3.0.0-beta.12):
     - PINRemoteImage/Core
-  - PINRemoteImage/PINCache (3.0.0-beta.11):
+  - PINRemoteImage/PINCache (3.0.0-beta.12):
     - PINCache (= 3.0.1-beta.5)
     - PINRemoteImage/Core
-  - PromiseKit (4.4.0):
-    - PromiseKit/Foundation (= 4.4.0)
-    - PromiseKit/QuartzCore (= 4.4.0)
-    - PromiseKit/UIKit (= 4.4.0)
-  - PromiseKit/CorePromise (4.4.0)
-  - PromiseKit/Foundation (4.4.0):
+  - PromiseKit (4.4.3):
+    - PromiseKit/Foundation (= 4.4.3)
+    - PromiseKit/QuartzCore (= 4.4.3)
+    - PromiseKit/UIKit (= 4.4.3)
+  - PromiseKit/CorePromise (4.4.3)
+  - PromiseKit/Foundation (4.4.3):
     - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (4.4.0):
+  - PromiseKit/QuartzCore (4.4.3):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (4.4.0):
+  - PromiseKit/UIKit (4.4.3):
     - PromiseKit/CorePromise
   - RDVTabBarController (1.1.9)
   - ReactiveObjC (3.0.0)
-  - ResponseDetective (1.1)
+  - ResponseDetective (1.2.0)
   - RSSwizzle (0.1.0)
   - RTRootNavigationController (0.6.3):
     - RTRootNavigationController/Core (= 0.6.3)
   - RTRootNavigationController/Core (0.6.3)
-  - SVProgressHUD (2.1.2)
-  - Texture (2.4):
-    - Texture/PINRemoteImage (= 2.4)
-  - Texture/Core (2.4)
-  - Texture/PINRemoteImage (2.4):
-    - PINRemoteImage/iOS (= 3.0.0-beta.11)
+  - SVProgressHUD (2.2.2)
+  - Texture (2.5):
+    - Texture/PINRemoteImage (= 2.5)
+  - Texture/Core (2.5)
+  - Texture/PINRemoteImage (2.5):
+    - PINRemoteImage/iOS (= 3.0.0-beta.12)
     - PINRemoteImage/PINCache
     - Texture/Core
+  - Typhoon (4.0.3):
+    - Typhoon/DeallocNotifier (= 4.0.3)
+    - Typhoon/IntrospectionUtils (= 4.0.3)
+    - Typhoon/no-arc (= 4.0.3)
+  - Typhoon/DeallocNotifier (4.0.3)
+  - Typhoon/IntrospectionUtils (4.0.3)
+  - Typhoon/no-arc (4.0.3):
+    - Typhoon/IntrospectionUtils
   - Yoga (1.6.0)
   - YogaKit (1.6.0):
     - Yoga (~> 1.6)
-  - YTKNetwork (2.0.3):
+  - YTKNetwork (2.0.4):
     - AFNetworking (~> 3.0)
   - YYModel (1.0.4)
 
@@ -131,6 +140,7 @@ DEPENDENCIES:
   - lottie-ios
   - Masonry
   - MBProgressHUD
+  - Objection
   - ObjectiveSugar
   - PromiseKit
   - RDVTabBarController
@@ -139,6 +149,7 @@ DEPENDENCIES:
   - RTRootNavigationController
   - SVProgressHUD
   - Texture
+  - Typhoon
   - YogaKit
   - YTKNetwork
   - YYModel
@@ -154,26 +165,28 @@ SPEC CHECKSUMS:
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   LinqToObjectiveC: f0e40c137a458b6b9725c4c7b6a575c0c72e3aec
   lottie-ios: 8c150606598931621e927377f1426d2d3e99282d
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   NHBalancedFlowLayout: fd253023c6754e605acdb180d50123e582cc62bb
+  Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
   ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
   PINCache: 98e7b1ef782824ad231ade51987c218b758c30d8
   PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
-  PINRemoteImage: d71988f11914a050d6d4cf51efc4ad1de8c0a9d8
-  PromiseKit: ecf5fe92275d57ee77c9ede858af47a162e9b97e
+  PINRemoteImage: 0cefe720c2612960bd360710efbd6c73a1991d5f
+  PromiseKit: fbb52a0d154402c57eeb6eccd36dd7724fcf6117
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
-  ResponseDetective: 58281558cda442747b3c4c711edf20b647018240
+  ResponseDetective: c05479b4ab72659bdb20d8a6e2c5cd828ac22f26
   RSSwizzle: d561958f595028bfcef98c7d55c318b3878a61c6
   RTRootNavigationController: 09e3a113feecf21c194a83ad6755f5f319723c54
-  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
-  Texture: a5526314780eab35f642d956627f09316b9514e8
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  Texture: 12eb0807c117aaa21ef86f7f52dc61cc13e59739
+  Typhoon: 85d1a7ada9a7def46a374be1301540572cc53636
   Yoga: 81670877477311136b1b3f69a6307ce62e1c89cf
   YogaKit: 8fe0ddd21673226c0b6077fc3ad5c8fa6cda722e
-  YTKNetwork: c4b0c29c9d639dc050d475de69ee626d53eac598
+  YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 3da96af8ce325c90848e7fc01aedfa81b8870fc7
+PODFILE CHECKSUM: 7407aba9d69c5db44a33af203f47cafcfd4d62b1
 
 COCOAPODS: 1.3.1
