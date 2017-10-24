@@ -101,16 +101,16 @@ PODS:
     - PromiseKit/CorePromise
   - RDVTabBarController (1.1.9)
   - ReactiveObjC (3.0.0)
-  - ResponseDetective (1.2.0)
+  - ResponseDetective (1.2.1)
   - RSSwizzle (0.1.0)
   - RTRootNavigationController (0.6.3):
     - RTRootNavigationController/Core (= 0.6.3)
   - RTRootNavigationController/Core (0.6.3)
   - SVProgressHUD (2.2.2)
-  - Texture (2.5):
-    - Texture/PINRemoteImage (= 2.5)
-  - Texture/Core (2.5)
-  - Texture/PINRemoteImage (2.5):
+  - Texture (2.5.1):
+    - Texture/PINRemoteImage (= 2.5.1)
+  - Texture/Core (2.5.1)
+  - Texture/PINRemoteImage (2.5.1):
     - PINRemoteImage/iOS (= 3.0.0-beta.12)
     - PINRemoteImage/PINCache
     - Texture/Core
@@ -176,11 +176,11 @@ SPEC CHECKSUMS:
   PromiseKit: fbb52a0d154402c57eeb6eccd36dd7724fcf6117
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
-  ResponseDetective: c05479b4ab72659bdb20d8a6e2c5cd828ac22f26
+  ResponseDetective: 3d13807a24cf7f23e64e5e7d6c768e8fa621c245
   RSSwizzle: d561958f595028bfcef98c7d55c318b3878a61c6
   RTRootNavigationController: 09e3a113feecf21c194a83ad6755f5f319723c54
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
-  Texture: 12eb0807c117aaa21ef86f7f52dc61cc13e59739
+  Texture: c3f06e344aa091667b7a56002e525cde674d021a
   Typhoon: 85d1a7ada9a7def46a374be1301540572cc53636
   Yoga: 81670877477311136b1b3f69a6307ce62e1c89cf
   YogaKit: 8fe0ddd21673226c0b6077fc3ad5c8fa6cda722e
