@@ -20,6 +20,11 @@
     // Override point for customization after application launch.
     GDPerformanceMonitor.sharedInstance.appVersionHidden = YES;
     [[GDPerformanceMonitor sharedInstance] startMonitoring];
+    /*
+    if (@available(iOS 11, *)) {
+        [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+    */
     return YES;
 }
 

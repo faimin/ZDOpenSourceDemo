@@ -11,9 +11,12 @@
 
 #import "TextureViewController.h"
 #import <AsyncDisplayKit/AsyncDisplayKit.h>
+#import "TextureCell.h"
+#import "TextureViewModel.h"
 
-@interface TextureViewController ()
-
+@interface TextureViewController () <ASTableDelegate, ASTableDataSource>
+@property (nonatomic, strong) ASTableNode *tableNode;
+@property (nonatomic, strong) NSArray *dataSource;
 @end
 
 @implementation TextureViewController
@@ -21,11 +24,65 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setup];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setup {
+    [self setupUI];
+    [self setupData];
+}
+
+- (void)setupUI {
+    self.navigationItem.title = @"TextureDemo";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self.view addSubnode:self.tableNode];
+}
+
+- (void)setupData {
+    self.dataSource = [TextureViewModel textureModels];
+    [_tableNode reloadData];
+}
+
+#pragma mark - ASTableViewDatasource
+
+- (NSInteger)tableNode:(ASTableNode *)tableNode numberOfRowsInSection:(NSInteger)section {
+    return self.dataSource.count;
+}
+
+- (ASCellNodeBlock)tableNode:(ASTableNode *)tableNode nodeBlockForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TextureModel *model = self.dataSource[indexPath.row];
+    ASCellNode *(^cellNodeBlock)(void) = ^ASCellNode *(){
+        TextureCell *cellNode = [[TextureCell alloc] initWithModel:model];
+        return cellNode;
+    };
+    return cellNodeBlock;
+}
+
+#pragma mark - ASTableViewDelegate
+
+- (void)tableNode:(ASTableNode *)tableNode didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+#pragma mark - Property
+
+- (ASTableNode *)tableNode {
+    if (!_tableNode) {
+        ASTableNode *node = [[ASTableNode alloc] initWithStyle:UITableViewStylePlain];
+        node.frame = self.view.bounds;
+        node.backgroundColor = [UIColor whiteColor];
+        node.delegate = self;
+        node.dataSource = self;
+        
+        _tableNode = node;
+    }
+    return _tableNode;
 }
 
 /*
