@@ -75,6 +75,8 @@
 
 - (void)layout {
     [super layout];
+    // 单独调整个别node的位置
+    _timeNode.frame = (CGRect){CGRectGetWidth(self.bounds) - CGRectGetWidth(_timeNode.bounds) - 15, CGRectGetMinY(_timeNode.frame), _timeNode.bounds.size};
 }
 
 #pragma mark - Property
