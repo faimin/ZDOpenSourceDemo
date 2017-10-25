@@ -49,7 +49,6 @@
     _titleNode.attributedText = [[NSAttributedString alloc] initWithString:_model.title attributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor], NSFontAttributeName : [UIFont systemFontOfSize:14.0]}];
     _contentNode.attributedText = [[NSAttributedString alloc] initWithString:_model.content attributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor], NSFontAttributeName : [UIFont systemFontOfSize:12.0]}];
     _imageNode.image = _model.imageName.length > 0 ? [UIImage imageNamed:_model.imageName] : nil;
-    _imageNode.hidden = _model.imageName.length == 0;
     _nickNameNode.attributedText = [[NSAttributedString alloc] initWithString:_model.username attributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor], NSFontAttributeName : [UIFont systemFontOfSize:12.0]}];
     _timeNode.attributedText = [[NSAttributedString alloc] initWithString:_model.time attributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor], NSFontAttributeName : [UIFont systemFontOfSize:12.0]}];
 }
@@ -60,7 +59,14 @@
     //[ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionHorizontal spacing:50.0 justifyContent:ASStackLayoutJustifyContentSpaceAround alignItems:ASStackLayoutAlignItemsStretch children:@[_nickNameNode, _timeNode]];
     ASStackLayoutSpec *horBottomContentStackLayout = [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionHorizontal spacing:100 justifyContent:ASStackLayoutJustifyContentSpaceAround alignItems:ASStackLayoutAlignItemsStretch flexWrap:ASStackLayoutFlexWrapNoWrap alignContent:ASStackLayoutAlignContentStart children:@[_nickNameNode, _timeNode]];
     
-    ASStackLayoutSpec *verContentStackLayout = [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionVertical spacing:10.0 justifyContent:ASStackLayoutJustifyContentSpaceAround alignItems:ASStackLayoutAlignItemsStart flexWrap:ASStackLayoutFlexWrapNoWrap alignContent:ASStackLayoutAlignContentStart lineSpacing:0 children:@[_titleNode, _contentNode, _imageNode, horBottomContentStackLayout]];
+    ASStackLayoutSpec *verContentStackLayout = [ASStackLayoutSpec stackLayoutSpecWithDirection:ASStackLayoutDirectionVertical spacing:10.0 justifyContent:ASStackLayoutJustifyContentSpaceAround alignItems:ASStackLayoutAlignItemsStart flexWrap:ASStackLayoutFlexWrapNoWrap alignContent:ASStackLayoutAlignContentStart lineSpacing:0 children:({
+        NSMutableArray<id<ASLayoutElement>> *childNodes = @[].mutableCopy;
+        _model.title.length > 0 ? [childNodes addObject:_titleNode] : nil;
+        _model.content.length > 0 ? [childNodes addObject:_contentNode] : nil;
+        _model.imageName.length > 0 ? [childNodes addObject:_imageNode] : nil;
+        [childNodes addObject:horBottomContentStackLayout];
+        childNodes;
+    })];
     
     ASInsetLayoutSpec *insetLayout = [ASInsetLayoutSpec insetLayoutSpecWithInsets:UIEdgeInsetsMake(10, 15, 10, 15) child:verContentStackLayout];
     

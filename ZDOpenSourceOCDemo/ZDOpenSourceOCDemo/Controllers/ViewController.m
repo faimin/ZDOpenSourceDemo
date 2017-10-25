@@ -14,7 +14,7 @@
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray<NSString *> *data;
+@property (nonatomic, strong) NSArray<NSString *> *dataSource;
 @end
 
 @implementation ViewController
@@ -37,7 +37,7 @@
 
 - (void)setupData {
     NSArray<NSString *> *data = @[@"YogaKit", @"IGListKit", @"Texture", @"JLRoute", @"Lottie"];
-    self.data = data;
+    self.dataSource = data;
 }
 
 - (void)setupUI {
@@ -48,17 +48,17 @@
 #pragma mark - UITableViewDatasource && UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.data.count;
+    return self.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
-    cell.textLabel.text = self.data[indexPath.row];
+    cell.textLabel.text = self.dataSource[indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *text = self.data[indexPath.row];
+    NSString *text = self.dataSource[indexPath.row];
     Class aClass = objc_getClass([text stringByAppendingString:@"ViewController"].UTF8String);
     if (!aClass) return;
 
