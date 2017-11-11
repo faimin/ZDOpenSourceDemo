@@ -2,6 +2,11 @@
 platform :ios, '8.0'
 inhibit_all_warnings!
 
+def pods_git
+    pod 'ZDTableViewBinding', :git => 'https://github.com/faimin/ZDTableViewBinding'
+    pod 'ZDNetWorkHelper', :git => 'https://github.com/faimin/ZDNetWorkHelper'
+end
+
 def pods_oc
   # sync
   pod 'ReactiveObjC'
@@ -34,8 +39,13 @@ def pods_oc
   # toast
   pod 'SVProgressHUD'
   pod 'MBProgressHUD'
+  # cache
+  pod 'YYCache'
+  # thread
+  pod 'YYDispatchQueuePool'
   # tools
   pod 'GDPerformanceView'
+  pod 'DirectoryWatchdog'
   # playground
   pod 'KZPlayground', :inhibit_warnings => true
 end
@@ -46,6 +56,7 @@ target 'ZDOpenSourceOCDemo' do
 
   # Pods for ZDOpenSourceOCDemo
   pods_oc
+  pods_git
 
   target 'ZDOpenSourceOCDemoTests' do
     inherit! :search_paths

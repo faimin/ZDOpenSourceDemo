@@ -15,12 +15,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @interface NSObject (Cast)
-+ (nullable instancetype)zd_cast:(id)objc;
++ (nullable instancetype)zdbd_cast:(id)objc;
 @end
 
 
 @interface ZDTableViewBinding ()<UITableViewDelegate, UITableViewDataSource
-#if IS_XCODE8_OR_LATER
+#ifdef __IPHONE_10_0
 , UITableViewDataSourcePrefetching
 #endif
 >
@@ -101,7 +101,7 @@ NS_ASSUME_NONNULL_BEGIN
 	uint scrollViewDidEndScrollingAnimation: 1;
 } delegateRespondsTo;
 
-@property (nonatomic, weak, readwrite) UITableView *tableView;
+@property (nonatomic, weak, readwrite) __kindof UITableView *tableView;
 // 外面的command参数是临时变量，需要当前类持有，所以为strong类型
 @property (nonatomic, strong) RACCommand *cellCommand;
 @property (nonatomic, strong) RACCommand *sectionCommand;
@@ -142,9 +142,9 @@ NS_ASSUME_NONNULL_BEGIN
                             sectionCommand:sectionCommand];
 }
 
-- (instancetype)initWithTableView:(UITableView *)tableView
+- (instancetype)initWithTableView:(__kindof UITableView *)tableView
                      multiSection:(BOOL)multiSection
-                     sourceSignal:(RACSignal *)sourceSignal
+                     sourceSignal:(__kindof RACSignal *)sourceSignal
                       cellCommand:(RACCommand *)cellCommand
                    sectionCommand:(RACCommand *)sectionCommand
 {
@@ -152,11 +152,10 @@ NS_ASSUME_NONNULL_BEGIN
 		self.tableView = tableView;
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
-#if IS_XCODE8_OR_LATER
-        if (kCFCoreFoundationVersionNumber > kCFCoreFoundationVersionNumber_iOS_9_x_Max) {
+        //if (kCFCoreFoundationVersionNumber > kCFCoreFoundationVersionNumber_iOS_9_x_Max)
+        if (@available(iOS 10, *)) {
             self.tableView.prefetchDataSource = self;
         }
-#endif
         self.delegate = nil;
         
 		self.cellCommand = cellCommand;
@@ -165,9 +164,9 @@ NS_ASSUME_NONNULL_BEGIN
         [self clearData];
         
 		@weakify(self);
-		[[sourceSignal filter:^BOOL(id value) {
+		[[[sourceSignal filter:^BOOL(id value) {
             return (value != nil);
-        }] subscribeNext:^(__kindof NSArray *x) {
+        }] deliverOnMainThread] subscribeNext:^(__kindof NSArray *x) {
 			@strongify(self);
 			self.isMultiSection = multiSection;
 
@@ -193,7 +192,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - UITableViewDataSourcePrefetching
 #pragma mark -
-#if IS_XCODE8_OR_LATER
 - (void)tableView:(UITableView *)tableView prefetchRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths
 {
     //TODO: 预加载
@@ -209,7 +207,6 @@ NS_ASSUME_NONNULL_BEGIN
 {
     //TODO: 取消预加载
 }
-#endif
 
 #pragma mark - UITableViewDataSource
 #pragma mark -
@@ -225,7 +222,7 @@ NS_ASSUME_NONNULL_BEGIN
 {
 	if (self.isMultiSection) {
 		NSArray *cellViewModelArr = self.sectionCellDatas[section][CellViewModelKey];
-        return [NSArray zd_cast:cellViewModelArr] ? cellViewModelArr.count : 0;
+        return [NSArray zdbd_cast:cellViewModelArr] ? cellViewModelArr.count : 0;
 	}
 	return self.cellViewModels.count;
 }
@@ -475,7 +472,7 @@ NS_ASSUME_NONNULL_BEGIN
 			viewForHeaderInSection.sectionCommand = self.sectionCommand;
 		}
 
-		return [UIView zd_cast:viewForHeaderInSection];
+		return [UIView zdbd_cast:viewForHeaderInSection];
 	}
 
 	return nil;
@@ -515,7 +512,7 @@ NS_ASSUME_NONNULL_BEGIN
         viewForFooterInSection.sectionCommand = self.sectionCommand;
     }
     
-    return [UIView zd_cast:viewForFooterInSection];
+    return [UIView zdbd_cast:viewForFooterInSection];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section
@@ -691,7 +688,7 @@ NS_ASSUME_NONNULL_BEGIN
 	}
 }
 
-- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(ZD_NULLABLE NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didEndEditingRowAtIndexPath:(nullable NSIndexPath *)indexPath
 {
 	if (_delegateRespondsTo.didEndEditingRowAtIndexPath == 1) {
 		[self.delegate tableView:tableView didEndEditingRowAtIndexPath:indexPath];
@@ -947,7 +944,7 @@ NS_ASSUME_NONNULL_BEGIN
     
     if (self.isMultiSection) {
         NSMutableDictionary *sectionMutDict = self.sectionCellDatas[indexPath.section].mutableCopy;
-        NSMutableArray *cellViewModelMutArr = [NSArray zd_cast:sectionMutDict[CellViewModelKey]].mutableCopy;
+        NSMutableArray *cellViewModelMutArr = [NSArray zdbd_cast:sectionMutDict[CellViewModelKey]].mutableCopy;
         [cellViewModelMutArr replaceObjectAtIndex:indexPath.row withObject:viewModel];
         [sectionMutDict setValue:cellViewModelMutArr.copy forKey:CellViewModelKey];
         [self.sectionCellDatas replaceObjectAtIndex:indexPath.section withObject:sectionMutDict];
@@ -973,9 +970,7 @@ NS_ASSUME_NONNULL_BEGIN
 		[self.cellViewModels insertObject:viewModel atIndex:indexPath.row];
 	}
     
-	[self.tableView beginUpdates];
-	[self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-	[self.tableView endUpdates];
+    ZD_BATCH_UPDATE(self.tableView, [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];)
 }
 
 - (void)replaceViewModel:(id <ZDCellViewModelProtocol>)viewModel atIndexPath:(NSIndexPath *)indexPath afterDelay:(NSTimeInterval)delay
@@ -1036,10 +1031,8 @@ NS_ASSUME_NONNULL_BEGIN
             viewModel = self.cellViewModels[fromIndexPath.row];
         }
     }
-        
-    [self.tableView beginUpdates];
-    [self.tableView moveRowAtIndexPath:fromIndexPath toIndexPath:toIndexPath];
-    [self.tableView endUpdates];
+    
+    ZD_BATCH_UPDATE(self.tableView, [self.tableView moveRowAtIndexPath:fromIndexPath toIndexPath:toIndexPath];)
 }
 
 // muti section
@@ -1067,19 +1060,15 @@ NS_ASSUME_NONNULL_BEGIN
 	else {
 		[self.cellViewModels removeObjectAtIndex:indexPath.row];
 	}
-
-	[self.tableView beginUpdates];
-	[self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-	[self.tableView endUpdates];
+    
+    ZD_BATCH_UPDATE(self.tableView, [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];)
 }
 
 - (void)reloadItemsAtIndexPaths:(NSArray <NSIndexPath *> *)indexPaths
 {
     if (indexPaths.count == 0) return;
     
-    [self.tableView beginUpdates];
-	[self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-	[self.tableView endUpdates];
+    ZD_BATCH_UPDATE(self.tableView, [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];)
 }
 
 - (void)resetData
@@ -1186,9 +1175,7 @@ NS_ASSUME_NONNULL_BEGIN
 {
     if (indexPaths.count == 0) return;
     
-    [self.tableView beginUpdates];
-    [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];
-    [self.tableView endUpdates];
+    ZD_BATCH_UPDATE(self.tableView, [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationNone];)
 }
 
 #pragma mark - Setters
@@ -1343,7 +1330,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation NSObject (Cast)
 
-+ (nullable instancetype)zd_cast:(id)objc
++ (nullable instancetype)zdbd_cast:(id)objc
 {
 	if ([objc isKindOfClass:[self class]]) {
 		return objc;

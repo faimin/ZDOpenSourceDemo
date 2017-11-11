@@ -1,0 +1,6 @@
+framework module ZDNetWorkHelper {
+  umbrella header "ZDNetWorkHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}
