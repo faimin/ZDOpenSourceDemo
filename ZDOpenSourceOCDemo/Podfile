@@ -76,6 +76,7 @@ post_install do |installer|
         target.build_configurations.each do |config|
             if target.name == 'PromiseKit' || target.name == 'YogaKit' || target.name == 'ResponseDetective'
                 config.build_settings['SWIFT_VERSION'] = '4.0'
+                #config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'NO' #可以让pod中的类调用[UIApplication shareApplication]
             end
         end
     end
