@@ -108,6 +108,7 @@ final class GeminiAnimationModel {
     /// CircleRotate animation property
     var circleRadius: CGFloat = 100
     var rotateDirection: CircleRotationDirection = .clockwise
+    var isItemRotationEnabled: Bool = true
 
     /// Scale animation properties
     var scale: CGFloat = 1
@@ -180,15 +181,17 @@ final class GeminiAnimationModel {
 
     func backgroundColor(withDistanceRatio ratio: CGFloat) -> UIColor? {
         // sc = Start backgroundColor components
-        let sc = startBackgroundColor?.cgColor.components ?? []
+        let startColorComponents = startBackgroundColor?.cgColor.components ?? []
         // ec = End backgroundColor components
-        let ec = endBackgroundColor?.cgColor.components ?? []
+        let endColorComponents = endBackgroundColor?.cgColor.components ?? []
 
-        if sc.isEmpty || sc.count < 3 || ec.isEmpty || ec.count < 3 {
+        if startColorComponents.count < 3 || endColorComponents.count < 3 {
             return nil
         }
 
-        let components = (0...3).map { (ec[$0] - sc[$0]) * abs(ratio) + sc[$0] }
+        let components = (0...3).map { index -> CGFloat in
+            (endColorComponents[index] - startColorComponents[index]) * abs(ratio) + startColorComponents[index]
+        }
         return UIColor(red: components[0], green: components[1], blue: components[2], alpha: components[3])
     }
 
@@ -234,7 +237,8 @@ final class GeminiAnimationModel {
 
             let scale = self.calculatedScale(withRatio: easingRatio)
             let scaleTransform = CATransform3DScale(transform3DIdentity, scale, scale, 1)
-            return CATransform3DConcat(CATransform3DConcat(rotateTransform, translateTransform), scaleTransform)
+            let circleTransform = isItemRotationEnabled ? CATransform3DConcat(rotateTransform, translateTransform) : translateTransform
+            return CATransform3DConcat(circleTransform, scaleTransform)
 
         case .rollRotation:
             let toDegree: CGFloat = max(0, min(90, rollDegree))

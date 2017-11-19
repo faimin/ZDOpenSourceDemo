@@ -59,7 +59,7 @@
 		DA25131F1F349CB000633093 /* ZDOpenSourceSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDOpenSourceSwiftDemoUITests.swift; sourceTree = "<group>"; };
 		DA2513211F349CB000633093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA25132E1F349D0B00633093 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DAA098181F39F1CD00303DD4 /* Playground_YogaKit.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground_YogaKit.playground; sourceTree = "<group>"; };
+		DAA098181F39F1CD00303DD4 /* Playground_YogaKit.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground_YogaKit.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAA098201F39FAFC00303DD4 /* ZDOpenSourceSwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZDOpenSourceSwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		DAA098261F3B09FA00303DD4 /* Playground_RxSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground_RxSwift.playground; sourceTree = "<group>"; };
 		DAA098271F3B373B00303DD4 /* YogaKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YogaKitViewController.swift; sourceTree = "<group>"; };

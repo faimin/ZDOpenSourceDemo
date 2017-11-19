@@ -17,13 +17,13 @@ def pods_swift
   pod 'Kingfisher'
   pod 'ResponseDetective'
   # autolayout
-  pod 'Cartography'#, '~> 1.1.0'
-  pod 'SnapKit'#, '~> 3.2.0'
-  pod 'TinyConstraints'#, '~> 2.1.1'
+  pod 'Cartography'
+  pod 'SnapKit'
+  pod 'TinyConstraints'
   # framelayout
   pod 'YogaKit'
-  pod 'Neon'#, '~> 0.4.0'
-  pod 'LayoutKit'#, '~> 5.0.0'
+  pod 'Neon'
+  pod 'LayoutKit'
   # animation
   pod 'lottie-ios'
   pod 'Hero'
@@ -32,10 +32,10 @@ def pods_swift
   pod 'MBProgressHUD'
   # extensition
   # color
-  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'ChameleonFramework/Swift'#, :git => 'https://github.com/ViccAlexander/Chameleon.git'
   # tools
   pod 'GDPerformanceView-Swift'
-  pod 'LifetimeTracker'     # 监听内存泄露
+  pod 'LifetimeTracker', '~> 1.1.1'     # 监听内存泄露
 end
 
 target 'ZDOpenSourceSwiftDemo' do
@@ -62,7 +62,7 @@ end
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
-            if target.name == 'Gemini' || target.name == 'Hero' || target.name == 'PeekPop'
+            if target.name == 'PeekPop'
                 config.build_settings['SWIFT_VERSION'] = '3.2'
             end
         end

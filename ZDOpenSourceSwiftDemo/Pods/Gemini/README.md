@@ -31,7 +31,7 @@ collectionView.gemini
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
 )](http://mit-license.org)
 ![Swift](https://img.shields.io/badge/Swift-3.0-orange.svg)
-![pod](https://img.shields.io/badge/pod-v1.1.0-red.svg)
+![pod](https://img.shields.io/badge/pod-v1.1.2-red.svg)
 
 <img src="https://github.com/shoheiyokoyama/Assets/blob/master/Gemini/demo-yaw-rotation.gif" align="right">
 
@@ -41,15 +41,13 @@ collectionView.gemini
 - [x] Several types of animations and properties
 - [x] Support vertical and horizontal flow layout
 - [x] Support easing function
-- [x] Support `Swift3`
+- [x] Support `Swift4.0`
 - [x] Fluent interfaces based on method chaining
 - [x] Compatible with `Carthage`
 - [x] Compatible with `CocoaPod`
 - [x] Completely Example Project
 - [x] Completely `README`
 - [x] And More...
-
-#### [Run example app in your browser](https://appetize.io/app/4g62jzpxe6ht1qpugpu096h1ec?device=iphone7&scale=75&orientation=portrait&osVersion=10.3)
 
 # Contents
 - [Animation Types and properties](#anmation-types)
@@ -110,6 +108,7 @@ collectionView.gemini
     .circleRotationAnimation()
     .radius(450) // The radius of the circle
     .rotateDirection(.clockwise) // Direction of rotation. 
+    .itemRotationEnabled(true) // Whether the item rotates or not.
 ```
 
 ## <a name="3d-vector-rotation"> 3D vector rotation
@@ -316,8 +315,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## <a name="requirements"> Requirements
 
-- Xcode 8.0+
-- Swift 3.0+
+- Xcode 9.0+
+- Swift 4.0
 
 ## <a name="installation"> Installation
 
