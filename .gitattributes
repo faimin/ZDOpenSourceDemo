@@ -1,0 +1,3 @@
+*.h linguist-language=swift
+*.m linguist-language=swift
+# 以上两句的意思是将.h 和.m 文件当做swift语言来统计
