@@ -5,6 +5,7 @@ inhibit_all_warnings!
 def pods_git
     pod 'ZDTableViewBinding', :git => 'https://github.com/faimin/ZDTableViewBinding'
     pod 'ZDNetWorkHelper', :git => 'https://github.com/faimin/ZDNetWorkHelper'
+    pod 'ZDToolKit', :git => 'https://github.com/faimin/ZDToolKit'
 end
 
 def pods_oc
@@ -74,9 +75,12 @@ end
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
+            #config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'NO' #可以让pod中的类调用[UIApplication shareApplication]
             if target.name == 'PromiseKit' || target.name == 'YogaKit' || target.name == 'ResponseDetective'
                 config.build_settings['SWIFT_VERSION'] = '4.0'
-                #config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'NO' #可以让pod中的类调用[UIApplication shareApplication]
+            else if target.name == 'ReactiveObjC'
+                #关闭`This block declaration is not a prototype,Insert ‘void'`警告
+                config.build_settings['CLANG_WARN_STRICT_PROTOTYPES'] = 'NO'
             end
         end
     end
