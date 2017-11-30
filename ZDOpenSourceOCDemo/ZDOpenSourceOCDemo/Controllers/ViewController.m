@@ -13,9 +13,12 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import <ReactiveObjC/ReactiveObjC.h>
+#if __has_include(<KZPlayground/KZPPlayground.h>)
 #import <KZPlayground/KZPPlayground.h>
+#endif
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate, UIViewControllerPreviewingDelegate>
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *rightItem;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray<NSString *> *dataSource;
 @end
@@ -26,11 +29,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self setup];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)setup {
@@ -45,6 +43,7 @@
 
 - (void)setupUI {
     self.view.backgroundColor = [UIColor yellowColor];
+    
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
 }
 
@@ -72,9 +71,8 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
 #pragma mark - UIViewControllerPreviewingDelegate
-
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPONE_9_0
 // peek
 - (UIViewController *)previewingContext:(id<UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location {
     NSString *text = ((UITableViewCell *)previewingContext.sourceView).textLabel.text;
@@ -109,7 +107,14 @@
 #pragma mark -
 
 - (IBAction)present:(UIBarButtonItem *)sender {
+#if __has_include(<KZPlayground/KZPPlayground.h>)
     [self.navigationController showViewController:[KZPPlaygroundViewController playgroundViewController] sender:sender];
+#endif
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end

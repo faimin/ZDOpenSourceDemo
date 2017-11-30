@@ -1,6 +1,0 @@
-framework module KZPlayground {
-  umbrella header "KZPlayground-umbrella.h"
-
-  export *
-  module * { export * }
-}

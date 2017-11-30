@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import <GDPerformanceView/GDPerformanceMonitor.h>
+#if DEBUG
+#import <FLEX/FLEX.h>
+#endif
 
 @interface AppDelegate ()
 
@@ -18,13 +21,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // 打开摇一摇
+    application.applicationSupportsShakeToEdit = YES;
+    
+    // 性能监控器
     GDPerformanceMonitor.sharedInstance.appVersionHidden = YES;
     [[GDPerformanceMonitor sharedInstance] startMonitoring];
-    /*
-    if (@available(iOS 11, *)) {
-        [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    }
-    */
+
     return YES;
 }
 
@@ -54,6 +58,24 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - Shake Motion
+
+#if DEBUG
+- (BOOL)canBecomeFirstResponder {
+    return YES;
+}
+
+- (BOOL)becomeFirstResponder {
+    return YES;
+}
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+    if (motion == UIEventSubtypeMotionShake) {
+        [[FLEXManager sharedManager] showExplorer];
+    }
+}
+#endif
 
 
 @end

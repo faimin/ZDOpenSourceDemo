@@ -36,6 +36,8 @@ def pods_swift
   # tools
   pod 'GDPerformanceView-Swift'
   pod 'LifetimeTracker', '~> 1.1.1'     # 监听内存泄露
+  # debug
+  pod 'FLEX', :configurations => ['Debug']
 end
 
 target 'ZDOpenSourceSwiftDemo' do
@@ -55,7 +57,7 @@ target 'ZDOpenSourceSwiftDemo' do
     inherit! :search_paths
     # Pods for testing
   end
-
+  
 end
 
 

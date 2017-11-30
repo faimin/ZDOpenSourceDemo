@@ -44,11 +44,15 @@ def pods_oc
   pod 'YYCache'
   # thread
   pod 'YYDispatchQueuePool'
+  # runtime
+  pod 'RSSwizzle'
   # tools
   pod 'GDPerformanceView'
   pod 'DirectoryWatchdog'
   # playground
-  pod 'KZPlayground', :inhibit_warnings => true
+  # pod 'KZPlayground', :inhibit_warnings => true
+  # debug
+  pod 'FLEX', :configurations => 'Debug'
 end
 
 target 'ZDOpenSourceOCDemo' do
@@ -78,12 +82,11 @@ post_install do |installer|
             #config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'NO' #可以让pod中的类调用[UIApplication shareApplication]
             if target.name == 'PromiseKit' || target.name == 'YogaKit' || target.name == 'ResponseDetective'
                 config.build_settings['SWIFT_VERSION'] = '4.0'
-            else if target.name == 'ReactiveObjC'
+            elsif target.name == 'ReactiveObjC'
                 #关闭`This block declaration is not a prototype,Insert ‘void'`警告
                 config.build_settings['CLANG_WARN_STRICT_PROTOTYPES'] = 'NO'
             end
         end
     end
 end
-
 

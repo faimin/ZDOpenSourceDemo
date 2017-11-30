@@ -62,9 +62,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype)bindingHelperForTableView:(__kindof UITableView *)tableView
                              multiSection:(BOOL)multiSection
-                             sourceSignal:(__kindof RACSignal *)sourceSignal
-                              cellCommand:(RACCommand *)cellCommand
-                           sectionCommand:(RACCommand *)sectionCommand;
+                         dataSourceSignal:(__kindof RACSignal *)dataSourceSignal
+                              cellCommand:(nullable RACCommand *)cellCommand
+                           sectionCommand:(nullable RACCommand *)sectionCommand;
 
 - (nullable id <ZDCellViewModelProtocol>)cellViewModelAtIndexPath:(NSIndexPath *)indexPath;
 
@@ -78,8 +78,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)deleteCellViewModelAtIndexPath:(NSIndexPath *)indexPath;
 - (void)reloadItemsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths;
 
-/// clear all existing datas when the new datas come
-- (void)resetData;
+/// clear all existing datas after the next new datas come
+- (void)setNeedsResetData;
 
 @end
 
