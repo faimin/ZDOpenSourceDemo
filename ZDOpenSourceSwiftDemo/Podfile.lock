@@ -52,6 +52,7 @@ PODS:
   - PromiseKit/UIKit (4.5.0):
     - PromiseKit/CorePromise
   - ResponseDetective (1.2.2)
+  - RSSwizzle (0.1.0)
   - RxCocoa (4.0.0):
     - RxSwift (~> 4.0)
   - RxSwift (4.0.0)
@@ -89,6 +90,7 @@ DEPENDENCIES:
   - PeekPop
   - PromiseKit
   - ResponseDetective
+  - RSSwizzle
   - RxCocoa
   - RxSwift
   - SnapKit
@@ -120,6 +122,7 @@ SPEC CHECKSUMS:
   PINRemoteImage: 0cefe720c2612960bd360710efbd6c73a1991d5f
   PromiseKit: 9c1d9f6d7b65e3951a90bea7f407c56972be5d8e
   ResponseDetective: 2a1ddb19b895677d418cd1a83c9595a405012b57
+  RSSwizzle: d561958f595028bfcef98c7d55c318b3878a61c6
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
@@ -128,6 +131,6 @@ SPEC CHECKSUMS:
   Yoga: 81670877477311136b1b3f69a6307ce62e1c89cf
   YogaKit: 8fe0ddd21673226c0b6077fc3ad5c8fa6cda722e
 
-PODFILE CHECKSUM: 3d6bdf45bbddf293d078080177be6760dcac9fd9
+PODFILE CHECKSUM: d80a08fdbc98e7e314be80f78ad873be289c9222
 
 COCOAPODS: 1.3.1

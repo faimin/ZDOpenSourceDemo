@@ -18,6 +18,7 @@
 		DA2513151F349CB000633093 /* ZDOpenSourceSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2513141F349CB000633093 /* ZDOpenSourceSwiftDemoTests.swift */; };
 		DA2513201F349CB000633093 /* ZDOpenSourceSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25131F1F349CB000633093 /* ZDOpenSourceSwiftDemoUITests.swift */; };
 		DA2513311F349D0B00633093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25132E1F349D0B00633093 /* ViewController.swift */; };
+		DA2BA98B1FD2B5F700F97F03 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2BA98A1FD2B5F700F97F03 /* Extension.swift */; };
 		DAA098281F3B373B00303DD4 /* YogaKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA098271F3B373B00303DD4 /* YogaKitViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		DA25131F1F349CB000633093 /* ZDOpenSourceSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDOpenSourceSwiftDemoUITests.swift; sourceTree = "<group>"; };
 		DA2513211F349CB000633093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA25132E1F349D0B00633093 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA2BA98A1FD2B5F700F97F03 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		DAA098181F39F1CD00303DD4 /* Playground_YogaKit.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground_YogaKit.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAA098201F39FAFC00303DD4 /* ZDOpenSourceSwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZDOpenSourceSwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		DAA098261F3B09FA00303DD4 /* Playground_RxSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground_RxSwift.playground; sourceTree = "<group>"; };
@@ -155,7 +157,7 @@
 				DAA098171F39F19700303DD4 /* Playgrounds */,
 				DA25132D1F349D0B00633093 /* ViewControllers */,
 				DA25132F1F349D0B00633093 /* ViewModels */,
-				DA2513301F349D0B00633093 /* Views */,
+				DA2BA9861FD2B4F100F97F03 /* Views */,
 				DA2512FF1F349CAF00633093 /* AppDelegate.swift */,
 				DA2513031F349CAF00633093 /* Main.storyboard */,
 				DA2513061F349CAF00633093 /* Assets.xcassets */,
@@ -202,9 +204,10 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		DA2513301F349D0B00633093 /* Views */ = {
+		DA2BA9861FD2B4F100F97F03 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DA2BA98A1FD2B5F700F97F03 /* Extension.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				"${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework",
 				"${BUILT_PRODUCTS_DIR}/PeekPop/PeekPop.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RSSwizzle/RSSwizzle.framework",
 				"${BUILT_PRODUCTS_DIR}/ResponseDetective/ResponseDetective.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -521,6 +525,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINRemoteImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PeekPop.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSSwizzle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ResponseDetective.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -579,6 +584,7 @@
 				DA2513311F349D0B00633093 /* ViewController.swift in Sources */,
 				DA2513001F349CAF00633093 /* AppDelegate.swift in Sources */,
 				DAA098281F3B373B00303DD4 /* YogaKitViewController.swift in Sources */,
+				DA2BA98B1FD2B5F700F97F03 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -42,7 +42,7 @@
 
 - (void)zd_motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (motion == UIEventSubtypeMotionShake) {
-        //[[FLEXManager sharedManager] showExplorer];
+        [[FLEXManager sharedManager] showExplorer];
     }
 }
 

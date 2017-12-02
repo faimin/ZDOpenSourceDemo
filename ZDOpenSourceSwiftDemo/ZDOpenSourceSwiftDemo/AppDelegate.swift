@@ -22,14 +22,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             label?.textColor = .yellow
             label?.layer.borderColor = UIColor.brown.cgColor
         }
-        
-        // bugMonitor
-        Buglife.shared().start(withEmail: "fuxianchao2009@163.com")
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         showPerformanceMonitor()
+        
+        // bugMonitor
+        Buglife.shared().start(withEmail: "fuxianchao2009@163.com")
+        
+        //self.window?.swizzleShake()
+        
         return true
     }
 
