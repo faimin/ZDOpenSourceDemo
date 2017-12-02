@@ -29,14 +29,19 @@ def pods_swift
   pod 'Hero'
   pod 'PeekPop'
   pod 'Gemini'
+  # runtime
+  pod 'RSSwizzle'
+  # toast
   pod 'MBProgressHUD'
   # extensition
+  
   # color
-  pod 'ChameleonFramework/Swift'#, :git => 'https://github.com/ViccAlexander/Chameleon.git'
+  pod 'ChameleonFramework/Swift'
   # tools
   pod 'GDPerformanceView-Swift'
   pod 'LifetimeTracker', '~> 1.1.1'     # 监听内存泄露
   # debug
+  pod 'Buglife'
   pod 'FLEX', :configurations => ['Debug']
 end
 

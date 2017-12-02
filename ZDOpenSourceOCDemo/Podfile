@@ -52,6 +52,7 @@ def pods_oc
   # playground
   # pod 'KZPlayground', :inhibit_warnings => true
   # debug
+  pod 'Buglife'
   pod 'FLEX', :configurations => 'Debug'
 end
 

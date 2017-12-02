@@ -43,6 +43,16 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>See http://www.buglife.com/terms-of-service</string>
+			<key>License</key>
+			<string>Commercial</string>
+			<key>Title</key>
+			<string>Buglife</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>##The MIT License (MIT)
 
 &gt; Copyright (c) 2014-2015 Vicc Alexander

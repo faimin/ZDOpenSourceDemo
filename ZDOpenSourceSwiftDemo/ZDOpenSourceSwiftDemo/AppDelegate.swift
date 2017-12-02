@@ -8,6 +8,7 @@
 
 import UIKit
 import GDPerformanceView_Swift
+import Buglife
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,11 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     private func showPerformanceMonitor() {
+        // performanceMonitor
         GDPerformanceMonitor.sharedInstance.startMonitoring { (label) in
             label?.backgroundColor = .red
             label?.textColor = .yellow
             label?.layer.borderColor = UIColor.brown.cgColor
         }
+        
+        // bugMonitor
+        Buglife.shared().start(withEmail: "fuxianchao2009@163.com")
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <GDPerformanceView/GDPerformanceMonitor.h>
+#import <Buglife/Buglife.h>
 #if DEBUG
 #import <FLEX/FLEX.h>
 #endif
@@ -28,6 +29,9 @@
     // 性能监控器
     GDPerformanceMonitor.sharedInstance.appVersionHidden = YES;
     [[GDPerformanceMonitor sharedInstance] startMonitoring];
+    
+    // bugMonitor
+    [[Buglife sharedBuglife] startWithEmail:@"fuxianchao2009@163.com"];
 
     return YES;
 }
