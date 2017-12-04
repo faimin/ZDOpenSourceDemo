@@ -17,15 +17,18 @@ extension UIWindow {
         var key = "shake"
         
         RSSwizzle.swizzleInstanceMethod(selector, in: UIWindow.self, newImpFactory: { (swizzleInfo: RSSwizzleInfo?) -> Any? in
-            return { (target: UIWindow, motion: UIEventSubtype, event: UIEvent) in
+            return { (target: UIWindow, motion: UIEventSubtype, event: UIEvent) -> Void in
                 print("swizzle motionBegin")
                 
                 target.zd_motionBegin(motion, event: event)
                 
                 guard let originIMP = swizzleInfo?.getOriginalImplementation() else {return}
-                //originIMP(self, selector)
-                print(originIMP)
-            }
+                // http://www.jianshu.com/p/f4dd6397ae86
+                typealias Imp = @convention(c) (UIWindow, Selector, UIEventSubtype, UIEvent) -> Void
+                let orginIMPBlock = unsafeBitCast(originIMP, to: Imp.self)
+                orginIMPBlock(target, selector, motion, event)
+                
+            };
         }, mode: .oncePerClassAndSuperclasses, key: &key)
     }
     
