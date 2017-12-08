@@ -29,6 +29,8 @@
 		DAE26CC01F3986590072973F /* vcTransition2.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE26CBC1F3986590072973F /* vcTransition2.json */; };
 		DAE26CC31F3989850072973F /* LottieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE26CC21F3989850072973F /* LottieViewController.m */; };
 		DAE26CC61F398E170072973F /* YogaKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE26CC51F398E170072973F /* YogaKitViewController.m */; };
+		DAF193781FDAD869003F6FDA /* YogaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF193771FDAD869003F6FDA /* YogaCell.m */; };
+		DAF1937B1FDADA08003F6FDA /* YogaKitListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF1937A1FDADA08003F6FDA /* YogaKitListViewController.m */; };
 		FA4390741FDA350D00342B06 /* Xtrace.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA4390731FDA350D00342B06 /* Xtrace.mm */; };
 		FA4390781FDA366A00342B06 /* ZDTraceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4390771FDA366A00342B06 /* ZDTraceHandler.m */; };
 		FA682E511F9E04D0008C3D50 /* TextureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA682E501F9E04D0008C3D50 /* TextureCell.m */; };
@@ -95,6 +97,10 @@
 		DAE26CC21F3989850072973F /* LottieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LottieViewController.m; sourceTree = "<group>"; };
 		DAE26CC41F398E170072973F /* YogaKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogaKitViewController.h; sourceTree = "<group>"; };
 		DAE26CC51F398E170072973F /* YogaKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogaKitViewController.m; sourceTree = "<group>"; };
+		DAF193761FDAD869003F6FDA /* YogaCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogaCell.h; sourceTree = "<group>"; };
+		DAF193771FDAD869003F6FDA /* YogaCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YogaCell.m; sourceTree = "<group>"; };
+		DAF193791FDADA08003F6FDA /* YogaKitListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogaKitListViewController.h; sourceTree = "<group>"; };
+		DAF1937A1FDADA08003F6FDA /* YogaKitListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YogaKitListViewController.m; sourceTree = "<group>"; };
 		DED6398BF0F3395E7AE1408D /* Pods-ZDOpenSourceOCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		FA4390721FDA350D00342B06 /* Xtrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Xtrace.h; sourceTree = "<group>"; };
 		FA4390731FDA350D00342B06 /* Xtrace.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Xtrace.mm; sourceTree = "<group>"; };
@@ -235,6 +241,7 @@
 		DA2512B21F349B5700633093 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DAF193751FDAD77D003F6FDA /* YogaCells */,
 				FA7558331F9F1234008ABCC0 /* Playground */,
 				FA682E4E1F9E0491008C3D50 /* TextureCells */,
 			);
@@ -313,6 +320,8 @@
 			children = (
 				DAE26CC41F398E170072973F /* YogaKitViewController.h */,
 				DAE26CC51F398E170072973F /* YogaKitViewController.m */,
+				DAF193791FDADA08003F6FDA /* YogaKitListViewController.h */,
+				DAF1937A1FDADA08003F6FDA /* YogaKitListViewController.m */,
 			);
 			path = YogaController;
 			sourceTree = "<group>";
@@ -335,6 +344,15 @@
 				DAE26CBC1F3986590072973F /* vcTransition2.json */,
 			);
 			path = LottieJson;
+			sourceTree = "<group>";
+		};
+		DAF193751FDAD77D003F6FDA /* YogaCells */ = {
+			isa = PBXGroup;
+			children = (
+				DAF193761FDAD869003F6FDA /* YogaCell.h */,
+				DAF193771FDAD869003F6FDA /* YogaCell.m */,
+			);
+			path = YogaCells;
 			sourceTree = "<group>";
 		};
 		E0D8AB0F380C55A6F21C13B8 /* Frameworks */ = {
@@ -796,6 +814,8 @@
 				DAA098451F42C86400303DD4 /* TextureViewController.m in Sources */,
 				FA682E5C1F9E1A17008C3D50 /* TextureViewModel.m in Sources */,
 				DA2512801F349AF300633093 /* AppDelegate.m in Sources */,
+				DAF1937B1FDADA08003F6FDA /* YogaKitListViewController.m in Sources */,
+				DAF193781FDAD869003F6FDA /* YogaCell.m in Sources */,
 				DA4005B41F36C52500260064 /* YYWeakProxy.m in Sources */,
 				FA4390781FDA366A00342B06 /* ZDTraceHandler.m in Sources */,
 				DAE26CC31F3989850072973F /* LottieViewController.m in Sources */,
