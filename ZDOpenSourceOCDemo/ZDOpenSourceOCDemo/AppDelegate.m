@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <GDPerformanceView/GDPerformanceMonitor.h>
 #import <Buglife/Buglife.h>
+#import "ZDTraceHandler.h"
 #if DEBUG
 #import <FLEX/FLEX.h>
 #endif
@@ -32,6 +33,8 @@
     
     // bugMonitor
     [[Buglife sharedBuglife] startWithEmail:@"fuxianchao2009@163.com"];
+    
+    [ZDTraceHandler traceAllClass];
 
     return YES;
 }
@@ -62,24 +65,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
-#pragma mark - Shake Motion
-
-#if DEBUG
-- (BOOL)canBecomeFirstResponder {
-    return YES;
-}
-
-- (BOOL)becomeFirstResponder {
-    return YES;
-}
-
-- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-    if (motion == UIEventSubtypeMotionShake) {
-        [[FLEXManager sharedManager] showExplorer];
-    }
-}
-#endif
 
 
 @end

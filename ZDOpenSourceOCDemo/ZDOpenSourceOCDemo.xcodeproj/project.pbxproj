@@ -29,6 +29,8 @@
 		DAE26CC01F3986590072973F /* vcTransition2.json in Resources */ = {isa = PBXBuildFile; fileRef = DAE26CBC1F3986590072973F /* vcTransition2.json */; };
 		DAE26CC31F3989850072973F /* LottieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE26CC21F3989850072973F /* LottieViewController.m */; };
 		DAE26CC61F398E170072973F /* YogaKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE26CC51F398E170072973F /* YogaKitViewController.m */; };
+		FA4390741FDA350D00342B06 /* Xtrace.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA4390731FDA350D00342B06 /* Xtrace.mm */; };
+		FA4390781FDA366A00342B06 /* ZDTraceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4390771FDA366A00342B06 /* ZDTraceHandler.m */; };
 		FA682E511F9E04D0008C3D50 /* TextureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA682E501F9E04D0008C3D50 /* TextureCell.m */; };
 		FA682E581F9E18F9008C3D50 /* TextureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA682E571F9E18F9008C3D50 /* TextureModel.m */; };
 		FA682E5C1F9E1A17008C3D50 /* TextureViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA682E5B1F9E1A17008C3D50 /* TextureViewModel.m */; };
@@ -94,6 +96,10 @@
 		DAE26CC41F398E170072973F /* YogaKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YogaKitViewController.h; sourceTree = "<group>"; };
 		DAE26CC51F398E170072973F /* YogaKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YogaKitViewController.m; sourceTree = "<group>"; };
 		DED6398BF0F3395E7AE1408D /* Pods-ZDOpenSourceOCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		FA4390721FDA350D00342B06 /* Xtrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Xtrace.h; sourceTree = "<group>"; };
+		FA4390731FDA350D00342B06 /* Xtrace.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Xtrace.mm; sourceTree = "<group>"; };
+		FA4390761FDA366A00342B06 /* ZDTraceHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDTraceHandler.h; sourceTree = "<group>"; };
+		FA4390771FDA366A00342B06 /* ZDTraceHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDTraceHandler.m; sourceTree = "<group>"; };
 		FA52023809EA456FA45299D9 /* Pods-ZDOpenSourceOCDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemoUITests/Pods-ZDOpenSourceOCDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FA682E4F1F9E04D0008C3D50 /* TextureCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureCell.h; sourceTree = "<group>"; };
 		FA682E501F9E04D0008C3D50 /* TextureCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextureCell.m; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 				DA4005B51F36C60900260064 /* Models */,
 				FA682E591F9E19F7008C3D50 /* ViewModels */,
 				FABBF13C1FCFC93D000B7D16 /* Category */,
+				FA4390751FDA362300342B06 /* Tools */,
 				FA75583B1FA02E7B008ABCC0 /* SystemFile */,
 				DAE26CB71F3985F50072973F /* Resource */,
 				DAA0981A1F39F2AA00303DD4 /* Frameworks */,
@@ -237,6 +244,7 @@
 		DA40057B1F36C11600260064 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FA4390711FDA34F600342B06 /* Xtrace */,
 				DA4005AE1F36C52500260064 /* YYKit */,
 			);
 			path = Vendor;
@@ -337,6 +345,24 @@
 				0A25D25693BAD3A5A676D4DF /* Pods_ZDOpenSourceOCDemoUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA4390711FDA34F600342B06 /* Xtrace */ = {
+			isa = PBXGroup;
+			children = (
+				FA4390721FDA350D00342B06 /* Xtrace.h */,
+				FA4390731FDA350D00342B06 /* Xtrace.mm */,
+			);
+			path = Xtrace;
+			sourceTree = "<group>";
+		};
+		FA4390751FDA362300342B06 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				FA4390761FDA366A00342B06 /* ZDTraceHandler.h */,
+				FA4390771FDA366A00342B06 /* ZDTraceHandler.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		FA682E4E1F9E0491008C3D50 /* TextureCells */ = {
@@ -765,11 +791,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4390741FDA350D00342B06 /* Xtrace.mm in Sources */,
 				DA4005B31F36C52500260064 /* YYFPSLabel.m in Sources */,
 				DAA098451F42C86400303DD4 /* TextureViewController.m in Sources */,
 				FA682E5C1F9E1A17008C3D50 /* TextureViewModel.m in Sources */,
 				DA2512801F349AF300633093 /* AppDelegate.m in Sources */,
 				DA4005B41F36C52500260064 /* YYWeakProxy.m in Sources */,
+				FA4390781FDA366A00342B06 /* ZDTraceHandler.m in Sources */,
 				DAE26CC31F3989850072973F /* LottieViewController.m in Sources */,
 				DAA0984A1F442D5800303DD4 /* ZDPlayground.m in Sources */,
 				DA2512B31F349B5700633093 /* ViewController.m in Sources */,

@@ -28,7 +28,7 @@
          
                 void (*originalIMP)(__unsafe_unretained id, SEL);
                 originalIMP = (__typeof__(originalIMP))[swizzleInfo getOriginalImplementation];
-                originalIMP(self, selector);
+                originalIMP(self, selector, motion, event);
             };
         } mode:RSSwizzleModeOncePerClassAndSuperclasses key:ZDMotionShakeKey];
          */
