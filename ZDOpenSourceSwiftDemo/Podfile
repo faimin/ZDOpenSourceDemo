@@ -33,6 +33,7 @@ def pods_swift
   pod 'RSSwizzle'
   # toast
   pod 'MBProgressHUD'
+  pod 'Toast-Swift'
   # extensition
   
   # color

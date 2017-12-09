@@ -40,6 +40,7 @@ def pods_oc
   # toast
   pod 'SVProgressHUD'
   pod 'MBProgressHUD'
+  pod 'Toast'
   # cache
   pod 'YYCache'
   # thread
