@@ -34,7 +34,7 @@
     // bugMonitor
     [[Buglife sharedBuglife] startWithEmail:@"fuxianchao2009@163.com"];
     
-    [ZDTraceHandler traceAllClass];
+    //[ZDTraceHandler traceAllClass];
 
     return YES;
 }

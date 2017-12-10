@@ -13,6 +13,7 @@
 @interface YogaKitListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataSource;
+@property (nonatomic, strong) NSMutableDictionary *mutDict;
 @end
 
 @implementation YogaKitListViewController
@@ -29,7 +30,7 @@
 }
 
 - (void)setupUI {
-    self.navigationItem.title = @"YogaKitDemo";
+    self.navigationItem.title = @"YogaKitListDemo";
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.tableView];
@@ -49,16 +50,33 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     YogaCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([YogaCell class]) forIndexPath:indexPath];
     TextureModel *model = self.dataSource[indexPath.row];
-    
+    cell.model = model;
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
+    YogaCell *cell = [self templateCellWithId:NSStringFromClass([YogaCell class])];
+    //[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([YogaCell class]) forIndexPath:indexPath];
+    TextureModel *model = self.dataSource[indexPath.row];
+    return [cell cellHeightWithModel:model];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - Template Cell
+
+- (__kindof UITableViewCell *)templateCellWithId:(NSString *)cellId {
+    if (!cellId) return nil;
+    
+    UITableViewCell *cell = self.mutDict[cellId];
+    if (!cell) {
+        cell = [self.tableView dequeueReusableCellWithIdentifier:cellId];
+        self.mutDict[cellId] = cell;
+    }
+    [cell prepareForReuse];
+    return cell;
 }
 
 #pragma mark - Property
@@ -74,6 +92,13 @@
         _tableView = tableView;
     }
     return _tableView;
+}
+
+- (NSMutableDictionary *)mutDict {
+    if (!_mutDict) {
+        _mutDict = @{}.mutableCopy;
+    }
+    return _mutDict;
 }
 
 #pragma mark -

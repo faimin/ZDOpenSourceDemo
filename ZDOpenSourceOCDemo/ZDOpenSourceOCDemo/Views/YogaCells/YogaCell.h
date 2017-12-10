@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class TextureModel;
 @interface YogaCell : UITableViewCell
+
+@property (nonatomic, strong) TextureModel *model;
+
+- (CGFloat)cellHeightWithModel:(TextureModel *)model;
 
 @end

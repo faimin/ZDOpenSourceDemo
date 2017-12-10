@@ -37,7 +37,14 @@
 }
 
 - (void)setupData {
-    NSArray<NSString *> *data = @[@"YogaKit", @"YogaKitList", @"IGListKit", @"Texture", @"JLRoute", @"Lottie"];
+    NSArray<NSString *> *data = @[
+                                  @"YogaKit",
+                                  //@"YogaKitList",
+                                  @"IGListKit",
+                                  @"Texture",
+                                  @"JLRoute",
+                                  @"Lottie"
+                                  ];
     self.dataSource = data;
 }
 

@@ -46,11 +46,11 @@
     [self addSubnode:self.nickNameNode];
     [self addSubnode:self.timeNode];
     
-    _titleNode.attributedText = [[NSAttributedString alloc] initWithString:_model.title attributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor], NSFontAttributeName : [UIFont systemFontOfSize:14.0]}];
-    _contentNode.attributedText = [[NSAttributedString alloc] initWithString:_model.content attributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor], NSFontAttributeName : [UIFont systemFontOfSize:12.0]}];
+    _titleNode.attributedText = [[NSAttributedString alloc] initWithString:_model.title attributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor], NSFontAttributeName : [UIFont systemFontOfSize:17.0]}];
+    _contentNode.attributedText = [[NSAttributedString alloc] initWithString:_model.content attributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor], NSFontAttributeName : [UIFont systemFontOfSize:14.0]}];
     _imageNode.image = _model.imageName.length > 0 ? [UIImage imageNamed:_model.imageName] : nil;
-    _nickNameNode.attributedText = [[NSAttributedString alloc] initWithString:_model.username attributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor], NSFontAttributeName : [UIFont systemFontOfSize:12.0]}];
-    _timeNode.attributedText = [[NSAttributedString alloc] initWithString:_model.time attributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor], NSFontAttributeName : [UIFont systemFontOfSize:12.0]}];
+    _nickNameNode.attributedText = [[NSAttributedString alloc] initWithString:_model.username attributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor], NSFontAttributeName : [UIFont systemFontOfSize:14.0]}];
+    _timeNode.attributedText = [[NSAttributedString alloc] initWithString:_model.time attributes:@{NSForegroundColorAttributeName : [UIColor lightGrayColor], NSFontAttributeName : [UIFont systemFontOfSize:14.0]}];
 }
 
 #pragma mark - Layout
