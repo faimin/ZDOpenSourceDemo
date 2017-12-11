@@ -39,7 +39,7 @@
 - (void)setupData {
     NSArray<NSString *> *data = @[
                                   @"YogaKit",
-                                  //@"YogaKitList",
+                                  @"YogaKitList",
                                   @"IGListKit",
                                   @"Texture",
                                   @"JLRoute",

@@ -512,7 +512,7 @@
 		DA2512701F349AF300633093 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Zero.D.Saber;
 				TargetAttributes = {
 					DA2512771F349AF300633093 = {

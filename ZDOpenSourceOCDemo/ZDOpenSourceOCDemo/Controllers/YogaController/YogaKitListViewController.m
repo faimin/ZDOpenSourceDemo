@@ -33,6 +33,13 @@
     self.navigationItem.title = @"YogaKitListDemo";
     self.view.backgroundColor = [UIColor whiteColor];
     
+    /*
+    YogaCell *cell = [[YogaCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    cell.frame = CGRectMake(0, 100, CGRectGetWidth(self.view.frame), 100);
+    cell.contentView.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:cell];
+    cell.model = [TextureViewModel textureModels].firstObject;
+    */
     [self.view addSubview:self.tableView];
 }
 

@@ -9,6 +9,7 @@
 #import "YogaCell.h"
 #import <YogaKit/UIView+Yoga.h>
 #import "TextureModel.h"
+#import <ZDToolKit/ZDFunction.h>
 
 @interface YogaCell ()
 @property (nonatomic, strong) UILabel *titleLabel;    ///< 标题
@@ -33,10 +34,13 @@
 }
 
 - (void)setup {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
     [self setupUI];
 }
 
 - (void)setupUI {
+    self.contentView.backgroundColor = [UIColor redColor];//ZD_RandomColor();
+    
     [self.contentView addSubview:self.titleLabel];
     [self.contentView addSubview:self.contentLabel];
     [self.contentView addSubview:self.aImageView];
@@ -46,10 +50,12 @@
     [bottomContainerView addSubview:self.timeLabel];
     [self.contentView addSubview:bottomContainerView];
     
-    [self.nickNameLabel configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
+    
+    [self.contentLabel configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
         layout.isEnabled = YES;
         layout.marginTop = YGPointValue(10);
     }];
+    
     [self.aImageView configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
         layout.isEnabled = YES;
         layout.marginTop = YGPointValue(10);
@@ -59,6 +65,7 @@
         layout.isEnabled = YES;
         layout.flexDirection = YGFlexDirectionRow;
         layout.justifyContent = YGJustifySpaceBetween;
+        layout.alignContent = YGAlignCenter;
         layout.marginTop = YGPointValue(10);
     }];
     
@@ -68,6 +75,7 @@
         layout.justifyContent = YGJustifyFlexStart;
         layout.paddingHorizontal = YGPointValue(15);
         layout.paddingVertical = YGPointValue(10);
+        layout.width = YGPointValue(UIScreen.mainScreen.bounds.size.width);
     }];
 }
 
@@ -79,16 +87,27 @@
     self.aImageView.image = model.imageName.length > 0 ? [UIImage imageNamed:model.imageName] : nil;
     self.nickNameLabel.text = model.username;
     self.timeLabel.text = model.time;
+    
+    // 子节点置为markDirty状态，否则会使用缓存高度，使之计算不准确
+    [self.titleLabel.yoga markDirty];
+    [self.contentLabel.yoga markDirty];
+    [self.aImageView.yoga markDirty];
+    [self.nickNameLabel.yoga markDirty];
+    [self.timeLabel.yoga markDirty];
+    [self.nickNameLabel.superview.yoga markDirty];
+    
+    // 应用layout
+    [self.contentView.yoga applyLayoutPreservingOrigin:NO dimensionFlexibility:YGDimensionFlexibilityFlexibleHeigth];
 }
 
 #pragma mark -
 
 - (CGFloat)cellHeightWithModel:(TextureModel *)model {
     self.model = model;
-    //[self.contentView.yoga applyLayoutPreservingOrigin:NO];
-    CGSize size = [self.contentView.yoga calculateLayoutWithSize:CGSizeMake(CGRectGetWidth(self.contentView.frame), CGFLOAT_MAX)];
-    NSLog(@"%s, size = %@", __PRETTY_FUNCTION__, NSStringFromCGSize(size));
-    return size.height;
+    
+    CGSize intrinsicSize = [self.contentView.yoga intrinsicSize];
+    NSLog(@"%s, intrinsicSize = %@", __PRETTY_FUNCTION__, NSStringFromCGSize(intrinsicSize));
+    return intrinsicSize.height;
 }
 
 #pragma mark - Property
@@ -96,6 +115,8 @@
 - (UILabel *)titleLabel {
     if (!_titleLabel) {
         UILabel *node = [[UILabel alloc] init];
+        node.font = [UIFont systemFontOfSize:18.0];
+        node.textColor = [UIColor yellowColor];
         _titleLabel = node;
     }
     return _titleLabel;
@@ -105,6 +126,8 @@
     if (!_contentLabel) {
         UILabel *node = [UILabel new];
         node.numberOfLines = 0;
+        node.font = [UIFont systemFontOfSize:16.0];
+        node.textColor = [UIColor yellowColor];
         _contentLabel = node;
     }
     return _contentLabel;
@@ -113,7 +136,7 @@
 - (UIImageView *)aImageView {
     if (!_aImageView) {
         UIImageView *node = [[UIImageView alloc] init];
-        //node.defaultImage = [UIImage imageNamed:@"hami03"];
+        node.contentMode = UIViewContentModeLeft;
         _aImageView = node;
     }
     return _aImageView;
@@ -122,6 +145,8 @@
 - (UILabel *)nickNameLabel {
     if (!_nickNameLabel) {
         UILabel *node = [[UILabel alloc] init];
+        node.textColor = ZD_RandomColor();
+        node.yoga.isEnabled = YES;
         _nickNameLabel = node;
     }
     return _nickNameLabel;
@@ -130,6 +155,8 @@
 - (UILabel *)timeLabel {
     if (!_timeLabel) {
         UILabel *node = [[UILabel alloc] init];
+        node.textColor = ZD_RandomColor();
+        node.yoga.isEnabled = YES;
         _timeLabel = node;
     }
     return _timeLabel;
