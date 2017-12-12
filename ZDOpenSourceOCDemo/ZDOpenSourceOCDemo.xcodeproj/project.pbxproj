@@ -36,6 +36,8 @@
 		FA682E511F9E04D0008C3D50 /* TextureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA682E501F9E04D0008C3D50 /* TextureCell.m */; };
 		FA682E581F9E18F9008C3D50 /* TextureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA682E571F9E18F9008C3D50 /* TextureModel.m */; };
 		FA682E5C1F9E1A17008C3D50 /* TextureViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA682E5B1F9E1A17008C3D50 /* TextureViewModel.m */; };
+		FA9649711FDF7A1E007BDD88 /* YogaKitListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9649701FDF7A1E007BDD88 /* YogaKitListViewModel.m */; };
+		FA9649741FDF7C54007BDD88 /* ZDTemplateCellHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9649731FDF7C54007BDD88 /* ZDTemplateCellHandler.m */; };
 		FABBF13F1FCFC99A000B7D16 /* UIWindow+ZDMotionShake.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBF13E1FCFC99A000B7D16 /* UIWindow+ZDMotionShake.m */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +115,10 @@
 		FA682E571F9E18F9008C3D50 /* TextureModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextureModel.m; sourceTree = "<group>"; };
 		FA682E5A1F9E1A17008C3D50 /* TextureViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureViewModel.h; sourceTree = "<group>"; };
 		FA682E5B1F9E1A17008C3D50 /* TextureViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextureViewModel.m; sourceTree = "<group>"; };
+		FA96496F1FDF7A1E007BDD88 /* YogaKitListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogaKitListViewModel.h; sourceTree = "<group>"; };
+		FA9649701FDF7A1E007BDD88 /* YogaKitListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YogaKitListViewModel.m; sourceTree = "<group>"; };
+		FA9649721FDF7C54007BDD88 /* ZDTemplateCellHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDTemplateCellHandler.h; sourceTree = "<group>"; };
+		FA9649731FDF7C54007BDD88 /* ZDTemplateCellHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDTemplateCellHandler.m; sourceTree = "<group>"; };
 		FABBF13D1FCFC99A000B7D16 /* UIWindow+ZDMotionShake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+ZDMotionShake.h"; sourceTree = "<group>"; };
 		FABBF13E1FCFC99A000B7D16 /* UIWindow+ZDMotionShake.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+ZDMotionShake.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -379,6 +385,8 @@
 			children = (
 				FA4390761FDA366A00342B06 /* ZDTraceHandler.h */,
 				FA4390771FDA366A00342B06 /* ZDTraceHandler.m */,
+				FA9649721FDF7C54007BDD88 /* ZDTemplateCellHandler.h */,
+				FA9649731FDF7C54007BDD88 /* ZDTemplateCellHandler.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -406,6 +414,8 @@
 			children = (
 				FA682E5A1F9E1A17008C3D50 /* TextureViewModel.h */,
 				FA682E5B1F9E1A17008C3D50 /* TextureViewModel.m */,
+				FA96496F1FDF7A1E007BDD88 /* YogaKitListViewModel.h */,
+				FA9649701FDF7A1E007BDD88 /* YogaKitListViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -630,6 +640,7 @@
 				"${BUILT_PRODUCTS_DIR}/ResponseDetective/ResponseDetective.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
 				"${BUILT_PRODUCTS_DIR}/Typhoon/Typhoon.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
 				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
@@ -669,6 +680,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ResponseDetective.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Typhoon.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
@@ -819,7 +831,9 @@
 				DA4005B41F36C52500260064 /* YYWeakProxy.m in Sources */,
 				FA4390781FDA366A00342B06 /* ZDTraceHandler.m in Sources */,
 				DAE26CC31F3989850072973F /* LottieViewController.m in Sources */,
+				FA9649741FDF7C54007BDD88 /* ZDTemplateCellHandler.m in Sources */,
 				DAA0984A1F442D5800303DD4 /* ZDPlayground.m in Sources */,
+				FA9649711FDF7A1E007BDD88 /* YogaKitListViewModel.m in Sources */,
 				DA2512B31F349B5700633093 /* ViewController.m in Sources */,
 				FA682E511F9E04D0008C3D50 /* TextureCell.m in Sources */,
 				FABBF13F1FCFC99A000B7D16 /* UIWindow+ZDMotionShake.m in Sources */,

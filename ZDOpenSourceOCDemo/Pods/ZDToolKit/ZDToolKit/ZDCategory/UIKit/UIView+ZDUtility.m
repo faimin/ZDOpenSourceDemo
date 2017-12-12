@@ -71,6 +71,21 @@ static void Swizzle(Class c, SEL orig, SEL new) {
 
 #pragma mark Method
 
+- (UIWindow *)zd_normalLevelWindow {
+    UIWindow *targetWindow = [[UIApplication sharedApplication] keyWindow];
+    //app默认windowLevel是UIWindowLevelNormal，如果不是，找到UIWindowLevelNormal的
+    if (targetWindow.windowLevel != UIWindowLevelNormal) {
+        NSEnumerator<UIWindow *> *windows = [[UIApplication sharedApplication].windows reverseObjectEnumerator];
+        for (UIWindow *tempWindow in windows) {
+            if (tempWindow.windowLevel == UIWindowLevelNormal) {
+                targetWindow = tempWindow;
+                break;
+            }
+        }
+    }
+    return targetWindow;
+}
+
 - (void)zd_eachSubview:(void (^)(UIView *subview))block {
 	NSParameterAssert(block != nil);
 	[self.subviews enumerateObjectsUsingBlock:^(UIView *subview, NSUInteger idx, BOOL *stop) {
@@ -394,7 +409,106 @@ static void Swizzle(Class c, SEL orig, SEL new) {
 	return self.height / 2;
 }
 
-#pragma mark Layer
+#pragma mark - Chain Caller
+
+- (UIView *(^)(CGFloat))zd_left {
+    return ^UIView *(CGFloat left) {
+        CGRect frame = self.frame;
+        frame.origin.x = left;
+        self.frame = frame;
+        return self;
+    };
+}
+
+- (UIView *(^)(CGFloat))zd_right {
+    return ^UIView *(CGFloat right) {
+        CGRect frame = self.frame;
+        frame.origin.x = right - CGRectGetWidth(frame);
+        self.frame = frame;
+        return self;
+    };
+}
+
+- (UIView *(^)(CGFloat))zd_top {
+    return ^UIView *(CGFloat top) {
+        CGRect frame = self.frame;
+        frame.origin.y = top;
+        self.frame = frame;
+        return self;
+    };
+}
+
+- (UIView *(^)(CGFloat))zd_bottom {
+    return ^UIView *(CGFloat bottom) {
+        CGRect frame = self.frame;
+        frame.origin.y = bottom - CGRectGetHeight(frame);
+        self.frame = frame;
+        return self;
+    };
+}
+
+- (UIView *(^)(CGFloat))zd_width {
+    return ^UIView *(CGFloat width) {
+        CGRect frame = self.frame;
+        frame.size.width = width;
+        self.frame = frame;
+        return self;
+    };
+}
+
+- (UIView *(^)(CGFloat))zd_height {
+    return ^UIView *(CGFloat height) {
+        CGRect frame = self.frame;
+        frame.size.height = height;
+        self.frame = frame;
+        return self;
+    };
+}
+
+- (UIView *(^)(CGFloat))zd_centerX {
+    return ^UIView *(CGFloat centerX) {
+        CGPoint center = self.center;
+        center.x = centerX;
+        self.center = center;
+        return self;
+    };
+}
+
+- (UIView *(^)(CGFloat))zd_centerY {
+    return ^UIView *(CGFloat centerY) {
+        CGPoint center = self.center;
+        center.y = centerY;
+        self.center = center;
+        return self;
+    };
+}
+
+- (UIView *(^)(CGPoint))zd_center {
+    return ^UIView *(CGPoint center) {
+        self.center = center;
+        return self;
+    };
+}
+
+- (UIView *(^)(CGPoint))zd_origin {
+    return ^UIView *(CGPoint origin) {
+        CGRect frame = self.frame;
+        frame.origin = origin;
+        self.frame = frame;
+        return self;
+    };
+}
+
+- (UIView *(^)(CGSize))zd_size {
+    return ^UIView *(CGSize size) {
+        CGRect frame = self.frame;
+        frame.size = size;
+        self.frame = frame;
+        return self;
+    };
+}
+
+#pragma mark - Layer
 
 - (void)setZd_cornerRadius:(CGFloat)zd_cornerRadius {
     objc_setAssociatedObject(self, CornerRadiusKey, @(zd_cornerRadius), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -414,7 +528,7 @@ static void Swizzle(Class c, SEL orig, SEL new) {
     return [objc_getAssociatedObject(self, CornerRadiusKey) integerValue];
 }
 
-#pragma mark TouchExtendInset
+#pragma mark - TouchExtendInset
 
 - (BOOL)zdPointInside:(CGPoint)point withEvent:(UIEvent *)event {
     if (UIEdgeInsetsEqualToEdgeInsets(self.zd_touchExtendInsets, UIEdgeInsetsZero) || self.hidden) {

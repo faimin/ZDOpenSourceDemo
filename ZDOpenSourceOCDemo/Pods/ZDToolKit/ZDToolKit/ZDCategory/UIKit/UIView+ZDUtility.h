@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, strong, readonly) UIViewController *zd_topMostController;
 
 //MARK: Method
+- (UIWindow *)zd_normalLevelWindow;
 /// Traverse all subviews
 - (void)zd_eachSubview:(void (^)(UIView *subview))block;
 - (void)zd_removeAllSubviews;
@@ -100,6 +101,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Extend clickable area, e.g: self.zd_touchExtendInsets = UIEdgeInsetsMake(10, 20, 40, 10);
 @property (nonatomic, assign) UIEdgeInsets zd_touchExtendInsets;
+
+/// Chain Caller
+- (UIView *(^)(CGFloat))zd_left;
+- (UIView *(^)(CGFloat))zd_right;
+- (UIView *(^)(CGFloat))zd_top;
+- (UIView *(^)(CGFloat))zd_bottom;
+- (UIView *(^)(CGFloat))zd_width;
+- (UIView *(^)(CGFloat))zd_height;
+- (UIView *(^)(CGFloat))zd_centerX;
+- (UIView *(^)(CGFloat))zd_centerY;
+- (UIView *(^)(CGPoint))zd_center;
+- (UIView *(^)(CGPoint))zd_origin;
+- (UIView *(^)(CGSize ))zd_size;
 
 @end
 

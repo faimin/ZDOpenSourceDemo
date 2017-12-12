@@ -7,13 +7,15 @@
 //
 
 #import "YogaKitListViewController.h"
-#import "TextureViewModel.h"
+#import "YogaKitListViewModel.h"
 #import "YogaCell.h"
+#import "ZDTemplateCellHandler.h"
+#import <ZDToolKit/NSObject+ZDUtility.h>
 
 @interface YogaKitListViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataSource;
-@property (nonatomic, strong) NSMutableDictionary *mutDict;
+@property (nonatomic, strong) ZDTemplateCellHandler *cellHandler;
 @end
 
 @implementation YogaKitListViewController
@@ -33,7 +35,7 @@
     self.navigationItem.title = @"YogaKitListDemo";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    /*
+    /** Test Yoga constraint
     YogaCell *cell = [[YogaCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     cell.frame = CGRectMake(0, 100, CGRectGetWidth(self.view.frame), 100);
     cell.contentView.backgroundColor = [UIColor yellowColor];
@@ -44,7 +46,7 @@
 }
 
 - (void)setupData {
-    self.dataSource = [TextureViewModel textureModels];
+    self.dataSource = [YogaKitListViewModel yogaListModels];
     [_tableView reloadData];
 }
 
@@ -62,28 +64,15 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    YogaCell *cell = [self templateCellWithId:NSStringFromClass([YogaCell class])];
-    //[tableView dequeueReusableCellWithIdentifier:NSStringFromClass([YogaCell class]) forIndexPath:indexPath];
-    TextureModel *model = self.dataSource[indexPath.row];
-    return [cell cellHeightWithModel:model];
+    CGFloat height = [self.cellHandler cellHeightWithTableView:tableView reuseIdentifier:NSStringFromClass([YogaCell class]) indexPath:indexPath configuration:^(UITableViewCell * _Nonnull templateCell) {
+        TextureModel *model = self.dataSource[indexPath.row];
+        [YogaCell zd_cast:templateCell].model = model;
+    }];
+    return height;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
-#pragma mark - Template Cell
-
-- (__kindof UITableViewCell *)templateCellWithId:(NSString *)cellId {
-    if (!cellId) return nil;
-    
-    UITableViewCell *cell = self.mutDict[cellId];
-    if (!cell) {
-        cell = [self.tableView dequeueReusableCellWithIdentifier:cellId];
-        self.mutDict[cellId] = cell;
-    }
-    [cell prepareForReuse];
-    return cell;
 }
 
 #pragma mark - Property
@@ -94,6 +83,7 @@
         tableView.backgroundColor = [UIColor whiteColor];
         tableView.dataSource = self;
         tableView.delegate = self;
+        tableView.estimatedRowHeight = 0.f; // 禁用预估高度
         tableView.tableFooterView = [UIView new];
         [tableView registerClass:[YogaCell class] forCellReuseIdentifier:NSStringFromClass([YogaCell class])];
         _tableView = tableView;
@@ -101,11 +91,11 @@
     return _tableView;
 }
 
-- (NSMutableDictionary *)mutDict {
-    if (!_mutDict) {
-        _mutDict = @{}.mutableCopy;
+- (ZDTemplateCellHandler *)cellHandler {
+    if (!_cellHandler) {
+        _cellHandler = [ZDTemplateCellHandler new];
     }
-    return _mutDict;
+    return _cellHandler;
 }
 
 #pragma mark -
