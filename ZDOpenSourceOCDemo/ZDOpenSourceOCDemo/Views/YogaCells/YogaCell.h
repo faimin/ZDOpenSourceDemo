@@ -13,6 +13,4 @@
 
 @property (nonatomic, strong) TextureModel *model;
 
-- (CGFloat)cellHeightWithModel:(TextureModel *)model;
-
 @end

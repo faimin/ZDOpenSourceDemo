@@ -247,9 +247,9 @@
 		DA2512B21F349B5700633093 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DAF193751FDAD77D003F6FDA /* YogaCells */,
 				FA7558331F9F1234008ABCC0 /* Playground */,
 				FA682E4E1F9E0491008C3D50 /* TextureCells */,
+				DAF193751FDAD77D003F6FDA /* YogaCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";

@@ -88,7 +88,11 @@
     self.nickNameLabel.text = model.username;
     self.timeLabel.text = model.time;
     
-    // 子节点置为markDirty状态，否则会使用缓存高度，使之计算不准确
+    // 根据数据改变layout
+    self.contentLabel.yoga.marginTop = YGPointValue((model.title.length == 0 || model.content.length == 0) ? 0 : 10);
+    self.aImageView.yoga.marginTop = YGPointValue(model.imageName.length == 0 ? 0 : 10);
+    
+    // 子节点置为markDirty状态，否则yoga会使用缓存高度，不会重新计算
     [self.titleLabel.yoga markDirty];
     [self.contentLabel.yoga markDirty];
     [self.aImageView.yoga markDirty];
@@ -98,16 +102,6 @@
     
     // 应用layout
     [self.contentView.yoga applyLayoutPreservingOrigin:NO dimensionFlexibility:YGDimensionFlexibilityFlexibleHeigth];
-}
-
-#pragma mark -
-
-- (CGFloat)cellHeightWithModel:(TextureModel *)model {
-    self.model = model;
-    
-    CGSize intrinsicSize = [self.contentView.yoga intrinsicSize];
-    NSLog(@"%s, intrinsicSize = %@", __PRETTY_FUNCTION__, NSStringFromCGSize(intrinsicSize));
-    return intrinsicSize.height;
 }
 
 #pragma mark - Property
