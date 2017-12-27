@@ -100,7 +100,7 @@
     [self.timeLabel.yoga markDirty];
     [self.nickNameLabel.superview.yoga markDirty];
     
-    // 应用layout
+    // 计算layout
     [self.contentView.yoga applyLayoutPreservingOrigin:NO dimensionFlexibility:YGDimensionFlexibilityFlexibleHeigth];
 }
 

@@ -45,10 +45,18 @@
         UITableViewCell *cell = [self templateCellWithTableView:tableView reuseIdentifier:reuseCellId];
         if (configurationBlock) configurationBlock(cell);
         
-        CGSize intrinsicSize = [cell.contentView.yoga intrinsicSize];
-        //NSLog(@"%s, intrinsicSize = %@", __PRETTY_FUNCTION__, NSStringFromCGSize(intrinsicSize));
-        self.cellHeightCache[indexPath] = @(intrinsicSize.height);
-        cellHeight = intrinsicSize.height;
+        // Perform layout calculation
+        // 一旦在布局代码完成之后，就要在 根视图 的属性 yoga 对象上调用这个方法，应用布局到 根视图 和 子视图
+        // 为啥在这里执行计算会有问题呢？？？？
+        //[cell.contentView.yoga applyLayoutPreservingOrigin:NO dimensionFlexibility:YGDimensionFlexibilityFlexibleHeigth];
+        
+        // 下面2种方式皆可
+        CGSize size = cell.contentView.frame.size;
+        //CGSize intrinsicSize = [cell.contentView.yoga intrinsicSize];
+        //NSLog(@"%s, intrinsicSize = %@, size = %@", __PRETTY_FUNCTION__, NSStringFromCGSize(intrinsicSize), NSStringFromCGSize(size));
+        CGFloat cellHeight = size.height;
+        self.cellHeightCache[indexPath] = @(cellHeight);
+        cellHeight = cellHeight;
     }
     
     return cellHeight;
