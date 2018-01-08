@@ -39,8 +39,9 @@ def pods_swift
   # color
   pod 'ChameleonFramework/Swift'
   # tools
+  pod 'DeepDiff' # 对比集合内元素是否变化
   pod 'GDPerformanceView-Swift'
-  pod 'LifetimeTracker', '~> 1.1.1'     # 监听内存泄露
+  pod 'LifetimeTracker' # 监听内存泄露
   # debug
   pod 'Buglife'
   pod 'FLEX', :configurations => ['Debug']
