@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZDBaseViewController.h"
 
-@interface TextureViewController : UIViewController
+@interface TextureViewController : ZDBaseViewController
 
 @end

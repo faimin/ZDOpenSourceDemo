@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZDBaseViewController.h"
 
-@interface LottieViewController : UIViewController
+@interface LottieViewController : ZDBaseViewController
 
 @end

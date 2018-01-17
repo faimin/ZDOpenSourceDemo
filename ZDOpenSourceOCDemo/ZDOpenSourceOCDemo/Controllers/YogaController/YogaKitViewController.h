@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZDBaseViewController.h"
 
-@interface YogaKitViewController : UIViewController
+@interface YogaKitViewController : ZDBaseViewController
 
 @end

@@ -17,9 +17,13 @@
 #import <KZPlayground/KZPPlayground.h>
 #endif
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate, UIViewControllerPreviewingDelegate>
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *rightItem;
-@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
+, UIViewControllerPreviewingDelegate
+#endif
+>
+@property (nonatomic, weak  ) IBOutlet UIBarButtonItem *rightItem;
+@property (nonatomic, weak  ) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray<NSString *> *dataSource;
 @end
 
@@ -38,18 +42,18 @@
 
 - (void)setupData {
     NSArray<NSString *> *data = @[
-                                  @"YogaKit",
-                                  @"YogaKitList",
-                                  @"IGListKit",
-                                  @"Texture",
-                                  @"JLRoute",
-                                  @"Lottie"
-                                  ];
+      @"YogaKit",
+      @"YogaKitList",
+      @"IGListKit",
+      @"Texture",
+      @"JLRoute",
+      @"Lottie",
+    ];
     self.dataSource = data;
 }
 
 - (void)setupUI {
-    self.view.backgroundColor = [UIColor yellowColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
 }
@@ -62,6 +66,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.text = self.dataSource[indexPath.row];
     if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable) {
         [self registerForPreviewingWithDelegate:self sourceView:cell];
@@ -70,12 +75,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString *text = self.dataSource[indexPath.row];
     Class aClass = objc_getClass([text stringByAppendingString:@"ViewController"].UTF8String);
     if (!aClass) return;
 
     [self.navigationController showViewController:[aClass new] sender:tableView];
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
@@ -91,23 +96,6 @@
 - (void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit {
     viewControllerToCommit.hidesBottomBarWhenPushed = YES;
     [self showViewController:viewControllerToCommit sender:self];
-}
-
-// 预览时的底部菜单
-- (NSArray <id <UIPreviewActionItem>> *)previewActionItems {
-    UIPreviewAction *action1 = [UIPreviewAction actionWithTitle:@"标题1" style:UIPreviewActionStyleSelected handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
-        NSLog(@"选中标题1");
-    }];
-    
-    UIPreviewAction *action2 = [UIPreviewAction actionWithTitle:@"标题2" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
-        NSLog(@"选中标题2");
-    }];
-    
-    UIPreviewAction *action3 = [UIPreviewAction actionWithTitle:@"标题3" style:UIPreviewActionStyleDestructive handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
-        NSLog(@"选中标题3");
-    }];
-    
-    return @[action1, action2, action3];
 }
 #endif
 
