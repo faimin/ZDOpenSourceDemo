@@ -8,13 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-#pragma clang diagnostic ignored "-Wstrict-prototypes"
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZDTools : NSObject
 
-///  避免方法频繁调用
+///  避免方法频繁调用,在指定的时间内只执行第一次,忽略剩余事件
 ///  @param timeInterval 时间间隔
 ///  @param queue        指定的队列
 ///  @param key          key，用于判断是不是同一个事件
@@ -22,13 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)zd_throttleWithTimeinterval:(NSTimeInterval)timeInterval
                               queue:(dispatch_queue_t)queue
                                 key:(NSString *)key
-                              block:(void(^)())block;
+                              block:(dispatch_block_t)block;
 
 @end
-
-#pragma mark - Functions
-void zd_dispatch_throttle_on_mainQueue(NSTimeInterval intervalInSeconds, void(^block)());
-void zd_dispatch_throttle_on_queue(NSTimeInterval intervalInSeconds, dispatch_queue_t queue, void(^block)());
 
 
 ///================================================

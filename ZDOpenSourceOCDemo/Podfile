@@ -5,7 +5,7 @@ inhibit_all_warnings!
 def pods_git
     pod 'ZDTableViewBinding', :git => 'https://github.com/faimin/ZDTableViewBinding'
     pod 'ZDNetWorkHelper', :git => 'https://github.com/faimin/ZDNetWorkHelper'
-    pod 'ZDToolKit', :git => 'https://github.com/faimin/ZDToolKit'
+    pod 'ZDToolKit', :git => 'https://github.com/faimin/ZDToolKit', :branch => 'develop'
 end
 
 def pods_oc

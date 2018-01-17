@@ -10,8 +10,9 @@
 #import <ImageIO/ImageIO.h>
 #import <objc/runtime.h>
 #import <pthread/pthread.h>
-#import <stdlib.h>
-#import <sys/socket.h>
+#import <Accelerate/Accelerate.h>
+#import <AVFoundation/AVAsset.h>
+// -------- IP & Address --------
 #import <sys/sockio.h>
 #import <sys/ioctl.h>
 #import <sys/sysctl.h>
@@ -19,8 +20,8 @@
 #import <net/if.h>
 #import <arpa/inet.h>
 #import <mach/mach.h>
-#import <Accelerate/Accelerate.h>
-#import <AVFoundation/AVAsset.h>
+//-----------------------------
+
 
 #pragma mark - Gif Image
 #pragma mark -
@@ -947,7 +948,8 @@ UIColor *ZD_RandomColor() {
     return [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
 }
 
-OS_ALWAYS_INLINE void ZD_Dispatch_async_on_main_queue(void (^block)()) {
+OS_ALWAYS_INLINE void ZD_Dispatch_async_on_main_queue(dispatch_block_t block) {
+    if (!block) return;
     if (pthread_main_np()) {
         block();
     }
@@ -956,7 +958,8 @@ OS_ALWAYS_INLINE void ZD_Dispatch_async_on_main_queue(void (^block)()) {
     }
 }
 
-OS_ALWAYS_INLINE void ZD_Dispatch_sync_on_main_queue(void (^block)()) {
+OS_ALWAYS_INLINE void ZD_Dispatch_sync_on_main_queue(dispatch_block_t block) {
+    if (!block) return;
     if (pthread_main_np()) {
         block();
     }
@@ -990,38 +993,54 @@ BOOL ZD_IsMainQueue() {
      */
 }
 
-// https://github.com/cyanzhong/GCDThrottle/blob/master/GCDThrottle/GCDThrottle.m
-void ZD_ExecuteFunctionThrottle(NSTimeInterval intervalInSeconds, dispatch_queue_t queue, NSString *key, void(^block)()) {
-    static NSMutableDictionary *scheduleSourceDic = nil;
+void ZD_ExecuteFunctionThrottle(ZDThrottleType type, NSTimeInterval intervalInSeconds, dispatch_queue_t queue, NSString *key, dispatch_block_t block) {
+    static NSMutableDictionary *scheduleSourceDict = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        scheduleSourceDic = [[NSMutableDictionary alloc] init];
+        scheduleSourceDict = [[NSMutableDictionary alloc] init];
     });
     
-    dispatch_source_t timer = scheduleSourceDic[key];
-    if (timer) {
-        //dispatch_source_cancel(timer);
-        return;
+    if (!key) return;
+    
+    if (type == ZDThrottleType_Invoke_First) {
+        dispatch_source_t timer = scheduleSourceDict[key];
+        if (timer) return;
+        
+        if (block) block();
+        
+        timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+        dispatch_source_set_timer(timer, dispatch_time(DISPATCH_TIME_NOW, intervalInSeconds * NSEC_PER_SEC), DISPATCH_TIME_FOREVER, 0);
+        dispatch_source_set_event_handler(timer, ^{
+            dispatch_source_cancel(timer);
+            [scheduleSourceDict removeObjectForKey:key];
+        });
+        dispatch_resume(timer);
+        scheduleSourceDict[key] = timer;
     }
-    
-    block();
-    
-    timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
-    dispatch_source_set_timer(timer, dispatch_time(DISPATCH_TIME_NOW, intervalInSeconds * NSEC_PER_SEC), DISPATCH_TIME_FOREVER, 0);
-    dispatch_source_set_event_handler(timer, ^{
-        dispatch_source_cancel(timer);
-        [scheduleSourceDic removeObjectForKey:key];
-    });
-    dispatch_resume(timer);
-    scheduleSourceDic[key] = timer;
+    else if (type == ZDThrottleType_Invoke_Last) {
+        dispatch_source_t timer = scheduleSourceDict[key];
+        
+        if (timer) {
+            dispatch_source_cancel(timer);
+        }
+        timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+        dispatch_source_set_timer(timer, dispatch_time(DISPATCH_TIME_NOW, intervalInSeconds * NSEC_PER_SEC), DISPATCH_TIME_FOREVER, 0);
+        dispatch_source_set_event_handler(timer, ^{
+            if (block) block();
+            dispatch_source_cancel(timer);
+            scheduleSourceDict[key] = nil;
+        });
+        dispatch_resume(timer);
+        scheduleSourceDict[key] = timer;
+    }
 }
 
-void ZD_Dispatch_throttle_on_mainQueue(NSTimeInterval intervalInSeconds, void(^block)()) {
-    ZD_ExecuteFunctionThrottle(intervalInSeconds, dispatch_get_main_queue(), [NSThread callStackSymbols][1], block);
+void ZD_Dispatch_throttle_on_mainQueue(ZDThrottleType throttleType, NSTimeInterval intervalInSeconds, dispatch_block_t block) {
+    ZD_ExecuteFunctionThrottle(throttleType, intervalInSeconds, dispatch_get_main_queue(), [NSThread callStackSymbols][1], block);
 }
 
-void ZD_Dispatch_throttle_on_queue(NSTimeInterval intervalInSeconds, dispatch_queue_t queue, void(^block)()) {
-    ZD_ExecuteFunctionThrottle(intervalInSeconds, queue, [NSThread callStackSymbols][1], block);
+void ZD_Dispatch_throttle_on_queue(ZDThrottleType throttleType, NSTimeInterval intervalInSeconds, dispatch_queue_t queue, dispatch_block_t block) {
+    ZD_ExecuteFunctionThrottle(throttleType, intervalInSeconds, queue, [NSThread callStackSymbols][1], block);
 }
 
 #pragma mark - Runtime
@@ -1040,7 +1059,7 @@ void ZD_PrintObjectMethods() {
 }
 
 void ZD_SwizzleClassSelector(Class aClass, SEL originalSelector, SEL newSelector) {
-    aClass = object_getClass(aClass);
+    aClass = object_getClass(aClass); 
     Method origMethod = class_getClassMethod(aClass, originalSelector);
     Method newMethod = class_getClassMethod(aClass, newSelector);
     method_exchangeImplementations(origMethod, newMethod);
