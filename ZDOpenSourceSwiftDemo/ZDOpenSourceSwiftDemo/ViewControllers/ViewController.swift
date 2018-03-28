@@ -94,6 +94,7 @@ extension ViewController: UITableViewDelegate {
         defer { // 出了当前作用域后执行,相当于RAC中的onExit宏
             tableView.deselectRow(at: indexPath, animated: true)
         }
+        navigationController?.pushViewController(YogaKitViewController(), animated: true)
     }
 }
 

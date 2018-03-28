@@ -50,7 +50,6 @@ func createBarItem() -> UIControl {
         layout.width = 100
         layout.height = 200
         layout.padding = 10
-        
         layout.flexGrow = 1
     }
     

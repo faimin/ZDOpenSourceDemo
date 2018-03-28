@@ -25,16 +25,36 @@ class YogaKitViewController: UIViewController {
     }
     
     func setup() {
+        setupUI()
         yoga()
     }
     
+    func setupUI() {
+        view.backgroundColor = UIColor.cyan
+        self.automaticallyAdjustsScrollViewInsets = false
+        self.extendedLayoutIncludesOpaqueBars = false
+    }
+    
     func yoga() -> Swift.Void {
-        let contentView = UIView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        contentView.backgroundColor = UIColor.white
+        
+        view.configureLayout { (layout) in
+            layout.isEnabled = true
+            layout.flexDirection = .row         // 主轴上横向布局
+            layout.justifyContent = .center     // 主轴方向上元素的对齐方式
+            layout.alignItems = .center         // 对轴方向上元素的对齐方式
+            layout.padding = 10                 // 四周内边距为10
+        }
+        
+        let contentView = UIView()
+        contentView.backgroundColor = UIColor.green
         contentView.configureLayout { (layout) in
             layout.isEnabled = true
-            layout.alignItems = .center
+            layout.flexDirection = .column
             layout.justifyContent = .center
+            layout.alignItems = .flexStart
+            layout.paddingHorizontal = 10
+            layout.marginVertical = 100         // 外边距100
+            layout.flexGrow = 0.7               // 在父视图的flexDirection方向上占父视图宽高的百分比,默认值为0
         }
         
         let subContent = UIView()
@@ -42,25 +62,25 @@ class YogaKitViewController: UIViewController {
         subContent.configureLayout { (layout) in
             layout.isEnabled = true
             layout.flexDirection = .row
+            layout.justifyContent = .center
             layout.alignItems = .stretch
-            layout.width = 180
-            layout.height = 50
-            layout.margin = 20
+            layout.marginBottom = 30
+            layout.marginRight = 20
+            layout.flexGrow = 1
         }
         
         let child1 = UIView()
         child1.backgroundColor = .yellow
         child1.configureLayout { (layout) in
             layout.isEnabled = true
+            layout.margin = 20
             layout.flexGrow = 1
-            layout.margin = 6
-            layout.padding = 5
-            layout.borderWidth = 10
         }
         
         subContent.addSubview(child1)
         contentView.addSubview(subContent)
-        contentView.yoga.applyLayout(preservingOrigin: false)
+        view.addSubview(contentView)
+        view.yoga.applyLayout(preservingOrigin: false)
     }
 
     /*

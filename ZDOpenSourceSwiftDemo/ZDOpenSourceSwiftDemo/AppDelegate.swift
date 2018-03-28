@@ -9,6 +9,7 @@
 import UIKit
 import GDPerformanceView_Swift
 import Buglife
+import Peek
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Buglife.shared().start(withEmail: "fuxianchao2009@163.com")
         
         //self.window?.swizzleShake()
+        
+        window?.peek.enabled = true
         
         return true
     }
@@ -66,6 +69,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if motion == .motionShake {
             
         }
+        
+        window?.peek.handleShake(motion)
     }
 }
 

@@ -75,9 +75,9 @@ Since `Change` returned by `DeepDiff` follows the way batch update works, animat
 ```swift
 let oldItems = items
 items = DataSet.generateNewItems()
-let changes = diff(old: oldItems, new: items, reduceMove: true)
+let changes = diff(old: oldItems, new: items)
 
-collectionView.reload(changes: changes, completion: { _ in })
+collectionView.reload(changes: changes, section: 2, completion: { _ in })
 ```
 
 Take a look at [Demo](https://github.com/onmyway133/DeepDiff/tree/master/Example/DeepDiffDemo) where changes are made via random number of items, and the items are shuffled.
@@ -102,7 +102,7 @@ The performance greatly depends on the number of items, the changes and the comp
 
 ### Heckel
 
-The current version of `DeepDiff` uses Heckel algorithm as described in [A technique for isolating differences between files](https://dl.acm.org/citation.cfm?id=359467). It works on 2 observations about line occurences and counters. The result is a bit lengthy compared to the first version, but it runs in linear time.
+The current version of `DeepDiff` uses Heckel algorithm as described in [A technique for isolating differences between files](https://dl.acm.org/citation.cfm?id=359467). It works on 2 observations about line occurrences and counters. The result is a bit lengthy compared to the first version, but it runs in linear time.
 
 Thanks to
 
@@ -115,6 +115,87 @@ There are other algorithms that are interesting
 
 - [An O(ND) Difference Algorithm and Its Variations](http://www.xmailserver.org/diff2.pdf)
 - [An O(NP) Sequence Comparison Algorithm](https://publications.mpi-cbg.de/Wu_1990_6334.pdf)
+
+## Benchmarks
+
+Benchmarking is done on real device iPhone 6, with random items made of UUID strings (36 characters including hyphens), just to make comparisons more difficult.
+
+You can take a look at the code [Benchmark](https://github.com/onmyway133/DeepDiff/tree/master/Example/Benchmark). Test is inspired from [DiffUtil](https://developer.android.com/reference/android/support/v7/util/DiffUtil.html)
+
+### Among different frameworks
+
+Here are several popular diffing frameworks to compare
+
+- [Differ](https://github.com/tonyarnold/Differ) 1.0.3, originally [Diff.swift](https://github.com/wokalski/Diff.swift)
+- [Changeset](https://github.com/osteslag/Changeset) 3.0
+- [Dwifft](https://github.com/jflinter/Dwifft) 0.8
+- [ListDiff](https://github.com/lxcid/ListDiff) 0.1.0, port from [IGListKit](https://github.com/Instagram/IGListKit/)
+
+💪 From 2000 items to 2100 items (100 deletions, 200 insertions)
+
+```swift
+let (old, new) = generate(count: 2000, removeRange: 100..<200, addRange: 1000..<1200)
+
+benchmark(name: "DeepDiff", closure: {
+  _ = DeepDiff.diff(old: old, new: new)
+})
+
+benchmark(name: "Dwifft", closure: {
+  _ = Dwifft.diff(old, new)
+})
+
+benchmark(name: "Changeset", closure: {
+  _ = Changeset.edits(from: old, to: new)
+})
+
+benchmark(name: "Differ", closure: {
+  _ = old.diffTraces(to: new)
+})
+
+benchmark(name: "ListDiff", closure: {
+  _ = ListDiff.List.diffing(oldArray: old, newArray: new)
+})
+```
+
+**Result**
+
+```
+DeepDiff: 0.0450611114501953s
+Differ: 0.199673891067505s
+Dwifft: 149.603884935379s
+Changeset: 77.5895738601685s
+ListDiff: 0.105544805526733s
+```
+
+![](Screenshots/benchmark3d.png)
+
+### Increasing complexity
+
+Here is how `DeepDiff` handles large number of items and changes
+
+💪 From 10000 items to 11000 items (1000 deletions, 2000 insertions)
+
+```
+DeepDiff: 0.233131170272827s
+```
+
+💪 From 20000 items to 22000 items (2000 deletions, 4000 insertions)
+
+```
+DeepDiff: 0.453393936157227s
+```
+
+💪 From 50000 items to 55000 items (5000 deletions, 10000 insertions)
+
+```
+DeepDiff: 1.04128122329712s
+```
+
+💪 From 100000 items to 1000000 items
+
+```
+Are you sure?
+```
 
 ## Installation
 

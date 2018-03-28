@@ -21,6 +21,7 @@ def pods_swift
   pod 'SnapKit'
   pod 'TinyConstraints'
   # framelayout
+  pod 'Yoga', '1.6'
   pod 'YogaKit'
   pod 'Neon'
   pod 'LayoutKit'
@@ -44,6 +45,7 @@ def pods_swift
   pod 'LifetimeTracker' # 监听内存泄露
   # debug
   pod 'Buglife'
+  pod 'Peek', :configurations => ['Debug']
   pod 'FLEX', :configurations => ['Debug']
 end
 
