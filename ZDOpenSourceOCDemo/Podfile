@@ -90,7 +90,7 @@ post_install do |installer|
                 config.build_settings['SWIFT_VERSION'] = '4.0'
             elsif target.name == 'ReactiveObjC'
                 #关闭`This block declaration is not a prototype,Insert ‘void'`警告
-                config.build_settings['CLANG_WARN_STRICT_PROTOTYPES'] = 'NO'
+                #config.build_settings['CLANG_WARN_STRICT_PROTOTYPES'] = 'NO'
             end
         end
     end
