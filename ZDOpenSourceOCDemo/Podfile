@@ -84,6 +84,8 @@ post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
             #config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'NO' #可以让pod中的类调用[UIApplication shareApplication]
+            #关闭block内直接引用全局变量的警告
+            config.build_settings['CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'] = 'NO'
             if target.name == 'PromiseKit' || target.name == 'YogaKit' || target.name == 'ResponseDetective'
                 config.build_settings['SWIFT_VERSION'] = '4.0'
             elsif target.name == 'ReactiveObjC'
