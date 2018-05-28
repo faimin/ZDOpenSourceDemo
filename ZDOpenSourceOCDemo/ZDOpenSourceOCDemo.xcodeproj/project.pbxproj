@@ -40,6 +40,7 @@
 		FA9649711FDF7A1E007BDD88 /* YogaKitListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9649701FDF7A1E007BDD88 /* YogaKitListViewModel.m */; };
 		FA9649741FDF7C54007BDD88 /* ZDTemplateCellHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9649731FDF7C54007BDD88 /* ZDTemplateCellHandler.m */; };
 		FABBF13F1FCFC99A000B7D16 /* UIWindow+ZDMotionShake.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBF13E1FCFC99A000B7D16 /* UIWindow+ZDMotionShake.m */; };
+		FABE238420BBD61F00929BB3 /* InspectiveCArm64.c in Sources */ = {isa = PBXBuildFile; fileRef = FABE238320BBD61F00929BB3 /* InspectiveCArm64.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		FA9649731FDF7C54007BDD88 /* ZDTemplateCellHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDTemplateCellHandler.m; sourceTree = "<group>"; };
 		FABBF13D1FCFC99A000B7D16 /* UIWindow+ZDMotionShake.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+ZDMotionShake.h"; sourceTree = "<group>"; };
 		FABBF13E1FCFC99A000B7D16 /* UIWindow+ZDMotionShake.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+ZDMotionShake.m"; sourceTree = "<group>"; };
+		FABE238320BBD61F00929BB3 /* InspectiveCArm64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = InspectiveCArm64.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +389,7 @@
 		FA4390751FDA362300342B06 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				FABE238320BBD61F00929BB3 /* InspectiveCArm64.c */,
 				FA4390761FDA366A00342B06 /* ZDTraceHandler.h */,
 				FA4390771FDA366A00342B06 /* ZDTraceHandler.m */,
 				FA9649721FDF7C54007BDD88 /* ZDTemplateCellHandler.h */,
@@ -760,6 +763,7 @@
 			files = (
 				FA4390741FDA350D00342B06 /* Xtrace.mm in Sources */,
 				DA4005B31F36C52500260064 /* YYFPSLabel.m in Sources */,
+				FABE238420BBD61F00929BB3 /* InspectiveCArm64.c in Sources */,
 				DAA098451F42C86400303DD4 /* TextureViewController.m in Sources */,
 				FA682E5C1F9E1A17008C3D50 /* TextureViewModel.m in Sources */,
 				DA2512801F349AF300633093 /* AppDelegate.m in Sources */,
