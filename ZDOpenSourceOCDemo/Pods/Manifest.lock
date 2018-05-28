@@ -1,31 +1,32 @@
 PODS:
-  - AFNetworking (3.2.0):
-    - AFNetworking/NSURLSession (= 3.2.0)
-    - AFNetworking/Reachability (= 3.2.0)
-    - AFNetworking/Security (= 3.2.0)
-    - AFNetworking/Serialization (= 3.2.0)
-    - AFNetworking/UIKit (= 3.2.0)
-  - AFNetworking/NSURLSession (3.2.0):
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.0)
-  - AFNetworking/Security (3.2.0)
-  - AFNetworking/Serialization (3.2.0)
-  - AFNetworking/UIKit (3.2.0):
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - Buglife (2.7.0)
+  - Buglife (2.8.0)
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
   - DirectoryWatchdog (1.1.0)
+  - fishhook (0.2)
   - FLEX (2.4.0)
   - GDPerformanceView (1.3.1)
-  - IGListKit (3.2.0):
-    - IGListKit/Default (= 3.2.0)
-  - IGListKit/Default (3.2.0):
+  - IGListKit (3.4.0):
+    - IGListKit/Default (= 3.4.0)
+  - IGListKit/Default (3.4.0):
     - IGListKit/Diffing
-  - IGListKit/Diffing (3.2.0)
+  - IGListKit/Diffing (3.4.0)
   - JLRoutes (2.1)
   - libextobjc (0.4.1):
     - libextobjc/EXTADT (= 0.4.1)
@@ -36,8 +37,8 @@ PODS:
     - libextobjc/EXTScope (= 0.4.1)
     - libextobjc/EXTSelectorChecking (= 0.4.1)
     - libextobjc/EXTSynthesize (= 0.4.1)
-    - libextobjc/NSInvocation+EXT (= 0.4.1)
-    - libextobjc/NSMethodSignature+EXT (= 0.4.1)
+    - "libextobjc/NSInvocation+EXT (= 0.4.1)"
+    - "libextobjc/NSMethodSignature+EXT (= 0.4.1)"
     - libextobjc/RuntimeExtensions (= 0.4.1)
     - libextobjc/UmbrellaHeader (= 0.4.1)
   - libextobjc/EXTADT (0.4.1):
@@ -56,9 +57,9 @@ PODS:
     - libextobjc/RuntimeExtensions
   - libextobjc/EXTSynthesize (0.4.1):
     - libextobjc/RuntimeExtensions
-  - libextobjc/NSInvocation+EXT (0.4.1):
+  - "libextobjc/NSInvocation+EXT (0.4.1)":
     - libextobjc/RuntimeExtensions
-  - libextobjc/NSMethodSignature+EXT (0.4.1):
+  - "libextobjc/NSMethodSignature+EXT (0.4.1)":
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4.1)
   - libextobjc/UmbrellaHeader (0.4.1)
@@ -75,7 +76,7 @@ PODS:
     - PINCache/Core
   - PINCache/Core (3.0.1-beta.6):
     - PINOperation (~> 1.1.0)
-  - PINOperation (1.1)
+  - PINOperation (1.1.1)
   - PINRemoteImage/Core (3.0.0-beta.13):
     - PINOperation
   - PINRemoteImage/iOS (3.0.0-beta.13):
@@ -83,26 +84,24 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0-beta.13):
     - PINCache (= 3.0.1-beta.6)
     - PINRemoteImage/Core
-  - PromiseKit (4.5.2):
-    - PromiseKit/Foundation (= 4.5.2)
-    - PromiseKit/QuartzCore (= 4.5.2)
-    - PromiseKit/UIKit (= 4.5.2)
-  - PromiseKit/CorePromise (4.5.2)
-  - PromiseKit/Foundation (4.5.2):
+  - PromiseKit (6.2.8):
+    - PromiseKit/CorePromise (= 6.2.8)
+    - PromiseKit/Foundation (= 6.2.8)
+    - PromiseKit/UIKit (= 6.2.8)
+  - PromiseKit/CorePromise (6.2.8)
+  - PromiseKit/Foundation (6.2.8):
     - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (4.5.2):
+  - PromiseKit/UIKit (6.2.8):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (4.5.2):
-    - PromiseKit/CorePromise
-  - PromisesObjC (1.0.1)
+  - PromisesObjC (1.2.2)
   - RDVTabBarController (1.1.9)
   - ReactiveObjC (3.1.0)
-  - ResponseDetective (1.2.2)
+  - ResponseDetective (1.2.4)
   - RSSwizzle (0.1.0)
-  - RTRootNavigationController (0.6.6):
-    - RTRootNavigationController/Core (= 0.6.6)
-  - RTRootNavigationController/Core (0.6.6)
-  - SVProgressHUD (2.2.2)
+  - RTRootNavigationController (0.6.7):
+    - RTRootNavigationController/Core (= 0.6.7)
+  - RTRootNavigationController/Core (0.6.7)
+  - SVProgressHUD (2.2.5)
   - Texture (2.6):
     - Texture/PINRemoteImage (= 2.6)
   - Texture/Core (2.6)
@@ -111,18 +110,18 @@ PODS:
     - PINRemoteImage/PINCache
     - Texture/Core
   - Toast (4.0.0)
-  - Typhoon (4.0.3):
-    - Typhoon/DeallocNotifier (= 4.0.3)
-    - Typhoon/IntrospectionUtils (= 4.0.3)
-    - Typhoon/no-arc (= 4.0.3)
-  - Typhoon/DeallocNotifier (4.0.3)
-  - Typhoon/IntrospectionUtils (4.0.3)
-  - Typhoon/no-arc (4.0.3):
+  - Typhoon (4.0.4):
+    - Typhoon/DeallocNotifier (= 4.0.4)
+    - Typhoon/IntrospectionUtils (= 4.0.4)
+    - Typhoon/no-arc (= 4.0.4)
+  - Typhoon/DeallocNotifier (4.0.4)
+  - Typhoon/IntrospectionUtils (4.0.4)
+  - Typhoon/no-arc (4.0.4):
     - Typhoon/IntrospectionUtils
-  - UITableView+FDTemplateLayoutCell (1.6)
-  - Yoga (1.6.0)
-  - YogaKit (1.6.0):
-    - Yoga (~> 1.6)
+  - "UITableView+FDTemplateLayoutCell (1.6)"
+  - Yoga (1.8.1)
+  - YogaKit (1.8.1):
+    - Yoga (~> 1.8.1)
   - YTKNetwork (2.0.4):
     - AFNetworking (~> 3.0)
   - YYCache (1.0.4)
@@ -130,56 +129,60 @@ PODS:
   - YYModel (1.0.4)
   - ZDNetWorkHelper (0.3.1):
     - AFNetworking (~> 3.1)
-  - ZDTableViewBinding (0.1):
+  - ZDTableViewBinding (0.3.0):
     - ReactiveObjC
-    - ZDTableViewBinding/ZDBaseViews (= 0.1)
-    - ZDTableViewBinding/ZDBinding (= 0.1)
-    - ZDTableViewBinding/ZDProtocols (= 0.1)
-    - ZDTableViewBinding/ZDViewModels (= 0.1)
-  - ZDTableViewBinding/ZDBaseViews (0.1):
+    - ZDTableViewBinding/ZDBaseViews (= 0.3.0)
+    - ZDTableViewBinding/ZDBinding (= 0.3.0)
+    - ZDTableViewBinding/ZDProtocols (= 0.3.0)
+    - ZDTableViewBinding/ZDViewModels (= 0.3.0)
+  - ZDTableViewBinding/ZDBaseViews (0.3.0):
     - ReactiveObjC
     - ZDTableViewBinding/ZDProtocols
     - ZDTableViewBinding/ZDViewModels
-  - ZDTableViewBinding/ZDBinding (0.1):
+  - ZDTableViewBinding/ZDBinding (0.3.0):
     - ReactiveObjC
-    - UITableView+FDTemplateLayoutCell (~> 1.6)
+    - "UITableView+FDTemplateLayoutCell (~> 1.6)"
     - ZDTableViewBinding/ZDProtocols
     - ZDTableViewBinding/ZDViewModels
-  - ZDTableViewBinding/ZDProtocols (0.1):
+  - ZDTableViewBinding/ZDProtocols (0.3.0):
     - ReactiveObjC
-  - ZDTableViewBinding/ZDViewModels (0.1):
+  - ZDTableViewBinding/ZDViewModels (0.3.0):
     - ReactiveObjC
     - ZDTableViewBinding/ZDProtocols
-  - ZDToolKit (0.0.5):
-    - ZDToolKit/no-arc (= 0.0.5)
-    - ZDToolKit/ZDAutoLayout (= 0.0.5)
-    - ZDToolKit/ZDCategory (= 0.0.5)
-    - ZDToolKit/ZDMacros (= 0.0.5)
-    - ZDToolKit/ZDRuntime (= 0.0.5)
-    - ZDToolKit/ZDSubclass (= 0.0.5)
-    - ZDToolKit/ZDTools (= 0.0.5)
-  - ZDToolKit/no-arc (0.0.5)
-  - ZDToolKit/ZDAutoLayout (0.0.5)
-  - ZDToolKit/ZDCategory (0.0.5):
-    - ZDToolKit/ZDCategory/Foundation (= 0.0.5)
-    - ZDToolKit/ZDCategory/UIKit (= 0.0.5)
-  - ZDToolKit/ZDCategory/Foundation (0.0.5)
-  - ZDToolKit/ZDCategory/UIKit (0.0.5):
+  - ZDToolKit (0.0.4):
+    - ZDToolKit/no-arc (= 0.0.4)
+    - ZDToolKit/ZDAutoLayout (= 0.0.4)
+    - ZDToolKit/ZDCategory (= 0.0.4)
+    - ZDToolKit/ZDMacros (= 0.0.4)
+    - ZDToolKit/ZDRuntime (= 0.0.4)
+    - ZDToolKit/ZDSubclass (= 0.0.4)
+    - ZDToolKit/ZDTools (= 0.0.4)
+  - ZDToolKit/no-arc (0.0.4)
+  - ZDToolKit/ZDAutoLayout (0.0.4)
+  - ZDToolKit/ZDCategory (0.0.4):
+    - ZDToolKit/ZDCategory/Foundation (= 0.0.4)
+    - ZDToolKit/ZDCategory/UIKit (= 0.0.4)
+  - ZDToolKit/ZDCategory/Foundation (0.0.4)
+  - ZDToolKit/ZDCategory/UIKit (0.0.4):
     - ZDToolKit/ZDTools/ZDProxy
-  - ZDToolKit/ZDMacros (0.0.5)
-  - ZDToolKit/ZDRuntime (0.0.5)
-  - ZDToolKit/ZDSubclass (0.0.5)
-  - ZDToolKit/ZDTools (0.0.5):
-    - ZDToolKit/ZDTools/ProtocolKit (= 0.0.5)
-    - ZDToolKit/ZDTools/ZDProxy (= 0.0.5)
-  - ZDToolKit/ZDTools/ProtocolKit (0.0.5)
-  - ZDToolKit/ZDTools/ZDProxy (0.0.5)
-  - ZIKRouter (0.13.1)
+  - ZDToolKit/ZDMacros (0.0.4)
+  - ZDToolKit/ZDRuntime (0.0.4)
+  - ZDToolKit/ZDSubclass (0.0.4):
+    - ZDToolKit/ZDTools/ZDProxy
+  - ZDToolKit/ZDTools (0.0.4):
+    - ZDToolKit/ZDTools/ProtocolKit (= 0.0.4)
+    - ZDToolKit/ZDTools/ZDPromise (= 0.0.4)
+    - ZDToolKit/ZDTools/ZDProxy (= 0.0.4)
+  - ZDToolKit/ZDTools/ProtocolKit (0.0.4)
+  - ZDToolKit/ZDTools/ZDPromise (0.0.4)
+  - ZDToolKit/ZDTools/ZDProxy (0.0.4)
+  - ZIKRouter (1.0.0)
 
 DEPENDENCIES:
   - Buglife
   - ChameleonFramework
   - DirectoryWatchdog
+  - fishhook
   - FLEX
   - GDPerformanceView
   - IGListKit
@@ -212,6 +215,47 @@ DEPENDENCIES:
   - ZDToolKit (from `https://github.com/faimin/ZDToolKit`, branch `develop`)
   - ZIKRouter
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - Buglife
+    - ChameleonFramework
+    - DirectoryWatchdog
+    - fishhook
+    - FLEX
+    - GDPerformanceView
+    - IGListKit
+    - JLRoutes
+    - libextobjc
+    - LinqToObjectiveC
+    - lottie-ios
+    - Masonry
+    - MBProgressHUD
+    - Objection
+    - ObjectiveSugar
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+    - PromiseKit
+    - PromisesObjC
+    - RDVTabBarController
+    - ReactiveObjC
+    - ResponseDetective
+    - RSSwizzle
+    - RTRootNavigationController
+    - SVProgressHUD
+    - Texture
+    - Toast
+    - Typhoon
+    - "UITableView+FDTemplateLayoutCell"
+    - Yoga
+    - YogaKit
+    - YTKNetwork
+    - YYCache
+    - YYDispatchQueuePool
+    - YYModel
+    - ZIKRouter
+
 EXTERNAL SOURCES:
   ZDNetWorkHelper:
     :git: https://github.com/faimin/ZDNetWorkHelper
@@ -223,23 +267,24 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   ZDNetWorkHelper:
-    :commit: 2d75d70958adc1b27465bf5b1ab0a126b8808950
+    :commit: 2227d3e89ae94078d739987d802a6aceb08659ee
     :git: https://github.com/faimin/ZDNetWorkHelper
   ZDTableViewBinding:
-    :commit: b0f596765a0e0e429424026a5c5aff22bb4eba6c
+    :commit: d9a2a68debee3e9f4e65ecb56d09c816bbd63a99
     :git: https://github.com/faimin/ZDTableViewBinding
   ZDToolKit:
-    :commit: 3305e2378ff1e2254883718a4baf1af5545e9be4
+    :commit: de73f2512758cf17bce1d28ff14f4de42dc512fc
     :git: https://github.com/faimin/ZDToolKit
 
 SPEC CHECKSUMS:
-  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
-  Buglife: 16ab7c1c7be40bbb04a98cde877816a7c70201b3
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Buglife: fed8594db4b440bc85d44629b90f2575713e8825
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   DirectoryWatchdog: 85f0a92a52bc0d3d66346d80629227b44500506a
+  fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
   GDPerformanceView: d70d646bf7022a3dfd64222e4966f403bfffef19
-  IGListKit: ffe6f98a728ab0250aceea22e7957aa5477c5048
+  IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
   libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
   LinqToObjectiveC: f0e40c137a458b6b9725c4c7b6a575c0c72e3aec
@@ -249,31 +294,31 @@ SPEC CHECKSUMS:
   Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
   ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
-  PINOperation: 7f042fa6df5b606deb4bd5997654cf7033d5be1d
+  PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
-  PromiseKit: 743e497a5f505a470d3bbbf4ce0663c1268af0a4
-  PromisesObjC: fb243df797a032b0d7580b370b919c78811b0c9f
+  PromiseKit: 6788ce1a0ed5448b83d4aaf56b9fc49fb7647d32
+  PromisesObjC: 3db4112f796a05782b4442364748f9126fea0b88
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
-  ResponseDetective: 2a1ddb19b895677d418cd1a83c9595a405012b57
+  ResponseDetective: 710b1b41903382460592a75a480440661bcadfa6
   RSSwizzle: d561958f595028bfcef98c7d55c318b3878a61c6
-  RTRootNavigationController: 1429554f853e8319a383849befed73d5dc58a108
-  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  RTRootNavigationController: d6aa6cbb78a3eaecea4f6e4df63f15dd887836b8
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  Typhoon: 85d1a7ada9a7def46a374be1301540572cc53636
-  UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
-  Yoga: 81670877477311136b1b3f69a6307ce62e1c89cf
-  YogaKit: 8fe0ddd21673226c0b6077fc3ad5c8fa6cda722e
+  Typhoon: fe0fa417515e279f68170cfe3ae9c1d5eae53205
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  Yoga: e6f1fed82138c17da5332e15e5770abf0e9cc386
+  YogaKit: bb90d11e297e06abef7e0cfb20e035a6bd00cdc4
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYDispatchQueuePool: 3dfb2274bcc74207688dde8ac6f7bdd46871dd7b
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZDNetWorkHelper: 969b637a7fc84ff15364011a905821cf8f6d64b9
-  ZDTableViewBinding: 9919128af83fb3277f3f3a3d5eeadeab3fe862bc
-  ZDToolKit: ff10642bc3965dd93de1ed5c8750455a7c610389
-  ZIKRouter: 01e897ad319d31fecf3aad9fc409083c408e196b
+  ZDTableViewBinding: 84c857db2d5925936e5af49fc3c32ce16caf1533
+  ZDToolKit: 676ecc79164f4f38dbfb5df849c69964270963be
+  ZIKRouter: cf85622f3ae6a9c20c4b7bfd38d7fbc81647f567
 
-PODFILE CHECKSUM: 6cb6037721f8d08f726726740cc69507e354b75e
+PODFILE CHECKSUM: 49a5bfb33e43409dbd8940728c73853f33dadd04
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

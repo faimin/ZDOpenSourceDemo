@@ -10,6 +10,7 @@
 //
 
 #import "ZIKServiceRouter.h"
+#import "ZIKServiceRouterType.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,43 +24,27 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark Optional Override
 
-///Invoked after all registrations are finished when ZIKROUTER_CHECK is enabled. You can override and validate whether those routable swift protocols used in your module as external dependencies have registered with routers, because we can't enumerate swift protocols at runtime.
+///Invoked after all registrations are finished when ZIKROUTER_CHECK is enabled, when ZIKROUTER_CHECK is disabled, this won't be invoked. You can override and do some debug checking.
 + (void)_didFinishRegistration;
 
-///Prepare the destination after -prepareDestiantion is invoked.
+///Prepare the destination after -prepareDestination is invoked.
 - (void)prepareDestination:(Destination)destination configuration:(RouteConfig)configuration;
 
 ///Check whether destination is preapred correctly.
 - (void)didFinishPrepareDestination:(Destination)destination configuration:(RouteConfig)configuration;
 
-#pragma mark State Control
+#pragma mark Notify Error
 
-///Maintain the route state when you implement custom route or remove route by overriding -performRouteOnDestination:configuration: or -removeDestination:removeConfiguration:.
-
-///If the router override -performRouteOnDestination:configuration:, the router should maintain the route state with these methods in it.
-
-///Call it when route will perform.
-- (void)beginPerformRoute;
-
-///Prepare the destination with the -prepareDestination block in configuration, call -prepareDestination:configuration: and -didFinishPrepareDestination:configuration:.
-- (void)prepareForPerformRouteOnDestination:(Destination)destination configuration:(RouteConfig)configuration;
-
-///Call it when route is successfully performed.
-- (void)endPerformRouteWithSuccess;
-///Call it when route perform failed.
-- (void)endPerformRouteWithError:(NSError *)error;
-
-///If the router can remove, override -canRemove, and do removal in -removeDestination:removeConfiguration:, prepare the destination before removing with -prepareDestinationBeforeRemoving.
-
-///Call it when route will remove.
-- (void)beginRemoveRoute;
-///Prepare the destination with the -prepareDestination block in removeConfiguration before removing the destination when you override -removeDestination:removeConfiguration:.
-- (void)prepareDestinationBeforeRemoving;
-///Call it when route is successfully removed.
-- (void)endRemoveRouteWithSuccess;
-///Call it when route remove failed.
-- (void)endRemoveRouteWithError:(NSError *)error;
++ (void)notifyGlobalErrorWithRouter:(nullable __kindof ZIKServiceRouter *)router action:(ZIKRouteAction)action error:(NSError *)error;
 
 @end
+
+extern ZIKServiceRouterType *_Nullable _ZIKServiceRouterToService(Protocol *serviceProtocol);
+
+extern ZIKServiceRouterType *_Nullable _ZIKServiceRouterToModule(Protocol *configProtocol);
+
+extern Protocol<ZIKServiceRoutable> *_Nullable _routableServiceProtocolFromObject(id object);
+
+extern Protocol<ZIKServiceModuleRoutable> *_Nullable _routableServiceModuleProtocolFromObject(id object);
 
 NS_ASSUME_NONNULL_END

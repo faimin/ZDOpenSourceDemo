@@ -11,6 +11,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  Replace a method with another method
  @discussion
@@ -48,10 +50,6 @@ extern bool ZIKRouter_replaceMethodWithMethod(Class originalClass, SEL originalS
 extern bool ZIKRouter_replaceMethodWithMethodType(Class originalClass, SEL originalSelector, bool originIsClassMethod,
                                                   Class swizzledClass, SEL swizzledSelector, bool swizzledIsClassMethod);
 
-///Same with ZIKRouter_replaceMethodWithMethod. return the original IMP.
-extern IMP ZIKRouter_replaceMethodWithMethodAndGetOriginalImp(Class originalClass, SEL originalSelector,
-                                                              Class swizzledClass, SEL swizzledSelector);
-
 ///Enumerate all classes
 extern void ZIKRouter_enumerateClassList(void(^handler)(Class aClass));
 
@@ -69,3 +67,8 @@ extern bool ZIKRouter_classSelfImplementingMethod(Class aClass, SEL method, bool
 
 ///Check whether an object is an objc protocol.
 extern bool ZIKRouter_isObjcProtocol(id protocol);
+
+///Return objc protocol if object is Protocol.
+extern Protocol *_Nullable ZIKRouter_objcProtocol(id protocol);
+
+NS_ASSUME_NONNULL_END

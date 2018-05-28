@@ -16,8 +16,11 @@
 #define ZDBDLog(...)
 #endif
 
+#ifndef ZD_INCLUDE_FD
+#define ZD_INCLUDE_FD (__has_include(<UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>))
+#endif
 
-#ifndef ZD_BATCH_UPDATES
+#ifndef ZD_BATCH_UPDATE
 #define ZD_BATCH_UPDATE(tableView, stuff)           \
 do {                                                \
     if (@available(iOS 11.0, *)) {                  \
@@ -34,42 +37,68 @@ do {                                                \
 } while (0);
 #endif
 
+#define ZDCellDictionary(_cellViewModels) ZDSectionCellDictionary(nil, _cellViewModels, nil)
+
+#define ZDSectionCellDictionary(_headerViewModel, _cellViewModels, _footerViewModel)    \
+({                                                                                      \
+    NSMutableDictionary *sectionAndCellDict = @{}.mutableCopy;                          \
+    sectionAndCellDict[HeaderViewModelKey] = _headerViewModel;                          \
+    sectionAndCellDict[CellViewModelKey] = _cellViewModels;                             \
+    sectionAndCellDict[FooterViewModelKey] = _footerViewModel;                          \
+    sectionAndCellDict;                                                                 \
+})
+
+#define ZDSynthesizeCellProperty                                                        \
+@synthesize model = _model, viewModel = _viewModel, cellCommand = _cellCommand, height = _height, indexPath = _indexPath, bindProxy = _bindProxy;
+
+#define ZDSynthesizeHeaderFooterProperty                                                \
+@synthesize headerFooterViewModel = _headerFooterViewModel, headerFooterModel = _headerFooterModel, headerFooterCommand = _headerFooterCommand, headerFooterHeight = _headerFooterHeight, headerFooterBindProxy = _headerFooterBindProxy;
 
 static NSString * const HeaderViewModelKey = @"HeaderViewModelKey";
 static NSString * const CellViewModelKey   = @"CellViewModelKey";
 static NSString * const FooterViewModelKey = @"FooterViewModelKey";
 
-#define ZDCellDictionary(_cellViewModels) ZDSectionCellDictionary(nil, _cellViewModels, nil)
-
-#define ZDSectionCellDictionary(_headerViewModel, _cellViewModels, _footerViewModel)                           \
-[NSDictionary dictionaryWithObjectsAndKeys:(_headerViewModel ?: [NSNull null]) , HeaderViewModelKey,           \
-                                                               _cellViewModels , CellViewModelKey,             \
-                                           (_footerViewModel ?: [NSNull null]) , FooterViewModelKey, nil]
-
-NS_INLINE BOOL ZDNotNilOrEmpty(id _objc) {
+NS_INLINE BOOL ZDBD_NotNilOrEmpty(NSString *_objc) {
     if (_objc == nil || _objc == NULL) {
         return NO;
     }
     
-    if ([_objc isKindOfClass:[NSNull class]]) {
-        return NO;
+    if ([_objc isKindOfClass:[NSString class]] &&
+        [[_objc stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] > 0) {
+        return YES;
     }
     
-    if ([_objc isKindOfClass:[NSString class]]) {
-        if ([[_objc stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0) {
-            return NO;
-        }
-    }
-    
-    return YES;
+    return NO;
 }
 
-NS_INLINE void ZDDispatch_async_on_main_queue(dispatch_block_t block) {
+NS_INLINE void ZDBD_Dispatch_async_on_main_queue(dispatch_block_t block) {
     if ([NSThread isMainThread]) {
         block();
     }
     else {
         dispatch_async(dispatch_get_main_queue(), block);
+    }
+}
+
+NS_INLINE NSMutableArray *ZDBD_MutableArray(__kindof NSArray *array) {
+    if (!array || ![array isKindOfClass:[NSArray class]]) return nil;
+    
+    if ([array isKindOfClass:[NSMutableArray class]]) {
+        return array;
+    }
+    else {
+        return [NSMutableArray arrayWithArray:array];
+    }
+}
+
+NS_INLINE NSMutableDictionary *ZDBD_MutableDictionary(__kindof NSDictionary *dict) {
+    if (!dict || ![dict isKindOfClass:[NSDictionary class]]) return nil;
+    
+    if ([dict isKindOfClass:[NSMutableDictionary class]]) {
+        return dict;
+    }
+    else {
+        return [NSMutableDictionary dictionaryWithDictionary:dict];
     }
 }
 

@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef id __nullable (^FBLPromiseDoWorkBlock)(void) NS_SWIFT_UNAVAILABLE("");
 
 /**
- Creates a pending promise and executes `work` block asynchronously on the main queue.
+ Creates a pending promise and executes `work` block asynchronously.
 
  @param work A block that returns a value or an error used to resolve the promise.
  @return A new pending promise.
@@ -38,6 +38,17 @@ typedef id __nullable (^FBLPromiseDoWorkBlock)(void) NS_SWIFT_UNAVAILABLE("");
  @return A new pending promise.
  */
 + (instancetype)onQueue:(dispatch_queue_t)queue do:(FBLPromiseDoWorkBlock)work NS_REFINED_FOR_SWIFT;
+
+@end
+
+/**
+ Convenience dot-syntax wrappers for `FBLPromise` `do` operators.
+ Usage: FBLPromise.doOn(queue, ^(NSError *error) { ... })
+ */
+@interface FBLPromise<Value>(DotSyntax_DoAdditions)
+
++ (FBLPromise * (^)(dispatch_queue_t, FBLPromiseDoWorkBlock))doOn FBL_PROMISES_DOT_SYNTAX
+    NS_SWIFT_UNAVAILABLE("");
 
 @end
 

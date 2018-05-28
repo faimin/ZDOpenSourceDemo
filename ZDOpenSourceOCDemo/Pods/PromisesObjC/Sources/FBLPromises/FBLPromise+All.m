@@ -22,14 +22,15 @@
 @implementation FBLPromise (AllAdditions)
 
 + (FBLPromise<NSArray *> *)all:(NSArray *)promises {
-  return [self onQueue:dispatch_get_main_queue() all:promises];
+  return [self onQueue:self.defaultDispatchQueue all:promises];
 }
 
 + (FBLPromise<NSArray *> *)onQueue:(dispatch_queue_t)queue all:(NSArray *)allPromises {
+  NSParameterAssert(queue);
   NSParameterAssert(allPromises);
 
   if (allPromises.count == 0) {
-    return [[[self class] alloc] initWithResolution:@[]];
+    return [[FBLPromise alloc] initWithResolution:@[]];
   }
   NSMutableArray *promises = [allPromises mutableCopy];
   return [FBLPromise
@@ -44,7 +45,7 @@
               return;
             } else {
               [promises replaceObjectAtIndex:i
-                                  withObject:[[[self class] alloc] initWithResolution:promise]];
+                                  withObject:[[FBLPromise alloc] initWithResolution:promise]];
             }
           }
           for (FBLPromise *promise in promises) {
@@ -64,6 +65,22 @@
                 }];
           }
         }];
+}
+
+@end
+
+@implementation FBLPromise (DotSyntax_AllAdditions)
+
++ (FBLPromise<NSArray *> * (^)(NSArray *))all {
+  return ^(NSArray<FBLPromise *> *promises) {
+    return [self all:promises];
+  };
+}
+
++ (FBLPromise<NSArray *> * (^)(dispatch_queue_t, NSArray *))allOn {
+  return ^(dispatch_queue_t queue, NSArray<FBLPromise *> *promises) {
+    return [self onQueue:queue all:promises];
+  };
 }
 
 @end

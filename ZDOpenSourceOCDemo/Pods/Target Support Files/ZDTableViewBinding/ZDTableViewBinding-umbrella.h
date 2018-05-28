@@ -10,16 +10,13 @@
 #endif
 #endif
 
-#import "ZDBaseSectionView.h"
 #import "ZDBaseTableViewCell.h"
+#import "ZDBaseTableViewHeaderFooterView.h"
 #import "ZDBindingDefine.h"
 #import "ZDTableViewBinding.h"
-#import "ZDCellProtocol.h"
-#import "ZDCellViewModelProtocol.h"
-#import "ZDSectionProtocol.h"
-#import "ZDSectionViewModelProtocol.h"
-#import "ZDCellViewModel.h"
-#import "ZDSectionViewModel.h"
+#import "ZDBindingProtocols.h"
+#import "ZDCommonCellViewModel.h"
+#import "ZDCommonHeaderFooterViewModel.h"
 
 FOUNDATION_EXPORT double ZDTableViewBindingVersionNumber;
 FOUNDATION_EXPORT const unsigned char ZDTableViewBindingVersionString[];

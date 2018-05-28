@@ -20,11 +20,12 @@
 
 @implementation FBLPromise (CatchAdditions)
 
-- (FBLPromise *)catch:(FBLPromiseCatchBlock)reject {
-  return [self onQueue:dispatch_get_main_queue() catch:reject];
+- (FBLPromise *)catch:(FBLPromiseCatchWorkBlock)reject {
+  return [self onQueue:FBLPromise.defaultDispatchQueue catch:reject];
 }
 
-- (FBLPromise *)onQueue:(dispatch_queue_t)queue catch:(FBLPromiseCatchBlock)reject {
+- (FBLPromise *)onQueue:(dispatch_queue_t)queue catch:(FBLPromiseCatchWorkBlock)reject {
+  NSParameterAssert(queue);
   NSParameterAssert(reject);
 
   return [self chainOnQueue:queue
@@ -33,6 +34,22 @@
                 reject(error);
                 return error;
               }];
+}
+
+@end
+
+@implementation FBLPromise (DotSyntax_CatchAdditions)
+
+- (FBLPromise* (^)(FBLPromiseCatchWorkBlock))catch {
+  return ^(FBLPromiseCatchWorkBlock catch) {
+    return [self catch:catch];
+  };
+}
+
+- (FBLPromise* (^)(dispatch_queue_t, FBLPromiseCatchWorkBlock))catchOn {
+  return ^(dispatch_queue_t queue, FBLPromiseCatchWorkBlock catch) {
+    return [self onQueue:queue catch:catch];
+  };
 }
 
 @end

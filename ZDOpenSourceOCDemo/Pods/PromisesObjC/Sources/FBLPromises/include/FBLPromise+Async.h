@@ -26,7 +26,7 @@ typedef void (^FBLPromiseAsyncWorkBlock)(FBLPromiseFulfillBlock fulfill,
                                          FBLPromiseRejectBlock reject) NS_SWIFT_UNAVAILABLE("");
 
 /**
- Creates a pending promise and executes `work` block asynchronously on the main queue.
+ Creates a pending promise and executes `work` block asynchronously.
 
  @param work A block to perform any operations needed to resolve the promise.
  @return A new pending promise.
@@ -36,12 +36,24 @@ typedef void (^FBLPromiseAsyncWorkBlock)(FBLPromiseFulfillBlock fulfill,
 /**
  Creates a pending promise and executes `work` block asynchronously on the given queue.
 
- @param queue A queue to invoke the work block on.
+ @param queue A queue to invoke the `work` block on.
  @param work A block to perform any operations needed to resolve the promise.
  @return A new pending promise.
  */
 + (instancetype)onQueue:(dispatch_queue_t)queue
                   async:(FBLPromiseAsyncWorkBlock)work NS_REFINED_FOR_SWIFT;
+
+@end
+
+/**
+ Convenience dot-syntax wrappers for `FBLPromise` `async` operators.
+ Usage: FBLPromise.async(^(FBLPromiseFulfillBlock fulfill, FBLPromiseRejectBlock reject) { ... })
+ */
+@interface FBLPromise<Value>(DotSyntax_AsyncAdditions)
+
++ (FBLPromise* (^)(FBLPromiseAsyncWorkBlock))async FBL_PROMISES_DOT_SYNTAX NS_SWIFT_UNAVAILABLE("");
++ (FBLPromise* (^)(dispatch_queue_t, FBLPromiseAsyncWorkBlock))asyncOn FBL_PROMISES_DOT_SYNTAX
+    NS_SWIFT_UNAVAILABLE("");
 
 @end
 

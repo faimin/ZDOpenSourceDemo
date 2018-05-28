@@ -7,10 +7,18 @@
 //
 
 #import "ZDBannerScrollView.h"
-#import <ZDToolKit/NSTimer+ZDUtility.h>
 #if __has_include(<SDWebImage/UIImageView+WebCache.h>)
 #import <SDWebImage/UIImageView+WebCache.h>
 #endif
+
+struct ZDBannerDelegateResponseTo {
+    uint scrollViewDidSelectItemAtIndex : 1;
+    uint scrollViewDidScrollToIndex : 1;
+    uint customDownloadWithImageViewUrlPlaceHolderImage : 1;
+};
+
+#pragma mark - ZDImageCollectionViewCell
+#pragma mark -
 
 @interface ZDImageCollectionViewCell : UICollectionViewCell
 @property (nonatomic, strong) UIImage *placeholderImage;
@@ -18,6 +26,16 @@
 @property (nonatomic, copy  ) void(^zdDownloadBlock)(UIImageView *imageView, NSString *urlString, UIImage *placeHolderImage);
 @end
 
+#pragma mark - NSTimer
+#pragma mark -
+
+@interface NSTimer (Banner)
++ (NSTimer *)zd_banner_scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats block:(void (^)(NSTimer *timer))block;
+@end
+
+//*****************************************************************
+#pragma mark - ZDBannerScrollView
+#pragma mark -
 
 @interface ZDBannerScrollView () <UICollectionViewDataSource, UICollectionViewDelegate>
 @property (nonatomic, strong) UICollectionView *collectionView;
@@ -27,6 +45,7 @@
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) UIImage *placeholderImage;
 @property (nonatomic, assign) NSInteger currentIndex;
+@property (nonatomic, assign) struct ZDBannerDelegateResponseTo delegateResponseTo;
 @end
 
 @implementation ZDBannerScrollView
@@ -61,7 +80,9 @@
     self.timer.fireDate = [NSDate date];
 }
 
-+ (instancetype)scrollViewWithFrame:(CGRect)frame delegate:(id<ZDBannerScrollViewDelegate>)delegate placeholderImage:(UIImage *)placeholderImage {
++ (instancetype)scrollViewWithFrame:(CGRect)frame
+                           delegate:(id<ZDBannerScrollViewDelegate>)delegate
+                   placeholderImage:(UIImage *)placeholderImage {
     ZDBannerScrollView *view = [[self alloc] initWithFrame:frame];
     view.delegate = delegate;
     view.placeholderImage = placeholderImage;
@@ -97,7 +118,7 @@
 - (void)setupTimer {
     [self invalidateTimer];
     __weak typeof(self)weakSelf = self;
-    self.timer = [NSTimer zd_scheduledTimerWithTimeInterval:(self.interval > 0 ? self.interval : 3.5) repeats:YES block:^(NSTimer * _Nonnull timer) {
+    self.timer = [NSTimer zd_banner_scheduledTimerWithTimeInterval:(self.interval > 0 ? self.interval : 3.5) repeats:YES block:^(NSTimer * _Nonnull timer) {
         __strong typeof(weakSelf)self = weakSelf;
         [self autoScroll];
     }];
@@ -134,7 +155,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ZDImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([ZDImageCollectionViewCell class]) forIndexPath:indexPath];
     // 用自己外面的下载库下载
-    if (self.delegate && [self.delegate respondsToSelector:@selector(customDownloadWithImageView:url:placeHolderImage:)]) {
+    if (self.delegateResponseTo.customDownloadWithImageViewUrlPlaceHolderImage) {
         __weak typeof(self) weakTarget = self;
         cell.zdDownloadBlock = ^(UIImageView *imageView, NSString *urlString, UIImage *placeHolderImage) {
             __strong typeof(weakTarget) self = weakTarget;
@@ -150,13 +171,13 @@
 #pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(scrollView:didSelectItemAtIndex:)]) {
+    if (self.delegateResponseTo.scrollViewDidSelectItemAtIndex) {
         if (self.innerDataSource.count == 3) { // 此时说明只有一条数据
-            NSLog(@"点击了第%zd个", 0);
+            NSLog(@"点击了第0个");
             [self.delegate scrollView:self didSelectItemAtIndex:0];
         }
         else {
-            NSLog(@"点击了第%zd个", indexPath.item - 1);
+            NSLog(@"点击了第%lu个", (unsigned long)(indexPath.item - 1));
             NSUInteger selectIndex = indexPath.item - 1;
             if (indexPath.item >= self.innerDataSource.count - 2) {
                 selectIndex = self.innerDataSource.count - 2 - 1;
@@ -169,8 +190,9 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat offsetX = scrollView.contentOffset.x;
     CGFloat contentWidth = scrollView.contentSize.width;
+    if (contentWidth <= 0.01) return; // 此时还没有数据源
+    CGFloat offsetX = scrollView.contentOffset.x;
     CGFloat boundsWidth = self.bounds.size.width;
     if (offsetX >= (contentWidth - boundsWidth)) {
         scrollView.contentOffset = CGPointMake(boundsWidth, scrollView.contentOffset.y);
@@ -188,7 +210,6 @@
     }
     
     self.currentIndex = currentPage;
-    self.pageControl.currentPage = currentPage;
 }
 
 #pragma mark - Property
@@ -220,51 +241,64 @@
 
 - (void)setCurrentIndex:(NSInteger)currentIndex {
     if (_currentIndex == currentIndex) return;
+    _currentIndex = currentIndex;
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(scrollView:didScrollToIndex:)]) {
+    self.pageControl.currentPage = currentIndex;
+    
+    if (self.delegateResponseTo.scrollViewDidScrollToIndex) {
         [self.delegate scrollView:self didScrollToIndex:currentIndex];
     }
+}
+
+- (void)setDelegate:(id<ZDBannerScrollViewDelegate>)delegate {
+    if (_delegate == delegate) return;
+    _delegate = delegate;
+    
+    struct ZDBannerDelegateResponseTo newDelegateResponseTo;
+    newDelegateResponseTo.scrollViewDidScrollToIndex = [delegate respondsToSelector:@selector(scrollView:didScrollToIndex:)];
+    newDelegateResponseTo.scrollViewDidSelectItemAtIndex = [delegate respondsToSelector:@selector(scrollView:didSelectItemAtIndex:)];
+    newDelegateResponseTo.customDownloadWithImageViewUrlPlaceHolderImage = [delegate respondsToSelector:@selector(customDownloadWithImageView:url:placeHolderImage:)];
+    self.delegateResponseTo = newDelegateResponseTo;
 }
 
 //MARK: Getter
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
-        _collectionView = ({
-            UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-            flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-            flowLayout.minimumInteritemSpacing = 0;
-            flowLayout.minimumLineSpacing = 0;
-            flowLayout.itemSize = self.bounds.size;
-            
-            UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:flowLayout];
-            collectionView.dataSource = self;
-            collectionView.delegate = self;
-            collectionView.scrollsToTop = NO;
-            collectionView.pagingEnabled = YES;
-            collectionView.showsHorizontalScrollIndicator = NO;
-            collectionView.showsVerticalScrollIndicator = NO;
-            [collectionView registerClass:[ZDImageCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([ZDImageCollectionViewCell class])];
-            collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-            if (@available(iOS 11, *)) {
-                collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-            }
-                        
-            collectionView.contentOffset = CGPointMake(CGRectGetWidth(collectionView.frame), collectionView.contentOffset.y);
-            
-            collectionView;
-        });
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        flowLayout.minimumInteritemSpacing = 0;
+        flowLayout.minimumLineSpacing = 0;
+        flowLayout.itemSize = self.bounds.size;
+        
+        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:flowLayout];
+        collectionView.dataSource = self;
+        collectionView.delegate = self;
+        collectionView.scrollsToTop = NO;
+        collectionView.pagingEnabled = YES;
+        collectionView.showsHorizontalScrollIndicator = NO;
+        collectionView.showsVerticalScrollIndicator = NO;
+        [collectionView registerClass:[ZDImageCollectionViewCell class] forCellWithReuseIdentifier:NSStringFromClass([ZDImageCollectionViewCell class])];
+        collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        if (@available(iOS 11, *)) {
+            collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
+        
+        collectionView.contentOffset = CGPointMake(CGRectGetWidth(collectionView.frame), collectionView.contentOffset.y);
+        
+        _collectionView = collectionView;
     }
     return _collectionView;
 }
 
 - (UIPageControl *)pageControl {
     if (!_pageControl) {
-        _pageControl = [[UIPageControl alloc] initWithFrame:(CGRect){0, CGRectGetHeight(self.bounds) - 20, CGRectGetWidth(self.bounds), 20}];
-        _pageControl.numberOfPages = self.imageURLStrings.count;
-        _pageControl.currentPage = 0;
-        _pageControl.hidesForSinglePage = YES;
-        _pageControl.pageIndicatorTintColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0];
-        _pageControl.currentPageIndicatorTintColor = [UIColor colorWithRed:0.57 green:0.45 blue:0.57 alpha:1.0];
+        UIPageControl *view = [[UIPageControl alloc] initWithFrame:(CGRect){0, CGRectGetHeight(self.bounds) - 20, CGRectGetWidth(self.bounds), 20}];
+        view.pageIndicatorTintColor = [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0];
+        view.currentPageIndicatorTintColor = [UIColor colorWithRed:0.57 green:0.45 blue:0.57 alpha:1.0];
+        view.hidesForSinglePage = YES;
+        view.numberOfPages = self.imageURLStrings.count;
+        view.currentPage = 0;
+        _pageControl = view;
     }
     return _pageControl;
 }
@@ -272,6 +306,9 @@
 @end
 
 //======================================================
+
+#pragma mark - ZDImageCollectionViewCell
+#pragma mark -
 
 @interface ZDImageCollectionViewCell ()
 @property (nonatomic, strong) UIImageView *imageView;
@@ -322,5 +359,24 @@
 }
 
 @end
+
+#pragma mark - NSTimer
+#pragma mark -
+
+@implementation NSTimer (Banner)
+
++ (NSTimer *)zd_banner_scheduledTimerWithTimeInterval:(NSTimeInterval)seconds repeats:(BOOL)repeats block:(void (^)(NSTimer *timer))block {
+    return [NSTimer scheduledTimerWithTimeInterval:seconds target:self selector:@selector(zd_banner_executeTimerBlock:) userInfo:[block copy] repeats:repeats];
+}
+
++ (void)zd_banner_executeTimerBlock:(NSTimer *)timer {
+    if ([timer userInfo]) {
+        void(^timerBlock)(NSTimer *) = (void(^)(NSTimer *))[timer userInfo];
+        timerBlock(timer);
+    }
+}
+
+@end
+
 
 

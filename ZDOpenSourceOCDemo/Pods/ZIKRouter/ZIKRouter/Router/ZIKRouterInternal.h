@@ -20,8 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 ///Subclass can get the real configuration to avoid unnecessary copy.
 @property (nonatomic, readonly, copy) RouteConfig original_configuration;
 @property (nonatomic, readonly, copy) RemoveConfig original_removeConfiguration;
-///Destination after performed. Router won't hold the destination, the performer is responsible for holding it.
-@property (nonatomic, readonly, weak) Destination destination;
+///Destination after performed. The router only keep weak reference to the destination, the performer is responsible for holding it if needed.
+@property (nonatomic, readonly, weak, nullable) Destination destination;
 
 #pragma mark Required Override
 ///Methods for ZIKRouter subclass.
@@ -31,22 +31,34 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark Optional Override
 
-///If a router need to perform on a specific thread, override -performWithConfiguration: and call [super performWithConfiguration:configuration] in that thread.
+///If the router use a custom configuration, override this and return the configuration.
++ (RouteConfig)defaultRouteConfiguration;
+
+///If the router use a custom configuration, override this and return the configuration.
++ (RemoveConfig)defaultRemoveConfiguration;
+
+#pragma mark Advanced Override
+
+/**
+ If a router need to perform on a specific thread, override this and call [super performWithConfiguration:configuration] in that thread.
+ 
+ If the destination should be create asynchronously, override this and then:
+ 
+ 1. Use -destinationWithConfiguration: to create destination
+ 2. Check destination for nil, if destination is nil, end perform with DestinationUnavailable error
+ 3. Attach destination to router with -attachDestination:
+ 3. Call -performRouteOnDestination:configuration:
+ */
 - (void)performWithConfiguration:(RouteConfig)configuration;
 
 ///Perform your custom route action.
 - (void)performRouteOnDestination:(nullable Destination)destination configuration:(RouteConfig)configuration;
 
-///If the router use a custom configuration, override this and return the configuration.
-+ (RouteConfig)defaultRouteConfiguration;
+///Check whether can remove route. If can't, return the error message.
+- (nullable NSString *)checkCanRemove NS_REQUIRES_SUPER;
 
 ///If you can undo your route action, such as dismiss a routed view, do remove in this. The destination was hold as weak in router, so you should check whether the destination still exists.
 - (void)removeDestination:(nullable Destination)destination removeConfiguration:(RemoveConfig)removeConfiguration;
-
-///If the router use a custom configuration, override this and return the configuration.
-+ (RemoveConfig)defaultRemoveConfiguration;
-
-- (NSString *)errorDomain;
 
 ///Whether this router is an abstract router.
 + (BOOL)isAbstractRouter;
@@ -54,23 +66,45 @@ NS_ASSUME_NONNULL_BEGIN
 ///Whether this router is an adapter for another router.
 + (BOOL)isAdapter;
 
-#pragma mark Internal Methods
+#pragma mark Custom Route State Control
 
-///Attach a destination not created from router.
-- (void)attachDestination:(Destination)destination;
+///Maintain the route state when you implement custom route or remove route by overriding -performRouteOnDestination:configuration: or -removeDestination:removeConfiguration:.
 
-///Change state.
-- (void)notifyRouteState:(ZIKRouterState)state;
+///Prepare the destination before really performing. Use the -prepareDestination block in configuration, and call -prepareDestination:configuration: and -didFinishPrepareDestination:configuration:.
+- (void)prepareDestinationForPerforming;
 
-///Call sucessHandler and performerSuccessHandler.
-- (void)notifySuccessWithAction:(ZIKRouteAction)routeAction;
+///Call it when route is successfully performed.
+- (void)endPerformRouteWithSuccess;
+///Call it when route perform failed.
+- (void)endPerformRouteWithError:(NSError *)error;
 
-///Call errorHandler and performerErrorHandler.
-- (void)notifyError:(NSError *)error routeAction:(ZIKRouteAction)routeAction;
+///If the router can remove, override -canRemove, and do removal in -removeDestination:removeConfiguration:, prepare the destination before removing with -prepareDestinationForRemoving.
 
+///Prepare the destination with the -prepareDestination block in removeConfiguration before really removing the destination when you override -removeDestination:removeConfiguration:.
+- (void)prepareDestinationForRemoving;
+///Call it when route is successfully removed.
+- (void)endRemoveRouteWithSuccess;
+///Call it when route remove failed.
+- (void)endRemoveRouteWithError:(NSError *)error;
+
+///Attach a destination not created from router. The destination class should be registered with this router.
+- (void)attachDestination:(nullable Destination)destination;
+
+#pragma mark Error Handle
+
+///error from ZIKRouteErrorDomain.
++ (NSError *)routeErrorWithCode:(ZIKRouteError)code localizedDescription:(NSString *)description;
+///error from ZIKRouteErrorDomain.
++ (NSError *)routeErrorWithCode:(ZIKRouteError)code localizedDescriptionFormat:(NSString *)format ,...;
+///error with domain from +errorDomain.
 + (NSError *)errorWithCode:(NSInteger)code userInfo:(nullable NSDictionary *)userInfo;
+///error with domain from +errorDomain.
 + (NSError *)errorWithCode:(NSInteger)code localizedDescription:(NSString *)description;
+///error with domain from +errorDomain.
 + (NSError *)errorWithCode:(NSInteger)code localizedDescriptionFormat:(NSString *)format ,...;
+
++ (NSString *)errorDomain;
+
 @end
 
 NS_ASSUME_NONNULL_END

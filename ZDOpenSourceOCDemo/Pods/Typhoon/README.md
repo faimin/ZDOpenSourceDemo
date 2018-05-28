@@ -1,11 +1,11 @@
-![Typhoon](http://typhoonframework.org/typhoon-splash.png)
-## <a href="http://typhoonframework.org">typhoonframework.org</a>  
+<a href="http://appsquickly.github.io/Typhoon">![Typhoon](http://appsquickly.github.io/Typhoon/typhoon-splash.png)</a>
+# <a href="http://appsquickly.github.io/Typhoon">Typhoon</a>
 
 Powerful dependency injection for Cocoa and CocoaTouch. Lightweight, yet full-featured and super-easy to use. 
 
 ## Not familiar with Dependency Injection? 
 
-Visit <a href="http://typhoonframework.org">the Typhoon website</a> for an introduction. There's also a nice intro over at <a href="https://www.bignerdranch.com/blog/dependency-injection-ios/">Big Nerd Ranch</a>, or <a href="https://www.objc.io/issues/15-testing/dependency-injection/">here's an article</a>, by <a href="http://qualitycoding.org/">John Reid</a>. Quite a few books have been written on the topic, though we're not familiar with one that focuses specifically on Objective-C, Swift or Cocoa yet. 
+Visit <a href="http://appsquickly.github.io/Typhoon">the Typhoon website</a> for an introduction. There's also a nice intro over at <a href="https://www.bignerdranch.com/blog/dependency-injection-ios/">Big Nerd Ranch</a>, or <a href="https://www.objc.io/issues/15-testing/dependency-injection/">here's an article</a>, by <a href="http://qualitycoding.org/">John Reid</a>. Quite a few books have been written on the topic, though we're not familiar with one that focuses specifically on Objective-C, Swift or Cocoa yet. 
 
 ## Is Typhoon the right DI framework for you? 
 
@@ -28,7 +28,6 @@ Please think carefully before choosing a DI library that forces you to write com
 
 * Read the ***Quick Start*** for <a href="https://github.com/appsquickly/Typhoon/wiki/Quick-Start">Objective-C</a> or <a href="https://github.com/appsquickly/Typhoon/wiki/Swift-Quick-Start">Swift</a>. 
 * Here's the <a href="https://github.com/appsquickly/Typhoon/wiki/Types-of-Injections">User Guide</a>.
-* And here are the <a href="http://typhoonframework.org/docs/latest/api/modules.html">API Docs</a>. Generally googling a Typhoon class name will return the correct page as the first hit. 
 * <a href="http://ios.caph.jp/typhoon/introduction">日本のドキュメンテーション</a>
 
 ```swift
@@ -119,7 +118,7 @@ Please raise a <a href="https://github.com/appsquickly/Typhoon/issues">GitHub is
 
 Typhoon is a non-profit, community driven project. We only ask that if you've found it useful to star us on Github or send a tweet mentioning us (<a href="https://twitter.com/appsquickly">@appsquickly</a>). If you've written a Typhoon related blog or tutorial, or published a new Typhoon powered app, we'd certainly be happy to hear about that too. 
 
-Typhoon is sponsored and lead by <a href="http://appsquick.ly">AppsQuick.ly</a> with <a href="https://github.com/appsquickly/Typhoon/graphs/contributors">contributions from around the world</a>. 
+Typhoon is sponsored and led by <a href="http://appsquick.ly">AppsQuick.ly</a> with <a href="https://github.com/appsquickly/Typhoon/graphs/contributors">contributions from around the world</a>. 
  
 ---------------------------------------
 © 2012 - 2015 Jasper Blues, Aleksey Garbarev and contributors.

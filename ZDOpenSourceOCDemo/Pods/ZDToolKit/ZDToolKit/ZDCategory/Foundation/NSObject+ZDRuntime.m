@@ -99,7 +99,7 @@ __attribute__((constructor)) static void PSPDFUIKitMainThreadGuard(void) {
 
 #pragma mark - Dealloc Blocks
 
-- (void)addDeallocBlock:(void(^)())block
+- (void)addDeallocBlock:(dispatch_block_t)block
 {
     // don't accept NULL block
     NSParameterAssert(block);
@@ -117,10 +117,10 @@ __attribute__((constructor)) static void PSPDFUIKitMainThreadGuard(void) {
     [deallocBlocks addObject:executor];
 }
 
-- (void)zd_deallocBlcok:(void(^)())deallocBlock
+- (void)zd_deallocBlcok:(ZD_FreeBlock)deallocBlock
 {
     if (deallocBlock) {
-        ZDWeakSelf *blockExecutor = [[ZDWeakSelf alloc] initWithBlock:deallocBlock];
+        ZDWeakSelf *blockExecutor = [[ZDWeakSelf alloc] initWithBlock:deallocBlock realTarget:self];
         ///原理: 当self释放时,会先释放它本身的关联对象,所以在这个属性对象的dealloc里执行回调,操作remove观察者等操作
         objc_setAssociatedObject(self, (__bridge const void *)deallocBlock, blockExecutor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
@@ -183,29 +183,39 @@ __attribute__((constructor)) static void PSPDFUIKitMainThreadGuard(void) {
 
 #pragma mark - Associate
 
-- (void)zd_setStrongAssociateValue:(id)value forKey:(void *)key
+- (void)zd_setStrongAssociateValue:(id)value forKey:(const void *)key
 {
     objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (id)zd_getStrongAssociatedValueForKey:(void *)key
+- (id)zd_getStrongAssociatedValueForKey:(const void *)key
 {
     return objc_getAssociatedObject(self, key);
 }
 
-- (void)zd_setCopyAssociateValue:(id)value forKey:(void *)key
+- (void)zd_setCopyAssociateValue:(id)value forKey:(const void *)key
 {
     objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_COPY);
 }
 
-- (id)zd_getCopyAssociatedValueForKey:(void *)key
+- (id)zd_getCopyAssociatedValueForKey:(const void *)key
+{
+    return objc_getAssociatedObject(self, key);
+}
+
+- (void)zd_setUnsafeUnretainedAssociateValue:(id)value forKey:(const void *)key
+{
+    objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (id)zd_getUnsafeUnretainedAssociatedValueForKey:(const void *)key
 {
     return objc_getAssociatedObject(self, key);
 }
 
 // 此处是利用block捕获外部变量的原理实现的.
 // 其实把value作为一个对象的weak属性,然后绑定这个对象也可以实现,当get时拿到这个对象,并获取它那个weak属性即可.
-- (void)zd_setWeakAssociateValue:(id)value forKey:(void *)key
+- (void)zd_setWeakAssociateValue:(id)value forKey:(const void *)key
 {
 #if 1
     __weak id weakValue = value;
@@ -220,10 +230,10 @@ __attribute__((constructor)) static void PSPDFUIKitMainThreadGuard(void) {
 #endif
 }
 
-- (id)zd_getWeakAssociateValueForKey:(void *)key
+- (id)zd_getWeakAssociateValueForKey:(const void *)key
 {
 #if 1
-    id(^tempBlock)() = objc_getAssociatedObject(self, key);
+    id(^tempBlock)(void) = objc_getAssociatedObject(self, key);
     if (tempBlock) {
         return tempBlock();
     }
@@ -247,7 +257,7 @@ __attribute__((constructor)) static void PSPDFUIKitMainThreadGuard(void) {
 
 @implementation ZDObjectBlockExecutor
 
-+ (instancetype)blockExecutorWithDeallocBlock:(void(^)())block
++ (instancetype)blockExecutorWithDeallocBlock:(dispatch_block_t)block
 {
     ZDObjectBlockExecutor *executor = [[ZDObjectBlockExecutor alloc] init];
     executor.deallocBlock = block; // copy
@@ -271,12 +281,13 @@ __attribute__((constructor)) static void PSPDFUIKitMainThreadGuard(void) {
 
 @implementation ZDWeakSelf
 
-- (instancetype)initWithBlock:(void(^)())deallocBlock
+- (instancetype)initWithBlock:(ZD_FreeBlock)deallocBlock realTarget:(id)realTarget
 {
     self = [super init];
     if (self) {
         //属性设为readonly,并用指针指向方式,是参照RACDynamicSignal中的写法
         self->_deallocBlock = [deallocBlock copy];
+        self->_realTarget = realTarget;
     }
     return self;
 }
@@ -284,7 +295,7 @@ __attribute__((constructor)) static void PSPDFUIKitMainThreadGuard(void) {
 - (void)dealloc
 {
     if (nil != self.deallocBlock) {
-        self.deallocBlock();
+        self.deallocBlock(self);
         NSLog(@"成功移除对象");
     }
 }

@@ -48,6 +48,7 @@ def pods_oc
   # thread
   pod 'YYDispatchQueuePool'
   # runtime
+  pod 'fishhook'
   pod 'RSSwizzle'
   # tools
   pod 'GDPerformanceView'
