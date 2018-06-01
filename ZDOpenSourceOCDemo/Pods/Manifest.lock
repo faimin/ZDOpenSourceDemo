@@ -102,23 +102,22 @@ PODS:
     - RTRootNavigationController/Core (= 0.6.7)
   - RTRootNavigationController/Core (0.6.7)
   - SVProgressHUD (2.2.5)
-  - Texture (2.6):
-    - Texture/PINRemoteImage (= 2.6)
-  - Texture/Core (2.6)
-  - Texture/PINRemoteImage (2.6):
+  - Texture (2.7):
+    - Texture/PINRemoteImage (= 2.7)
+  - Texture/Core (2.7)
+  - Texture/PINRemoteImage (2.7):
     - PINRemoteImage/iOS (= 3.0.0-beta.13)
     - PINRemoteImage/PINCache
     - Texture/Core
   - Toast (4.0.0)
-  - Typhoon (4.0.4):
-    - Typhoon/DeallocNotifier (= 4.0.4)
-    - Typhoon/IntrospectionUtils (= 4.0.4)
-    - Typhoon/no-arc (= 4.0.4)
-  - Typhoon/DeallocNotifier (4.0.4)
-  - Typhoon/IntrospectionUtils (4.0.4)
-  - Typhoon/no-arc (4.0.4):
+  - Typhoon (4.0.5):
+    - Typhoon/DeallocNotifier (= 4.0.5)
+    - Typhoon/IntrospectionUtils (= 4.0.5)
+    - Typhoon/no-arc (= 4.0.5)
+  - Typhoon/DeallocNotifier (4.0.5)
+  - Typhoon/IntrospectionUtils (4.0.5)
+  - Typhoon/no-arc (4.0.5):
     - Typhoon/IntrospectionUtils
-  - "UITableView+FDTemplateLayoutCell (1.6)"
   - Yoga (1.8.1)
   - YogaKit (1.8.1):
     - Yoga (~> 1.8.1)
@@ -129,26 +128,6 @@ PODS:
   - YYModel (1.0.4)
   - ZDNetWorkHelper (0.3.1):
     - AFNetworking (~> 3.1)
-  - ZDTableViewBinding (0.3.0):
-    - ReactiveObjC
-    - ZDTableViewBinding/ZDBaseViews (= 0.3.0)
-    - ZDTableViewBinding/ZDBinding (= 0.3.0)
-    - ZDTableViewBinding/ZDProtocols (= 0.3.0)
-    - ZDTableViewBinding/ZDViewModels (= 0.3.0)
-  - ZDTableViewBinding/ZDBaseViews (0.3.0):
-    - ReactiveObjC
-    - ZDTableViewBinding/ZDProtocols
-    - ZDTableViewBinding/ZDViewModels
-  - ZDTableViewBinding/ZDBinding (0.3.0):
-    - ReactiveObjC
-    - "UITableView+FDTemplateLayoutCell (~> 1.6)"
-    - ZDTableViewBinding/ZDProtocols
-    - ZDTableViewBinding/ZDViewModels
-  - ZDTableViewBinding/ZDProtocols (0.3.0):
-    - ReactiveObjC
-  - ZDTableViewBinding/ZDViewModels (0.3.0):
-    - ReactiveObjC
-    - ZDTableViewBinding/ZDProtocols
   - ZDToolKit (0.0.4):
     - ZDToolKit/no-arc (= 0.0.4)
     - ZDToolKit/ZDAutoLayout (= 0.0.4)
@@ -162,8 +141,11 @@ PODS:
   - ZDToolKit/ZDCategory (0.0.4):
     - ZDToolKit/ZDCategory/Foundation (= 0.0.4)
     - ZDToolKit/ZDCategory/UIKit (= 0.0.4)
-  - ZDToolKit/ZDCategory/Foundation (0.0.4)
+    - ZDToolKit/ZDMacros
+  - ZDToolKit/ZDCategory/Foundation (0.0.4):
+    - ZDToolKit/ZDMacros
   - ZDToolKit/ZDCategory/UIKit (0.0.4):
+    - ZDToolKit/ZDMacros
     - ZDToolKit/ZDTools/ZDProxy
   - ZDToolKit/ZDMacros (0.0.4)
   - ZDToolKit/ZDRuntime (0.0.4)
@@ -211,7 +193,6 @@ DEPENDENCIES:
   - YYDispatchQueuePool
   - YYModel
   - ZDNetWorkHelper (from `https://github.com/faimin/ZDNetWorkHelper`)
-  - ZDTableViewBinding (from `https://github.com/faimin/ZDTableViewBinding`)
   - ZDToolKit (from `https://github.com/faimin/ZDToolKit`, branch `develop`)
   - ZIKRouter
 
@@ -247,7 +228,6 @@ SPEC REPOS:
     - Texture
     - Toast
     - Typhoon
-    - "UITableView+FDTemplateLayoutCell"
     - Yoga
     - YogaKit
     - YTKNetwork
@@ -259,8 +239,6 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   ZDNetWorkHelper:
     :git: https://github.com/faimin/ZDNetWorkHelper
-  ZDTableViewBinding:
-    :git: https://github.com/faimin/ZDTableViewBinding
   ZDToolKit:
     :branch: develop
     :git: https://github.com/faimin/ZDToolKit
@@ -269,11 +247,8 @@ CHECKOUT OPTIONS:
   ZDNetWorkHelper:
     :commit: 2227d3e89ae94078d739987d802a6aceb08659ee
     :git: https://github.com/faimin/ZDNetWorkHelper
-  ZDTableViewBinding:
-    :commit: d9a2a68debee3e9f4e65ecb56d09c816bbd63a99
-    :git: https://github.com/faimin/ZDTableViewBinding
   ZDToolKit:
-    :commit: de73f2512758cf17bce1d28ff14f4de42dc512fc
+    :commit: b578bfc1ae5871da2cd4faa1b6cc8d93ceaf7e75
     :git: https://github.com/faimin/ZDToolKit
 
 SPEC CHECKSUMS:
@@ -304,10 +279,9 @@ SPEC CHECKSUMS:
   RSSwizzle: d561958f595028bfcef98c7d55c318b3878a61c6
   RTRootNavigationController: d6aa6cbb78a3eaecea4f6e4df63f15dd887836b8
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  Texture: 7249074582daf75e524e59df5428b66b8e8db0e4
+  Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  Typhoon: fe0fa417515e279f68170cfe3ae9c1d5eae53205
-  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  Typhoon: 58ae5754d3d0aa819119d8c107aed0dd67f1eb3b
   Yoga: e6f1fed82138c17da5332e15e5770abf0e9cc386
   YogaKit: bb90d11e297e06abef7e0cfb20e035a6bd00cdc4
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
@@ -315,10 +289,9 @@ SPEC CHECKSUMS:
   YYDispatchQueuePool: 3dfb2274bcc74207688dde8ac6f7bdd46871dd7b
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZDNetWorkHelper: 969b637a7fc84ff15364011a905821cf8f6d64b9
-  ZDTableViewBinding: 84c857db2d5925936e5af49fc3c32ce16caf1533
-  ZDToolKit: 676ecc79164f4f38dbfb5df849c69964270963be
+  ZDToolKit: 97a45f0378232f2950bd710e29075b0dce1f8b43
   ZIKRouter: cf85622f3ae6a9c20c4b7bfd38d7fbc81647f567
 
-PODFILE CHECKSUM: 49a5bfb33e43409dbd8940728c73853f33dadd04
+PODFILE CHECKSUM: 431ae72aa4fdf5b2cb271c091a38cbb8bfc752ee
 
 COCOAPODS: 1.5.3

@@ -33,7 +33,7 @@ typedef struct ThreadCallStack_ {
 
 static pthread_key_t threadKey;
 
-static inline ThreadCallStack * getThreadCallStack() {
+static inline ThreadCallStack *getThreadCallStack() {
     ThreadCallStack *cs = (ThreadCallStack *)pthread_getspecific(threadKey);
     if (cs == NULL) {
         cs = (ThreadCallStack *)malloc(sizeof(ThreadCallStack));
@@ -45,7 +45,7 @@ static inline ThreadCallStack * getThreadCallStack() {
     return cs;
 }
     
-static inline void pushCallRecord(id obj, SEL _cmd ,uintptr_t lr, const char * classname) {
+static inline void pushCallRecord(id obj, SEL _cmd ,uintptr_t lr, const char *classname) {
     ThreadCallStack *cs = getThreadCallStack();
     
     int nextIndex = (++cs->index);
@@ -61,7 +61,7 @@ static inline void pushCallRecord(id obj, SEL _cmd ,uintptr_t lr, const char * c
     
     unsigned long namelen = strlen(classname);
     newRecord->classname = malloc(namelen + 1);
-    strncpy(newRecord->classname,classname,namelen);
+    strncpy(newRecord->classname, classname, namelen);
 }
 
 static inline CallRecord * popCallRecord() {
@@ -73,12 +73,12 @@ void before_objc_msgSend(id self, SEL _cmd, uintptr_t lr) {
     const char *classname = class_getName(object_getClass(self));
     pushCallRecord(self, _cmd, lr, classname);
     
-    printf("pre msg send : className = %s, selectorName = %s\n", classname, sel_getName(_cmd));
+    printf("pre msg send ==> [%s %s];\n", classname, sel_getName(_cmd));
 }
 
 uintptr_t after_objc_msgSend() {
     CallRecord *record = popCallRecord();
-    printf("post msg send : className = %s, selectorName = %s\n", record->classname, sel_getName(record->_cmd));
+    printf("post msg send ==> [%s %s];\n", record->classname, sel_getName(record->_cmd));
     
     free(record->classname);
     record->classname = NULL;

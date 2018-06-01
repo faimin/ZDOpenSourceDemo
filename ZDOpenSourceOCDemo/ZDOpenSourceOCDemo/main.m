@@ -16,7 +16,7 @@ void gohook();
 int main(int argc, char * argv[]) {
     @autoreleasepool {
 #if defined (__arm64__)
-        gohook();
+        //gohook();
 #endif
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

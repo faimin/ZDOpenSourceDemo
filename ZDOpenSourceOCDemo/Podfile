@@ -3,7 +3,7 @@ platform :ios, '9.0'
 inhibit_all_warnings!
 
 def pods_git
-    pod 'ZDTableViewBinding', :git => 'https://github.com/faimin/ZDTableViewBinding'
+    # pod 'ZDTableViewBinding', :git => 'https://github.com/faimin/ZDTableViewBinding'
     pod 'ZDNetWorkHelper', :git => 'https://github.com/faimin/ZDNetWorkHelper'
     pod 'ZDToolKit', :git => 'https://github.com/faimin/ZDToolKit', :branch => 'develop'
 end
