@@ -88,12 +88,14 @@ post_install do |installer|
             #关闭block内直接引用全局变量的警告
             config.build_settings['CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'] = 'NO'
             if target.name == 'PromiseKit' || target.name == 'YogaKit' || target.name == 'ResponseDetective'
-                config.build_settings['SWIFT_VERSION'] = '4.0'
+                config.build_settings['SWIFT_VERSION'] = '4.1'
             elsif target.name == 'ReactiveObjC'
                 #关闭`This block declaration is not a prototype,Insert ‘void'`警告
                 #config.build_settings['CLANG_WARN_STRICT_PROTOTYPES'] = 'NO'
             end
         end
     end
+    
+    # Pod::PodTarget.send(:define_method, :static_framework?) { return true }
 end
 

@@ -158,7 +158,7 @@ PODS:
   - ZDToolKit/ZDTools/ProtocolKit (0.0.4)
   - ZDToolKit/ZDTools/ZDPromise (0.0.4)
   - ZDToolKit/ZDTools/ZDProxy (0.0.4)
-  - ZIKRouter (1.0.0)
+  - ZIKRouter (1.0.1)
 
 DEPENDENCIES:
   - Buglife
@@ -290,8 +290,8 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZDNetWorkHelper: 969b637a7fc84ff15364011a905821cf8f6d64b9
   ZDToolKit: 97a45f0378232f2950bd710e29075b0dce1f8b43
-  ZIKRouter: cf85622f3ae6a9c20c4b7bfd38d7fbc81647f567
+  ZIKRouter: bad6122d96ce55fcf2e6fcc6b11da173dacfffba
 
-PODFILE CHECKSUM: 431ae72aa4fdf5b2cb271c091a38cbb8bfc752ee
+PODFILE CHECKSUM: dbf9514060c56a0757b0f00c997185e883dfa337
 
 COCOAPODS: 1.5.3

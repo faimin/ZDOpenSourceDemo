@@ -71,6 +71,27 @@ Service router 用于模块寻找，通过 protocol 寻找对应的模块，并�
 5. [Circular Dependency](Documentation/English/CircularDependencies.md)
 6. [Module Adapter](Documentation/English/ModuleAdapter.md)
 
+## Requirements
+
+* iOS 7.0+
+* Swift 3.2+
+* Xcode 9.0+
+
+## Installation
+
+### Cocoapods
+
+For Objective-C project:
+
+```
+pod 'ZIKRouter', '>= 1.0.1'
+```
+For Swift project:
+
+```
+pod 'ZRouter', '>= 1.0.1'
+```
+
 ## Sample
 
 ### View Router
@@ -169,7 +190,7 @@ class TestViewController: UIViewController {
         Router.perform(
             to: RoutableView<NoteEditorInput>(),
             path: .push(from: self),
-            configuring: { (config, prepareDestination, _) in
+            configuring: { (config, _) in
                 //Route config
                 config.successHandler = { destination in
                     //Transition succeed
@@ -178,11 +199,11 @@ class TestViewController: UIViewController {
                     //Transition failed
                 }
                 //Prepare the destination before transition
-                prepareDestination({ destination in
+                config.prepareDestination = { [weak self] destination in
                     //destination is inferred as NoteEditorInput
                     destination.delegate = self
                     destination.constructForCreatingNewNote()
-                })
+                }
         })
     }
 }
@@ -255,11 +276,11 @@ class TestViewController: UIViewController {
         guard let router = router, router.canRemove else {
             return
         }
-        router.removeRoute(configuring: { (config, prepareDestination) in
+        router.removeRoute(configuring: { (config) in
 	            config.animated = true
-	            prepareDestination({ destination in
+	            config.prepareDestination = { destination in
 	                //Use destination before remove it
-	            })
+	            }
             })
         router = nil
     }
@@ -378,27 +399,6 @@ The demo (ZIKRouterDemo) in this repository shows how to use ZIKRouter to perfor
 
 If you want to see how it works in a VIPER architecture app, go to [ZIKViper](https://github.com/Zuikyo/ZIKViper).
 
-## Requirements
-
-* iOS 7.0+
-* Swift 3.2+
-* Xcode 9.0+
-
-## Installation
-
-### Cocoapods
-
-For Objective-C project:
-
-```
-pod 'ZIKRouter', '>= 1.0.0'
-```
-For Swift project:
-
-```
-pod 'ZRouter', '>= 1.0.0'
-```
-
 ## How to use
 
 Quick start to use ZIKRouter.
@@ -506,13 +506,13 @@ class TestViewController: UIViewController {
         Router.perform(
             to: RoutableView<NoteEditorInput>(),
             path: .push(from: self),
-            configuring: { (config, prepareDestination, _) in
+            configuring: { (config, _) in
                 //Prepare the destination before transition
-                prepareDestination({ destination in
+                config.prepareDestination = { [weak self] destination in
                     //destination is inferred as NoteEditorInput
                     destination.delegate = self
                     destination.constructForCreatingNewNote()
-                })
+                }
         })
     }
 }
