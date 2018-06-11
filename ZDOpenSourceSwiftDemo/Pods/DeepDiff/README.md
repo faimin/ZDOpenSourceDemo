@@ -11,6 +11,8 @@
 
 **DeepDiff** tells the difference between 2 collections and the changes as edit steps. It works on any collection of `Equatable` and `Hashable` items.
 
+- [A better way to update UICollectionView data in Swift with diff framework](https://medium.com/flawless-app-stories/a-better-way-to-update-uicollectionview-data-in-swift-with-diff-framework-924db158db86)
+
 <div align = "center">
 <img src="Screenshots/table.gif" width="" height="400" />
 <img src="Screenshots/collection.gif" width="" height="400" />
@@ -43,7 +45,7 @@ let changes = diff(old: old, new: new)
 ```swift
 let old = Array("abcd")
 let new = Array("adbc")
-let changes = diff(old: old, new: new, reduceMove: true)
+let changes = diff(old: old, new: new)
 
 // Move "d" from index 3 to index 1
 ```

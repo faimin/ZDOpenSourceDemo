@@ -28,7 +28,7 @@ def pods_swift
   # animation
   pod 'lottie-ios'
   pod 'Hero'
-  pod 'PeekPop'
+  # pod 'PeekPop'
   pod 'Gemini'
   # runtime
   pod 'RSSwizzle'
