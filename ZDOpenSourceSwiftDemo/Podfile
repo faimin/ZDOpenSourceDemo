@@ -21,7 +21,7 @@ def pods_swift
   pod 'SnapKit'
   pod 'TinyConstraints'
   # framelayout
-  pod 'Yoga', '1.6'
+  pod 'Yoga'
   pod 'YogaKit'
   pod 'Neon'
   pod 'LayoutKit'
