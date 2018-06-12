@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     let ZDReuseCellIndentifier = "ReuseCell"
     // 每当这个类的新实例被创建时,这个闭包就会被调用,而闭包的返回值就会当做默认值赋值给这个属性
     // 添加lazy属性的话就相当于懒加载了,而且必须为变量;
@@ -87,14 +87,15 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.textLabel?.text = "第\(indexPath.row)行"
+        cell.textLabel?.text = "第\(indexPath.row + 1)行"
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         defer { // 出了当前作用域后执行,相当于RAC中的onExit宏
             tableView.deselectRow(at: indexPath, animated: true)
         }
-        navigationController?.pushViewController(YogaKitViewController(), animated: true)
+        //navigationController?.pushViewController(YogaKitViewController(), animated: true)
+        navigationController?.show(ZDFeedController(), sender: nil)
     }
 }
 
