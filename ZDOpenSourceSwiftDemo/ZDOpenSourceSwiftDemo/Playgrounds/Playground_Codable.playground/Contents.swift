@@ -1,5 +1,10 @@
 //: Playground - noun: a place where people can play
 
+/*:
+   + [Swift4 终极解析方案：基础篇](http://www.rockerhx.com/2017/09/25/2017-09-25-Swift4-Codable-Basic/)
+   + [Swift4 终极解析方案：进阶篇](http://www.rockerhx.com/2017/09/26/2017-09-26-Swift4-Codable-Ultimate/)
+ */
+
 import UIKit
 import Foundation
 
@@ -15,6 +20,7 @@ struct Person: Codable {
     
     // 只有在 CodingKeys 中指定的属性名才会进行编码;
     // 如果使用了 CodingKeys,那些没有在 CodingKeys 中声明的属性就必须要要有一个默认值
+    // 对于可能为nil的字段,归解档时需要用encodeIfPresent、decodeIfPresent归解档
     enum CodingKeys: String, CodingKey {
         case name = "fullName"
         case gender = "sex"
@@ -24,6 +30,10 @@ struct Person: Codable {
 }
 
 extension Person {
+    // 该对象又有三种类型：
+    //Keyed Container：键值对字典类型
+    //Unkeyed Container：数值类型
+    //Single Value Container：仅仅输出 raw value
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         name = try container.decode(String.self, forKey: .name)

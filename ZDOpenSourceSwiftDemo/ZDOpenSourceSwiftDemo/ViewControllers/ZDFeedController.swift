@@ -31,7 +31,7 @@ class ZDFeedController: UIViewController {
     
     private func setupData() {
         let feeds = ZDFeedViewModel().zd_decodeFeedData();
-        print(feeds)
+        print(feeds) 
     }
     
     override func didReceiveMemoryWarning() {

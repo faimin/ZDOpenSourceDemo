@@ -5,14 +5,22 @@
             "content": "This is forkingdog team. Here's our logo?\nGithub: \"forkingdog\"",
             "username": "forkingdog",
             "time": "2015.04.10",
-            "imageName": "forkingdog"
+            "imageName": "forkingdog",
+            "body": {
+                "height": 100,
+                "weight": 200
+            }
         },
         {
             "title": "Team member - sunnyxx",
             "content": "Working at Baidu, Zhidao iOS team, weibo: @我就叫Sunny怎么了Working at Baidu, Zhidao iOS team, weibo: @我就叫Sunny怎么了Working at Baidu, Zhidao iOS team, weibo: @我就叫Sunny怎么了Working at Baidu, Zhidao iOS team, weibo: @我就叫Sunny怎么了",
             "username": "sunnyxx",
             "time": "2015.04.11",
-            "imageName": "sunnyxx"
+            "imageName": "sunnyxx",
+            "body": {
+                "height": 50,
+                "weight": 50
+            }
         },
         {
             "title": "Team member - SinoJerk",
