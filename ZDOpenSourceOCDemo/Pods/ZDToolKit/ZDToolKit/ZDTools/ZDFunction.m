@@ -8,6 +8,7 @@
 
 #import "ZDFunction.h"
 #import <ImageIO/ImageIO.h>
+#import <CoreText/CoreText.h>
 #import <objc/runtime.h>
 #import <pthread/pthread.h>
 #import <Accelerate/Accelerate.h>
@@ -415,6 +416,59 @@ void ZD_PrintViewCoordinateInfo(__kindof UIView *view) {
           );
 }
 
+NSArray<UICollectionViewLayoutAttributes *> *ZD_LayoutAttributesForElementsInRect(CGRect rect, NSArray<UICollectionViewLayoutAttributes *> *cachedLayouts) {
+    if (cachedLayouts.count == 0) return @[];
+    
+    CGFloat rect_top = CGRectGetMinY(rect);
+    CGFloat rect_bottom = CGRectGetMaxY(rect);
+    
+    NSUInteger beginIndex = 0;
+    NSUInteger endIndex = cachedLayouts.count;
+    NSUInteger middleIndex = (beginIndex + endIndex) / 2;
+    
+    UICollectionViewLayoutAttributes *middleAttributes = cachedLayouts[middleIndex];
+    
+    while (CGRectEqualToRect(CGRectIntersection(middleAttributes.frame, rect), CGRectZero)) {
+        CGFloat middle_top = CGRectGetMinY(middleAttributes.frame);
+        CGFloat middle_bottom = CGRectGetMaxY(middleAttributes.frame);
+        
+        // 在前半部分查找
+        if (rect_bottom < middle_top) {
+            endIndex = middleIndex;
+        }
+        // 在后半部分查找
+        else if (rect_top > middle_bottom) {
+            beginIndex = middleIndex;
+        }
+        middleIndex = (beginIndex + endIndex) / 2;
+        
+        middleAttributes = cachedLayouts[middleIndex];
+    }
+    
+    NSMutableArray<UICollectionViewLayoutAttributes *> *targetAttributes = [NSMutableArray array];
+    for (NSInteger i = middleIndex; i >= 0; i--) {
+        UICollectionViewLayoutAttributes *attributes = cachedLayouts[i];
+        if (CGRectGetMaxY(attributes.frame) >= rect_top) {
+            [targetAttributes insertObject:attributes atIndex:0];
+        }
+        else {
+            break;
+        }
+    }
+    
+    for (NSInteger i = middleIndex+1; i < cachedLayouts.count; i++) {
+        UICollectionViewLayoutAttributes *attributes = cachedLayouts[i];
+        if (CGRectGetMinY(attributes.frame) <= rect_bottom) {
+            [targetAttributes addObject:attributes];
+        }
+        else {
+            break;
+        }
+    }
+    
+    return targetAttributes;
+}
+
 #pragma mark - String
 #pragma mark -
 /// 设置文字行间距
@@ -471,6 +525,41 @@ OS_OVERLOADABLE NSMutableAttributedString *ZD_GenerateAttributeString(NSString *
     if (extendFilterSetBlock) extendFilterSetBlock(attributes);
     [mutAttributeStr addAttributes:attributes range:range];
     return mutAttributeStr;
+}
+
+NSArray<NSString *> *ZD_SplitTextWithWidth(NSString *string, UIFont *font, CGFloat width) {
+    if (string.length == 0) return @[];
+    
+    CTFontRef fontRef = CTFontCreateWithName((__bridge CFStringRef)font.fontName, font.pointSize, NULL);
+    
+    NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc] initWithString:string];
+    [attStr addAttribute:(__bridge NSString *)kCTFontAttributeName value:(__bridge id)fontRef range:NSMakeRange(0, string.length)];
+    CFRelease(fontRef);
+    
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathAddRect(path, NULL, (CGRect){CGPointZero, width, CGFLOAT_MAX});
+    
+    CTFramesetterRef framesetterRef = CTFramesetterCreateWithAttributedString((__bridge CFAttributedStringRef)attStr);
+    CTFrameRef frameRef = CTFramesetterCreateFrame(framesetterRef, CFRangeMake(0, 0), path, NULL);
+    
+    NSMutableArray<NSString *> *linesArray = @[].mutableCopy;
+    NSArray *lines = (__bridge NSArray *)CTFrameGetLines(frameRef);
+    for (id line in lines) {
+        CTLineRef lineRef = (__bridge CTLineRef)line;
+        CFRange lineRange = CTLineGetStringRange(lineRef);
+        NSRange range = NSMakeRange(lineRange.location, lineRange.length);
+        NSString *lineString = [string substringWithRange:range];
+        CFAttributedStringSetAttribute( (__bridge CFMutableAttributedStringRef)attStr, lineRange, kCTKernAttributeName, (CFTypeRef)@(0.0) );
+        CFAttributedStringSetAttribute( (__bridge CFMutableAttributedStringRef)attStr, lineRange, kCTKernAttributeName, (CFTypeRef)@(0) );
+        
+        [linesArray addObject:lineString];
+    }
+    
+    CFRelease(path);
+    CFRelease(frameRef);
+    CFRelease(framesetterRef);
+    
+    return linesArray;
 }
 
 NSMutableAttributedString *ZD_AddImageToAttributeString(UIImage *image) {
