@@ -9,8 +9,10 @@
 
 import UIKit
 import YogaKit
+import LifetimeTracker
 
-class YogaKitViewController: UIViewController {
+class YogaKitViewController: UIViewController, LifetimeTrackable {
+    static var lifetimeConfiguration: LifetimeConfiguration = LifetimeConfiguration(maxCount: 1, groupName: "YogaKitViewController")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,16 @@ class YogaKitViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        trackLifetime()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
     func setup() {

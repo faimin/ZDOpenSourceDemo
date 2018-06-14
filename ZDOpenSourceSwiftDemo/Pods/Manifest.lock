@@ -19,7 +19,7 @@ PODS:
     - IGListKit/Diffing
   - IGListKit/Diffing (3.4.0)
   - Kingfisher (4.8.0)
-  - LayoutKit (8.0.0)
+  - LayoutKit (8.0.1)
   - LifetimeTracker (1.4.0)
   - lottie-ios (2.5.0)
   - MBProgressHUD (1.1.0)
@@ -50,6 +50,9 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.3.0):
     - PromiseKit/CorePromise
+  - PromisesObjC (1.2.2)
+  - PromisesSwift (1.2.2):
+    - PromisesObjC (= 1.2.2)
   - ResponseDetective (1.2.4)
   - RSSwizzle (0.1.0)
   - RxCocoa (4.2.0):
@@ -65,6 +68,7 @@ PODS:
     - Texture/Core
   - TinyConstraints (3.1.1)
   - Toast-Swift (3.0.1)
+  - Watchdog (4.0)
   - Yoga (1.8.1)
   - YogaKit (1.8.1):
     - Yoga (~> 1.8.1)
@@ -90,6 +94,7 @@ DEPENDENCIES:
   - ObjectMapper
   - Peek
   - PromiseKit
+  - PromisesSwift
   - ResponseDetective
   - RSSwizzle
   - RxCocoa
@@ -98,6 +103,7 @@ DEPENDENCIES:
   - Texture
   - TinyConstraints
   - Toast-Swift
+  - Watchdog
   - Yoga
   - YogaKit
 
@@ -126,6 +132,8 @@ SPEC REPOS:
     - PINOperation
     - PINRemoteImage
     - PromiseKit
+    - PromisesObjC
+    - PromisesSwift
     - ResponseDetective
     - RSSwizzle
     - RxCocoa
@@ -134,6 +142,7 @@ SPEC REPOS:
     - Texture
     - TinyConstraints
     - Toast-Swift
+    - Watchdog
     - Yoga
     - YogaKit
 
@@ -150,7 +159,7 @@ SPEC CHECKSUMS:
   Hero: 33dadf2cd1c98af71e213dcbc2902e6e03622a4e
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
-  LayoutKit: a0291efd9133598f6941d70dce9d5ada2eaeb8fb
+  LayoutKit: dab1c2eea7a0bf9d8d755a8a793f87a929768455
   LifetimeTracker: 51b52d559ffd4570584996b4b94b8779e525ee62
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
@@ -161,6 +170,8 @@ SPEC CHECKSUMS:
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   PromiseKit: cf84bbb1235a61473b326c5cf0b41f6828f87ba5
+  PromisesObjC: 3db4112f796a05782b4442364748f9126fea0b88
+  PromisesSwift: a87c9b5fba61711bce16ac11d8d8bf96fc93fde0
   ResponseDetective: 710b1b41903382460592a75a480440661bcadfa6
   RSSwizzle: d561958f595028bfcef98c7d55c318b3878a61c6
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
@@ -169,9 +180,10 @@ SPEC CHECKSUMS:
   Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
   TinyConstraints: c15ce864e9ef87dfd18ee3bd746d510a38d84198
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
+  Watchdog: 370d2c2a58c9bede0e3f9b8cc26bf297745c31c2
   Yoga: e6f1fed82138c17da5332e15e5770abf0e9cc386
   YogaKit: bb90d11e297e06abef7e0cfb20e035a6bd00cdc4
 
-PODFILE CHECKSUM: e0764ab7bbfa72796593943d8a2a00ebdeb22b80
+PODFILE CHECKSUM: 8309508f7057d79446dc3f5c757d35f83dd16532
 
 COCOAPODS: 1.5.3

@@ -10,11 +10,14 @@ import UIKit
 import GDPerformanceView_Swift
 import Buglife
 import Peek
+import Watchdog
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var watchDog: Watchdog!
     
     private func showPerformanceMonitor() {
         // performanceMonitor
@@ -27,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        watchDog = Watchdog(threshold: 0.4, strictMode: true)
+        
         showPerformanceMonitor()
         
         // bugMonitor

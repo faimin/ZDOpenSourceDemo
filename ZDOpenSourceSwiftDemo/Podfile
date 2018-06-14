@@ -7,6 +7,7 @@ def pods_swift
   pod 'RxCocoa'
   # promise
   pod 'PromiseKit'
+  pod 'PromisesSwift'
   # optimize
   pod 'Texture'
   pod 'IGListKit'
@@ -28,7 +29,6 @@ def pods_swift
   # animation
   pod 'lottie-ios'
   pod 'Hero'
-  # pod 'PeekPop'
   pod 'Gemini'
   # runtime
   pod 'RSSwizzle'
@@ -43,6 +43,7 @@ def pods_swift
   pod 'DeepDiff' # 对比集合内元素是否变化
   pod 'GDPerformanceView-Swift'
   pod 'LifetimeTracker' # 监听内存泄露
+  pod 'Watchdog'
   # debug
   pod 'Buglife'
   pod 'Peek', :configurations => ['Debug']
