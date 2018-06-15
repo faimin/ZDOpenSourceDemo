@@ -20,6 +20,10 @@
 		DA2513311F349D0B00633093 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25132E1F349D0B00633093 /* ViewController.swift */; };
 		DA2BA98B1FD2B5F700F97F03 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2BA98A1FD2B5F700F97F03 /* Extension.swift */; };
 		DAA098281F3B373B00303DD4 /* YogaKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA098271F3B373B00303DD4 /* YogaKitViewController.swift */; };
+		FA15D41E20D26E3000F4AFBC /* ZDAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15D41D20D26E3000F4AFBC /* ZDAPI.swift */; };
+		FA15D42020D26EDB00F4AFBC /* ZDMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15D41F20D26EDB00F4AFBC /* ZDMovieModel.swift */; };
+		FA15D42220D26EFB00F4AFBC /* ZDMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15D42120D26EFB00F4AFBC /* ZDMovieViewModel.swift */; };
+		FA15D42420D3607800F4AFBC /* ZDMovieListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15D42320D3607800F4AFBC /* ZDMovieListController.swift */; };
 		FA55967720CFCFF600B5AF9D /* ZDFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55967620CFCFF600B5AF9D /* ZDFeedViewModel.swift */; };
 		FA55967920CFD00D00B5AF9D /* ZDFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55967820CFD00D00B5AF9D /* ZDFeedModel.swift */; };
 		FA55967B20CFDF4300B5AF9D /* ZDFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55967A20CFDF4300B5AF9D /* ZDFeedController.swift */; };
@@ -71,6 +75,10 @@
 		DD102BD0CEA7A542A0F3A12C /* Pods_ZDOpenSourceSwiftDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZDOpenSourceSwiftDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E11E4F06DCC44BD89C00BE63 /* Pods-ZDOpenSourceSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceSwiftDemo/Pods-ZDOpenSourceSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E301815B8D5D46CF1CE87075 /* Pods-ZDOpenSourceSwiftDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceSwiftDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceSwiftDemoTests/Pods-ZDOpenSourceSwiftDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		FA15D41D20D26E3000F4AFBC /* ZDAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDAPI.swift; sourceTree = "<group>"; };
+		FA15D41F20D26EDB00F4AFBC /* ZDMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDMovieModel.swift; sourceTree = "<group>"; };
+		FA15D42120D26EFB00F4AFBC /* ZDMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDMovieViewModel.swift; sourceTree = "<group>"; };
+		FA15D42320D3607800F4AFBC /* ZDMovieListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDMovieListController.swift; sourceTree = "<group>"; };
 		FA55966B20CF871000B5AF9D /* Playground_Codable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground_Codable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FA55967620CFCFF600B5AF9D /* ZDFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDFeedViewModel.swift; sourceTree = "<group>"; };
 		FA55967820CFD00D00B5AF9D /* ZDFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDFeedModel.swift; sourceTree = "<group>"; };
@@ -132,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				DA0177221F4835C500F40F97 /* data.json */,
+				FA15D41D20D26E3000F4AFBC /* ZDAPI.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -202,6 +211,7 @@
 				DA25132E1F349D0B00633093 /* ViewController.swift */,
 				DAA098271F3B373B00303DD4 /* YogaKitViewController.swift */,
 				FA55967A20CFDF4300B5AF9D /* ZDFeedController.swift */,
+				FA15D42320D3607800F4AFBC /* ZDMovieListController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -235,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				FA55967620CFCFF600B5AF9D /* ZDFeedViewModel.swift */,
+				FA15D42120D26EFB00F4AFBC /* ZDMovieViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -243,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				FA55967820CFD00D00B5AF9D /* ZDFeedModel.swift */,
+				FA15D41F20D26EDB00F4AFBC /* ZDMovieModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -539,8 +551,12 @@
 				FA55967720CFCFF600B5AF9D /* ZDFeedViewModel.swift in Sources */,
 				FA55967920CFD00D00B5AF9D /* ZDFeedModel.swift in Sources */,
 				DAA098281F3B373B00303DD4 /* YogaKitViewController.swift in Sources */,
+				FA15D42220D26EFB00F4AFBC /* ZDMovieViewModel.swift in Sources */,
 				FA55967B20CFDF4300B5AF9D /* ZDFeedController.swift in Sources */,
+				FA15D41E20D26E3000F4AFBC /* ZDAPI.swift in Sources */,
+				FA15D42020D26EDB00F4AFBC /* ZDMovieModel.swift in Sources */,
 				DA2BA98B1FD2B5F700F97F03 /* Extension.swift in Sources */,
+				FA15D42420D3607800F4AFBC /* ZDMovieListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

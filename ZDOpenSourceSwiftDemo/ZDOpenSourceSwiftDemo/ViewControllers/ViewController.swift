@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import ObjectiveC.runtime
 
 class ViewController: UIViewController {
+    var dataSource: [AnyClass] = []
     
     let ZDReuseCellIndentifier = "ReuseCell"
     // 每当这个类的新实例被创建时,这个闭包就会被调用,而闭包的返回值就会当做默认值赋值给这个属性
@@ -41,13 +43,9 @@ class ViewController: UIViewController {
         setup()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     private func setup() {
         setupUI()
+        setupData()
     }
     
     private func setupUI() {
@@ -65,8 +63,23 @@ class ViewController: UIViewController {
         view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[tableView]-0-|", options: .directionLeadingToTrailing, metrics: nil, views: viewDict))
     }
     
+    private func setupData() {
+        let aClasses: [UIViewController.Type] = [YogaKitViewController.self, ZDFeedController.self, ZDMovieListController.self]
+        
+        for _ in 0...50 {
+            let num: UInt32 = arc4random_uniform(UInt32(aClasses.count))
+            dataSource.append(aClasses[Int(num)])
+        }
+        tableView.reloadData()
+    }
+    
     @objc func click() {}
     
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -75,7 +88,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -88,15 +101,18 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.textLabel?.text = "第\(indexPath.row + 1)行"
+        cell.textLabel?.text = "\(self.dataSource[indexPath.row])"
+        cell.detailTextLabel?.text = "第\(indexPath.row + 1)行"
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         defer { // 出了当前作用域后执行,相当于RAC中的onExit宏
             tableView.deselectRow(at: indexPath, animated: true)
         }
-        //navigationController?.pushViewController(YogaKitViewController(), animated: true)
-        navigationController?.show(ZDFeedController(), sender: nil)
+
+        let aClass: UIViewController.Type = dataSource[indexPath.row] as! UIViewController.Type
+        print("\(aClass.self)")
+        navigationController?.show(aClass.init(), sender: nil)
     }
 }
 
