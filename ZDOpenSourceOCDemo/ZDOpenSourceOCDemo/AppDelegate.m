@@ -8,10 +8,9 @@
 
 #import "AppDelegate.h"
 #import <GDPerformanceView/GDPerformanceMonitor.h>
-#import <Buglife/Buglife.h>
 #import "ZDTraceHandler.h"
-#if DEBUG
-#import <FLEX/FLEX.h>
+#if __has_include(<Buglife/Buglife.h>)
+#import <Buglife/Buglife.h>
 #endif
 
 @interface AppDelegate ()
@@ -27,18 +26,30 @@
     // 打开摇一摇
     application.applicationSupportsShakeToEdit = YES;
     
-    // 性能监控器
-    GDPerformanceMonitor.sharedInstance.appVersionHidden = YES;
-    [[GDPerformanceMonitor sharedInstance] startMonitoring];
-    
-    // bugMonitor
-    [[Buglife sharedBuglife] startWithEmail:@"fuxianchao2009@163.com"];
+    [self setup];
     
     //[ZDTraceHandler traceAllClass];
 
     return YES;
 }
 
+- (void)setup {
+    [self setupPerformanceMonitor];
+    [self setupBuglife];
+}
+
+- (void)setupPerformanceMonitor {
+    // 性能监控器
+    GDPerformanceMonitor.sharedInstance.appVersionHidden = YES;
+    [[GDPerformanceMonitor sharedInstance] startMonitoring];
+}
+
+- (void)setupBuglife {
+#if __has_include(<Buglife/Buglife.h>)
+    // bugMonitor
+    [[Buglife sharedBuglife] startWithEmail:@"fuxianchao2009@163.com"];
+#endif
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

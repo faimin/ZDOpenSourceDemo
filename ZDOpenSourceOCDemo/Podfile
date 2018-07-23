@@ -9,55 +9,56 @@ def pods_git
 end
 
 def pods_oc
-  # sync
+  ### sync
   pod 'ReactiveObjC'
   pod 'PromiseKit'
   pod 'PromisesObjC'
-  # layout
+  ### layout
   pod 'IGListKit'
   pod 'Texture'
   pod 'YogaKit'
   pod 'Masonry'
-  # router
+  ### router
   pod 'JLRoutes'
-  # network
+  ### network
   pod 'YTKNetwork'
   pod 'YYModel'
-  pod 'ResponseDetective'
-  # animation
+  #pod 'ResponseDetective'
+  pod 'Wormholy', :configurations => ['Debug']
+  ### animation
   pod 'lottie-ios'
-  # tabbarController
+  ### tabbarController
   pod 'RDVTabBarController'
   pod 'RTRootNavigationController'
-  # extension
+  ### extension
   pod 'ObjectiveSugar', :inhibit_warnings => true
   pod 'LinqToObjectiveC'
-  # injection
+  ### injection
   pod 'libextobjc'
   pod 'Objection'
   pod 'Typhoon'
   pod 'ZIKRouter'
-  # color
+  ### color
   pod 'ChameleonFramework'
-  # toast
+  ### toast
   pod 'SVProgressHUD'
   pod 'MBProgressHUD'
   pod 'Toast'
-  # cache
+  ### cache
   pod 'YYCache'
-  # thread
+  ### thread
   pod 'YYDispatchQueuePool'
-  # runtime
+  ### runtime
   pod 'fishhook'
   pod 'RSSwizzle'
-  # tools
+  ### tools
   pod 'GDPerformanceView'
   pod 'DirectoryWatchdog'
-  # playground
+  ### playground
   # pod 'KZPlayground', :inhibit_warnings => true
-  # debug
-  pod 'Buglife'
-  pod 'FLEX', :configurations => 'Debug'
+  ### debug
+  #pod 'Buglife', :configurations => ['Debug']
+  pod 'FLEX', :configurations => ['Debug']
 end
 
 target 'ZDOpenSourceOCDemo' do
@@ -87,7 +88,7 @@ post_install do |installer|
             #config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'NO' #可以让pod中的类调用[UIApplication shareApplication]
             #关闭block内直接引用全局变量的警告
             config.build_settings['CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'] = 'NO'
-            if target.name == 'PromiseKit' || target.name == 'YogaKit' || target.name == 'ResponseDetective'
+            if target.name == 'PromiseKit' || target.name == 'YogaKit' || target.name == 'Wormholy'
                 config.build_settings['SWIFT_VERSION'] = '4.1'
             elsif target.name == 'ReactiveObjC'
                 #关闭`This block declaration is not a prototype,Insert ‘void'`警告

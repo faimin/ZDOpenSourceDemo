@@ -12,7 +12,12 @@
 #import "ZIKRouteRegistry.h"
 #import "ZIKRouteRegistryInternal.h"
 #import "ZIKRouterInternal.h"
+#import "ZIKClassCapabilities.h"
+#if ZIK_HAS_UIKIT
 #import <UIKit/UIKit.h>
+#else
+#import <AppKit/AppKit.h>
+#endif
 #import <objc/runtime.h>
 #import "ZIKRouterRuntime.h"
 #import "ZIKRouter.h"
@@ -41,20 +46,25 @@ static BOOL _registrationFinished = NO;
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        ZIKRouter_replaceMethodWithMethod([UIApplication class], @selector(setDelegate:),
+        ZIKRouter_replaceMethodWithMethod([XXApplication class], @selector(setDelegate:),
                                           self, @selector(ZIKRouteRegistry_hook_setDelegate:));
-        ZIKRouter_replaceMethodWithMethodType([UIStoryboard class], @selector(storyboardWithName:bundle:), true, self, @selector(ZIKRouteRegistry_hook_storyboardWithName:bundle:), true);
+        ZIKRouter_replaceMethodWithMethodType([XXStoryboard class], @selector(storyboardWithName:bundle:), true, self, @selector(ZIKRouteRegistry_hook_storyboardWithName:bundle:), true);
     });
 }
 
-+ (void)ZIKRouteRegistry_hook_setDelegate:(id<UIApplicationDelegate>)delegate {
++ (void)ZIKRouteRegistry_hook_setDelegate:(id)delegate {
     if (ZIKRouteRegistry.autoRegister) {
         [ZIKRouteRegistry registerAll];
     }
     [self ZIKRouteRegistry_hook_setDelegate:delegate];
 }
 
-+ (UIStoryboard *)ZIKRouteRegistry_hook_storyboardWithName:(NSString *)name bundle:(nullable NSBundle *)storyboardBundleOrNil {
+#if ZIK_HAS_UIKIT
++ (UIStoryboard *)ZIKRouteRegistry_hook_storyboardWithName:(NSString *)name bundle:(nullable NSBundle *)storyboardBundleOrNil
+#else
++ (NSStoryboard *)ZIKRouteRegistry_hook_storyboardWithName:(NSString *)name bundle:(nullable NSBundle *)storyboardBundleOrNil
+#endif
+{
     if (ZIKRouteRegistry.autoRegister) {
         [ZIKRouteRegistry registerAll];
     }
@@ -94,33 +104,32 @@ static BOOL _registrationFinished = NO;
 }
 
 + (void)registerAll {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        
-        NSSet *registries = [[self registries] copy];
+    if (self.registrationFinished) {
+        return;
+    }
+    NSSet *registries = [[self registries] copy];
+    for (Class registry in registries) {
+        [registry willEnumerateClasses];
+    }
+    ZIKRouter_enumerateClassList(^(__unsafe_unretained Class class) {
         for (Class registry in registries) {
-            [registry willEnumerateClasses];
+            [registry handleEnumerateClasses:class];
         }
-        ZIKRouter_enumerateClassList(^(__unsafe_unretained Class class) {
-            for (Class registry in registries) {
-                [registry handleEnumerateClasses:class];
-            }
-        });
-        for (Class registry in registries) {
-            [registry didFinishEnumerateClasses];
-        }
-#if ZIKROUTER_CHECK
-        ZIKRouter_enumerateProtocolList(^(Protocol *protocol) {
-            for (Class registry in registries) {
-                [registry handleEnumerateProtocoles:protocol];
-            }
-        });
-#endif
-        for (Class registry in registries) {
-            [registry didFinishRegistration];
-        }
-        self.registrationFinished = YES;
     });
+    for (Class registry in registries) {
+        [registry didFinishEnumerateClasses];
+    }
+#if ZIKROUTER_CHECK
+    ZIKRouter_enumerateProtocolList(^(Protocol *protocol) {
+        for (Class registry in registries) {
+            [registry handleEnumerateProtocoles:protocol];
+        }
+    });
+#endif
+    for (Class registry in registries) {
+        [registry didFinishRegistration];
+    }
+    self.registrationFinished = YES;
 }
 
 #pragma mark Discover
@@ -148,8 +157,6 @@ static BOOL _registrationFinished = NO;
 }
 
 + (nullable ZIKRouterType *)routerToRegisteredDestinationClass:(Class)destinationClass {
-    NSParameterAssert([destinationClass isSubclassOfClass:[UIView class]] ||
-                      [destinationClass isSubclassOfClass:[UIViewController class]]);
     NSParameterAssert([self isDestinationClassRoutable:destinationClass]);
     CFDictionaryRef destinationToDefaultRouterMap = self.destinationToDefaultRouterMap;
     while (destinationClass) {

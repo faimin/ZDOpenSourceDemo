@@ -15,21 +15,21 @@
 NS_ASSUME_NONNULL_BEGIN
 
 ///Get view router in a type safe way. There will be complie error if the view protocol is not ZIKViewRoutable.
-#define ZIKRouterToView(ViewProtocol) (ZIKViewRouterType<id<ViewProtocol>,ZIKViewRouteConfiguration *> *)[ZIKViewRouter<id<ViewProtocol>,ZIKViewRouteConfiguration *> toView](@protocol(ViewProtocol))
+#define ZIKRouterToView(ViewProtocol) [ZIKViewRouter<id<ViewProtocol>,ZIKViewRouteConfiguration *> toView](ZIKRoutable(ViewProtocol))
 
 ///Get view router in a type safe way. There will be complie error if the module protocol is not ZIKViewModuleRoutable.
-#define ZIKRouterToViewModule(ModuleProtocol) (ZIKViewRouterType<id,ZIKViewRouteConfiguration<ModuleProtocol> *> *)[ZIKViewRouter<id,ZIKViewRouteConfiguration<ModuleProtocol> *> toModule](@protocol(ModuleProtocol))
+#define ZIKRouterToViewModule(ModuleProtocol) [ZIKViewRouter<id,ZIKViewRouteConfiguration<ModuleProtocol> *> toModule](ZIKRoutable(ModuleProtocol))
 
 @interface ZIKViewRouter<__covariant Destination: id, __covariant RouteConfig: ZIKViewRouteConfiguration *> (Discover)
 
 /**
  Get the view router class registered with a view protocol. Always use macro `ZIKViewRouterToView`, don't use this method directly.
  
- The parameter viewProtocol of the block is the protocol conformed by the view. Should be a ZIKViewRoutable protocol when ZIKROUTER_CHECK is enabled.
+ The parameter viewProtocol of the block is the protocol conformed by the view. Should be a ZIKViewRoutable protocol.
  
  The return Class of the block is a router class matched with the view. Return nil if protocol is nil or not registered. There will be an assert failure when result is nil.
  @discussion
- This function is for decoupling route behavior with router class. If a view conforms to a protocol for configuring it's dependencies, and the protocol is only used by this view, you can use +registerViewProtocol: to register the protocol, then you don't need to import the router's header when performing route.
+ This function is for decoupling route behavior with router class. If a view conforms to a protocol for configuring its dependencies, and the protocol is only used by this view, you can use +registerViewProtocol: to register the protocol, then you don't need to import the router's header when performing route.
  @code
  //ZIKLoginViewInput
  @protocol ZIKLoginViewInput <ZIKViewRoutable>
@@ -63,12 +63,12 @@ NS_ASSUME_NONNULL_BEGIN
  @endcode
  See +registerViewProtocol: and ZIKViewRoutable for more info.
  */
-@property (nonatomic, class, readonly) ZIKViewRouterType<id<ZIKViewRoutable>, RouteConfig> * _Nullable (^toView)(Protocol *viewProtocol) NS_SWIFT_UNAVAILABLE("Use `Router.to(RoutableView<ViewProtocol>())` in ZRouter instead");
+@property (nonatomic, class, readonly) ZIKViewRouterType<Destination, RouteConfig> * _Nullable (^toView)(Protocol<ZIKViewRoutable> *viewProtocol) NS_SWIFT_UNAVAILABLE("Use `Router.to(RoutableView<ViewProtocol>())` in ZRouter instead");
 
 /**
  Get the view router class combined with a custom ZIKViewRouteConfiguration conforming to a module config protocol. Always use macro `ZIKViewRouterToModule`, don't use this method directly.
  
- The parameter configProtocol of the block is: The protocol conformed by defaultConfiguration of router. Should be a ZIKViewModuleRoutable protocol when ZIKROUTER_CHECK is enabled.
+ The parameter configProtocol of the block is: The protocol conformed by defaultConfiguration of router. Should be a ZIKViewModuleRoutable protocol.
  
  The return Class of the block is a router class matched with the view. Return nil if protocol is nil or not registered. There will be an assert failure when result is nil.
  @discussion
@@ -120,7 +120,7 @@ NS_ASSUME_NONNULL_BEGIN
  @endcode
  See +registerModuleProtocol: and ZIKViewModuleRoutable for more info.
  */
-@property (nonatomic, class, readonly) ZIKViewRouterType<id, RouteConfig> * _Nullable (^toModule)(Protocol *configProtocol) NS_SWIFT_UNAVAILABLE("Use `Router.to(RoutableViewModule<ModuleProtocol>())` in ZRouter instead");
+@property (nonatomic, class, readonly) ZIKViewRouterType<Destination, RouteConfig> * _Nullable (^toModule)(Protocol<ZIKViewModuleRoutable> *configProtocol) NS_SWIFT_UNAVAILABLE("Use `Router.to(RoutableViewModule<ModuleProtocol>())` in ZRouter instead");
 
 ///Find view router registered with the unique identifier.
 @property (nonatomic, class, readonly) ZIKAnyViewRouterType * _Nullable (^toIdentifier)(NSString *identifier);

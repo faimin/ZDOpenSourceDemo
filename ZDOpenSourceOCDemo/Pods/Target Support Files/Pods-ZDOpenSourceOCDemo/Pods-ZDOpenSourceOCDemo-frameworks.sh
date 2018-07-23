@@ -144,7 +144,6 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Buglife/Buglife.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DirectoryWatchdog/DirectoryWatchdog.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework"
@@ -165,11 +164,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/RSSwizzle/RSSwizzle.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RTRootNavigationController/RTRootNavigationController.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ResponseDetective/ResponseDetective.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Toast/Toast.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Typhoon/Typhoon.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Wormholy/Wormholy.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYDispatchQueuePool/YYDispatchQueuePool.framework"
@@ -185,7 +184,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/Buglife/Buglife.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DirectoryWatchdog/DirectoryWatchdog.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GDPerformanceView/GDPerformanceView.framework"
@@ -205,7 +203,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/RSSwizzle/RSSwizzle.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RTRootNavigationController/RTRootNavigationController.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/ResponseDetective/ResponseDetective.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Toast/Toast.framework"

@@ -8,11 +8,13 @@
 
 #import "UIWindow+ZDMotionShake.h"
 #import <RSSwizzle/RSSwizzle.h>
+#if __has_include(<FLEX/FLEX.h>)
 #import <FLEX/FLEX.h>
+#endif
 
 @implementation UIWindow (ZDMotionShake)
 
-#if DEBUG
+#if (DEBUG && 1)
 
 + (void)load {
     static dispatch_once_t onceToken;
@@ -42,7 +44,9 @@
 
 - (void)zd_motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if (motion == UIEventSubtypeMotionShake) {
+#if __has_include(<FLEX/FLEX.h>)
         [[FLEXManager sharedManager] showExplorer];
+#endif
     }
 }
 

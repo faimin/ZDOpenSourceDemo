@@ -14,7 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - Buglife (2.8.0)
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
@@ -96,7 +95,6 @@ PODS:
   - PromisesObjC (1.2.3)
   - RDVTabBarController (1.1.9)
   - ReactiveObjC (3.1.0)
-  - ResponseDetective (1.2.4)
   - RSSwizzle (0.1.0)
   - RTRootNavigationController (0.6.7):
     - RTRootNavigationController/Core (= 0.6.7)
@@ -118,6 +116,7 @@ PODS:
   - Typhoon/IntrospectionUtils (4.0.5)
   - Typhoon/no-arc (4.0.5):
     - Typhoon/IntrospectionUtils
+  - Wormholy (1.0.2)
   - Yoga (1.9.0)
   - YogaKit (1.9.0):
     - Yoga (~> 1.9)
@@ -158,10 +157,9 @@ PODS:
   - ZDToolKit/ZDTools/ProtocolKit (0.0.4)
   - ZDToolKit/ZDTools/ZDPromise (0.0.4)
   - ZDToolKit/ZDTools/ZDProxy (0.0.4)
-  - ZIKRouter (1.0.1)
+  - ZIKRouter (1.0.2)
 
 DEPENDENCIES:
-  - Buglife
   - ChameleonFramework
   - DirectoryWatchdog
   - fishhook
@@ -180,13 +178,13 @@ DEPENDENCIES:
   - PromisesObjC
   - RDVTabBarController
   - ReactiveObjC
-  - ResponseDetective
   - RSSwizzle
   - RTRootNavigationController
   - SVProgressHUD
   - Texture
   - Toast
   - Typhoon
+  - Wormholy
   - YogaKit
   - YTKNetwork
   - YYCache
@@ -199,7 +197,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
-    - Buglife
     - ChameleonFramework
     - DirectoryWatchdog
     - fishhook
@@ -221,13 +218,13 @@ SPEC REPOS:
     - PromisesObjC
     - RDVTabBarController
     - ReactiveObjC
-    - ResponseDetective
     - RSSwizzle
     - RTRootNavigationController
     - SVProgressHUD
     - Texture
     - Toast
     - Typhoon
+    - Wormholy
     - Yoga
     - YogaKit
     - YTKNetwork
@@ -248,12 +245,11 @@ CHECKOUT OPTIONS:
     :commit: 2227d3e89ae94078d739987d802a6aceb08659ee
     :git: https://github.com/faimin/ZDNetWorkHelper
   ZDToolKit:
-    :commit: 5ec1535ad09c3b1b1e23a3e6eec2bc47a7300757
+    :commit: 49476654ef0abb263142e39823b31a77c5e00736
     :git: https://github.com/faimin/ZDToolKit
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  Buglife: fed8594db4b440bc85d44629b90f2575713e8825
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   DirectoryWatchdog: 85f0a92a52bc0d3d66346d80629227b44500506a
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
@@ -275,13 +271,13 @@ SPEC CHECKSUMS:
   PromisesObjC: a3a4263d8a9260214267e0b3788d0f83466ad449
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
-  ResponseDetective: 710b1b41903382460592a75a480440661bcadfa6
   RSSwizzle: d561958f595028bfcef98c7d55c318b3878a61c6
   RTRootNavigationController: d6aa6cbb78a3eaecea4f6e4df63f15dd887836b8
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Typhoon: 58ae5754d3d0aa819119d8c107aed0dd67f1eb3b
+  Wormholy: 96e5195a2775e879462015c57e44b63bdb0a610f
   Yoga: aaae8abea68951f60bee05f6277d3eed90bb91bb
   YogaKit: d447a9bb808718e6f58e52a2255a8050081a3ead
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
@@ -290,8 +286,8 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZDNetWorkHelper: 969b637a7fc84ff15364011a905821cf8f6d64b9
   ZDToolKit: 97a45f0378232f2950bd710e29075b0dce1f8b43
-  ZIKRouter: bad6122d96ce55fcf2e6fcc6b11da173dacfffba
+  ZIKRouter: aba55737af8778e02fe81da310148e534274208d
 
-PODFILE CHECKSUM: dbf9514060c56a0757b0f00c997185e883dfa337
+PODFILE CHECKSUM: 23d539c9d0eb1ec7ab189c477d483fa35db2c2dc
 
 COCOAPODS: 1.5.3

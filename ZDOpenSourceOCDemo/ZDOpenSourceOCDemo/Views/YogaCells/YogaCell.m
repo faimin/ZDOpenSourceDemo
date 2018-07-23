@@ -101,7 +101,7 @@
     [self.nickNameLabel.superview.yoga markDirty];
     
     // 计算layout
-    [self.contentView.yoga applyLayoutPreservingOrigin:NO dimensionFlexibility:YGDimensionFlexibilityFlexibleHeigth];
+    [self.contentView.yoga applyLayoutPreservingOrigin:NO dimensionFlexibility:YGDimensionFlexibilityFlexibleHeight];
 }
 
 #pragma mark - Property
