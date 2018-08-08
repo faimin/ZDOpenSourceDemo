@@ -12,6 +12,10 @@
 #if __has_include(<Buglife/Buglife.h>)
 #import <Buglife/Buglife.h>
 #endif
+//#if __has_include(<SonarKit/SonarKit-umbrella.h>)
+#import <SonarKitLayoutPlugin/SonarKitLayoutPlugin.h>
+#import <SonarKitLayoutPlugin/SKDescriptorMapper.h>
+//#endif
 
 @interface AppDelegate ()
 
@@ -36,6 +40,19 @@
 - (void)setup {
     [self setupPerformanceMonitor];
     [self setupBuglife];
+    [self sonar];
+}
+
+- (void)sonar {
+#if DEBUG
+//#if __has_include(<SonarKit/SonarKit-umbrella.h>)
+    SonarClient *client = [SonarClient sharedClient];
+    SKDescriptorMapper *mapper = [[SKDescriptorMapper alloc] initWithDefaults];
+    [client addPlugin:[[SonarKitLayoutPlugin alloc] initWithRootNode:context.application withDescriptorMapper:mapper]]
+    [client addPlugin: [SonarKitNetworkPlugin new]]
+    [client start];
+//#endif
+#endif
 }
 
 - (void)setupPerformanceMonitor {

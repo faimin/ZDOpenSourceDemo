@@ -68,6 +68,13 @@ PODS:
   - MBProgressHUD (1.1.0)
   - Objection (1.6.1)
   - ObjectiveSugar (1.1.0)
+  - OMGHTTPURLRQ (3.2.4):
+    - OMGHTTPURLRQ/RQ (= 3.2.4)
+  - OMGHTTPURLRQ/FormURLEncode (3.2.4)
+  - OMGHTTPURLRQ/RQ (3.2.4):
+    - OMGHTTPURLRQ/FormURLEncode
+    - OMGHTTPURLRQ/UserAgent
+  - OMGHTTPURLRQ/UserAgent (3.2.4)
   - PINCache (3.0.1-beta.6):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
     - PINCache/Core (= 3.0.1-beta.6)
@@ -83,15 +90,40 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0-beta.13):
     - PINCache (= 3.0.1-beta.6)
     - PINRemoteImage/Core
-  - PromiseKit (6.3.4):
-    - PromiseKit/CorePromise (= 6.3.4)
-    - PromiseKit/Foundation (= 6.3.4)
-    - PromiseKit/UIKit (= 6.3.4)
-  - PromiseKit/CorePromise (6.3.4)
-  - PromiseKit/Foundation (6.3.4):
-    - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.3.4):
-    - PromiseKit/CorePromise
+  - PromiseKit (1.7.7):
+    - PromiseKit/CALayer (= 1.7.7)
+    - PromiseKit/NSNotificationCenter (= 1.7.7)
+    - PromiseKit/NSURLConnection (= 1.7.7)
+    - PromiseKit/Pause (= 1.7.7)
+    - PromiseKit/UIActionSheet (= 1.7.7)
+    - PromiseKit/UIAlertView (= 1.7.7)
+    - PromiseKit/UIView (= 1.7.7)
+    - PromiseKit/UIViewController (= 1.7.7)
+    - PromiseKit/Until (= 1.7.7)
+    - PromiseKit/When (= 1.7.7)
+  - PromiseKit/CALayer (1.7.7):
+    - PromiseKit/Promise
+  - PromiseKit/NSNotificationCenter (1.7.7):
+    - PromiseKit/Promise
+  - PromiseKit/NSURLConnection (1.7.7):
+    - OMGHTTPURLRQ (~> 3.2)
+    - PromiseKit/Promise
+  - PromiseKit/Pause (1.7.7):
+    - PromiseKit/Promise
+  - PromiseKit/Promise (1.7.7)
+  - PromiseKit/UIActionSheet (1.7.7):
+    - PromiseKit/Promise
+  - PromiseKit/UIAlertView (1.7.7):
+    - PromiseKit/Promise
+  - PromiseKit/UIView (1.7.7):
+    - PromiseKit/Promise
+  - PromiseKit/UIViewController (1.7.7):
+    - PromiseKit/Promise
+  - PromiseKit/Until (1.7.7):
+    - PromiseKit/Promise
+    - PromiseKit/When
+  - PromiseKit/When (1.7.7):
+    - PromiseKit/Promise
   - PromisesObjC (1.2.3)
   - RDVTabBarController (1.1.9)
   - ReactiveObjC (3.1.0)
@@ -116,7 +148,6 @@ PODS:
   - Typhoon/IntrospectionUtils (4.0.5)
   - Typhoon/no-arc (4.0.5):
     - Typhoon/IntrospectionUtils
-  - Wormholy (1.0.2)
   - Yoga (1.9.0)
   - YogaKit (1.9.0):
     - Yoga (~> 1.9)
@@ -174,7 +205,7 @@ DEPENDENCIES:
   - MBProgressHUD
   - Objection
   - ObjectiveSugar
-  - PromiseKit
+  - PromiseKit (~> 1.7)
   - PromisesObjC
   - RDVTabBarController
   - ReactiveObjC
@@ -184,7 +215,6 @@ DEPENDENCIES:
   - Texture
   - Toast
   - Typhoon
-  - Wormholy
   - YogaKit
   - YTKNetwork
   - YYCache
@@ -211,6 +241,7 @@ SPEC REPOS:
     - MBProgressHUD
     - Objection
     - ObjectiveSugar
+    - OMGHTTPURLRQ
     - PINCache
     - PINOperation
     - PINRemoteImage
@@ -224,7 +255,6 @@ SPEC REPOS:
     - Texture
     - Toast
     - Typhoon
-    - Wormholy
     - Yoga
     - YogaKit
     - YTKNetwork
@@ -245,7 +275,7 @@ CHECKOUT OPTIONS:
     :commit: 2227d3e89ae94078d739987d802a6aceb08659ee
     :git: https://github.com/faimin/ZDNetWorkHelper
   ZDToolKit:
-    :commit: 49476654ef0abb263142e39823b31a77c5e00736
+    :commit: 9e19adab7290e9480b77d1d8e7321f1595265cbd
     :git: https://github.com/faimin/ZDToolKit
 
 SPEC CHECKSUMS:
@@ -264,10 +294,11 @@ SPEC CHECKSUMS:
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
   ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
+  OMGHTTPURLRQ: 9ac96bdf5c90a33f75836630729ea1adc312a9ed
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
-  PromiseKit: e1425568123ec844a944c93f2bcb29d511d39cf5
+  PromiseKit: 9007df2f9e2ef725467084ab3880cf932ab935a4
   PromisesObjC: a3a4263d8a9260214267e0b3788d0f83466ad449
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
@@ -277,7 +308,6 @@ SPEC CHECKSUMS:
   Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Typhoon: 58ae5754d3d0aa819119d8c107aed0dd67f1eb3b
-  Wormholy: 96e5195a2775e879462015c57e44b63bdb0a610f
   Yoga: aaae8abea68951f60bee05f6277d3eed90bb91bb
   YogaKit: d447a9bb808718e6f58e52a2255a8050081a3ead
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
@@ -288,6 +318,6 @@ SPEC CHECKSUMS:
   ZDToolKit: 97a45f0378232f2950bd710e29075b0dce1f8b43
   ZIKRouter: aba55737af8778e02fe81da310148e534274208d
 
-PODFILE CHECKSUM: 23d539c9d0eb1ec7ab189c477d483fa35db2c2dc
+PODFILE CHECKSUM: 64569e9c6e95d16ca68ff9e22d864510254ce151
 
 COCOAPODS: 1.5.3

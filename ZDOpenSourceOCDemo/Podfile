@@ -1,69 +1,128 @@
 # Uncomment the next line to define a global platform for your project
+source 'https://github.com/facebook/Sonar.git'
+source 'https://github.com/CocoaPods/Specs'
+
 platform :ios, '9.0'
 inhibit_all_warnings!
 
 def pods_git
-    # pod 'ZDTableViewBinding', :git => 'https://github.com/faimin/ZDTableViewBinding'
-    pod 'ZDNetWorkHelper', :git => 'https://github.com/faimin/ZDNetWorkHelper'
-    pod 'ZDToolKit', :git => 'https://github.com/faimin/ZDToolKit', :branch => 'develop'
+  # pod 'ZDTableViewBinding', :git => 'https://github.com/faimin/ZDTableViewBinding'
+  pod 'ZDNetWorkHelper', :git => 'https://github.com/faimin/ZDNetWorkHelper'
+  pod 'ZDToolKit', :git => 'https://github.com/faimin/ZDToolKit', :branch => 'develop'
 end
 
-def pods_oc
-  ### sync
-  pod 'ReactiveObjC'
-  pod 'PromiseKit'
-  pod 'PromisesObjC'
-  ### layout
-  pod 'IGListKit'
-  pod 'Texture'
-  pod 'YogaKit'
-  pod 'Masonry'
-  ### router
-  pod 'JLRoutes'
-  ### network
-  pod 'YTKNetwork'
-  pod 'YYModel'
-  #pod 'ResponseDetective'
-  pod 'Wormholy', :configurations => ['Debug']
-  ### animation
-  pod 'lottie-ios'
-  ### tabbarController
-  pod 'RDVTabBarController'
+def pods_reactive
+	pod 'ReactiveObjC'
+end
+
+def pods_promise
+	pod 'PromiseKit', '~> 1.7'
+	pod 'PromisesObjC'
+end
+
+def pods_layout
+	pod 'Texture'
+	pod 'IGListKit'
+	pod 'YogaKit'
+	pod 'Masonry'
+end
+
+def pods_router
+	pod 'ZIKRouter'
+	pod 'JLRoutes'
+end
+
+def pods_network
+	pod 'YTKNetwork'
+	pod 'YYModel'
+	#pod 'ResponseDetective'
+	#pod 'Wormholy', :configurations => ['Debug'] #通过hook URLSession实现
+end
+
+def pods_animation
+	pod 'lottie-ios'
+end
+
+def pods_tabBarController
+	pod 'RDVTabBarController'
   pod 'RTRootNavigationController'
-  ### extension
-  pod 'ObjectiveSugar', :inhibit_warnings => true
+end
+
+def pods_extension
+	pod 'ObjectiveSugar', :inhibit_warnings => true
   pod 'LinqToObjectiveC'
-  ### injection
-  pod 'libextobjc'
-  pod 'Objection'
-  pod 'Typhoon'
-  pod 'ZIKRouter'
-  ### color
-  pod 'ChameleonFramework'
-  ### toast
-  pod 'SVProgressHUD'
+end
+
+def pods_color
+	pod 'ChameleonFramework'
+end
+
+def pods_toast
+	pod 'SVProgressHUD'
   pod 'MBProgressHUD'
   pod 'Toast'
-  ### cache
-  pod 'YYCache'
-  ### thread
-  pod 'YYDispatchQueuePool'
-  ### runtime
-  pod 'fishhook'
+end
+
+def pods_cache
+	pod 'YYCache'
+end
+
+def pods_thread
+	pod 'YYDispatchQueuePool'
+end
+
+def pods_injection
+	pod 'libextobjc'
+  pod 'Objection'
+  pod 'Typhoon'
+end
+
+def pods_swizzle
+	pod 'fishhook'
   pod 'RSSwizzle'
-  ### tools
-  pod 'GDPerformanceView'
-  pod 'DirectoryWatchdog'
-  ### playground
-  # pod 'KZPlayground', :inhibit_warnings => true
-  ### debug
-  #pod 'Buglife', :configurations => ['Debug']
-  pod 'FLEX', :configurations => ['Debug']
+end
+
+def pods_tools
+	pod 'DirectoryWatchdog'
+end
+
+def pods_debug
+	# pod 'KZPlayground', :inhibit_warnings => true
+	# pod 'Buglife', :configurations => ['Debug']
+  pod 'GDPerformanceView', :configurations => ['Debug']
+	pod 'FLEX', :configurations => ['Debug']
+  
+  # pod 'SonarKit', :configurations => ['Debug']
+  # pod 'SonarKit/SonarKitLayoutComponentKitSupport', :configurations => ['Debug']
+  # pod 'SonarKit/SKIOSNetworkPlugin', :configurations => ['Debug']
+  # pod 'SonarKit/SonarKitLayoutPlugin', :configurations => ['Debug']
+  # pod 'SonarKit/SonarKitNetworkPlugin', :configurations => ['Debug']
+end
+
+# ----------------------------
+
+def pods_oc
+	pods_reactive
+	pods_promise
+	pods_layout
+	pods_tabBarController
+	pods_router
+	pods_network
+	pods_animation
+	pods_extension
+	pods_color
+	pods_cache
+	pods_toast
+	pods_thread
+	pods_injection
+	pods_swizzle
+	pods_tools
+	pods_debug
 end
 
 target 'ZDOpenSourceOCDemo' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  use_frameworks!
+  # use_frameworks!
 
   # Pods for ZDOpenSourceOCDemo
   pods_oc
