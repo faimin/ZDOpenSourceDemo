@@ -6,9 +6,9 @@ platform :ios, '9.0'
 inhibit_all_warnings!
 
 def pods_git
-  # pod 'ZDTableViewBinding', :git => 'https://github.com/faimin/ZDTableViewBinding'
-  pod 'ZDNetWorkHelper', :git => 'https://github.com/faimin/ZDNetWorkHelper'
-  pod 'ZDToolKit', :git => 'https://github.com/faimin/ZDToolKit', :branch => 'develop'
+  	# pod 'ZDTableViewBinding', :git => 'https://github.com/faimin/ZDTableViewBinding'
+  	pod 'ZDNetWorkHelper', :git => 'https://github.com/faimin/ZDNetWorkHelper'
+  	pod 'ZDToolKit', :git => 'https://github.com/faimin/ZDToolKit', :branch => 'develop'
 end
 
 def pods_reactive
@@ -45,12 +45,12 @@ end
 
 def pods_tabBarController
 	pod 'RDVTabBarController'
-  pod 'RTRootNavigationController'
+    pod 'RTRootNavigationController'
 end
 
 def pods_extension
 	pod 'ObjectiveSugar', :inhibit_warnings => true
-  pod 'LinqToObjectiveC'
+    pod 'LinqToObjectiveC'
 end
 
 def pods_color
@@ -59,8 +59,8 @@ end
 
 def pods_toast
 	pod 'SVProgressHUD'
-  pod 'MBProgressHUD'
-  pod 'Toast'
+    pod 'MBProgressHUD'
+    pod 'Toast'
 end
 
 def pods_cache
@@ -73,13 +73,13 @@ end
 
 def pods_injection
 	pod 'libextobjc'
-  pod 'Objection'
-  pod 'Typhoon'
+    pod 'Objection'
+    pod 'Typhoon'
 end
 
 def pods_swizzle
 	pod 'fishhook'
-  pod 'RSSwizzle'
+    pod 'RSSwizzle'
 end
 
 def pods_tools
@@ -89,14 +89,14 @@ end
 def pods_debug
 	# pod 'KZPlayground', :inhibit_warnings => true
 	# pod 'Buglife', :configurations => ['Debug']
-  pod 'GDPerformanceView', :configurations => ['Debug']
+    pod 'GDPerformanceView', :configurations => ['Debug']
 	pod 'FLEX', :configurations => ['Debug']
   
-  # pod 'SonarKit', :configurations => ['Debug']
-  # pod 'SonarKit/SonarKitLayoutComponentKitSupport', :configurations => ['Debug']
-  # pod 'SonarKit/SKIOSNetworkPlugin', :configurations => ['Debug']
-  # pod 'SonarKit/SonarKitLayoutPlugin', :configurations => ['Debug']
-  # pod 'SonarKit/SonarKitNetworkPlugin', :configurations => ['Debug']
+  	# pod 'SonarKit', :configurations => ['Debug']
+	# pod 'SonarKit/SonarKitLayoutComponentKitSupport', :configurations => ['Debug']
+	# pod 'SonarKit/SKIOSNetworkPlugin', :configurations => ['Debug']
+	# pod 'SonarKit/SonarKitLayoutPlugin', :configurations => ['Debug']
+	# pod 'SonarKit/SonarKitNetworkPlugin', :configurations => ['Debug']
 end
 
 # ----------------------------
