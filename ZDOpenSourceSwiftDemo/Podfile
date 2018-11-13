@@ -42,7 +42,7 @@ def pods_swift
   # tools
   pod 'DeepDiff' # 对比集合内元素是否变化
   pod 'GDPerformanceView-Swift'
-  pod 'LifetimeTracker', :git => 'https://github.com/krzysztofzablocki/LifetimeTracker' # 监听内存泄露
+  pod 'LifetimeTracker' # 监听内存泄露
   pod 'Watchdog'
   # debug
   pod 'Buglife'

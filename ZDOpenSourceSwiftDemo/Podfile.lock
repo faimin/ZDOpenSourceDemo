@@ -89,7 +89,7 @@ DEPENDENCIES:
   - IGListKit
   - Kingfisher
   - LayoutKit
-  - LifetimeTracker (from `https://github.com/krzysztofzablocki/LifetimeTracker`)
+  - LifetimeTracker
   - lottie-ios
   - MBProgressHUD
   - Neon
@@ -124,6 +124,7 @@ SPEC REPOS:
     - IGListKit
     - Kingfisher
     - LayoutKit
+    - LifetimeTracker
     - lottie-ios
     - MBProgressHUD
     - Neon
@@ -147,15 +148,6 @@ SPEC REPOS:
     - Watchdog
     - Yoga
     - YogaKit
-
-EXTERNAL SOURCES:
-  LifetimeTracker:
-    :git: https://github.com/krzysztofzablocki/LifetimeTracker
-
-CHECKOUT OPTIONS:
-  LifetimeTracker:
-    :commit: 8f4febfcdb68f008c87c2e901522e44429d68f4e
-    :git: https://github.com/krzysztofzablocki/LifetimeTracker
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -196,6 +188,6 @@ SPEC CHECKSUMS:
   Yoga: aaae8abea68951f60bee05f6277d3eed90bb91bb
   YogaKit: d447a9bb808718e6f58e52a2255a8050081a3ead
 
-PODFILE CHECKSUM: 64c2adc66fb2785361047481950e3c3c1a0689b4
+PODFILE CHECKSUM: 9994cea968a27fa70d69854f864a1cffa5007d88
 
 COCOAPODS: 1.5.3
