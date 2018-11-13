@@ -17,7 +17,7 @@ extension UIWindow {
         let selector = #selector(motionBegan(_:with:))
         
         RSSwizzle.swizzleInstanceMethod(selector, in: UIWindow.self, newImpFactory: { (swizzleInfo: RSSwizzleInfo?) -> Any? in
-            let clouse = { (target: UIWindow, motion: UIEventSubtype, event: UIEvent) -> Void in
+            let clouse = { (target: UIWindow, motion: UIEvent.EventSubtype, event: UIEvent) -> Void in
                 print("swizzle motionBegin")
                 
                 target.zd_motionBegin(motion, event: event)
@@ -27,19 +27,19 @@ extension UIWindow {
                  https://stackoverflow.com/questions/24586293/cast-closures-blocks
                  http://www.jianshu.com/p/f4dd6397ae86
                  */
-                typealias Imp = @convention(c) (UIWindow, Selector, UIEventSubtype, UIEvent) -> Void
+                typealias Imp = @convention(c) (UIWindow, Selector, UIEvent.EventSubtype, UIEvent) -> Void
                 let orginIMPBlock = unsafeBitCast(originIMP, to: Imp.self)
                 orginIMPBlock(target, selector, motion, event)
             };
             
-            typealias oc_block = @convention(block) (UIWindow, UIEventSubtype, UIEvent) -> ()
+            typealias oc_block = @convention(block) (UIWindow, UIEvent.EventSubtype, UIEvent) -> ()
             let result_block = unsafeBitCast(clouse, to: oc_block.self)
             return result_block
             
         }, mode: .oncePerClassAndSuperclasses, key: &closureKey)
     }
     
-    private func zd_motionBegin(_ motion: UIEventSubtype, event: UIEvent) {
+    private func zd_motionBegin(_ motion: UIEvent.EventSubtype, event: UIEvent) {
         FLEXManager.shared().showExplorer()
     }
 }

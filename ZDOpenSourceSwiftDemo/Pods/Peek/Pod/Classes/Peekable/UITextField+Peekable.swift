@@ -45,12 +45,10 @@ extension UITextField {
             "placeholder",
             "attributedPlaceholder",
         ], forModel: self, in: .typography)
-        
+
         (coordinator as? SwiftCoordinator)?
-            .appendEnum(keyPath: "indicatorStyle", into: UIScrollViewIndicatorStyle.self, forModel: self, group: .appearance)
-            .appendEnum(keyPath: "indicatorStyle", into: UIScrollViewIndicatorStyle.self, forModel: self, group: .appearance)
-            .appendEnum(keyPath: "borderStyle", into: UITextBorderStyle.self, forModel: self, group: .appearance)
-            .appendEnum(keyPath: "clearButtonMode", "leftViewMode", "rightViewMode", into: UITextFieldViewMode.self, forModel: self, group: .appearance)
+            .appendEnum(keyPath: "borderStyle", into: UITextField.BorderStyle.self, forModel: self, group: .appearance)
+            .appendEnum(keyPath: "clearButtonMode", "leftViewMode", "rightViewMode", into: UITextField.ViewMode.self, forModel: self, group: .appearance)
             .appendEnum(keyPath: "textAlignment", into: NSTextAlignment.self, forModel: self, group: .typography)
         
         coordinator.appendDynamic(keyPaths: [

@@ -111,7 +111,7 @@ internal final class PeekInspectorViewController: PeekSectionedViewController, U
             registerForPreviewing(with: self, sourceView: searchController.view)
         }
         
-        observer = NotificationCenter.default.addObserver(forName: .UIContentSizeCategoryDidChange, object: nil, queue: .main) { [weak self] _ in
+        observer = NotificationCenter.default.addObserver(forName: UIContentSizeCategory.didChangeNotification, object: nil, queue: .main) { [weak self] _ in
             // we have to add a delay to allow the app to finish updating its layout.
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self?.tableView.reloadData()
@@ -270,7 +270,7 @@ internal final class PeekInspectorViewController: PeekSectionedViewController, U
     
     private var isSearching: Bool {
         return searchController.isActive
-            && searchController.searchBar.text?.isEmpty == false
+            && !searchController.searchBar.text.isNilOrEmpty
     }
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -646,13 +646,12 @@ extension PeekInspectorViewController {
     }
     
     func tableView(_ tableView: UITableView, shouldShowMenuForRowAt indexPath: IndexPath) -> Bool {
-        guard let cell = tableView.cellForRow(at: indexPath), let text = cell.detailTextLabel?.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return false }
-        return !text.isEmpty
+        let text = tableView.cellForRow(at: indexPath)?.detailTextLabel?.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        return text.isNilOrEmpty
     }
     
     func tableView(_ tableView: UITableView, performAction action: Selector, forRowAt indexPath: IndexPath, withSender sender: Any?) {
-        guard let cell = tableView.cellForRow(at: indexPath), let text = cell.detailTextLabel?.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return }
-        UIPasteboard.general.string = text
+        UIPasteboard.general.string = tableView.cellForRow(at: indexPath)?.detailTextLabel?.text?.trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
 }

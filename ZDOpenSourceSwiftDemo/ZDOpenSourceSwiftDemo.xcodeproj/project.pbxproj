@@ -336,13 +336,13 @@
 					};
 					DA25130F1F349CB000633093 = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DA2512FB1F349CAF00633093;
 					};
 					DA25131A1F349CB000633093 = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0940;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = DA2512FB1F349CAF00633093;
 					};
@@ -466,6 +466,7 @@
 				"${BUILT_PRODUCTS_DIR}/PromisesSwift/Promises.framework",
 				"${BUILT_PRODUCTS_DIR}/RSSwizzle/RSSwizzle.framework",
 				"${BUILT_PRODUCTS_DIR}/ResponseDetective/ResponseDetective.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -505,6 +506,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Promises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSSwizzle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ResponseDetective.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -735,7 +737,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZDOpenSourceSwiftDemo/ZDOpenSourceSwiftDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -752,7 +754,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zero.ZDOpenSourceSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZDOpenSourceSwiftDemo/ZDOpenSourceSwiftDemo-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
@@ -768,7 +770,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zero.ZDOpenSourceSwiftDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZDOpenSourceSwiftDemo.app/ZDOpenSourceSwiftDemo";
 			};
 			name = Debug;
@@ -784,7 +786,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zero.ZDOpenSourceSwiftDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZDOpenSourceSwiftDemo.app/ZDOpenSourceSwiftDemo";
 			};
 			name = Release;
@@ -799,7 +801,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zero.ZDOpenSourceSwiftDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = ZDOpenSourceSwiftDemo;
 			};
 			name = Debug;
@@ -814,7 +816,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = zero.ZDOpenSourceSwiftDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_TARGET_NAME = ZDOpenSourceSwiftDemo;
 			};
 			name = Release;

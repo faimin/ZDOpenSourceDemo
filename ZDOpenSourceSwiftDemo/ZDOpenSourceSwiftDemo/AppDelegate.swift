@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         //watchDog = Watchdog(threshold: 0.4, strictMode: true)
         
@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             
         }

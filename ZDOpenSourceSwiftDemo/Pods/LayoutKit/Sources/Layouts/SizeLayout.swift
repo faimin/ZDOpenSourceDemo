@@ -47,11 +47,11 @@ import CoreGraphics
  */
 open class SizeLayout<V: View>: BaseLayout<V>, ConfigurableLayout {
 
-    open let minWidth: CGFloat?
-    open let maxWidth: CGFloat?
-    open let minHeight: CGFloat?
-    open let maxHeight: CGFloat?
-    open let sublayout: Layout?
+    public let minWidth: CGFloat?
+    public let maxWidth: CGFloat?
+    public let minHeight: CGFloat?
+    public let maxHeight: CGFloat?
+    public let sublayout: Layout?
 
     // MARK: - Designated initializers
 
@@ -215,7 +215,7 @@ open class SizeLayout<V: View>: BaseLayout<V>, ConfigurableLayout {
 
     // MARK: - Initialization helpers
 
-    private static func defaultAlignment(maxWidth: CGFloat?, maxHeight: CGFloat?) -> Alignment {
+    static func defaultAlignment(maxWidth: CGFloat?, maxHeight: CGFloat?) -> Alignment {
         return Alignment(vertical: maxHeight == nil ? .fill : .center,
                          horizontal: maxWidth == nil ? .fill : .center)
     }
@@ -264,7 +264,7 @@ open class SizeLayout<V: View>: BaseLayout<V>, ConfigurableLayout {
         // Make sure that our size is in the desired range.
         let size = sublayoutSize.increasedToSize(CGSize(width: minWidth ?? 0, height: minHeight ?? 0)).decreasedToSize(availableSize)
 
-        let sublayouts = [sublayoutMeasurement].flatMap { $0 }
+        let sublayouts = [sublayoutMeasurement].compactMap { $0 }
         return LayoutMeasurement(layout: self, size: size, maxSize: maxSize, sublayouts: sublayouts)
     }
 

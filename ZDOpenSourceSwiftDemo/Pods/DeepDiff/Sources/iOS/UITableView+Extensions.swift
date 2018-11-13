@@ -1,3 +1,11 @@
+//
+//  UITableView+Extensions.swift
+//  DeepDiff
+//
+//  Created by Khoa Pham.
+//  Copyright © 2018 Khoa Pham. All rights reserved.
+//
+
 import UIKit
 
 public extension UITableView {
@@ -14,10 +22,10 @@ public extension UITableView {
   public func reload<T: Hashable>(
     changes: [Change<T>],
     section: Int = 0,
-    insertionAnimation: UITableViewRowAnimation = .automatic,
-    deletionAnimation: UITableViewRowAnimation = .automatic,
-    replacementAnimation: UITableViewRowAnimation = .automatic,
-    completion: @escaping (Bool) -> Void) {
+    insertionAnimation: UITableView.RowAnimation = .automatic,
+    deletionAnimation: UITableView.RowAnimation = .automatic,
+    replacementAnimation: UITableView.RowAnimation = .automatic,
+    completion: ((Bool) -> Void)? = nil) {
     
     let changesWithIndexPath = IndexPathConverter().convert(changes: changes, section: section)
     
@@ -28,7 +36,9 @@ public extension UITableView {
         internalBatchUpdates(changesWithIndexPath: changesWithIndexPath,
                              insertionAnimation: insertionAnimation,
                              deletionAnimation: deletionAnimation)
-      }, completion: completion)
+      }, completion: { finished in
+        completion?(finished)
+      })
       
       changesWithIndexPath.replaces.executeIfPresent {
         self.reloadRows(at: $0, with: replacementAnimation)
@@ -44,15 +54,15 @@ public extension UITableView {
         reloadRows(at: $0, with: replacementAnimation)
       }
       
-      completion(true)
+      completion?(true)
     }
   }
   
   // MARK: - Helper
   
   private func internalBatchUpdates(changesWithIndexPath: ChangeWithIndexPath,
-                                    insertionAnimation: UITableViewRowAnimation,
-                                    deletionAnimation: UITableViewRowAnimation) {
+                                    insertionAnimation: UITableView.RowAnimation,
+                                    deletionAnimation: UITableView.RowAnimation) {
     changesWithIndexPath.deletes.executeIfPresent {
       deleteRows(at: $0, with: deletionAnimation)
     }

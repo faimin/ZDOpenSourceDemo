@@ -42,7 +42,7 @@ def pods_swift
   # tools
   pod 'DeepDiff' # 对比集合内元素是否变化
   pod 'GDPerformanceView-Swift'
-  pod 'LifetimeTracker' # 监听内存泄露
+  pod 'LifetimeTracker', :git => 'https://github.com/krzysztofzablocki/LifetimeTracker' # 监听内存泄露
   pod 'Watchdog'
   # debug
   pod 'Buglife'
@@ -74,8 +74,8 @@ end
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
-            if target.name == 'PeekPop'
-                config.build_settings['SWIFT_VERSION'] = '3.2'
+            if target.name == 'LayoutKit' || target.name == 'GDPerformanceView-Swift'
+                config.build_settings['SWIFT_VERSION'] = '4.0'
             end
         end
     end

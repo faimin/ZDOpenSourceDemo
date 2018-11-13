@@ -30,7 +30,7 @@ collectionView.gemini
 [![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
 )](http://mit-license.org)
-![Swift](https://img.shields.io/badge/Swift-4.1-orange.svg)
+![Swift](https://img.shields.io/badge/swift-4.2-orange.svg)
 ![pod](https://img.shields.io/badge/pod-v1.3.0-red.svg)
 
 <img src="https://github.com/shoheiyokoyama/Assets/blob/master/Gemini/demo-yaw-rotation.gif" align="right">
@@ -39,14 +39,13 @@ collectionView.gemini
 - [x] Easily usable
 - [x] Highly customizable
 - [x] Several types of animations and properties
-- [x] Support vertical and horizontal flow layout
-- [x] Support easing function
-- [x] Support `Swift4.1`
+- [x] Supports vertical and horizontal flow layout
+- [x] Supports easing function
+- [x] Supports `Swift4.2`
 - [x] Fluent interfaces based on method chaining
 - [x] Compatible with `Carthage`
-- [x] Compatible with `CocoaPod`
-- [x] Completely Example Project
-- [x] Completely `README`
+- [x] Compatible with `CocoaPods`
+- [x] Example project with lots of stock animations
 - [x] And More...
 
 # Contents
@@ -58,7 +57,7 @@ collectionView.gemini
 
 # <a name="anmation-types"> Animation Types and properties
 
-Following animation types are available. You can find out sample code [here](https://github.com/shoheiyokoyama/Gemini/tree/master/Example/Gemini).
+The following animation types are available. See sample code [here](https://github.com/shoheiyokoyama/Gemini/tree/master/Example/Gemini) for details.
 
 - [Cube](#cube)
 - [Circle Rotation](#circle-rotation) You can configure direction of rotation using the `CircleRotationDirection`
@@ -315,8 +314,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## <a name="requirements"> Requirements
 
-- Xcode 9.3.1
-- Swift 4.1
+- Xcode 10.0
+- Swift 4.2
 
 ## <a name="installation"> Installation
 
