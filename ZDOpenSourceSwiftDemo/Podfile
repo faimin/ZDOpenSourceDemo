@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 def pods_swift
   # reactive
@@ -74,8 +74,8 @@ end
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
-            if target.name == 'LayoutKit' || target.name == 'GDPerformanceView-Swift'
-                config.build_settings['SWIFT_VERSION'] = '4.0'
+            if target.name == 'LayoutKit'
+                config.build_settings['SWIFT_VERSION'] = '4.1'
             end
         end
     end

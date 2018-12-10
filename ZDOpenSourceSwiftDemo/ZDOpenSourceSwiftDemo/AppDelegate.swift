@@ -21,11 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func showPerformanceMonitor() {
         // performanceMonitor
-        GDPerformanceMonitor.sharedInstance.startMonitoring { (label) in
-            label?.backgroundColor = .red
-            label?.textColor = .yellow
-            label?.layer.borderColor = UIColor.brown.cgColor
-        }
+        PerformanceMonitor.shared().start()
     }
 
     private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

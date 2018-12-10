@@ -25,10 +25,13 @@
     [self setup];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//  Safe Area Layout Guides: https://github.com/facebook/yoga/issues/774
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    [self.view.yoga applyLayoutPreservingOrigin:YES];
 }
+
+#pragma mark -
 
 - (void)setup {
     self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -152,6 +155,12 @@
     [self.view.yoga applyLayoutPreservingOrigin:NO];
 }
 
+#pragma mark -
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 /*
 #pragma mark - Navigation
