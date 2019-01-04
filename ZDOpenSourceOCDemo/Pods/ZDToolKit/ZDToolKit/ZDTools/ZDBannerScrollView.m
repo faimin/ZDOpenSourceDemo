@@ -159,7 +159,7 @@ struct ZDBannerDelegateResponseTo {
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ZDImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([ZDImageCollectionViewCell class]) forIndexPath:indexPath];
     // 用自己外面的下载库下载
-    if (self.delegateResponseTo.customDownloadWithImageViewUrlPlaceHolderImage) {
+    if (self.delegateResponseTo.customDownloadWithImageViewUrlPlaceHolderImage && !cell.zdDownloadBlock) {
         __weak typeof(self) weakTarget = self;
         cell.zdDownloadBlock = ^(UIImageView *imageView, NSString *urlString, UIImage *placeHolderImage) {
             __strong typeof(weakTarget) self = weakTarget;
@@ -193,6 +193,8 @@ struct ZDBannerDelegateResponseTo {
     }
 }
 
+#pragma mark - UIScrollViewDelegate
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat contentWidth = scrollView.contentSize.width;
     if (contentWidth <= 0.01) return; // 此时还没有数据源
@@ -214,6 +216,15 @@ struct ZDBannerDelegateResponseTo {
     }
     
     self.currentIndex = currentPage;
+}
+
+// 手指滑动时暂停计时器
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self pauseTimer];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self resumeTimer];
 }
 
 #pragma mark - Property

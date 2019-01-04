@@ -160,6 +160,13 @@
     return [[self routerClass] respondsToSelector:aSelector];
 }
 
+- (BOOL)conformsToProtocol:(Protocol *)protocol {
+    if ([super conformsToProtocol:protocol]) {
+        return YES;
+    }
+    return [[self routerClass] conformsToProtocol:protocol];
+}
+
 - (instancetype)alloc {
     return self;
 }
@@ -307,6 +314,12 @@ _injectedStrictRemoveConfigBuilder:
         if (performerCompletion) {
             performerCompletion(NO, nil, routeAction, error);
         }
+    }];
+}
+
+- (id)performWithPreparation:(void(^)(id destination))prepare {
+    return [self performWithConfiguring:^(ZIKPerformRouteConfiguration * _Nonnull config) {
+        config.prepareDestination = prepare;
     }];
 }
 

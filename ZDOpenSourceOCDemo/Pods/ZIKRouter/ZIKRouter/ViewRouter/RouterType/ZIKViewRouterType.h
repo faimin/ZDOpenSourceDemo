@@ -15,12 +15,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-///Proxy to use ZIKViewRouter class type or ZIKViewRoute with compile time checking. These instance methods are actually class methods in ZIKViewRouter class.
+/// Proxy to use ZIKViewRouter class type or ZIKViewRoute with compile time checking. These instance methods are actually class methods in ZIKViewRouter class.
 @interface ZIKViewRouterType<__covariant Destination, __covariant RouteConfig: ZIKViewRouteConfiguration *> : ZIKRouterType<Destination, RouteConfig, ZIKViewRemoveConfiguration *>
 @end
 
 @interface ZIKViewRouterType<__covariant Destination, __covariant RouteConfig: ZIKViewRouteConfiguration *>(Proxy)
-///Check whether the router support a route type.
+/// Check whether the router support a route type.
 - (BOOL)supportRouteType:(ZIKViewRouteType)type;
 
 #pragma mark Perform
@@ -46,18 +46,20 @@ NS_ASSUME_NONNULL_BEGIN
                                                       configuring:(void(NS_NOESCAPE ^)(RouteConfig config))configBuilder
                                                          removing:(void(NS_NOESCAPE ^ _Nullable)(ZIKViewRemoveConfiguration *config))removeConfigBuilder;
 
-///If this destination doesn't need any variable to initialize, just pass source and perform route.
+/// If this destination doesn't need any variable to initialize, just pass source and perform route.
 - (nullable ZIKViewRouter<Destination, RouteConfig> *)performPath:(ZIKViewRoutePath *)path;
 
-///If this destination doesn't need any variable to initialize, just pass source and perform route. The successHandler and errorHandler are for current performing.
+/// If this destination doesn't need any variable to initialize, just pass source and perform route. The successHandler and errorHandler are for current performing.
 - (nullable ZIKViewRouter<Destination, RouteConfig> *)performPath:(ZIKViewRoutePath *)path
                                                    successHandler:(void(^ _Nullable)(Destination destination))performerSuccessHandler
                                                      errorHandler:(void(^ _Nullable)(ZIKRouteAction routeAction, NSError *error))performerErrorHandler;
 
-///If this destination doesn't need any variable to initialize, just pass source and perform route. The escaping completion is for current performing.
+/// If this destination doesn't need any variable to initialize, just pass source and perform route. The escaping completion is for current performing.
 - (nullable ZIKViewRouter<Destination, RouteConfig> *)performPath:(ZIKViewRoutePath *)path
                                                        completion:(void(^)(BOOL success, Destination _Nullable destination, ZIKRouteAction routeAction, NSError *_Nullable error))performerCompletion;
 
+/// If this destination doesn't need any variable to initialize, just pass source and perform route. The blcok is an escaping block, use weak self in it.
+- (nullable ZIKViewRouter<Destination, RouteConfig> *)performPath:(ZIKViewRoutePath *)path preparation:(void(^)(Destination destination))prepare;
 
 /**
  Perform route from source view to destination view, and prepare destination in a type safe way inferred by generic parameters.
@@ -207,9 +209,9 @@ NS_ASSUME_NONNULL_BEGIN
                                                       strictConfiguring:(void(NS_NOESCAPE ^)(ZIKViewRouteStrictConfiguration<Destination> *config, RouteConfig module))configBuilder
                                                          strictRemoving:(void(NS_NOESCAPE ^ _Nullable)(ZIKViewRemoveStrictConfiguration<Destination> *config))removeConfigBuilder
 #if TARGET_OS_TV
-API_DEPRECATED_WITH_REPLACEMENT("performPath:strictConfiguring:strictRemoving:", ios(7.0, 8.0))
-#else
 API_DEPRECATED_WITH_REPLACEMENT("performPath:strictConfiguring:strictRemoving:", ios(7.0, 10.0))
+#else
+API_DEPRECATED_WITH_REPLACEMENT("performPath:strictConfiguring:strictRemoving:", ios(7.0, 8.0))
 #endif
 ;
 - (nullable ZIKViewRouter<Destination, RouteConfig> *)performFromSource:(nullable id<ZIKViewRouteSource>)source

@@ -28,6 +28,14 @@
     objc_setAssociatedObject(self, "zix_routed", @(routed), OBJC_ASSOCIATION_RETAIN);
 }
 
+- (BOOL)zix_removing {
+    NSNumber *result = objc_getAssociatedObject(self, "zix_removing");
+    return [result boolValue];
+}
+- (void)setZix_removing:(BOOL)removing {
+    objc_setAssociatedObject(self, "zix_removing", @(removing), OBJC_ASSOCIATION_RETAIN);
+}
+
 ///https://stackoverflow.com/a/3732812/6380485
 - (nullable XXViewController *)zix_firstAvailableUIViewController {
     return [self zix_firstAvailableViewController];
@@ -44,7 +52,7 @@
 }
 
 - (nullable id)zix_routePerformer {
-    NSAssert(self.nextResponder || [self isKindOfClass:[XXWindow class]], @"View is not in any view hierarchy.");
+    NSAssert(self.nextResponder || [self isKindOfClass:[XXWindow class]] || [self window], @"View is not in any view hierarchy.");
     
     if ([self isKindOfClass:[XXWindow class]]) {
         XXViewController *performer;

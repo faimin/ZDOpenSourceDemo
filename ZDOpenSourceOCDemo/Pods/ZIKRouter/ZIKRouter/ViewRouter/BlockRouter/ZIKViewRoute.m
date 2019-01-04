@@ -16,12 +16,6 @@
 #import "ZIKViewRouterPrivate.h"
 #import "ZIKRouteConfigurationPrivate.h"
 #import "ZIKBlockViewRouter.h"
-#import "ZIKBlockCustomViewRouter.h"
-#import "ZIKBlockSubviewRouter.h"
-#import "ZIKBlockCustomSubviewRouter.h"
-#import "ZIKBlockCustomOnlyViewRouter.h"
-#import "ZIKBlockAnyViewRouter.h"
-#import "ZIKBlockAllViewRouter.h"
 #import "ZIKClassCapabilities.h"
 
 @interface ZIKViewRoute()
@@ -212,6 +206,12 @@ _injectedStrictRemoveConfigBuilder:
         if (performerCompletion) {
             performerCompletion(NO, nil, routeAction, error);
         }
+    }];
+}
+
+- (id)performPath:(ZIKViewRoutePath *)path preparation:(void(^)(id destination))prepare {
+    return [self performPath:path configuring:^(ZIKViewRouteConfiguration * _Nonnull config) {
+        config.prepareDestination = prepare;
     }];
 }
 

@@ -18,6 +18,15 @@
 #import <objc/runtime.h>
 #import "NSString+Demangle.h"
 
+@interface NSString (ZIXContainsString)
+- (BOOL)zix_containsString:(NSString *)str;
+@end
+@implementation NSString (ZIXContainsString)
+- (BOOL)zix_containsString:(NSString *)str {
+    return [self rangeOfString:str].length != 0;
+}
+@end
+
 /**
  Check whether a type conforms to the given protocol. Use private C++ function inside libswiftCore.dylib:
  `bool _conformsToProtocols(const OpaqueValue *value, const Metadata *type, const ExistentialTypeMetadata *existentialType, const WitnessTable **conformances)`.
@@ -39,9 +48,9 @@ static bool swift_conformsToProtocols(uintptr_t value, uintptr_t type, uintptr_t
             return NO;
         }];
         NSCAssert(_conformsToProtocols != NULL, @"Can't find _conformsToProtocols in libswiftCore.dylib. You should use swift 3.3 or higher.");
-        NSCAssert1([[ZIKImageSymbol symbolNameForAddress:_conformsToProtocols] containsString:@"OpaqueValue"] &&
-                   [[ZIKImageSymbol symbolNameForAddress:_conformsToProtocols] containsString:@"TargetMetadata"] &&
-                   [[ZIKImageSymbol symbolNameForAddress:_conformsToProtocols] containsString:@"WitnessTable"]
+        NSCAssert1([[ZIKImageSymbol symbolNameForAddress:_conformsToProtocols] zix_containsString:@"OpaqueValue"] &&
+                   [[ZIKImageSymbol symbolNameForAddress:_conformsToProtocols] zix_containsString:@"TargetMetadata"] &&
+                   [[ZIKImageSymbol symbolNameForAddress:_conformsToProtocols] zix_containsString:@"WitnessTable"]
                    , @"The symbol name is not matched: %@", [ZIKImageSymbol symbolNameForAddress:_conformsToProtocols]);
     });
     if (_conformsToProtocols == NULL) {
@@ -51,7 +60,7 @@ static bool swift_conformsToProtocols(uintptr_t value, uintptr_t type, uintptr_t
 }
 
 static bool _objcClassConformsToSwiftProtocolName(Class objcClass, NSString *swiftProtocolName) {
-    NSCAssert1([swiftProtocolName containsString:@"."], @"Invalid swift protocol name: %@", swiftProtocolName);
+    NSCAssert1([swiftProtocolName zix_containsString:@"."], @"Invalid swift protocol name: %@", swiftProtocolName);
     static NSMutableSet<NSString *> *conformancesCache;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -117,10 +126,10 @@ static bool _objcClassConformsToSwiftProtocolName(Class objcClass, NSString *swi
             return YES;
         }
         NSString *demangledName = demangledAsSwift(name, false);
-        if ([demangledName containsString:@"protocol witness table for"]) {
+        if ([demangledName zix_containsString:@"protocol witness table for"]) {
 
             for (NSString *protocolName in protocolNames) {
-                if ([demangledName containsString:[NSString stringWithFormat:@"__ObjC.%@ : %@", containedClassName, protocolName]]) {
+                if ([demangledName zix_containsString:[NSString stringWithFormat:@"__ObjC.%@ : %@", containedClassName, protocolName]]) {
                     [conformedProtocolNames addObject:protocolName];
                     if (conformedProtocolNames.count == protocolCount) {
                         conform = YES;
@@ -159,6 +168,13 @@ typedef NS_ENUM(NSInteger, ZIKSwiftMetadataKind) {
     ZIKSwiftMetadataKindErrorObject              = 128
 };
 
+static BOOL object_is_class(id obj) {
+    if ([obj class] == obj) {
+        return YES;
+    }
+    return NO;
+}
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
 
@@ -189,23 +205,23 @@ bool _swift_typeIsTargetType(id sourceType, id targetType) {
         }
     }
     if ([targetType isKindOfClass:NSClassFromString(@"Protocol")]) {
-        if (object_isClass(sourceType)) {
+        if (object_is_class(sourceType)) {
             return [sourceType conformsToProtocol:targetType];
         }
         return false;
     }
-    if ((isSourceSwiftObjectType && object_isClass(sourceType) == NO) ||
-        (isSourceSwiftType == NO && object_isClass(sourceType) == NO)) {
+    if ((isSourceSwiftObjectType && object_is_class(sourceType) == NO) ||
+        (isSourceSwiftType == NO && object_is_class(sourceType) == NO)) {
         NSCAssert(NO, @"This function only accept type parameter, not instance parameter.");
         return false;
     }
-    if ((isTargetSwiftObjectType && object_isClass(targetType) == NO) ||
-        (isTargetSwiftType == NO && object_isClass(targetType) == NO)) {
+    if ((isTargetSwiftObjectType && object_is_class(targetType) == NO) ||
+        (isTargetSwiftType == NO && object_is_class(targetType) == NO)) {
         NSCAssert(NO, @"This function only accept type parameter, not instance parameter.");
         return false;
     }
     
-    if (object_isClass(sourceType) && object_isClass(targetType)) {
+    if (object_is_class(sourceType) && object_is_class(targetType)) {
         return [sourceType isSubclassOfClass:targetType] || sourceType == targetType;
     } else if (isSourceSwiftValueType && isTargetSwiftValueType) {
         NSString *sourceTypeName = [sourceType performSelector:NSSelectorFromString(@"_swiftTypeName")];
@@ -262,8 +278,8 @@ bool _swift_typeIsTargetType(id sourceType, id targetType) {
             return false;
         } else {
             //For pure objc class, can't check conformance with swift_conformsToProtocols, need to use swift type metadata of this class as sourceTypeMetadata, or just search protocol witness table for this class
-            if (object_isClass(sourceType) && isSourceSwiftObjectType == NO &&
-                [[NSStringFromClass(sourceType) demangledAsSwift] containsString:@"."] == NO) {
+            if (object_is_class(sourceType) && isSourceSwiftObjectType == NO &&
+                [[NSStringFromClass(sourceType) demangledAsSwift] zix_containsString:@"."] == NO) {
                 static void*(*swift_getObjCClassMetadata)(void*);
                 static dispatch_once_t onceToken;
                 dispatch_once(&onceToken, ^{
@@ -292,6 +308,11 @@ bool _swift_typeIsTargetType(id sourceType, id targetType) {
 
 #pragma clang diagnostic pop
 
+bool hasDynamicLibrary(NSString *libName) {
+    const void *image = [ZIKImageSymbol imageByName:libName.UTF8String];
+    return image != NULL;
+}
+
 void _enumerateSymbolName(bool(^handler)(const char *name, NSString *(^demangledAsSwift)(const char *mangledName, bool simplified))) {
     if (handler == nil) {
         return;
@@ -318,9 +339,9 @@ void _enumerateSymbolName(bool(^handler)(const char *name, NSString *(^demangled
     };
     
     [ZIKImageSymbol enumerateImages:^BOOL(ZIKImageRef  _Nonnull image, NSString * _Nonnull path) {
-        if ([path containsString:@"/System/Library/"] == YES ||
-            [path containsString:@"/usr/"] == YES ||
-            ([path containsString:@"libswift"] && [path containsString:@"dylib"])) {
+        if ([path zix_containsString:@"/System/Library/"] == YES ||
+            [path zix_containsString:@"/usr/"] == YES ||
+            ([path zix_containsString:@"libswift"] && [path zix_containsString:@".dylib"])) {
             return YES;
         }
         void *value = [ZIKImageSymbol findSymbolInImage:image matching:^BOOL(const char * _Nonnull symbolName) {
@@ -331,6 +352,246 @@ void _enumerateSymbolName(bool(^handler)(const char *name, NSString *(^demangled
         }
         return YES;
     }];
+}
+
+#import "ZIKRouterInternal.h"
+#import "ZIKRouteRegistryInternal.h"
+#import "ZIKViewRouteRegistry.h"
+#import "ZIKServiceRouteRegistry.h"
+
+NSString *codeForImportingRouters() {
+    NSMutableArray<Class> *objcViewRouters = [NSMutableArray array];
+    NSMutableArray<Class> *objcViewAdapters = [NSMutableArray array];
+    
+    NSMutableArray<Class> *objcServiceRouters = [NSMutableArray array];
+    NSMutableArray<Class> *objcServiceAdapters = [NSMutableArray array];
+    
+    ZIKRouter_enumerateClassList(^(__unsafe_unretained Class class) {
+        if ([ZIKViewRouteRegistry isRegisterableRouterClass:class]) {
+            if ([NSStringFromClass(class) zix_containsString:@"."]) {
+                return;
+            }
+            if ([class isAdapter]) {
+                [objcViewAdapters addObject:class];
+            } else {
+                [objcViewRouters addObject:class];
+            }
+        } else if ([ZIKServiceRouteRegistry isRegisterableRouterClass:class]) {
+            if ([NSStringFromClass(class) zix_containsString:@"."]) {
+                return;
+            }
+            if ([class isAdapter]) {
+                [objcServiceAdapters addObject:class];
+            } else {
+                [objcServiceRouters addObject:class];
+            }
+        }
+    });
+    
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    
+    NSMutableString *code = [NSMutableString string];
+    
+    void(^generateCodeForImportingRouters)(NSArray<Class> *) = ^(NSArray<Class> *routers) {
+        for (Class class in routers) {
+            NSBundle *bundle = [NSBundle bundleForClass:class];
+            NSCAssert1(bundle, @"Failed to get bundle for class %@",NSStringFromClass(class));
+            if ([bundle isEqual:mainBundle]) {
+                [code appendFormat:@"\n#import \"%@.h\"",NSStringFromClass(class)];
+            } else {
+                NSString *bundleName = [bundle.infoDictionary objectForKey:(__bridge NSString *)kCFBundleNameKey];
+                NSCAssert2(bundle, @"Failed to get bundle name for class %@, bundle:%@",NSStringFromClass(class), bundle);
+                NSString *headerPath = [bundle.bundlePath stringByAppendingPathComponent:[NSString stringWithFormat:@"Headers/%@.h",NSStringFromClass(class)]];
+                if ([[NSFileManager defaultManager] fileExistsAtPath:headerPath]) {
+                    [code appendFormat:@"\n#import <%@/%@.h>",bundleName,NSStringFromClass(class)];
+                } else {
+                    [code appendFormat:@"\n#import <%@/%@.h>",bundleName,bundleName];
+                }
+            }
+        }
+    };
+    
+    if (objcViewRouters.count > 0) {
+        [code appendString:@"\n\n#pragma mark Objc View Router\n"];
+        generateCodeForImportingRouters(objcViewRouters);
+    }
+    if (objcViewAdapters.count > 0) {
+        [code appendString:@"\n\n#pragma mark Objc View Adapter\n"];
+        generateCodeForImportingRouters(objcViewAdapters);
+    }
+    if (objcServiceRouters.count > 0) {
+        [code appendString:@"\n\n#pragma mark Objc Service Router\n"];
+        generateCodeForImportingRouters(objcServiceRouters);
+    }
+    if (objcServiceAdapters.count > 0) {
+        [code appendString:@"\n\n#pragma mark Objc Service Adapter\n"];
+        generateCodeForImportingRouters(objcServiceAdapters);
+    }
+    
+    
+    return code;
+}
+
+NSString *codeForRegisteringRouters() {
+    NSMutableArray<Class> *objcViewRouters = [NSMutableArray array];
+    NSMutableArray<Class> *objcViewAdapters = [NSMutableArray array];
+    NSMutableArray<Class> *swiftViewRouters = [NSMutableArray array];
+    NSMutableArray<Class> *swiftViewAdapters = [NSMutableArray array];
+    
+    NSMutableArray<Class> *objcServiceRouters = [NSMutableArray array];
+    NSMutableArray<Class> *objcServiceAdapters = [NSMutableArray array];
+    NSMutableArray<Class> *swiftServiceRouters = [NSMutableArray array];
+    NSMutableArray<Class> *swiftServiceAdapters = [NSMutableArray array];
+    
+    ZIKRouter_enumerateClassList(^(__unsafe_unretained Class class) {
+        if ([ZIKViewRouteRegistry isRegisterableRouterClass:class]) {
+            if ([class isAdapter]) {
+                if ([NSStringFromClass(class) zix_containsString:@"."]) {
+                    [swiftViewAdapters addObject:class];
+                } else {
+                    [objcViewAdapters addObject:class];
+                }
+            } else {
+                if ([NSStringFromClass(class) zix_containsString:@"."]) {
+                    [swiftViewRouters addObject:class];
+                } else {
+                    [objcViewRouters addObject:class];
+                }
+            }
+        } else if ([ZIKServiceRouteRegistry isRegisterableRouterClass:class]) {
+            if ([class isAdapter]) {
+                if ([NSStringFromClass(class) zix_containsString:@"."]) {
+                    [swiftServiceAdapters addObject:class];
+                } else {
+                    [objcServiceAdapters addObject:class];
+                }
+            } else {
+                if ([NSStringFromClass(class) zix_containsString:@"."]) {
+                    [swiftServiceRouters addObject:class];
+                } else {
+                    [objcServiceRouters addObject:class];
+                }
+            }
+        }
+    });
+    
+    NSMutableString *code = [NSMutableString string];
+    
+    void(^generateCodeForObjcRouters)(NSArray<Class> *) = ^(NSArray<Class> *routers) {
+        for (Class class in routers) {
+            [code appendFormat:@"[%@ registerRoutableDestination];\n",NSStringFromClass(class)];
+        }
+    };
+    void(^generateCodeForSwiftRouters)(NSArray<Class> *) = ^(NSArray<Class> *routers) {
+        for (Class class in routers) {
+            [code appendFormat:@"%@.registerRoutableDestination()\n",NSStringFromClass(class)];
+        }
+    };
+    
+    if (objcViewRouters.count > 0) {
+        [code appendString:@"\n// Objc view routers\n"];
+        generateCodeForObjcRouters(objcViewRouters);
+    }
+    if (objcViewAdapters.count > 0) {
+        [code appendString:@"\n// Objc view adapters\n"];
+        generateCodeForObjcRouters(objcViewAdapters);
+    }
+    if (swiftViewRouters.count > 0) {
+        [code appendString:@"\n// Swift view routers\n"];
+        [code appendString:@"///Can't access swift routers, because they use generic. You have to register swift router in swift code.\n"];
+        generateCodeForSwiftRouters(swiftViewRouters);
+    }
+    if (swiftViewAdapters.count > 0) {
+        [code appendString:@"\n// Swift view adapters\n"];
+        [code appendString:@"///Can't access swift adapters, because they use generic. You have to register swift router in swift code.\n"];
+        generateCodeForSwiftRouters(swiftViewAdapters);
+    }
+    if (objcServiceRouters.count > 0) {
+        [code appendString:@"\n// Objc service routers\n"];
+        generateCodeForObjcRouters(objcServiceRouters);
+    }
+    if (objcServiceAdapters.count > 0) {
+        [code appendString:@"\n// Objc service adapters\n"];
+        generateCodeForObjcRouters(objcServiceAdapters);
+    }
+    if (swiftServiceRouters.count > 0) {
+        [code appendString:@"\n// Swift service routers\n"];
+        [code appendString:@"///Can't access swift routers, because they use generic. You have to register swift router in swift code.\n"];
+        generateCodeForSwiftRouters(swiftServiceRouters);
+    }
+    if (swiftServiceAdapters.count > 0) {
+        [code appendString:@"\n// Swift service adapters\n"];
+        [code appendString:@"///Can't access swift adapters, because they use generic. You have to register swift router in swift code.\n"];
+        generateCodeForSwiftRouters(swiftServiceAdapters);
+    }
+    [code appendString:@"[ZIKRouteRegistry notifyRegistrationFinished];"];
+    return code;
+}
+
+#import "ZIKClassCapabilities.h"
+#import "UIViewController+ZIKViewRouter.h"
+
+void checkMemoryLeakAfter(id object, NSTimeInterval delayInSeconds) {
+    if (!object) {
+        return;
+    }
+    if (delayInSeconds <= 0) {
+        return;
+    }
+    static NSMutableDictionary<NSString *, NSString *> *_leakedObjects;
+    static NSHashTable *_existingObjects;
+    static dispatch_queue_t memoryLeakCheckQueue;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _leakedObjects = [NSMutableDictionary dictionary];
+        _existingObjects = [NSHashTable weakObjectsHashTable];
+        memoryLeakCheckQueue = dispatch_queue_create("com.zuik.router.object_leak_check_queue", DISPATCH_QUEUE_SERIAL);
+    });
+    __weak id weakObject = object;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC)), memoryLeakCheckQueue, ^{
+        if (_leakedObjects.count > 0) {
+            // Check reclaimed objects since last checking
+            NSMutableSet<NSString *> *reclaimedObjects = [NSMutableSet setWithArray:_leakedObjects.allKeys];
+            [[_existingObjects setRepresentation] enumerateObjectsUsingBlock:^(id  _Nonnull obj, BOOL * _Nonnull stop) {
+                [reclaimedObjects removeObject:[NSString stringWithFormat:@"%p", (void *)obj]];
+            }];
+            if (reclaimedObjects.count > 0) {
+                NSMutableString *reclaimedDescription = [NSMutableString string];
+                [reclaimedObjects enumerateObjectsUsingBlock:^(NSString * _Nonnull address, BOOL * _Nonnull stop) {
+                    NSString *description = _leakedObjects[address];
+                    _leakedObjects[address] = nil;
+                    [reclaimedDescription appendFormat:@"destination(%@):%@\n", address, description];
+                }];
+                NSLog(@"\n\nZIKRouter memory leak checker:♻️ last leaked objects were dealloced already:\n%@\n\n", reclaimedDescription);
+            }
+        }
+        
+        if (weakObject) {
+            if ([weakObject respondsToSelector:@selector(zix_routed)] && [weakObject zix_routed]) {
+                return;
+            }
+            [_existingObjects addObject:weakObject];
+            _leakedObjects[[NSString stringWithFormat:@"%p", (void *)weakObject]] = [weakObject description];
+            if ([weakObject isKindOfClass:[XXViewController class]]) {
+                XXViewController *parent = [weakObject parentViewController];
+                if (parent) {
+                    NSLog(@"\n\nZIKRouter memory leak checker:⚠️ destination is not dealloced after removed, make sure there is no retain cycle:\n%@\nIts parentViewController: %@\nThe UIKit system may hold the object, if the view is still in view hierarchy, you can ignore this.\n\n", weakObject, parent);
+                } else {
+                    NSLog(@"\n\nZIKRouter memory leak checker:⚠️ destination is not dealloced after removed, make sure there is no retain cycle:\n%@\nThe UIKit system may hold the object, if the view is still in view hierarchy, you can ignore this.\n\n", weakObject);
+                }
+                return;
+            } else if ([weakObject isKindOfClass:[XXView class]]) {
+                XXView *superview = [weakObject superview];
+                if (superview) {
+                    NSLog(@"\n\nZIKRouter memory leak checker:⚠️ destination is not dealloced after removed, make sure there is no retain cycle:\n%@\nIts superview: %@\nThe UIKit system may hold the object, if the view is still in view hierarchy, you can ignore this.\n\n", weakObject, superview);
+                } else {
+                    NSLog(@"\n\nZIKRouter memory leak checker:⚠️ destination is not dealloced after removed, make sure there is no retain cycle:\n%@\nThe UIKit system may hold the object, if the view is still in view hierarchy, you can ignore this.\n\n", weakObject);
+                }
+                return;
+            }
+            NSLog(@"\n\nZIKRouter memory leak checker:⚠️ destination is not dealloced after removed, make sure there is no retain cycle:\n%@\n\n", weakObject);
+        }
+    });
 }
 
 #endif

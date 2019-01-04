@@ -15,9 +15,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-///Find router with service protocol. See ZIKRouteErrorInvalidProtocol.
+/// Find router with service protocol. See ZIKRouteErrorInvalidProtocol.
 extern ZIKRouteAction const ZIKRouteActionToService;
-///Find router with service module protocol. See ZIKRouteErrorInvalidProtocol.
+/// Find router with service module protocol. See ZIKRouteErrorInvalidProtocol.
 extern ZIKRouteAction const ZIKRouteActionToServiceModule;
 
 @class ZIKServiceRouter;
@@ -65,7 +65,7 @@ typedef void(^ZIKServiceRouteGlobalErrorHandler)(__kindof ZIKServiceRouter * _Nu
 + (void)registerService:(Class)serviceClass;
 
 /**
- Combine service class with this router class, then no other router can be registered for this service class.
+ Register a service class with this router class, then no other router can be registered for this service class. It has much better performance than `+registerService:`.
  @discussion
  If the service will hold and use its router, and the router has its custom functions for this service, that means the service is coupled with the router. You can use this method to register. If another router class try to register with the service class, there will be an assert failure.
  
@@ -89,20 +89,31 @@ typedef void(^ZIKServiceRouteGlobalErrorHandler)(__kindof ZIKServiceRouter * _Nu
  */
 + (void)registerModuleProtocol:(Protocol<ZIKServiceModuleRoutable> *)configProtocol;
 
-///Register a unique identifier for this router class.
+/// Register a unique identifier for this router class.
 + (void)registerIdentifier:(NSString *)identifier;
 
-///Is registration all finished. Can't register any router after registration is finished.
+/// Is registration all finished. Can't register any router after registration is finished.
 + (BOOL)isRegistrationFinished;
 
 @end
 
-///If a class conforms to ZIKRoutableService, there must be a router for it and its subclass. Don't use it in other place.
+@interface ZIKServiceRouter (Utility)
+
+/**
+ Enumerate all service routers. You can notify custom events to service routers with it.
+ 
+ @param handler The enumerator gives subclasses of ZIKServiceRouter.
+ */
++ (void)enumerateAllServiceRouters:(void(NS_NOESCAPE ^)(Class routerClass))handler;
+
+@end
+
+/// If a class conforms to ZIKRoutableService, there must be a router for it and its subclass. Don't use it in other place.
 @protocol ZIKRoutableService
 
 @end
 
-///Convenient macro to let service conform to ZIKRoutableService, and declare that it's routable.
+/// Convenient macro to let service conform to ZIKRoutableService, and declare that it's routable.
 #define DeclareRoutableService(RoutableService, ExtensionName)    \
 @interface RoutableService (ExtensionName) <ZIKRoutableService>    \
 @end    \

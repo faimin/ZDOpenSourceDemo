@@ -20,11 +20,11 @@ The service router can discover and prepare corresponding module with its protoc
 
 ---
 
-一个用于模块间路由，基于接口进行模块发现和依赖注入的解耦工具。
+一个用于模块间解耦和通信，基于接口进行模块管理和依赖注入的组件化路由工具。
 
-View router 将 UIKit 中的所有界面跳转方式封装成一个统一的方法。
+通过 protocol 寻找对应的模块，并用 protocol 进行依赖注入和模块通信。
 
-Service router 用于模块寻找，通过 protocol 寻找对应的模块，并用 protocol 进行依赖注入和模块调用。可和其他 URL router 兼容。
+View router 将 UIKit / AppKit 中的所有界面跳转方式封装成一个统一的方法。Service router 用于支持任意自定义模块。
 
 ### [中文文档](Documentation/Chinese/README.md)
 
@@ -34,20 +34,21 @@ Service router 用于模块寻找，通过 protocol 寻找对应的模块，并�
 
 - [x] Support Swift and Objective-C
 - [x] Support iOS, macOS and tvOS
-- [x] Routing for UIViewController / NSViewController, UIView / NSView and any classes
+- [x] Routing for UIViewController / NSViewController, UIView / NSView and any OC class and swift class
 - [x] Dependency injection
 - [x] **Locate module with its protocol**
-- [x] **Locate module with identifier, compatible with other URL router**
+- [x] **Locate module with identifier, compatible with other URL router framework**
 - [x] **Prepare the module with its protocol when performing route, rather than passing a parameter dictionary**
 - [x] **Declare routable protocol. There're compile-time checking and runtime checking to make reliable routing**
-- [x] **Use different require protocol and provided protocol inside module and module's user to make thorough decouple**
+- [x] **Use different required protocol and provided protocol inside module and module's user to make thorough decouple**
 - [x] **Decouple modules and add compatible interfaces with adapter**
-- [x] Declare a specific router with generic parameters
 - [x] Encapsulate navigation methods in UIKit and AppKit (push, present modally, present as popover present as sheet, segue, show, showDetail, addChildViewController, addSubview) and custom transitions into one method
 - [x] Remove an UIViewController/UIView or unload a module through one method, without using pop、dismiss、removeFromParentViewController、removeFromSuperview in different situation. Router can choose the proper method
 - [x] **Support storyboard. UIViewController / NSViewController and UIView / NSView from a segue can auto create it's registered router**
 - [x] Error checking for view transition
 - [x] AOP for view transition
+- [x] Detect memory leaks
+- [x] Send custom events to router
 - [x] Auto register all routers, or manually register each router
 - [x] Add route with router subclasses, or with blocks
 
@@ -76,6 +77,8 @@ Service router 用于模块寻找，通过 protocol 寻找对应的模块，并�
 5. [Circular Dependency](Documentation/English/CircularDependencies.md)
 6. [Module Adapter](Documentation/English/ModuleAdapter.md)
 
+[FAQ](Documentation/English/FAQ.md)
+
 ## Requirements
 
 * iOS 7.0+
@@ -91,12 +94,12 @@ Add this to your Podfile.
 For Objective-C project:
 
 ```
-pod 'ZIKRouter', '>= 1.0.2'
+pod 'ZIKRouter', '>= 1.0.7'
 ```
 For Swift project:
 
 ```
-pod 'ZRouter', '>= 1.0.2'
+pod 'ZRouter', '>= 1.0.7'
 ```
 
 ### Carthage
@@ -104,31 +107,21 @@ pod 'ZRouter', '>= 1.0.2'
 Add this to your Cartfile:
 
 ```
-github "Zuikyo/ZIKRouter" >= 1.0.2
+github "Zuikyo/ZIKRouter" >= 1.0.7
 ```
 
-Build frameworks for iOS:
+Build frameworks:
 
 ```
-carthage update --platform iOS
-```
-tvOS:
-
-```
-carthage update --platform tvOS
-```
-mac OS:
-
-```
-carthage update --platform Mac
+carthage update
 ```
 
 Build DEBUG version to enable route checking:
 
 ```
-carthage update --platform iOS --configuration Debug
+carthage update --configuration Debug
 ```
-Remember to use release version in final product.
+Remember to use release version in production environment.
 
 For Objective-C project, use `ZIKRouter.framework`. For Swift project, use `ZRouter.framework`.
 
@@ -239,12 +232,17 @@ Read the documentation for more details and more methods to override.
 
 ### 2. Declare Routable Type
 
+The declaration is for checking routes at compile time, and supporting storyboard.
+
 ```swift
-//Declare NoteEditorViewController is routable
+// Declare NoteEditorViewController is routable
+// This means there is a router for NoteEditorViewController
 extension NoteEditorViewController: ZIKRoutableView {
 }
 
-//Declare NoteEditorInput is routable
+// Declare NoteEditorInput is routable
+// This means you can use NoteEditorInput to fetch router
+// If you use an undeclared protocol, there will be compile time error
 extension RoutableView where Protocol == NoteEditorInput {
     init() { self.init(declaredProtocol: Protocol.self) }
 }
@@ -253,10 +251,13 @@ extension RoutableView where Protocol == NoteEditorInput {
 <details><summary>Objective-C Sample</summary>
 
 ```objectivec
-//Declare NoteEditorViewController is routable
+// Declare NoteEditorViewController is routable
+// This means there is a router for NoteEditorViewController
 DeclareRoutableView(NoteEditorViewController, NoteEditorViewRouter)
 
-///If the protocol inherits from ZIKViewRoutable, it's routable
+// If the protocol inherits from ZIKViewRoutable, it's routable
+// This means you can use NoteEditorInput to fetch router
+// If you use an undeclared protocol, there will be compile time warning
 @protocol NoteEditorInput <ZIKViewRoutable>
 @property (nonatomic, weak) id<EditorDelegate> delegate;
 - (void)constructForCreatingNewNote;
@@ -265,7 +266,7 @@ DeclareRoutableView(NoteEditorViewController, NoteEditorViewRouter)
 
 </details>
 
-Now your can get and show `NoteEditorViewController` with router.
+Now you can get and show `NoteEditorViewController` with router.
 
 ### View Router
 
@@ -392,6 +393,7 @@ class TestViewController: UIViewController {
         router = Router.perform(to: RoutableView<NoteEditorInput>(), path: .push(from: self))
     }
     
+    // Router will pop the editor view controller
     func removeEditorDirectly() {
         guard let router = router, router.canRemove else {
             return
@@ -440,6 +442,7 @@ class TestViewController: UIViewController {
     self.router = [ZIKRouterToView(NoteEditorInput) performPath:ZIKViewRoutePath.pushFrom(self)];
 }
 
+// Router will pop the editor view controller
 - (void)removeEditorDirectly {
     if (![self.router canRemove]) {
         return;
@@ -530,7 +533,7 @@ class TestViewController: UIViewController {
 ```
 </details>
 
-Use `required protocol` and `provided protocol` to perfectly decouple modules, adapt interface and declare dependencies of the module.
+Use `required protocol` and `provided protocol` to perfectly decouple modules, adapt interface and declare dependencies of the module. And you don't have to use a public header to manage those protocols.
 
 You need to connect required protocol and provided protocol. For more detail, read [Module Adapter](Documentation/English/ModuleAdapter.md).
 
@@ -625,9 +628,22 @@ public func application(_ app: UIApplication, open url: URL, options: [UIApplica
 ```
 </details>
 
-### Service Router
+### Make Destination & Service Router
 
-Get a module and use:
+If you don't wan't to show a view, but only need to get instance of the module, you can use `makeDestination`:
+
+```swift
+let destination = Router.makeDestination(to: RoutableView<NoteEditorInput>())
+```
+
+<details><summary>Objective-C Sample</summary>
+
+```objectivec
+id<NoteEditorInput> destination = [ZIKRouterToView(NoteEditorInput) makeDestination];
+```
+</details>
+
+And you can also get any custom modules:
 
 ```swift
 ///time service's interface
