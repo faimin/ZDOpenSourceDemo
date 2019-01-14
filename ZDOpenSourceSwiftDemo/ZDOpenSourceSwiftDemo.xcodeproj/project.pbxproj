@@ -27,6 +27,7 @@
 		FA55967720CFCFF600B5AF9D /* ZDFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55967620CFCFF600B5AF9D /* ZDFeedViewModel.swift */; };
 		FA55967920CFD00D00B5AF9D /* ZDFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55967820CFD00D00B5AF9D /* ZDFeedModel.swift */; };
 		FA55967B20CFDF4300B5AF9D /* ZDFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55967A20CFDF4300B5AF9D /* ZDFeedController.swift */; };
+		FAFD822421EC727400D2E0EC /* UIApplication+ZDUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD822321EC727400D2E0EC /* UIApplication+ZDUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		FA55967620CFCFF600B5AF9D /* ZDFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDFeedViewModel.swift; sourceTree = "<group>"; };
 		FA55967820CFD00D00B5AF9D /* ZDFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDFeedModel.swift; sourceTree = "<group>"; };
 		FA55967A20CFDF4300B5AF9D /* ZDFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDFeedController.swift; sourceTree = "<group>"; };
+		FAFD822321EC727400D2E0EC /* UIApplication+ZDUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+ZDUtility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				DA2BA9861FD2B4F100F97F03 /* Views */,
 				FA55967420CFCF8000B5AF9D /* ViewModels */,
 				FA55967520CFCF8A00B5AF9D /* Models */,
+				FAFD822221EC723300D2E0EC /* Category */,
 				DA2512FF1F349CAF00633093 /* AppDelegate.swift */,
 				DA2513031F349CAF00633093 /* Main.storyboard */,
 				DA2513061F349CAF00633093 /* Assets.xcassets */,
@@ -257,6 +260,14 @@
 				FA15D41F20D26EDB00F4AFBC /* ZDMovieModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FAFD822221EC723300D2E0EC /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD822321EC727400D2E0EC /* UIApplication+ZDUtility.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -551,6 +562,7 @@
 				DA2513311F349D0B00633093 /* ViewController.swift in Sources */,
 				DA2513001F349CAF00633093 /* AppDelegate.swift in Sources */,
 				FA55967720CFCFF600B5AF9D /* ZDFeedViewModel.swift in Sources */,
+				FAFD822421EC727400D2E0EC /* UIApplication+ZDUtility.swift in Sources */,
 				FA55967920CFD00D00B5AF9D /* ZDFeedModel.swift in Sources */,
 				DAA098281F3B373B00303DD4 /* YogaKitViewController.swift in Sources */,
 				FA15D42220D26EFB00F4AFBC /* ZDMovieViewModel.swift in Sources */,
