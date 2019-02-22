@@ -23,3 +23,9 @@ extension Optional where Wrapped: Collection {
         return self?.isEmpty == true ? nil : self
     }
 }
+
+extension Collection {
+    var nonEmpty: Self? {
+        return isEmpty ? nil : self
+    }
+}
