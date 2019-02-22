@@ -2,7 +2,7 @@
 source 'https://github.com/facebook/Sonar.git'
 source 'https://github.com/CocoaPods/Specs'
 
-platform :ios, '9.0'
+platform :ios, '10.0'
 inhibit_all_warnings!
 
 def pods_git
@@ -91,7 +91,7 @@ def pods_debug
 	# pod 'Buglife', :configurations => ['Debug']
     pod 'GDPerformanceView', :configurations => ['Debug']
 	pod 'FLEX', :configurations => ['Debug']
-  
+    pod 'LayoutInspector', :configurations => ['Debug']
   	# pod 'SonarKit', :configurations => ['Debug']
 	# pod 'SonarKit/SonarKitLayoutComponentKitSupport', :configurations => ['Debug']
 	# pod 'SonarKit/SKIOSNetworkPlugin', :configurations => ['Debug']

@@ -27,6 +27,7 @@
 		FA55967720CFCFF600B5AF9D /* ZDFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55967620CFCFF600B5AF9D /* ZDFeedViewModel.swift */; };
 		FA55967920CFD00D00B5AF9D /* ZDFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55967820CFD00D00B5AF9D /* ZDFeedModel.swift */; };
 		FA55967B20CFDF4300B5AF9D /* ZDFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55967A20CFDF4300B5AF9D /* ZDFeedController.swift */; };
+		FABACA5621F815B800AE1E8D /* ZDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABACA5521F815B800AE1E8D /* ZDExtension.swift */; };
 		FAFD822421EC727400D2E0EC /* UIApplication+ZDUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD822321EC727400D2E0EC /* UIApplication+ZDUtility.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		FA55967620CFCFF600B5AF9D /* ZDFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDFeedViewModel.swift; sourceTree = "<group>"; };
 		FA55967820CFD00D00B5AF9D /* ZDFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDFeedModel.swift; sourceTree = "<group>"; };
 		FA55967A20CFDF4300B5AF9D /* ZDFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDFeedController.swift; sourceTree = "<group>"; };
+		FABACA5521F815B800AE1E8D /* ZDExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDExtension.swift; sourceTree = "<group>"; };
 		FAFD822321EC727400D2E0EC /* UIApplication+ZDUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+ZDUtility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -266,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				FAFD822321EC727400D2E0EC /* UIApplication+ZDUtility.swift */,
+				FABACA5521F815B800AE1E8D /* ZDExtension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				FA15D42020D26EDB00F4AFBC /* ZDMovieModel.swift in Sources */,
 				DA2BA98B1FD2B5F700F97F03 /* Extension.swift in Sources */,
 				FA15D42420D3607800F4AFBC /* ZDMovieListController.swift in Sources */,
+				FABACA5621F815B800AE1E8D /* ZDExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

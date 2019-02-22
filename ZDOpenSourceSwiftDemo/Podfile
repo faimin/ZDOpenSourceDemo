@@ -48,6 +48,7 @@ def pods_swift
   pod 'Buglife'
   pod 'Peek', :configurations => ['Debug']
   pod 'FLEX', :configurations => ['Debug']
+  pod 'LayoutInspector', :configurations => ['Debug']
 end
 
 target 'ZDOpenSourceSwiftDemo' do
