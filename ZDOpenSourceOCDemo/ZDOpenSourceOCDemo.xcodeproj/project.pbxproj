@@ -631,10 +631,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo-resources.sh",
+				"${PODS_ROOT}/LayoutInspector/LayoutInspector/Assets/LayoutInspectorAssets.xcassets",
+				"${PODS_ROOT}/LayoutInspector/LayoutInspector/LayoutInspector.storyboard",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.car",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LayoutInspector.storyboardc",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,6 +19,59 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Abstract superclass for view router.
  Subclass it and override those methods in `ZIKRouterInternal` and `ZIKViewRouterInternal` to make router of your view.
+ 
+ How to create router for LoginViewController:
+ 
+ 1. Declare a routable protocol for LoginViewController:
+ @code
+ // LoginViewInput inherits from ZIKViewRoutable, and conformed by LoginViewController
+ @protocol LoginViewInput <ZIKViewRoutable>
+ @end
+ @endcode
+ 
+ 2. Create router subclass for LoginViewController:
+ @code
+ @import ZIKRouter;
+ @interface LoginViewRouter: ZIKViewRouter
+ @end
+ 
+ @import ZIKRouter.Internal;
+ DeclareRoutableView(LoginViewController, LoginViewRouter)
+ @implementation LoginViewRouter
+ 
+ + (void)registerRoutableDestination {
+    [self registerView:[LoginViewController class]];
+    [self registerViewProtocol:ZIKRoutable(LoginViewInput)];
+    [self registerIdentifier:@"app://urlscheme/aview"];
+ }
+ 
+ - (id<LoginViewInput>)destinationWithConfiguration:(ZIKViewRouteConfiguration *)configuration {
+    LoginViewController *destination = [[LoginViewController alloc] init];
+    return destination;
+ }
+ 
+ @end
+ @endcode
+ 
+ @code
+ // If you don't want to use a router subclass, just register class and protocol with ZIKViewRouter
+ [ZIKViewRouter registerViewProtocol:ZIKRoutable(LoginViewInput) forMakingView:[LoginViewController class]];
+ @endcode
+ 
+ Then you can show the login view module:
+ @code
+ // Show the view controller
+ [ZIKRouterToView(LoginViewInput)
+    performPath:ZIKViewRoutePath.pushFrom(self)
+    preparation:^(id<LoginViewInput> destination) {
+        // Prepare the view controller
+ }];
+ @endcode
+ 
+ or just get the instance:
+ @code
+ id<LoginViewInput> destination = [ZIKRouterToView(LoginViewInput) makeDestination];
+ @endcode
  */
 @interface ZIKViewRouter<__covariant Destination, __covariant RouteConfig: ZIKViewRouteConfiguration *> : ZIKRouter<Destination, RouteConfig, ZIKViewRemoveConfiguration *>
 
@@ -31,7 +84,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface ZIKViewRouter<__covariant Destination: id, __covariant RouteConfig: ZIKViewRouteConfiguration *> (Perform)
+@interface ZIKViewRouter<__covariant Destination, __covariant RouteConfig: ZIKViewRouteConfiguration *> (Perform)
 
 /**
  Whether the router can perform a view route now
@@ -48,7 +101,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)canPerform;
 
-/// Check whether the router support a route type.
+/// Check whether the router supports a route type.
 + (BOOL)supportRouteType:(ZIKViewRouteType)type;
 
 #pragma mark Perform
@@ -298,7 +351,7 @@ typedef void(^ZIKViewRouteGlobalErrorHandler)(__kindof ZIKViewRouter * _Nullable
 + (void)registerViewProtocol:(Protocol<ZIKViewRoutable> *)viewProtocol;
 
 /**
- Register a module config protocol conformed by the router's default route configuration, then use ZIKRouterToModule() to get the router class. In Swift, use `register(RoutableViewModule<ModuleProtocol>())` in ZRouter instead.
+ Register a module config protocol conformed by the router's default route configuration, then use ZIKRouterToViewModule() to get the router class. In Swift, use `register(RoutableViewModule<ModuleProtocol>())` in ZRouter instead.
  
  @param configProtocol The protocol conformed by default route configuration of this router class. Should inherit from ZIKViewModuleRoutable. Use macro `ZIKRoutable` to wrap the parameter.
  */
@@ -309,7 +362,269 @@ typedef void(^ZIKViewRouteGlobalErrorHandler)(__kindof ZIKViewRouter * _Nullable
 
 /// Is registration all finished. Can't register any router after registration is finished.
 + (BOOL)isRegistrationFinished;
+
 @end
+
+@interface ZIKViewRouter<__covariant Destination: id, __covariant RouteConfig: ZIKViewRouteConfiguration *> (RegisterMaking)
+
+/**
+ Register protocol with view class, without using any router subclass. The view will be created with `[[viewClass alloc] init]` when used. Use this if your view is very easy and don't need a router subclass.
+ 
+ @code
+ // Just registering with ZIKViewRouter
+ [ZIKViewRouter registerViewProtocol:ZIKRoutable(ViewProtocol) forMakingView:[ViewController class]];
+ @endcode
+ 
+ @warning
+ You can't register a pure swift class or swift class which has custom designated initializer, `[[viewClass alloc] init]` will crash.
+ For swift class, you can use `registerViewProtocol:forMakingView:making:` instead.
+ 
+ @param viewProtocol The protocol conformed by view. Should inherit from ZIKViewRoutable. Use macro `ZIKRoutable` to wrap the parameter.
+ @param viewClass The view class.
+ */
++ (void)registerViewProtocol:(Protocol<ZIKViewRoutable> *)viewProtocol forMakingView:(Class)viewClass;
+
+/**
+ Register protocol with view class and factory function, without using any router subclass. The view will be created with the factory function when used. Use this if your view is very easy and don't need a router subclass.
+
+ @param viewProtocol The protocol conformed by view. Should inherit from ZIKViewRoutable. Use macro `ZIKRoutable` to wrap the parameter.
+ @param viewClass The view class.
+ @param function Function to create destination.
+ */
++ (void)registerViewProtocol:(Protocol<ZIKViewRoutable> *)viewProtocol forMakingView:(Class)viewClass factory:(_Nullable Destination(*_Nonnull)(RouteConfig))function;
+
+/**
+ Register protocol with view class and factory block, without using any router subclass. The view will be created with the `making` block when used. Use this if your view is very easy and don't need a router subclass.
+ 
+ @code
+ // Just registering with ZIKViewRouter
+ [ZIKViewRouter
+    registerViewProtocol:ZIKRoutable(ViewProtocol)
+    forMakingView:[ViewController class]
+    making:^id _Nullable(ZIKViewRouteConfiguration *config, __kindof ZIKViewRouter *router) {
+        return [[ViewController alloc] init];
+ }];
+ @endcode
+ 
+ @param viewProtocol The protocol conformed by view. Should inherit from ZIKViewRoutable. Use macro `ZIKRoutable` to wrap the parameter.
+ @param viewClass The view class.
+ @param makeDestination Block creating the view.
+ */
++ (void)registerViewProtocol:(Protocol<ZIKViewRoutable> *)viewProtocol
+               forMakingView:(Class)viewClass
+                      making:(_Nullable Destination(^)(RouteConfig config))makeDestination;
+
+/**
+ Register module config protocol with view class and config factory function, without using any router subclass or configuration subclass. The view will be created with the `makeDestination` block in the configuration. Use this if your view is very easy and don't need a router subclass or configuration subclass.
+ 
+ If a module need a few required parameters when creating destination, you can declare makeDestinationWith in module config protocol:
+ @code
+ @protocol LoginViewModuleInput <ZIKViewModuleRoutable>
+ /// Pass required parameter and return destination with LoginViewInput type.
+ @property (nonatomic, copy, readonly) id<LoginViewInput> _Nullable(^makeDestinationWith)(NSString *account);
+ @end
+ @endcode
+ 
+ Then register module with module config factory block:
+ @code
+ // Let ZIKViewMakeableConfiguration conform to LoginViewModuleInput
+ DeclareRoutableViewModuleProtocol(LoginViewModuleInput)
+ 
+ // C function that creating the configuration
+ ZIKViewRouteConfiguration<ZIKConfigurationMakeable> makeLoginViewModuleConfiguration(void) {
+    ZIKViewMakeableConfiguration<LoginViewController *> *config = [ZIKViewMakeableConfiguration new];
+    __weak typeof(config) weakConfig = config;
+ 
+    config._prepareDestination = ^(id destination) {
+        // Prepare the destination
+    };
+    // User is responsible for calling makeDestinationWith and giving parameters
+    config.makeDestinationWith = id^(NSString *account) {
+ 
+        // Capture parameters in makeDestination, so we don't need configuration subclass to hold the parameters
+        // MakeDestination will be used for creating destination instance
+        weakConfig.makeDestination = ^LoginViewController * _Nullable{
+        // Use custom initializer
+        LoginViewController *destination = [LoginViewController alloc] initWithAccount:account];
+            return destination;
+        };
+        // Set makedDestination, so the router won't make destination and prepare destination again when perform with this configuration
+        weakConfig.makedDestination = weakConfig.makeDestination();
+        if (weakConfig._prepareDestination) {
+            weakConfig._prepareDestination(weakConfig.makedDestination);
+        }
+        return weakConfig.makedDestination;
+    };
+    return config;
+ }
+ 
+ // Register the function with LoginViewModuleInput in some +registerRoutableDestination
+ [ZIKModuleViewRouter(LoginViewModuleInput)
+    registerModuleProtocol:ZIKRoutable(LoginViewModuleInput)
+    forMakingView:[LoginViewController class]
+    factory:makeLoginViewModuleConfiguration];
+ @endcode
+ 
+ You can use this module with LoginViewModuleInput:
+ @code
+ [ZIKRouterToViewModule(LoginViewModuleInput)
+    performPath:ZIKViewRoutePath.showFrom(self)
+    configuring:^(ZIKViewRouteConfiguration<LoginViewModuleInput> *config) {
+        // Give parameters and make destination
+        id<LoginViewInput> destination = config.makeDestinationWith(@"account");
+ }];
+ @endcode
+ 
+ @param configProtocol The protocol conformed by configuration. Should inherit from ZIKViewModuleRoutable. Use macro `ZIKRoutable` to wrap the parameter.
+ @param viewClass The view class.
+ @param function Function creating the configuration. The configuration should has makeDestination block.
+ */
++ (void)registerModuleProtocol:(Protocol<ZIKViewModuleRoutable> *)configProtocol
+                 forMakingView:(Class)viewClass
+                       factory:(ZIKViewRouteConfiguration<ZIKConfigurationMakeable> * _Nonnull (*_Nonnull)(void))function;
+
+/**
+ Register module config protocol with view class and config factory block, without using any router subclass or configuration subclass. The view will be created with the `makeDestination` block in the configuration. Use this if your view is very easy and don't need a router subclass or configuration subclass.
+ 
+ If a module need a few required parameters when creating destination, you can declare in module config protocol:
+ @code
+ @protocol LoginViewModuleInput <ZIKViewModuleRoutable>
+ /// Pass required parameter and return destination with LoginViewInput type.
+ @property (nonatomic, copy, readonly) id<LoginViewInput> _Nullable(^makeDestinationWith)(NSString *account);
+ @end
+ @endcode
+ 
+ Then register module with module config factory block:
+ @code
+ // Let ZIKViewMakeableConfiguration conform to LoginViewModuleInput
+ DeclareRoutableViewModuleProtocol(LoginViewModuleInput)
+ 
+ // Register in some +registerRoutableDestination
+ [ZIKModuleViewRouter(LoginViewModuleInput)
+    registerModuleProtocol:ZIKRoutable(LoginViewModuleInput)
+    forMakingView:[LoginViewController class]
+    making:^ZIKViewRouteConfiguration<ZIKConfigurationMakeable> * _Nonnull{
+ 
+        ZIKViewMakeableConfiguration<LoginViewController *> *config = [ZIKViewMakeableConfiguration new];
+        __weak typeof(config) weakConfig = config;
+ 
+        config._prepareDestination = ^(id destination) {
+            // Prepare the destination
+        };
+        // User is responsible for calling makeDestinationWith and giving parameters
+        config.makeDestinationWith = id^(NSString *account) {
+ 
+            // Capture parameters in makeDestination, so we don't need configuration subclass to hold the parameters
+            // MakeDestination will be used for creating destination instance
+            weakConfig.makeDestination = ^LoginViewController * _Nullable{
+            // Use custom initializer
+            LoginViewController *destination = [LoginViewController alloc] initWithAccount:account];
+                return destination;
+            };
+            // Set makedDestination, so the router won't make destination and prepare destination again when perform with this configuration
+            weakConfig.makedDestination = weakConfig.makeDestination();
+            if (weakConfig._prepareDestination) {
+                weakConfig._prepareDestination(weakConfig.makedDestination);
+            }
+            return weakConfig.makedDestination;
+        };
+        return config;
+ }];
+ @endcode
+ 
+ You can use this module with LoginViewModuleInput in some +registerRoutableDestination:
+ @code
+ [ZIKRouterToViewModule(LoginViewModuleInput)
+    performPath:ZIKViewRoutePath.showFrom(self)
+    configuring:^(ZIKViewRouteConfiguration<LoginViewModuleInput> *config) {
+        // Give parameters and make destination
+        id<LoginViewInput> destination = config.makeDestinationWith(@"account");
+ }];
+ @endcode
+ 
+ @param configProtocol The protocol conformed by configuration. Should inherit from ZIKViewModuleRoutable. Use macro `ZIKRoutable` to wrap the parameter.
+ @param viewClass The view class.
+ @param makeConfiguration Block that creating the configuration. The configuration should has makeDestination block.
+ */
++ (void)registerModuleProtocol:(Protocol<ZIKViewModuleRoutable> *)configProtocol
+                 forMakingView:(Class)viewClass
+                        making:(ZIKViewRouteConfiguration<ZIKConfigurationMakeable> *(^)(void))makeConfiguration;
+
+/**
+ Register identifier with view class, without using any router subclass. The view will be created with `[[viewClass alloc] init]` when used. Use this if your view is very easy and don't need a router subclass.
+ 
+ @code
+ // Just registering with ZIKViewRouter
+ [ZIKViewRouter registerIdentifier:@"app://view" forMakingView:[ViewController class]];
+ @endcode
+ 
+ For swift class, you can use `registerIdentifier:forMakingView:making:` instead.
+ 
+ @param identifier The unique identifier for this class.
+ @param viewClass The view class.
+ */
++ (void)registerIdentifier:(NSString *)identifier forMakingView:(Class)viewClass;
+
+/**
+ Register identifier with view class and factory function, without using any router subclass. The view will be created with the factory function when used. Use this if your view is very easy and don't need a router subclass.
+
+ @param identifier The unique identifier for this class.
+ @param viewClass The view class.
+ @param function Function to create destination.
+ */
++ (void)registerIdentifier:(NSString *)identifier forMakingView:(Class)viewClass factory:(_Nullable Destination(*_Nonnull)(RouteConfig))function;
+
+/**
+ Register identifier with view class and factory block, without using any router subclass. The view will be created with the `making` block when used. Use this if your view is very easy and don't need a router subclass.
+ 
+ @code
+ // Just registering with ZIKViewRouter
+ [ZIKViewRouter
+     registerIdentifier:@"app://view"
+     forMakingView:[ViewController class]
+     making:^id _Nullable(ZIKViewRouteConfiguration *config, __kindof ZIKViewRouter *router) {
+        return [[ViewController alloc] init];
+     }];
+ @endcode
+ 
+ @param identifier The unique identifier for this class.
+ @param viewClass The view class.
+ @param makeDestination Block creating the view.
+ */
++ (void)registerIdentifier:(NSString *)identifier
+             forMakingView:(Class)viewClass
+                    making:(_Nullable Destination(^)(RouteConfig config))makeDestination;
+
+/**
+ Register identifier with view class and config factory function, without using any router subclass or configuration subclass. The view will be created with the `makeDestination` block in the configuration. Use this if your view is very easy and don't need a router subclass or configuration subclass.
+ 
+ See registerModuleProtocol:forMakingView:factory:
+ 
+ @param identifier The unique identifier for this class.
+ @param viewClass The view class.
+ @param function Function creating the configuration.
+ */
++ (void)registerIdentifier:(NSString *)identifier
+             forMakingView:(Class)viewClass
+      configurationFactory:(ZIKViewRouteConfiguration<ZIKConfigurationMakeable> * _Nonnull (*_Nonnull)(void))function;
+
+/**
+ Register identifier with view class and config factory block, without using any router subclass or configuration subclass. The view will be created with the `makeDestination` block in the configuration. Use this if your view is very easy and don't need a router subclass or configuration subclass.
+ 
+ See registerModuleProtocol:forMakingView:making:
+ 
+ @param identifier The unique identifier for this class.
+ @param viewClass The view class.
+ @param makeConfiguration Block creating the configuration.
+ */
++ (void)registerIdentifier:(NSString *)identifier
+             forMakingView:(Class)viewClass
+       configurationMaking:(ZIKViewRouteConfiguration<ZIKConfigurationMakeable> *(^)(void))makeConfiguration;
+
+@end
+
+/// Add module config protocol that only has makeDestinationWith, or constructDestination and didMakeDestination to ZIKViewMakeableConfiguration.
+#define DeclareRoutableViewModuleProtocol(PROTOCOL) DeclareMakeableConfig(ZIKViewMakeableConfiguration, PROTOCOL)
 
 @interface ZIKViewRouter (Utility)
 
@@ -323,12 +638,15 @@ typedef void(^ZIKViewRouteGlobalErrorHandler)(__kindof ZIKViewRouter * _Nullable
 
 @interface ZIKViewRouter (Debug)
 
+/// Default is YES. You can override this to disable memory leak detecting for current router.
++ (BOOL)shouldDetectMemoryLeak;
+
 /**
  Check whether the destination is dealloced after delay second when it's removed. Only works in DEBUG mode. Default is 2 second. You can set a negative number to disable it. Memory leak information will be print to console. It will also check whether leaked objects are reclaimed.
  @note
  Destination may not be dealloced for these situations:
  
- 1. ✅ The UIKit system hold the UIViewController / UIView after it's removed, such as UISplitViewController holds its detail view controller. They are not memory leaks, you don't need to worry them.
+ 1. ✅ The UIKit system hold the UIViewController / UIView after it's removed, such as UISplitViewController holds its detail view controller. They are not memory leaks, you don't need to worry about them.
  
  2. ✅ Destination is a singleton.
  
@@ -339,6 +657,9 @@ typedef void(^ZIKViewRouteGlobalErrorHandler)(__kindof ZIKViewRouter * _Nullable
  Use `Debug Memory Graph` tool in Xcode to check the leak.
  */
 @property (nonatomic, class) NSTimeInterval detectMemoryLeakDelay;
+
+/// Handler when destination still exists after removed and delay second. You can use other tools like FBRetainCycleDetector to check whether there is a real leaking.
+@property (nonatomic, class, copy) void(^didDetectLeakingHandler)(id leakedDestination);
 
 @end
 

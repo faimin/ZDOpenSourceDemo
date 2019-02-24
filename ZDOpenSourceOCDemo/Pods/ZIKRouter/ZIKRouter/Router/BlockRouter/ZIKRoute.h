@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ZIKRoute<__covariant Destination, __covariant RouteConfig: ZIKPerformRouteConfiguration *, __covariant RemoveConfig: ZIKRemoveRouteConfiguration *> : NSObject
 @property (nonatomic, copy, nullable) NSString *name;
 
+/// The router class to handle this route. ZIKRoute subclass can override and use custom rouer class.
+- (Class)routerClass;
+
 /**
  Make and register route. Same with the initializer.
  @note The route object will always exists, won't be released.
@@ -62,6 +65,15 @@ NS_ASSUME_NONNULL_BEGIN
  @return The router.
  */
 - (instancetype)initWithExclusiveDestination:(Class)destinationClass makeDestination:(_Nullable Destination(^)(RouteConfig config, __kindof ZIKRouter<Destination, RouteConfig, RemoveConfig> *router))makeDestination NS_DESIGNATED_INITIALIZER;
+
+/**
+ Create route for making some destination.
+ @note The route object is not auto retained. You can use this to create a temp route.
+
+ @param makeDestination Create destination and initialize it with configuration. If the configuration is invalid, return nil to make this route failed.
+ @return The router.
+ */
+- (instancetype)initWithMakeDestination:(_Nullable Destination(^)(RouteConfig config, __kindof ZIKRouter<Destination, RouteConfig, RemoveConfig> *router))makeDestination NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;

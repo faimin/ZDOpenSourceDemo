@@ -14,6 +14,7 @@
 #import "ZIKServiceRouterInternal.h"
 #import "ZIKServiceRouteRegistry.h"
 #import "ZIKRouteRegistryInternal.h"
+#import "ZIKServiceRoute.h"
 #import <objc/runtime.h>
 #import "ZIKRouterRuntime.h"
 
@@ -163,6 +164,81 @@ static dispatch_semaphore_t g_globalErrorSema;
 }
 
 @end
+
+@implementation ZIKServiceRouter (RegisterMaking)
+
++ (void)registerServiceProtocol:(Protocol<ZIKServiceRoutable> *)serviceProtocol forMakingService:(Class)serviceClass {
+    NSAssert(!ZIKServiceRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKServiceRouteRegistry registerDestinationProtocol:serviceProtocol forMakingDestination:serviceClass];
+}
+
++ (void)registerServiceProtocol:(Protocol<ZIKServiceRoutable> *)serviceProtocol forMakingService:(Class)serviceClass factory:(id _Nullable(*)(ZIKPerformRouteConfiguration *_Nonnull))function {
+    NSAssert(!ZIKServiceRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKServiceRouteRegistry registerDestinationProtocol:serviceProtocol forMakingDestination:serviceClass factoryFunction:function];
+}
+
++ (void)registerServiceProtocol:(Protocol<ZIKServiceRoutable> *)serviceProtocol forMakingService:(Class)serviceClass making:(id  _Nullable (^)(ZIKPerformRouteConfiguration * _Nonnull))makeDestination {
+    NSParameterAssert([serviceClass conformsToProtocol:serviceProtocol]);
+    NSAssert(!ZIKServiceRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKServiceRouteRegistry registerDestinationProtocol:serviceProtocol forMakingDestination:serviceClass factoryBlock:makeDestination];
+}
+
++ (void)registerModuleProtocol:(Protocol<ZIKServiceModuleRoutable> *)configProtocol forMakingService:(Class)serviceClass factory:(ZIKPerformRouteConfiguration<ZIKConfigurationMakeable> * _Nonnull (*_Nonnull)(void))function {
+    NSAssert(!ZIKServiceRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKServiceRouteRegistry registerModuleProtocol:configProtocol forMakingDestination:serviceClass factoryFunction:function];
+}
+
++ (void)registerModuleProtocol:(Protocol<ZIKServiceModuleRoutable> *)configProtocol forMakingService:(Class)serviceClass making:(ZIKPerformRouteConfiguration<ZIKConfigurationMakeable> *(^)(void))makeConfiguration {
+    NSAssert(!ZIKServiceRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKServiceRouteRegistry registerModuleProtocol:configProtocol forMakingDestination:serviceClass factoryBlock:makeConfiguration];
+}
+
++ (void)registerIdentifier:(NSString *)identifier forMakingService:(Class)serviceClass {
+    NSAssert(!ZIKServiceRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKServiceRouteRegistry registerIdentifier:identifier forMakingDestination:serviceClass];
+}
+
++ (void)registerIdentifier:(NSString *)identifier forMakingService:(Class)serviceClass factory:(id _Nullable(*_Nonnull)(ZIKPerformRouteConfiguration *_Nonnull))function {
+    NSAssert(!ZIKServiceRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKServiceRouteRegistry registerIdentifier:identifier forMakingDestination:serviceClass factoryFunction:function];
+}
+
++ (void)registerIdentifier:(NSString *)identifier forMakingService:(Class)serviceClass making:(id  _Nullable (^)(ZIKPerformRouteConfiguration * _Nonnull))makeDestination {
+    NSAssert(!ZIKServiceRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKServiceRouteRegistry registerIdentifier:identifier forMakingDestination:serviceClass factoryBlock:(id)makeDestination];
+}
+
++ (void)registerIdentifier:(NSString *)identifier forMakingService:(Class)serviceClass configurationFactory:(ZIKPerformRouteConfiguration<ZIKConfigurationMakeable> * _Nonnull (*_Nonnull)(void))function {
+    NSAssert(!ZIKServiceRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKServiceRouteRegistry registerIdentifier:identifier forMakingDestination:serviceClass configFactoryFunction:function];
+}
+
++ (void)registerIdentifier:(NSString *)identifier forMakingService:(Class)serviceClass configurationMaking:(ZIKPerformRouteConfiguration<ZIKConfigurationMakeable> *(^)(void))makeConfiguration {
+    NSAssert(!ZIKServiceRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKServiceRouteRegistry registerIdentifier:identifier forMakingDestination:serviceClass configFactoryBlock:makeConfiguration];
+}
+
+@end
+
+void _registerServiceProtocolWithSwiftFactory(Protocol<ZIKServiceRoutable> *serviceProtocol, Class serviceClass, id _Nullable (^block)(ZIKPerformRouteConfiguration * _Nonnull)) {
+    NSCAssert(!ZIKServiceRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKServiceRouteRegistry registerDestinationProtocol:serviceProtocol forMakingDestination:serviceClass factoryBlock:block];
+}
+
+void _registerServiceModuleProtocolWithSwiftFactory(Protocol<ZIKServiceModuleRoutable> *moduleProtocol, Class serviceClass, id(^block)(void)) {
+    NSCAssert(!ZIKServiceRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKServiceRouteRegistry registerModuleProtocol:moduleProtocol forMakingDestination:serviceClass factoryBlock:block];
+}
+
+void _registerServiceIdentifierWithSwiftFactory(NSString *identifier, Class serviceClass, id _Nullable (^block)(ZIKPerformRouteConfiguration * _Nonnull)) {
+    NSCAssert(!ZIKServiceRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKServiceRouteRegistry registerIdentifier:identifier forMakingDestination:serviceClass factoryBlock:block];
+}
+
+void _registerServiceModuleIdentifierWithSwiftFactory(NSString *identifier, Class serviceClass, id(^block)(void)) {
+    NSCAssert(!ZIKServiceRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKServiceRouteRegistry registerIdentifier:identifier forMakingDestination:serviceClass configFactoryBlock:block];
+}
 
 @implementation ZIKServiceRouter (Private)
 

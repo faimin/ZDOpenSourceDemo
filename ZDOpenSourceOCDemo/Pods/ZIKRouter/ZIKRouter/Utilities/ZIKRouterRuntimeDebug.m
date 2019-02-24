@@ -150,22 +150,45 @@ static uintptr_t dereferencedPointer(uintptr_t pointer) {
     return (uintptr_t)*deref;
 }
 
+#define MetadataKindIsNonType 0x400
+#define MetadataKindIsNonHeap 0x200
+#define MetadataKindIsRuntimePrivate 0x100
+
+/// Swift ABI: MetadataKind.def
 typedef NS_ENUM(NSInteger, ZIKSwiftMetadataKind) {
+    ZIKSwiftMetadataKindClass_old                    = 0,
+    ZIKSwiftMetadataKindStruct_old                   = 1,
+    ZIKSwiftMetadataKindEnum_old                     = 2,
+    ZIKSwiftMetadataKindOptional_old                 = 3,
+    ZIKSwiftMetadataKindOpaque_old                   = 8,
+    ZIKSwiftMetadataKindTuple_old                    = 9,
+    ZIKSwiftMetadataKindFunction_old                 = 10,
+    ZIKSwiftMetadataKindExistential_old              = 12,
+    ZIKSwiftMetadataKindMetatype_old                 = 13,
+    ZIKSwiftMetadataKindObjCClassWrapper_old         = 14,
+    ZIKSwiftMetadataKindExistentialMetatype_old      = 15,
+    ZIKSwiftMetadataKindForeignClass_old             = 16,
+    ZIKSwiftMetadataKindHeapLocalVariable_old        = 64,
+    ZIKSwiftMetadataKindHeapGenericLocalVariable_old = 65,
+    ZIKSwiftMetadataKindErrorObject_old              = 128,
+    
+    /// ABI after Xcode 10.2 with Swift 5
+    
     ZIKSwiftMetadataKindClass                    = 0,
-    ZIKSwiftMetadataKindStruct                   = 1,
-    ZIKSwiftMetadataKindEnum                     = 2,
-    ZIKSwiftMetadataKindOptional                 = 3,
-    ZIKSwiftMetadataKindOpaque                   = 8,
-    ZIKSwiftMetadataKindTuple                    = 9,
-    ZIKSwiftMetadataKindFunction                 = 10,
-    ZIKSwiftMetadataKindExistential              = 12,
-    ZIKSwiftMetadataKindMetatype                 = 13,
-    ZIKSwiftMetadataKindObjCClassWrapper         = 14,
-    ZIKSwiftMetadataKindExistentialMetatype      = 15,
-    ZIKSwiftMetadataKindForeignClass             = 16,
-    ZIKSwiftMetadataKindHeapLocalVariable        = 64,
-    ZIKSwiftMetadataKindHeapGenericLocalVariable = 65,
-    ZIKSwiftMetadataKindErrorObject              = 128
+    ZIKSwiftMetadataKindStruct                   = 0 | MetadataKindIsNonHeap,
+    ZIKSwiftMetadataKindEnum                     = 1 | MetadataKindIsNonHeap,
+    ZIKSwiftMetadataKindOptional                 = 2 | MetadataKindIsNonHeap,
+    ZIKSwiftMetadataKindForeignClass             = 3 | MetadataKindIsNonHeap,
+    ZIKSwiftMetadataKindOpaque                   = 0 | MetadataKindIsRuntimePrivate | MetadataKindIsNonHeap,
+    ZIKSwiftMetadataKindTuple                    = 1 | MetadataKindIsRuntimePrivate | MetadataKindIsNonHeap,
+    ZIKSwiftMetadataKindFunction                 = 2 | MetadataKindIsRuntimePrivate | MetadataKindIsNonHeap,
+    ZIKSwiftMetadataKindExistential              = 3 | MetadataKindIsRuntimePrivate | MetadataKindIsNonHeap,
+    ZIKSwiftMetadataKindMetatype                 = 4 | MetadataKindIsRuntimePrivate | MetadataKindIsNonHeap,
+    ZIKSwiftMetadataKindObjCClassWrapper         = 5 | MetadataKindIsRuntimePrivate | MetadataKindIsNonHeap,
+    ZIKSwiftMetadataKindExistentialMetatype      = 6 | MetadataKindIsRuntimePrivate | MetadataKindIsNonHeap,
+    ZIKSwiftMetadataKindHeapLocalVariable        = 0 | MetadataKindIsNonType,
+    ZIKSwiftMetadataKindHeapGenericLocalVariable = 0 | MetadataKindIsNonType | MetadataKindIsRuntimePrivate,
+    ZIKSwiftMetadataKindErrorObject              = 1 | MetadataKindIsNonType | MetadataKindIsRuntimePrivate
 };
 
 static BOOL object_is_class(id obj) {
@@ -180,11 +203,11 @@ static BOOL object_is_class(id obj) {
 
 bool _swift_typeIsTargetType(id sourceType, id targetType) {
     //swift class or swift object
-    BOOL isSourceSwiftObjectType = [sourceType isKindOfClass:NSClassFromString(@"SwiftObject")];
-    BOOL isTargetSwiftObjectType = [targetType isKindOfClass:NSClassFromString(@"SwiftObject")];
+    BOOL isSourceSwiftObjectType = [sourceType isKindOfClass:NSClassFromString(@"SwiftObject")] || [sourceType isKindOfClass:NSClassFromString(@"Swift._SwiftObject")];
+    BOOL isTargetSwiftObjectType = [targetType isKindOfClass:NSClassFromString(@"SwiftObject")] || [targetType isKindOfClass:NSClassFromString(@"Swift._SwiftObject")];
     //swift struct or swift enum or swift protocol
-    BOOL isSourceSwiftValueType = [sourceType isKindOfClass:NSClassFromString(@"_SwiftValue")];
-    BOOL isTargetSwiftValueType = [targetType isKindOfClass:NSClassFromString(@"_SwiftValue")];
+    BOOL isSourceSwiftValueType = [sourceType isKindOfClass:NSClassFromString(@"_SwiftValue")] || [sourceType isKindOfClass:NSClassFromString(@"__SwiftValue")];
+    BOOL isTargetSwiftValueType = [targetType isKindOfClass:NSClassFromString(@"_SwiftValue")] || [targetType isKindOfClass:NSClassFromString(@"__SwiftValue")];
     BOOL isSourceSwiftType = isSourceSwiftObjectType || isSourceSwiftValueType;
     BOOL isTargetSwiftType = isTargetSwiftObjectType || isTargetSwiftValueType;
     
@@ -246,7 +269,7 @@ bool _swift_typeIsTargetType(id sourceType, id targetType) {
         //Get the first member `Kind` in TargetMetadata, it's an enum `MetadataKind`
         ZIKSwiftMetadataKind type = (ZIKSwiftMetadataKind)dereferencedPointer(sourceTypeMetadata);
         //Source is a metatype, get its metadata
-        if (type == ZIKSwiftMetadataKindMetatype || type == ZIKSwiftMetadataKindExistentialMetatype) {
+        if (type == ZIKSwiftMetadataKindMetatype || type == ZIKSwiftMetadataKindExistentialMetatype || type == ZIKSwiftMetadataKindMetatype_old || type == ZIKSwiftMetadataKindExistentialMetatype_old) {
             //OpaqueValue is struct SwiftValueHeader, `Metadata *` is its first member
             sourceTypeMetadata = dereferencedPointer(sourceTypeOpaqueValue);
         }
@@ -268,13 +291,13 @@ bool _swift_typeIsTargetType(id sourceType, id targetType) {
         //Get the first member `Kind` in TargetMetadata, it's an enum `MetadataKind`
         ZIKSwiftMetadataKind type = (ZIKSwiftMetadataKind)dereferencedPointer(targetTypeMetadata);
         //Target is a metatype, get its metadata
-        if (type == ZIKSwiftMetadataKindMetatype || type == ZIKSwiftMetadataKindExistentialMetatype) {
+        if (type == ZIKSwiftMetadataKindMetatype || type == ZIKSwiftMetadataKindExistentialMetatype || type == ZIKSwiftMetadataKindMetatype_old || type == ZIKSwiftMetadataKindExistentialMetatype_old) {
             //OpaqueValue is struct SwiftValueHeader, `Metadata *` is its first member
             targetTypeMetadata = dereferencedPointer(targetTypeOpaqueValue);
             type = (ZIKSwiftMetadataKind)dereferencedPointer(targetTypeMetadata);
         }
         //target should be swift protocol
-        if (type != ZIKSwiftMetadataKindExistential) {
+        if (type != ZIKSwiftMetadataKindExistential && type != ZIKSwiftMetadataKindExistential_old) {
             return false;
         } else {
             //For pure objc class, can't check conformance with swift_conformsToProtocols, need to use swift type metadata of this class as sourceTypeMetadata, or just search protocol witness table for this class
@@ -308,7 +331,7 @@ bool _swift_typeIsTargetType(id sourceType, id targetType) {
 
 #pragma clang diagnostic pop
 
-bool hasDynamicLibrary(NSString *libName) {
+bool zix_hasDynamicLibrary(NSString *libName) {
     const void *image = [ZIKImageSymbol imageByName:libName.UTF8String];
     return image != NULL;
 }
@@ -356,7 +379,9 @@ void _enumerateSymbolName(bool(^handler)(const char *name, NSString *(^demangled
 
 #import "ZIKRouterInternal.h"
 #import "ZIKRouteRegistryInternal.h"
+#if __has_include("ZIKViewRouter.h")
 #import "ZIKViewRouteRegistry.h"
+#endif
 #import "ZIKServiceRouteRegistry.h"
 
 NSString *codeForImportingRouters() {
@@ -367,6 +392,7 @@ NSString *codeForImportingRouters() {
     NSMutableArray<Class> *objcServiceAdapters = [NSMutableArray array];
     
     ZIKRouter_enumerateClassList(^(__unsafe_unretained Class class) {
+#if __has_include("ZIKViewRouter.h")
         if ([ZIKViewRouteRegistry isRegisterableRouterClass:class]) {
             if ([NSStringFromClass(class) zix_containsString:@"."]) {
                 return;
@@ -376,7 +402,9 @@ NSString *codeForImportingRouters() {
             } else {
                 [objcViewRouters addObject:class];
             }
-        } else if ([ZIKServiceRouteRegistry isRegisterableRouterClass:class]) {
+        } else
+#endif
+        if ([ZIKServiceRouteRegistry isRegisterableRouterClass:class]) {
             if ([NSStringFromClass(class) zix_containsString:@"."]) {
                 return;
             }
@@ -444,6 +472,7 @@ NSString *codeForRegisteringRouters() {
     NSMutableArray<Class> *swiftServiceAdapters = [NSMutableArray array];
     
     ZIKRouter_enumerateClassList(^(__unsafe_unretained Class class) {
+#if __has_include("ZIKViewRouter.h")
         if ([ZIKViewRouteRegistry isRegisterableRouterClass:class]) {
             if ([class isAdapter]) {
                 if ([NSStringFromClass(class) zix_containsString:@"."]) {
@@ -458,7 +487,9 @@ NSString *codeForRegisteringRouters() {
                     [objcViewRouters addObject:class];
                 }
             }
-        } else if ([ZIKServiceRouteRegistry isRegisterableRouterClass:class]) {
+        } else
+#endif
+        if ([ZIKServiceRouteRegistry isRegisterableRouterClass:class]) {
             if ([class isAdapter]) {
                 if ([NSStringFromClass(class) zix_containsString:@"."]) {
                     [swiftServiceAdapters addObject:class];
@@ -529,13 +560,15 @@ NSString *codeForRegisteringRouters() {
 }
 
 #import "ZIKClassCapabilities.h"
+#if __has_include("ZIKViewRouter.h")
 #import "UIViewController+ZIKViewRouter.h"
+#endif
 
-void checkMemoryLeakAfter(id object, NSTimeInterval delayInSeconds) {
+void zix_checkMemoryLeak(id object, NSTimeInterval delaySecond, void(^handler)(id leakedObject)) {
     if (!object) {
         return;
     }
-    if (delayInSeconds <= 0) {
+    if (delaySecond <= 0) {
         return;
     }
     static NSMutableDictionary<NSString *, NSString *> *_leakedObjects;
@@ -547,8 +580,15 @@ void checkMemoryLeakAfter(id object, NSTimeInterval delayInSeconds) {
         _existingObjects = [NSHashTable weakObjectsHashTable];
         memoryLeakCheckQueue = dispatch_queue_create("com.zuik.router.object_leak_check_queue", DISPATCH_QUEUE_SERIAL);
     });
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    
+    if ([[object class] respondsToSelector:@selector(sharedInstance)]) {
+        return;
+    }
+#pragma clang diagnostic pop
     __weak id weakObject = object;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC)), memoryLeakCheckQueue, ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delaySecond * NSEC_PER_SEC)), memoryLeakCheckQueue, ^{
         if (_leakedObjects.count > 0) {
             // Check reclaimed objects since last checking
             NSMutableSet<NSString *> *reclaimedObjects = [NSMutableSet setWithArray:_leakedObjects.allKeys];
@@ -567,11 +607,17 @@ void checkMemoryLeakAfter(id object, NSTimeInterval delayInSeconds) {
         }
         
         if (weakObject) {
+#if __has_include("ZIKViewRouter.h")
             if ([weakObject respondsToSelector:@selector(zix_routed)] && [weakObject zix_routed]) {
                 return;
             }
+#endif
             [_existingObjects addObject:weakObject];
             _leakedObjects[[NSString stringWithFormat:@"%p", (void *)weakObject]] = [weakObject description];
+            if (handler) {
+                handler(weakObject);
+                return;
+            }
             if ([weakObject isKindOfClass:[XXViewController class]]) {
                 XXViewController *parent = [weakObject parentViewController];
                 if (parent) {

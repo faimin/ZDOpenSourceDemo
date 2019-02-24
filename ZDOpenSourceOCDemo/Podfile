@@ -92,6 +92,7 @@ def pods_debug
     pod 'GDPerformanceView', :configurations => ['Debug']
 	pod 'FLEX', :configurations => ['Debug']
     pod 'LayoutInspector', :configurations => ['Debug']
+    pod 'ResumableAssert', :configurations => ['Debug']
   	# pod 'SonarKit', :configurations => ['Debug']
 	# pod 'SonarKit/SonarKitLayoutComponentKitSupport', :configurations => ['Debug']
 	# pod 'SonarKit/SKIOSNetworkPlugin', :configurations => ['Debug']

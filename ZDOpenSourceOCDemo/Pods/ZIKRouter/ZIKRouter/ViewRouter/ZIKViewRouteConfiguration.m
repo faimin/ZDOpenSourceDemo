@@ -362,8 +362,8 @@ ZIKRouteAction const ZIKRouteActionPerformOnDestination = @"ZIKRouteActionPerfor
     config.animator = self.animator;
 #endif
     config.addingChildViewHandler = self.addingChildViewHandler;
-    config.popoverConfiguration = [self.popoverConfiguration copy];
-    config.segueConfiguration = [self.segueConfiguration copy];
+    config.popoverConfiguration = self.popoverConfiguration;
+    config.segueConfiguration = self.segueConfiguration;
     config.handleExternalRoute = self.handleExternalRoute;
     return config;
 }
@@ -377,6 +377,82 @@ ZIKRouteAction const ZIKRouteActionPerformOnDestination = @"ZIKRouteActionPerfor
         description = [description stringByAppendingFormat:@",popover config:(%@)",self.popoverConfiguration.description];
     }
     return description;
+}
+
+@end
+
+@interface ZIKViewMakeableConfiguration()
+@property (nonatomic, strong) NSMutableDictionary<NSString *, id> *constructorContainer;
+@end
+@implementation ZIKViewMakeableConfiguration
+@dynamic _prepareDestination;
+
+- (ZIKMakeBlock)makeDestinationWith {
+    if (!_makeDestinationWith) {
+        return ^id{
+            NSAssert(NO, @"makeDestinationWith is not set");
+            return nil;
+        };
+    }
+    return _makeDestinationWith;
+}
+
+- (ZIKConstructBlock)constructDestination {
+    if (!_constructDestination) {
+        return ^{ NSAssert(NO, @"constructDestination is not set"); };
+    }
+    return _constructDestination;
+}
+
+- (NSMutableDictionary<NSString *, id> *)constructorContainer {
+    if (!_constructorContainer) {
+        _constructorContainer =[NSMutableDictionary dictionary];
+    }
+    return _constructorContainer;
+}
+
+- (id)copyWithZone:(nullable NSZone *)zone {
+    ZIKViewMakeableConfiguration *config = [super copyWithZone:zone];
+    config.makeDestination = self.makeDestination;
+    config.makeDestinationWith = _makeDestinationWith;
+    config.makedDestination = self.makedDestination;
+    config.constructDestination = _constructDestination;
+    config.didMakeDestination = self.didMakeDestination;
+    config.constructorContainer = _constructorContainer;
+    return config;
+}
+
+@end
+
+@interface ZIKSwiftViewMakeableConfiguration ()<ZIKConfigurationAsyncMakeable, ZIKConfigurationSyncMakeable>
+@end
+@implementation ZIKSwiftViewMakeableConfiguration
+
+- (ZIKMakeBlock)makeDestinationWith {
+    if (!_makeDestinationWith) {
+        return ^id{
+            NSAssert(NO, @"makeDestinationWith is not set");
+            return nil;
+        };
+    }
+    return _makeDestinationWith;
+}
+
+- (ZIKConstructBlock)constructDestination {
+    if (!_constructDestination) {
+        return ^{ NSAssert(NO, @"constructDestination is not set"); };
+    }
+    return _constructDestination;
+}
+
+- (id)copyWithZone:(nullable NSZone *)zone {
+    ZIKSwiftViewMakeableConfiguration *config = [super copyWithZone:zone];
+    config.makeDestination = self.makeDestination;
+    config.makeDestinationWith = self.makeDestinationWith;
+    config.makedDestination = self.makedDestination;
+    config.constructDestination = self.constructDestination;
+    config.didMakeDestination = self.didMakeDestination;
+    return config;
 }
 
 @end

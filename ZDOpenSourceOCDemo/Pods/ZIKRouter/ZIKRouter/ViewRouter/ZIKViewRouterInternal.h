@@ -9,6 +9,8 @@
 //  LICENSE file in the root directory of this source tree.
 //
 
+#if __has_include("ZIKViewRouter.h")
+
 #import "ZIKViewRouter.h"
 #import "ZIKRouterInternal.h"
 #import "ZIKViewRouteError.h"
@@ -17,8 +19,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface ZIKViewMakeableConfiguration<__covariant Destination> ()
+/// Prepare the destination from the router internal before `prepareDestination:configuration:`.
+@property (nonatomic, copy, nullable) void(^_prepareDestination)(Destination destination);
+@end
+
 /// Internal methods for subclass to override. Use these methods when implementing your custom route.
-@interface ZIKViewRouter<__covariant Destination: id, __covariant RouteConfig: ZIKViewRouteConfiguration *> ()
+@interface ZIKViewRouter<__covariant Destination, __covariant RouteConfig: ZIKViewRouteConfiguration *> ()
 @property (nonatomic, readonly, copy) RouteConfig original_configuration;
 @property (nonatomic, readonly, copy) ZIKViewRemoveConfiguration *original_removeConfiguration;
 
@@ -180,7 +187,7 @@ NS_ASSUME_NONNULL_BEGIN
  AOP support.
  Route with ZIKViewRouteTypeAddAsChildViewController and ZIKViewRouteTypeMakeDestination won't get AOP notification, because they are not complete route for displaying the destination, the destination will get AOP notification when it's really displayed.
  
- Router will be nil when route is from external or AddAsChildViewController/GetDestination route type.
+ Router will be nil when route is from external or AddAsChildViewController/MakeDestination route type.
  
  Source may be nil when remove route, because source may already be deallced.
  */
@@ -233,12 +240,26 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-extern ZIKAnyViewRouterType *_Nullable _ZIKViewRouterToView(Protocol *viewProtocol);
+FOUNDATION_EXTERN ZIKAnyViewRouterType *_Nullable _ZIKViewRouterToView(Protocol *viewProtocol);
 
-extern ZIKAnyViewRouterType *_Nullable _ZIKViewRouterToModule(Protocol *configProtocol);
+FOUNDATION_EXTERN ZIKAnyViewRouterType *_Nullable _ZIKViewRouterToModule(Protocol *configProtocol);
 
-extern Protocol<ZIKViewRoutable> *_Nullable _routableViewProtocolFromObject(id object);
+FOUNDATION_EXTERN ZIKAnyViewRouterType *_Nullable _ZIKViewRouterToIdentifier(NSString *identifier);
 
-extern Protocol<ZIKViewModuleRoutable> *_Nullable _routableViewModuleProtocolFromObject(id object);
+FOUNDATION_EXTERN Protocol<ZIKViewRoutable> *_Nullable _routableViewProtocolFromObject(id object);
+
+FOUNDATION_EXTERN Protocol<ZIKViewModuleRoutable> *_Nullable _routableViewModuleProtocolFromObject(id object);
+
+typedef id  _Nullable (^ZIKViewFactoryBlock)(ZIKViewRouteConfiguration * _Nonnull);
+
+FOUNDATION_EXTERN void _registerViewProtocolWithSwiftFactory(Protocol<ZIKViewRoutable> *viewProtocol, Class viewClass, ZIKViewFactoryBlock function);
+
+FOUNDATION_EXTERN void _registerViewModuleProtocolWithSwiftFactory(Protocol<ZIKViewModuleRoutable> *moduleProtocol, Class viewClass, id(^block)(void));
+
+FOUNDATION_EXTERN void _registerViewIdentifierWithSwiftFactory(NSString *identifier, Class viewClass, ZIKViewFactoryBlock function);
+
+FOUNDATION_EXTERN void _registerViewModuleIdentifierWithSwiftFactory(NSString *identifier, Class viewClass, id(^block)(void));
 
 NS_ASSUME_NONNULL_END
+
+#endif

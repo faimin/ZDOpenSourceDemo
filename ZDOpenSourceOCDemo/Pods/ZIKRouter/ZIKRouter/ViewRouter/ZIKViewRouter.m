@@ -17,6 +17,7 @@
 #import "ZIKViewRouteRegistry.h"
 #import "ZIKRouteRegistryInternal.h"
 #import "ZIKViewRouteRegistryPrivate.h"
+#import "ZIKViewRoute.h"
 #import "ZIKViewRouteError.h"
 #import <objc/runtime.h>
 #import "ZIKRouterRuntime.h"
@@ -1877,13 +1878,23 @@ destinationStateBeforeRoute:(ZIKPresentationState *)destinationStateBeforeRoute
 
 + (void)AOP_notifyAll_router:(nullable ZIKViewRouter *)router didRemoveRouteOnDestination:(id)destination fromSource:(nullable id)source {
     NSParameterAssert([destination conformsToProtocol:@protocol(ZIKRoutableView)]);
+#if DEBUG
+    __block BOOL shouldDetectMemoryLeak = NO;
+#endif
     [ZIKViewRouteRegistry enumerateRoutersForDestinationClass:[destination class] handler:^(ZIKRouterType * _Nonnull route) {
         ZIKViewRouterType *r = (ZIKViewRouterType *)route;
         [r router:router didRemoveRouteOnDestination:destination fromSource:(id)source];
+#if DEBUG
+        if (!r.routerClass || [r.routerClass shouldDetectMemoryLeak]) {
+            if (!shouldDetectMemoryLeak) {
+                shouldDetectMemoryLeak = YES;
+            }
+        }
+#endif
     }];
 #if DEBUG
-    if ([self detectMemoryLeakDelay] > 0) {
-        checkMemoryLeakAfter(destination, [self detectMemoryLeakDelay]);
+    if (shouldDetectMemoryLeak) {
+        zix_checkMemoryLeak(destination, [self detectMemoryLeakDelay], [self didDetectLeakingHandler]);
     }    
 #endif
 }
@@ -1949,6 +1960,9 @@ destinationStateBeforeRoute:(ZIKPresentationState *)destinationStateBeforeRoute
             if (configuration.handleExternalRoute) {
                 [self prepareDestinationForPerforming];
             } else {
+                if (configuration._prepareDestination) {
+                    configuration._prepareDestination(destination);
+                }
                 [self prepareDestination:destination configuration:configuration];
                 [self didFinishPrepareDestination:destination configuration:configuration];
             }
@@ -3813,7 +3827,7 @@ static  ZIKViewRouterType *_Nullable _routerTypeToRegisteredView(Class viewClass
             description = @"Custom";
             break;
         case ZIKViewRouteTypeMakeDestination:
-            description = @"GetDestination";
+            description = @"MakeDestination";
             break;
     }
     return description;
@@ -4209,6 +4223,81 @@ static  ZIKViewRouterType *_Nullable _routerTypeToRegisteredView(Class viewClass
 
 @end
 
+@implementation ZIKViewRouter (RegisterMaking)
+
++ (void)registerViewProtocol:(Protocol<ZIKViewRoutable> *)viewProtocol forMakingView:(Class)viewClass {
+    NSAssert(!ZIKViewRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKViewRouteRegistry registerDestinationProtocol:viewProtocol forMakingDestination:viewClass];
+}
+
++ (void)registerViewProtocol:(Protocol<ZIKViewRoutable> *)viewProtocol forMakingView:(Class)viewClass factory:(id(*)(ZIKViewRouteConfiguration *))function {
+    NSAssert(!ZIKViewRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKViewRouteRegistry registerDestinationProtocol:viewProtocol forMakingDestination:viewClass factoryFunction:function];
+}
+
++ (void)registerViewProtocol:(Protocol<ZIKViewRoutable> *)viewProtocol forMakingView:(Class)viewClass making:(id  _Nullable (^)(ZIKViewRouteConfiguration * _Nonnull))makeDestination {
+    NSParameterAssert([viewClass conformsToProtocol:viewProtocol]);
+    NSAssert(!ZIKViewRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKViewRouteRegistry registerDestinationProtocol:viewProtocol forMakingDestination:viewClass factoryBlock:(id)makeDestination];
+}
+
++ (void)registerModuleProtocol:(Protocol<ZIKViewModuleRoutable> *)configProtocol forMakingView:(Class)viewClass factory:(ZIKViewRouteConfiguration<ZIKConfigurationMakeable> * _Nonnull (*_Nonnull)(void))function {
+    NSAssert(!ZIKViewRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKViewRouteRegistry registerModuleProtocol:configProtocol forMakingDestination:viewClass factoryFunction:function];
+}
+
++ (void)registerModuleProtocol:(Protocol<ZIKViewModuleRoutable> *)configProtocol forMakingView:(Class)viewClass making:(ZIKViewRouteConfiguration<ZIKConfigurationMakeable> *(^)(void))makeConfiguration {
+    NSAssert(!ZIKViewRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKViewRouteRegistry registerModuleProtocol:configProtocol forMakingDestination:viewClass factoryBlock:makeConfiguration];
+}
+
++ (void)registerIdentifier:(NSString *)identifier forMakingView:(Class)viewClass {
+    NSAssert(!ZIKViewRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKViewRouteRegistry registerIdentifier:identifier forMakingDestination:viewClass];
+}
+
++ (void)registerIdentifier:(NSString *)identifier forMakingView:(Class)viewClass factory:(id(*_Nonnull)(ZIKViewRouteConfiguration *))function {
+    NSAssert(!ZIKViewRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKViewRouteRegistry registerIdentifier:identifier forMakingDestination:viewClass factoryFunction:function];
+}
+
++ (void)registerIdentifier:(NSString *)identifier forMakingView:(Class)viewClass making:(id  _Nullable (^)(ZIKViewRouteConfiguration * _Nonnull))makeDestination {
+    NSAssert(!ZIKViewRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKViewRouteRegistry registerIdentifier:identifier forMakingDestination:viewClass factoryBlock:(id)makeDestination];
+}
+
++ (void)registerIdentifier:(NSString *)identifier forMakingView:(Class)viewClass configurationFactory:(ZIKViewRouteConfiguration<ZIKConfigurationMakeable> * _Nonnull (*_Nonnull)(void))function {
+    NSCAssert(!ZIKViewRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKViewRouteRegistry registerIdentifier:identifier forMakingDestination:viewClass configFactoryFunction:function];
+}
+
++ (void)registerIdentifier:(NSString *)identifier forMakingView:(Class)viewClass configurationMaking:(ZIKViewRouteConfiguration<ZIKConfigurationMakeable> *(^)(void))makeConfiguration {
+    NSCAssert(!ZIKViewRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKViewRouteRegistry registerIdentifier:identifier forMakingDestination:viewClass configFactoryBlock:makeConfiguration];
+}
+
+@end
+
+void _registerViewProtocolWithSwiftFactory(Protocol<ZIKViewRoutable> *viewProtocol, Class viewClass, ZIKViewFactoryBlock block) {
+    NSCAssert(!ZIKViewRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKViewRouteRegistry registerDestinationProtocol:viewProtocol forMakingDestination:viewClass factoryBlock:(id)block];
+}
+
+void _registerViewModuleProtocolWithSwiftFactory(Protocol<ZIKViewModuleRoutable> *moduleProtocol, Class viewClass, id(^block)(void)) {
+    NSCAssert(!ZIKViewRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKViewRouteRegistry registerModuleProtocol:moduleProtocol forMakingDestination:viewClass factoryBlock:block];
+}
+
+void _registerViewIdentifierWithSwiftFactory(NSString *identifier, Class viewClass, ZIKViewFactoryBlock block) {
+    NSCAssert(!ZIKViewRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKViewRouteRegistry registerIdentifier:identifier forMakingDestination:viewClass factoryBlock:(id)block];
+}
+
+void _registerViewModuleIdentifierWithSwiftFactory(NSString *identifier, Class viewClass, id(^block)(void)) {
+    NSCAssert(!ZIKViewRouteRegistry.registrationFinished, @"Only register in +registerRoutableDestination.");
+    [ZIKViewRouteRegistry registerIdentifier:identifier forMakingDestination:viewClass configFactoryBlock:block];
+}
+
 @implementation ZIKViewRouter (Private)
 
 + (instancetype)routerFromView:(XXView *)destination source:(XXView *)source {
@@ -4305,12 +4394,26 @@ Protocol<ZIKViewModuleRoutable> *_Nullable _routableViewModuleProtocolFromObject
 
 static NSTimeInterval _detectMemoryLeakDelay = 2;
 
++ (BOOL)shouldDetectMemoryLeak {
+    return _detectMemoryLeakDelay > 0;
+}
+
 + (NSTimeInterval)detectMemoryLeakDelay {
     return _detectMemoryLeakDelay;
 }
 
 + (void)setDetectMemoryLeakDelay:(NSTimeInterval)detectMemoryLeakDelay {
     _detectMemoryLeakDelay = detectMemoryLeakDelay;
+}
+
+static void(^_didDetectLeakingHandler)(id);
+
++ (void(^)(id))didDetectLeakingHandler {
+    return _didDetectLeakingHandler;
+}
+
++ (void)setDidDetectLeakingHandler:(void(^)(id))handler {
+    _didDetectLeakingHandler = handler;
 }
 
 @end

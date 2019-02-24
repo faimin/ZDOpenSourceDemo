@@ -39,12 +39,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-extern ZIKServiceRouterType *_Nullable _ZIKServiceRouterToService(Protocol *serviceProtocol);
+FOUNDATION_EXTERN ZIKServiceRouterType *_Nullable _ZIKServiceRouterToService(Protocol *serviceProtocol);
 
-extern ZIKServiceRouterType *_Nullable _ZIKServiceRouterToModule(Protocol *configProtocol);
+FOUNDATION_EXTERN ZIKServiceRouterType *_Nullable _ZIKServiceRouterToModule(Protocol *configProtocol);
 
-extern Protocol<ZIKServiceRoutable> *_Nullable _routableServiceProtocolFromObject(id object);
+FOUNDATION_EXTERN ZIKAnyServiceRouterType *_Nullable _ZIKServiceRouterToIdentifier(NSString *identifier);
 
-extern Protocol<ZIKServiceModuleRoutable> *_Nullable _routableServiceModuleProtocolFromObject(id object);
+FOUNDATION_EXTERN Protocol<ZIKServiceRoutable> *_Nullable _routableServiceProtocolFromObject(id object);
+
+FOUNDATION_EXTERN Protocol<ZIKServiceModuleRoutable> *_Nullable _routableServiceModuleProtocolFromObject(id object);
+
+typedef id  _Nullable (^ZIKServiceFactoryBlock)(ZIKPerformRouteConfiguration * _Nonnull);
+
+FOUNDATION_EXTERN void _registerServiceProtocolWithSwiftFactory(Protocol<ZIKServiceRoutable> *serviceProtocol, Class serviceClass, ZIKServiceFactoryBlock block);
+
+FOUNDATION_EXTERN void _registerServiceModuleProtocolWithSwiftFactory(Protocol<ZIKServiceModuleRoutable> *serviceProtocol, Class serviceClass, id(^block)(void));
+
+FOUNDATION_EXTERN void _registerServiceIdentifierWithSwiftFactory(NSString *identifier, Class serviceClass, ZIKServiceFactoryBlock block);
+
+FOUNDATION_EXTERN void _registerServiceModuleIdentifierWithSwiftFactory(NSString *identifier, Class serviceClass, id(^block)(void));
 
 NS_ASSUME_NONNULL_END

@@ -13,6 +13,7 @@
 #import "ZIKRouteConfigurationPrivate.h"
 #import <objc/runtime.h>
 #import "ZIKRouterRuntime.h"
+#import "ZIKRouterInternal.h"
 
 @interface ZIKRouteConfiguration ()
 
@@ -20,19 +21,12 @@
 
 @implementation ZIKRouteConfiguration
 
-- (instancetype)init {
-    if (self = [super init]) {
-        NSAssert1(ZIKRouter_classSelfImplementingMethod([self class], @selector(copyWithZone:), false), @"configuration (%@) must override -copyWithZone:, because it will be deep copied when router is initialized. You can use -setPropertiesFromConfiguration: to quickly set properties to copy object in Objective-C.",[self class]);
-        
-    }
-    return self;
-}
-
 - (id)copyWithZone:(nullable NSZone *)zone {
     ZIKRouteConfiguration *config = [[self class] new];
     config.errorHandler = self.errorHandler;
     config.performerErrorHandler = self.performerErrorHandler;
     config.stateNotifier = self.stateNotifier;
+    config._prepareDestination = self._prepareDestination;
     return config;
 }
 
@@ -114,6 +108,12 @@
     [_userInfo addEntriesFromDictionary:userInfo];
 }
 
+- (void)removeUserInfo {
+    if (_userInfo) {
+        [_userInfo removeAllObjects];
+    }
+}
+
 - (id)copyWithZone:(nullable NSZone *)zone {
     ZIKPerformRouteConfiguration *config = [super copyWithZone:zone];
     config.prepareDestination = self.prepareDestination;
@@ -124,6 +124,82 @@
     if (_userInfo) {
         config.userInfo = _userInfo;
     }
+    return config;
+}
+
+@end
+
+@interface ZIKServiceMakeableConfiguration ()
+@property (nonatomic, strong) NSMutableDictionary<NSString *, id> *constructorContainer;
+@end
+@implementation ZIKServiceMakeableConfiguration
+@dynamic _prepareDestination;
+
+- (ZIKMakeBlock)makeDestinationWith {
+    if (!_makeDestinationWith) {
+        return ^id{
+            NSAssert(NO, @"makeDestinationWith is not set");
+            return nil;
+        };
+    }
+    return _makeDestinationWith;
+}
+
+- (ZIKConstructBlock)constructDestination {
+    if (!_constructDestination) {
+        return ^{ NSAssert(NO, @"constructDestination is not set"); };
+    }
+    return _constructDestination;
+}
+
+- (NSMutableDictionary<NSString *, id> *)constructorContainer {
+    if (!_constructorContainer) {
+        _constructorContainer = [NSMutableDictionary dictionary];
+    }
+    return _constructorContainer;
+}
+
+- (id)copyWithZone:(nullable NSZone *)zone {
+    ZIKServiceMakeableConfiguration *config = [super copyWithZone:zone];
+    config.makeDestination = self.makeDestination;
+    config.makeDestinationWith = _makeDestinationWith;
+    config.makedDestination = self.makedDestination;
+    config.constructDestination = _constructDestination;
+    config.didMakeDestination = self.didMakeDestination;
+    config.constructorContainer = _constructorContainer;
+    return config;
+}
+
+@end
+
+@interface ZIKSwiftServiceMakeableConfiguration ()<ZIKConfigurationAsyncMakeable, ZIKConfigurationSyncMakeable>
+@end
+@implementation ZIKSwiftServiceMakeableConfiguration
+
+- (ZIKMakeBlock)makeDestinationWith {
+    if (!_makeDestinationWith) {
+        return ^id{
+            NSAssert(NO, @"makeDestinationWith is not set");
+            return nil;
+        };
+    }
+    return _makeDestinationWith;
+}
+
+- (ZIKConstructBlock)constructDestination {
+    if (!_constructDestination) {
+        return ^{ NSAssert(NO, @"constructDestination is not set"); };
+    }
+    return _constructDestination;
+}
+
+- (id)copyWithZone:(nullable NSZone *)zone {
+    ZIKSwiftServiceMakeableConfiguration *config = [super copyWithZone:zone];
+    config.makeDestination = self.makeDestination;
+    config.makeDestinationWith = self.makeDestinationWith;
+    config.makedDestination = self.makedDestination;
+    config.constructDestination = self.constructDestination;
+    config.didMakeDestination = self.didMakeDestination;
     return config;
 }
 

@@ -13,6 +13,22 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface ZIKRouteConfiguration ()
+/// Prepare the destination from the router internal before `prepareDestination:configuration:`.
+@property (nonatomic, copy, nullable) void(^_prepareDestination)(id destination);
+@end
+
+@interface ZIKServiceMakeableConfiguration<__covariant Destination> ()
+/// Prepare the destination from the router internal before `prepareDestination:configuration:`.
+@property (nonatomic, copy, nullable) void(^_prepareDestination)(Destination destination);
+@end
+
+#define DeclareMakeableConfig(Config, Protocol)    \
+@interface Config (Protocol) <Protocol>    \
+@end    \
+@implementation Config (Protocol) \
+@end    \
+
 /// Internal methods for subclass.
 @interface ZIKRouter<__covariant Destination: id, __covariant RouteConfig: ZIKPerformRouteConfiguration *, __covariant RemoveConfig: ZIKRemoveRouteConfiguration *> ()
 /// Previous state.

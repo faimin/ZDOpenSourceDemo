@@ -40,8 +40,8 @@ NSErrorDomain const ZIKRouteErrorDomain = @"ZIKRouteErrorDomain";
     
     if (self = [super init]) {
         _state = ZIKRouterStateUnrouted;
-        _configuration = [configuration copy];
-        _removeConfiguration = [removeConfiguration copy];
+        _configuration = configuration;
+        _removeConfiguration = removeConfiguration;
         _stateSema = dispatch_semaphore_create(1);
     }
     return self;
@@ -109,6 +109,8 @@ NSErrorDomain const ZIKRouteErrorDomain = @"ZIKRouteErrorDomain";
     }
     if (state == ZIKRouterStateRouting || state == ZIKRouterStateRemoving) {
         [[self class] increaseRecursiveDepth];
+    } else if (state == ZIKRouterStateRemoved) {
+        [_configuration removeUserInfo];
     }
     
     [self willChangeValueForKey:@"preState"];
@@ -143,7 +145,17 @@ NSErrorDomain const ZIKRouteErrorDomain = @"ZIKRouteErrorDomain";
 - (void)performWithConfiguration:(ZIKPerformRouteConfiguration *)configuration {
     NSAssert(self.state == ZIKRouterStateRouting, @"State should be routing in -performWithConfiguration:");
     NSAssert([configuration isKindOfClass:[[[self class] defaultRouteConfiguration] class]], @"When using custom configuration class，you must override +defaultRouteConfiguration to return your custom configuration instance.");
-    id destination = [self destinationWithConfiguration:configuration];
+    id destination;
+    if ([configuration conformsToProtocol:@protocol(ZIKConfigurationSyncMakeable)]) {
+        id<ZIKConfigurationSyncMakeable> makeableConfiguration = (id<ZIKConfigurationSyncMakeable>)configuration;
+        id makedDestination = makeableConfiguration.makedDestination;
+        if (makedDestination) {
+            destination = makedDestination;
+        }
+    }
+    if (destination == nil) {
+        destination = [self destinationWithConfiguration:configuration];
+    }
     [self attachDestination:destination];
     if (destination == nil) {
         [self endPerformRouteWithError:[ZIKRouter errorWithCode:ZIKRouteErrorDestinationUnavailable localizedDescriptionFormat:@"Destination from router is nil. Maybe your configuration is invalid (%@), or there is a bug in the router.", configuration]];
@@ -402,7 +414,7 @@ NSErrorDomain const ZIKRouteErrorDomain = @"ZIKRouteErrorDomain";
         NSError *error = [ZIKRouter errorWithCode:ZIKRouteErrorActionFailed localizedDescriptionFormat:@"State should be ZIKRouterStateRouted when removeRoute, current state:%ld, configuration:%@",self.state,self.original_configuration];
         [[self class] notifyGlobalErrorWithRouter:self action:action error:error];
         if (removeConfigBuilder) {
-            ZIKRemoveRouteConfiguration *configuration = [self.original_removeConfiguration copy];
+            ZIKRemoveRouteConfiguration *configuration = self.original_removeConfiguration;
             removeConfigBuilder(configuration);
             if (configuration.errorHandler) {
                 configuration.errorHandler(action, error);
@@ -424,7 +436,7 @@ NSErrorDomain const ZIKRouteErrorDomain = @"ZIKRouteErrorDomain";
                                 errorDescription:description];
         if (removeConfigBuilder) {
             NSError *error = [ZIKRouter errorWithCode:ZIKRouteErrorActionFailed localizedDescription:description];
-            ZIKRemoveRouteConfiguration *configuration = [self.original_removeConfiguration copy];
+            ZIKRemoveRouteConfiguration *configuration = self.original_removeConfiguration;
             removeConfigBuilder(configuration);
             if (configuration.errorHandler) {
                 configuration.errorHandler(action, error);
@@ -604,8 +616,32 @@ NSErrorDomain const ZIKRouteErrorDomain = @"ZIKRouteErrorDomain";
     if (configuration.prepareDestination) {
         configuration.prepareDestination(destination);
     }
-    [self prepareDestination:destination configuration:configuration];
+    BOOL hasMakedDestination = NO;
+    if ([configuration conformsToProtocol:@protocol(ZIKConfigurationSyncMakeable)]) {
+        id<ZIKConfigurationSyncMakeable> makeableConfiguration = (id<ZIKConfigurationSyncMakeable>)configuration;
+        if (makeableConfiguration.makedDestination == destination) {
+            hasMakedDestination = YES;            
+        }
+    }
+    if (!hasMakedDestination) {
+        if (configuration._prepareDestination) {
+            configuration._prepareDestination(destination);
+        }
+        [self prepareDestination:destination configuration:configuration];
+    }
     [self didFinishPrepareDestination:destination configuration:configuration];
+    if ([configuration conformsToProtocol:@protocol(ZIKConfigurationAsyncMakeable)] && [configuration respondsToSelector:@selector(didMakeDestination)]) {
+        id<ZIKConfigurationAsyncMakeable> makeableConfig = (id)configuration;
+        void(^didMakeDestination)(id) = makeableConfig.didMakeDestination;
+        if (didMakeDestination) {
+            makeableConfig.didMakeDestination = nil;
+            didMakeDestination(destination);
+        }
+    }
+    if (hasMakedDestination) {
+        id<ZIKConfigurationSyncMakeable> makeableConfiguration = (id<ZIKConfigurationSyncMakeable>)configuration;
+        makeableConfiguration.makedDestination = nil;
+    }
 }
 
 - (void)endPerformRouteWithSuccess {
@@ -629,6 +665,9 @@ NSErrorDomain const ZIKRouteErrorDomain = @"ZIKRouteErrorDomain";
     ZIKRemoveRouteConfiguration *configuration = self.original_removeConfiguration;
     if (configuration.prepareDestination && destination) {
         configuration.prepareDestination(destination);
+    }
+    if (configuration._prepareDestination && destination) {
+        configuration._prepareDestination(destination);
     }
 }
 
@@ -887,7 +926,7 @@ NSErrorDomain const ZIKRouteErrorDomain = @"ZIKRouteErrorDomain";
 #pragma mark Getter/Setter
 
 - (ZIKPerformRouteConfiguration *)configuration {
-    return [_configuration copy];
+    return _configuration;
 }
 
 - (ZIKPerformRouteConfiguration *)original_configuration {
@@ -895,7 +934,7 @@ NSErrorDomain const ZIKRouteErrorDomain = @"ZIKRouteErrorDomain";
 }
 
 - (ZIKRemoveRouteConfiguration *)removeConfiguration {
-    return [_removeConfiguration copy];
+    return _removeConfiguration;
 }
 
 - (ZIKRemoveRouteConfiguration *)original_removeConfiguration {

@@ -92,6 +92,8 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "${PODS_ROOT}/LayoutInspector/LayoutInspector/Assets/LayoutInspectorAssets.xcassets"
+  install_resource "${PODS_ROOT}/LayoutInspector/LayoutInspector/LayoutInspector.storyboard"
   install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
