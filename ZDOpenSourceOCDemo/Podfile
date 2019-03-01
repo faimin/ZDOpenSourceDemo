@@ -84,6 +84,8 @@ end
 
 def pods_tools
 	pod 'DirectoryWatchdog'
+    pod 'coobjc'    # 协程
+    pod 'MMKV'      # mmap
 end
 
 def pods_debug

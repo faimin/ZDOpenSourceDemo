@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <JLRoutes/JLRoutes.h>
 #import <GDPerformanceView/GDPerformanceMonitor.h>
 #import "ZDTraceHandler.h"
 #if __has_include(<Buglife/Buglife.h>)
@@ -39,6 +40,15 @@
     [self setup];
     
     //[ZDTraceHandler traceAllClass];
+    
+    // :xx/:xx xx都是路径参数,对应URL中`?`之前的，`?`之后的参数在block中的parameters中
+    [[JLRoutes routesForScheme:@"ZDRoute"] addRoutes:@[@"/push/:viewController"] handler:^BOOL(NSDictionary<NSString *,id> * _Nonnull parameters) {
+        NSString *vcName = parameters[@"viewController"];
+        UIViewController *vc = [NSClassFromString(vcName) new];
+        UINavigationController *nav = (UINavigationController *)self.window.rootViewController;
+        [nav pushViewController:vc animated:YES];
+        return YES;
+    }];
 
     return YES;
 }
@@ -76,6 +86,10 @@
     // bugMonitor
     [[Buglife sharedBuglife] startWithEmail:@"fuxianchao2009@163.com"];
 #endif
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    return [JLRoutes routeURL:url];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
