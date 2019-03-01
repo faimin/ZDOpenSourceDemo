@@ -126,7 +126,7 @@ PODS:
     - PromiseKit/When
   - PromiseKit/When (1.7.7):
     - PromiseKit/Promise
-  - PromisesObjC (1.2.6)
+  - PromisesObjC (1.2.7)
   - RDVTabBarController (1.2.0)
   - ReactiveObjC (3.1.0)
   - ResumableAssert (1.0.0)
@@ -328,7 +328,7 @@ SPEC CHECKSUMS:
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   PromiseKit: 9007df2f9e2ef725467084ab3880cf932ab935a4
-  PromisesObjC: 60326422b6d692b9718a80666e67a9433862aa88
+  PromisesObjC: 7b28ddd1e78cce8f80f1ada927d2217663a9c672
   RDVTabBarController: b6d63a7fc49b00568ba07255c6171edc737ad833
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   ResumableAssert: 2575c1cc00e9db8f1aa09f95bd61fa41a82bfe54
@@ -348,6 +348,6 @@ SPEC CHECKSUMS:
   ZDToolKit: 8e29f3f864c270a07f07adb2d4243d1c091f509d
   ZIKRouter: 0dd063c9de403aea574ee17af7d15a0b856411c2
 
-PODFILE CHECKSUM: e204abe1692d4960df047d48c76e446ed0a00907
+PODFILE CHECKSUM: 13b37470626e8c0bb7a9721e231f420d5c604b4e
 
 COCOAPODS: 1.5.3

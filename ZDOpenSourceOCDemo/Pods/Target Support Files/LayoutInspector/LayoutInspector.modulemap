@@ -1,4 +1,4 @@
-module LayoutInspector {
+framework module LayoutInspector {
   umbrella header "LayoutInspector-umbrella.h"
 
   export *
