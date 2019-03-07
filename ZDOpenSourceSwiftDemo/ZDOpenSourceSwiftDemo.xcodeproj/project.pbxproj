@@ -27,6 +27,7 @@
 		FA55967720CFCFF600B5AF9D /* ZDFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55967620CFCFF600B5AF9D /* ZDFeedViewModel.swift */; };
 		FA55967920CFD00D00B5AF9D /* ZDFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55967820CFD00D00B5AF9D /* ZDFeedModel.swift */; };
 		FA55967B20CFDF4300B5AF9D /* ZDFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55967A20CFDF4300B5AF9D /* ZDFeedController.swift */; };
+		FA581701223136FC00A6F8D9 /* ZDSwiftFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA581700223136FC00A6F8D9 /* ZDSwiftFunction.swift */; };
 		FABACA5621F815B800AE1E8D /* ZDExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABACA5521F815B800AE1E8D /* ZDExtension.swift */; };
 		FAFD822421EC727400D2E0EC /* UIApplication+ZDUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD822321EC727400D2E0EC /* UIApplication+ZDUtility.swift */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,7 @@
 		FA55967620CFCFF600B5AF9D /* ZDFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDFeedViewModel.swift; sourceTree = "<group>"; };
 		FA55967820CFD00D00B5AF9D /* ZDFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDFeedModel.swift; sourceTree = "<group>"; };
 		FA55967A20CFDF4300B5AF9D /* ZDFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDFeedController.swift; sourceTree = "<group>"; };
+		FA581700223136FC00A6F8D9 /* ZDSwiftFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDSwiftFunction.swift; sourceTree = "<group>"; };
 		FABACA5521F815B800AE1E8D /* ZDExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDExtension.swift; sourceTree = "<group>"; };
 		FAFD822321EC727400D2E0EC /* UIApplication+ZDUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+ZDUtility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -269,6 +271,7 @@
 			children = (
 				FAFD822321EC727400D2E0EC /* UIApplication+ZDUtility.swift */,
 				FABACA5521F815B800AE1E8D /* ZDExtension.swift */,
+				FA581700223136FC00A6F8D9 /* ZDSwiftFunction.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				DA2513311F349D0B00633093 /* ViewController.swift in Sources */,
 				DA2513001F349CAF00633093 /* AppDelegate.swift in Sources */,
 				FA55967720CFCFF600B5AF9D /* ZDFeedViewModel.swift in Sources */,
+				FA581701223136FC00A6F8D9 /* ZDSwiftFunction.swift in Sources */,
 				FAFD822421EC727400D2E0EC /* UIApplication+ZDUtility.swift in Sources */,
 				FA55967920CFD00D00B5AF9D /* ZDFeedModel.swift in Sources */,
 				DAA098281F3B373B00303DD4 /* YogaKitViewController.swift in Sources */,
