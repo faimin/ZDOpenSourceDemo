@@ -16,7 +16,7 @@ def pods_reactive
 end
 
 def pods_promise
-	pod 'PromiseKit', '~> 1.7'
+	pod 'PromiseKit'
 	pod 'PromisesObjC'
 end
 
@@ -144,7 +144,7 @@ target 'ZDOpenSourceOCDemo' do
 end
 
 
-$dynamic_framework = ['LayoutInspector']
+$dynamic_framework = ['LayoutInspector', 'PromiseKit']
 pre_install do |installer|
     installer.pod_targets.each do |pod|
         if $dynamic_framework.include?(pod.name)

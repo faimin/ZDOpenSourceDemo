@@ -17,6 +17,8 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
+  - coobjc (1.0.1):
+    - fishhook (~> 0.2.0)
   - DirectoryWatchdog (1.1.0)
   - fishhook (0.2)
   - FLEX (2.4.0)
@@ -65,18 +67,12 @@ PODS:
   - libextobjc/UmbrellaHeader (0.6)
   - libffi-core (1.2.0)
   - LinqToObjectiveC (2.1.0)
-  - lottie-ios (2.5.2)
+  - lottie-ios (2.5.3)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
+  - MMKV (1.0.17)
   - Objection (1.6.1)
   - ObjectiveSugar (1.1.0)
-  - OMGHTTPURLRQ (3.2.4):
-    - OMGHTTPURLRQ/RQ (= 3.2.4)
-  - OMGHTTPURLRQ/FormURLEncode (3.2.4)
-  - OMGHTTPURLRQ/RQ (3.2.4):
-    - OMGHTTPURLRQ/FormURLEncode
-    - OMGHTTPURLRQ/UserAgent
-  - OMGHTTPURLRQ/UserAgent (3.2.4)
   - PINCache (3.0.1-beta.6):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
     - PINCache/Core (= 3.0.1-beta.6)
@@ -92,40 +88,15 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0-beta.13):
     - PINCache (= 3.0.1-beta.6)
     - PINRemoteImage/Core
-  - PromiseKit (1.7.7):
-    - PromiseKit/CALayer (= 1.7.7)
-    - PromiseKit/NSNotificationCenter (= 1.7.7)
-    - PromiseKit/NSURLConnection (= 1.7.7)
-    - PromiseKit/Pause (= 1.7.7)
-    - PromiseKit/UIActionSheet (= 1.7.7)
-    - PromiseKit/UIAlertView (= 1.7.7)
-    - PromiseKit/UIView (= 1.7.7)
-    - PromiseKit/UIViewController (= 1.7.7)
-    - PromiseKit/Until (= 1.7.7)
-    - PromiseKit/When (= 1.7.7)
-  - PromiseKit/CALayer (1.7.7):
-    - PromiseKit/Promise
-  - PromiseKit/NSNotificationCenter (1.7.7):
-    - PromiseKit/Promise
-  - PromiseKit/NSURLConnection (1.7.7):
-    - OMGHTTPURLRQ (~> 3.2)
-    - PromiseKit/Promise
-  - PromiseKit/Pause (1.7.7):
-    - PromiseKit/Promise
-  - PromiseKit/Promise (1.7.7)
-  - PromiseKit/UIActionSheet (1.7.7):
-    - PromiseKit/Promise
-  - PromiseKit/UIAlertView (1.7.7):
-    - PromiseKit/Promise
-  - PromiseKit/UIView (1.7.7):
-    - PromiseKit/Promise
-  - PromiseKit/UIViewController (1.7.7):
-    - PromiseKit/Promise
-  - PromiseKit/Until (1.7.7):
-    - PromiseKit/Promise
-    - PromiseKit/When
-  - PromiseKit/When (1.7.7):
-    - PromiseKit/Promise
+  - PromiseKit (6.8.3):
+    - PromiseKit/CorePromise (= 6.8.3)
+    - PromiseKit/Foundation (= 6.8.3)
+    - PromiseKit/UIKit (= 6.8.3)
+  - PromiseKit/CorePromise (6.8.3)
+  - PromiseKit/Foundation (6.8.3):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.8.3):
+    - PromiseKit/CorePromise
   - PromisesObjC (1.2.7)
   - RDVTabBarController (1.2.0)
   - ReactiveObjC (3.1.0)
@@ -175,14 +146,14 @@ PODS:
   - ZDNetWorkHelper (0.3.1):
     - AFNetworking (~> 3.1)
   - ZDToolKit (0.0.4):
-    - ZDToolKit/no-arc (= 0.0.4)
     - ZDToolKit/ZDAutoLayout (= 0.0.4)
     - ZDToolKit/ZDCategory (= 0.0.4)
+    - ZDToolKit/ZDDebug (= 0.0.4)
     - ZDToolKit/ZDMacros (= 0.0.4)
+    - ZDToolKit/ZDMRC (= 0.0.4)
     - ZDToolKit/ZDRuntime (= 0.0.4)
     - ZDToolKit/ZDSubclass (= 0.0.4)
     - ZDToolKit/ZDTools (= 0.0.4)
-  - ZDToolKit/no-arc (0.0.4)
   - ZDToolKit/ZDAutoLayout (0.0.4)
   - ZDToolKit/ZDCategory (0.0.4):
     - ZDToolKit/ZDCategory/Foundation (= 0.0.4)
@@ -193,7 +164,9 @@ PODS:
   - ZDToolKit/ZDCategory/UIKit (0.0.4):
     - ZDToolKit/ZDMacros
     - ZDToolKit/ZDTools/ZDProxy
+  - ZDToolKit/ZDDebug (0.0.4)
   - ZDToolKit/ZDMacros (0.0.4)
+  - ZDToolKit/ZDMRC (0.0.4)
   - ZDToolKit/ZDRuntime (0.0.4):
     - libffi-core
   - ZDToolKit/ZDSubclass (0.0.4):
@@ -214,6 +187,7 @@ PODS:
 
 DEPENDENCIES:
   - ChameleonFramework
+  - coobjc
   - DirectoryWatchdog
   - fishhook
   - FLEX
@@ -226,9 +200,10 @@ DEPENDENCIES:
   - lottie-ios
   - Masonry
   - MBProgressHUD
+  - MMKV
   - Objection
   - ObjectiveSugar
-  - PromiseKit (~> 1.7)
+  - PromiseKit
   - PromisesObjC
   - RDVTabBarController
   - ReactiveObjC
@@ -252,6 +227,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - ChameleonFramework
+    - coobjc
     - DirectoryWatchdog
     - fishhook
     - FLEX
@@ -265,9 +241,9 @@ SPEC REPOS:
     - lottie-ios
     - Masonry
     - MBProgressHUD
+    - MMKV
     - Objection
     - ObjectiveSugar
-    - OMGHTTPURLRQ
     - PINCache
     - PINOperation
     - PINRemoteImage
@@ -302,12 +278,13 @@ CHECKOUT OPTIONS:
     :commit: 2227d3e89ae94078d739987d802a6aceb08659ee
     :git: https://github.com/faimin/ZDNetWorkHelper
   ZDToolKit:
-    :commit: e8c9074355908d61e90b123cfc7211743a6582a5
+    :commit: ee88dfd0e5e2a8386057d95e6032a093f6cace81
     :git: https://github.com/faimin/ZDToolKit
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  coobjc: 1954a85a5d83854810418114bf841fb60980b1b6
   DirectoryWatchdog: 85f0a92a52bc0d3d66346d80629227b44500506a
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
@@ -318,16 +295,16 @@ SPEC CHECKSUMS:
   libextobjc: aed8b7d2b07f511c1a7ecaacb33ea03e327c69b7
   libffi-core: c4049ed88381fee5c0a31d26c860fc427d3c301c
   LinqToObjectiveC: f0e40c137a458b6b9725c4c7b6a575c0c72e3aec
-  lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
+  lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MMKV: 890ba85ecf1d05546ed2c4d29fe618dbf92e3cf4
   Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
   ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
-  OMGHTTPURLRQ: 9ac96bdf5c90a33f75836630729ea1adc312a9ed
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
-  PromiseKit: 9007df2f9e2ef725467084ab3880cf932ab935a4
+  PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
   PromisesObjC: 7b28ddd1e78cce8f80f1ada927d2217663a9c672
   RDVTabBarController: b6d63a7fc49b00568ba07255c6171edc737ad833
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
@@ -345,9 +322,9 @@ SPEC CHECKSUMS:
   YYDispatchQueuePool: 3dfb2274bcc74207688dde8ac6f7bdd46871dd7b
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZDNetWorkHelper: 969b637a7fc84ff15364011a905821cf8f6d64b9
-  ZDToolKit: 8e29f3f864c270a07f07adb2d4243d1c091f509d
+  ZDToolKit: 2dc08339509ad9b9fe36472d4bc6f46e12c5ce30
   ZIKRouter: 0dd063c9de403aea574ee17af7d15a0b856411c2
 
-PODFILE CHECKSUM: 13b37470626e8c0bb7a9721e231f420d5c604b4e
+PODFILE CHECKSUM: 0dc368216b77b58a4169853fd27b57da49efaee7
 
 COCOAPODS: 1.5.3

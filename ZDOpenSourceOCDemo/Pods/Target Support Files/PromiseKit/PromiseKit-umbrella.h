@@ -10,19 +10,16 @@
 #endif
 #endif
 
-#import "CALayer+PromiseKit.h"
-#import "NSNotificationCenter+PromiseKit.h"
-#import "NSURLConnection+PromiseKit.h"
-#import "Promise+Pause.h"
-#import "PromiseKit.h"
-#import "Promise.h"
 #import "fwd.h"
-#import "UIActionSheet+PromiseKit.h"
-#import "UIAlertView+PromiseKit.h"
-#import "UIView+PromiseKit.h"
-#import "UIViewController+PromiseKit.h"
-#import "Promise+Until.h"
-#import "Promise+When.h"
+#import "AnyPromise.h"
+#import "PromiseKit.h"
+#import "NSURLSession+AnyPromise.h"
+#import "NSTask+AnyPromise.h"
+#import "NSNotificationCenter+AnyPromise.h"
+#import "PMKFoundation.h"
+#import "PMKUIKit.h"
+#import "UIView+AnyPromise.h"
+#import "UIViewController+AnyPromise.h"
 
 FOUNDATION_EXPORT double PromiseKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char PromiseKitVersionString[];
