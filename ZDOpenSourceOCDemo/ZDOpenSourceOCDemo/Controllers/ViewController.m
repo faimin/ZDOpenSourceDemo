@@ -18,6 +18,7 @@
 #endif
 #import <ZDToolKit/ZDToolKit.h>
 #import <JLRoutes/JLRoutes.h>
+#import <ZIKRouter/ZIKViewRouter.h>
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0
@@ -79,15 +80,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString *text = self.dataSource[indexPath.row];
-    NSString *vcName = [text stringByAppendingString:@"ViewController"];
-    //Class aClass = objc_getClass(vcName.UTF8String);
-    NSString *url = [NSString stringWithFormat:@"ZDRoute://push/%@?arg1=hello&arg2=world", vcName];// @"ZDRoute://push?viewController=%@arg1=hello&arg2=world"
-    [[JLRoutes routesForScheme:@"ZDRoute"] routeURL:[NSURL URLWithString:url]];
-    /*
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url] options:@{UIApplicationOpenURLOptionUniversalLinksOnly : @NO} completionHandler:^(BOOL success) {
+    
+    BOOL useZIKRouter = YES;
+    if (useZIKRouter) {
+        NSString *routerName = [text stringByAppendingString:@"ViewRouter"];
+        Class aClass = objc_getClass(routerName.UTF8String);
+        [aClass performPath:ZIKViewRoutePath.pushFrom(self)];
+    }
+    else {
+        NSString *vcName = [text stringByAppendingString:@"ViewController"];
+        NSString *url = [NSString stringWithFormat:@"ZDRoute://push/%@?arg1=hello&arg2=world", vcName];// @"ZDRoute://push?viewController=%@arg1=hello&arg2=world"
+#if 1
+        [[JLRoutes routesForScheme:@"ZDRoute"] routeURL:[NSURL URLWithString:url]];
+#else
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url] options:@{UIApplicationOpenURLOptionUniversalLinksOnly : @NO} completionHandler:^(BOOL success) {
         //
-    }];
-     */
+        }];
+#endif
+    }
 }
 
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_9_0

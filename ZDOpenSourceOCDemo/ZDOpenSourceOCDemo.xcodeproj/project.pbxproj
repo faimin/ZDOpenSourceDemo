@@ -33,6 +33,10 @@
 		EB3B741034C35E8762C84CA8 /* libPods-ZDOpenSourceOCDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DCE918B21B2CB2FB984D64 /* libPods-ZDOpenSourceOCDemoTests.a */; };
 		FA4390741FDA350D00342B06 /* Xtrace.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA4390731FDA350D00342B06 /* Xtrace.mm */; };
 		FA4390781FDA366A00342B06 /* ZDTraceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4390771FDA366A00342B06 /* ZDTraceHandler.m */; };
+		FA5816E42230C20000A6F8D9 /* LottieViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5816E32230C20000A6F8D9 /* LottieViewRouter.m */; };
+		FA5816E72230C21D00A6F8D9 /* TextureViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5816E62230C21D00A6F8D9 /* TextureViewRouter.m */; };
+		FA5816EA2230C23E00A6F8D9 /* YogaKitListViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5816E92230C23E00A6F8D9 /* YogaKitListViewRouter.m */; };
+		FA5816ED2230C53400A6F8D9 /* YogaKitViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5816EC2230C53400A6F8D9 /* YogaKitViewRouter.m */; };
 		FA6244E8200F60E5007A9EDC /* ZDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA6244E7200F60E5007A9EDC /* ZDBaseViewController.m */; };
 		FA682E511F9E04D0008C3D50 /* TextureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA682E501F9E04D0008C3D50 /* TextureCell.m */; };
 		FA682E581F9E18F9008C3D50 /* TextureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA682E571F9E18F9008C3D50 /* TextureModel.m */; };
@@ -111,6 +115,14 @@
 		FA4390761FDA366A00342B06 /* ZDTraceHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDTraceHandler.h; sourceTree = "<group>"; };
 		FA4390771FDA366A00342B06 /* ZDTraceHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDTraceHandler.m; sourceTree = "<group>"; };
 		FA52023809EA456FA45299D9 /* Pods-ZDOpenSourceOCDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemoUITests/Pods-ZDOpenSourceOCDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FA5816E22230C20000A6F8D9 /* LottieViewRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LottieViewRouter.h; sourceTree = "<group>"; };
+		FA5816E32230C20000A6F8D9 /* LottieViewRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LottieViewRouter.m; sourceTree = "<group>"; };
+		FA5816E52230C21D00A6F8D9 /* TextureViewRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureViewRouter.h; sourceTree = "<group>"; };
+		FA5816E62230C21D00A6F8D9 /* TextureViewRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextureViewRouter.m; sourceTree = "<group>"; };
+		FA5816E82230C23E00A6F8D9 /* YogaKitListViewRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogaKitListViewRouter.h; sourceTree = "<group>"; };
+		FA5816E92230C23E00A6F8D9 /* YogaKitListViewRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YogaKitListViewRouter.m; sourceTree = "<group>"; };
+		FA5816EB2230C53400A6F8D9 /* YogaKitViewRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogaKitViewRouter.h; sourceTree = "<group>"; };
+		FA5816EC2230C53400A6F8D9 /* YogaKitViewRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YogaKitViewRouter.m; sourceTree = "<group>"; };
 		FA6244E6200F60E5007A9EDC /* ZDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZDBaseViewController.h; sourceTree = "<group>"; };
 		FA6244E7200F60E5007A9EDC /* ZDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZDBaseViewController.m; sourceTree = "<group>"; };
 		FA682E4F1F9E04D0008C3D50 /* TextureCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureCell.h; sourceTree = "<group>"; };
@@ -199,6 +211,7 @@
 				DA2512B21F349B5700633093 /* Views */,
 				DA4005B51F36C60900260064 /* Models */,
 				FA682E591F9E19F7008C3D50 /* ViewModels */,
+				FAAB78752230BB37000350E6 /* Router */,
 				FABBF13C1FCFC93D000B7D16 /* Category */,
 				FA4390751FDA362300342B06 /* Tools */,
 				FA75583B1FA02E7B008ABCC0 /* SystemFile */,
@@ -458,6 +471,21 @@
 			name = SystemFile;
 			sourceTree = "<group>";
 		};
+		FAAB78752230BB37000350E6 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FA5816E22230C20000A6F8D9 /* LottieViewRouter.h */,
+				FA5816E32230C20000A6F8D9 /* LottieViewRouter.m */,
+				FA5816E52230C21D00A6F8D9 /* TextureViewRouter.h */,
+				FA5816E62230C21D00A6F8D9 /* TextureViewRouter.m */,
+				FA5816EB2230C53400A6F8D9 /* YogaKitViewRouter.h */,
+				FA5816EC2230C53400A6F8D9 /* YogaKitViewRouter.m */,
+				FA5816E82230C23E00A6F8D9 /* YogaKitListViewRouter.h */,
+				FA5816E92230C23E00A6F8D9 /* YogaKitListViewRouter.m */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		FABBF13C1FCFC93D000B7D16 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -712,11 +740,14 @@
 			files = (
 				FA4390741FDA350D00342B06 /* Xtrace.mm in Sources */,
 				DA4005B31F36C52500260064 /* YYFPSLabel.m in Sources */,
+				FA5816EA2230C23E00A6F8D9 /* YogaKitListViewRouter.m in Sources */,
 				FABE238420BBD61F00929BB3 /* InspectiveCArm64.c in Sources */,
+				FA5816E72230C21D00A6F8D9 /* TextureViewRouter.m in Sources */,
 				DAA098451F42C86400303DD4 /* TextureViewController.m in Sources */,
 				FA682E5C1F9E1A17008C3D50 /* TextureViewModel.m in Sources */,
 				DA2512801F349AF300633093 /* AppDelegate.mm in Sources */,
 				DAF1937B1FDADA08003F6FDA /* YogaKitListViewController.m in Sources */,
+				FA5816E42230C20000A6F8D9 /* LottieViewRouter.m in Sources */,
 				DAF193781FDAD869003F6FDA /* YogaCell.m in Sources */,
 				DA4005B41F36C52500260064 /* YYWeakProxy.m in Sources */,
 				FA4390781FDA366A00342B06 /* ZDTraceHandler.m in Sources */,
@@ -725,6 +756,7 @@
 				FA9649741FDF7C54007BDD88 /* ZDTemplateCellHandler.m in Sources */,
 				DAA0984A1F442D5800303DD4 /* ZDPlayground.m in Sources */,
 				FA9649711FDF7A1E007BDD88 /* YogaKitListViewModel.m in Sources */,
+				FA5816ED2230C53400A6F8D9 /* YogaKitViewRouter.m in Sources */,
 				DA2512B31F349B5700633093 /* ViewController.m in Sources */,
 				FA682E511F9E04D0008C3D50 /* TextureCell.m in Sources */,
 				FABBF13F1FCFC99A000B7D16 /* UIWindow+ZDMotionShake.m in Sources */,
