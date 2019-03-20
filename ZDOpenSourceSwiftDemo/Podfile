@@ -79,8 +79,8 @@ end
 
 $static_framework = ['FlipperKit', 'Flipper', 'Folly',
 'CocoaAsyncSocket', 'ComponentKit', 'DoubleConversion',
-'glog', 'PeerTalk', 'RSocket', 'Yoga', 'YogaKit',
-'CocoaLibEvent', 'OpenSSL-Static', 'boost-for-react-native'
+'glog', 'PeerTalk', 'RSocket', 'CocoaLibEvent',
+'OpenSSL-Static', 'boost-for-react-native'
 ]
 
 pre_install do |installer|
