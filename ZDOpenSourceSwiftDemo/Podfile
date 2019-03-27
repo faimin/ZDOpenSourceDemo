@@ -97,6 +97,8 @@ post_install do |installer|
         target.build_configurations.each do |config|
             if target.name == 'LayoutKit'
                 config.build_settings['SWIFT_VERSION'] = '4.1'
+            elsif target.name == 'YogaKit'
+                config.build_settings['SWIFT_VERSION'] = '5'
             end
         end
     end
