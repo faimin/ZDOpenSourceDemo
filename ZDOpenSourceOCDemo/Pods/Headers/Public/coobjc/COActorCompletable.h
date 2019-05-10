@@ -1,1 +1,1 @@
-../../../coobjc/coobjc/api/COActorCompletable.h
+../../../coobjc/coobjc/actor/COActorCompletable.h

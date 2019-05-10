@@ -17,11 +17,12 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
-  - coobjc (1.0.1):
-    - fishhook (~> 0.2.0)
+  - cocore (1.2.0)
+  - coobjc (1.2.0):
+    - cocore (~> 1.2.0)
   - DirectoryWatchdog (1.1.0)
   - fishhook (0.2)
-  - FLEX (2.4.0)
+  - FLEX (3.0.0)
   - GDPerformanceView (1.3.1)
   - IGListKit (3.4.0):
     - IGListKit/Default (= 3.4.0)
@@ -67,10 +68,10 @@ PODS:
   - libextobjc/UmbrellaHeader (0.6)
   - libffi-core (1.2.0)
   - LinqToObjectiveC (2.1.0)
-  - lottie-ios (2.5.3)
+  - lottie-ios (3.0.4)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
-  - MMKV (1.0.17)
+  - MMKV (1.0.19)
   - Objection (1.6.1)
   - ObjectiveSugar (1.1.0)
   - PINCache (3.0.1-beta.6):
@@ -88,56 +89,55 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0-beta.13):
     - PINCache (= 3.0.1-beta.6)
     - PINRemoteImage/Core
-  - PromiseKit (6.8.3):
-    - PromiseKit/CorePromise (= 6.8.3)
-    - PromiseKit/Foundation (= 6.8.3)
-    - PromiseKit/UIKit (= 6.8.3)
-  - PromiseKit/CorePromise (6.8.3)
-  - PromiseKit/Foundation (6.8.3):
+  - PromiseKit (6.8.4):
+    - PromiseKit/CorePromise (= 6.8.4)
+    - PromiseKit/Foundation (= 6.8.4)
+    - PromiseKit/UIKit (= 6.8.4)
+  - PromiseKit/CorePromise (6.8.4)
+  - PromiseKit/Foundation (6.8.4):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.8.3):
+  - PromiseKit/UIKit (6.8.4):
     - PromiseKit/CorePromise
-  - PromisesObjC (1.2.7)
   - RDVTabBarController (1.2.0)
-  - ReactiveObjC (3.1.0)
+  - ReactiveObjC (3.1.1)
   - ResumableAssert (1.0.0)
   - RSSwizzle (0.1.0)
   - RTRootNavigationController (0.7.1):
     - RTRootNavigationController/Core (= 0.7.1)
   - RTRootNavigationController/Core (0.7.1)
   - SVProgressHUD (2.2.5)
-  - Texture (2.8):
-    - Texture/AssetsLibrary (= 2.8)
-    - Texture/Core (= 2.8)
-    - Texture/MapKit (= 2.8)
-    - Texture/Photos (= 2.8)
-    - Texture/PINRemoteImage (= 2.8)
-    - Texture/Video (= 2.8)
-  - Texture/AssetsLibrary (2.8):
+  - Texture (2.8.1):
+    - Texture/AssetsLibrary (= 2.8.1)
+    - Texture/Core (= 2.8.1)
+    - Texture/MapKit (= 2.8.1)
+    - Texture/Photos (= 2.8.1)
+    - Texture/PINRemoteImage (= 2.8.1)
+    - Texture/Video (= 2.8.1)
+  - Texture/AssetsLibrary (2.8.1):
     - Texture/Core
-  - Texture/Core (2.8)
-  - Texture/MapKit (2.8):
+  - Texture/Core (2.8.1)
+  - Texture/MapKit (2.8.1):
     - Texture/Core
-  - Texture/Photos (2.8):
+  - Texture/Photos (2.8.1):
     - Texture/Core
-  - Texture/PINRemoteImage (2.8):
+  - Texture/PINRemoteImage (2.8.1):
     - PINRemoteImage/iOS (= 3.0.0-beta.13)
     - PINRemoteImage/PINCache
     - Texture/Core
-  - Texture/Video (2.8):
+  - Texture/Video (2.8.1):
     - Texture/Core
   - Toast (4.0.0)
-  - Typhoon (4.0.7):
-    - Typhoon/DeallocNotifier (= 4.0.7)
-    - Typhoon/IntrospectionUtils (= 4.0.7)
-    - Typhoon/no-arc (= 4.0.7)
-  - Typhoon/DeallocNotifier (4.0.7)
-  - Typhoon/IntrospectionUtils (4.0.7)
-  - Typhoon/no-arc (4.0.7):
+  - Typhoon (4.0.8):
+    - Typhoon/DeallocNotifier (= 4.0.8)
+    - Typhoon/IntrospectionUtils (= 4.0.8)
+    - Typhoon/no-arc (= 4.0.8)
+  - Typhoon/DeallocNotifier (4.0.8)
+  - Typhoon/IntrospectionUtils (4.0.8)
+  - Typhoon/no-arc (4.0.8):
     - Typhoon/IntrospectionUtils
-  - Yoga (1.9.0)
-  - YogaKit (1.10.0):
-    - Yoga (~> 1.9)
+  - Yoga (1.14.0)
+  - YogaKit (1.14.0):
+    - Yoga (~> 1.14)
   - YTKNetwork (2.0.4):
     - AFNetworking (~> 3.0)
   - YYCache (1.0.4)
@@ -178,11 +178,11 @@ PODS:
   - ZDToolKit/ZDTools/ProtocolKit (0.0.4)
   - ZDToolKit/ZDTools/ZDPromise (0.0.4)
   - ZDToolKit/ZDTools/ZDProxy (0.0.4)
-  - ZIKRouter (1.0.10):
-    - ZIKRouter/ServiceRouter (= 1.0.10)
-    - ZIKRouter/ViewRouter (= 1.0.10)
-  - ZIKRouter/ServiceRouter (1.0.10)
-  - ZIKRouter/ViewRouter (1.0.10):
+  - ZIKRouter (1.0.11):
+    - ZIKRouter/ServiceRouter (= 1.0.11)
+    - ZIKRouter/ViewRouter (= 1.0.11)
+  - ZIKRouter/ServiceRouter (1.0.11)
+  - ZIKRouter/ViewRouter (1.0.11):
     - ZIKRouter/ServiceRouter
 
 DEPENDENCIES:
@@ -204,7 +204,6 @@ DEPENDENCIES:
   - Objection
   - ObjectiveSugar
   - PromiseKit
-  - PromisesObjC
   - RDVTabBarController
   - ReactiveObjC
   - ResumableAssert
@@ -227,6 +226,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - ChameleonFramework
+    - cocore
     - coobjc
     - DirectoryWatchdog
     - fishhook
@@ -248,7 +248,6 @@ SPEC REPOS:
     - PINOperation
     - PINRemoteImage
     - PromiseKit
-    - PromisesObjC
     - RDVTabBarController
     - ReactiveObjC
     - ResumableAssert
@@ -278,16 +277,17 @@ CHECKOUT OPTIONS:
     :commit: 2227d3e89ae94078d739987d802a6aceb08659ee
     :git: https://github.com/faimin/ZDNetWorkHelper
   ZDToolKit:
-    :commit: ee88dfd0e5e2a8386057d95e6032a093f6cace81
+    :commit: bf6a0ea8a3da70b8ed26b1024c0a9b2896873a5e
     :git: https://github.com/faimin/ZDToolKit
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  coobjc: 1954a85a5d83854810418114bf841fb60980b1b6
+  cocore: cc9d76229458f286a632d9cecb63bd699bd3529d
+  coobjc: 090a460e32e90d0e820e64c31cf7b79dece51a7c
   DirectoryWatchdog: 85f0a92a52bc0d3d66346d80629227b44500506a
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
-  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
+  FLEX: d66c759bce0f6ebbbf472c742380874d846f2883
   GDPerformanceView: d70d646bf7022a3dfd64222e4966f403bfffef19
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
@@ -295,36 +295,35 @@ SPEC CHECKSUMS:
   libextobjc: aed8b7d2b07f511c1a7ecaacb33ea03e327c69b7
   libffi-core: c4049ed88381fee5c0a31d26c860fc427d3c301c
   LinqToObjectiveC: f0e40c137a458b6b9725c4c7b6a575c0c72e3aec
-  lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
+  lottie-ios: 55a2de40418f8de2b155efaba4d4d1a025a5c570
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
-  MMKV: 890ba85ecf1d05546ed2c4d29fe618dbf92e3cf4
+  MMKV: d362c29ab6ad839a16fcdf9e5b454944ecce588b
   Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
   ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
-  PromiseKit: 94c6e781838c5bf4717677d0d882b0e7250c80fc
-  PromisesObjC: 7b28ddd1e78cce8f80f1ada927d2217663a9c672
+  PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
   RDVTabBarController: b6d63a7fc49b00568ba07255c6171edc737ad833
-  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   ResumableAssert: 2575c1cc00e9db8f1aa09f95bd61fa41a82bfe54
   RSSwizzle: d561958f595028bfcef98c7d55c318b3878a61c6
   RTRootNavigationController: afa6913402be26f8326f7f37fc1550aa67baddcc
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  Texture: fc6e0157201f3a6e503d364c147b1872e365cef4
+  Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  Typhoon: f89030797a7c8a23ee85aa7c7dbdfd2e5d8a8471
-  Yoga: aaae8abea68951f60bee05f6277d3eed90bb91bb
-  YogaKit: 3107fd5c2c233b540a1c5e376b95ac2c40398d6b
+  Typhoon: f8901ef1ad0e2fa520cda0f668492dd33353f7dc
+  Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
+  YogaKit: 5d1dc899cecd5946e5a758a0c3997704a4b48d01
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYDispatchQueuePool: 3dfb2274bcc74207688dde8ac6f7bdd46871dd7b
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   ZDNetWorkHelper: 969b637a7fc84ff15364011a905821cf8f6d64b9
   ZDToolKit: 2dc08339509ad9b9fe36472d4bc6f46e12c5ce30
-  ZIKRouter: 0dd063c9de403aea574ee17af7d15a0b856411c2
+  ZIKRouter: bb3fd3af44042b9797241346fe5bd47d3ac77a2f
 
-PODFILE CHECKSUM: 0dc368216b77b58a4169853fd27b57da49efaee7
+PODFILE CHECKSUM: afcf8e67e82c922b08906687538911a5782059ec
 
 COCOAPODS: 1.5.3

@@ -84,6 +84,9 @@ UIKIT_EXTERN NSArray<UICollectionViewLayoutAttributes *> *ZD_LayoutAttributesFor
 
 #pragma mark - String
 #pragma mark -
+/// 计算文本尺寸
+FOUNDATION_EXPORT CGSize ZD_CalculateStringSize(NSString *text, UIFont *textFont, CGSize constrainSize, void(^_Nullable extendAttributesBlock)(NSMutableDictionary *attributes));
+
 ///  设置文字行间距
 ///  @param string    原始字符串
 ///  @param lineSpace 行间距
@@ -198,6 +201,8 @@ FOUNDATION_EXPORT NSString *ZD_MacAddress(void);
 FOUNDATION_EXPORT NSArray *ZD_IPAddresses(void);
 /// 获取当前的内存使用情况
 FOUNDATION_EXPORT double ZD_MemoryUsage(void);
+/// 判断当前设备是否处于静音状态
+BOOL ZD_IsMutedOfDevice(NSString *resourceName, NSString *resourceType);
 
 #pragma mark - Function
 #pragma mark -

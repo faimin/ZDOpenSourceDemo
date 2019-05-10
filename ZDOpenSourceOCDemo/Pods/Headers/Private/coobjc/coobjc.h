@@ -1,1 +1,1 @@
-../../../coobjc/coobjc/api/coobjc.h
+../../../coobjc/coobjc/coobjc.h

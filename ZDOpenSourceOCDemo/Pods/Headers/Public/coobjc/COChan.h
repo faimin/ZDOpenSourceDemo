@@ -1,1 +1,1 @@
-../../../coobjc/coobjc/api/COChan.h
+../../../coobjc/coobjc/co/COChan.h

@@ -1,1 +1,1 @@
-../../../coobjc/coobjc/api/COActorMessage.h
+../../../coobjc/coobjc/actor/COActorMessage.h

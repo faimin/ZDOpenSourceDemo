@@ -1,1 +1,1 @@
-../../../coobjc/coobjc/api/COActorChan.h
+../../../coobjc/coobjc/actor/COActorChan.h

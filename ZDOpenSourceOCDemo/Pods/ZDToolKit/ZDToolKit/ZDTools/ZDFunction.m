@@ -14,6 +14,7 @@
 #import <Accelerate/Accelerate.h>
 #import <AVFoundation/AVAsset.h>
 #import <libkern/OSAtomic.h>
+#import <AudioToolbox/AudioToolbox.h>
 // -------- IP & Address --------
 #import <sys/sockio.h>
 #import <sys/ioctl.h>
@@ -522,6 +523,106 @@ NSArray<UICollectionViewLayoutAttributes *> *ZD_LayoutAttributesForElementsInRec
 
 #pragma mark - String
 #pragma mark -
+
+/*
+static inline CGSize CTFramesetterSuggestFrameSizeForAttributedStringWithConstraints(CTFramesetterRef framesetter, NSAttributedString *attributedString, CGSize size, NSUInteger numberOfLines) {
+    
+    CFRange rangeToSize = CFRangeMake(0, (CFIndex)[attributedString length]);
+    CGSize constraints = CGSizeMake(size.width, CGFLOAT_MAX);
+    
+    if (numberOfLines == 1) {
+        // If there is one line, the size that fits is the full width of the line
+        constraints = CGSizeMake(MAXFLOAT, CGFLOAT_MAX);
+    } else {
+        // If the line count of the label more than 1, limit the range to size to the number of lines that have been set
+        CGMutablePathRef path = CGPathCreateMutable();
+        CGPathAddRect(path, NULL, CGRectMake(0.0f, 0.0f, constraints.width, CGFLOAT_MAX));
+        CTFrameRef frame = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), path, NULL);
+        CFArrayRef lines = CTFrameGetLines(frame);
+        
+        if (numberOfLines > 0 && CFArrayGetCount(lines) > 0) {
+            NSInteger lastVisibleLineIndex = MIN((CFIndex)numberOfLines, CFArrayGetCount(lines)) - 1;
+            CTLineRef lastVisibleLine = CFArrayGetValueAtIndex(lines, lastVisibleLineIndex);
+            
+            CFRange rangeToLayout = CTLineGetStringRange(lastVisibleLine);
+            rangeToSize = CFRangeMake(0, rangeToLayout.location + rangeToLayout.length);
+        }
+        
+        CFRelease(frame);
+        CFRelease(path);
+    }
+    
+    CGSize suggestedSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, rangeToSize, NULL, constraints, NULL);
+    
+    return CGSizeMake(ceilf(suggestedSize.width), ceilf(suggestedSize.height));
+}
+
+OS_OVERLOADABLE CGSize ZD_CalculateStringSize(NSString *text, UIFont *customFont, CGSize constrainedToSize, CGFloat lineSpace, NSUInteger numberOfLines) {
+    customFont = customFont ?: [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    CGFloat minimumLineHeight = customFont.pointSize, maximumLineHeight = minimumLineHeight, linespace = lineSpace;
+    CTFontRef fontRef = CTFontCreateWithName((__bridge CFStringRef)customFont.fontName, customFont.pointSize, NULL);
+    CTLineBreakMode lineBreakMode = kCTLineBreakByWordWrapping;
+    //Apply paragraph settings
+    CTTextAlignment alignment = kCTTextAlignmentLeft;
+    CTParagraphStyleSetting settings[] = {
+        {kCTParagraphStyleSpecifierAlignment, sizeof(alignment), &alignment},
+        {kCTParagraphStyleSpecifierMinimumLineHeight, sizeof(minimumLineHeight), &minimumLineHeight},
+        {kCTParagraphStyleSpecifierMaximumLineHeight, sizeof(maximumLineHeight), &maximumLineHeight},
+        {kCTParagraphStyleSpecifierMinimumLineSpacing, sizeof(linespace), &linespace},
+        {kCTParagraphStyleSpecifierMaximumLineSpacing, sizeof(linespace), &linespace},
+        {kCTParagraphStyleSpecifierLineBreakMode, sizeof(CTLineBreakMode), &lineBreakMode}
+    };
+    
+    CTParagraphStyleRef style = CTParagraphStyleCreate(settings, sizeof(settings) / sizeof(settings[0]));
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                (__bridge id)fontRef, (NSString *)kCTFontAttributeName,
+                                (__bridge id)style, (NSString *)kCTParagraphStyleAttributeName,
+                                nil];
+    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:text attributes:attributes];
+    
+    CFAttributedStringRef cfAttributedString = (__bridge CFAttributedStringRef)attributeString;
+    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)cfAttributedString);
+    CGSize suggestSize = CTFramesetterSuggestFrameSizeForAttributedStringWithConstraints(framesetter, attributeString, constrainedToSize, numberOfLines);
+    //CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRangeMake(0, [string length]), NULL, size, NULL);
+    CFRelease(framesetter);
+    CFRelease(fontRef);
+    CFRelease(style);
+    attributeString = nil;
+    attributes = nil;
+    return suggestSize;
+}
+*/
+
+CGSize ZD_CalculateStringSize(NSString *text, UIFont *textFont, CGSize constrainSize, void(^extendAttributesBlock)(NSMutableDictionary *attributes)) {
+    
+    if (text.length == 0) {
+        return CGSizeZero;
+    }
+    
+    if (CGSizeEqualToSize(constrainSize, CGSizeZero)) {
+        constrainSize = (CGSize){CGFLOAT_MAX, CGFLOAT_MAX};
+    }
+    
+    NSMutableDictionary *attributes = @{}.mutableCopy;
+    attributes[NSFontAttributeName] = textFont;
+    attributes[NSParagraphStyleAttributeName] = ({
+        NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
+        paragraph.lineBreakMode = NSLineBreakByWordWrapping;
+        paragraph;
+    });
+    
+    if (extendAttributesBlock) {
+        extendAttributesBlock(attributes);
+    }
+    
+    CGSize textSize = [text boundingRectWithSize:constrainSize
+                                         options:(NSStringDrawingUsesLineFragmentOrigin |
+                                                  NSStringDrawingTruncatesLastVisibleLine)
+                                      attributes:attributes
+                                         context:nil].size;
+    return CGSizeMake(ceil(textSize.width), ceil(textSize.height));
+}
+
 /// 设置文字行间距
 OS_OVERLOADABLE NSMutableAttributedString *ZD_GenerateAttributeString(NSString *originString, CGFloat lineSpace, CGFloat fontSize) {
 	NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
@@ -1155,6 +1256,38 @@ double ZD_MemoryUsage(void) {
     double memoryUsageInMB = kerr == KERN_SUCCESS ? (info.resident_size / 1024.0 / 1024.0) : 0.0;
     
     return memoryUsageInMB;
+}
+
+static CFTimeInterval startPlayTime;
+NS_INLINE void _ZD_PlaySoundCompletionCallback(SystemSoundID ssID, void *clientData) {
+    void(^callback)(BOOL) = (__bridge void (^)(BOOL))(clientData);
+    
+    AudioServicesRemoveSystemSoundCompletion(ssID);
+    // 播放结束时记录时间差，如果小于0.1s则认为是静音
+    CFTimeInterval playDuring = CACurrentMediaTime() - startPlayTime;
+    BOOL isMuted = playDuring < 0.1;
+    NSLog(@"%@", isMuted ? @"静音状态" : @"非静音状态");
+    if (callback) {
+        callback(isMuted);
+    }
+}
+BOOL ZD_IsMutedOfDevice(NSString *resourceName, NSString *resourceType) {
+    // 记录开始播放时间
+    startPlayTime = CACurrentMediaTime();
+    // 假设本地存放一个长度为0.2s的空白音频，detection.aiff
+    //CFURLRef soundFileURLRef = CFBundleCopyResourceURL(CFBundleGetMainBundle(), CFSTR("detection"), CFSTR("aiff"), NULL);
+    CFURLRef soundFileURLRef = CFBundleCopyResourceURL(CFBundleGetMainBundle(), (__bridge CFStringRef)resourceName, (__bridge CFStringRef)resourceType, NULL);
+    SystemSoundID soundFileID;
+    AudioServicesCreateSystemSoundID(soundFileURLRef, &soundFileID);
+    
+    __block BOOL isMuted = NO;
+    __auto_type callback = ^(BOOL muted){
+        isMuted = muted;
+    };
+    AudioServicesAddSystemSoundCompletion(soundFileID, NULL, NULL, _ZD_PlaySoundCompletionCallback, (__bridge void *)callback);
+    AudioServicesPlaySystemSound(soundFileID);
+    
+    return isMuted;
 }
 
 #pragma mark - Function
