@@ -9,7 +9,7 @@
 import UIKit
 import ObjectiveC.runtime
 
-class ViewController: UIViewController {
+class ViewController: ZDBaseViewController {
     var dataSource: [AnyClass] = []
     
     let ZDReuseCellIndentifier = "ReuseCell"

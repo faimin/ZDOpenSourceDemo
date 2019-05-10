@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZDFeedController: UIViewController {
+class ZDFeedController: ZDBaseViewController {
 
     var dataSource = [Feed]();
     

@@ -24,6 +24,7 @@
 		FA15D42020D26EDB00F4AFBC /* ZDMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15D41F20D26EDB00F4AFBC /* ZDMovieModel.swift */; };
 		FA15D42220D26EFB00F4AFBC /* ZDMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15D42120D26EFB00F4AFBC /* ZDMovieViewModel.swift */; };
 		FA15D42420D3607800F4AFBC /* ZDMovieListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA15D42320D3607800F4AFBC /* ZDMovieListController.swift */; };
+		FA2EEDEC22530141008EADDC /* ZDBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2EEDEB22530141008EADDC /* ZDBaseViewController.swift */; };
 		FA55967720CFCFF600B5AF9D /* ZDFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55967620CFCFF600B5AF9D /* ZDFeedViewModel.swift */; };
 		FA55967920CFD00D00B5AF9D /* ZDFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55967820CFD00D00B5AF9D /* ZDFeedModel.swift */; };
 		FA55967B20CFDF4300B5AF9D /* ZDFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA55967A20CFDF4300B5AF9D /* ZDFeedController.swift */; };
@@ -82,6 +83,7 @@
 		FA15D41F20D26EDB00F4AFBC /* ZDMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDMovieModel.swift; sourceTree = "<group>"; };
 		FA15D42120D26EFB00F4AFBC /* ZDMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDMovieViewModel.swift; sourceTree = "<group>"; };
 		FA15D42320D3607800F4AFBC /* ZDMovieListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDMovieListController.swift; sourceTree = "<group>"; };
+		FA2EEDEB22530141008EADDC /* ZDBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDBaseViewController.swift; sourceTree = "<group>"; };
 		FA55966B20CF871000B5AF9D /* Playground_Codable.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground_Codable.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FA55967620CFCFF600B5AF9D /* ZDFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDFeedViewModel.swift; sourceTree = "<group>"; };
 		FA55967820CFD00D00B5AF9D /* ZDFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDFeedModel.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 		DA25132D1F349D0B00633093 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA2EEDEB22530141008EADDC /* ZDBaseViewController.swift */,
 				DA25132E1F349D0B00633093 /* ViewController.swift */,
 				DAA098271F3B373B00303DD4 /* YogaKitViewController.swift */,
 				FA55967A20CFDF4300B5AF9D /* ZDFeedController.swift */,
@@ -459,7 +462,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ZDOpenSourceSwiftDemo/Pods-ZDOpenSourceSwiftDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Buglife/Buglife.framework",
 				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
@@ -485,8 +487,8 @@
 				"${BUILT_PRODUCTS_DIR}/PromisesSwift/Promises.framework",
 				"${BUILT_PRODUCTS_DIR}/RSSwizzle/RSSwizzle.framework",
 				"${BUILT_PRODUCTS_DIR}/ResponseDetective/ResponseDetective.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework",
@@ -500,7 +502,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Buglife.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cartography.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
@@ -526,8 +527,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Promises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSSwizzle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ResponseDetective.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AsyncDisplayKit.framework",
@@ -573,6 +574,7 @@
 				FA55967720CFCFF600B5AF9D /* ZDFeedViewModel.swift in Sources */,
 				FA581701223136FC00A6F8D9 /* ZDSwiftFunction.swift in Sources */,
 				FAFD822421EC727400D2E0EC /* UIApplication+ZDUtility.swift in Sources */,
+				FA2EEDEC22530141008EADDC /* ZDBaseViewController.swift in Sources */,
 				FA55967920CFD00D00B5AF9D /* ZDFeedModel.swift in Sources */,
 				DAA098281F3B373B00303DD4 /* YogaKitViewController.swift in Sources */,
 				FA15D42220D26EFB00F4AFBC /* ZDMovieViewModel.swift in Sources */,

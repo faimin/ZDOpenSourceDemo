@@ -11,7 +11,7 @@ import UIKit
 import YogaKit
 import LifetimeTracker
 
-class YogaKitViewController: UIViewController, LifetimeTrackable {
+class YogaKitViewController: ZDBaseViewController, LifetimeTrackable {
     static var lifetimeConfiguration: LifetimeConfiguration = LifetimeConfiguration(maxCount: 1, groupName: "YogaKitViewController")
 
     override func viewDidLoad() {
@@ -105,4 +105,21 @@ class YogaKitViewController: UIViewController, LifetimeTrackable {
     }
     */
 
+}
+
+// https://juejin.im/post/5c6a0b6ef265da2de660f83f
+// https://useyourloaf.com/blog/state-restoration-with-swift-structs/
+extension YogaKitViewController {
+    
+    override func encodeRestorableState(with coder: NSCoder) {
+        coder.encode(self.view, forKey: "rootView")
+        super.encodeRestorableState(with: coder)
+    }
+    
+    override func decodeRestorableState(with coder: NSCoder) {
+        if let rootView = coder.decodeObject(forKey: "rootView") as? UIView {
+            self.view = rootView
+        }
+        super.decodeRestorableState(with: coder)
+    }
 }

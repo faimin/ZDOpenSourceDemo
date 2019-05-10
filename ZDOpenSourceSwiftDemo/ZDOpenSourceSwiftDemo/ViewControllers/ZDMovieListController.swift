@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZDMovieListController: UIViewController {
+class ZDMovieListController: ZDBaseViewController {
     
     var dataSource: [ZDMovieModel]?
     let viewModel = ZDMovieViewModel()

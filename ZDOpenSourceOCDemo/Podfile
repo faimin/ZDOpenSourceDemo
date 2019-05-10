@@ -143,12 +143,13 @@ target 'ZDOpenSourceOCDemo' do
 
 end
 
-
+# https://github.com/facebook/flipper/issues/254
 $dynamic_framework = ['LayoutInspector', 'PromiseKit']
 pre_install do |installer|
     installer.pod_targets.each do |pod|
         if $dynamic_framework.include?(pod.name)
-            pod.host_requires_frameworks = true
+            #pod.host_requires_frameworks = true
+            pod.instance_variable_set(:@host_requires_frameworks, true)
         end
     end
 end
@@ -160,7 +161,7 @@ post_install do |installer|
             #关闭block内直接引用全局变量的警告
             config.build_settings['CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'] = 'NO'
             if target.name == 'PromiseKit' || target.name == 'YogaKit' || target.name == 'Wormholy'
-                config.build_settings['SWIFT_VERSION'] = '4.2'
+                config.build_settings['SWIFT_VERSION'] = '5'
             elsif target.name == 'ReactiveObjC'
                 #关闭`This block declaration is not a prototype,Insert ‘void'`警告
                 #config.build_settings['CLANG_WARN_STRICT_PROTOTYPES'] = 'NO'

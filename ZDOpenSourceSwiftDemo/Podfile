@@ -14,7 +14,7 @@ def pods_swift
   # network
   pod 'Alamofire'
   pod 'ObjectMapper'
-  pod 'AlamofireObjectMapper'
+  #pod 'AlamofireObjectMapper'
   pod 'Kingfisher'
   pod 'ResponseDetective'
   # autolayout
@@ -76,6 +76,7 @@ end
 # the pre_install section.  This will cause Flipper and
 # it's dependencies to be static and all other pods to
 # be dynamic.
+# https://github.com/facebook/flipper/issues/254
 
 $static_framework = ['FlipperKit', 'Flipper', 'Folly',
 'CocoaAsyncSocket', 'ComponentKit', 'DoubleConversion',
@@ -86,7 +87,8 @@ $static_framework = ['FlipperKit', 'Flipper', 'Folly',
 pre_install do |installer|
     installer.pod_targets.each do |pod|
         if $static_framework.include?(pod.name)
-            pod.host_requires_frameworks = false
+            #pod.host_requires_frameworks = false
+            pod.instance_variable_set(:@host_requires_frameworks, false)
         end
     end
 end
@@ -97,8 +99,8 @@ post_install do |installer|
         target.build_configurations.each do |config|
             if target.name == 'LayoutKit'
                 config.build_settings['SWIFT_VERSION'] = '4.1'
-            elsif target.name == 'YogaKit'
-                config.build_settings['SWIFT_VERSION'] = '5'
+            elsif target.name == 'AlamofireObjectMapper'
+                config.build_settings['SWIFT_VERSION'] = '4.2'
             end
         end
     end
