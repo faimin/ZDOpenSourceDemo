@@ -1,6 +1,4 @@
 # Uncomment the next line to define a global platform for your project
-source 'https://github.com/facebook/Sonar.git'
-source 'https://github.com/CocoaPods/Specs'
 
 platform :ios, '10.0'
 inhibit_all_warnings!
@@ -39,17 +37,17 @@ def pods_network
 end
 
 def pods_animation
-    pod 'lottie-ios'
+  pod 'lottie-ios'
 end
 
 def pods_tabBarController
 	pod 'RDVTabBarController'
-    pod 'RTRootNavigationController'
+  pod 'RTRootNavigationController'
 end
 
 def pods_extension
 	pod 'ObjectiveSugar', :inhibit_warnings => true
-    pod 'LinqToObjectiveC'
+  pod 'LinqToObjectiveC'
 end
 
 def pods_color
@@ -58,8 +56,8 @@ end
 
 def pods_toast
 	pod 'SVProgressHUD'
-    pod 'MBProgressHUD'
-    pod 'Toast'
+  pod 'MBProgressHUD'
+  pod 'Toast'
 end
 
 def pods_cache
@@ -72,33 +70,39 @@ end
 
 def pods_injection
 	pod 'libextobjc'
-    pod 'Objection'
-    pod 'Typhoon'
+  pod 'Objection'
+  pod 'Typhoon'
 end
 
 def pods_swizzle
 	pod 'fishhook'
-    pod 'RSSwizzle'
+  pod 'RSSwizzle'
 end
 
 def pods_tools
 	pod 'DirectoryWatchdog'
-    pod 'coobjc'    # 协程
-    pod 'MMKV'      # mmap
+  pod 'coobjc'    # 协程
+  pod 'MMKV'      # mmap
+end
+
+def pod_flipper
+  flipperkit_version = '0.20.0'
+    
+  pod 'FlipperKit', '~>' + flipperkit_version
+  pod 'FlipperKit/FlipperKitLayoutComponentKitSupport', '~>' + flipperkit_version
+  pod 'FlipperKit/SKIOSNetworkPlugin', '~>' + flipperkit_version
+  pod 'FlipperKit/FlipperKitUserDefaultsPlugin', '~>' + flipperkit_version
 end
 
 def pods_debug
 	# pod 'KZPlayground', :inhibit_warnings => true
 	# pod 'Buglife', :configurations => ['Debug']
-    pod 'GDPerformanceView', :configurations => ['Debug']
+  pod 'GDPerformanceView', :configurations => ['Debug']
 	pod 'FLEX', :configurations => ['Debug']
-    pod 'LayoutInspector', :configurations => ['Debug']
-    pod 'ResumableAssert', :configurations => ['Debug']
-  	# pod 'SonarKit', :configurations => ['Debug']
-	# pod 'SonarKit/SonarKitLayoutComponentKitSupport', :configurations => ['Debug']
-	# pod 'SonarKit/SKIOSNetworkPlugin', :configurations => ['Debug']
-	# pod 'SonarKit/SonarKitLayoutPlugin', :configurations => ['Debug']
-	# pod 'SonarKit/SonarKitNetworkPlugin', :configurations => ['Debug']
+  pod 'LayoutInspector', :configurations => ['Debug']
+  pod 'ResumableAssert', :configurations => ['Debug']
+  
+  pod_flipper
 end
 
 # ----------------------------
@@ -125,6 +129,7 @@ end
 target 'ZDOpenSourceOCDemo' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
+  supports_swift_versions '>= 4.0', '<= 5.0' # cocoaPods 1.7
 
   # Pods for ZDOpenSourceOCDemo
   pods_oc
@@ -152,20 +157,33 @@ pre_install do |installer|
     end
 end
 
+#config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'NO' #可以让pod中的类调用[UIApplication shareApplication]
+#关闭`This block declaration is not a prototype,Insert ‘void'`警告
+#config.build_settings['CLANG_WARN_STRICT_PROTOTYPES'] = 'NO'
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
-            #config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'NO' #可以让pod中的类调用[UIApplication shareApplication]
             #关闭block内直接引用全局变量的警告
             config.build_settings['CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'] = 'NO'
-            if target.name == 'PromiseKit' || target.name == 'YogaKit'
-                config.build_settings['SWIFT_VERSION'] = '5.0'
-            elsif target.name == 'ReactiveObjC'
-                #关闭`This block declaration is not a prototype,Insert ‘void'`警告
-                #config.build_settings['CLANG_WARN_STRICT_PROTOTYPES'] = 'NO'
-            end
         end
     end
+    
+    # **************** flipper ************
+    # https://github.com/facebook/flipper/blob/master/docs/getting-started.md
+    file_name = Dir.glob("*.xcodeproj")[0]
+    app_project = Xcodeproj::Project.open(file_name)
+    app_project.native_targets.each do |target|
+      target.build_configurations.each do |config|
+        cflags = config.build_settings['OTHER_CFLAGS'] || '$(inherited) '
+        unless cflags.include? '-DFB_SONARKIT_ENABLED=1'
+          puts 'Adding -DFB_SONARKIT_ENABLED=1 in OTHER_CFLAGS...'
+          cflags << '-DFB_SONARKIT_ENABLED=1'
+        end
+        config.build_settings['OTHER_CFLAGS'] = cflags
+      end
+      app_project.save
+    end
+    installer.pods_project.save
     
     # Pod::PodTarget.send(:define_method, :static_framework?) { return true }
 end

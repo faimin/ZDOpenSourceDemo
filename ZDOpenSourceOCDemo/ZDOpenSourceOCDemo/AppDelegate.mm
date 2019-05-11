@@ -13,14 +13,12 @@
 #if __has_include(<Buglife/Buglife.h>)
 #import <Buglife/Buglife.h>
 #endif
-#if __has_include(<SonarKit-umbrella.h>)
-//#import <SonarKit-umbrella.h>
-//#import <SonarKitLayoutPlugin/SonarKitLayoutPlugin.h>
-//#import <SonarKitLayoutPlugin/SKDescriptorMapper.h>
-#import <SonarKit/SonarClient.h>
-#import <SonarKitLayoutPlugin/SonarKitLayoutPlugin.h>
-#import <SonarKitNetworkPlugin/SonarKitNetworkPlugin.h>
-#import <SonarKitLayoutComponentKitSupport/SonarKitLayoutComponentKitSupport.h>
+#if __has_include(<FlipperKit-umbrella>)
+#import <FlipperKit/FlipperClient.h>
+#import <FlipperKitLayoutPlugin/FlipperKitLayoutPlugin.h>
+#import <FlipperKitLayoutComponentKitSupport/FlipperKitLayoutComponentKitSupport.h>
+#import <FlipperKitUserDefaultsPlugin/FKUserDefaultsPlugin.h>
+#import <FlipperKitNetworkPlugin/FlipperKitNetworkPlugin.h>
 #import <SKIOSNetworkPlugin/SKIOSNetworkAdapter.h>
 #endif
 
@@ -56,20 +54,20 @@
 - (void)setup {
     [self setupPerformanceMonitor];
     [self setupBuglife];
-    [self sonar];
+    [self flipper];
 }
 
-- (void)sonar {
+- (void)flipper {
 #if DEBUG
-#if __has_include(<SonarKit-umbrella.h>)
-    SonarClient *client = [SonarClient sharedClient];
-    
+#if __has_include(<FlipperKit-umbrella.h>)
+    FlipperClient *client = [FlipperClient sharedClient];
     SKDescriptorMapper *layoutDescriptorMapper = [[SKDescriptorMapper alloc] initWithDefaults];
-    [SonarKitLayoutComponentKitSupport setUpWithDescriptorMapper: layoutDescriptorMapper];
-    [client addPlugin: [[SonarKitLayoutPlugin alloc] initWithRootNode: application
-                                                 withDescriptorMapper: layoutDescriptorMapper]];
+    [FlipperKitLayoutComponentKitSupport setUpWithDescriptorMapper: layoutDescriptorMapper];
+    [client addPlugin: [[FlipperKitLayoutPlugin alloc] initWithRootNode:application
+                                                   withDescriptorMapper: layoutDescriptorMapper]];
     
-    [client addPlugin: [[SonarKitNetworkPlugin alloc] initWithNetworkAdapter:[SKIOSNetworkAdapter new]]];
+    [client addPlugin:[[FKUserDefaultsPlugin alloc] initWithSuiteName:nil]];
+    [client addPlugin: [[FlipperKitNetworkPlugin alloc] initWithNetworkAdapter:[SKIOSNetworkAdapter new]]];
     [client start];
 #endif
 #endif

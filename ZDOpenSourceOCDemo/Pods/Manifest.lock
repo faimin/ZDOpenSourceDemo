@@ -14,16 +14,67 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - boost-for-react-native (1.63.0)
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
+  - CocoaAsyncSocket (7.6.3)
+  - CocoaLibEvent (1.0.0)
   - cocore (1.2.0)
+  - ComponentKit (0.27):
+    - Yoga (~> 1.14)
   - coobjc (1.2.0):
     - cocore (~> 1.2.0)
   - DirectoryWatchdog (1.1.0)
+  - DoubleConversion (1.1.5)
   - fishhook (0.2)
   - FLEX (3.0.0)
+  - Flipper (0.20.0):
+    - Flipper-Folly (= 1.3.0)
+    - Flipper-RSocket (= 0.10.4)
+  - Flipper-Folly (1.3.0):
+    - boost-for-react-native
+    - CocoaLibEvent (~> 1.0)
+    - DoubleConversion
+    - glog
+    - OpenSSL-Static (= 1.0.2.c1)
+  - Flipper-PeerTalk (0.0.4)
+  - Flipper-RSocket (0.10.4):
+    - Flipper-Folly (~> 1.3)
+  - FlipperKit (0.20.0):
+    - FlipperKit/Core (= 0.20.0)
+  - FlipperKit/Core (0.20.0):
+    - Flipper (~> 0.20.0)
+    - FlipperKit/CppBridge
+    - FlipperKit/FBCxxUtils
+    - FlipperKit/FBDefines
+    - FlipperKit/FKPortForwarding
+  - FlipperKit/CppBridge (0.20.0):
+    - Flipper (~> 0.20.0)
+  - FlipperKit/FBCxxUtils (0.20.0):
+    - Flipper-Folly (= 1.3.0)
+  - FlipperKit/FBDefines (0.20.0)
+  - FlipperKit/FKPortForwarding (0.20.0):
+    - CocoaAsyncSocket (~> 7.6)
+    - Flipper-PeerTalk (~> 0.0.4)
+  - FlipperKit/FlipperKitLayoutComponentKitSupport (0.20.0):
+    - ComponentKit (~> 0.27)
+    - FlipperKit/Core
+    - FlipperKit/FlipperKitLayoutPlugin
+    - Yoga (~> 1.14)
+  - FlipperKit/FlipperKitLayoutPlugin (0.20.0):
+    - FlipperKit/Core
+    - Yoga (~> 1.14)
+    - YogaKit (~> 1.14)
+  - FlipperKit/FlipperKitNetworkPlugin (0.20.0):
+    - FlipperKit/Core
+  - FlipperKit/FlipperKitUserDefaultsPlugin (0.20.0):
+    - FlipperKit/Core
+  - FlipperKit/SKIOSNetworkPlugin (0.20.0):
+    - FlipperKit/Core
+    - FlipperKit/FlipperKitNetworkPlugin
   - GDPerformanceView (1.3.1)
+  - glog (0.3.4)
   - IGListKit (3.4.0):
     - IGListKit/Default (= 3.4.0)
   - IGListKit/Default (3.4.0):
@@ -74,6 +125,7 @@ PODS:
   - MMKV (1.0.19)
   - Objection (1.6.1)
   - ObjectiveSugar (1.1.0)
+  - OpenSSL-Static (1.0.2.c1)
   - PINCache (3.0.1-beta.6):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
     - PINCache/Core (= 3.0.1-beta.6)
@@ -191,6 +243,10 @@ DEPENDENCIES:
   - DirectoryWatchdog
   - fishhook
   - FLEX
+  - FlipperKit (~> 0.20.0)
+  - FlipperKit/FlipperKitLayoutComponentKitSupport (~> 0.20.0)
+  - FlipperKit/FlipperKitUserDefaultsPlugin (~> 0.20.0)
+  - FlipperKit/SKIOSNetworkPlugin (~> 0.20.0)
   - GDPerformanceView
   - IGListKit
   - JLRoutes
@@ -225,13 +281,24 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - boost-for-react-native
     - ChameleonFramework
+    - CocoaAsyncSocket
+    - CocoaLibEvent
     - cocore
+    - ComponentKit
     - coobjc
     - DirectoryWatchdog
+    - DoubleConversion
     - fishhook
     - FLEX
+    - Flipper
+    - Flipper-Folly
+    - Flipper-PeerTalk
+    - Flipper-RSocket
+    - FlipperKit
     - GDPerformanceView
+    - glog
     - IGListKit
     - JLRoutes
     - LayoutInspector
@@ -244,6 +311,7 @@ SPEC REPOS:
     - MMKV
     - Objection
     - ObjectiveSugar
+    - OpenSSL-Static
     - PINCache
     - PINOperation
     - PINRemoteImage
@@ -282,13 +350,24 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  CocoaLibEvent: 2fab71b8bd46dd33ddb959f7928ec5909f838e3f
   cocore: cc9d76229458f286a632d9cecb63bd699bd3529d
+  ComponentKit: 8af44a3fbb55fcd1d36a048cf24f1133ac6e6a77
   coobjc: 090a460e32e90d0e820e64c31cf7b79dece51a7c
   DirectoryWatchdog: 85f0a92a52bc0d3d66346d80629227b44500506a
+  DoubleConversion: e22e0762848812a87afd67ffda3998d9ef29170c
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   FLEX: d66c759bce0f6ebbbf472c742380874d846f2883
+  Flipper: a709cd1b1401503a94a41eff5b11acb7cf073220
+  Flipper-Folly: 8c8377ca7c9c447bdecfb4265944e2867a440580
+  Flipper-PeerTalk: 116d8f857dc6ef55c7a5a75ea3ceaafe878aadc9
+  Flipper-RSocket: 6d4593ba3fc97c9c353195e1975632623e588202
+  FlipperKit: 950257d46bc7b9d395e33181dd2f94ed5ce8e750
   GDPerformanceView: d70d646bf7022a3dfd64222e4966f403bfffef19
+  glog: 1de0bb937dccdc981596d3b5825ebfb765017ded
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   JLRoutes: d755245322b94227662ea3e43492fdca94e05c5b
   LayoutInspector: 1078a54f993510f61101203f48a8a3db69c7afe1
@@ -301,6 +380,7 @@ SPEC CHECKSUMS:
   MMKV: d362c29ab6ad839a16fcdf9e5b454944ecce588b
   Objection: ed03f2219cb22d2b5b893114219fe6c7e3263bde
   ObjectiveSugar: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
+  OpenSSL-Static: bd17e34564a8591ad76b740318683a6caa19a13e
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
@@ -324,6 +404,6 @@ SPEC CHECKSUMS:
   ZDToolKit: 2dc08339509ad9b9fe36472d4bc6f46e12c5ce30
   ZIKRouter: bb3fd3af44042b9797241346fe5bd47d3ac77a2f
 
-PODFILE CHECKSUM: afcf8e67e82c922b08906687538911a5782059ec
+PODFILE CHECKSUM: 8ffd838c1748ccfa4410cd8f33b6e93a2d7353d7
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.0.rc.1
