@@ -59,6 +59,7 @@
 #import "ZDTextView.h"
 #import "ZDGifImageView.h"
 #import "ZDMutableDictionary.h"
+#import "ZDConcurrentOperation.h"
 
 // Macros
 #import "ZDEXTScope.h"

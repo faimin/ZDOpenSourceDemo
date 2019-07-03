@@ -50,6 +50,26 @@ Service Router 可以管理任意自定义模块。View Router 进一步封装�
 - [x] Send custom events to router
 - [x] Auto register all routers
 
+## Quick Start Guide
+
+1. [Create Router](#1-Create-Router)
+   1. [Router Subclass](#11-Router-Subclass)
+   2. [Simple Router](#12-Simple-Router)
+2. [Declare Routable Type](#2-Declare-Routable-Type)
+3. [View Router](#View-Router)
+   1. [Transition directly](#Transition-directly)
+   2. [Prepare before Transition](#Prepare-before-Transition)
+   3. [Make Destination](#Make-Destination)
+   4. [Required Parameter and Special Parameter](#Required-Parameter-and-Special-Parameter)
+   5. [Perform on Destination](#Perform-on-Destination)
+   6. [Prepare on Destination](#Prepare-on-Destination)
+   7. [Remove](#Remove)
+   8. [Adapter](#Adapter)
+   9. [URL Router](#URL-Router)
+4. [Service Router](#Service-Router)
+5. [Demo and Practice](#Demo-and-Practice)
+6. [File Template](#File-Template)
+
 ## Documentation
 
 ### Design Idea
@@ -77,28 +97,6 @@ Service Router 可以管理任意自定义模块。View Router 进一步封装�
 
 [FAQ](Documentation/English/FAQ.md)
 
-
-
-## Quick Start Guide
-
-1. [Create Router](#1-Create-Router)
-   1. [Router Subclass](#11-Router-Subclass)
-   2. [Simple Router](#12-Simple-Router)
-2. [Declare Routable Type](#2-Declare-Routable-Type)
-3. [View Router](#View-Router)
-   1. [Transition directly](#Transition-directly)
-   2. [Prepare before Transition](#Prepare-before-Transition)
-   3. [Make Destination](#Make-Destination)
-   4. [Transfer Parameters in a Powerful Pattern](#Transfer-Parameters-in-a-Powerful-Pattern)
-   5. [Perform on Destination](#Perform-on-Destination)
-   6. [Prepare on Destination](#Prepare-on-Destination)
-   7. [Remove](#Remove)
-   8. [Adapter](#Adapter)
-   9. [URL Router](#URL-Router)
-4. [Service Router](#Service-Router)
-5. [Demo and Practice](#Demo-and-Practice)
-6. [File Template](#File-Template)
-
 ## Requirements
 
 * iOS 7.0+
@@ -114,18 +112,18 @@ Add this to your Podfile.
 For Objective-C project:
 
 ```
-pod 'ZIKRouter', '>= 1.0.11'
+pod 'ZIKRouter', '>= 1.0.12'
 
 # or only use ServiceRouter
-pod 'ZIKRouter/ServiceRouter' , '>=1.0.11'
+pod 'ZIKRouter/ServiceRouter' , '>=1.0.12'
 ```
 For Swift project:
 
 ```
-pod 'ZRouter', '>= 1.0.11'
+pod 'ZRouter', '>= 1.0.12'
 
 # or only use ServiceRouter
-pod 'ZRouter/ServiceRouter' , '>=1.0.11'
+pod 'ZRouter/ServiceRouter' , '>=1.0.12'
 ```
 
 ### Carthage
@@ -133,7 +131,7 @@ pod 'ZRouter/ServiceRouter' , '>=1.0.11'
 Add this to your Cartfile:
 
 ```
-github "Zuikyo/ZIKRouter" >= 1.0.11
+github "Zuikyo/ZIKRouter" >= 1.0.12
 ```
 
 Build frameworks:
@@ -358,7 +356,6 @@ DeclareRoutableView(NoteEditorViewController, NoteEditorViewRouter)
 
 // If the protocol inherits from ZIKViewRoutable, it's routable
 // This means you can use EditorViewInput to fetch router
-// If you use an undeclared protocol, there will be compile time warning
 @protocol EditorViewInput <ZIKViewRoutable>
 @property (nonatomic, weak) id<EditorDelegate> delegate;
 - (void)constructForCreatingNewNote;
@@ -367,7 +364,7 @@ DeclareRoutableView(NoteEditorViewController, NoteEditorViewRouter)
 
 </details>
 
-**If you use an undeclared protocol for routing, there will be compile time error. So it's much easier to manage protocols and to know which protocols are routable.**
+**If you use an undeclared protocol for routing, there will be compile time error. So it's much safer and easier to manage protocols and to know which protocols are routable.**
 
 Unroutable error in Swift:
 
@@ -509,11 +506,13 @@ id<EditorViewInput> destination = [ZIKRouterToView(EditorViewInput) makeDestinat
 ```
 </details>
 
-#### Transfer Parameters in a Powerful Pattern
+#### Required Parameter and Special Parameter
 
-Sometimes the destination class uses custom initializers to create instance, router needs to get required parameter from the caller. 
+Some parameters can be delivered though destination's protocol:
 
-Sometimes your module contains multi components, and you need to pass parameters to those components. And those parameters do not belong to the destination. 
+* the destination class uses custom initializers to create instance, router needs to get required parameter from the caller
+
+* the module contains multi components, and you need to pass parameters to those components. Those parameters do not belong to the destination, so they should not exist in destination's protocol
 
 You can use module config protocol and a custom configuration to transfer parameters.
 
@@ -1031,15 +1030,19 @@ You need to connect required protocol and provided protocol. For more detail, re
 
 ### URL Router
 
-ZIKRouter is also compatible with other URL router frameworks.
+ZIKRouter also provides a default URLRouter. It's easy to communicate with modules via url.
 
-You can register string identifier with router:
+URLRouter is not contained by default. If you wan't to use it, add submodule `pod 'ZIKRouter/URLRouter'` to your  `Podfile` , and call `[ZIKRouter enableDefaultURLRouteRule]` to enable URLRouter.
+
+You can register router with a url:
 
 ```swift
 class NoteEditorViewRouter: ZIKViewRouter<NoteEditorViewController, ViewRouteConfig> {
     override class func registerRoutableDestination() {
-        // Register identifier with this router
-        registerIdentifier("myapp://noteEditor")
+        registerView(NoteEditorViewController.self)
+        register(RoutableView<EditorViewInput>())
+        // Register url
+        registerURLPattern("app://editor/:title")
     }
 }
 ```
@@ -1050,75 +1053,63 @@ class NoteEditorViewRouter: ZIKViewRouter<NoteEditorViewController, ViewRouteCon
 @implementation NoteEditorViewRouter
 
 + (void)registerRoutableDestination {
-    // Register identifier with this router
-    [self registerIdentifier:@"myapp://noteEditor"];
+    [self registerView:[NoteEditorViewController class]];
+    [self registerViewProtocol:ZIKRoutable(EditorViewInput)];
+    // Register url
+    [self registerURLPattern:@"app://editor/:title"];
 }
 
 @end
 ```
+
 </details>
 
-Then perform route with the identifier:
+Then you can get the router with it's url:
 
 ```swift
-Router.to(viewIdentifier: "myapp://noteEditor")?.perform(path .push(from: self))
+ZIKAnyViewRouter.performURL("app://editor/test_note", path: .push(from: self))
 ```
 
 <details><summary>Objective-C Sample</summary>
 
 ```objectivec
-[ZIKViewRouter.toIdentifier(@"myapp://noteEditor") performPath:ZIKViewRoutePath.pushFrom(self)];
+[ZIKAnyViewRouter performURL:@"app://editor/test_note" path:ZIKViewRoutePath.pushFrom(self)];
 ```
+
 </details>
 
 And handle URL Scheme:
 
 ```swift
 public func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        // You can use other URL router frameworks
-        let routerIdentifier = URLRouter.routerIdentifierFromURL(url)
-        guard let identifier = routerIdentifier else {
-            return false
-        }
-        guard let routerType = Router.to(viewIdentifier: identifier) else {
-            return false
-        }
-        let params: [String : Any] = [ "url": url, "options": options ]
-        routerType.perform(path: .show(from: rootViewController), configuring: { (config, _) in
-            // Pass parameters
-            config.addUserInfo(params)
-        })
+    let urlString = url.absoluteString
+    if let _ = ZIKAnyViewRouter.performURL(urlString, fromSource: self.rootViewController) {
         return true
+    } else if let _ = ZIKAnyServiceRouter.performURL(urlString) {
+        return true
+    } else {
+        return false
     }
+}
 ```
 
 <details><summary>Objective-C Sample</summary>
 
 ```objectivec
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    
-    // You can use other URL router frameworks
-    NSString *identifier = [URLRouter routerIdentifierFromURL:url];
-    if (identifier == nil) {
+    if ([ZIKAnyViewRouter performURL:urlString fromSource:self.rootViewController]) {
+        return YES;
+    } else if ([ZIKAnyServiceRouter performURL:urlString]) {
+        return YES;
+    } else {
         return NO;
     }
-    ZIKViewRouterType *routerType = ZIKViewRouter.toIdentifier(identifier);
-    if (routerType == nil) {
-        return NO;
-    }
-    
-    NSDictionary *params = @{ @"url": url,
-                              @"options" : options
-                              };
-    [routerType performPath:ZIKViewRoutePath.showFrom(self.rootViewController)
-                configuring:^(ZIKViewRouteConfiguration * _Nonnull config) {
-                    // Pass parameters
-                    [config addUserInfo:params];
-                }];
-    return YES;
 }
 ```
+
 </details>
+
+If your project has different requirements for URL router, you can write your URL router by yourself. You can create custom ZIKRouter as parent class, add more powerful features in it. See `ZIKRouter+URLRouter.h`.
 
 ### Service Router
 
