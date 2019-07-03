@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01283F36023342BE7F9ADAA9EF1450B1 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D5B2D63DE17306D80DCFA4DC3301D6 /* UITableView+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		05FD5C7D2F031A82CE0C0CBC31049A5F /* WagnerFischer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099EED15021AA093DBE8E4AB9EDBA942 /* WagnerFischer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2F1D0799B326E68FC8CE82A9372C849B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BB7C24BF8A0407265D512FAE9A1EF5 /* UIKit.framework */; };
+		45075D035265EF35DC1C789A4E7E7859 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E586BE9A0D90A8A2C56BD7A7A534D28 /* UICollectionView+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		596DC4E828CCF4ED58A5BDBF8B35DE9E /* DeepDiff-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A72389F932DA8D76DD5B35FC4ACBCF /* DeepDiff-dummy.m */; };
+		5AF022969AD681251EF53128B7E9A41A /* MoveReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D97512E85D115AD09754E92DBF9E323 /* MoveReducer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7854453736D97FCE2E2FBE6E0F1E9BBC /* Heckel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E38A8486938C986B62210064546C36 /* Heckel.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7CDE8BDD1D5BADC0704307A42162FC95 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A2906903D5CC269E5208CC37F0E6E /* Array+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		858CA5A2636998D14B865913C1B99BF1 /* DiffAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACF669C4F5A7F06E52CE36268CE2D3 /* DiffAware.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		933C27E06B47A7A430FCA553D0774B3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A67F7A52AF648BE77983141A43B6C0 /* Foundation.framework */; };
+		A86AD5DE188E5AAE6240473649C1A47C /* IndexPathConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35066FE017F1BABFE7D7C6B88CC18A /* IndexPathConverter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AD28E895DB8559E999E916E2EFF9CC77 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6131FCACD6A0D60DCBDA1B61142DA2 /* Change.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CC97981DDA05F634A84F70FE646EDE03 /* DeepDiff-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 722D8DC7BD96D220649820567CE2D32E /* DeepDiff-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAC01B477F4C36220165F979DFDC8956 /* DeepDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BBC0994952CACE567198872D466D6 /* DeepDiff.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		099EED15021AA093DBE8E4AB9EDBA942 /* WagnerFischer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WagnerFischer.swift; path = Sources/Shared/Algorithms/WagnerFischer.swift; sourceTree = "<group>"; };
+		4492D29F1EB80836F0BD24C282BB3431 /* DeepDiff.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = DeepDiff.modulemap; sourceTree = "<group>"; };
+		69D5B2D63DE17306D80DCFA4DC3301D6 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Extensions.swift"; path = "Sources/iOS/UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		6D20373150067D42F76978CB3D7C9034 /* DeepDiff-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeepDiff-prefix.pch"; sourceTree = "<group>"; };
+		6D97512E85D115AD09754E92DBF9E323 /* MoveReducer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoveReducer.swift; path = Sources/Shared/MoveReducer.swift; sourceTree = "<group>"; };
+		71E38A8486938C986B62210064546C36 /* Heckel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Heckel.swift; path = Sources/Shared/Algorithms/Heckel.swift; sourceTree = "<group>"; };
+		722D8DC7BD96D220649820567CE2D32E /* DeepDiff-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeepDiff-umbrella.h"; sourceTree = "<group>"; };
+		76A72389F932DA8D76DD5B35FC4ACBCF /* DeepDiff-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DeepDiff-dummy.m"; sourceTree = "<group>"; };
+		81A67F7A52AF648BE77983141A43B6C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8E586BE9A0D90A8A2C56BD7A7A534D28 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+Extensions.swift"; path = "Sources/iOS/UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		95BB7C24BF8A0407265D512FAE9A1EF5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BD801B1F816A7A4C71745DD0368B47C3 /* DeepDiff-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "DeepDiff-Info.plist"; sourceTree = "<group>"; };
+		BE35066FE017F1BABFE7D7C6B88CC18A /* IndexPathConverter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IndexPathConverter.swift; path = Sources/iOS/IndexPathConverter.swift; sourceTree = "<group>"; };
+		C09A2906903D5CC269E5208CC37F0E6E /* Array+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Extensions.swift"; path = "Sources/Shared/Array+Extensions.swift"; sourceTree = "<group>"; };
+		CA6131FCACD6A0D60DCBDA1B61142DA2 /* Change.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Change.swift; path = Sources/Shared/Change.swift; sourceTree = "<group>"; };
+		D4ACF669C4F5A7F06E52CE36268CE2D3 /* DiffAware.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiffAware.swift; path = Sources/Shared/DiffAware.swift; sourceTree = "<group>"; };
+		DCC7C76057372CA1E0C508D19031B349 /* DeepDiff.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DeepDiff.framework; path = DeepDiff.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E13BBC0994952CACE567198872D466D6 /* DeepDiff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeepDiff.swift; path = Sources/Shared/DeepDiff.swift; sourceTree = "<group>"; };
+		E1C801F0C2DF880F125AFA60966C2F67 /* DeepDiff.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DeepDiff.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2156A9F072F17E0EC887DAB1058F0D6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				933C27E06B47A7A430FCA553D0774B3F /* Foundation.framework in Frameworks */,
+				2F1D0799B326E68FC8CE82A9372C849B /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		334F94AB9E4C869E6077F6C1FA73756C = {
+			isa = PBXGroup;
+			children = (
+				3DC667E79122C0A0952331804896F826 /* DeepDiff */,
+				6F8FC55E006480B9822C7FED80AD17D7 /* Frameworks */,
+				74DAE0FB251AA95F8AF04C5224A5164E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DC667E79122C0A0952331804896F826 /* DeepDiff */ = {
+			isa = PBXGroup;
+			children = (
+				C09A2906903D5CC269E5208CC37F0E6E /* Array+Extensions.swift */,
+				CA6131FCACD6A0D60DCBDA1B61142DA2 /* Change.swift */,
+				E13BBC0994952CACE567198872D466D6 /* DeepDiff.swift */,
+				D4ACF669C4F5A7F06E52CE36268CE2D3 /* DiffAware.swift */,
+				71E38A8486938C986B62210064546C36 /* Heckel.swift */,
+				BE35066FE017F1BABFE7D7C6B88CC18A /* IndexPathConverter.swift */,
+				6D97512E85D115AD09754E92DBF9E323 /* MoveReducer.swift */,
+				8E586BE9A0D90A8A2C56BD7A7A534D28 /* UICollectionView+Extensions.swift */,
+				69D5B2D63DE17306D80DCFA4DC3301D6 /* UITableView+Extensions.swift */,
+				099EED15021AA093DBE8E4AB9EDBA942 /* WagnerFischer.swift */,
+				7A89DF4AACC83E29B4A03A372BBBDDA0 /* Support Files */,
+			);
+			name = DeepDiff;
+			path = DeepDiff;
+			sourceTree = "<group>";
+		};
+		3EE3B4451E58FDF512EAFFC9583BBE5F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				81A67F7A52AF648BE77983141A43B6C0 /* Foundation.framework */,
+				95BB7C24BF8A0407265D512FAE9A1EF5 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6F8FC55E006480B9822C7FED80AD17D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EE3B4451E58FDF512EAFFC9583BBE5F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74DAE0FB251AA95F8AF04C5224A5164E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCC7C76057372CA1E0C508D19031B349 /* DeepDiff.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A89DF4AACC83E29B4A03A372BBBDDA0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4492D29F1EB80836F0BD24C282BB3431 /* DeepDiff.modulemap */,
+				E1C801F0C2DF880F125AFA60966C2F67 /* DeepDiff.xcconfig */,
+				76A72389F932DA8D76DD5B35FC4ACBCF /* DeepDiff-dummy.m */,
+				BD801B1F816A7A4C71745DD0368B47C3 /* DeepDiff-Info.plist */,
+				6D20373150067D42F76978CB3D7C9034 /* DeepDiff-prefix.pch */,
+				722D8DC7BD96D220649820567CE2D32E /* DeepDiff-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DeepDiff";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		454DEF7E165A32659B394E4CEE84A6EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC97981DDA05F634A84F70FE646EDE03 /* DeepDiff-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A911C8DEA204D535AB2804685AE9EEB7 /* DeepDiff */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E717F096A18CEEF9074F0AB5CAB65F20 /* Build configuration list for PBXNativeTarget "DeepDiff" */;
+			buildPhases = (
+				454DEF7E165A32659B394E4CEE84A6EC /* Headers */,
+				F3EDC3A7556E622D86675CB480C4B393 /* Sources */,
+				2156A9F072F17E0EC887DAB1058F0D6F /* Frameworks */,
+				37A4F726E28A07CE8A7E13018C49AFB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeepDiff;
+			productName = DeepDiff;
+			productReference = DCC7C76057372CA1E0C508D19031B349 /* DeepDiff.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F82F66FD60F636C9BC662BC99E35C637 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 35A8B5D388E3988124371915B9F12C7A /* Build configuration list for PBXProject "DeepDiff" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 334F94AB9E4C869E6077F6C1FA73756C;
+			productRefGroup = 74DAE0FB251AA95F8AF04C5224A5164E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A911C8DEA204D535AB2804685AE9EEB7 /* DeepDiff */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37A4F726E28A07CE8A7E13018C49AFB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3EDC3A7556E622D86675CB480C4B393 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CDE8BDD1D5BADC0704307A42162FC95 /* Array+Extensions.swift in Sources */,
+				AD28E895DB8559E999E916E2EFF9CC77 /* Change.swift in Sources */,
+				596DC4E828CCF4ED58A5BDBF8B35DE9E /* DeepDiff-dummy.m in Sources */,
+				EAC01B477F4C36220165F979DFDC8956 /* DeepDiff.swift in Sources */,
+				858CA5A2636998D14B865913C1B99BF1 /* DiffAware.swift in Sources */,
+				7854453736D97FCE2E2FBE6E0F1E9BBC /* Heckel.swift in Sources */,
+				A86AD5DE188E5AAE6240473649C1A47C /* IndexPathConverter.swift in Sources */,
+				5AF022969AD681251EF53128B7E9A41A /* MoveReducer.swift in Sources */,
+				45075D035265EF35DC1C789A4E7E7859 /* UICollectionView+Extensions.swift in Sources */,
+				01283F36023342BE7F9ADAA9EF1450B1 /* UITableView+Extensions.swift in Sources */,
+				05FD5C7D2F031A82CE0C0CBC31049A5F /* WagnerFischer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2F3584A10A1A440F613FA7A13575384C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		477F75E2B1546D69CA3373D15ACBB0AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1C801F0C2DF880F125AFA60966C2F67 /* DeepDiff.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DeepDiff/DeepDiff-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DeepDiff/DeepDiff-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DeepDiff/DeepDiff.modulemap";
+				PRODUCT_MODULE_NAME = DeepDiff;
+				PRODUCT_NAME = DeepDiff;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B1C821958064D5F5695A71DB9A70C760 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BFBCE69E8CD06815347B5764BBADCEEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1C801F0C2DF880F125AFA60966C2F67 /* DeepDiff.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/DeepDiff/DeepDiff-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DeepDiff/DeepDiff-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DeepDiff/DeepDiff.modulemap";
+				PRODUCT_MODULE_NAME = DeepDiff;
+				PRODUCT_NAME = DeepDiff;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35A8B5D388E3988124371915B9F12C7A /* Build configuration list for PBXProject "DeepDiff" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1C821958064D5F5695A71DB9A70C760 /* Debug */,
+				2F3584A10A1A440F613FA7A13575384C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E717F096A18CEEF9074F0AB5CAB65F20 /* Build configuration list for PBXNativeTarget "DeepDiff" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFBCE69E8CD06815347B5764BBADCEEC /* Debug */,
+				477F75E2B1546D69CA3373D15ACBB0AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F82F66FD60F636C9BC662BC99E35C637 /* Project object */;
+}

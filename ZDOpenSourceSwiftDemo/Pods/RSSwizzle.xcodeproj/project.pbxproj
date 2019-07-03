@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		61CE8F4F2D3616A1B704780970CF4F80 /* RSSwizzle-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 291D0346FEE9DC98E5074640BC105892 /* RSSwizzle-dummy.m */; };
+		BEF710205C30AA8FD71C745554ACBC1E /* RSSwizzle-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD59D2122399401A8BE9A2509B3F9969 /* RSSwizzle-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D24D4CF9EB98D528E1D8C073CBC7FE8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A040D6CB1561243D7CF83B2636139BF /* Foundation.framework */; };
+		DA6E040DD6E35F2BB7F3D37313B58EFE /* RSSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = C7EDD44D20C9EBC4761DD67F716CF6D1 /* RSSwizzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE247993938158137265A9DFC6A682AA /* RSSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FA39DC1C65A62F7FE5663399700B77 /* RSSwizzle.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00FA39DC1C65A62F7FE5663399700B77 /* RSSwizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RSSwizzle.m; path = RSSwizzle/RSSwizzle.m; sourceTree = "<group>"; };
+		291D0346FEE9DC98E5074640BC105892 /* RSSwizzle-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RSSwizzle-dummy.m"; sourceTree = "<group>"; };
+		2A040D6CB1561243D7CF83B2636139BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6238D3A5B38FBC5AA04CBD368E2B7B6E /* RSSwizzle.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RSSwizzle.xcconfig; sourceTree = "<group>"; };
+		6693A79243D522356151DD18D58993F8 /* RSSwizzle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RSSwizzle.framework; path = RSSwizzle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FD90DCE76EB46EBA6B84B5ACEAAEF09 /* RSSwizzle.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RSSwizzle.modulemap; sourceTree = "<group>"; };
+		AAA976F3756FDEFB72396854F685387C /* RSSwizzle-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RSSwizzle-prefix.pch"; sourceTree = "<group>"; };
+		AD59D2122399401A8BE9A2509B3F9969 /* RSSwizzle-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RSSwizzle-umbrella.h"; sourceTree = "<group>"; };
+		C7EDD44D20C9EBC4761DD67F716CF6D1 /* RSSwizzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RSSwizzle.h; path = RSSwizzle/RSSwizzle.h; sourceTree = "<group>"; };
+		C884B22F22980E5EF44D0926970698C7 /* RSSwizzle-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RSSwizzle-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73B038BD07CB2649FD4F033C61B2C1DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D24D4CF9EB98D528E1D8C073CBC7FE8E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		168C2BD5716103229FCEC67008CD3B86 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7FD90DCE76EB46EBA6B84B5ACEAAEF09 /* RSSwizzle.modulemap */,
+				6238D3A5B38FBC5AA04CBD368E2B7B6E /* RSSwizzle.xcconfig */,
+				291D0346FEE9DC98E5074640BC105892 /* RSSwizzle-dummy.m */,
+				C884B22F22980E5EF44D0926970698C7 /* RSSwizzle-Info.plist */,
+				AAA976F3756FDEFB72396854F685387C /* RSSwizzle-prefix.pch */,
+				AD59D2122399401A8BE9A2509B3F9969 /* RSSwizzle-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RSSwizzle";
+			sourceTree = "<group>";
+		};
+		1FFEB68F51FD99C7F33E8D291F82688D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66ABE5011EE9EFCC34B3FF14C4A367FE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		599394197FE5166A4DDFDD165B9E6EF7 = {
+			isa = PBXGroup;
+			children = (
+				1FFEB68F51FD99C7F33E8D291F82688D /* Frameworks */,
+				C03ED1665D3DC4349ABC2F7C95AA01C1 /* Products */,
+				AA7A358C93DD3D2566C3CCCD3ACA15CF /* RSSwizzle */,
+			);
+			sourceTree = "<group>";
+		};
+		66ABE5011EE9EFCC34B3FF14C4A367FE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2A040D6CB1561243D7CF83B2636139BF /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		AA7A358C93DD3D2566C3CCCD3ACA15CF /* RSSwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				C7EDD44D20C9EBC4761DD67F716CF6D1 /* RSSwizzle.h */,
+				00FA39DC1C65A62F7FE5663399700B77 /* RSSwizzle.m */,
+				168C2BD5716103229FCEC67008CD3B86 /* Support Files */,
+			);
+			name = RSSwizzle;
+			path = RSSwizzle;
+			sourceTree = "<group>";
+		};
+		C03ED1665D3DC4349ABC2F7C95AA01C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6693A79243D522356151DD18D58993F8 /* RSSwizzle.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B874A52512CE40C2F6BDDAF3D4564A25 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEF710205C30AA8FD71C745554ACBC1E /* RSSwizzle-umbrella.h in Headers */,
+				DA6E040DD6E35F2BB7F3D37313B58EFE /* RSSwizzle.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C5C634D45CFEE9A286708BA3EE61B6FC /* RSSwizzle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5B9C4B16284C1E4CC4AEA2FC1FE8A79 /* Build configuration list for PBXNativeTarget "RSSwizzle" */;
+			buildPhases = (
+				B874A52512CE40C2F6BDDAF3D4564A25 /* Headers */,
+				D856D185AD529C89B579C9D26D9099B2 /* Sources */,
+				73B038BD07CB2649FD4F033C61B2C1DE /* Frameworks */,
+				7E79C4534B1C21E292A3AEE7E8D76703 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSSwizzle;
+			productName = RSSwizzle;
+			productReference = 6693A79243D522356151DD18D58993F8 /* RSSwizzle.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40E21B34F7E3F2716ABB74FD273F55AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = EFD2566EB43A37A436EC7B97F8EF27D6 /* Build configuration list for PBXProject "RSSwizzle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 599394197FE5166A4DDFDD165B9E6EF7;
+			productRefGroup = C03ED1665D3DC4349ABC2F7C95AA01C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5C634D45CFEE9A286708BA3EE61B6FC /* RSSwizzle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E79C4534B1C21E292A3AEE7E8D76703 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D856D185AD529C89B579C9D26D9099B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61CE8F4F2D3616A1B704780970CF4F80 /* RSSwizzle-dummy.m in Sources */,
+				DE247993938158137265A9DFC6A682AA /* RSSwizzle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		16830A46FFB0585A4B92682C381F0D67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		5B8ABDCA2D10DE1FEF63DD24675A50C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		60DD83B424B0A05ACC3C2F12CACB6A40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6238D3A5B38FBC5AA04CBD368E2B7B6E /* RSSwizzle.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RSSwizzle/RSSwizzle-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RSSwizzle/RSSwizzle-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RSSwizzle/RSSwizzle.modulemap";
+				PRODUCT_MODULE_NAME = RSSwizzle;
+				PRODUCT_NAME = RSSwizzle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		64C2253F698F5FACAA621B562700515B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6238D3A5B38FBC5AA04CBD368E2B7B6E /* RSSwizzle.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RSSwizzle/RSSwizzle-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RSSwizzle/RSSwizzle-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RSSwizzle/RSSwizzle.modulemap";
+				PRODUCT_MODULE_NAME = RSSwizzle;
+				PRODUCT_NAME = RSSwizzle;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFD2566EB43A37A436EC7B97F8EF27D6 /* Build configuration list for PBXProject "RSSwizzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B8ABDCA2D10DE1FEF63DD24675A50C2 /* Debug */,
+				16830A46FFB0585A4B92682C381F0D67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5B9C4B16284C1E4CC4AEA2FC1FE8A79 /* Build configuration list for PBXNativeTarget "RSSwizzle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64C2253F698F5FACAA621B562700515B /* Debug */,
+				60DD83B424B0A05ACC3C2F12CACB6A40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40E21B34F7E3F2716ABB74FD273F55AA /* Project object */;
+}

@@ -1,0 +1,753 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0039F82C6A30A3ED1C808B9E1BBD0206 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E25233DE36D651E0B4FB0CDCF5371 /* String+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0097CF748ACDD926EFAAA1A3C99F1159 /* UIProgressView+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6820CF0F5D6C0C2455FCAE1C80330B6A /* UIProgressView+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		052DCC6CBA49A24F3C55026BA44DDDB7 /* UIApplication+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABB4AAFF328F924DD756A2A6D86DA4C /* UIApplication+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0537AD7EFFE604B246E71EB31BF27C6C /* PeekTheme+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E9296A55A8003DAE5E1F12488DB90E /* PeekTheme+Colors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0655A0C8E1505D008ECCE1C4C9C000F3 /* Peek-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06681CBEA99419F4CCBEA9AF2365F181 /* Peek-dummy.m */; };
+		0B112A486F6C87E3AF317E7EFD17C468 /* UIDevice+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499D0AF6668FF783A28A0C7F0FED1936 /* UIDevice+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0C34267E5A397DC8205CBB8C0A1951F8 /* CollapsibleSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CA02006CD77CDC587A35E6CD6B5DD9 /* CollapsibleSections.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0C756B429113B3DF54E9BDE9B11E3023 /* NSAttributedString+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B7EF9BB522761E49FCFEAEB2C63EF7 /* NSAttributedString+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0EA7C2F3C36D74CBB6EF2BC34C21BCA4 /* UIImage+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DC4FD77AF430D7D6443D0AD8F4BD4F /* UIImage+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0F59E1F3B035B5944C671D74BA36B0BE /* UITextView+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB5717F2EFFDACAB8A955A553004AED /* UITextView+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		118F61F796BE9D8C2F9FCE7207A545DE /* PeekInspectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C7C3948621F944A1A9C443ABF74F81 /* PeekInspectorCell.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		14DC38FCF2AFE51AC4E1BEBC6EF453D2 /* UILabel+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918957A271B48F5607A2582EF754975 /* UILabel+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		18D7A14BF341D35F6BB32711BA00B84A /* Platforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3541C56DB7486DC0029F870CE9FEA876 /* Platforms.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1A68CB1A00B37846C71D8A3B5B7DAF4D /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9377E24C52B9F57E74BB7C16AFCED2A3 /* Color+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1C7618961E07680D6B1D53AD768F4926 /* Bool+Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22635AF07FA317DCFB045F058F13F81B /* Bool+Toggle.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1DE34001CB339FF646136196AF0F7E43 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17A78071421914CE98ACA5C0A3747D0 /* Group.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1FE00E3839C50EF83013DA7E66E4C73F /* Images+OrientationMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8573AE18729FF6F586E4B95FA36CE /* Images+OrientationMask.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		200A1693D757EE88F6BB24E8D201AD1D /* Collection+NilOrEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE27676CC51CB574461D894923C7D223 /* Collection+NilOrEmpty.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		211C8D946CB919963C22EB0F65A916D8 /* UIButton+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2694C3872204B03EEE42354786C0DEE1 /* UIButton+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		31493E41107D81225279E9B5BE7B8A03 /* UIToolbar+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429AEDFA8CB2B51B17AC38EE77369A60 /* UIToolbar+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		339BC23F4F0C97E6ED9B6CC11030BF7A /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5A37B42E504CD37894DB082E4C9EE /* Report.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		343DD58DBD2CE1C1D821A28DD0CAE564 /* CGSize+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00CB9D73827C07D5C478C78C3810275 /* CGSize+Resize.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3570D37EBB7A47E758D255D4A652DBEB /* NSLayoutConstraint+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399A67B57B2B87FA0095A62E35FB58FA /* NSLayoutConstraint+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		377A2A046367065CEF90E321745AF969 /* Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E3078EEE4F166297004D8BDE120A1B /* Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		381C6F5FA05FA50CB9AB268527D971D2 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9B19AA0074381F3888A0079BB85F52 /* NSObject+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		38C325E73D36758A298C9068C1428595 /* PeekLayoutOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B9F263746E437B7F2F5479ACFF208 /* PeekLayoutOverlayView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3AA3AA1834544363139F0183E8099F53 /* PeekOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DCA6A5B6F1A816A59705F41C9B6964 /* PeekOptions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3BD4E44DF47A19018F614D88BE2524BD /* UIControl+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB822DE9C1520EF9FC61E2A255BCCA /* UIControl+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3C65480B0D829EE1E3C722FBB2185DDD /* Images+Inspectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2A3624F6BD33003D23750B8AA5D0D /* Images+Inspectors.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3EED68C920BA4FBCE2C7C33C8711DFE4 /* ColorAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CDB93187E010AF483D706C2A4A13A4 /* ColorAccessoryView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		406CDF5EEB157135D26041BB69EC5D89 /* UISwitch+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B384EA5F811E98D7AD4601712A068A70 /* UISwitch+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		414BE1C19194A68B0968C4518DB2BA1E /* NSValue+Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A0770E935E24A9764586A45B76F856 /* NSValue+Transformer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		43EE3C367561A10B31FEB74BFB9529C2 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938032D940E5BB16552972C585D0B9C /* UIViewController+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		44B3A1203EAFEE0FAACCA7D4ADF139B3 /* PeekAccessoryProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA88E5019CF8A429D5C4EA6A93853D1 /* PeekAccessoryProviding.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		465439DF10E9FFF042102696F0CEECE7 /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7649CD1985DB833BBF1735C6FC7BA121 /* PreviewCell.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		485D90070B049D3ECA194F8F017FFA86 /* PDFRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DAEA50F01F7AAC1B2936642146A05B0 /* PDFRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		498050398340A70EDF3C883A59106AC7 /* UIScrollView+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B658C1A74B924336C367679A55A287 /* UIScrollView+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4BACA6C6715B173B94EA7B4AF0A68D1B /* PeekButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBF7EC0D6641B3580844B5D34EBAAD7 /* PeekButton.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4C562DCF250063E80684A89B86381F30 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3AB0BA52688AEF3A083C2F9E1BBAC2 /* Coordinator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5714F685914BD84E5EC9234538CE5ACE /* Enum+Descriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657AF2AC8169005C805C0E4A0A024B24 /* Enum+Descriptions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5C62FD0BA569B5627F982A5752BE06EF /* PeekSectionedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AE3A188AB8055E19BA73FD4B4BB19B /* PeekSectionedViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5EAACD91FBD885EE4DF0CE108D2DBCDF /* UIBarButtonItem+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCF6EF7E1CCE458C21A96CCCD885715 /* UIBarButtonItem+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5FACCCF6FA9A474065B406BEC4FCFA0F /* UIColor+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2E2DD71D67944502949B1B9A93C7D4 /* UIColor+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		629106881A90604E3BA13C84E1B378FF /* VolumeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23487541A4A331AAF63DCF288390B432 /* VolumeController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		62EB74A68D6B8CA2AF2395DE10CD4927 /* UIFont+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C22027214460E373DE270038521D575 /* UIFont+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		64ECEC5ACFFBF35A4AACC3DDA82AA4D4 /* PeekPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9DA2A11F232225EF70AC28F91BB168 /* PeekPresentationController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		65C8F2F147A9E0B0328221298641AD33 /* UISlider+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D798F02C22B47C54ACE7ACF6A51F826B /* UISlider+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6A35477AD9AA22FBF5770C9B168742E3 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4162C99900BEACAC0072EA993E2A9EF0 /* UIDevice+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6E3820F5CB7CBE878854785F8338AA65 /* BoolAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E033A63379C48D461621E8CA71BA297 /* BoolAccessoryView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		73AC4E8E2BAE711855BF487FF3DAF12D /* CALayer+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774E830E4E49A547676F6338CEB69734 /* CALayer+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		75A1C937B664D26480E2F80F3A8AEACB /* UIViewController+Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D487B56F3A3E78D10B2D9A4B8C90DF /* UIViewController+Modal.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		75BA342685D6776B95ACD613DD83E787 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BC22661D773074CA389AEBD852A2F0 /* Renderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		75E9FC18F8A6540338CD1D9ED7482586 /* UIStackView+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928D0924207760A4ACE4B90001F0A4E0 /* UIStackView+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		785507005BE58DE998D4E535DE272315 /* PeekInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EAADEC3FC84D7C58D11B302E49CB53 /* PeekInspectorViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7B712B7D0451DEF46AB8826081220D09 /* PeekSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB7229EE64DDAF1E13048C2273008EF /* PeekSelectionView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		81DEA3542870FB8361BBA3B57E4CABFF /* Bundle+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB4DB7C0A50E53A88394D8BF8E0BE8 /* Bundle+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		82448DEA26EB3D6EBFEE37700B0CA012 /* UIViewController+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C7B641EEFC662B95F14A1DD3A146EB /* UIViewController+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		82AE79132B22536CED9805F93952DD68 /* Images+Orientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6801BD6990D61C2E80C4A9EEB28B02 /* Images+Orientation.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8393C39EA5AEA4891A174011D8528076 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14618FE99A967E27F53D4A99E975A81 /* Constraints.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8743E97E761B3AD2C8D1F5FE2FD1B995 /* PeekMetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB98812C590F15684D9EB1FACBEF5198 /* PeekMetricView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8BADB0BA5516F094D892E7A78C002D6F /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E32D531374F0A228C4B56BE9D117FD /* ReportViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		94E27C5AC62553B599D32CB7382BAB78 /* UIView+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FDC6CBA931FF52627AC17E35DA989 /* UIView+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		97D583797DBAA1F91D9F274B748F0411 /* PeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA65E78A07362072FD21039EEF6B96D /* PeekViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A1883A0271B24216DF9CF58E8013BDD8 /* ImageRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B56BF2200B71E95A8E5DC5D8E041B /* ImageRenderer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A2DFFD1D1AB4D85C17D9F27A4A5883FB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F089D0C78EDC83639C3DFFFE4E7B40 /* Color.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A8BF18A0747DC5CA2485553565F99CE5 /* UIScreen+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551478A78C8FBAF4F793EC1F0EAE8438 /* UIScreen+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ACEF7F350F1D26FFEAB488A88F5FEA65 /* RendererDrawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2E7E0B752DF272EFEC21C001457846 /* RendererDrawable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B037867B03A313311D5316464130DC40 /* UIImageView+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16C5D933594FD25E03CA72C3CC92227 /* UIImageView+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B0ACB61F5B8F445877E6ACCA37F2B9AC /* UIStepper+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09173CC489010CDBF588E3F07E49082 /* UIStepper+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B7F796EF74879DF6FB97D42552A4E7A1 /* UIPageControl+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF017770D21FA6A995A3A667FB78BD2 /* UIPageControl+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BD89A9C4E59E0D2E6EB823E771AD6FEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EAA147B2643DE821E93A1D24D4267BC /* Foundation.framework */; };
+		CA86026E40507751F0D32F4A790AD1FC /* PeekOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4C33FD16B868B776CD5E75DF92FC7 /* PeekOverlayView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CBB8F24991BD54334EB27556ABC63623 /* NSString+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D78D532A519ACBBE79C45E4B558E01C /* NSString+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CBC6D037607A21D045E11C4D350F9F7D /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A90EE370BF3CAA1FC36EB6399698518 /* Attribute.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CDD03D9D8A33137B56E561B291CC7EEF /* PeekLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00C7DEEA6847227E5BE03C8C3E4E71 /* PeekLayoutView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CFF4D6753A56236C7E0C9E8A9A339AB8 /* UINavigationBar+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D4E9524452FBB2CD044057740FB809 /* UINavigationBar+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D0A278079F289BD7B306E9F882E8CFCD /* NSNumber+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAA535465A307238113E7FE1FCB30B0 /* NSNumber+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D4C6148DA1DA65F2BAF5384E5C029831 /* UITextField+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E58DF6AA42432399EBA3C3AD9FE0B5 /* UITextField+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D72818F701E878BAD438D35E330C1BD9 /* Peek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87283232B58BE002EB52DA496C4AD048 /* Peek.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D9F56F275C1944A096A0FE4B0D49F27C /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A31CA9878D7AB46F3B3352469222A6E /* UIView+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DE711FCB2170E72C664CFBCD7BC13931 /* UIActivityIndicatorView+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A785B27CF3074DA984AC8D373D29DA24 /* UIActivityIndicatorView+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E0869F3759B806467458D342000B97BD /* UISegmentedControl+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D450ECEBB32A5CFDDA5176F11C4B691 /* UISegmentedControl+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E2CD790311034C5C3BBD504DC4C641B8 /* UIColor+Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CF481A4A48410DB0C277129780DB06 /* UIColor+Transformer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EA3F3E925FAF8AC366C0DD021C49B016 /* Enum+Cases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5579A8F5863E9D7E70CB40E08CA41 /* Enum+Cases.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EB15CEE319A789302F72C2F6220FEC5B /* PeekTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52D08A74759FA2F358D692BA63383FB /* PeekTapGestureRecognizer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EB684368A685B9DB21189423869A24CA /* LayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE96A9EA54E1A80F28EE7C5F2F4D3D /* LayoutManager.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EE49617A1F56A20F28E18C8B053669F7 /* NSNumber+Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA83A530D31B06D0F5818818F795747 /* NSNumber+Transformer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EFDC8637E445B7E6F50AD7C57903D3B6 /* ReportActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6BFEEFFCA43F9F42306439A87E7273 /* ReportActivity.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F27B8EBEE1BE0A4AFE331D75146A2790 /* UIPicker+Peekable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F8E24FE347C65A9B957EB679C301F9 /* UIPicker+Peekable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F77DC795B5379C90832EF448D91C3B3E /* ContextDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107B1583AC8ECCF03CC9B1C226B93FCE /* ContextDataSource.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FA6780839010E7DFD67EFAF0EE1EE8C0 /* Peek-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 087F1171D7BED9DE229B2C47250F6969 /* Peek-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDB340AC7D3BD8A22F4CEA7627CD62A0 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490E5AAEF935B3F11506A22D558D887B /* UIImage+Resize.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FDE445E01F420F12A3330A1EA3B01B0E /* UIView+Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405B25C7DDFEE769D815AF4F24ACE25 /* UIView+Filter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FEB7AA6735D34F3E271D0D77A3F8DD08 /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FF1CEBC29DE65C6EDF49501240F608 /* UIWindow+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FEBADA575DF544B9BC097502991DFD49 /* PeekTextOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212BEE2747115F4070AE035A0A8BA972 /* PeekTextOverlayView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0405B25C7DDFEE769D815AF4F24ACE25 /* UIView+Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Filter.swift"; path = "Pod/Classes/Model/UIView+Filter.swift"; sourceTree = "<group>"; };
+		06681CBEA99419F4CCBEA9AF2365F181 /* Peek-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Peek-dummy.m"; sourceTree = "<group>"; };
+		087F1171D7BED9DE229B2C47250F6969 /* Peek-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Peek-umbrella.h"; sourceTree = "<group>"; };
+		0ABB4AAFF328F924DD756A2A6D86DA4C /* UIApplication+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Peekable.swift"; path = "Pod/Classes/Peekable/UIApplication+Peekable.swift"; sourceTree = "<group>"; };
+		0D78D532A519ACBBE79C45E4B558E01C /* NSString+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSString+Peekable.swift"; path = "Pod/Classes/Peekable/NSString+Peekable.swift"; sourceTree = "<group>"; };
+		107B1583AC8ECCF03CC9B1C226B93FCE /* ContextDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContextDataSource.swift; path = Pod/Classes/Model/ContextDataSource.swift; sourceTree = "<group>"; };
+		14A2A3624F6BD33003D23750B8AA5D0D /* Images+Inspectors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Images+Inspectors.swift"; path = "Pod/Classes/Images/Images+Inspectors.swift"; sourceTree = "<group>"; };
+		14E9296A55A8003DAE5E1F12488DB90E /* PeekTheme+Colors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PeekTheme+Colors.swift"; path = "Pod/Classes/PeekTheme+Colors.swift"; sourceTree = "<group>"; };
+		15BB822DE9C1520EF9FC61E2A255BCCA /* UIControl+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIControl+Peekable.swift"; path = "Pod/Classes/Peekable/UIControl+Peekable.swift"; sourceTree = "<group>"; };
+		168A52829D1417EC7FD84DA93967F3C9 /* Peek-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Peek-prefix.pch"; sourceTree = "<group>"; };
+		1712974DC9E55E63949D65DF68667233 /* Peek.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Peek.xcconfig; sourceTree = "<group>"; };
+		212BEE2747115F4070AE035A0A8BA972 /* PeekTextOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekTextOverlayView.swift; path = "Pod/Classes/Controllers & Views/Overlays/Text/PeekTextOverlayView.swift"; sourceTree = "<group>"; };
+		22635AF07FA317DCFB045F058F13F81B /* Bool+Toggle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bool+Toggle.swift"; path = "Pod/Classes/Helpers/Bool+Toggle.swift"; sourceTree = "<group>"; };
+		227B56BF2200B71E95A8E5DC5D8E041B /* ImageRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageRenderer.swift; path = Pod/Classes/GraphicsRenderer/ImageRenderer.swift; sourceTree = "<group>"; };
+		23487541A4A331AAF63DCF288390B432 /* VolumeController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VolumeController.swift; path = Pod/Classes/VolumeController.swift; sourceTree = "<group>"; };
+		25E3078EEE4F166297004D8BDE120A1B /* Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Peekable.swift; path = Pod/Classes/Model/Peekable.swift; sourceTree = "<group>"; };
+		2694C3872204B03EEE42354786C0DEE1 /* UIButton+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Peekable.swift"; path = "Pod/Classes/Peekable/UIButton+Peekable.swift"; sourceTree = "<group>"; };
+		2B9B19AA0074381F3888A0079BB85F52 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Extensions.swift"; path = "Pod/Classes/Helpers/NSObject+Extensions.swift"; sourceTree = "<group>"; };
+		2D9DA2A11F232225EF70AC28F91BB168 /* PeekPresentationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekPresentationController.swift; path = "Pod/Classes/Controllers & Views/PeekPresentationController.swift"; sourceTree = "<group>"; };
+		302764C46AB3BDD06781779AFCBC1E74 /* Peek.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Peek.modulemap; sourceTree = "<group>"; };
+		3541C56DB7486DC0029F870CE9FEA876 /* Platforms.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Platforms.swift; path = Pod/Classes/GraphicsRenderer/Platforms.swift; sourceTree = "<group>"; };
+		399A67B57B2B87FA0095A62E35FB58FA /* NSLayoutConstraint+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSLayoutConstraint+Peekable.swift"; path = "Pod/Classes/Peekable/NSLayoutConstraint+Peekable.swift"; sourceTree = "<group>"; };
+		39C5579A8F5863E9D7E70CB40E08CA41 /* Enum+Cases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Enum+Cases.swift"; path = "Pod/Classes/Helpers/Enum+Cases.swift"; sourceTree = "<group>"; };
+		3A31CA9878D7AB46F3B3352469222A6E /* UIView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extensions.swift"; path = "Pod/Classes/Helpers/UIView+Extensions.swift"; sourceTree = "<group>"; };
+		3BAA535465A307238113E7FE1FCB30B0 /* NSNumber+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNumber+Extensions.swift"; path = "Pod/Classes/Helpers/NSNumber+Extensions.swift"; sourceTree = "<group>"; };
+		3DA83A530D31B06D0F5818818F795747 /* NSNumber+Transformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSNumber+Transformer.swift"; path = "Pod/Classes/Transformers/NSNumber+Transformer.swift"; sourceTree = "<group>"; };
+		3E033A63379C48D461621E8CA71BA297 /* BoolAccessoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoolAccessoryView.swift; path = "Pod/Classes/Accessory Views/BoolAccessoryView.swift"; sourceTree = "<group>"; };
+		3EAA147B2643DE821E93A1D24D4267BC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		40CF481A4A48410DB0C277129780DB06 /* UIColor+Transformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Transformer.swift"; path = "Pod/Classes/Transformers/UIColor+Transformer.swift"; sourceTree = "<group>"; };
+		4162C99900BEACAC0072EA993E2A9EF0 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extensions.swift"; path = "Pod/Classes/Helpers/UIDevice+Extensions.swift"; sourceTree = "<group>"; };
+		429AEDFA8CB2B51B17AC38EE77369A60 /* UIToolbar+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIToolbar+Peekable.swift"; path = "Pod/Classes/Peekable/UIToolbar+Peekable.swift"; sourceTree = "<group>"; };
+		43C7B641EEFC662B95F14A1DD3A146EB /* UIViewController+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Peekable.swift"; path = "Pod/Classes/Peekable/UIViewController+Peekable.swift"; sourceTree = "<group>"; };
+		45E32D531374F0A228C4B56BE9D117FD /* ReportViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReportViewController.swift; path = "Pod/Classes/Controllers & Views/Reporting/ReportViewController.swift"; sourceTree = "<group>"; };
+		490E5AAEF935B3F11506A22D558D887B /* UIImage+Resize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Resize.swift"; path = "Pod/Classes/Helpers/UIImage+Resize.swift"; sourceTree = "<group>"; };
+		499D0AF6668FF783A28A0C7F0FED1936 /* UIDevice+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Peekable.swift"; path = "Pod/Classes/Peekable/UIDevice+Peekable.swift"; sourceTree = "<group>"; };
+		4A90EE370BF3CAA1FC36EB6399698518 /* Attribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Attribute.swift; path = Pod/Classes/Coordinator/Attribute.swift; sourceTree = "<group>"; };
+		51CDB93187E010AF483D706C2A4A13A4 /* ColorAccessoryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorAccessoryView.swift; path = "Pod/Classes/Accessory Views/ColorAccessoryView.swift"; sourceTree = "<group>"; };
+		536FDC6CBA931FF52627AC17E35DA989 /* UIView+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Peekable.swift"; path = "Pod/Classes/Peekable/UIView+Peekable.swift"; sourceTree = "<group>"; };
+		551478A78C8FBAF4F793EC1F0EAE8438 /* UIScreen+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScreen+Peekable.swift"; path = "Pod/Classes/Peekable/UIScreen+Peekable.swift"; sourceTree = "<group>"; };
+		60FF1CEBC29DE65C6EDF49501240F608 /* UIWindow+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIWindow+Extensions.swift"; path = "Pod/Classes/Helpers/UIWindow+Extensions.swift"; sourceTree = "<group>"; };
+		61AE3A188AB8055E19BA73FD4B4BB19B /* PeekSectionedViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekSectionedViewController.swift; path = "Pod/Classes/Controllers & Views/PeekSectionedViewController.swift"; sourceTree = "<group>"; };
+		657AF2AC8169005C805C0E4A0A024B24 /* Enum+Descriptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Enum+Descriptions.swift"; path = "Pod/Classes/Helpers/Enum+Descriptions.swift"; sourceTree = "<group>"; };
+		6820CF0F5D6C0C2455FCAE1C80330B6A /* UIProgressView+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIProgressView+Peekable.swift"; path = "Pod/Classes/Peekable/UIProgressView+Peekable.swift"; sourceTree = "<group>"; };
+		69B7EF9BB522761E49FCFEAEB2C63EF7 /* NSAttributedString+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSAttributedString+Peekable.swift"; path = "Pod/Classes/Peekable/NSAttributedString+Peekable.swift"; sourceTree = "<group>"; };
+		6A2E2DD71D67944502949B1B9A93C7D4 /* UIColor+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Peekable.swift"; path = "Pod/Classes/Peekable/UIColor+Peekable.swift"; sourceTree = "<group>"; };
+		6A6801BD6990D61C2E80C4A9EEB28B02 /* Images+Orientation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Images+Orientation.swift"; path = "Pod/Classes/Images/Images+Orientation.swift"; sourceTree = "<group>"; };
+		6CF017770D21FA6A995A3A667FB78BD2 /* UIPageControl+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIPageControl+Peekable.swift"; path = "Pod/Classes/Peekable/UIPageControl+Peekable.swift"; sourceTree = "<group>"; };
+		6DAEA50F01F7AAC1B2936642146A05B0 /* PDFRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PDFRenderer.swift; path = Pod/Classes/GraphicsRenderer/PDFRenderer.swift; sourceTree = "<group>"; };
+		704B9F263746E437B7F2F5479ACFF208 /* PeekLayoutOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekLayoutOverlayView.swift; path = "Pod/Classes/Controllers & Views/Overlays/Layout/PeekLayoutOverlayView.swift"; sourceTree = "<group>"; };
+		74F089D0C78EDC83639C3DFFFE4E7B40 /* Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Color.swift; path = Pod/Classes/Helpers/Color.swift; sourceTree = "<group>"; };
+		75DCA6A5B6F1A816A59705F41C9B6964 /* PeekOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekOptions.swift; path = Pod/Classes/PeekOptions.swift; sourceTree = "<group>"; };
+		75EAADEC3FC84D7C58D11B302E49CB53 /* PeekInspectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekInspectorViewController.swift; path = "Pod/Classes/Controllers & Views/PeekInspectorViewController.swift"; sourceTree = "<group>"; };
+		7649CD1985DB833BBF1735C6FC7BA121 /* PreviewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreviewCell.swift; path = "Pod/Classes/Controllers & Views/Inspectors/PreviewCell.swift"; sourceTree = "<group>"; };
+		76E013FD4B9E6BE0CF0F4D4C84BE810A /* Peek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Peek.framework; path = Peek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		774E830E4E49A547676F6338CEB69734 /* CALayer+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+Peekable.swift"; path = "Pod/Classes/Peekable/CALayer+Peekable.swift"; sourceTree = "<group>"; };
+		7BCF6EF7E1CCE458C21A96CCCD885715 /* UIBarButtonItem+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem+Peekable.swift"; path = "Pod/Classes/Peekable/UIBarButtonItem+Peekable.swift"; sourceTree = "<group>"; };
+		87283232B58BE002EB52DA496C4AD048 /* Peek.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Peek.swift; path = Pod/Classes/Peek.swift; sourceTree = "<group>"; };
+		8AB5717F2EFFDACAB8A955A553004AED /* UITextView+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextView+Peekable.swift"; path = "Pod/Classes/Peekable/UITextView+Peekable.swift"; sourceTree = "<group>"; };
+		8C22027214460E373DE270038521D575 /* UIFont+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+Peekable.swift"; path = "Pod/Classes/Peekable/UIFont+Peekable.swift"; sourceTree = "<group>"; };
+		8C3AB0BA52688AEF3A083C2F9E1BBAC2 /* Coordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = Pod/Classes/Coordinator/Coordinator.swift; sourceTree = "<group>"; };
+		8DD747F73D0C75EAF123215F82B3883D /* Peek-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Peek-Info.plist"; sourceTree = "<group>"; };
+		928D0924207760A4ACE4B90001F0A4E0 /* UIStackView+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStackView+Peekable.swift"; path = "Pod/Classes/Peekable/UIStackView+Peekable.swift"; sourceTree = "<group>"; };
+		9377E24C52B9F57E74BB7C16AFCED2A3 /* Color+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Color+Extensions.swift"; path = "Pod/Classes/Helpers/Color+Extensions.swift"; sourceTree = "<group>"; };
+		94B658C1A74B924336C367679A55A287 /* UIScrollView+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+Peekable.swift"; path = "Pod/Classes/Peekable/UIScrollView+Peekable.swift"; sourceTree = "<group>"; };
+		95D487B56F3A3E78D10B2D9A4B8C90DF /* UIViewController+Modal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Modal.swift"; path = "Pod/Classes/Controllers & Views/UIViewController+Modal.swift"; sourceTree = "<group>"; };
+		9BB7229EE64DDAF1E13048C2273008EF /* PeekSelectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekSelectionView.swift; path = "Pod/Classes/Controllers & Views/Overlays/PeekSelectionView.swift"; sourceTree = "<group>"; };
+		9D450ECEBB32A5CFDDA5176F11C4B691 /* UISegmentedControl+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISegmentedControl+Peekable.swift"; path = "Pod/Classes/Peekable/UISegmentedControl+Peekable.swift"; sourceTree = "<group>"; };
+		9EAB4DB7C0A50E53A88394D8BF8E0BE8 /* Bundle+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+Peekable.swift"; path = "Pod/Classes/Peekable/Bundle+Peekable.swift"; sourceTree = "<group>"; };
+		9F2E7E0B752DF272EFEC21C001457846 /* RendererDrawable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RendererDrawable.swift; path = Pod/Classes/GraphicsRenderer/RendererDrawable.swift; sourceTree = "<group>"; };
+		9FA65E78A07362072FD21039EEF6B96D /* PeekViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekViewController.swift; path = "Pod/Classes/Controllers & Views/PeekViewController.swift"; sourceTree = "<group>"; };
+		A0CA02006CD77CDC587A35E6CD6B5DD9 /* CollapsibleSections.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollapsibleSections.swift; path = "Pod/Classes/Controllers & Views/Inspectors/CollapsibleSections.swift"; sourceTree = "<group>"; };
+		A11E25233DE36D651E0B4FB0CDCF5371 /* String+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "Pod/Classes/Helpers/String+Extensions.swift"; sourceTree = "<group>"; };
+		A2BC22661D773074CA389AEBD852A2F0 /* Renderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Renderer.swift; path = Pod/Classes/GraphicsRenderer/Renderer.swift; sourceTree = "<group>"; };
+		A6E58DF6AA42432399EBA3C3AD9FE0B5 /* UITextField+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Peekable.swift"; path = "Pod/Classes/Peekable/UITextField+Peekable.swift"; sourceTree = "<group>"; };
+		A785B27CF3074DA984AC8D373D29DA24 /* UIActivityIndicatorView+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIActivityIndicatorView+Peekable.swift"; path = "Pod/Classes/Peekable/UIActivityIndicatorView+Peekable.swift"; sourceTree = "<group>"; };
+		AF00C7DEEA6847227E5BE03C8C3E4E71 /* PeekLayoutView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekLayoutView.swift; path = "Pod/Classes/Controllers & Views/Overlays/Layout/PeekLayoutView.swift"; sourceTree = "<group>"; };
+		B384EA5F811E98D7AD4601712A068A70 /* UISwitch+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISwitch+Peekable.swift"; path = "Pod/Classes/Peekable/UISwitch+Peekable.swift"; sourceTree = "<group>"; };
+		B52D08A74759FA2F358D692BA63383FB /* PeekTapGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekTapGestureRecognizer.swift; path = Pod/Classes/Helpers/PeekTapGestureRecognizer.swift; sourceTree = "<group>"; };
+		BB98812C590F15684D9EB1FACBEF5198 /* PeekMetricView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekMetricView.swift; path = "Pod/Classes/Controllers & Views/Overlays/Layout/PeekMetricView.swift"; sourceTree = "<group>"; };
+		BE27676CC51CB574461D894923C7D223 /* Collection+NilOrEmpty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+NilOrEmpty.swift"; path = "Pod/Classes/Helpers/Collection+NilOrEmpty.swift"; sourceTree = "<group>"; };
+		C09173CC489010CDBF588E3F07E49082 /* UIStepper+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIStepper+Peekable.swift"; path = "Pod/Classes/Peekable/UIStepper+Peekable.swift"; sourceTree = "<group>"; };
+		CBB4C33FD16B868B776CD5E75DF92FC7 /* PeekOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekOverlayView.swift; path = "Pod/Classes/Controllers & Views/Overlays/PeekOverlayView.swift"; sourceTree = "<group>"; };
+		D16C5D933594FD25E03CA72C3CC92227 /* UIImageView+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Peekable.swift"; path = "Pod/Classes/Peekable/UIImageView+Peekable.swift"; sourceTree = "<group>"; };
+		D4C7C3948621F944A1A9C443ABF74F81 /* PeekInspectorCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekInspectorCell.swift; path = "Pod/Classes/Controllers & Views/Inspectors/PeekInspectorCell.swift"; sourceTree = "<group>"; };
+		D6DC4FD77AF430D7D6443D0AD8F4BD4F /* UIImage+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+Peekable.swift"; path = "Pod/Classes/Peekable/UIImage+Peekable.swift"; sourceTree = "<group>"; };
+		D6F8E24FE347C65A9B957EB679C301F9 /* UIPicker+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIPicker+Peekable.swift"; path = "Pod/Classes/Peekable/UIPicker+Peekable.swift"; sourceTree = "<group>"; };
+		D798F02C22B47C54ACE7ACF6A51F826B /* UISlider+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISlider+Peekable.swift"; path = "Pod/Classes/Peekable/UISlider+Peekable.swift"; sourceTree = "<group>"; };
+		DDBF7EC0D6641B3580844B5D34EBAAD7 /* PeekButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekButton.swift; path = "Pod/Classes/Controllers & Views/Overlays/PeekButton.swift"; sourceTree = "<group>"; };
+		E14618FE99A967E27F53D4A99E975A81 /* Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = Pod/Classes/Helpers/Constraints.swift; sourceTree = "<group>"; };
+		E17A78071421914CE98ACA5C0A3747D0 /* Group.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Group.swift; path = Pod/Classes/Coordinator/Group.swift; sourceTree = "<group>"; };
+		E1D4E9524452FBB2CD044057740FB809 /* UINavigationBar+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationBar+Peekable.swift"; path = "Pod/Classes/Peekable/UINavigationBar+Peekable.swift"; sourceTree = "<group>"; };
+		E4D5A37B42E504CD37894DB082E4C9EE /* Report.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Report.swift; path = "Pod/Classes/Controllers & Views/Reporting/Report.swift"; sourceTree = "<group>"; };
+		E8A0770E935E24A9764586A45B76F856 /* NSValue+Transformer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSValue+Transformer.swift"; path = "Pod/Classes/Transformers/NSValue+Transformer.swift"; sourceTree = "<group>"; };
+		E918957A271B48F5607A2582EF754975 /* UILabel+Peekable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILabel+Peekable.swift"; path = "Pod/Classes/Peekable/UILabel+Peekable.swift"; sourceTree = "<group>"; };
+		ED6BFEEFFCA43F9F42306439A87E7273 /* ReportActivity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReportActivity.swift; path = "Pod/Classes/Controllers & Views/Reporting/ReportActivity.swift"; sourceTree = "<group>"; };
+		F00CB9D73827C07D5C478C78C3810275 /* CGSize+Resize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Resize.swift"; path = "Pod/Classes/Helpers/CGSize+Resize.swift"; sourceTree = "<group>"; };
+		F1E8573AE18729FF6F586E4B95FA36CE /* Images+OrientationMask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Images+OrientationMask.swift"; path = "Pod/Classes/Images/Images+OrientationMask.swift"; sourceTree = "<group>"; };
+		F6DE96A9EA54E1A80F28EE7C5F2F4D3D /* LayoutManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutManager.swift; path = "Pod/Classes/Controllers & Views/Overlays/Text/LayoutManager.swift"; sourceTree = "<group>"; };
+		F938032D940E5BB16552972C585D0B9C /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extensions.swift"; path = "Pod/Classes/Helpers/UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		FFA88E5019CF8A429D5C4EA6A93853D1 /* PeekAccessoryProviding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PeekAccessoryProviding.swift; path = "Pod/Classes/Accessory Views/PeekAccessoryProviding.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A8030E2E5404B991D28D70F343C7CA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD89A9C4E59E0D2E6EB823E771AD6FEF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18BF59CA86884E64B8A04B5A1E8BB8D4 /* Peek */ = {
+			isa = PBXGroup;
+			children = (
+				4A90EE370BF3CAA1FC36EB6399698518 /* Attribute.swift */,
+				22635AF07FA317DCFB045F058F13F81B /* Bool+Toggle.swift */,
+				3E033A63379C48D461621E8CA71BA297 /* BoolAccessoryView.swift */,
+				9EAB4DB7C0A50E53A88394D8BF8E0BE8 /* Bundle+Peekable.swift */,
+				774E830E4E49A547676F6338CEB69734 /* CALayer+Peekable.swift */,
+				F00CB9D73827C07D5C478C78C3810275 /* CGSize+Resize.swift */,
+				A0CA02006CD77CDC587A35E6CD6B5DD9 /* CollapsibleSections.swift */,
+				BE27676CC51CB574461D894923C7D223 /* Collection+NilOrEmpty.swift */,
+				74F089D0C78EDC83639C3DFFFE4E7B40 /* Color.swift */,
+				9377E24C52B9F57E74BB7C16AFCED2A3 /* Color+Extensions.swift */,
+				51CDB93187E010AF483D706C2A4A13A4 /* ColorAccessoryView.swift */,
+				E14618FE99A967E27F53D4A99E975A81 /* Constraints.swift */,
+				107B1583AC8ECCF03CC9B1C226B93FCE /* ContextDataSource.swift */,
+				8C3AB0BA52688AEF3A083C2F9E1BBAC2 /* Coordinator.swift */,
+				39C5579A8F5863E9D7E70CB40E08CA41 /* Enum+Cases.swift */,
+				657AF2AC8169005C805C0E4A0A024B24 /* Enum+Descriptions.swift */,
+				E17A78071421914CE98ACA5C0A3747D0 /* Group.swift */,
+				227B56BF2200B71E95A8E5DC5D8E041B /* ImageRenderer.swift */,
+				14A2A3624F6BD33003D23750B8AA5D0D /* Images+Inspectors.swift */,
+				6A6801BD6990D61C2E80C4A9EEB28B02 /* Images+Orientation.swift */,
+				F1E8573AE18729FF6F586E4B95FA36CE /* Images+OrientationMask.swift */,
+				F6DE96A9EA54E1A80F28EE7C5F2F4D3D /* LayoutManager.swift */,
+				69B7EF9BB522761E49FCFEAEB2C63EF7 /* NSAttributedString+Peekable.swift */,
+				399A67B57B2B87FA0095A62E35FB58FA /* NSLayoutConstraint+Peekable.swift */,
+				3BAA535465A307238113E7FE1FCB30B0 /* NSNumber+Extensions.swift */,
+				3DA83A530D31B06D0F5818818F795747 /* NSNumber+Transformer.swift */,
+				2B9B19AA0074381F3888A0079BB85F52 /* NSObject+Extensions.swift */,
+				0D78D532A519ACBBE79C45E4B558E01C /* NSString+Peekable.swift */,
+				E8A0770E935E24A9764586A45B76F856 /* NSValue+Transformer.swift */,
+				6DAEA50F01F7AAC1B2936642146A05B0 /* PDFRenderer.swift */,
+				87283232B58BE002EB52DA496C4AD048 /* Peek.swift */,
+				25E3078EEE4F166297004D8BDE120A1B /* Peekable.swift */,
+				FFA88E5019CF8A429D5C4EA6A93853D1 /* PeekAccessoryProviding.swift */,
+				DDBF7EC0D6641B3580844B5D34EBAAD7 /* PeekButton.swift */,
+				D4C7C3948621F944A1A9C443ABF74F81 /* PeekInspectorCell.swift */,
+				75EAADEC3FC84D7C58D11B302E49CB53 /* PeekInspectorViewController.swift */,
+				704B9F263746E437B7F2F5479ACFF208 /* PeekLayoutOverlayView.swift */,
+				AF00C7DEEA6847227E5BE03C8C3E4E71 /* PeekLayoutView.swift */,
+				BB98812C590F15684D9EB1FACBEF5198 /* PeekMetricView.swift */,
+				75DCA6A5B6F1A816A59705F41C9B6964 /* PeekOptions.swift */,
+				CBB4C33FD16B868B776CD5E75DF92FC7 /* PeekOverlayView.swift */,
+				2D9DA2A11F232225EF70AC28F91BB168 /* PeekPresentationController.swift */,
+				61AE3A188AB8055E19BA73FD4B4BB19B /* PeekSectionedViewController.swift */,
+				9BB7229EE64DDAF1E13048C2273008EF /* PeekSelectionView.swift */,
+				B52D08A74759FA2F358D692BA63383FB /* PeekTapGestureRecognizer.swift */,
+				212BEE2747115F4070AE035A0A8BA972 /* PeekTextOverlayView.swift */,
+				14E9296A55A8003DAE5E1F12488DB90E /* PeekTheme+Colors.swift */,
+				9FA65E78A07362072FD21039EEF6B96D /* PeekViewController.swift */,
+				3541C56DB7486DC0029F870CE9FEA876 /* Platforms.swift */,
+				7649CD1985DB833BBF1735C6FC7BA121 /* PreviewCell.swift */,
+				A2BC22661D773074CA389AEBD852A2F0 /* Renderer.swift */,
+				9F2E7E0B752DF272EFEC21C001457846 /* RendererDrawable.swift */,
+				E4D5A37B42E504CD37894DB082E4C9EE /* Report.swift */,
+				ED6BFEEFFCA43F9F42306439A87E7273 /* ReportActivity.swift */,
+				45E32D531374F0A228C4B56BE9D117FD /* ReportViewController.swift */,
+				A11E25233DE36D651E0B4FB0CDCF5371 /* String+Extensions.swift */,
+				A785B27CF3074DA984AC8D373D29DA24 /* UIActivityIndicatorView+Peekable.swift */,
+				0ABB4AAFF328F924DD756A2A6D86DA4C /* UIApplication+Peekable.swift */,
+				7BCF6EF7E1CCE458C21A96CCCD885715 /* UIBarButtonItem+Peekable.swift */,
+				2694C3872204B03EEE42354786C0DEE1 /* UIButton+Peekable.swift */,
+				6A2E2DD71D67944502949B1B9A93C7D4 /* UIColor+Peekable.swift */,
+				40CF481A4A48410DB0C277129780DB06 /* UIColor+Transformer.swift */,
+				15BB822DE9C1520EF9FC61E2A255BCCA /* UIControl+Peekable.swift */,
+				4162C99900BEACAC0072EA993E2A9EF0 /* UIDevice+Extensions.swift */,
+				499D0AF6668FF783A28A0C7F0FED1936 /* UIDevice+Peekable.swift */,
+				8C22027214460E373DE270038521D575 /* UIFont+Peekable.swift */,
+				D6DC4FD77AF430D7D6443D0AD8F4BD4F /* UIImage+Peekable.swift */,
+				490E5AAEF935B3F11506A22D558D887B /* UIImage+Resize.swift */,
+				D16C5D933594FD25E03CA72C3CC92227 /* UIImageView+Peekable.swift */,
+				E918957A271B48F5607A2582EF754975 /* UILabel+Peekable.swift */,
+				E1D4E9524452FBB2CD044057740FB809 /* UINavigationBar+Peekable.swift */,
+				6CF017770D21FA6A995A3A667FB78BD2 /* UIPageControl+Peekable.swift */,
+				D6F8E24FE347C65A9B957EB679C301F9 /* UIPicker+Peekable.swift */,
+				6820CF0F5D6C0C2455FCAE1C80330B6A /* UIProgressView+Peekable.swift */,
+				551478A78C8FBAF4F793EC1F0EAE8438 /* UIScreen+Peekable.swift */,
+				94B658C1A74B924336C367679A55A287 /* UIScrollView+Peekable.swift */,
+				9D450ECEBB32A5CFDDA5176F11C4B691 /* UISegmentedControl+Peekable.swift */,
+				D798F02C22B47C54ACE7ACF6A51F826B /* UISlider+Peekable.swift */,
+				928D0924207760A4ACE4B90001F0A4E0 /* UIStackView+Peekable.swift */,
+				C09173CC489010CDBF588E3F07E49082 /* UIStepper+Peekable.swift */,
+				B384EA5F811E98D7AD4601712A068A70 /* UISwitch+Peekable.swift */,
+				A6E58DF6AA42432399EBA3C3AD9FE0B5 /* UITextField+Peekable.swift */,
+				8AB5717F2EFFDACAB8A955A553004AED /* UITextView+Peekable.swift */,
+				429AEDFA8CB2B51B17AC38EE77369A60 /* UIToolbar+Peekable.swift */,
+				3A31CA9878D7AB46F3B3352469222A6E /* UIView+Extensions.swift */,
+				0405B25C7DDFEE769D815AF4F24ACE25 /* UIView+Filter.swift */,
+				536FDC6CBA931FF52627AC17E35DA989 /* UIView+Peekable.swift */,
+				F938032D940E5BB16552972C585D0B9C /* UIViewController+Extensions.swift */,
+				95D487B56F3A3E78D10B2D9A4B8C90DF /* UIViewController+Modal.swift */,
+				43C7B641EEFC662B95F14A1DD3A146EB /* UIViewController+Peekable.swift */,
+				60FF1CEBC29DE65C6EDF49501240F608 /* UIWindow+Extensions.swift */,
+				23487541A4A331AAF63DCF288390B432 /* VolumeController.swift */,
+				1F1ADA5563B07F12A669A5C5F12F945C /* Support Files */,
+			);
+			name = Peek;
+			path = Peek;
+			sourceTree = "<group>";
+		};
+		1F1ADA5563B07F12A669A5C5F12F945C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				302764C46AB3BDD06781779AFCBC1E74 /* Peek.modulemap */,
+				1712974DC9E55E63949D65DF68667233 /* Peek.xcconfig */,
+				06681CBEA99419F4CCBEA9AF2365F181 /* Peek-dummy.m */,
+				8DD747F73D0C75EAF123215F82B3883D /* Peek-Info.plist */,
+				168A52829D1417EC7FD84DA93967F3C9 /* Peek-prefix.pch */,
+				087F1171D7BED9DE229B2C47250F6969 /* Peek-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Peek";
+			sourceTree = "<group>";
+		};
+		3275340F8EC37494AD710FDFB547AC74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2D778BB438712C3FB18309407D1F66D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48CF375AD90CBB68C8CD3BC816A9EDCC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76E013FD4B9E6BE0CF0F4D4C84BE810A /* Peek.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BEA1B426A7E1D7CCF768223170EEF76 = {
+			isa = PBXGroup;
+			children = (
+				3275340F8EC37494AD710FDFB547AC74 /* Frameworks */,
+				18BF59CA86884E64B8A04B5A1E8BB8D4 /* Peek */,
+				48CF375AD90CBB68C8CD3BC816A9EDCC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2D778BB438712C3FB18309407D1F66D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3EAA147B2643DE821E93A1D24D4267BC /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		497D6D8D464D86492E8CB2DDDED8EFD0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA6780839010E7DFD67EFAF0EE1EE8C0 /* Peek-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		69F72507EF388B4862CAB96E96561358 /* Peek */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F534D6FE9C02CCDC91FFEBBC4F13D91 /* Build configuration list for PBXNativeTarget "Peek" */;
+			buildPhases = (
+				497D6D8D464D86492E8CB2DDDED8EFD0 /* Headers */,
+				D00D4C9717B47190CF92E1A850E14788 /* Sources */,
+				4A8030E2E5404B991D28D70F343C7CA4 /* Frameworks */,
+				5D40BF8768052083E1DD7F27E894E34B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Peek;
+			productName = Peek;
+			productReference = 76E013FD4B9E6BE0CF0F4D4C84BE810A /* Peek.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75C608E476DE7C6103E6277375150914 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = ADF30514FA09DAF830B1D1E6E1A776BD /* Build configuration list for PBXProject "Peek" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6BEA1B426A7E1D7CCF768223170EEF76;
+			productRefGroup = 48CF375AD90CBB68C8CD3BC816A9EDCC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69F72507EF388B4862CAB96E96561358 /* Peek */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D40BF8768052083E1DD7F27E894E34B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D00D4C9717B47190CF92E1A850E14788 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC6D037607A21D045E11C4D350F9F7D /* Attribute.swift in Sources */,
+				1C7618961E07680D6B1D53AD768F4926 /* Bool+Toggle.swift in Sources */,
+				6E3820F5CB7CBE878854785F8338AA65 /* BoolAccessoryView.swift in Sources */,
+				81DEA3542870FB8361BBA3B57E4CABFF /* Bundle+Peekable.swift in Sources */,
+				73AC4E8E2BAE711855BF487FF3DAF12D /* CALayer+Peekable.swift in Sources */,
+				343DD58DBD2CE1C1D821A28DD0CAE564 /* CGSize+Resize.swift in Sources */,
+				0C34267E5A397DC8205CBB8C0A1951F8 /* CollapsibleSections.swift in Sources */,
+				200A1693D757EE88F6BB24E8D201AD1D /* Collection+NilOrEmpty.swift in Sources */,
+				1A68CB1A00B37846C71D8A3B5B7DAF4D /* Color+Extensions.swift in Sources */,
+				A2DFFD1D1AB4D85C17D9F27A4A5883FB /* Color.swift in Sources */,
+				3EED68C920BA4FBCE2C7C33C8711DFE4 /* ColorAccessoryView.swift in Sources */,
+				8393C39EA5AEA4891A174011D8528076 /* Constraints.swift in Sources */,
+				F77DC795B5379C90832EF448D91C3B3E /* ContextDataSource.swift in Sources */,
+				4C562DCF250063E80684A89B86381F30 /* Coordinator.swift in Sources */,
+				EA3F3E925FAF8AC366C0DD021C49B016 /* Enum+Cases.swift in Sources */,
+				5714F685914BD84E5EC9234538CE5ACE /* Enum+Descriptions.swift in Sources */,
+				1DE34001CB339FF646136196AF0F7E43 /* Group.swift in Sources */,
+				A1883A0271B24216DF9CF58E8013BDD8 /* ImageRenderer.swift in Sources */,
+				3C65480B0D829EE1E3C722FBB2185DDD /* Images+Inspectors.swift in Sources */,
+				82AE79132B22536CED9805F93952DD68 /* Images+Orientation.swift in Sources */,
+				1FE00E3839C50EF83013DA7E66E4C73F /* Images+OrientationMask.swift in Sources */,
+				EB684368A685B9DB21189423869A24CA /* LayoutManager.swift in Sources */,
+				0C756B429113B3DF54E9BDE9B11E3023 /* NSAttributedString+Peekable.swift in Sources */,
+				3570D37EBB7A47E758D255D4A652DBEB /* NSLayoutConstraint+Peekable.swift in Sources */,
+				D0A278079F289BD7B306E9F882E8CFCD /* NSNumber+Extensions.swift in Sources */,
+				EE49617A1F56A20F28E18C8B053669F7 /* NSNumber+Transformer.swift in Sources */,
+				381C6F5FA05FA50CB9AB268527D971D2 /* NSObject+Extensions.swift in Sources */,
+				CBB8F24991BD54334EB27556ABC63623 /* NSString+Peekable.swift in Sources */,
+				414BE1C19194A68B0968C4518DB2BA1E /* NSValue+Transformer.swift in Sources */,
+				485D90070B049D3ECA194F8F017FFA86 /* PDFRenderer.swift in Sources */,
+				0655A0C8E1505D008ECCE1C4C9C000F3 /* Peek-dummy.m in Sources */,
+				D72818F701E878BAD438D35E330C1BD9 /* Peek.swift in Sources */,
+				377A2A046367065CEF90E321745AF969 /* Peekable.swift in Sources */,
+				44B3A1203EAFEE0FAACCA7D4ADF139B3 /* PeekAccessoryProviding.swift in Sources */,
+				4BACA6C6715B173B94EA7B4AF0A68D1B /* PeekButton.swift in Sources */,
+				118F61F796BE9D8C2F9FCE7207A545DE /* PeekInspectorCell.swift in Sources */,
+				785507005BE58DE998D4E535DE272315 /* PeekInspectorViewController.swift in Sources */,
+				38C325E73D36758A298C9068C1428595 /* PeekLayoutOverlayView.swift in Sources */,
+				CDD03D9D8A33137B56E561B291CC7EEF /* PeekLayoutView.swift in Sources */,
+				8743E97E761B3AD2C8D1F5FE2FD1B995 /* PeekMetricView.swift in Sources */,
+				3AA3AA1834544363139F0183E8099F53 /* PeekOptions.swift in Sources */,
+				CA86026E40507751F0D32F4A790AD1FC /* PeekOverlayView.swift in Sources */,
+				64ECEC5ACFFBF35A4AACC3DDA82AA4D4 /* PeekPresentationController.swift in Sources */,
+				5C62FD0BA569B5627F982A5752BE06EF /* PeekSectionedViewController.swift in Sources */,
+				7B712B7D0451DEF46AB8826081220D09 /* PeekSelectionView.swift in Sources */,
+				EB15CEE319A789302F72C2F6220FEC5B /* PeekTapGestureRecognizer.swift in Sources */,
+				FEBADA575DF544B9BC097502991DFD49 /* PeekTextOverlayView.swift in Sources */,
+				0537AD7EFFE604B246E71EB31BF27C6C /* PeekTheme+Colors.swift in Sources */,
+				97D583797DBAA1F91D9F274B748F0411 /* PeekViewController.swift in Sources */,
+				18D7A14BF341D35F6BB32711BA00B84A /* Platforms.swift in Sources */,
+				465439DF10E9FFF042102696F0CEECE7 /* PreviewCell.swift in Sources */,
+				75BA342685D6776B95ACD613DD83E787 /* Renderer.swift in Sources */,
+				ACEF7F350F1D26FFEAB488A88F5FEA65 /* RendererDrawable.swift in Sources */,
+				339BC23F4F0C97E6ED9B6CC11030BF7A /* Report.swift in Sources */,
+				EFDC8637E445B7E6F50AD7C57903D3B6 /* ReportActivity.swift in Sources */,
+				8BADB0BA5516F094D892E7A78C002D6F /* ReportViewController.swift in Sources */,
+				0039F82C6A30A3ED1C808B9E1BBD0206 /* String+Extensions.swift in Sources */,
+				DE711FCB2170E72C664CFBCD7BC13931 /* UIActivityIndicatorView+Peekable.swift in Sources */,
+				052DCC6CBA49A24F3C55026BA44DDDB7 /* UIApplication+Peekable.swift in Sources */,
+				5EAACD91FBD885EE4DF0CE108D2DBCDF /* UIBarButtonItem+Peekable.swift in Sources */,
+				211C8D946CB919963C22EB0F65A916D8 /* UIButton+Peekable.swift in Sources */,
+				5FACCCF6FA9A474065B406BEC4FCFA0F /* UIColor+Peekable.swift in Sources */,
+				E2CD790311034C5C3BBD504DC4C641B8 /* UIColor+Transformer.swift in Sources */,
+				3BD4E44DF47A19018F614D88BE2524BD /* UIControl+Peekable.swift in Sources */,
+				6A35477AD9AA22FBF5770C9B168742E3 /* UIDevice+Extensions.swift in Sources */,
+				0B112A486F6C87E3AF317E7EFD17C468 /* UIDevice+Peekable.swift in Sources */,
+				62EB74A68D6B8CA2AF2395DE10CD4927 /* UIFont+Peekable.swift in Sources */,
+				0EA7C2F3C36D74CBB6EF2BC34C21BCA4 /* UIImage+Peekable.swift in Sources */,
+				FDB340AC7D3BD8A22F4CEA7627CD62A0 /* UIImage+Resize.swift in Sources */,
+				B037867B03A313311D5316464130DC40 /* UIImageView+Peekable.swift in Sources */,
+				14DC38FCF2AFE51AC4E1BEBC6EF453D2 /* UILabel+Peekable.swift in Sources */,
+				CFF4D6753A56236C7E0C9E8A9A339AB8 /* UINavigationBar+Peekable.swift in Sources */,
+				B7F796EF74879DF6FB97D42552A4E7A1 /* UIPageControl+Peekable.swift in Sources */,
+				F27B8EBEE1BE0A4AFE331D75146A2790 /* UIPicker+Peekable.swift in Sources */,
+				0097CF748ACDD926EFAAA1A3C99F1159 /* UIProgressView+Peekable.swift in Sources */,
+				A8BF18A0747DC5CA2485553565F99CE5 /* UIScreen+Peekable.swift in Sources */,
+				498050398340A70EDF3C883A59106AC7 /* UIScrollView+Peekable.swift in Sources */,
+				E0869F3759B806467458D342000B97BD /* UISegmentedControl+Peekable.swift in Sources */,
+				65C8F2F147A9E0B0328221298641AD33 /* UISlider+Peekable.swift in Sources */,
+				75E9FC18F8A6540338CD1D9ED7482586 /* UIStackView+Peekable.swift in Sources */,
+				B0ACB61F5B8F445877E6ACCA37F2B9AC /* UIStepper+Peekable.swift in Sources */,
+				406CDF5EEB157135D26041BB69EC5D89 /* UISwitch+Peekable.swift in Sources */,
+				D4C6148DA1DA65F2BAF5384E5C029831 /* UITextField+Peekable.swift in Sources */,
+				0F59E1F3B035B5944C671D74BA36B0BE /* UITextView+Peekable.swift in Sources */,
+				31493E41107D81225279E9B5BE7B8A03 /* UIToolbar+Peekable.swift in Sources */,
+				D9F56F275C1944A096A0FE4B0D49F27C /* UIView+Extensions.swift in Sources */,
+				FDE445E01F420F12A3330A1EA3B01B0E /* UIView+Filter.swift in Sources */,
+				94E27C5AC62553B599D32CB7382BAB78 /* UIView+Peekable.swift in Sources */,
+				43EE3C367561A10B31FEB74BFB9529C2 /* UIViewController+Extensions.swift in Sources */,
+				75A1C937B664D26480E2F80F3A8AEACB /* UIViewController+Modal.swift in Sources */,
+				82448DEA26EB3D6EBFEE37700B0CA012 /* UIViewController+Peekable.swift in Sources */,
+				FEB7AA6735D34F3E271D0D77A3F8DD08 /* UIWindow+Extensions.swift in Sources */,
+				629106881A90604E3BA13C84E1B378FF /* VolumeController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		775AA033EAB07AAB6CE4F2BE0835CB3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1712974DC9E55E63949D65DF68667233 /* Peek.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Peek/Peek-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Peek/Peek-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Peek/Peek.modulemap";
+				PRODUCT_MODULE_NAME = Peek;
+				PRODUCT_NAME = Peek;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D00781CDE4FC97AB5755B193B7333304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E958123E563C4D60AB5A73B5F1F07998 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		EA8755339C43117F4FAFECCAF11E71DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1712974DC9E55E63949D65DF68667233 /* Peek.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Peek/Peek-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Peek/Peek-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Peek/Peek.modulemap";
+				PRODUCT_MODULE_NAME = Peek;
+				PRODUCT_NAME = Peek;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F534D6FE9C02CCDC91FFEBBC4F13D91 /* Build configuration list for PBXNativeTarget "Peek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				775AA033EAB07AAB6CE4F2BE0835CB3C /* Debug */,
+				EA8755339C43117F4FAFECCAF11E71DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADF30514FA09DAF830B1D1E6E1A776BD /* Build configuration list for PBXProject "Peek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D00781CDE4FC97AB5755B193B7333304 /* Debug */,
+				E958123E563C4D60AB5A73B5F1F07998 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 75C608E476DE7C6103E6277375150914 /* Project object */;
+}

@@ -460,7 +460,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ZDOpenSourceSwiftDemo/Pods-ZDOpenSourceSwiftDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-ZDOpenSourceSwiftDemo/Pods-ZDOpenSourceSwiftDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Buglife/Buglife.framework",
 				"${BUILT_PRODUCTS_DIR}/Cartography/Cartography.framework",
@@ -541,7 +541,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZDOpenSourceSwiftDemo/Pods-ZDOpenSourceSwiftDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZDOpenSourceSwiftDemo/Pods-ZDOpenSourceSwiftDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E0337C0D9212CED3E99AD878 /* [CP] Check Pods Manifest.lock */ = {

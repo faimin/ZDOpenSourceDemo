@@ -1,28 +1,28 @@
 PODS:
   - Alamofire (4.8.2)
   - Buglife (2.10.1)
-  - Cartography (3.1.0)
+  - Cartography (4.0.0)
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
   - DeepDiff (2.2.0)
   - FLEX (3.0.0)
   - GDPerformanceView-Swift (2.0.2)
-  - Gemini (1.3.1)
+  - Gemini (1.4.0)
   - Hero (1.4.0)
   - IGListKit (3.4.0):
     - IGListKit/Default (= 3.4.0)
   - IGListKit/Default (3.4.0):
     - IGListKit/Diffing
   - IGListKit/Diffing (3.4.0)
-  - Kingfisher (5.4.0)
+  - Kingfisher (5.6.0)
   - LayoutInspector (1.0.0)
   - LayoutKit (10.1.0)
-  - LifetimeTracker (1.6.0)
-  - lottie-ios (3.0.4)
+  - LifetimeTracker (1.6.1)
+  - lottie-ios (3.1.1)
   - MBProgressHUD (1.1.0)
   - Neon (0.4.0)
-  - ObjectMapper (3.4.2)
+  - ObjectMapper (3.5.1)
   - Peek (5.2.0)
   - PINCache (3.0.1-beta.6):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
@@ -31,7 +31,7 @@ PODS:
     - PINCache/Core
   - PINCache/Core (3.0.1-beta.6):
     - PINOperation (~> 1.1.0)
-  - PINOperation (1.1.1)
+  - PINOperation (1.1.2)
   - PINRemoteImage/Core (3.0.0-beta.13):
     - PINOperation
   - PINRemoteImage/iOS (3.0.0-beta.13):
@@ -39,14 +39,14 @@ PODS:
   - PINRemoteImage/PINCache (3.0.0-beta.13):
     - PINCache (= 3.0.1-beta.6)
     - PINRemoteImage/Core
-  - PromiseKit (6.8.4):
-    - PromiseKit/CorePromise (= 6.8.4)
-    - PromiseKit/Foundation (= 6.8.4)
-    - PromiseKit/UIKit (= 6.8.4)
-  - PromiseKit/CorePromise (6.8.4)
-  - PromiseKit/Foundation (6.8.4):
+  - PromiseKit (6.10.0):
+    - PromiseKit/CorePromise (= 6.10.0)
+    - PromiseKit/Foundation (= 6.10.0)
+    - PromiseKit/UIKit (= 6.10.0)
+  - PromiseKit/CorePromise (6.10.0)
+  - PromiseKit/Foundation (6.10.0):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.8.4):
+  - PromiseKit/UIKit (6.10.0):
     - PromiseKit/CorePromise
   - PromisesObjC (1.2.8)
   - PromisesSwift (1.2.8):
@@ -80,9 +80,9 @@ PODS:
     - Texture/Core
   - Texture/Video (2.8.1):
     - Texture/Core
-  - TinyConstraints (4.0.0)
+  - TinyConstraints (4.0.1)
   - Toast-Swift (5.0.0)
-  - Watchdog (5.1)
+  - Watchdog (5.2)
   - Yoga (1.14.0)
   - YogaKit (1.14.0):
     - Yoga (~> 1.14)
@@ -164,27 +164,27 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Buglife: bc8e4931ebe37b2901c6dbcb0ca6dd76f62a98c3
-  Cartography: 1988b7578871a56c036e7af17195cb2190edf18c
+  Cartography: c5626d29056b20f1e95c017326ee4df57cc39ad8
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   DeepDiff: e329bc46dd14ca788d8ec08d34420799ba1d77f2
   FLEX: d66c759bce0f6ebbbf472c742380874d846f2883
   GDPerformanceView-Swift: a40b2f675589449f5b5082f3178f01bfdb7882ce
-  Gemini: 25fd4ae5dcde4cbd136dac899faf38a1dddea1a8
+  Gemini: 4ad915cca8805577fe3021e02feeca2b77dcdbfc
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
-  Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
+  Kingfisher: 1a50df6880a60bae26f3e21a0df3d17b892f5e0b
   LayoutInspector: 1078a54f993510f61101203f48a8a3db69c7afe1
   LayoutKit: 66478bb3af5ce4519a056d9465bc4c7585d2350b
-  LifetimeTracker: 8b7f2979fa70a41e9aaff63d158cae7a027eef10
-  lottie-ios: 55a2de40418f8de2b155efaba4d4d1a025a5c570
+  LifetimeTracker: dcdb1cbd0dd4825c7634c02a6955799138fcaec9
+  lottie-ios: 43a472d22b2dd2bed292cc4010c0b4d2e66d3ba8
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   Neon: 7fb5a9327e7e57911843f608e08f4893a74deaf9
-  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   Peek: 77f6362167c00aab3f1147d92d51bdf80d259d45
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
-  PINOperation: a6219e6fc9db9c269eb7a7b871ac193bcf400aac
+  PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
-  PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
+  PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   PromisesSwift: 37bad6f4daddb02f7c9c531efe91e8b21c13ee2f
   ResponseDetective: 8422c5139cf6ff7d7db38b2bfea418b748b440cc
@@ -194,12 +194,12 @@ SPEC CHECKSUMS:
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
-  TinyConstraints: 03bc091844b98c18dbaead8b1153242a42721b56
+  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
   Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
-  Watchdog: 46862f4e1fcf9c7864c96227d784d3c00013b5b7
+  Watchdog: 622647e6bc5a55665e6dbae0b7831ad8d95abeab
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
   YogaKit: 5d1dc899cecd5946e5a758a0c3997704a4b48d01
 
-PODFILE CHECKSUM: 3c7fc9b314f97c729a30a5162dfcddff2db36053
+PODFILE CHECKSUM: f090122e6adc57dacec2c5fa51be6ac248868328
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.3
