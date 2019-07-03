@@ -1,0 +1,409 @@
+BUILD_CONFIGURATIONS:
+  Debug: :debug
+  Release: :release
+CACHE_KEYS:
+  AFNetworking:
+    BUILD_SETTINGS_CHECKSUM:
+      AFNetworking: efb91c6220e10cb6ff46b112a351fe06
+    CHECKSUM: b6f891fdfaed196b46c7a83cf209e09697b94057
+    SPECS:
+      - AFNetworking (3.2.1)
+      - AFNetworking/NSURLSession (3.2.1)
+      - AFNetworking/Reachability (3.2.1)
+      - AFNetworking/Security (3.2.1)
+      - AFNetworking/Serialization (3.2.1)
+      - AFNetworking/UIKit (3.2.1)
+  boost-for-react-native:
+    BUILD_SETTINGS_CHECKSUM:
+      boost-for-react-native: 29b96ed64a3f188f65aef1e5e0d55d0a
+    CHECKSUM: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+    SPECS:
+      - boost-for-react-native (1.63.0)
+  ChameleonFramework:
+    BUILD_SETTINGS_CHECKSUM:
+      ChameleonFramework: 392a8ffb42cf46af6e50e99dba2d879f
+    CHECKSUM: d21a3cc247abfe5e37609a283a8238b03575cf64
+    SPECS:
+      - ChameleonFramework (2.1.0)
+      - ChameleonFramework/Default (2.1.0)
+  CocoaAsyncSocket:
+    BUILD_SETTINGS_CHECKSUM:
+      CocoaAsyncSocket: 67e163becf9bfca73d3fe9ff70bb3e92
+    CHECKSUM: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+    SPECS:
+      - CocoaAsyncSocket (7.6.3)
+  CocoaLibEvent:
+    BUILD_SETTINGS_CHECKSUM:
+      CocoaLibEvent: f54ae6caabca7e3ae7974d08764645bc
+    CHECKSUM: 2fab71b8bd46dd33ddb959f7928ec5909f838e3f
+    SPECS:
+      - CocoaLibEvent (1.0.0)
+  cocore:
+    BUILD_SETTINGS_CHECKSUM:
+      cocore: 02766bcf2c9de6e70c698ce3c429f3f3
+    CHECKSUM: cc9d76229458f286a632d9cecb63bd699bd3529d
+    SPECS:
+      - cocore (1.2.0)
+  ComponentKit:
+    BUILD_SETTINGS_CHECKSUM:
+      ComponentKit: 849745f75ff4765ad165859465029bdc
+    CHECKSUM: 8af44a3fbb55fcd1d36a048cf24f1133ac6e6a77
+    SPECS:
+      - ComponentKit (0.27)
+  coobjc:
+    BUILD_SETTINGS_CHECKSUM:
+      coobjc: d3cbf6d57a0dd3a5e1209b39ac05f1bf
+    CHECKSUM: 090a460e32e90d0e820e64c31cf7b79dece51a7c
+    SPECS:
+      - coobjc (1.2.0)
+  DirectoryWatchdog:
+    BUILD_SETTINGS_CHECKSUM:
+      DirectoryWatchdog: aa1346fbaab6617fb7d6bcfc879ebf40
+    CHECKSUM: 85f0a92a52bc0d3d66346d80629227b44500506a
+    SPECS:
+      - DirectoryWatchdog (1.1.0)
+  DoubleConversion:
+    BUILD_SETTINGS_CHECKSUM:
+      DoubleConversion: 40c29c49ce552f8c53cdebdeef43c330
+    CHECKSUM: e22e0762848812a87afd67ffda3998d9ef29170c
+    SPECS:
+      - DoubleConversion (1.1.5)
+  fishhook:
+    BUILD_SETTINGS_CHECKSUM:
+      fishhook: 2b3788158b76894792b90063516589a3
+    CHECKSUM: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
+    SPECS:
+      - fishhook (0.2)
+  FLEX:
+    BUILD_SETTINGS_CHECKSUM:
+      FLEX: 288a4088bdb1c1f44d2d2f5a6a5036ab
+    CHECKSUM: d66c759bce0f6ebbbf472c742380874d846f2883
+    SPECS:
+      - FLEX (3.0.0)
+  Flipper:
+    BUILD_SETTINGS_CHECKSUM:
+      Flipper: b8b45924d21b54ebea1e4d1549d64ab5
+    CHECKSUM: 4b8ef9891224af3df375c19d607f13406a010907
+    SPECS:
+      - Flipper (0.22.0)
+  Flipper-Folly:
+    BUILD_SETTINGS_CHECKSUM:
+      Flipper-Folly: 23e38d8794338d5373b4c9c6bb0d1c78
+    CHECKSUM: 862e2e39314dd732f5953c40deb7fc85e230ae80
+    SPECS:
+      - Flipper-Folly (1.3.4)
+  Flipper-PeerTalk:
+    BUILD_SETTINGS_CHECKSUM:
+      Flipper-PeerTalk: 5986f0c22f47ab8c3d2a72f2aeb70520
+    CHECKSUM: 116d8f857dc6ef55c7a5a75ea3ceaafe878aadc9
+    SPECS:
+      - Flipper-PeerTalk (0.0.4)
+  Flipper-RSocket:
+    BUILD_SETTINGS_CHECKSUM:
+      Flipper-RSocket: 04927c9fc73f754a90b50a591cb86772
+    CHECKSUM: 6d4593ba3fc97c9c353195e1975632623e588202
+    SPECS:
+      - Flipper-RSocket (0.10.4)
+  FlipperKit:
+    BUILD_SETTINGS_CHECKSUM:
+      FlipperKit: 79f0194484b1f65e1184213946f731b8
+    CHECKSUM: 177b57c0a60187379a2d1a292e811c70ecea9f8d
+    SPECS:
+      - FlipperKit (0.22.0)
+      - FlipperKit/Core (0.22.0)
+      - FlipperKit/CppBridge (0.22.0)
+      - FlipperKit/FBCxxUtils (0.22.0)
+      - FlipperKit/FBDefines (0.22.0)
+      - FlipperKit/FKPortForwarding (0.22.0)
+      - FlipperKit/FlipperKitLayoutComponentKitSupport (0.22.0)
+      - FlipperKit/FlipperKitLayoutPlugin (0.22.0)
+      - FlipperKit/FlipperKitNetworkPlugin (0.22.0)
+      - FlipperKit/FlipperKitUserDefaultsPlugin (0.22.0)
+      - FlipperKit/SKIOSNetworkPlugin (0.22.0)
+  GDPerformanceView:
+    BUILD_SETTINGS_CHECKSUM:
+      GDPerformanceView: 6051a71ef8f7a91784db7ef84d182e02
+    CHECKSUM: d70d646bf7022a3dfd64222e4966f403bfffef19
+    SPECS:
+      - GDPerformanceView (1.3.1)
+  glog:
+    BUILD_SETTINGS_CHECKSUM:
+      glog: a5f667c448fcec8281d11eb561b2b193
+    CHECKSUM: 1de0bb937dccdc981596d3b5825ebfb765017ded
+    SPECS:
+      - glog (0.3.4)
+  IGListKit:
+    BUILD_SETTINGS_CHECKSUM:
+      IGListKit: 2236bde074ce074511078e5b6741f48b
+    CHECKSUM: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
+    SPECS:
+      - IGListKit (3.4.0)
+      - IGListKit/Default (3.4.0)
+      - IGListKit/Diffing (3.4.0)
+  JLRoutes:
+    BUILD_SETTINGS_CHECKSUM:
+      JLRoutes: 9f2fb4ee38a3bb078088668041f0fd1b
+    CHECKSUM: d755245322b94227662ea3e43492fdca94e05c5b
+    SPECS:
+      - JLRoutes (2.1)
+  LayoutInspector:
+    BUILD_SETTINGS_CHECKSUM:
+      LayoutInspector: a697c75d5471fd70ff1dcdc7421b4446
+    CHECKSUM: 1078a54f993510f61101203f48a8a3db69c7afe1
+    SPECS:
+      - LayoutInspector (1.0.0)
+  libextobjc:
+    BUILD_SETTINGS_CHECKSUM:
+      libextobjc: 9a94e99d27827447ad68cddc8937e37d
+    CHECKSUM: aed8b7d2b07f511c1a7ecaacb33ea03e327c69b7
+    SPECS:
+      - libextobjc (0.6)
+      - libextobjc/EXTADT (0.6)
+      - libextobjc/EXTConcreteProtocol (0.6)
+      - libextobjc/EXTKeyPathCoding (0.6)
+      - libextobjc/EXTNil (0.6)
+      - libextobjc/EXTSafeCategory (0.6)
+      - libextobjc/EXTScope (0.6)
+      - libextobjc/EXTSelectorChecking (0.6)
+      - libextobjc/EXTSynthesize (0.6)
+      - "libextobjc/NSInvocation+EXT (0.6)"
+      - "libextobjc/NSMethodSignature+EXT (0.6)"
+      - libextobjc/RuntimeExtensions (0.6)
+      - libextobjc/UmbrellaHeader (0.6)
+  libffi-core:
+    BUILD_SETTINGS_CHECKSUM:
+      libffi-core: a369cdb9f07a7cda2510d7cdfaeff20e
+    CHECKSUM: c4049ed88381fee5c0a31d26c860fc427d3c301c
+    SPECS:
+      - libffi-core (1.2.0)
+  LinqToObjectiveC:
+    BUILD_SETTINGS_CHECKSUM:
+      LinqToObjectiveC: 04e02e859610dc87083e428e6bb221ef
+    CHECKSUM: f0e40c137a458b6b9725c4c7b6a575c0c72e3aec
+    SPECS:
+      - LinqToObjectiveC (2.1.0)
+  lottie-ios:
+    BUILD_SETTINGS_CHECKSUM:
+      lottie-ios: 3ebad1d501c37faf54b448e6f49525d9
+    CHECKSUM: 43a472d22b2dd2bed292cc4010c0b4d2e66d3ba8
+    SPECS:
+      - lottie-ios (3.1.1)
+  Masonry:
+    BUILD_SETTINGS_CHECKSUM:
+      Masonry: 08b92f63b00a1015da07b49ceb1cd99a
+    CHECKSUM: 678fab65091a9290e40e2832a55e7ab731aad201
+    SPECS:
+      - Masonry (1.1.0)
+  MBProgressHUD:
+    BUILD_SETTINGS_CHECKSUM:
+      MBProgressHUD: badd9721508584e3af916a179c36add4
+    CHECKSUM: e7baa36a220447d8aeb12769bf0585582f3866d9
+    SPECS:
+      - MBProgressHUD (1.1.0)
+  MMKV:
+    BUILD_SETTINGS_CHECKSUM:
+      MMKV: a5bfd8517ab3eaa7350780def927697c
+    CHECKSUM: 99b05c376c0eb412b468ba1d3e6813502edeaa24
+    SPECS:
+      - MMKV (1.0.22)
+  Objection:
+    BUILD_SETTINGS_CHECKSUM:
+      Objection: 1e393d41973faa7d75a91071ced0105d
+    CHECKSUM: ed03f2219cb22d2b5b893114219fe6c7e3263bde
+    SPECS:
+      - Objection (1.6.1)
+  ObjectiveSugar:
+    BUILD_SETTINGS_CHECKSUM:
+      ObjectiveSugar: 237f1c7e34aae62fd34e974570dc3617
+    CHECKSUM: a6a25f23d657c19df0a0b972466d5b5ca9f5295c
+    SPECS:
+      - ObjectiveSugar (1.1.0)
+  OpenSSL-Static:
+    BUILD_SETTINGS_CHECKSUM:
+      OpenSSL-Static: a28629c14b4fdec5ca7ef388789553ab
+    CHECKSUM: bd17e34564a8591ad76b740318683a6caa19a13e
+    SPECS:
+      - OpenSSL-Static (1.0.2.c1)
+  PINCache:
+    BUILD_SETTINGS_CHECKSUM:
+      PINCache: 5a7ecff07002639f237a01bd07f82c7d
+    CHECKSUM: d195fdba255283f7e9900a55e3cced377f431f9b
+    SPECS:
+      - PINCache (3.0.1-beta.6)
+      - PINCache/Arc-exception-safe (3.0.1-beta.6)
+      - PINCache/Core (3.0.1-beta.6)
+  PINOperation:
+    BUILD_SETTINGS_CHECKSUM:
+      PINOperation: f8fa450ba73bb404e6507795d4ed5a40
+    CHECKSUM: 24b774353ca248fcf87d67b2d61eef42087c125a
+    SPECS:
+      - PINOperation (1.1.2)
+  PINRemoteImage:
+    BUILD_SETTINGS_CHECKSUM:
+      PINRemoteImage: 41e336dbad1b58782e42beba061d1b3e
+    CHECKSUM: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
+    SPECS:
+      - PINRemoteImage/Core (3.0.0-beta.13)
+      - PINRemoteImage/iOS (3.0.0-beta.13)
+      - PINRemoteImage/PINCache (3.0.0-beta.13)
+  Pods-ZDOpenSourceOCDemo:
+    BUILD_SETTINGS_CHECKSUM:
+      Debug: cd1d4236cf6fcc643ad7de13180b63c8
+      Release: d0b7fe317902992fc4955fe88bb0b1db
+  Pods-ZDOpenSourceOCDemoTests:
+    BUILD_SETTINGS_CHECKSUM:
+      Debug: 8fb49596f402265662bc16fbbd41ecd6
+      Release: 950134bdc6a9758ad75e935c683a125f
+  Pods-ZDOpenSourceOCDemoUITests:
+    BUILD_SETTINGS_CHECKSUM:
+      Debug: 8fb49596f402265662bc16fbbd41ecd6
+      Release: 950134bdc6a9758ad75e935c683a125f
+  PromiseKit:
+    BUILD_SETTINGS_CHECKSUM:
+      PromiseKit: 8998e2088348b086322e59f55e41a872
+    CHECKSUM: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
+    SPECS:
+      - PromiseKit (6.10.0)
+      - PromiseKit/CorePromise (6.10.0)
+      - PromiseKit/Foundation (6.10.0)
+      - PromiseKit/UIKit (6.10.0)
+  RDVTabBarController:
+    BUILD_SETTINGS_CHECKSUM:
+      RDVTabBarController: 509d93d17ed6006112734b0350894cb0
+    CHECKSUM: b6d63a7fc49b00568ba07255c6171edc737ad833
+    SPECS:
+      - RDVTabBarController (1.2.0)
+  ReactiveObjC:
+    BUILD_SETTINGS_CHECKSUM:
+      ReactiveObjC: 7143b045974b7286c6ac4c6d03ea0afe
+    CHECKSUM: 011caa393aa0383245f2dcf9bf02e86b80b36040
+    SPECS:
+      - ReactiveObjC (3.1.1)
+  ResumableAssert:
+    BUILD_SETTINGS_CHECKSUM:
+      ResumableAssert: d3f542179d2566ac0e95526f68eb72b0
+    CHECKSUM: 2575c1cc00e9db8f1aa09f95bd61fa41a82bfe54
+    SPECS:
+      - ResumableAssert (1.0.0)
+  RSSwizzle:
+    BUILD_SETTINGS_CHECKSUM:
+      RSSwizzle: d395496da6856017676f174f9c1c5e39
+    CHECKSUM: d561958f595028bfcef98c7d55c318b3878a61c6
+    SPECS:
+      - RSSwizzle (0.1.0)
+  RTRootNavigationController:
+    BUILD_SETTINGS_CHECKSUM:
+      RTRootNavigationController: cd5525c3ca21dcd611236b7438aeffbc
+    CHECKSUM: afa6913402be26f8326f7f37fc1550aa67baddcc
+    SPECS:
+      - RTRootNavigationController (0.7.1)
+      - RTRootNavigationController/Core (0.7.1)
+  SVProgressHUD:
+    BUILD_SETTINGS_CHECKSUM:
+      SVProgressHUD: 8c2185183b6ab49e62fd298de60b4e4e
+    CHECKSUM: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+    SPECS:
+      - SVProgressHUD (2.2.5)
+  Texture:
+    BUILD_SETTINGS_CHECKSUM:
+      Texture: babc38b4036791b423a173e7428ef78e
+    CHECKSUM: 8ecf6984065a1e54f06bf97b349ecca28582acd7
+    SPECS:
+      - Texture (2.8.1)
+      - Texture/AssetsLibrary (2.8.1)
+      - Texture/Core (2.8.1)
+      - Texture/MapKit (2.8.1)
+      - Texture/Photos (2.8.1)
+      - Texture/PINRemoteImage (2.8.1)
+      - Texture/Video (2.8.1)
+  Toast:
+    BUILD_SETTINGS_CHECKSUM:
+      Toast: 21dec6f615dbd47c163aa4cb2f04cb6e
+    CHECKSUM: 91b396c56ee72a5790816f40d3a94dd357abc196
+    SPECS:
+      - Toast (4.0.0)
+  Typhoon:
+    BUILD_SETTINGS_CHECKSUM:
+      Typhoon: fa1c181ef8992a47bd4bfc77e675728a
+    CHECKSUM: f8901ef1ad0e2fa520cda0f668492dd33353f7dc
+    SPECS:
+      - Typhoon (4.0.8)
+      - Typhoon/DeallocNotifier (4.0.8)
+      - Typhoon/IntrospectionUtils (4.0.8)
+      - Typhoon/no-arc (4.0.8)
+  Yoga:
+    BUILD_SETTINGS_CHECKSUM:
+      Yoga: fad0423ff5e1e1570b55a7c54f194b73
+    CHECKSUM: cff67a400f6b74dc38eb0bad4f156673d9aa980c
+    SPECS:
+      - Yoga (1.14.0)
+  YogaKit:
+    BUILD_SETTINGS_CHECKSUM:
+      YogaKit: 29e5578184881d1fd3e0362a2b7850d7
+    CHECKSUM: 5d1dc899cecd5946e5a758a0c3997704a4b48d01
+    SPECS:
+      - YogaKit (1.14.0)
+  YTKNetwork:
+    BUILD_SETTINGS_CHECKSUM:
+      YTKNetwork: 07f8f4c322fbc3dd8276b00bfbcd28f2
+    CHECKSUM: df8a7a5597bda1664a4efaa7ef871a818a887fe0
+    SPECS:
+      - YTKNetwork (2.0.4)
+  YYCache:
+    BUILD_SETTINGS_CHECKSUM:
+      YYCache: 42be50bf420f1ad83dbc84480425fa6e
+    CHECKSUM: 8105b6638f5e849296c71f331ff83891a4942952
+    SPECS:
+      - YYCache (1.0.4)
+  YYDispatchQueuePool:
+    BUILD_SETTINGS_CHECKSUM:
+      YYDispatchQueuePool: 3ae7384b0e9f72b03ecdd0d75645a39c
+    CHECKSUM: 3dfb2274bcc74207688dde8ac6f7bdd46871dd7b
+    SPECS:
+      - YYDispatchQueuePool (1.0)
+  YYModel:
+    BUILD_SETTINGS_CHECKSUM:
+      YYModel: 93733025754e230a8d6b840e815eb0c7
+    CHECKSUM: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+    SPECS:
+      - YYModel (1.0.4)
+  ZDNetWorkHelper:
+    BUILD_SETTINGS_CHECKSUM:
+      ZDNetWorkHelper: 125a27e2ea531dcd92377ec0774ea0cb
+    CHECKOUT_OPTIONS:
+      :commit: 2227d3e89ae94078d739987d802a6aceb08659ee
+      :git: https://github.com/faimin/ZDNetWorkHelper
+    CHECKSUM: 969b637a7fc84ff15364011a905821cf8f6d64b9
+    SPECS:
+      - ZDNetWorkHelper (0.3.1)
+  ZDToolKit:
+    BUILD_SETTINGS_CHECKSUM:
+      ZDToolKit: a5ca37e0452de72722a391916e28e3f3
+    CHECKOUT_OPTIONS:
+      :commit: a4bd85dcb5fe7be21b1758bcce39dde60f7239c2
+      :git: https://github.com/faimin/ZDToolKit
+    CHECKSUM: 2dc08339509ad9b9fe36472d4bc6f46e12c5ce30
+    SPECS:
+      - ZDToolKit (0.0.4)
+      - ZDToolKit/ZDAutoLayout (0.0.4)
+      - ZDToolKit/ZDCategory (0.0.4)
+      - ZDToolKit/ZDCategory/Foundation (0.0.4)
+      - ZDToolKit/ZDCategory/UIKit (0.0.4)
+      - ZDToolKit/ZDDebug (0.0.4)
+      - ZDToolKit/ZDMacros (0.0.4)
+      - ZDToolKit/ZDMRC (0.0.4)
+      - ZDToolKit/ZDRuntime (0.0.4)
+      - ZDToolKit/ZDSubclass (0.0.4)
+      - ZDToolKit/ZDTools (0.0.4)
+      - ZDToolKit/ZDTools/ProtocolKit (0.0.4)
+      - ZDToolKit/ZDTools/ZDPromise (0.0.4)
+      - ZDToolKit/ZDTools/ZDProxy (0.0.4)
+  ZIKRouter:
+    BUILD_SETTINGS_CHECKSUM:
+      ZIKRouter: 6ff061768ab03475512f93be0b632e88
+    CHECKSUM: 8802d95cb52e7fb35d739312102450cfd8e45863
+    SPECS:
+      - ZIKRouter (1.0.12)
+      - ZIKRouter/ServiceRouter (1.0.12)
+      - ZIKRouter/ViewRouter (1.0.12)
+OBJECT_VERSION: 46

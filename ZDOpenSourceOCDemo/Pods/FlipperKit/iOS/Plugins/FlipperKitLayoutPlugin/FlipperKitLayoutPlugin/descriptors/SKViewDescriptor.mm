@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2018-present, Facebook, Inc.
+ *  Copyright (c) 2018-present, Facebook, Inc. and its affiliates.
  *
  *  This source code is licensed under the MIT license found in the LICENSE
  *  file in the root directory of this source tree.
@@ -98,6 +98,7 @@ static NSDictionary *YGUnitEnumMap = nil;
                      withValue: @{
                                   @"isAccessibilityElement": SKMutableObject(@(node.isAccessibilityElement)),
                                   @"accessibilityLabel": SKMutableObject(node.accessibilityLabel ?: @""),
+                                  @"accessibilityIdentifier": SKMutableObject(node.accessibilityIdentifier ?: @""),
                                   @"accessibilityValue": SKMutableObject(node.accessibilityValue ?: @""),
                                   @"accessibilityHint": SKMutableObject(node.accessibilityHint ?: @""),
                                   @"accessibilityTraits": AccessibilityTraitsDict(node.accessibilityTraits),

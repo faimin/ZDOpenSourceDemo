@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2018-present, Facebook, Inc.
+ *  Copyright (c) 2018-present, Facebook, Inc. and its affiliates.
  *
  *  This source code is licensed under the MIT license found in the LICENSE
  *  file in the root directory of this source tree.
@@ -21,10 +21,10 @@ FB_LINKABLE(CKFlexboxComponent_Sonar)
 - (NSArray<SKNamed<NSDictionary<NSString *, NSObject *> *> *> *)sonar_additionalDataOverride
 {
   static NSDictionary<NSNumber *, NSString *> *CKFlexboxDirectionEnumMap = @{
-                                @(CKFlexboxDirectionColumn): @"vertical",
-                                @(CKFlexboxDirectionRow): @"horizontal",
-                                @(CKFlexboxDirectionColumnReverse): @"vertical-reverse",
-                                @(CKFlexboxDirectionRowReverse): @"horizontal-reverse",
+                                @(CKFlexboxDirectionColumn): @"column",
+                                @(CKFlexboxDirectionRow): @"row",
+                                @(CKFlexboxDirectionColumnReverse): @"column-reverse",
+                                @(CKFlexboxDirectionRowReverse): @"row-reverse",
                                 };
 
   static NSDictionary<NSNumber *, NSString *> *CKFlexboxJustifyContentEnumMap = @{

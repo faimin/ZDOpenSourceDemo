@@ -1,0 +1,380 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3215E57DB40E2C81AFFEF47C323D194E /* ZDNetworkHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 93C606E023C6350DA46C9E24058242F1 /* ZDNetworkHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		485B9E24A7FA28409E870E47C3D412F6 /* ZDNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB6253099DF9D40E6D9B7A676EEDCC /* ZDNetworkHelper.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7A86B1F01AC480D3525AADBDCCA2B8E7 /* ZDNetWorkHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CA4C327946A3180DC8A535A449E77D /* ZDNetWorkHelper-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD1D59DE968893BA17A9DF5B46D26FDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 238B5C426D385B4652DD6475DACCE1F5 /* AFNetworking.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B561AD1B13C486A61C9BF66B4E6D8F89;
+			remoteInfo = AFNetworking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		238B5C426D385B4652DD6475DACCE1F5 /* AFNetworking */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking; path = AFNetworking.xcodeproj; sourceTree = "<group>"; };
+		5473A2681CC2B77AFFF7741BED5F98E4 /* ZDNetWorkHelper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZDNetWorkHelper-prefix.pch"; sourceTree = "<group>"; };
+		93C606E023C6350DA46C9E24058242F1 /* ZDNetworkHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZDNetworkHelper.h; path = ZDNetWorkHelper/ZDNetworkHelper.h; sourceTree = "<group>"; };
+		9FEB6253099DF9D40E6D9B7A676EEDCC /* ZDNetworkHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZDNetworkHelper.m; path = ZDNetWorkHelper/ZDNetworkHelper.m; sourceTree = "<group>"; };
+		F1DA82EAB62CCE7F83A8D91657E75394 /* ZDNetWorkHelper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZDNetWorkHelper.xcconfig; sourceTree = "<group>"; };
+		F4CA4C327946A3180DC8A535A449E77D /* ZDNetWorkHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZDNetWorkHelper-dummy.m"; sourceTree = "<group>"; };
+		FE57CAA618F36E16468D429558F1D776 /* libZDNetWorkHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libZDNetWorkHelper.a; path = libZDNetWorkHelper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04696491014451E7938DE8CE37979648 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0751C0A24E2245B17C9D42E9254FC38E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE57CAA618F36E16468D429558F1D776 /* libZDNetWorkHelper.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		512324741C165305021173DBB22CEA2E /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				238B5C426D385B4652DD6475DACCE1F5 /* AFNetworking */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		63C814B82E71B545F070ED1B33F07947 /* ZDNetWorkHelper */ = {
+			isa = PBXGroup;
+			children = (
+				93C606E023C6350DA46C9E24058242F1 /* ZDNetworkHelper.h */,
+				9FEB6253099DF9D40E6D9B7A676EEDCC /* ZDNetworkHelper.m */,
+				93DA9F4DC1D5EEDD23C3C5661B410B65 /* Support Files */,
+			);
+			name = ZDNetWorkHelper;
+			path = ZDNetWorkHelper;
+			sourceTree = "<group>";
+		};
+		6B1787D5692828FD973EC23727882EBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78057C81C0EBD857DD17CF837DF28A04 = {
+			isa = PBXGroup;
+			children = (
+				512324741C165305021173DBB22CEA2E /* Dependencies */,
+				6B1787D5692828FD973EC23727882EBE /* Frameworks */,
+				0751C0A24E2245B17C9D42E9254FC38E /* Products */,
+				63C814B82E71B545F070ED1B33F07947 /* ZDNetWorkHelper */,
+			);
+			sourceTree = "<group>";
+		};
+		93DA9F4DC1D5EEDD23C3C5661B410B65 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1DA82EAB62CCE7F83A8D91657E75394 /* ZDNetWorkHelper.xcconfig */,
+				F4CA4C327946A3180DC8A535A449E77D /* ZDNetWorkHelper-dummy.m */,
+				5473A2681CC2B77AFFF7741BED5F98E4 /* ZDNetWorkHelper-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ZDNetWorkHelper";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3645ABB5072A00160B2B3739C3AFBF26 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3215E57DB40E2C81AFFEF47C323D194E /* ZDNetworkHelper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7BDC8F869C893DFC9EB0D3245791DD72 /* ZDNetWorkHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41F066F1722BFB8C58BE5E270A4D9F42 /* Build configuration list for PBXNativeTarget "ZDNetWorkHelper" */;
+			buildPhases = (
+				3645ABB5072A00160B2B3739C3AFBF26 /* Headers */,
+				EFC8AFE98CD8DE1642AE19F130539BD7 /* Sources */,
+				04696491014451E7938DE8CE37979648 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C026A74348BABA2ACB918B405BDEA1B /* PBXTargetDependency */,
+			);
+			name = ZDNetWorkHelper;
+			productName = ZDNetWorkHelper;
+			productReference = FE57CAA618F36E16468D429558F1D776 /* libZDNetWorkHelper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A0B5429CAEF135C260E00BA67C090DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 8584EDED87EF7226E688CB43BDF57EC6 /* Build configuration list for PBXProject "ZDNetWorkHelper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 78057C81C0EBD857DD17CF837DF28A04;
+			productRefGroup = 0751C0A24E2245B17C9D42E9254FC38E /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProjectRef = 238B5C426D385B4652DD6475DACCE1F5 /* AFNetworking */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				7BDC8F869C893DFC9EB0D3245791DD72 /* ZDNetWorkHelper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFC8AFE98CD8DE1642AE19F130539BD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A86B1F01AC480D3525AADBDCCA2B8E7 /* ZDNetWorkHelper-dummy.m in Sources */,
+				485B9E24A7FA28409E870E47C3D412F6 /* ZDNetworkHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C026A74348BABA2ACB918B405BDEA1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			targetProxy = BD1D59DE968893BA17A9DF5B46D26FDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		97828687CB842454DC88BCA8F54B9E7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1DA82EAB62CCE7F83A8D91657E75394 /* ZDNetWorkHelper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ZDNetWorkHelper/ZDNetWorkHelper-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ZDNetWorkHelper;
+				PRODUCT_NAME = ZDNetWorkHelper;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABC5615D715ACF06BB338F63F8063456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1DA82EAB62CCE7F83A8D91657E75394 /* ZDNetWorkHelper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ZDNetWorkHelper/ZDNetWorkHelper-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ZDNetWorkHelper;
+				PRODUCT_NAME = ZDNetWorkHelper;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF36D449BF66D6176849D77DED5C8C03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F879936A508F51A9F567486174F1A0A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41F066F1722BFB8C58BE5E270A4D9F42 /* Build configuration list for PBXNativeTarget "ZDNetWorkHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABC5615D715ACF06BB338F63F8063456 /* Debug */,
+				97828687CB842454DC88BCA8F54B9E7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8584EDED87EF7226E688CB43BDF57EC6 /* Build configuration list for PBXProject "ZDNetWorkHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F879936A508F51A9F567486174F1A0A5 /* Debug */,
+				BF36D449BF66D6176849D77DED5C8C03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A0B5429CAEF135C260E00BA67C090DC /* Project object */;
+}

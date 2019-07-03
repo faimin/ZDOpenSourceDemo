@@ -29,10 +29,10 @@ PODS:
   - DoubleConversion (1.1.5)
   - fishhook (0.2)
   - FLEX (3.0.0)
-  - Flipper (0.20.0):
-    - Flipper-Folly (= 1.3.0)
+  - Flipper (0.22.0):
+    - Flipper-Folly (~> 1.3)
     - Flipper-RSocket (= 0.10.4)
-  - Flipper-Folly (1.3.0):
+  - Flipper-Folly (1.3.4):
     - boost-for-react-native
     - CocoaLibEvent (~> 1.0)
     - DoubleConversion
@@ -41,36 +41,36 @@ PODS:
   - Flipper-PeerTalk (0.0.4)
   - Flipper-RSocket (0.10.4):
     - Flipper-Folly (~> 1.3)
-  - FlipperKit (0.20.0):
-    - FlipperKit/Core (= 0.20.0)
-  - FlipperKit/Core (0.20.0):
-    - Flipper (~> 0.20.0)
+  - FlipperKit (0.22.0):
+    - FlipperKit/Core (= 0.22.0)
+  - FlipperKit/Core (0.22.0):
+    - Flipper (~> 0.22.0)
     - FlipperKit/CppBridge
     - FlipperKit/FBCxxUtils
     - FlipperKit/FBDefines
     - FlipperKit/FKPortForwarding
-  - FlipperKit/CppBridge (0.20.0):
-    - Flipper (~> 0.20.0)
-  - FlipperKit/FBCxxUtils (0.20.0):
-    - Flipper-Folly (= 1.3.0)
-  - FlipperKit/FBDefines (0.20.0)
-  - FlipperKit/FKPortForwarding (0.20.0):
+  - FlipperKit/CppBridge (0.22.0):
+    - Flipper (~> 0.22.0)
+  - FlipperKit/FBCxxUtils (0.22.0):
+    - Flipper-Folly (~> 1.3)
+  - FlipperKit/FBDefines (0.22.0)
+  - FlipperKit/FKPortForwarding (0.22.0):
     - CocoaAsyncSocket (~> 7.6)
     - Flipper-PeerTalk (~> 0.0.4)
-  - FlipperKit/FlipperKitLayoutComponentKitSupport (0.20.0):
+  - FlipperKit/FlipperKitLayoutComponentKitSupport (0.22.0):
     - ComponentKit (~> 0.27)
     - FlipperKit/Core
     - FlipperKit/FlipperKitLayoutPlugin
     - Yoga (~> 1.14)
-  - FlipperKit/FlipperKitLayoutPlugin (0.20.0):
+  - FlipperKit/FlipperKitLayoutPlugin (0.22.0):
     - FlipperKit/Core
     - Yoga (~> 1.14)
     - YogaKit (~> 1.14)
-  - FlipperKit/FlipperKitNetworkPlugin (0.20.0):
+  - FlipperKit/FlipperKitNetworkPlugin (0.22.0):
     - FlipperKit/Core
-  - FlipperKit/FlipperKitUserDefaultsPlugin (0.20.0):
+  - FlipperKit/FlipperKitUserDefaultsPlugin (0.22.0):
     - FlipperKit/Core
-  - FlipperKit/SKIOSNetworkPlugin (0.20.0):
+  - FlipperKit/SKIOSNetworkPlugin (0.22.0):
     - FlipperKit/Core
     - FlipperKit/FlipperKitNetworkPlugin
   - GDPerformanceView (1.3.1)
@@ -243,10 +243,10 @@ DEPENDENCIES:
   - DirectoryWatchdog
   - fishhook
   - FLEX
-  - FlipperKit (~> 0.20.0)
-  - FlipperKit/FlipperKitLayoutComponentKitSupport (~> 0.20.0)
-  - FlipperKit/FlipperKitUserDefaultsPlugin (~> 0.20.0)
-  - FlipperKit/SKIOSNetworkPlugin (~> 0.20.0)
+  - FlipperKit (~> 0.22.0)
+  - FlipperKit/FlipperKitLayoutComponentKitSupport (~> 0.22.0)
+  - FlipperKit/FlipperKitUserDefaultsPlugin (~> 0.22.0)
+  - FlipperKit/SKIOSNetworkPlugin (~> 0.22.0)
   - GDPerformanceView
   - IGListKit
   - JLRoutes
@@ -361,11 +361,11 @@ SPEC CHECKSUMS:
   DoubleConversion: e22e0762848812a87afd67ffda3998d9ef29170c
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   FLEX: d66c759bce0f6ebbbf472c742380874d846f2883
-  Flipper: a709cd1b1401503a94a41eff5b11acb7cf073220
-  Flipper-Folly: 8c8377ca7c9c447bdecfb4265944e2867a440580
+  Flipper: 4b8ef9891224af3df375c19d607f13406a010907
+  Flipper-Folly: 862e2e39314dd732f5953c40deb7fc85e230ae80
   Flipper-PeerTalk: 116d8f857dc6ef55c7a5a75ea3ceaafe878aadc9
   Flipper-RSocket: 6d4593ba3fc97c9c353195e1975632623e588202
-  FlipperKit: 950257d46bc7b9d395e33181dd2f94ed5ce8e750
+  FlipperKit: 177b57c0a60187379a2d1a292e811c70ecea9f8d
   GDPerformanceView: d70d646bf7022a3dfd64222e4966f403bfffef19
   glog: 1de0bb937dccdc981596d3b5825ebfb765017ded
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
@@ -404,6 +404,6 @@ SPEC CHECKSUMS:
   ZDToolKit: 2dc08339509ad9b9fe36472d4bc6f46e12c5ce30
   ZIKRouter: 8802d95cb52e7fb35d739312102450cfd8e45863
 
-PODFILE CHECKSUM: 393298d24a54362ca580d91e22eda0f0602c66e5
+PODFILE CHECKSUM: 0f52ab4b169f66ba7149d61c87adcf0bca06c1a7
 
 COCOAPODS: 1.7.3

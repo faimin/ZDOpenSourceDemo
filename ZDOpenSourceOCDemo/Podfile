@@ -86,7 +86,7 @@ def pods_tools
 end
 
 def pod_flipper
-  flipperkit_version = '0.20.0'
+  flipperkit_version = '0.22.0'
     
   pod 'FlipperKit', '~>' + flipperkit_version
   pod 'FlipperKit/FlipperKitLayoutComponentKitSupport', '~>' + flipperkit_version
@@ -146,6 +146,14 @@ target 'ZDOpenSourceOCDemo' do
   end
 
 end
+
+
+#############################################################
+
+install! 'cocoapods', :generate_multiple_pod_projects => true, :incremental_installation => true
+
+############################################################
+
 
 # https://github.com/facebook/flipper/issues/254
 $dynamic_framework = ['LayoutInspector', 'PromiseKit']

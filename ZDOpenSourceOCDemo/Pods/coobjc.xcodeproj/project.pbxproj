@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0718A19BF1D1D10BDC8DC34610687F61 /* COActorChan.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8DD0C88FFDC751124BFD07217B6C23 /* COActorChan.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		36DC2FCF500DA02C90854C5FC26D5E82 /* coobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EEE8E93F6F45573BD66D72E555E2DDC /* coobjc.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3979E99418FFA4D249CC6C9D4114B45B /* coobjc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BA583079690FCB9887EAEA070C62CE /* coobjc-dummy.m */; };
+		4E591C2274262AAFCC51A364FE11300F /* COPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F3611D3FBD10B4061523FEC1960CFC7 /* COPromise.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5B4E15C3C53A60F31E99FD486C1F1E2F /* COActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D5CFCA1A1EDB9E7C7C9687EE129AE31 /* COActor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5ED638664951006B8DCD1D8D79BB8E98 /* COCoroutine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0193A4C7183A008A1C32A295FB327340 /* COCoroutine.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		68B624A200A9E3F96B2035E8F6702915 /* co_tuple.m in Sources */ = {isa = PBXBuildFile; fileRef = B45B7E087A39A16FBA11AF971BEADA4D /* co_tuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		73DE9C2E898A9958007C907885FB41D7 /* COChan.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CC10B1ECCBBF2B5230CD94140326C6 /* COChan.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8B150169F0FD227EC676F4CA7A8553BF /* COChan.h in Headers */ = {isa = PBXBuildFile; fileRef = DF56E3AD2D930E81C559125961E5498B /* COChan.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9390742AF048F17E7EFC467336F4700B /* COGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB76669E5CE6DDDE529EBADD57589 /* COGenerator.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9843D5B8B89D0C4944F28C22328053CB /* COActorChan.h in Headers */ = {isa = PBXBuildFile; fileRef = 1241B727CE81BFF828F866E5721A8B82 /* COActorChan.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A24147AA33A3CEC9079CF063808610C3 /* COActorCompletable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E73E0B45FBC3A7D6F86A89E1996620B /* COActorCompletable.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A613866174DD3377866492E3CACE5F9E /* COActorMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FFB1C4EB11590240F8338879FF2D1DB /* COActorMessage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B4100BBD70818EDFC27CA4347348624F /* COActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B9C76B889132EBF1B0E817AC3CE04E /* COActor.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B68ED0A29F9F407194E81CD2B50FF719 /* COPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 745CF164C710CAB5B08F2A407C20E594 /* COPromise.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C4330DA7B9660799A90BB73937A355F0 /* COCoroutine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFC8A47BC1021141195E0CE3869AA2 /* COCoroutine.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C94D78E6E7F8BCF7279A61DBAF4C4A3D /* COActorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A01A269313309434B83608DA6ACE01 /* COActorMessage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CE81897007E42F7C07F5D691B9595016 /* co_tuple.h in Headers */ = {isa = PBXBuildFile; fileRef = 2513CA473CEEB9D7C1CF88F704EF2C16 /* co_tuple.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CEF3A0471BB8D451754B29FD9B24ABE7 /* COLock.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B38B004553A6AD8F374F666E9EAB50D /* COLock.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CFF2A5C3319E6335E42EEF642E0571BE /* COActorCompletable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8363E78E3C82B09205E861787E912BD6 /* COActorCompletable.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E134F40E902C9A5D61697924AB7703E5 /* COGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = C7DFDD6BC4E5188F3B669B5CAB158FD9 /* COGenerator.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		12FC87B35FA299BC2FFFFAC1127760CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C1834C13D9BA3792DBA9AAE150C5EC12 /* cocore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 44B9F3DF1A76463ECB2E752DB51A596B;
+			remoteInfo = cocore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0193A4C7183A008A1C32A295FB327340 /* COCoroutine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = COCoroutine.h; path = coobjc/co/COCoroutine.h; sourceTree = "<group>"; };
+		1241B727CE81BFF828F866E5721A8B82 /* COActorChan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = COActorChan.h; path = coobjc/actor/COActorChan.h; sourceTree = "<group>"; };
+		13AE7FBA35D39A4A83D4CA5D65C40CAD /* coobjc-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "coobjc-prefix.pch"; sourceTree = "<group>"; };
+		1ABFC8A47BC1021141195E0CE3869AA2 /* COCoroutine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = COCoroutine.m; path = coobjc/co/COCoroutine.m; sourceTree = "<group>"; };
+		1E73E0B45FBC3A7D6F86A89E1996620B /* COActorCompletable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = COActorCompletable.h; path = coobjc/actor/COActorCompletable.h; sourceTree = "<group>"; };
+		1FFB1C4EB11590240F8338879FF2D1DB /* COActorMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = COActorMessage.h; path = coobjc/actor/COActorMessage.h; sourceTree = "<group>"; };
+		2513CA473CEEB9D7C1CF88F704EF2C16 /* co_tuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = co_tuple.h; path = coobjc/tuple/co_tuple.h; sourceTree = "<group>"; };
+		2EEE8E93F6F45573BD66D72E555E2DDC /* coobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = coobjc.h; path = coobjc/coobjc.h; sourceTree = "<group>"; };
+		46268B47F044ABECC671B504C85AB328 /* libcoobjc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libcoobjc.a; path = libcoobjc.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		49B9C76B889132EBF1B0E817AC3CE04E /* COActor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = COActor.m; path = coobjc/actor/COActor.m; sourceTree = "<group>"; };
+		5B38B004553A6AD8F374F666E9EAB50D /* COLock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = COLock.h; path = coobjc/co/COLock.h; sourceTree = "<group>"; };
+		6E8DD0C88FFDC751124BFD07217B6C23 /* COActorChan.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = COActorChan.m; path = coobjc/actor/COActorChan.m; sourceTree = "<group>"; };
+		745CF164C710CAB5B08F2A407C20E594 /* COPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = COPromise.m; path = coobjc/promise/COPromise.m; sourceTree = "<group>"; };
+		8363E78E3C82B09205E861787E912BD6 /* COActorCompletable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = COActorCompletable.m; path = coobjc/actor/COActorCompletable.m; sourceTree = "<group>"; };
+		83A01A269313309434B83608DA6ACE01 /* COActorMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = COActorMessage.m; path = coobjc/actor/COActorMessage.m; sourceTree = "<group>"; };
+		8F3611D3FBD10B4061523FEC1960CFC7 /* COPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = COPromise.h; path = coobjc/promise/COPromise.h; sourceTree = "<group>"; };
+		9A60F4C639B1425FFBE561C4A6990CFC /* coobjc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = coobjc.xcconfig; sourceTree = "<group>"; };
+		9D5CFCA1A1EDB9E7C7C9687EE129AE31 /* COActor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = COActor.h; path = coobjc/actor/COActor.h; sourceTree = "<group>"; };
+		B2CC10B1ECCBBF2B5230CD94140326C6 /* COChan.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = COChan.m; path = coobjc/co/COChan.m; sourceTree = "<group>"; };
+		B45B7E087A39A16FBA11AF971BEADA4D /* co_tuple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = co_tuple.m; path = coobjc/tuple/co_tuple.m; sourceTree = "<group>"; };
+		B8BA583079690FCB9887EAEA070C62CE /* coobjc-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "coobjc-dummy.m"; sourceTree = "<group>"; };
+		C1834C13D9BA3792DBA9AAE150C5EC12 /* cocore */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocore; path = cocore.xcodeproj; sourceTree = "<group>"; };
+		C7DFDD6BC4E5188F3B669B5CAB158FD9 /* COGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = COGenerator.h; path = coobjc/generator/COGenerator.h; sourceTree = "<group>"; };
+		DF56E3AD2D930E81C559125961E5498B /* COChan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = COChan.h; path = coobjc/co/COChan.h; sourceTree = "<group>"; };
+		FE7BB76669E5CE6DDDE529EBADD57589 /* COGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = COGenerator.m; path = coobjc/generator/COGenerator.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F8C4D5E2D932EBB47D6C028A7FCB96B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E0EA3DFF6DC165B76679AEA09C5A8E3 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				C1834C13D9BA3792DBA9AAE150C5EC12 /* cocore */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		799498524F4B3750E96C589B5B48164E /* coobjc */ = {
+			isa = PBXGroup;
+			children = (
+				2513CA473CEEB9D7C1CF88F704EF2C16 /* co_tuple.h */,
+				B45B7E087A39A16FBA11AF971BEADA4D /* co_tuple.m */,
+				9D5CFCA1A1EDB9E7C7C9687EE129AE31 /* COActor.h */,
+				49B9C76B889132EBF1B0E817AC3CE04E /* COActor.m */,
+				1241B727CE81BFF828F866E5721A8B82 /* COActorChan.h */,
+				6E8DD0C88FFDC751124BFD07217B6C23 /* COActorChan.m */,
+				1E73E0B45FBC3A7D6F86A89E1996620B /* COActorCompletable.h */,
+				8363E78E3C82B09205E861787E912BD6 /* COActorCompletable.m */,
+				1FFB1C4EB11590240F8338879FF2D1DB /* COActorMessage.h */,
+				83A01A269313309434B83608DA6ACE01 /* COActorMessage.m */,
+				DF56E3AD2D930E81C559125961E5498B /* COChan.h */,
+				B2CC10B1ECCBBF2B5230CD94140326C6 /* COChan.m */,
+				0193A4C7183A008A1C32A295FB327340 /* COCoroutine.h */,
+				1ABFC8A47BC1021141195E0CE3869AA2 /* COCoroutine.m */,
+				C7DFDD6BC4E5188F3B669B5CAB158FD9 /* COGenerator.h */,
+				FE7BB76669E5CE6DDDE529EBADD57589 /* COGenerator.m */,
+				5B38B004553A6AD8F374F666E9EAB50D /* COLock.h */,
+				2EEE8E93F6F45573BD66D72E555E2DDC /* coobjc.h */,
+				8F3611D3FBD10B4061523FEC1960CFC7 /* COPromise.h */,
+				745CF164C710CAB5B08F2A407C20E594 /* COPromise.m */,
+				F65DB36B59C7F6F13857F40AE0EBA0A6 /* Support Files */,
+			);
+			name = coobjc;
+			path = coobjc;
+			sourceTree = "<group>";
+		};
+		A01094995DDC487549BEBD2C836D8B8F = {
+			isa = PBXGroup;
+			children = (
+				799498524F4B3750E96C589B5B48164E /* coobjc */,
+				0E0EA3DFF6DC165B76679AEA09C5A8E3 /* Dependencies */,
+				DDC2B060089FEE5877A82E133823F3B0 /* Frameworks */,
+				B3FFC634F19B128983D0C0622E1BACC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B3FFC634F19B128983D0C0622E1BACC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46268B47F044ABECC671B504C85AB328 /* libcoobjc.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DDC2B060089FEE5877A82E133823F3B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F65DB36B59C7F6F13857F40AE0EBA0A6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A60F4C639B1425FFBE561C4A6990CFC /* coobjc.xcconfig */,
+				B8BA583079690FCB9887EAEA070C62CE /* coobjc-dummy.m */,
+				13AE7FBA35D39A4A83D4CA5D65C40CAD /* coobjc-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/coobjc";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4AB03F7CD46FA7D578BB9BF0E8C798A0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE81897007E42F7C07F5D691B9595016 /* co_tuple.h in Headers */,
+				5B4E15C3C53A60F31E99FD486C1F1E2F /* COActor.h in Headers */,
+				9843D5B8B89D0C4944F28C22328053CB /* COActorChan.h in Headers */,
+				A24147AA33A3CEC9079CF063808610C3 /* COActorCompletable.h in Headers */,
+				A613866174DD3377866492E3CACE5F9E /* COActorMessage.h in Headers */,
+				8B150169F0FD227EC676F4CA7A8553BF /* COChan.h in Headers */,
+				5ED638664951006B8DCD1D8D79BB8E98 /* COCoroutine.h in Headers */,
+				E134F40E902C9A5D61697924AB7703E5 /* COGenerator.h in Headers */,
+				CEF3A0471BB8D451754B29FD9B24ABE7 /* COLock.h in Headers */,
+				36DC2FCF500DA02C90854C5FC26D5E82 /* coobjc.h in Headers */,
+				4E591C2274262AAFCC51A364FE11300F /* COPromise.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		14AC47C7A598B026E762EA69CA696F0C /* coobjc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADAC98094965014E6917DAA5A8005B9C /* Build configuration list for PBXNativeTarget "coobjc" */;
+			buildPhases = (
+				4AB03F7CD46FA7D578BB9BF0E8C798A0 /* Headers */,
+				A7D6F89E7349A95638E29B0933406AF8 /* Sources */,
+				4F8C4D5E2D932EBB47D6C028A7FCB96B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BED1F9718564E18B2A5608AE2A5E8921 /* PBXTargetDependency */,
+			);
+			name = coobjc;
+			productName = coobjc;
+			productReference = 46268B47F044ABECC671B504C85AB328 /* libcoobjc.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39766C7760811CBB7240B56FA74959E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = D0C27E3793A3985FF54CC07123DD80F3 /* Build configuration list for PBXProject "coobjc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A01094995DDC487549BEBD2C836D8B8F;
+			productRefGroup = B3FFC634F19B128983D0C0622E1BACC0 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProjectRef = C1834C13D9BA3792DBA9AAE150C5EC12 /* cocore */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				14AC47C7A598B026E762EA69CA696F0C /* coobjc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7D6F89E7349A95638E29B0933406AF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68B624A200A9E3F96B2035E8F6702915 /* co_tuple.m in Sources */,
+				B4100BBD70818EDFC27CA4347348624F /* COActor.m in Sources */,
+				0718A19BF1D1D10BDC8DC34610687F61 /* COActorChan.m in Sources */,
+				CFF2A5C3319E6335E42EEF642E0571BE /* COActorCompletable.m in Sources */,
+				C94D78E6E7F8BCF7279A61DBAF4C4A3D /* COActorMessage.m in Sources */,
+				73DE9C2E898A9958007C907885FB41D7 /* COChan.m in Sources */,
+				C4330DA7B9660799A90BB73937A355F0 /* COCoroutine.m in Sources */,
+				9390742AF048F17E7EFC467336F4700B /* COGenerator.m in Sources */,
+				3979E99418FFA4D249CC6C9D4114B45B /* coobjc-dummy.m in Sources */,
+				B68ED0A29F9F407194E81CD2B50FF719 /* COPromise.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BED1F9718564E18B2A5608AE2A5E8921 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = cocore;
+			targetProxy = 12FC87B35FA299BC2FFFFAC1127760CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1913C1200827441BC74B2765E3017D44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A60F4C639B1425FFBE561C4A6990CFC /* coobjc.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/coobjc/coobjc-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = coobjc;
+				PRODUCT_NAME = coobjc;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		567A8C1544B5232E1C98FF9D29061080 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D4A31BA2EDEB65D94750E7930A18958F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A60F4C639B1425FFBE561C4A6990CFC /* coobjc.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/coobjc/coobjc-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = coobjc;
+				PRODUCT_NAME = coobjc;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DFBF9A1016AEF3AAF26D0DC559820F61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADAC98094965014E6917DAA5A8005B9C /* Build configuration list for PBXNativeTarget "coobjc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1913C1200827441BC74B2765E3017D44 /* Debug */,
+				D4A31BA2EDEB65D94750E7930A18958F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0C27E3793A3985FF54CC07123DD80F3 /* Build configuration list for PBXProject "coobjc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				567A8C1544B5232E1C98FF9D29061080 /* Debug */,
+				DFBF9A1016AEF3AAF26D0DC559820F61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 39766C7760811CBB7240B56FA74959E2 /* Project object */;
+}

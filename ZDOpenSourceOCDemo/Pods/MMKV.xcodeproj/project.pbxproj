@@ -1,0 +1,466 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1055705A518DA74F2C9A6DAE4BB51673 /* openssl_modes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BCFB34585D01C1587FB1110D7ABE4D7 /* openssl_modes.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		12EA889F3478D84525FF74E66C9BDFAC /* ScopedLock.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 92D5058DBCBAE7EFADFD3A943098C2CB /* ScopedLock.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		1CEA90864EC0EF8367996DC6331887CD /* MiniCodedOutputData.h in Headers */ = {isa = PBXBuildFile; fileRef = EFBD1879184C04D465A43FD5836D1116 /* MiniCodedOutputData.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2E9BD15DA36BA133DD261891B0498394 /* AESCrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F939D236E10F70CBEA552882AED6BB1 /* AESCrypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		32573447A78F82BCF980796CFDD46087 /* MemoryFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FC3166CAB9C30809BC7BF34E6B4510D /* MemoryFile.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3921851457397462CBB3BDC5FE94BE44 /* openssl_cfb128.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0FEDA7EAEE765B8225F34AB57499AAE0 /* openssl_cfb128.cpp */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3C4BF1292ADD2040A4927A60C1EED814 /* MiniPBCoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF09C9080E5AC3A2F2D6768946C3A433 /* MiniPBCoder.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		42FA1C739B554402DE7072D4970FC60C /* AESCrypt.mm in Sources */ = {isa = PBXBuildFile; fileRef = B38DE35C48DFA57043B04BDC5D9FABB5 /* AESCrypt.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4AF7C92A168D56F214BF10EA56CB86D2 /* openssl_md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D4268D2332E9C5B6F33F64917EE2547 /* openssl_md5.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4B8E240E267D93353101AF155270699D /* LRUCache.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 679C99380577B3E43A827B809C45BCAB /* LRUCache.hpp */; settings = {ATTRIBUTES = (Project, ); }; };
+		4BCD18D75C7D422D2387C9D31CFD8D81 /* MiniPBUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = F7C2AF6BA9E2BCCED5F00B445CDB41B3 /* MiniPBUtility.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4CEB4A63364D126CDF5B7B30B0187998 /* MMKV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD027A44F0A0DA4B0773EAC394D3A9CF /* MMKV-dummy.m */; };
+		6826EFABA5B30BACC6B114680EEE8A26 /* openssl_aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 835046A906F6C2E749FB0349D03BCB07 /* openssl_aes.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		74F615DB3D0A377B51A335F3326A9A30 /* openssl_md5_dgst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 73CE83CE5A0D14E912865C7699A7262E /* openssl_md5_dgst.cpp */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7D8AF5E9D05C536643AB1A514034F1E8 /* openssl_md32_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 2078A8F39D84CB32CA731A430B82E4C7 /* openssl_md32_common.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8B83337F5EA59434E14128FAC1AE61AC /* MiniCodedOutputData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84DE58195513A95708724A6D1319ADCD /* MiniCodedOutputData.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8D1569F6EF468092BB7D2D061376E495 /* openssl_aes_locl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A2120B2C8F0BA5D7073B4DF315507C8 /* openssl_aes_locl.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		90D33103E9069CE45F456CBE7F357416 /* MiniPBUtility.mm in Sources */ = {isa = PBXBuildFile; fileRef = A8F5CB88B4B08944C557005CAF547A2A /* MiniPBUtility.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		91E7C0729D33FEAFC7E9C8EFE347C578 /* MMKVLog.h in Headers */ = {isa = PBXBuildFile; fileRef = A37C6B93390E729D5C8FCAB94E74957A /* MMKVLog.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		98A27BFEB3DA8851239DA6078001E937 /* MiniPBCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = A69204B24E131424145542D9BFE97042 /* MiniPBCoder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9E0446C0330AE2B8ABE56B41FBB60355 /* openssl_md5_locl.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B95A1E1F7A3DA3A6CAA9C2DF1130138 /* openssl_md5_locl.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A8977EC5C0C54147055AFE799A707424 /* MMKV.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D6730C0259A64CEAB099308D8BE4362 /* MMKV.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B46F3424C2D82BE7FA6CD3E6ADD3D2CF /* openssl_opensslconf.h in Headers */ = {isa = PBXBuildFile; fileRef = A570601E02FC0BF50FCDBCB10E960E10 /* openssl_opensslconf.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BBA2CDA9D044FCF5EC03B5EDB8045AFC /* MMKVLog.mm in Sources */ = {isa = PBXBuildFile; fileRef = 891E13667EDD80C170308328142B680F /* MMKVLog.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D4B204296A5CE748DF55EB00B5BDEC00 /* openssl_md5_one.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2128D5D9D95E4AF7F64AD3209D377AFA /* openssl_md5_one.cpp */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D767D6CD5352C5D6E5E2D9AA0A9A9C21 /* openssl_aes_cfb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A67950C8A6A5637A9B5A5C2FD933271F /* openssl_aes_cfb.cpp */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DB4CE215BDEBDA0B5D87E199DC060E5B /* MemoryFile.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F57BF772CC36B032A42808D5C30F5DE /* MemoryFile.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DD354142869BF6DF63496D5D9718A850 /* MiniPBEncodeItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DA1E3130791EC451F85B9A8437ED02B /* MiniPBEncodeItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E20771F90EA2703B48FD78759EA56030 /* MiniCodedInputData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13D21CA18843499B31675671262D7A65 /* MiniCodedInputData.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E3B5822D89CD676025766D26F0AA4DDA /* MMKV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F10CA7FD443AEFD640B4AA4882B499C /* MMKV.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EADDDCFC0CA8ABC9542E0920CA8864A0 /* openssl_aes_core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4CC6A660A0B5606C01F867F3CFB614CD /* openssl_aes_core.cpp */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FB7C7353D8DABC72A64539ABC726835C /* MMKVHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = C778D8CAEA9681DED5F5C6E303666EE4 /* MMKVHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FFC0CD5B743A2874B4A76D7004A9CD6C /* MiniCodedInputData.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1628B20AA569CAEEF73064B518C684 /* MiniCodedInputData.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0FEDA7EAEE765B8225F34AB57499AAE0 /* openssl_cfb128.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = openssl_cfb128.cpp; path = iOS/MMKV/MMKV/aes/openssl/openssl_cfb128.cpp; sourceTree = "<group>"; };
+		13D21CA18843499B31675671262D7A65 /* MiniCodedInputData.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MiniCodedInputData.mm; path = iOS/MMKV/MMKV/MiniCodedInputData.mm; sourceTree = "<group>"; };
+		1F10CA7FD443AEFD640B4AA4882B499C /* MMKV.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MMKV.mm; path = iOS/MMKV/MMKV/MMKV.mm; sourceTree = "<group>"; };
+		1F939D236E10F70CBEA552882AED6BB1 /* AESCrypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AESCrypt.h; path = iOS/MMKV/MMKV/aes/AESCrypt.h; sourceTree = "<group>"; };
+		2078A8F39D84CB32CA731A430B82E4C7 /* openssl_md32_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = openssl_md32_common.h; path = iOS/MMKV/MMKV/aes/openssl/openssl_md32_common.h; sourceTree = "<group>"; };
+		2128D5D9D95E4AF7F64AD3209D377AFA /* openssl_md5_one.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = openssl_md5_one.cpp; path = iOS/MMKV/MMKV/aes/openssl/openssl_md5_one.cpp; sourceTree = "<group>"; };
+		2B95A1E1F7A3DA3A6CAA9C2DF1130138 /* openssl_md5_locl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = openssl_md5_locl.h; path = iOS/MMKV/MMKV/aes/openssl/openssl_md5_locl.h; sourceTree = "<group>"; };
+		2D4268D2332E9C5B6F33F64917EE2547 /* openssl_md5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = openssl_md5.h; path = iOS/MMKV/MMKV/aes/openssl/openssl_md5.h; sourceTree = "<group>"; };
+		4A2120B2C8F0BA5D7073B4DF315507C8 /* openssl_aes_locl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = openssl_aes_locl.h; path = iOS/MMKV/MMKV/aes/openssl/openssl_aes_locl.h; sourceTree = "<group>"; };
+		4CC6A660A0B5606C01F867F3CFB614CD /* openssl_aes_core.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = openssl_aes_core.cpp; path = iOS/MMKV/MMKV/aes/openssl/openssl_aes_core.cpp; sourceTree = "<group>"; };
+		4D6730C0259A64CEAB099308D8BE4362 /* MMKV.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMKV.h; path = iOS/MMKV/MMKV/MMKV.h; sourceTree = "<group>"; };
+		679C99380577B3E43A827B809C45BCAB /* LRUCache.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = LRUCache.hpp; path = iOS/MMKV/MMKV/LRUCache.hpp; sourceTree = "<group>"; };
+		73CE83CE5A0D14E912865C7699A7262E /* openssl_md5_dgst.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = openssl_md5_dgst.cpp; path = iOS/MMKV/MMKV/aes/openssl/openssl_md5_dgst.cpp; sourceTree = "<group>"; };
+		7A7E1F1C722B0F7D1C482464FADBE5BE /* libMMKV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMMKV.a; path = libMMKV.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FC3166CAB9C30809BC7BF34E6B4510D /* MemoryFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MemoryFile.h; path = iOS/MMKV/MMKV/MemoryFile.h; sourceTree = "<group>"; };
+		827B98214EB175506F53BE511828A1BD /* MMKV-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MMKV-prefix.pch"; sourceTree = "<group>"; };
+		835046A906F6C2E749FB0349D03BCB07 /* openssl_aes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = openssl_aes.h; path = iOS/MMKV/MMKV/aes/openssl/openssl_aes.h; sourceTree = "<group>"; };
+		84DE58195513A95708724A6D1319ADCD /* MiniCodedOutputData.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MiniCodedOutputData.mm; path = iOS/MMKV/MMKV/MiniCodedOutputData.mm; sourceTree = "<group>"; };
+		891E13667EDD80C170308328142B680F /* MMKVLog.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MMKVLog.mm; path = iOS/MMKV/MMKV/MMKVLog.mm; sourceTree = "<group>"; };
+		8DA1E3130791EC451F85B9A8437ED02B /* MiniPBEncodeItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MiniPBEncodeItem.h; path = iOS/MMKV/MMKV/MiniPBEncodeItem.h; sourceTree = "<group>"; };
+		92D5058DBCBAE7EFADFD3A943098C2CB /* ScopedLock.hpp */ = {isa = PBXFileReference; includeInIndex = 1; name = ScopedLock.hpp; path = iOS/MMKV/MMKV/ScopedLock.hpp; sourceTree = "<group>"; };
+		9BCFB34585D01C1587FB1110D7ABE4D7 /* openssl_modes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = openssl_modes.h; path = iOS/MMKV/MMKV/aes/openssl/openssl_modes.h; sourceTree = "<group>"; };
+		9F57BF772CC36B032A42808D5C30F5DE /* MemoryFile.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MemoryFile.mm; path = iOS/MMKV/MMKV/MemoryFile.mm; sourceTree = "<group>"; };
+		A37C6B93390E729D5C8FCAB94E74957A /* MMKVLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMKVLog.h; path = iOS/MMKV/MMKV/MMKVLog.h; sourceTree = "<group>"; };
+		A570601E02FC0BF50FCDBCB10E960E10 /* openssl_opensslconf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = openssl_opensslconf.h; path = iOS/MMKV/MMKV/aes/openssl/openssl_opensslconf.h; sourceTree = "<group>"; };
+		A67950C8A6A5637A9B5A5C2FD933271F /* openssl_aes_cfb.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = openssl_aes_cfb.cpp; path = iOS/MMKV/MMKV/aes/openssl/openssl_aes_cfb.cpp; sourceTree = "<group>"; };
+		A69204B24E131424145542D9BFE97042 /* MiniPBCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MiniPBCoder.h; path = iOS/MMKV/MMKV/MiniPBCoder.h; sourceTree = "<group>"; };
+		A8F5CB88B4B08944C557005CAF547A2A /* MiniPBUtility.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MiniPBUtility.mm; path = iOS/MMKV/MMKV/MiniPBUtility.mm; sourceTree = "<group>"; };
+		B38DE35C48DFA57043B04BDC5D9FABB5 /* AESCrypt.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = AESCrypt.mm; path = iOS/MMKV/MMKV/aes/AESCrypt.mm; sourceTree = "<group>"; };
+		C778D8CAEA9681DED5F5C6E303666EE4 /* MMKVHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMKVHandler.h; path = iOS/MMKV/MMKV/MMKVHandler.h; sourceTree = "<group>"; };
+		DD027A44F0A0DA4B0773EAC394D3A9CF /* MMKV-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MMKV-dummy.m"; sourceTree = "<group>"; };
+		EFBD1879184C04D465A43FD5836D1116 /* MiniCodedOutputData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MiniCodedOutputData.h; path = iOS/MMKV/MMKV/MiniCodedOutputData.h; sourceTree = "<group>"; };
+		F5B268F992FEB80B2651FB996385C1F0 /* MMKV.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MMKV.xcconfig; sourceTree = "<group>"; };
+		F7C2AF6BA9E2BCCED5F00B445CDB41B3 /* MiniPBUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MiniPBUtility.h; path = iOS/MMKV/MMKV/MiniPBUtility.h; sourceTree = "<group>"; };
+		FF09C9080E5AC3A2F2D6768946C3A433 /* MiniPBCoder.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = MiniPBCoder.mm; path = iOS/MMKV/MMKV/MiniPBCoder.mm; sourceTree = "<group>"; };
+		FF1628B20AA569CAEEF73064B518C684 /* MiniCodedInputData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MiniCodedInputData.h; path = iOS/MMKV/MMKV/MiniCodedInputData.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92EB8F80941BDB5A75EA6DE2E2966D0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17F71B4DF7CEE4B71316A0D0F0B1F71E = {
+			isa = PBXGroup;
+			children = (
+				C6294AB3312FE9458A2EAE1253ADA155 /* Frameworks */,
+				FFF760A05307354C230D3C45CA2FECEF /* MMKV */,
+				9576CEC121818902A84D97ED9B3880F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9576CEC121818902A84D97ED9B3880F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A7E1F1C722B0F7D1C482464FADBE5BE /* libMMKV.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6294AB3312FE9458A2EAE1253ADA155 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E935A6262E91198131D4410A49D7EB6B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5B268F992FEB80B2651FB996385C1F0 /* MMKV.xcconfig */,
+				DD027A44F0A0DA4B0773EAC394D3A9CF /* MMKV-dummy.m */,
+				827B98214EB175506F53BE511828A1BD /* MMKV-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MMKV";
+			sourceTree = "<group>";
+		};
+		FFF760A05307354C230D3C45CA2FECEF /* MMKV */ = {
+			isa = PBXGroup;
+			children = (
+				1F939D236E10F70CBEA552882AED6BB1 /* AESCrypt.h */,
+				B38DE35C48DFA57043B04BDC5D9FABB5 /* AESCrypt.mm */,
+				679C99380577B3E43A827B809C45BCAB /* LRUCache.hpp */,
+				7FC3166CAB9C30809BC7BF34E6B4510D /* MemoryFile.h */,
+				9F57BF772CC36B032A42808D5C30F5DE /* MemoryFile.mm */,
+				FF1628B20AA569CAEEF73064B518C684 /* MiniCodedInputData.h */,
+				13D21CA18843499B31675671262D7A65 /* MiniCodedInputData.mm */,
+				EFBD1879184C04D465A43FD5836D1116 /* MiniCodedOutputData.h */,
+				84DE58195513A95708724A6D1319ADCD /* MiniCodedOutputData.mm */,
+				A69204B24E131424145542D9BFE97042 /* MiniPBCoder.h */,
+				FF09C9080E5AC3A2F2D6768946C3A433 /* MiniPBCoder.mm */,
+				8DA1E3130791EC451F85B9A8437ED02B /* MiniPBEncodeItem.h */,
+				F7C2AF6BA9E2BCCED5F00B445CDB41B3 /* MiniPBUtility.h */,
+				A8F5CB88B4B08944C557005CAF547A2A /* MiniPBUtility.mm */,
+				4D6730C0259A64CEAB099308D8BE4362 /* MMKV.h */,
+				1F10CA7FD443AEFD640B4AA4882B499C /* MMKV.mm */,
+				C778D8CAEA9681DED5F5C6E303666EE4 /* MMKVHandler.h */,
+				A37C6B93390E729D5C8FCAB94E74957A /* MMKVLog.h */,
+				891E13667EDD80C170308328142B680F /* MMKVLog.mm */,
+				835046A906F6C2E749FB0349D03BCB07 /* openssl_aes.h */,
+				A67950C8A6A5637A9B5A5C2FD933271F /* openssl_aes_cfb.cpp */,
+				4CC6A660A0B5606C01F867F3CFB614CD /* openssl_aes_core.cpp */,
+				4A2120B2C8F0BA5D7073B4DF315507C8 /* openssl_aes_locl.h */,
+				0FEDA7EAEE765B8225F34AB57499AAE0 /* openssl_cfb128.cpp */,
+				2078A8F39D84CB32CA731A430B82E4C7 /* openssl_md32_common.h */,
+				2D4268D2332E9C5B6F33F64917EE2547 /* openssl_md5.h */,
+				73CE83CE5A0D14E912865C7699A7262E /* openssl_md5_dgst.cpp */,
+				2B95A1E1F7A3DA3A6CAA9C2DF1130138 /* openssl_md5_locl.h */,
+				2128D5D9D95E4AF7F64AD3209D377AFA /* openssl_md5_one.cpp */,
+				9BCFB34585D01C1587FB1110D7ABE4D7 /* openssl_modes.h */,
+				A570601E02FC0BF50FCDBCB10E960E10 /* openssl_opensslconf.h */,
+				92D5058DBCBAE7EFADFD3A943098C2CB /* ScopedLock.hpp */,
+				E935A6262E91198131D4410A49D7EB6B /* Support Files */,
+			);
+			name = MMKV;
+			path = MMKV;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7DE338D45F16E845E26899498D727AA5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E9BD15DA36BA133DD261891B0498394 /* AESCrypt.h in Headers */,
+				4B8E240E267D93353101AF155270699D /* LRUCache.hpp in Headers */,
+				32573447A78F82BCF980796CFDD46087 /* MemoryFile.h in Headers */,
+				FFC0CD5B743A2874B4A76D7004A9CD6C /* MiniCodedInputData.h in Headers */,
+				1CEA90864EC0EF8367996DC6331887CD /* MiniCodedOutputData.h in Headers */,
+				98A27BFEB3DA8851239DA6078001E937 /* MiniPBCoder.h in Headers */,
+				DD354142869BF6DF63496D5D9718A850 /* MiniPBEncodeItem.h in Headers */,
+				4BCD18D75C7D422D2387C9D31CFD8D81 /* MiniPBUtility.h in Headers */,
+				A8977EC5C0C54147055AFE799A707424 /* MMKV.h in Headers */,
+				FB7C7353D8DABC72A64539ABC726835C /* MMKVHandler.h in Headers */,
+				91E7C0729D33FEAFC7E9C8EFE347C578 /* MMKVLog.h in Headers */,
+				6826EFABA5B30BACC6B114680EEE8A26 /* openssl_aes.h in Headers */,
+				8D1569F6EF468092BB7D2D061376E495 /* openssl_aes_locl.h in Headers */,
+				7D8AF5E9D05C536643AB1A514034F1E8 /* openssl_md32_common.h in Headers */,
+				4AF7C92A168D56F214BF10EA56CB86D2 /* openssl_md5.h in Headers */,
+				9E0446C0330AE2B8ABE56B41FBB60355 /* openssl_md5_locl.h in Headers */,
+				1055705A518DA74F2C9A6DAE4BB51673 /* openssl_modes.h in Headers */,
+				B46F3424C2D82BE7FA6CD3E6ADD3D2CF /* openssl_opensslconf.h in Headers */,
+				12EA889F3478D84525FF74E66C9BDFAC /* ScopedLock.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3F811D3AC87F4D64B1375E5A914346DB /* MMKV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27FA9FFD2AF532FDBDD3E621DA49E5B4 /* Build configuration list for PBXNativeTarget "MMKV" */;
+			buildPhases = (
+				7DE338D45F16E845E26899498D727AA5 /* Headers */,
+				6533D286C5A9E43ED632F2599B1593E8 /* Sources */,
+				92EB8F80941BDB5A75EA6DE2E2966D0F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MMKV;
+			productName = MMKV;
+			productReference = 7A7E1F1C722B0F7D1C482464FADBE5BE /* libMMKV.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A0C6D01B5A7BF19310A48DAB7177EDE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 513D85859D029F4D4C301E67E2FDD0D5 /* Build configuration list for PBXProject "MMKV" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 17F71B4DF7CEE4B71316A0D0F0B1F71E;
+			productRefGroup = 9576CEC121818902A84D97ED9B3880F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F811D3AC87F4D64B1375E5A914346DB /* MMKV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6533D286C5A9E43ED632F2599B1593E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42FA1C739B554402DE7072D4970FC60C /* AESCrypt.mm in Sources */,
+				DB4CE215BDEBDA0B5D87E199DC060E5B /* MemoryFile.mm in Sources */,
+				E20771F90EA2703B48FD78759EA56030 /* MiniCodedInputData.mm in Sources */,
+				8B83337F5EA59434E14128FAC1AE61AC /* MiniCodedOutputData.mm in Sources */,
+				3C4BF1292ADD2040A4927A60C1EED814 /* MiniPBCoder.mm in Sources */,
+				90D33103E9069CE45F456CBE7F357416 /* MiniPBUtility.mm in Sources */,
+				4CEB4A63364D126CDF5B7B30B0187998 /* MMKV-dummy.m in Sources */,
+				E3B5822D89CD676025766D26F0AA4DDA /* MMKV.mm in Sources */,
+				BBA2CDA9D044FCF5EC03B5EDB8045AFC /* MMKVLog.mm in Sources */,
+				D767D6CD5352C5D6E5E2D9AA0A9A9C21 /* openssl_aes_cfb.cpp in Sources */,
+				EADDDCFC0CA8ABC9542E0920CA8864A0 /* openssl_aes_core.cpp in Sources */,
+				3921851457397462CBB3BDC5FE94BE44 /* openssl_cfb128.cpp in Sources */,
+				74F615DB3D0A377B51A335F3326A9A30 /* openssl_md5_dgst.cpp in Sources */,
+				D4B204296A5CE748DF55EB00B5BDEC00 /* openssl_md5_one.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		132A6F8DA686876E948EDC791C2BB60B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5B268F992FEB80B2651FB996385C1F0 /* MMKV.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MMKV/MMKV-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MMKV;
+				PRODUCT_NAME = MMKV;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72C72C3EF50B1D3604ED0FEBAEA2635B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		7678E06CC9183EE2375E0FE34A4A335B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A0C8BE6FC575CDC528DD509EA53EA5E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5B268F992FEB80B2651FB996385C1F0 /* MMKV.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/MMKV/MMKV-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = MMKV;
+				PRODUCT_NAME = MMKV;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27FA9FFD2AF532FDBDD3E621DA49E5B4 /* Build configuration list for PBXNativeTarget "MMKV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0C8BE6FC575CDC528DD509EA53EA5E6 /* Debug */,
+				132A6F8DA686876E948EDC791C2BB60B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		513D85859D029F4D4C301E67E2FDD0D5 /* Build configuration list for PBXProject "MMKV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7678E06CC9183EE2375E0FE34A4A335B /* Debug */,
+				72C72C3EF50B1D3604ED0FEBAEA2635B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A0C6D01B5A7BF19310A48DAB7177EDE6 /* Project object */;
+}

@@ -1,0 +1,374 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13E847B42938D377366DDA88AA10E7AF /* GDPerformanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E0F4DA6C02A4E3582D58236ABFC1AD /* GDPerformanceView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2D75197BFD4E2DF5BFC35AB90C7C3261 /* GDPerformanceView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CBF3D89083F4AC85DAFBBC58546AF /* GDPerformanceView-dummy.m */; };
+		43E2D3A55CDF8A2EBFF7D7399DF96932 /* GDPerformanceMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 25AF7AD4B0D1535D86A08AA32F51B45C /* GDPerformanceMonitor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9DA8B98AB72399133C64F17BD18BDC7F /* GDWindowViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1162010688886CA577FBECE239B1D920 /* GDWindowViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C5CE66682A2073A492C03C2DDCB9CC73 /* GDWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB95648705EC7675AB6E96377C7DEE3 /* GDWindowViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CAB2A6245239942E45BEF11CCFAFACBF /* GDPerformanceMonitorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B3189BCED252A3D27D00276EB45CABD3 /* GDPerformanceMonitorProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D4B0611F038AB089D96F3E4FCFE82C79 /* GDMarginLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 60046AC8AF1E96693114BC3099F5BB28 /* GDMarginLabel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E2F264ADEEBEE9D259C17AE64124B0FD /* GDMarginLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45653BA64097EC2935E8924FA1B6872A /* GDMarginLabel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E60ABB6C1E0C087A9970C26D03AED077 /* GDPerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC11F164E533F4379DFBB7FEA9DA7EE /* GDPerformanceMonitor.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F22EA3BF080E80B09727FE6976E3DA13 /* GDPerformanceView.h in Headers */ = {isa = PBXBuildFile; fileRef = E4FCA71061351436BC8060D0E7D3DB29 /* GDPerformanceView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0BB04EF9CC7E21C3553725F3240288FE /* GDPerformanceView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GDPerformanceView.xcconfig; sourceTree = "<group>"; };
+		1162010688886CA577FBECE239B1D920 /* GDWindowViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDWindowViewController.h; path = GDPerformanceView/GDPerformanceMonitoring/GDWindowViewController.h; sourceTree = "<group>"; };
+		1C0CBF3D89083F4AC85DAFBBC58546AF /* GDPerformanceView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GDPerformanceView-dummy.m"; sourceTree = "<group>"; };
+		25AF7AD4B0D1535D86A08AA32F51B45C /* GDPerformanceMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDPerformanceMonitor.h; path = GDPerformanceView/GDPerformanceMonitoring/GDPerformanceMonitor.h; sourceTree = "<group>"; };
+		3EC11F164E533F4379DFBB7FEA9DA7EE /* GDPerformanceMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDPerformanceMonitor.m; path = GDPerformanceView/GDPerformanceMonitoring/GDPerformanceMonitor.m; sourceTree = "<group>"; };
+		45653BA64097EC2935E8924FA1B6872A /* GDMarginLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDMarginLabel.m; path = GDPerformanceView/GDPerformanceMonitoring/GDMarginLabel.m; sourceTree = "<group>"; };
+		60046AC8AF1E96693114BC3099F5BB28 /* GDMarginLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDMarginLabel.h; path = GDPerformanceView/GDPerformanceMonitoring/GDMarginLabel.h; sourceTree = "<group>"; };
+		7A15D246C7E2D208525E3F1D4A1791D4 /* libGDPerformanceView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGDPerformanceView.a; path = libGDPerformanceView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3189BCED252A3D27D00276EB45CABD3 /* GDPerformanceMonitorProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDPerformanceMonitorProtocol.h; path = GDPerformanceView/GDPerformanceMonitoring/GDPerformanceMonitorProtocol.h; sourceTree = "<group>"; };
+		DA4348F524FF74A042C52B969E746B60 /* GDPerformanceView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GDPerformanceView-prefix.pch"; sourceTree = "<group>"; };
+		DBB95648705EC7675AB6E96377C7DEE3 /* GDWindowViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDWindowViewController.m; path = GDPerformanceView/GDPerformanceMonitoring/GDWindowViewController.m; sourceTree = "<group>"; };
+		E4FCA71061351436BC8060D0E7D3DB29 /* GDPerformanceView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDPerformanceView.h; path = GDPerformanceView/GDPerformanceMonitoring/GDPerformanceView.h; sourceTree = "<group>"; };
+		F9E0F4DA6C02A4E3582D58236ABFC1AD /* GDPerformanceView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDPerformanceView.m; path = GDPerformanceView/GDPerformanceMonitoring/GDPerformanceView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		081202A6CBB46C01CD6E7B313A732CD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75C0868942386169C943781CBFEBC45E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A15D246C7E2D208525E3F1D4A1791D4 /* libGDPerformanceView.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8911DC8A17C5CAFA75CFCCD8F0B99748 = {
+			isa = PBXGroup;
+			children = (
+				C07F8809EA67CE5A0C296B3605E93959 /* Frameworks */,
+				8DBCD86C6AC4DAF0B4FE28C264EF6F6C /* GDPerformanceView */,
+				75C0868942386169C943781CBFEBC45E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8DBCD86C6AC4DAF0B4FE28C264EF6F6C /* GDPerformanceView */ = {
+			isa = PBXGroup;
+			children = (
+				60046AC8AF1E96693114BC3099F5BB28 /* GDMarginLabel.h */,
+				45653BA64097EC2935E8924FA1B6872A /* GDMarginLabel.m */,
+				25AF7AD4B0D1535D86A08AA32F51B45C /* GDPerformanceMonitor.h */,
+				3EC11F164E533F4379DFBB7FEA9DA7EE /* GDPerformanceMonitor.m */,
+				B3189BCED252A3D27D00276EB45CABD3 /* GDPerformanceMonitorProtocol.h */,
+				E4FCA71061351436BC8060D0E7D3DB29 /* GDPerformanceView.h */,
+				F9E0F4DA6C02A4E3582D58236ABFC1AD /* GDPerformanceView.m */,
+				1162010688886CA577FBECE239B1D920 /* GDWindowViewController.h */,
+				DBB95648705EC7675AB6E96377C7DEE3 /* GDWindowViewController.m */,
+				ED213F964B5FC41FA3F82C0FFF46DBE2 /* Support Files */,
+			);
+			name = GDPerformanceView;
+			path = GDPerformanceView;
+			sourceTree = "<group>";
+		};
+		C07F8809EA67CE5A0C296B3605E93959 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED213F964B5FC41FA3F82C0FFF46DBE2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0BB04EF9CC7E21C3553725F3240288FE /* GDPerformanceView.xcconfig */,
+				1C0CBF3D89083F4AC85DAFBBC58546AF /* GDPerformanceView-dummy.m */,
+				DA4348F524FF74A042C52B969E746B60 /* GDPerformanceView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GDPerformanceView";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6CB50621C63FCA784D54516CD610F772 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4B0611F038AB089D96F3E4FCFE82C79 /* GDMarginLabel.h in Headers */,
+				43E2D3A55CDF8A2EBFF7D7399DF96932 /* GDPerformanceMonitor.h in Headers */,
+				CAB2A6245239942E45BEF11CCFAFACBF /* GDPerformanceMonitorProtocol.h in Headers */,
+				F22EA3BF080E80B09727FE6976E3DA13 /* GDPerformanceView.h in Headers */,
+				9DA8B98AB72399133C64F17BD18BDC7F /* GDWindowViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C43C09050575BD770FE7B06A65C88FAF /* GDPerformanceView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E6102D12BA911266521F28740DC1F55 /* Build configuration list for PBXNativeTarget "GDPerformanceView" */;
+			buildPhases = (
+				6CB50621C63FCA784D54516CD610F772 /* Headers */,
+				68FE92AFD42BEB41453238CB93357D41 /* Sources */,
+				081202A6CBB46C01CD6E7B313A732CD8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GDPerformanceView;
+			productName = GDPerformanceView;
+			productReference = 7A15D246C7E2D208525E3F1D4A1791D4 /* libGDPerformanceView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1DECCCD00C61ADA80DAC9E790CB088E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4062B2D4A319657D90203BF84FAB396B /* Build configuration list for PBXProject "GDPerformanceView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8911DC8A17C5CAFA75CFCCD8F0B99748;
+			productRefGroup = 75C0868942386169C943781CBFEBC45E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C43C09050575BD770FE7B06A65C88FAF /* GDPerformanceView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68FE92AFD42BEB41453238CB93357D41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2F264ADEEBEE9D259C17AE64124B0FD /* GDMarginLabel.m in Sources */,
+				E60ABB6C1E0C087A9970C26D03AED077 /* GDPerformanceMonitor.m in Sources */,
+				2D75197BFD4E2DF5BFC35AB90C7C3261 /* GDPerformanceView-dummy.m in Sources */,
+				13E847B42938D377366DDA88AA10E7AF /* GDPerformanceView.m in Sources */,
+				C5CE66682A2073A492C03C2DDCB9CC73 /* GDWindowViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7E8B6A74076BBE63AC78FD9648CCEB8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		90BA2DF613D311F7AC638D3AEA6A1A42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BB04EF9CC7E21C3553725F3240288FE /* GDPerformanceView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GDPerformanceView/GDPerformanceView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GDPerformanceView;
+				PRODUCT_NAME = GDPerformanceView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C684FCB34B36109411FB60228C70DBEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F1724F657D410627C75A7E4E78142BB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BB04EF9CC7E21C3553725F3240288FE /* GDPerformanceView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GDPerformanceView/GDPerformanceView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GDPerformanceView;
+				PRODUCT_NAME = GDPerformanceView;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4062B2D4A319657D90203BF84FAB396B /* Build configuration list for PBXProject "GDPerformanceView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C684FCB34B36109411FB60228C70DBEF /* Debug */,
+				7E8B6A74076BBE63AC78FD9648CCEB8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E6102D12BA911266521F28740DC1F55 /* Build configuration list for PBXNativeTarget "GDPerformanceView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1724F657D410627C75A7E4E78142BB6 /* Debug */,
+				90BA2DF613D311F7AC638D3AEA6A1A42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1DECCCD00C61ADA80DAC9E790CB088E /* Project object */;
+}

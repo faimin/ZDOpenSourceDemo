@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		255A730D5B532AECE0682D0BF1F6FED3 /* PINCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 2AA4ECEB6282B1E46BA04B4FDF39CC95 /* PINCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		25AE6B6AE9C0716A44A982E029005A86 /* PINCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E25088ED96AACAD6F205E5223A8C5C1 /* PINCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5B71F777A6FFCC1E1B918150302224DA /* PINMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = AD41729F52D83898EF7181C8504AF28F /* PINMemoryCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5BCB03751B948D6E206BF6E144B89AF1 /* PINDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B31B1F294C38D713B43D8400066ABE /* PINDiskCache.m */; settings = {COMPILER_FLAGS = "-fobjc-arc-exceptions -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks -DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		958EB7D48EC5F759D6D97270C366F8E5 /* PINCaching.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D3C91C1070518E7F8F138794C2FF1E /* PINCaching.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A0B3F5282CF9B5B7D6C964C5145E80F6 /* PINCacheObjectSubscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = C90DF7ABD78750140A551127CBFD0ED9 /* PINCacheObjectSubscripting.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A5BBCA3CDC34D40B11F5B7B7DC4C9128 /* PINMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 54912CCF7027836E30E83DCEE2CD5807 /* PINMemoryCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ABEC3E1399F409C4BD9C799E404BCA70 /* PINDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A359B940398D915C2FA327EE1C722D /* PINDiskCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B4647895DFBB0491568367DEC1DCE989 /* PINCache-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B0632D442FD83749BF8F1475ADD031CE /* PINCache-dummy.m */; };
+		EEAB9F4D9DED56DAD8B50713B7E14FB8 /* PINCacheMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = DD8D666B623F7F7EFD7FBCDA6CC5CD00 /* PINCacheMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		64466EC87AB323EA264A266A133EB11A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7FB4E3166ECC80C94B2C11CC8C3B1B30 /* PINOperation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A40F164BE5BEC474AEE4414ADE73A710;
+			remoteInfo = PINOperation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05A359B940398D915C2FA327EE1C722D /* PINDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINDiskCache.h; path = Source/PINDiskCache.h; sourceTree = "<group>"; };
+		2AA4ECEB6282B1E46BA04B4FDF39CC95 /* PINCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCache.h; path = Source/PINCache.h; sourceTree = "<group>"; };
+		54912CCF7027836E30E83DCEE2CD5807 /* PINMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINMemoryCache.m; path = Source/PINMemoryCache.m; sourceTree = "<group>"; };
+		54D3C91C1070518E7F8F138794C2FF1E /* PINCaching.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCaching.h; path = Source/PINCaching.h; sourceTree = "<group>"; };
+		7FB4E3166ECC80C94B2C11CC8C3B1B30 /* PINOperation */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PINOperation; path = PINOperation.xcodeproj; sourceTree = "<group>"; };
+		8E25088ED96AACAD6F205E5223A8C5C1 /* PINCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINCache.m; path = Source/PINCache.m; sourceTree = "<group>"; };
+		AD41729F52D83898EF7181C8504AF28F /* PINMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINMemoryCache.h; path = Source/PINMemoryCache.h; sourceTree = "<group>"; };
+		B0632D442FD83749BF8F1475ADD031CE /* PINCache-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINCache-dummy.m"; sourceTree = "<group>"; };
+		B067066C1F02C668FEB070CF4B82188F /* libPINCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPINCache.a; path = libPINCache.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C90DF7ABD78750140A551127CBFD0ED9 /* PINCacheObjectSubscripting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCacheObjectSubscripting.h; path = Source/PINCacheObjectSubscripting.h; sourceTree = "<group>"; };
+		DD8D666B623F7F7EFD7FBCDA6CC5CD00 /* PINCacheMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCacheMacros.h; path = Source/PINCacheMacros.h; sourceTree = "<group>"; };
+		E649859DC0889F57CB6C148A7B6807EC /* PINCache-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-prefix.pch"; sourceTree = "<group>"; };
+		E709E4C8D9164530F485650EC55CC97E /* PINCache.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINCache.xcconfig; sourceTree = "<group>"; };
+		F4B31B1F294C38D713B43D8400066ABE /* PINDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINDiskCache.m; path = Source/PINDiskCache.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B923DB89311D9596E87A5DA6AB2297B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2036598B71C1097518793958D80E8707 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B067066C1F02C668FEB070CF4B82188F /* libPINCache.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57C6E7593E9F589830DDCFDC59B27E9B /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				7FB4E3166ECC80C94B2C11CC8C3B1B30 /* PINOperation */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		A6630795272DC81490876B8509C6B935 /* PINCache */ = {
+			isa = PBXGroup;
+			children = (
+				C1085F305148E244E3CEB35A3E343918 /* Arc-exception-safe */,
+				FC22734FF5A80D5CD22771E01E1051BF /* Core */,
+				F8264DD7F9DB55D2CA87B95E41590D05 /* Support Files */,
+			);
+			name = PINCache;
+			path = PINCache;
+			sourceTree = "<group>";
+		};
+		B0506FBC0C7D0A63279B62DFCC79058D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1085F305148E244E3CEB35A3E343918 /* Arc-exception-safe */ = {
+			isa = PBXGroup;
+			children = (
+				F4B31B1F294C38D713B43D8400066ABE /* PINDiskCache.m */,
+			);
+			name = "Arc-exception-safe";
+			sourceTree = "<group>";
+		};
+		F3E3FE9D4562E3291FE59E23F9005468 = {
+			isa = PBXGroup;
+			children = (
+				57C6E7593E9F589830DDCFDC59B27E9B /* Dependencies */,
+				B0506FBC0C7D0A63279B62DFCC79058D /* Frameworks */,
+				A6630795272DC81490876B8509C6B935 /* PINCache */,
+				2036598B71C1097518793958D80E8707 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8264DD7F9DB55D2CA87B95E41590D05 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E709E4C8D9164530F485650EC55CC97E /* PINCache.xcconfig */,
+				B0632D442FD83749BF8F1475ADD031CE /* PINCache-dummy.m */,
+				E649859DC0889F57CB6C148A7B6807EC /* PINCache-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PINCache";
+			sourceTree = "<group>";
+		};
+		FC22734FF5A80D5CD22771E01E1051BF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2AA4ECEB6282B1E46BA04B4FDF39CC95 /* PINCache.h */,
+				8E25088ED96AACAD6F205E5223A8C5C1 /* PINCache.m */,
+				DD8D666B623F7F7EFD7FBCDA6CC5CD00 /* PINCacheMacros.h */,
+				C90DF7ABD78750140A551127CBFD0ED9 /* PINCacheObjectSubscripting.h */,
+				54D3C91C1070518E7F8F138794C2FF1E /* PINCaching.h */,
+				05A359B940398D915C2FA327EE1C722D /* PINDiskCache.h */,
+				AD41729F52D83898EF7181C8504AF28F /* PINMemoryCache.h */,
+				54912CCF7027836E30E83DCEE2CD5807 /* PINMemoryCache.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		55333AF8DE8FB3E748F951AD47B3F91E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				255A730D5B532AECE0682D0BF1F6FED3 /* PINCache.h in Headers */,
+				EEAB9F4D9DED56DAD8B50713B7E14FB8 /* PINCacheMacros.h in Headers */,
+				A0B3F5282CF9B5B7D6C964C5145E80F6 /* PINCacheObjectSubscripting.h in Headers */,
+				958EB7D48EC5F759D6D97270C366F8E5 /* PINCaching.h in Headers */,
+				ABEC3E1399F409C4BD9C799E404BCA70 /* PINDiskCache.h in Headers */,
+				5B71F777A6FFCC1E1B918150302224DA /* PINMemoryCache.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E6F935A450178DA7515843CC4A631A11 /* PINCache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1CB18B49DA75EBECC4D932B3B9A8A52 /* Build configuration list for PBXNativeTarget "PINCache" */;
+			buildPhases = (
+				55333AF8DE8FB3E748F951AD47B3F91E /* Headers */,
+				92EDEB9B3FBA9F92DEAC6CDE3369EFAC /* Sources */,
+				B923DB89311D9596E87A5DA6AB2297B2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55DB23B48A27FC8098EBACA91B91313D /* PBXTargetDependency */,
+			);
+			name = PINCache;
+			productName = PINCache;
+			productReference = B067066C1F02C668FEB070CF4B82188F /* libPINCache.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA4604FF2296F8CC10FC81D671FFB09D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 873228F162FD6EDF9F28C99626FEADF6 /* Build configuration list for PBXProject "PINCache" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F3E3FE9D4562E3291FE59E23F9005468;
+			productRefGroup = 2036598B71C1097518793958D80E8707 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProjectRef = 7FB4E3166ECC80C94B2C11CC8C3B1B30 /* PINOperation */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E6F935A450178DA7515843CC4A631A11 /* PINCache */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92EDEB9B3FBA9F92DEAC6CDE3369EFAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4647895DFBB0491568367DEC1DCE989 /* PINCache-dummy.m in Sources */,
+				25AE6B6AE9C0716A44A982E029005A86 /* PINCache.m in Sources */,
+				5BCB03751B948D6E206BF6E144B89AF1 /* PINDiskCache.m in Sources */,
+				A5BBCA3CDC34D40B11F5B7B7DC4C9128 /* PINMemoryCache.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55DB23B48A27FC8098EBACA91B91313D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINOperation;
+			targetProxy = 64466EC87AB323EA264A266A133EB11A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1D7126626E88BD62FA41346AF5E3C226 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		93281AB8EEF66C33BBDDDA0D3E74FB96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E709E4C8D9164530F485650EC55CC97E /* PINCache.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = PINCache;
+				PRODUCT_NAME = PINCache;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA250C6BBC2B3B77046553A9B2FD7A32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E866FCD86B0BE36236C731998A660B6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E709E4C8D9164530F485650EC55CC97E /* PINCache.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = PINCache;
+				PRODUCT_NAME = PINCache;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		873228F162FD6EDF9F28C99626FEADF6 /* Build configuration list for PBXProject "PINCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA250C6BBC2B3B77046553A9B2FD7A32 /* Debug */,
+				1D7126626E88BD62FA41346AF5E3C226 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1CB18B49DA75EBECC4D932B3B9A8A52 /* Build configuration list for PBXNativeTarget "PINCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E866FCD86B0BE36236C731998A660B6B /* Debug */,
+				93281AB8EEF66C33BBDDDA0D3E74FB96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA4604FF2296F8CC10FC81D671FFB09D /* Project object */;
+}
