@@ -1,4 +1,7 @@
 # Uncomment the next line to define a global platform for your project
+
+#require 'pry' #debug
+
 platform :ios, '10.0'
 
 def pods_swift
@@ -106,6 +109,7 @@ end
 
 # https://github.com/CocoaPods/CocoaPods/issues/8604
 post_install do |installer|
+  # binding.pry  #debug
     installer.pod_target_subprojects.flat_map { |p| p.targets }.each do |target|
         target.build_configurations.each do |config|
             if target.name == 'LayoutKit'
