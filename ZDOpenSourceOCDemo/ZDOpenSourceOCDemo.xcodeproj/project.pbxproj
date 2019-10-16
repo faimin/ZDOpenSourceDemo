@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65EDF0C512746869C99757A6 /* libPods-ZDOpenSourceOCDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA676CF48E58A8CF5A47EE7 /* libPods-ZDOpenSourceOCDemoUITests.a */; };
-		85F702A305A8D59FD2ED175E /* libPods-ZDOpenSourceOCDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E14206D7EC93D42EE34F5199 /* libPods-ZDOpenSourceOCDemo.a */; };
+		72CF2CAB76C95D31B32B6C1F /* Pods_ZDOpenSourceOCDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9137FF864346586B4394D9 /* Pods_ZDOpenSourceOCDemoTests.framework */; };
+		79E823E356A1091A5875EDA6 /* Pods_ZDOpenSourceOCDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5BE77426083DFC16CEDA98A /* Pods_ZDOpenSourceOCDemoUITests.framework */; };
+		7F53E6726A3C2138142C3E5B /* Pods_ZDOpenSourceOCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C669D8516C78B35BB2FC11DF /* Pods_ZDOpenSourceOCDemo.framework */; };
 		DA0177251F48364F00F40F97 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = DA0177241F48364F00F40F97 /* data.json */; };
 		DA25127D1F349AF300633093 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA25127C1F349AF300633093 /* main.m */; };
 		DA2512801F349AF300633093 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA25127F1F349AF300633093 /* AppDelegate.mm */; };
@@ -30,7 +31,6 @@
 		DAE26CC61F398E170072973F /* YogaKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE26CC51F398E170072973F /* YogaKitViewController.m */; };
 		DAF193781FDAD869003F6FDA /* YogaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF193771FDAD869003F6FDA /* YogaCell.m */; };
 		DAF1937B1FDADA08003F6FDA /* YogaKitListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAF1937A1FDADA08003F6FDA /* YogaKitListViewController.m */; };
-		EB3B741034C35E8762C84CA8 /* libPods-ZDOpenSourceOCDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DCE918B21B2CB2FB984D64 /* libPods-ZDOpenSourceOCDemoTests.a */; };
 		FA4390741FDA350D00342B06 /* Xtrace.mm in Sources */ = {isa = PBXBuildFile; fileRef = FA4390731FDA350D00342B06 /* Xtrace.mm */; };
 		FA4390781FDA366A00342B06 /* ZDTraceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FA4390771FDA366A00342B06 /* ZDTraceHandler.m */; };
 		FA5816E42230C20000A6F8D9 /* LottieViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5816E32230C20000A6F8D9 /* LottieViewRouter.m */; };
@@ -68,9 +68,10 @@
 		0C6E7D9FEF1A71CAE2AB0A46 /* Pods-ZDOpenSourceOCDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemoTests/Pods-ZDOpenSourceOCDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		612FB2CB1D5AF0AB38078122 /* Pods-ZDOpenSourceOCDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemoTests/Pods-ZDOpenSourceOCDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		74E98E3413D19D482A72E224 /* Pods-ZDOpenSourceOCDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemoUITests/Pods-ZDOpenSourceOCDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C9137FF864346586B4394D9 /* Pods_ZDOpenSourceOCDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZDOpenSourceOCDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8130AE0D880F2830B6FF140A /* Pods-ZDOpenSourceOCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo.release.xcconfig"; sourceTree = "<group>"; };
-		92DCE918B21B2CB2FB984D64 /* libPods-ZDOpenSourceOCDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZDOpenSourceOCDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BAA676CF48E58A8CF5A47EE7 /* libPods-ZDOpenSourceOCDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZDOpenSourceOCDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C669D8516C78B35BB2FC11DF /* Pods_ZDOpenSourceOCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZDOpenSourceOCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5BE77426083DFC16CEDA98A /* Pods_ZDOpenSourceOCDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZDOpenSourceOCDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0177241F48364F00F40F97 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		DA2512781F349AF300633093 /* ZDOpenSourceOCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZDOpenSourceOCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA25127C1F349AF300633093 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,7 +110,6 @@
 		DAF193791FDADA08003F6FDA /* YogaKitListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YogaKitListViewController.h; sourceTree = "<group>"; };
 		DAF1937A1FDADA08003F6FDA /* YogaKitListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YogaKitListViewController.m; sourceTree = "<group>"; };
 		DED6398BF0F3395E7AE1408D /* Pods-ZDOpenSourceOCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDOpenSourceOCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		E14206D7EC93D42EE34F5199 /* libPods-ZDOpenSourceOCDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZDOpenSourceOCDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4390721FDA350D00342B06 /* Xtrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Xtrace.h; sourceTree = "<group>"; };
 		FA4390731FDA350D00342B06 /* Xtrace.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Xtrace.mm; sourceTree = "<group>"; };
 		FA4390761FDA366A00342B06 /* ZDTraceHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDTraceHandler.h; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85F702A305A8D59FD2ED175E /* libPods-ZDOpenSourceOCDemo.a in Frameworks */,
+				7F53E6726A3C2138142C3E5B /* Pods_ZDOpenSourceOCDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB3B741034C35E8762C84CA8 /* libPods-ZDOpenSourceOCDemoTests.a in Frameworks */,
+				72CF2CAB76C95D31B32B6C1F /* Pods_ZDOpenSourceOCDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65EDF0C512746869C99757A6 /* libPods-ZDOpenSourceOCDemoUITests.a in Frameworks */,
+				79E823E356A1091A5875EDA6 /* Pods_ZDOpenSourceOCDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,9 +383,9 @@
 		E0D8AB0F380C55A6F21C13B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E14206D7EC93D42EE34F5199 /* libPods-ZDOpenSourceOCDemo.a */,
-				92DCE918B21B2CB2FB984D64 /* libPods-ZDOpenSourceOCDemoTests.a */,
-				BAA676CF48E58A8CF5A47EE7 /* libPods-ZDOpenSourceOCDemoUITests.a */,
+				C669D8516C78B35BB2FC11DF /* Pods_ZDOpenSourceOCDemo.framework */,
+				7C9137FF864346586B4394D9 /* Pods_ZDOpenSourceOCDemoTests.framework */,
+				D5BE77426083DFC16CEDA98A /* Pods_ZDOpenSourceOCDemoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -507,6 +507,7 @@
 				DA2512751F349AF300633093 /* Frameworks */,
 				DA2512761F349AF300633093 /* Resources */,
 				46F98560DBD1E95194968DD4 /* [CP] Copy Pods Resources */,
+				985B282EB0C8A98ED88F15A8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -660,19 +661,39 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo-resources.sh",
-				"${PODS_ROOT}/LayoutInspector/LayoutInspector/Assets/LayoutInspectorAssets.xcassets",
-				"${PODS_ROOT}/LayoutInspector/LayoutInspector/LayoutInspector.storyboard",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.car",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LayoutInspector.storyboardc",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		985B282EB0C8A98ED88F15A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LayoutInspector/LayoutInspector.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LayoutInspector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YogaKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A5CAEBEF8523207B60A03A44 /* [CP] Check Pods Manifest.lock */ = {
@@ -917,6 +938,7 @@
 				INFOPLIST_FILE = ZDOpenSourceOCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DFB_SONARKIT_ENABLED=1",
@@ -936,6 +958,7 @@
 				INFOPLIST_FILE = ZDOpenSourceOCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-DFB_SONARKIT_ENABLED=1",

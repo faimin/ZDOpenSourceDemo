@@ -529,7 +529,7 @@ bool zix_hasDynamicLibrary(NSString *libName) {
     return image != NULL;
 }
 
-void _enumerateSymbolName(bool(^handler)(const char *name, NSString *(^demangledAsSwift)(const char *mangledName, bool simplified))) {
+void zix_enumerateSymbolName(bool(^handler)(const char *name, NSString *(^demangledAsSwift)(const char *mangledName, bool simplified))) {
     if (handler == nil) {
         return;
     }
@@ -584,7 +584,7 @@ NSString *codeForImportingRouters() {
     NSMutableArray<Class> *objcServiceRouters = [NSMutableArray array];
     NSMutableArray<Class> *objcServiceAdapters = [NSMutableArray array];
     
-    ZIKRouter_enumerateClassList(^(__unsafe_unretained Class aClass) {
+    zix_enumerateClassList(^(__unsafe_unretained Class aClass) {
 #if __has_include("ZIKViewRouter.h")
         if ([ZIKViewRouteRegistry isRegisterableRouterClass:aClass]) {
             if ([NSStringFromClass(aClass) zix_containsString:@"."]) {
@@ -664,7 +664,7 @@ NSString *codeForRegisteringRouters() {
     NSMutableArray<Class> *swiftServiceRouters = [NSMutableArray array];
     NSMutableArray<Class> *swiftServiceAdapters = [NSMutableArray array];
     
-    ZIKRouter_enumerateClassList(^(__unsafe_unretained Class aClass) {
+    zix_enumerateClassList(^(__unsafe_unretained Class aClass) {
 #if __has_include("ZIKViewRouter.h")
         if ([ZIKViewRouteRegistry isRegisterableRouterClass:aClass]) {
             if ([aClass isAdapter]) {
@@ -755,6 +755,7 @@ NSString *codeForRegisteringRouters() {
 #import "ZIKClassCapabilities.h"
 #if __has_include("ZIKViewRouter.h")
 #import "UIViewController+ZIKViewRouter.h"
+#import "UIView+ZIKViewRouter.h"
 #endif
 
 void zix_checkMemoryLeak(id object, NSTimeInterval delaySecond, void(^handler)(id leakedObject)) {
@@ -766,6 +767,11 @@ void zix_checkMemoryLeak(id object, NSTimeInterval delaySecond, void(^handler)(i
     }
     static NSMutableDictionary<NSString *, NSString *> *_leakedObjects;
     static NSHashTable *_existingObjects;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _leakedObjects = [NSMutableDictionary dictionary];
+        _existingObjects = [NSHashTable weakObjectsHashTable];
+    });
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     
@@ -813,6 +819,12 @@ void zix_checkMemoryLeak(id object, NSTimeInterval delaySecond, void(^handler)(i
                 }
                 return;
             } else if ([weakObject isKindOfClass:[XXView class]]) {
+#if __has_include("ZIKViewRouter.h")
+                XXViewController *viewController = [weakObject zix_firstAvailableViewController];
+                if ([viewController zix_routed]) {
+                    return;
+                }
+#endif
                 XXView *superview = [weakObject superview];
                 if (superview) {
                     NSLog(@"\n\nZIKRouter memory leak checker:⚠️ destination is not dealloced after removed, make sure there is no retain cycle:\n%@\nIts superview: %@\nThe UIKit system may hold the object, if the view is still in view hierarchy, you can ignore this.\n\n", weakObject, superview);

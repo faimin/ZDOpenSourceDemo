@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85C7B28639AA0F7065F03F06476BC208 /* fishhook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4378B615D1BCF4A7FAD25C5A2B56DDF8 /* fishhook-dummy.m */; };
+		11DEF818AAC4BFB8AA6D3EDA246387F7 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = CAEF11F971366435A339C0D52BBA5934 /* fishhook.c */; };
+		7F647E4C87B9634ACD7C48A6976EF560 /* fishhook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4378B615D1BCF4A7FAD25C5A2B56DDF8 /* fishhook-dummy.m */; };
 		ABD3D7F86EFEB581EB982E65DD463CF0 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F897CAAFC922B2175508F379B456062 /* fishhook.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C06356D2D532E8F82D301D8D8EA59EB2 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = CAEF11F971366435A339C0D52BBA5934 /* fishhook.c */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,7 +97,7 @@
 			buildConfigurationList = ABCF59A3E929E3A544EA756B3DAE88FF /* Build configuration list for PBXNativeTarget "fishhook" */;
 			buildPhases = (
 				B1961868E52D637AB47E8B8C976C0F68 /* Headers */,
-				35B0E1ED81C74EE60935F5A189D0DE1A /* Sources */,
+				3E6F9E63F18EBA7B6FE747974F6F5D47 /* Sources */,
 				10C774D0D76F317C61EA5173738C50FD /* Frameworks */,
 			);
 			buildRules = (
@@ -136,19 +136,42 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		35B0E1ED81C74EE60935F5A189D0DE1A /* Sources */ = {
+		3E6F9E63F18EBA7B6FE747974F6F5D47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85C7B28639AA0F7065F03F06476BC208 /* fishhook-dummy.m in Sources */,
-				C06356D2D532E8F82D301D8D8EA59EB2 /* fishhook.c in Sources */,
+				7F647E4C87B9634ACD7C48A6976EF560 /* fishhook-dummy.m in Sources */,
+				11DEF818AAC4BFB8AA6D3EDA246387F7 /* fishhook.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		41ACC033BAC2CB6F631DFFFB3BC91171 /* Release */ = {
+		1AEF113AEFE4820F1C2870A76C1C5684 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E21C72A727E10ED097D0CEF280822BBD /* fishhook.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/fishhook/fishhook-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = fishhook;
+				PRODUCT_NAME = fishhook;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D287E45AE841707A71657E6A412B97A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -196,7 +219,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -208,7 +231,7 @@
 			};
 			name = Release;
 		};
-		88581412E847818658915C9A77505A07 /* Release */ = {
+		77087F649ECA5B7088CCCB480C19A4C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E21C72A727E10ED097D0CEF280822BBD /* fishhook.xcconfig */;
 			buildSettings = {
@@ -217,7 +240,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/fishhook/fishhook-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -232,30 +255,7 @@
 			};
 			name = Release;
 		};
-		8BD419E358C442C79E61DF9E99E828EE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E21C72A727E10ED097D0CEF280822BBD /* fishhook.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/fishhook/fishhook-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = fishhook;
-				PRODUCT_NAME = fishhook;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F56FDB27C336D7BB26BB5691C31932AF /* Debug */ = {
+		C020BE2F70D663722955931CA2790649 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -306,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -325,8 +325,8 @@
 		ABCF59A3E929E3A544EA756B3DAE88FF /* Build configuration list for PBXNativeTarget "fishhook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8BD419E358C442C79E61DF9E99E828EE /* Debug */,
-				88581412E847818658915C9A77505A07 /* Release */,
+				1AEF113AEFE4820F1C2870A76C1C5684 /* Debug */,
+				77087F649ECA5B7088CCCB480C19A4C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -334,8 +334,8 @@
 		F39CC7A4BBEDF6335BDE385E6BD54262 /* Build configuration list for PBXProject "fishhook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F56FDB27C336D7BB26BB5691C31932AF /* Debug */,
-				41ACC033BAC2CB6F631DFFFB3BC91171 /* Release */,
+				C020BE2F70D663722955931CA2790649 /* Debug */,
+				4D287E45AE841707A71657E6A412B97A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

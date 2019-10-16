@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2166677A2C395FDBDA53ED00329B5833 /* YTKNetwork-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4096B1576AA5D460BF3F5395A3219 /* YTKNetwork-dummy.m */; };
+		2A4336853B26F4AC8315C2F05B70DCDE /* YTKBatchRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC33A15D2EA2D2AE3C53A3F0EA9FA90 /* YTKBatchRequestAgent.m */; };
+		2C3100D8F96D120D9ABC0A6A029C87E1 /* YTKNetwork-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4096B1576AA5D460BF3F5395A3219 /* YTKNetwork-dummy.m */; };
 		32653C6AFB72C887294865E03EA38809 /* YTKNetworkAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 069356EF2D9870E13B4F230AF4FE941A /* YTKNetworkAgent.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3341AE2D43BC69F201EAF1DB6C3B3354 /* YTKBatchRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 56C2DF7EB2C349284DB6C097A367C949 /* YTKBatchRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		34C098469E5D3C54312C39808B61D982 /* YTKNetworkConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = F95F96037E4784EED1C321D6FE81D8A4 /* YTKNetworkConfig.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3A155727E05CF4EF37EF93CDBDED03CB /* YTKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B587ABA6BE14BA560B3E3B7FC11A4B /* YTKRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4FDBEEDB3435C8F186E0AADADB602CF6 /* YTKChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 283CB1543C0DDD68684F14159B10BCAB /* YTKChainRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6626F106529A6BDC33EEBCBC46E996BE /* YTKNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189345F8EB02779BCCB2EB88FC062DB6 /* YTKNetworkPrivate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		372054CAEAF936D2595BC2D649E78BE9 /* YTKNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 094F44AA31914AA11955669AF6A46D0F /* YTKNetworkConfig.m */; };
+		3DB3BD0AE4934AD487F5CAD0D4C5EE2A /* YTKBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A204D36B96F57655FE3E2F374F0E031A /* YTKBatchRequest.m */; };
 		7466B0F4F77FB4F0916647263E6508D1 /* YTKBaseRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD25381F5573C801DDA718EDFFDF56A /* YTKBaseRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		77A5F99A7F299C9518CDCE752F7CABB1 /* YTKNetworkPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8253BF70313874E2DF042C7CF1F53F98 /* YTKNetworkPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7E27279017D50F7043FF79184C234AA0 /* YTKBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A204D36B96F57655FE3E2F374F0E031A /* YTKBatchRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		847086704F0241EF9125EDC645998F0A /* YTKChainRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = BB43500AB3EB2D0FE9EB9C1E6CDDCA17 /* YTKChainRequestAgent.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7BB7BB5F12F420A7E8394231DC2D406B /* YTKNetworkPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 189345F8EB02779BCCB2EB88FC062DB6 /* YTKNetworkPrivate.m */; };
+		7D6F96AD36E298531C31E74124B23227 /* YTKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B587ABA6BE14BA560B3E3B7FC11A4B /* YTKRequest.m */; };
 		8A6EFF099F163C01B155C2041006E91D /* YTKNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B97373405CBA4F3F27AA71D8CAE0B67 /* YTKNetwork.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9242016488CE95A953E946FDA04E20E6 /* YTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 72DE8C6ED5896A5AD4B3B01ADA8EAB0F /* YTKBaseRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		96ABD3A5F36C6C038053C672862886C9 /* YTKNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 094F44AA31914AA11955669AF6A46D0F /* YTKNetworkConfig.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A319226C375516CFDB7E20AF423D6E1F /* YTKChainRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = BB43500AB3EB2D0FE9EB9C1E6CDDCA17 /* YTKChainRequestAgent.m */; };
+		AEFEA2669E60D4CBF49861675A58BB67 /* YTKChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 283CB1543C0DDD68684F14159B10BCAB /* YTKChainRequest.m */; };
 		AFE130EAC5B4D4E9E01ECBB427846389 /* YTKChainRequestAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ED2C6018DD433E01DE313FB11883DBF /* YTKChainRequestAgent.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C9399E8A624BAE9F4E5773BD6D8CF8DA /* YTKBatchRequestAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = E479F90FC6A2DCFBE813C662EB833997 /* YTKBatchRequestAgent.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CE50E79E7B56CE6483BF27E0452964AD /* YTKNetworkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A47BD7D3FD1405E8EF12E76077732BF /* YTKNetworkAgent.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D0D0BAE4F44C20F361B6C45958E08E94 /* YTKBatchRequestAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC33A15D2EA2D2AE3C53A3F0EA9FA90 /* YTKBatchRequestAgent.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E5DDB4C5DDDF0C58767764872CC15E1F /* YTKNetworkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A47BD7D3FD1405E8EF12E76077732BF /* YTKNetworkAgent.m */; };
 		E9603A89FD62983BC6BC3D8748D40BC0 /* YTKRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 440626CEBC70532F302664C55268FB79 /* YTKRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EAD7B9DFB111EBC04C6298FB6D989F44 /* YTKChainRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F1F5EFEC54C3511E04492FEDBCD3AA4 /* YTKChainRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F79412A61264DC85AE0B45DE6D4BB851 /* YTKBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 72DE8C6ED5896A5AD4B3B01ADA8EAB0F /* YTKBaseRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,7 +177,7 @@
 			buildConfigurationList = AC540B7212A984A2750A87267C598026 /* Build configuration list for PBXNativeTarget "YTKNetwork" */;
 			buildPhases = (
 				59C694AA0329D935542CD025B58F1604 /* Headers */,
-				B867E5FC977D705105AB5B206A2D02B7 /* Sources */,
+				E5A8CAFADAE774DD89BC15BD11B43EE1 /* Sources */,
 				B2F94235057219A73DD5179BD5C143FA /* Frameworks */,
 			);
 			buildRules = (
@@ -222,20 +222,20 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B867E5FC977D705105AB5B206A2D02B7 /* Sources */ = {
+		E5A8CAFADAE774DD89BC15BD11B43EE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9242016488CE95A953E946FDA04E20E6 /* YTKBaseRequest.m in Sources */,
-				7E27279017D50F7043FF79184C234AA0 /* YTKBatchRequest.m in Sources */,
-				D0D0BAE4F44C20F361B6C45958E08E94 /* YTKBatchRequestAgent.m in Sources */,
-				4FDBEEDB3435C8F186E0AADADB602CF6 /* YTKChainRequest.m in Sources */,
-				847086704F0241EF9125EDC645998F0A /* YTKChainRequestAgent.m in Sources */,
-				2166677A2C395FDBDA53ED00329B5833 /* YTKNetwork-dummy.m in Sources */,
-				CE50E79E7B56CE6483BF27E0452964AD /* YTKNetworkAgent.m in Sources */,
-				96ABD3A5F36C6C038053C672862886C9 /* YTKNetworkConfig.m in Sources */,
-				6626F106529A6BDC33EEBCBC46E996BE /* YTKNetworkPrivate.m in Sources */,
-				3A155727E05CF4EF37EF93CDBDED03CB /* YTKRequest.m in Sources */,
+				F79412A61264DC85AE0B45DE6D4BB851 /* YTKBaseRequest.m in Sources */,
+				3DB3BD0AE4934AD487F5CAD0D4C5EE2A /* YTKBatchRequest.m in Sources */,
+				2A4336853B26F4AC8315C2F05B70DCDE /* YTKBatchRequestAgent.m in Sources */,
+				AEFEA2669E60D4CBF49861675A58BB67 /* YTKChainRequest.m in Sources */,
+				A319226C375516CFDB7E20AF423D6E1F /* YTKChainRequestAgent.m in Sources */,
+				2C3100D8F96D120D9ABC0A6A029C87E1 /* YTKNetwork-dummy.m in Sources */,
+				E5DDB4C5DDDF0C58767764872CC15E1F /* YTKNetworkAgent.m in Sources */,
+				372054CAEAF936D2595BC2D649E78BE9 /* YTKNetworkConfig.m in Sources */,
+				7BB7BB5F12F420A7E8394231DC2D406B /* YTKNetworkPrivate.m in Sources */,
+				7D6F96AD36E298531C31E74124B23227 /* YTKRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +250,54 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2C5B6B6EE8BC6F0D54950BD356F1449B /* Release */ = {
+		DC6A93C06B6467ACE58F3D70B3ADE823 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2955797DAE491DF5E8502B8909A382D2 /* YTKNetwork.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/YTKNetwork/YTKNetwork-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = YTKNetwork;
+				PRODUCT_NAME = YTKNetwork;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E47DB1D9C3CB9F354A20C86C26508CCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2955797DAE491DF5E8502B8909A382D2 /* YTKNetwork.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/YTKNetwork/YTKNetwork-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = YTKNetwork;
+				PRODUCT_NAME = YTKNetwork;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E871E783C372EADAE09591BAC8B9D6C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -298,7 +345,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -310,7 +357,7 @@
 			};
 			name = Release;
 		};
-		687670324C7E1C53EDFBADB21E037624 /* Debug */ = {
+		F48A6972CFA97A352000AD4E74E76B29 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -361,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -374,61 +421,14 @@
 			};
 			name = Debug;
 		};
-		9DB6FBAEEC575D474E5FB0FC4ACD038F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2955797DAE491DF5E8502B8909A382D2 /* YTKNetwork.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/YTKNetwork/YTKNetwork-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = YTKNetwork;
-				PRODUCT_NAME = YTKNetwork;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		E5E5AFFF7BC636953EAC53E6B111D55E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2955797DAE491DF5E8502B8909A382D2 /* YTKNetwork.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/YTKNetwork/YTKNetwork-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = YTKNetwork;
-				PRODUCT_NAME = YTKNetwork;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		AC540B7212A984A2750A87267C598026 /* Build configuration list for PBXNativeTarget "YTKNetwork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E5E5AFFF7BC636953EAC53E6B111D55E /* Debug */,
-				9DB6FBAEEC575D474E5FB0FC4ACD038F /* Release */,
+				E47DB1D9C3CB9F354A20C86C26508CCD /* Debug */,
+				DC6A93C06B6467ACE58F3D70B3ADE823 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -436,8 +436,8 @@
 		E43CC826203366D5BCEF4657DE33E5B0 /* Build configuration list for PBXProject "YTKNetwork" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				687670324C7E1C53EDFBADB21E037624 /* Debug */,
-				2C5B6B6EE8BC6F0D54950BD356F1449B /* Release */,
+				F48A6972CFA97A352000AD4E74E76B29 /* Debug */,
+				E871E783C372EADAE09591BAC8B9D6C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

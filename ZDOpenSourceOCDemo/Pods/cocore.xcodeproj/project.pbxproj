@@ -8,26 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		0F6AF60D9F9B23ABF37D8B9B5768A82E /* CODispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 71AA1427AD95B55294F9717E56C7BB04 /* CODispatch.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		16D00432E24C472CB9AF71FD70A47961 /* CODispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = F65F5E3D7C138F60E3F41396811DB585 /* CODispatch.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1A9DEC830196A1B70E99CC8353F23E77 /* co_errors.h in Headers */ = {isa = PBXBuildFile; fileRef = 9792DB77058E5DC9CF47E6633D2FD252 /* co_errors.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		25991D6C97C4C97DBE303DA904DE9D2E /* coroutine_context.h in Headers */ = {isa = PBXBuildFile; fileRef = 284C5812FE0572FD1F5EF97155F6BFA4 /* coroutine_context.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2CDDA94F677ADC0833E06A7CFE6E7E67 /* co_queue.h in Headers */ = {isa = PBXBuildFile; fileRef = A9D1B6C80BE8271A4DB5677FF49C8566 /* co_queue.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		39F45B6E1D6AC6284DF57D37AA65CF3D /* coroutine_context.m in Sources */ = {isa = PBXBuildFile; fileRef = C283F41B59450F487C5B706A43A71C49 /* coroutine_context.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3A4C28C7C71072CB729FF7A75F741F4A /* cocore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAE97322619359F7733E3569795D160 /* cocore-dummy.m */; };
-		54A885100FE4FEE87683CADC8DE24847 /* co_autorelease.mm in Sources */ = {isa = PBXBuildFile; fileRef = A90343D554AA1F4AD7674B5C7A4B53DB /* co_autorelease.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		30113CE3C77DBDD46DA12CCF2BCAAEF1 /* coroutine.m in Sources */ = {isa = PBXBuildFile; fileRef = 938C291AABF64078C66B6F22FF2ADCF1 /* coroutine.m */; };
+		394080430FDE829F5ADD9FE82DD37682 /* co_queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC106E38D3B4475AF05C77B31ADE175 /* co_queue.m */; };
+		45B4F7B70CFF60988B2F34AFB4D3D8DC /* CODispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = F65F5E3D7C138F60E3F41396811DB585 /* CODispatch.m */; };
 		5BF10B53E6B161C6B18BFF7233DAF786 /* cocore.h in Headers */ = {isa = PBXBuildFile; fileRef = B602720A8479385B3B66CD24656D3572 /* cocore.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		79F280F0BA62879C76276495AAAD59A7 /* coroutine.m in Sources */ = {isa = PBXBuildFile; fileRef = 938C291AABF64078C66B6F22FF2ADCF1 /* coroutine.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7F4F49B475A1859C1AA98E74F74AEB3C /* co_queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC106E38D3B4475AF05C77B31ADE175 /* co_queue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		64E30BCE3C105161F7DA9178C7E099CB /* cocore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAE97322619359F7733E3569795D160 /* cocore-dummy.m */; };
+		7CE03C18941DF9B9CC8392C59C44999E /* coroutine_context.s in Sources */ = {isa = PBXBuildFile; fileRef = FCFA94A35FFD46489CA9DFFC6D96BECC /* coroutine_context.s */; };
 		8092E06F273605111428267FBD7F8459 /* co_queuedebugging_support.h in Headers */ = {isa = PBXBuildFile; fileRef = 97974DD9BA2305F208C21001B38FBF12 /* co_queuedebugging_support.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		853EBCFE92FB790047B966BE3DC8177D /* cofishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = D06515BED4E52B4DE64C4FD423046911 /* cofishhook.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8E44264838CD2D32C405DBE9ADD8C2A8 /* co_queuedebugging_support.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0844FB426C28A2E95A5EF923CD56E4 /* co_queuedebugging_support.m */; };
 		9925C84D64F75AAFB5A2B97CE6808AAB /* co_autorelease.h in Headers */ = {isa = PBXBuildFile; fileRef = C015214136FCC199BA04A0C00CA0FD38 /* co_autorelease.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9A1C83210BFF8AFCA5D726C3F14023D3 /* co_csp.m in Sources */ = {isa = PBXBuildFile; fileRef = A022E25A9213DBBB0D29484DF1C05F56 /* co_csp.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A88C5D1591594957E997E43841611545 /* co_autorelease.mm in Sources */ = {isa = PBXBuildFile; fileRef = A90343D554AA1F4AD7674B5C7A4B53DB /* co_autorelease.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B5B495D154DB1C77D8A7531643572114 /* cofishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = D06515BED4E52B4DE64C4FD423046911 /* cofishhook.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BAE3FE4E6009DB8F3C7A9CFB128DAB07 /* coroutine.h in Headers */ = {isa = PBXBuildFile; fileRef = 6082DAD59F9603A35BF41FC15DE5DB9A /* coroutine.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D67F2A281A71E938062D5D9DB139B18D /* co_csp.h in Headers */ = {isa = PBXBuildFile; fileRef = F3C60B172932AB320C3ED1E4EC667BF4 /* co_csp.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D9FEBF31F9AC7F996FDA208E08157654 /* cofishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = FADBE5D8AB9747DBEA2E3E2AB2CE4B37 /* cofishhook.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DD2D799AB3CC91C6008C51603487281F /* co_queuedebugging_support.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0844FB426C28A2E95A5EF923CD56E4 /* co_queuedebugging_support.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E0CF3FF41885A1DA88DED56FEEB1BEC4 /* co_errors.m in Sources */ = {isa = PBXBuildFile; fileRef = E350E90B7A1449421578BEFBE459F727 /* co_errors.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E4E7D1EB4158FC8DDCD6A4AD33EA8E9F /* coroutine_context.s in Sources */ = {isa = PBXBuildFile; fileRef = FCFA94A35FFD46489CA9DFFC6D96BECC /* coroutine_context.s */; };
+		EFB5D64B717CFE587AA86D1470660900 /* co_errors.m in Sources */ = {isa = PBXBuildFile; fileRef = E350E90B7A1449421578BEFBE459F727 /* co_errors.m */; };
+		F7150B0D0819B2AC6FC4A7234D19C554 /* co_csp.m in Sources */ = {isa = PBXBuildFile; fileRef = A022E25A9213DBBB0D29484DF1C05F56 /* co_csp.m */; };
+		F7CE2973D9FE4F7E599B3A54FE6D3A00 /* coroutine_context.m in Sources */ = {isa = PBXBuildFile; fileRef = C283F41B59450F487C5B706A43A71C49 /* coroutine_context.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -160,7 +160,7 @@
 			buildConfigurationList = 210D641EEF5C04C2D07F89C58EB65089 /* Build configuration list for PBXNativeTarget "cocore" */;
 			buildPhases = (
 				EBAA931D85C8B30E3622E3BBBF809890 /* Headers */,
-				E9AE8DBA32595D3E0C5D4716DB202B16 /* Sources */,
+				E1B38A06637D976FA8ADBDE70B590D6F /* Sources */,
 				3001E330906964DA8AE701ECA6ACE887 /* Frameworks */,
 			);
 			buildRules = (
@@ -199,21 +199,21 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E9AE8DBA32595D3E0C5D4716DB202B16 /* Sources */ = {
+		E1B38A06637D976FA8ADBDE70B590D6F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54A885100FE4FEE87683CADC8DE24847 /* co_autorelease.mm in Sources */,
-				9A1C83210BFF8AFCA5D726C3F14023D3 /* co_csp.m in Sources */,
-				E0CF3FF41885A1DA88DED56FEEB1BEC4 /* co_errors.m in Sources */,
-				7F4F49B475A1859C1AA98E74F74AEB3C /* co_queue.m in Sources */,
-				DD2D799AB3CC91C6008C51603487281F /* co_queuedebugging_support.m in Sources */,
-				3A4C28C7C71072CB729FF7A75F741F4A /* cocore-dummy.m in Sources */,
-				16D00432E24C472CB9AF71FD70A47961 /* CODispatch.m in Sources */,
-				853EBCFE92FB790047B966BE3DC8177D /* cofishhook.c in Sources */,
-				79F280F0BA62879C76276495AAAD59A7 /* coroutine.m in Sources */,
-				39F45B6E1D6AC6284DF57D37AA65CF3D /* coroutine_context.m in Sources */,
-				E4E7D1EB4158FC8DDCD6A4AD33EA8E9F /* coroutine_context.s in Sources */,
+				A88C5D1591594957E997E43841611545 /* co_autorelease.mm in Sources */,
+				F7150B0D0819B2AC6FC4A7234D19C554 /* co_csp.m in Sources */,
+				EFB5D64B717CFE587AA86D1470660900 /* co_errors.m in Sources */,
+				394080430FDE829F5ADD9FE82DD37682 /* co_queue.m in Sources */,
+				8E44264838CD2D32C405DBE9ADD8C2A8 /* co_queuedebugging_support.m in Sources */,
+				64E30BCE3C105161F7DA9178C7E099CB /* cocore-dummy.m in Sources */,
+				45B4F7B70CFF60988B2F34AFB4D3D8DC /* CODispatch.m in Sources */,
+				B5B495D154DB1C77D8A7531643572114 /* cofishhook.c in Sources */,
+				30113CE3C77DBDD46DA12CCF2BCAAEF1 /* coroutine.m in Sources */,
+				F7CE2973D9FE4F7E599B3A54FE6D3A00 /* coroutine_context.m in Sources */,
+				7CE03C18941DF9B9CC8392C59C44999E /* coroutine_context.s in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

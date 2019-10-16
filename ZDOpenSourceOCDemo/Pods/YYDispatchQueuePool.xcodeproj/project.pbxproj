@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B431C21295222AF02E87543706ADAB4 /* YYDispatchQueuePool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB411A040E1F4E6D176ABD0E0F014BEC /* YYDispatchQueuePool-dummy.m */; };
+		2A6344FFE9F2D94BE13730573C374A47 /* YYDispatchQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C184B946D750DC21E1391EB4E77625 /* YYDispatchQueuePool.m */; };
+		5187A19F96CBF234B83F3AA5B6649AAA /* YYDispatchQueuePool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB411A040E1F4E6D176ABD0E0F014BEC /* YYDispatchQueuePool-dummy.m */; };
 		8EBAF037B36C6B06985F5517BA452038 /* YYDispatchQueuePool.h in Headers */ = {isa = PBXBuildFile; fileRef = A9BE26E850D57BD8381B6814070F527E /* YYDispatchQueuePool.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F8A6358979DE4B7F532EF240ADBB8E59 /* YYDispatchQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C184B946D750DC21E1391EB4E77625 /* YYDispatchQueuePool.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,7 +97,7 @@
 			buildConfigurationList = ADE66A19445297D4D241CA24B6B1031D /* Build configuration list for PBXNativeTarget "YYDispatchQueuePool" */;
 			buildPhases = (
 				57F25E7BD7CDD7D5C1BA54A613C6B062 /* Headers */,
-				76BA674D312067EFB65A5D9C7A13266F /* Sources */,
+				E9B97529F7CE67F4F8CDD582C05D3BCD /* Sources */,
 				FBFA24155DE7BABD258307658A3FD707 /* Frameworks */,
 			);
 			buildRules = (
@@ -136,19 +136,19 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		76BA674D312067EFB65A5D9C7A13266F /* Sources */ = {
+		E9B97529F7CE67F4F8CDD582C05D3BCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B431C21295222AF02E87543706ADAB4 /* YYDispatchQueuePool-dummy.m in Sources */,
-				F8A6358979DE4B7F532EF240ADBB8E59 /* YYDispatchQueuePool.m in Sources */,
+				5187A19F96CBF234B83F3AA5B6649AAA /* YYDispatchQueuePool-dummy.m in Sources */,
+				2A6344FFE9F2D94BE13730573C374A47 /* YYDispatchQueuePool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		158DF8ACC57711D41048A98182071672 /* Release */ = {
+		026B9E02A87F82A081BEC7FE3A3FFB90 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 311A8EF51E3A74296F96DBC5E6F3E6C5 /* YYDispatchQueuePool.xcconfig */;
 			buildSettings = {
@@ -157,7 +157,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/YYDispatchQueuePool/YYDispatchQueuePool-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -172,7 +172,7 @@
 			};
 			name = Release;
 		};
-		4C3A98732CD7E53AA32424486FB5803B /* Release */ = {
+		1F35A1D7FF972FCEC6F0580F28FC139D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -220,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -232,7 +232,7 @@
 			};
 			name = Release;
 		};
-		757B7AD740B5B50471D027F4E53417EB /* Debug */ = {
+		C6C156145914096B5B30744EB571BA74 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -283,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -296,7 +296,7 @@
 			};
 			name = Debug;
 		};
-		ADCDC167DCAEDD2835ABE1C0AF08D745 /* Debug */ = {
+		EEA61CC1D018FD5B2DB8C39119ADD790 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 311A8EF51E3A74296F96DBC5E6F3E6C5 /* YYDispatchQueuePool.xcconfig */;
 			buildSettings = {
@@ -305,7 +305,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/YYDispatchQueuePool/YYDispatchQueuePool-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -325,8 +325,8 @@
 		ADE66A19445297D4D241CA24B6B1031D /* Build configuration list for PBXNativeTarget "YYDispatchQueuePool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADCDC167DCAEDD2835ABE1C0AF08D745 /* Debug */,
-				158DF8ACC57711D41048A98182071672 /* Release */,
+				EEA61CC1D018FD5B2DB8C39119ADD790 /* Debug */,
+				026B9E02A87F82A081BEC7FE3A3FFB90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -334,8 +334,8 @@
 		EFAC78780917D73BA6FF2419B4536CD3 /* Build configuration list for PBXProject "YYDispatchQueuePool" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				757B7AD740B5B50471D027F4E53417EB /* Debug */,
-				4C3A98732CD7E53AA32424486FB5803B /* Release */,
+				C6C156145914096B5B30744EB571BA74 /* Debug */,
+				1F35A1D7FF972FCEC6F0580F28FC139D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

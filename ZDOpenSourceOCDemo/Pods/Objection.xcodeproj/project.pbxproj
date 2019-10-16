@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05BE06057B4162F252D05B73F2D6F4B1 /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A47A66D57A6DFFD8E99729FA21CB89 /* JSObjectionInjectorEntry.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0D7B57F538AEFE975A48C015CEAAC550 /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A11954CDB6B4D0DC7D22515EC11B7E /* JSObjectionBindingEntry.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		03248627A733954B5F2E9CB6B93671FC /* JSObjectionInjectorEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A47A66D57A6DFFD8E99729FA21CB89 /* JSObjectionInjectorEntry.m */; };
+		0AF476BE29A031C8DA9C01AC5014F799 /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCCC30B9303DAACD86FFD8934B96E82 /* JSObjectionModule.m */; };
 		0DCF054A33964F3DCF83BCCCC8BDCA89 /* JSObjectionProviderEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5E646EB9BCD4BA0E7CF0BE9A001829 /* JSObjectionProviderEntry.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0E6ADAB8C2435B6887B4DB43FD3F6B38 /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A29202C76EDF7A40F4263C1CF59BB /* JSObjection.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1365B7DCB3010233C21B3B548B397DBD /* Objection.h in Headers */ = {isa = PBXBuildFile; fileRef = 10909C9842D8CE61B21203DA2F263540 /* Objection.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1A368019F7B9324F2262A3A19A6D22F0 /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = C79187FA60D5D5EA160C396B9411D544 /* NSObject+Objection.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2981806386B11CAEBD44256A3BA2B614 /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8168F5038312D8A88F8BB823C85B60 /* JSObjectionUtils.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		19F3D9F2CE623E8D34A409A285DF98F5 /* JSObjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A29202C76EDF7A40F4263C1CF59BB /* JSObjection.m */; };
+		36564AA147E0D1C2F2E7C35EEDD3AFA9 /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = E992CB8CFAC13855630D8D137410F988 /* JSObjectionEntry.m */; };
 		3C4D47974A094D805101150B4A9CF900 /* JSObjection.h in Headers */ = {isa = PBXBuildFile; fileRef = 9305D99767193B94AF8BDFAD64A77D5B /* JSObjection.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3C6209753492A31D20C8FEABE66875C7 /* JSObjectionEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = E992CB8CFAC13855630D8D137410F988 /* JSObjectionEntry.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		444C8605ECA4A76304A1E8D09E6B28DF /* Objection-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CD2C1B429E7FF1D803CEA59C105911 /* Objection-dummy.m */; };
 		50006D814A856BB6892341DA7693C43C /* JSObjectionInjector.h in Headers */ = {isa = PBXBuildFile; fileRef = A1061AD71BF897B6E298D30E1B6F7E3B /* JSObjectionInjector.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		62800B910462CD02F6C634C326082F09 /* JSObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCCC30B9303DAACD86FFD8934B96E82 /* JSObjectionModule.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		932141AD130B77960CF7CB44176D5E7D /* JSObjectionRuntimePropertyReflector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2625B44C8A922AFB6D515F135A9E68CC /* JSObjectionRuntimePropertyReflector.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		94291040275C80DB40BC136B46F8742A /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10E0143C2F884D0AA071C0A80C7191 /* JSObjectFactory.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		64E431888D4D3211274FF794B87FA437 /* NSObject+Objection.m in Sources */ = {isa = PBXBuildFile; fileRef = C79187FA60D5D5EA160C396B9411D544 /* NSObject+Objection.m */; };
+		6A2B6FD69E5153AF4A9F2F8BC3043CE4 /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D89F5EADD17F14E5771AFFF22F6808 /* JSObjectionInjector.m */; };
+		6E2BA3E77196B5944D215998C48AF3DC /* JSObjectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8168F5038312D8A88F8BB823C85B60 /* JSObjectionUtils.m */; };
 		9B9930640E0E351F031B63E9DB744BB3 /* JSObjectionUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 704DB7459B0175E82C52999E92D92D04 /* JSObjectionUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B235DAFEE7C44DB7BCB9BE9D6CB6A477 /* JSObjectionBindingEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = F282596EE4C0D40E259D1BFB9DD9A66C /* JSObjectionBindingEntry.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C0240C071E1D76F727BA6809FC8EDFF3 /* JSObjectionInjectorEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = E5907671D266EF0B769446EB2C07039B /* JSObjectionInjectorEntry.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C856B8EE5E0121CF3CCFD294EFCECCE7 /* JSObjectionEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 92520D6190D99057E4265E092A9C206A /* JSObjectionEntry.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DC86E502776ABD085BB3147E9EA6FD7C /* Objection-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CD2C1B429E7FF1D803CEA59C105911 /* Objection-dummy.m */; };
+		C9F44DD876F9F7E3E41C9B16992E2077 /* JSObjectFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F10E0143C2F884D0AA071C0A80C7191 /* JSObjectFactory.m */; };
 		DF3B1D9BB67344D8A423ABA66206DEBE /* JSObjectionModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ACE9976B03B93C111008C3C3350E0D2 /* JSObjectionModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E1F6C2582C57C2C1BA2DAD91A2087636 /* JSObjectionBindingEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A11954CDB6B4D0DC7D22515EC11B7E /* JSObjectionBindingEntry.m */; };
+		E544152B59773E8BAC74515B1F77342C /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 327DDF26E263B84BE1CEAB79BA643EB0 /* JSObjectionProviderEntry.m */; };
 		ED3507DC1D7581AEA28C421D47397ACB /* JSObjectFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF18619D87F52DE1766B148899ED35E /* JSObjectFactory.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EEDD68ED45C635124AA3110AFA910115 /* JSObjectionRuntimePropertyReflector.h in Headers */ = {isa = PBXBuildFile; fileRef = A5CB62BD8FAC5C80FD9AF628C79AD090 /* JSObjectionRuntimePropertyReflector.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F62AAB3EF2C1AC683E8137F016896C43 /* JSObjectionProviderEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 327DDF26E263B84BE1CEAB79BA643EB0 /* JSObjectionProviderEntry.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FA284DC240C70B2AEB38A0A9EED43F90 /* JSObjectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D89F5EADD17F14E5771AFFF22F6808 /* JSObjectionInjector.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F011B27FCAAE6C36BC947707D75918CF /* JSObjectionRuntimePropertyReflector.m in Sources */ = {isa = PBXBuildFile; fileRef = 2625B44C8A922AFB6D515F135A9E68CC /* JSObjectionRuntimePropertyReflector.m */; };
 		FBAA334FD609BD3BE35229E7094A4CCB /* NSObject+Objection.h in Headers */ = {isa = PBXBuildFile; fileRef = B4E9AC3CFF778DEFDFB50A716839664E /* NSObject+Objection.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
@@ -171,7 +171,7 @@
 			buildConfigurationList = 81421EA1B70D623CD7C52DDE820EE272 /* Build configuration list for PBXNativeTarget "Objection" */;
 			buildPhases = (
 				B3938D61C74139CAF26049732C489DB3 /* Headers */,
-				8297AD60A92AB02C9EC27711B73AC890 /* Sources */,
+				20C60FE86ABB1A87E4C8B579D6B32C7C /* Sources */,
 				0127B7EA7DD52223EF9B6B99E3C95A58 /* Frameworks */,
 			);
 			buildRules = (
@@ -210,29 +210,29 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8297AD60A92AB02C9EC27711B73AC890 /* Sources */ = {
+		20C60FE86ABB1A87E4C8B579D6B32C7C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94291040275C80DB40BC136B46F8742A /* JSObjectFactory.m in Sources */,
-				0E6ADAB8C2435B6887B4DB43FD3F6B38 /* JSObjection.m in Sources */,
-				0D7B57F538AEFE975A48C015CEAAC550 /* JSObjectionBindingEntry.m in Sources */,
-				3C6209753492A31D20C8FEABE66875C7 /* JSObjectionEntry.m in Sources */,
-				FA284DC240C70B2AEB38A0A9EED43F90 /* JSObjectionInjector.m in Sources */,
-				05BE06057B4162F252D05B73F2D6F4B1 /* JSObjectionInjectorEntry.m in Sources */,
-				62800B910462CD02F6C634C326082F09 /* JSObjectionModule.m in Sources */,
-				F62AAB3EF2C1AC683E8137F016896C43 /* JSObjectionProviderEntry.m in Sources */,
-				932141AD130B77960CF7CB44176D5E7D /* JSObjectionRuntimePropertyReflector.m in Sources */,
-				2981806386B11CAEBD44256A3BA2B614 /* JSObjectionUtils.m in Sources */,
-				1A368019F7B9324F2262A3A19A6D22F0 /* NSObject+Objection.m in Sources */,
-				DC86E502776ABD085BB3147E9EA6FD7C /* Objection-dummy.m in Sources */,
+				C9F44DD876F9F7E3E41C9B16992E2077 /* JSObjectFactory.m in Sources */,
+				19F3D9F2CE623E8D34A409A285DF98F5 /* JSObjection.m in Sources */,
+				E1F6C2582C57C2C1BA2DAD91A2087636 /* JSObjectionBindingEntry.m in Sources */,
+				36564AA147E0D1C2F2E7C35EEDD3AFA9 /* JSObjectionEntry.m in Sources */,
+				6A2B6FD69E5153AF4A9F2F8BC3043CE4 /* JSObjectionInjector.m in Sources */,
+				03248627A733954B5F2E9CB6B93671FC /* JSObjectionInjectorEntry.m in Sources */,
+				0AF476BE29A031C8DA9C01AC5014F799 /* JSObjectionModule.m in Sources */,
+				E544152B59773E8BAC74515B1F77342C /* JSObjectionProviderEntry.m in Sources */,
+				F011B27FCAAE6C36BC947707D75918CF /* JSObjectionRuntimePropertyReflector.m in Sources */,
+				6E2BA3E77196B5944D215998C48AF3DC /* JSObjectionUtils.m in Sources */,
+				64E431888D4D3211274FF794B87FA437 /* NSObject+Objection.m in Sources */,
+				444C8605ECA4A76304A1E8D09E6B28DF /* Objection-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		26E00406D352D0207381E72FFCF2268E /* Release */ = {
+		5161C7B694DF13389F543427781C916D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B11637DE4E1DA924537D563EB86AF7D6 /* Objection.xcconfig */;
 			buildSettings = {
@@ -241,7 +241,30 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/Objection/Objection-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Objection;
+				PRODUCT_NAME = Objection;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B6FB93C91AF5FE73F106346CB76D27F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B11637DE4E1DA924537D563EB86AF7D6 /* Objection.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Objection/Objection-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -256,67 +279,7 @@
 			};
 			name = Release;
 		};
-		35E4C88CF38C95DD3FC137D303283198 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		EEE8F1EF65914C77894FB68F4183CB22 /* Debug */ = {
+		B95C4CEF0F32E0C4EA156858DDA024D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -367,7 +330,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -380,28 +343,65 @@
 			};
 			name = Debug;
 		};
-		EF118C2CD4CD0CB32DB4B9952719BB91 /* Debug */ = {
+		E5116880753E16FC5F3A9B9CEDD32B35 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B11637DE4E1DA924537D563EB86AF7D6 /* Objection.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Objection/Objection-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Objection;
-				PRODUCT_NAME = Objection;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -409,8 +409,8 @@
 		19EBDA824FAECF6CD56C29DAB1E988A7 /* Build configuration list for PBXProject "Objection" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EEE8F1EF65914C77894FB68F4183CB22 /* Debug */,
-				35E4C88CF38C95DD3FC137D303283198 /* Release */,
+				B95C4CEF0F32E0C4EA156858DDA024D0 /* Debug */,
+				E5116880753E16FC5F3A9B9CEDD32B35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -418,8 +418,8 @@
 		81421EA1B70D623CD7C52DDE820EE272 /* Build configuration list for PBXNativeTarget "Objection" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EF118C2CD4CD0CB32DB4B9952719BB91 /* Debug */,
-				26E00406D352D0207381E72FFCF2268E /* Release */,
+				5161C7B694DF13389F543427781C916D /* Debug */,
+				B6FB93C91AF5FE73F106346CB76D27F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

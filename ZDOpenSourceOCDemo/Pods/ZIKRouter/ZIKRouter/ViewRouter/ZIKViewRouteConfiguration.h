@@ -268,6 +268,61 @@ typedef void(^ZIKViewRouteSegueConfiger)(NS_NOESCAPE ZIKViewRouteSegueConfigure)
 
 @end
 
+@interface ZIKViewRouteSegueConfiguration : ZIKRouteConfiguration <NSCopying>
+/// Should not be nil when route with ZIKViewRouteTypePerformSegue, or there will be an assert failure. But identifier may be nil when routing from storyboard and auto create a router.
+@property (nonatomic, copy, nullable) NSString *identifier;
+@property (nonatomic, weak, nullable) id sender;
+@end
+
+@interface ZIKViewRoutePopoverConfiguration : ZIKRouteConfiguration <NSCopying>
+
+#if ZIK_HAS_UIKIT
+/// UIPopoverPresentationControllerDelegate for iOS8 and above, UIPopoverControllerDelegate for iOS7
+#if TARGET_OS_TV
+@property (nonatomic, weak, nullable) id<UIPopoverControllerDelegate> delegate;
+#else
+@property (nonatomic, weak, nullable) id<UIPopoverPresentationControllerDelegate> delegate;
+#endif
+@property (nonatomic, weak, nullable) UIBarButtonItem *barButtonItem;
+@property (nonatomic, weak, nullable) UIView *sourceView;
+@property (nonatomic, assign) CGRect sourceRect;
+@property (nonatomic, assign) UIPopoverArrowDirection permittedArrowDirections;
+@property (nonatomic, copy, nullable) NSArray<__kindof UIView *> *passthroughViews;
+@property (nonatomic, copy, nullable) UIColor *backgroundColor NS_AVAILABLE_IOS(7_0);
+@property (nonatomic, assign) UIEdgeInsets popoverLayoutMargins;
+@property (nonatomic, strong, nullable) Class popoverBackgroundViewClass;
+#else
+/// positioningView
+@property (nonatomic, weak, nullable) NSView *sourceView;
+/// positioningRect
+@property (nonatomic, assign) NSRect sourceRect;
+@property (nonatomic, assign) NSRectEdge preferredEdge;
+@property (nonatomic, assign) NSPopoverBehavior behavior;
+#endif
+@end
+
+@interface ZIKViewRemoveConfiguration : ZIKRemoveRouteConfiguration <NSCopying>
+/// For pop/dismiss, default is YES
+@property (nonatomic, assign) BOOL animated;
+
+/*
+ When use routeType ZIKViewRouteTypeAddAsChildViewController and remove, remove the destination's view from its superview in removingChildViewHandler, and invoke the completion block when finished. If you wrap destination with -containerWrapper, the `destination` in this block is the wrapped ViewController.
+ 
+ @note
+ Use weakSelf in removingChildViewHandler to avoid retain cycle.
+ */
+#if ZIK_HAS_UIKIT
+@property (nonatomic, copy, nullable) void(^removingChildViewHandler)(UIViewController *destination, void(^completion)(void));
+#else
+@property (nonatomic, copy, nullable) void(^removingChildViewHandler)(NSViewController *destination, void(^completion)(void));
+#endif
+
+/// When set to YES and the router still exists, if the same destination instance is removed from external, successHandler, errorHandler, completionHandler will be called.
+@property (nonatomic, assign) BOOL handleExternalRoute;
+@end
+
+#pragma mark Makeable
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wstrict-prototypes"
 
@@ -290,7 +345,7 @@ typedef void(^ZIKViewRouteSegueConfiger)(NS_NOESCAPE ZIKViewRouteSegueConfigure)
 @property (nonatomic, copy, nullable) Destination _Nullable(^makeDestination)(void);
 
 /**
- Pass required parameters and make destination. The destination should be prepared before return, because the caller may make destination from the default configuration of the router directly. And you should set makedDestination in makeDestinationWith.
+ Pass required parameters and make destination. You should set makedDestination in makeDestinationWith.
  
  If a module need a few required parameters when creating destination, you can declare in module config protocol:
  @code
@@ -328,9 +383,6 @@ typedef void(^ZIKViewRouteSegueConfiger)(NS_NOESCAPE ZIKViewRouteSegueConfigure)
             };
             // Set makedDestination, so the router won't make destination and prepare destination again when perform with this configuration
             weakConfig.makedDestination = weakConfig.makeDestination();
-            if (weakConfig._prepareDestination) {
-                weakConfig._prepareDestination(weakConfig.makedDestination);
-            }
             return weakConfig.makedDestination;
         };
         return config;
@@ -466,59 +518,6 @@ typedef void(^ZIKViewRouteSegueConfiger)(NS_NOESCAPE ZIKViewRouteSegueConfigure)
 @end
 
 #pragma clang diagnostic pop
-
-@interface ZIKViewRoutePopoverConfiguration : ZIKRouteConfiguration <NSCopying>
-
-#if ZIK_HAS_UIKIT
-/// UIPopoverPresentationControllerDelegate for iOS8 and above, UIPopoverControllerDelegate for iOS7
-#if TARGET_OS_TV
-@property (nonatomic, weak, nullable) id<UIPopoverControllerDelegate> delegate;
-#else
-@property (nonatomic, weak, nullable) id<UIPopoverPresentationControllerDelegate> delegate;
-#endif
-@property (nonatomic, weak, nullable) UIBarButtonItem *barButtonItem;
-@property (nonatomic, weak, nullable) UIView *sourceView;
-@property (nonatomic, assign) CGRect sourceRect;
-@property (nonatomic, assign) UIPopoverArrowDirection permittedArrowDirections;
-@property (nonatomic, copy, nullable) NSArray<__kindof UIView *> *passthroughViews;
-@property (nonatomic, copy, nullable) UIColor *backgroundColor NS_AVAILABLE_IOS(7_0);
-@property (nonatomic, assign) UIEdgeInsets popoverLayoutMargins;
-@property (nonatomic, strong, nullable) Class popoverBackgroundViewClass;
-#else
-/// positioningView
-@property (nonatomic, weak, nullable) NSView *sourceView;
-/// positioningRect
-@property (nonatomic, assign) NSRect sourceRect;
-@property (nonatomic, assign) NSRectEdge preferredEdge;
-@property (nonatomic, assign) NSPopoverBehavior behavior;
-#endif
-@end
-
-@interface ZIKViewRouteSegueConfiguration : ZIKRouteConfiguration <NSCopying>
-/// Should not be nil when route with ZIKViewRouteTypePerformSegue, or there will be an assert failure. But identifier may be nil when routing from storyboard and auto create a router.
-@property (nonatomic, copy, nullable) NSString *identifier;
-@property (nonatomic, weak, nullable) id sender;
-@end
-
-@interface ZIKViewRemoveConfiguration : ZIKRemoveRouteConfiguration <NSCopying>
-/// For pop/dismiss, default is YES
-@property (nonatomic, assign) BOOL animated;
-
-/*
- When use routeType ZIKViewRouteTypeAddAsChildViewController and remove, remove the destination's view from its superview in removingChildViewHandler, and invoke the completion block when finished. If you wrap destination with -containerWrapper, the `destination` in this block is the wrapped ViewController.
- 
- @note
- Use weakSelf in removingChildViewHandler to avoid retain cycle.
-*/
-#if ZIK_HAS_UIKIT
-@property (nonatomic, copy, nullable) void(^removingChildViewHandler)(UIViewController *destination, void(^completion)(void));
-#else
-@property (nonatomic, copy, nullable) void(^removingChildViewHandler)(NSViewController *destination, void(^completion)(void));
-#endif
-
-/// When set to YES and the router still exists, if the same destination instance is removed from external, successHandler, errorHandler, completionHandler will be called.
-@property (nonatomic, assign) BOOL handleExternalRoute;
-@end
 
 #pragma mark Route Path
 

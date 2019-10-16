@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0500628A8AE85249FD201396022B88E0 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 6609314BC15691DAB9DDFEDF0F77077C /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		15112749EA451DBB8B2694B8C6E3F12B /* YogaKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCB2E2FCCBBC5A0BCF84F8E175831B81 /* YogaKit-dummy.m */; };
-		1BA7583C6798B3FCE391A59ACC1D6706 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E4A06EFD347FD6A9C48E27B26E4D41 /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6CCF60A6D0BDF9D9F5BF3D9AFC2407B4 /* YogaKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DAF2361BEAE1C7DE3A0E3E9D9C90161 /* YogaKit-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		ACAF2B05CF77C96C21B24A69E74A108A /* UIView+Yoga.m in Sources */ = {isa = PBXBuildFile; fileRef = 8877A2D802DA76D05CC468DE88E06C4D /* UIView+Yoga.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B215CDF901F30B9A63224FF874C51CEC /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE3614D2EDFB8D16F5B3E3EFA729ABC /* YGLayoutExtensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D3C12F1C1C4BE98430BDEBF1F5E83A2C /* YGLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 82B50315F737A87F3ED61B84B30CD644 /* YGLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E33CE8B96E505E65059DCF1CA319AA5A /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B52995C09FAAF3152CDEF984C34D8AB /* YGLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0654FC71724CE0CDADFAD80BC8719B10 /* YogaKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CC2B9B74716FC21F2E42C08A8B61B16 /* YogaKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		107077FA198DAF08053FC85BDB6E7006 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0C5080660ECFE555215FFE68BE9E086 /* UIKit.framework */; };
+		1A661D5783DE26D3672BBA58E41AB57E /* UIView+Yoga.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1DDDA5FD1A5FEF2365929F17A0731 /* UIView+Yoga.m */; };
+		1E7ABEDDF60EE1F8A6A860E57F07E7A7 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F668F2C87DAFF1514F610656B5B768FC /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F460E4C8997FB939CE15EBBCA4327F7 /* YogaKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2781A1F95D076B4471C4FA4E5D3630B /* YogaKit-dummy.m */; };
+		23FA5B1DC3EE28B252A43FB5D04565F8 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = C50DE56703B0DBF239CA622EFFD5790C /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1D8EF6F141B86C8DA4A28BE79E3F454 /* yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED2C6E3E922FE0C4DF038B0E04385B3 /* yoga.framework */; };
+		BF891E668B3E0FBBB171A94B29E708E9 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = DD17C9A9CFD2104D3B77FE25C8751DF4 /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		CD336F3C9BC20B0F4659CFB9F9B92FFF /* YGLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F229B322FBDD8BA30DD11E00DEDCF637 /* YGLayout.m */; };
+		D2E8BC46C3366BA5F8A753C50DDA6B8B /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C146DD1CB021A671B54E0457160661 /* YGLayoutExtensions.swift */; };
+		DF6C4AD5968DAA37EEE06AC13871C9E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1201D55479EDE0D140A68C20244337 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		97226C9E758DB71A1D2E488E05C217A6 /* PBXContainerItemProxy */ = {
+		321381A4161944782B0B593F51F79053 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7D0FA9DB016DA8000BD89112202440DE /* Yoga.xcodeproj */;
 			proxyType = 1;
@@ -28,47 +31,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07E4A06EFD347FD6A9C48E27B26E4D41 /* UIView+Yoga.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Yoga.h"; path = "YogaKit/Source/UIView+Yoga.h"; sourceTree = "<group>"; };
-		0B52995C09FAAF3152CDEF984C34D8AB /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGLayout.h; path = YogaKit/Source/YGLayout.h; sourceTree = "<group>"; };
-		3DAF2361BEAE1C7DE3A0E3E9D9C90161 /* YogaKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YogaKit-umbrella.h"; sourceTree = "<group>"; };
-		6609314BC15691DAB9DDFEDF0F77077C /* YGLayout+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YGLayout+Private.h"; path = "YogaKit/Source/YGLayout+Private.h"; sourceTree = "<group>"; };
-		68B7E6F5C3768585EAA8E22E2DB4B970 /* libYogaKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libYogaKit.a; path = libYogaKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		741D4C512F615C4FF0DC5813E485C2A8 /* YogaKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YogaKit.xcconfig; sourceTree = "<group>"; };
+		0ED2C6E3E922FE0C4DF038B0E04385B3 /* yoga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = yoga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CC2B9B74716FC21F2E42C08A8B61B16 /* YogaKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YogaKit-umbrella.h"; sourceTree = "<group>"; };
+		2BC1DDDA5FD1A5FEF2365929F17A0731 /* UIView+Yoga.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Yoga.m"; path = "YogaKit/Source/UIView+Yoga.m"; sourceTree = "<group>"; };
+		51A2E18D357174E2278D2D20A38DEFE0 /* YogaKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YogaKit.modulemap; sourceTree = "<group>"; };
+		68B7E6F5C3768585EAA8E22E2DB4B970 /* YogaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YogaKit.framework; path = YogaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D0FA9DB016DA8000BD89112202440DE /* Yoga */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Yoga; path = Yoga.xcodeproj; sourceTree = "<group>"; };
-		82B50315F737A87F3ED61B84B30CD644 /* YGLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YGLayout.m; path = YogaKit/Source/YGLayout.m; sourceTree = "<group>"; };
-		8877A2D802DA76D05CC468DE88E06C4D /* UIView+Yoga.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Yoga.m"; path = "YogaKit/Source/UIView+Yoga.m"; sourceTree = "<group>"; };
-		9CE3614D2EDFB8D16F5B3E3EFA729ABC /* YGLayoutExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YGLayoutExtensions.swift; path = YogaKit/Source/YGLayoutExtensions.swift; sourceTree = "<group>"; };
-		A7C382A4EAB7FD8BEF34BD80199162E9 /* YogaKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YogaKit-prefix.pch"; sourceTree = "<group>"; };
-		BCB2E2FCCBBC5A0BCF84F8E175831B81 /* YogaKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YogaKit-dummy.m"; sourceTree = "<group>"; };
-		DE1B95642A99F696207676B4A1239550 /* YogaKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YogaKit.modulemap; sourceTree = "<group>"; };
+		812A19354A2CCA41FE36EC7D035EBFE1 /* YogaKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YogaKit-Info.plist"; sourceTree = "<group>"; };
+		8B1201D55479EDE0D140A68C20244337 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B5C146DD1CB021A671B54E0457160661 /* YGLayoutExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YGLayoutExtensions.swift; path = YogaKit/Source/YGLayoutExtensions.swift; sourceTree = "<group>"; };
+		C1702D79465870F612EDC717DDABB281 /* YogaKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YogaKit-prefix.pch"; sourceTree = "<group>"; };
+		C3D0D13EC07F850E5567599147F51811 /* YogaKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YogaKit.xcconfig; sourceTree = "<group>"; };
+		C50DE56703B0DBF239CA622EFFD5790C /* UIView+Yoga.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Yoga.h"; path = "YogaKit/Source/UIView+Yoga.h"; sourceTree = "<group>"; };
+		DD17C9A9CFD2104D3B77FE25C8751DF4 /* YGLayout+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YGLayout+Private.h"; path = "YogaKit/Source/YGLayout+Private.h"; sourceTree = "<group>"; };
+		F0C5080660ECFE555215FFE68BE9E086 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F229B322FBDD8BA30DD11E00DEDCF637 /* YGLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YGLayout.m; path = YogaKit/Source/YGLayout.m; sourceTree = "<group>"; };
+		F2781A1F95D076B4471C4FA4E5D3630B /* YogaKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YogaKit-dummy.m"; sourceTree = "<group>"; };
+		F668F2C87DAFF1514F610656B5B768FC /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGLayout.h; path = YogaKit/Source/YGLayout.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		45DBF88396914414DEA2DB35FD508684 /* Frameworks */ = {
+		186BED8A3C37A3541D16A1F5BFCAFA24 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF6C4AD5968DAA37EEE06AC13871C9E8 /* Foundation.framework in Frameworks */,
+				107077FA198DAF08053FC85BDB6E7006 /* UIKit.framework in Frameworks */,
+				A1D8EF6F141B86C8DA4A28BE79E3F454 /* yoga.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2FAA912C4D82F0723BA7AEDD702C3111 /* YogaKit */ = {
-			isa = PBXGroup;
-			children = (
-				07E4A06EFD347FD6A9C48E27B26E4D41 /* UIView+Yoga.h */,
-				8877A2D802DA76D05CC468DE88E06C4D /* UIView+Yoga.m */,
-				0B52995C09FAAF3152CDEF984C34D8AB /* YGLayout.h */,
-				82B50315F737A87F3ED61B84B30CD644 /* YGLayout.m */,
-				6609314BC15691DAB9DDFEDF0F77077C /* YGLayout+Private.h */,
-				9CE3614D2EDFB8D16F5B3E3EFA729ABC /* YGLayoutExtensions.swift */,
-				BBDD482A8528A4485BE5E1098467D87D /* Support Files */,
-			);
-			name = YogaKit;
-			path = YogaKit;
-			sourceTree = "<group>";
-		};
 		62BA2C0A834B0D98EF14F4D10E7AA69D /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,55 +72,82 @@
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		BBDD482A8528A4485BE5E1098467D87D /* Support Files */ = {
+		68BA69A74A3F3FD6F94A226545EB6D60 /* YogaKit */ = {
 			isa = PBXGroup;
 			children = (
-				DE1B95642A99F696207676B4A1239550 /* YogaKit.modulemap */,
-				741D4C512F615C4FF0DC5813E485C2A8 /* YogaKit.xcconfig */,
-				BCB2E2FCCBBC5A0BCF84F8E175831B81 /* YogaKit-dummy.m */,
-				A7C382A4EAB7FD8BEF34BD80199162E9 /* YogaKit-prefix.pch */,
-				3DAF2361BEAE1C7DE3A0E3E9D9C90161 /* YogaKit-umbrella.h */,
+				C50DE56703B0DBF239CA622EFFD5790C /* UIView+Yoga.h */,
+				2BC1DDDA5FD1A5FEF2365929F17A0731 /* UIView+Yoga.m */,
+				F668F2C87DAFF1514F610656B5B768FC /* YGLayout.h */,
+				F229B322FBDD8BA30DD11E00DEDCF637 /* YGLayout.m */,
+				DD17C9A9CFD2104D3B77FE25C8751DF4 /* YGLayout+Private.h */,
+				B5C146DD1CB021A671B54E0457160661 /* YGLayoutExtensions.swift */,
+				73324C94B99468D1671D73B57CC246DB /* Support Files */,
+			);
+			name = YogaKit;
+			path = YogaKit;
+			sourceTree = "<group>";
+		};
+		73324C94B99468D1671D73B57CC246DB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				51A2E18D357174E2278D2D20A38DEFE0 /* YogaKit.modulemap */,
+				C3D0D13EC07F850E5567599147F51811 /* YogaKit.xcconfig */,
+				F2781A1F95D076B4471C4FA4E5D3630B /* YogaKit-dummy.m */,
+				812A19354A2CCA41FE36EC7D035EBFE1 /* YogaKit-Info.plist */,
+				C1702D79465870F612EDC717DDABB281 /* YogaKit-prefix.pch */,
+				1CC2B9B74716FC21F2E42C08A8B61B16 /* YogaKit-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/YogaKit";
-			sourceTree = "<group>";
-		};
-		E47E194EBB0D89F518E24446A9BDAE51 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				68B7E6F5C3768585EAA8E22E2DB4B970 /* libYogaKit.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E613F0F60DAEE9DA0FE422BC8C38DF3E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EF0653C5BF32F56CA32D9CC005CD1B45 = {
 			isa = PBXGroup;
 			children = (
 				62BA2C0A834B0D98EF14F4D10E7AA69D /* Dependencies */,
-				E613F0F60DAEE9DA0FE422BC8C38DF3E /* Frameworks */,
-				E47E194EBB0D89F518E24446A9BDAE51 /* Products */,
-				2FAA912C4D82F0723BA7AEDD702C3111 /* YogaKit */,
+				FCD89BEC0DDB361316C3DBE8942BDE52 /* Frameworks */,
+				FB5606F5AD61B61D84AD222184FA90EE /* Products */,
+				68BA69A74A3F3FD6F94A226545EB6D60 /* YogaKit */,
 			);
+			sourceTree = "<group>";
+		};
+		F32911F91209EC6F93D4573F5AD78CFF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8B1201D55479EDE0D140A68C20244337 /* Foundation.framework */,
+				F0C5080660ECFE555215FFE68BE9E086 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FB5606F5AD61B61D84AD222184FA90EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68B7E6F5C3768585EAA8E22E2DB4B970 /* YogaKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCD89BEC0DDB361316C3DBE8942BDE52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0ED2C6E3E922FE0C4DF038B0E04385B3 /* yoga.framework */,
+				F32911F91209EC6F93D4573F5AD78CFF /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4149079FCF2C539B54BB31E24991A3F7 /* Headers */ = {
+		5E6FFA8F4D1FA9A90A1D1427F35C95DF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BA7583C6798B3FCE391A59ACC1D6706 /* UIView+Yoga.h in Headers */,
-				0500628A8AE85249FD201396022B88E0 /* YGLayout+Private.h in Headers */,
-				E33CE8B96E505E65059DCF1CA319AA5A /* YGLayout.h in Headers */,
-				6CCF60A6D0BDF9D9F5BF3D9AFC2407B4 /* YogaKit-umbrella.h in Headers */,
+				23FA5B1DC3EE28B252A43FB5D04565F8 /* UIView+Yoga.h in Headers */,
+				BF891E668B3E0FBBB171A94B29E708E9 /* YGLayout+Private.h in Headers */,
+				1E7ABEDDF60EE1F8A6A860E57F07E7A7 /* YGLayout.h in Headers */,
+				0654FC71724CE0CDADFAD80BC8719B10 /* YogaKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,22 +156,22 @@
 /* Begin PBXNativeTarget section */
 		0329F50521131A4BC4034736FA91D109 /* YogaKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B94081E92944ECAE3F571368F210DB1D /* Build configuration list for PBXNativeTarget "YogaKit" */;
+			buildConfigurationList = C5A753DC38402D30F0E624CE9176888D /* Build configuration list for PBXNativeTarget "YogaKit" */;
 			buildPhases = (
-				4149079FCF2C539B54BB31E24991A3F7 /* Headers */,
-				114EB9DE4A376DEFB78EC540CC89135F /* Sources */,
-				45DBF88396914414DEA2DB35FD508684 /* Frameworks */,
-				51FA35EC9C6E8320E6E83F6226D25D55 /* Copy generated compatibility header */,
+				5E6FFA8F4D1FA9A90A1D1427F35C95DF /* Headers */,
+				CBAD4D163F2895CF0ADD450258BE172E /* Sources */,
+				186BED8A3C37A3541D16A1F5BFCAFA24 /* Frameworks */,
+				5E70FBABB4F71115856CAE511907539F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F451569B8C023C297FE44C23771DE171 /* PBXTargetDependency */,
+				DDC723BFBF5AF4A6FA0AF0C46FC28DBB /* PBXTargetDependency */,
 			);
 			name = YogaKit;
 			productName = YogaKit;
-			productReference = 68B7E6F5C3768585EAA8E22E2DB4B970 /* libYogaKit.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 68B7E6F5C3768585EAA8E22E2DB4B970 /* YogaKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -168,7 +190,7 @@
 				en,
 			);
 			mainGroup = EF0653C5BF32F56CA32D9CC005CD1B45;
-			productRefGroup = E47E194EBB0D89F518E24446A9BDAE51 /* Products */;
+			productRefGroup = FB5606F5AD61B61D84AD222184FA90EE /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
@@ -182,81 +204,101 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		51FA35EC9C6E8320E6E83F6226D25D55 /* Copy generated compatibility header */ = {
-			isa = PBXShellScriptBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		5E70FBABB4F71115856CAE511907539F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
-				"${PODS_ROOT}/Headers/Public/YogaKit/YogaKit.modulemap",
-				"${PODS_ROOT}/Headers/Public/YogaKit/YogaKit-umbrella.h",
-			);
-			name = "Copy generated compatibility header";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
-				"${BUILT_PRODUCTS_DIR}/YogaKit-umbrella.h",
-				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
-			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/YogaKit/YogaKit.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/YogaKit/YogaKit-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
 		};
-/* End PBXShellScriptBuildPhase section */
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		114EB9DE4A376DEFB78EC540CC89135F /* Sources */ = {
+		CBAD4D163F2895CF0ADD450258BE172E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACAF2B05CF77C96C21B24A69E74A108A /* UIView+Yoga.m in Sources */,
-				D3C12F1C1C4BE98430BDEBF1F5E83A2C /* YGLayout.m in Sources */,
-				B215CDF901F30B9A63224FF874C51CEC /* YGLayoutExtensions.swift in Sources */,
-				15112749EA451DBB8B2694B8C6E3F12B /* YogaKit-dummy.m in Sources */,
+				1A661D5783DE26D3672BBA58E41AB57E /* UIView+Yoga.m in Sources */,
+				CD336F3C9BC20B0F4659CFB9F9B92FFF /* YGLayout.m in Sources */,
+				D2E8BC46C3366BA5F8A753C50DDA6B8B /* YGLayoutExtensions.swift in Sources */,
+				1F460E4C8997FB939CE15EBBCA4327F7 /* YogaKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F451569B8C023C297FE44C23771DE171 /* PBXTargetDependency */ = {
+		DDC723BFBF5AF4A6FA0AF0C46FC28DBB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Yoga;
-			targetProxy = 97226C9E758DB71A1D2E488E05C217A6 /* PBXContainerItemProxy */;
+			targetProxy = 321381A4161944782B0B593F51F79053 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		59144B0393D44100A390D7EB71DF1A3E /* Release */ = {
+		087CBFB825D5E792787A48E17E4AEAA8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 741D4C512F615C4FF0DC5813E485C2A8 /* YogaKit.xcconfig */;
+			baseConfigurationReference = C3D0D13EC07F850E5567599147F51811 /* YogaKit.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/YogaKit/YogaKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YogaKit/YogaKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/YogaKit/YogaKit.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YogaKit/YogaKit.modulemap";
 				PRODUCT_MODULE_NAME = YogaKit;
 				PRODUCT_NAME = YogaKit;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		842AC4902DACD3848F0A14C36F4AB1D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3D0D13EC07F850E5567599147F51811 /* YogaKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YogaKit/YogaKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YogaKit/YogaKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/YogaKit/YogaKit.modulemap";
+				PRODUCT_MODULE_NAME = YogaKit;
+				PRODUCT_NAME = YogaKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		871981C33A20956CCED9774F3D9FF616 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -382,31 +424,6 @@
 			};
 			name = Debug;
 		};
-		9C4764674A6D419E9BE189BFCFB1C4F6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 741D4C512F615C4FF0DC5813E485C2A8 /* YogaKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/YogaKit/YogaKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MODULEMAP_FILE = Headers/Public/YogaKit/YogaKit.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = YogaKit;
-				PRODUCT_NAME = YogaKit;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -419,11 +436,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B94081E92944ECAE3F571368F210DB1D /* Build configuration list for PBXNativeTarget "YogaKit" */ = {
+		C5A753DC38402D30F0E624CE9176888D /* Build configuration list for PBXNativeTarget "YogaKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9C4764674A6D419E9BE189BFCFB1C4F6 /* Debug */,
-				59144B0393D44100A390D7EB71DF1A3E /* Release */,
+				842AC4902DACD3848F0A14C36F4AB1D7 /* Debug */,
+				087CBFB825D5E792787A48E17E4AEAA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		069BE83EE88F292DEC8A839C361E801D /* JLRRouteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A05665A1AFFEF0E1B2D7FE5D7326A833 /* JLRRouteResponse.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		19409A27A6EDAB3BCF96CF5524CACBD5 /* JLRRouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E78BC0C1CFE436E9E979CF6180A1D742 /* JLRRouteRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		1D3117261962C9ED71C2F8CD8AAA4F39 /* JLRRouteHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E3219345AC40D44DF0C4EF7C55553F /* JLRRouteHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		409F24F720DBBE586F3D542387615BF5 /* JLRRouteHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD59B3EE1580B69F240597CAD52AFD6 /* JLRRouteHandler.m */; };
+		49A8CFE366DFD0E170B6E94D23824835 /* JLRRouteResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = A05665A1AFFEF0E1B2D7FE5D7326A833 /* JLRRouteResponse.m */; };
+		51CEC35BB6412DF910D354EB4ED0C991 /* JLRParsingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDAB9EEAF6FB49F4B9E3D08A44A869B /* JLRParsingUtilities.m */; };
 		520CC35118D71E77C3131744927D46DC /* JLRRouteDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F5DA034D4F1ADCC971F2592CA1A8D80 /* JLRRouteDefinition.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6839870EDC82B2099AD3A489609BA12D /* JLRoutes.h in Headers */ = {isa = PBXBuildFile; fileRef = C2D1E69D5B2EF7076BF78712AF5FC9EF /* JLRoutes.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6FDAC76867360C6A2552AE6A92A16064 /* JLRoutes-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD20616DCFED948A2FE3C25BC41C /* JLRoutes-dummy.m */; };
 		839FDD52B871E5581DD9DF8FAB678538 /* JLRParsingUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 53B39B546CD2208C734E8A044000E786 /* JLRParsingUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		89F6E0F284E91D6BCEA51A0C36C778A1 /* JLRRouteResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 4633D6417FD5D7E65E11B490A26F7849 /* JLRRouteResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8FBBF557AE000FACB3AF21DBB06D7027 /* JLRRouteDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7911F63175262D1EC31EA55AE6307E /* JLRRouteDefinition.m */; };
 		9041D8FE0D5FE2722CB3542E47E132D9 /* JLRRouteRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F2730ABF5257B30C2A8D7CF6C10F084 /* JLRRouteRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A6D3F4EECBD3CFBFAE8ABFB063C3C430 /* JLRParsingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDAB9EEAF6FB49F4B9E3D08A44A869B /* JLRParsingUtilities.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AEFF5F442E204F79E8A31E15711F4D60 /* JLRoutes-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 47ECCD20616DCFED948A2FE3C25BC41C /* JLRoutes-dummy.m */; };
-		C8AF0A5330CE8BF5B59F46D4875EB666 /* JLRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E6C1016CA643047D3474962C0F5024 /* JLRoutes.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D9EC3844336994073B5A8A081E2D197E /* JLRRouteDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7911F63175262D1EC31EA55AE6307E /* JLRRouteDefinition.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FF521CFD19CBF6D274A152FF24E9D51B /* JLRRouteHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD59B3EE1580B69F240597CAD52AFD6 /* JLRRouteHandler.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		96942C28F1D317CE7D34656DE5A6FFA8 /* JLRoutes.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E6C1016CA643047D3474962C0F5024 /* JLRoutes.m */; };
+		A3ACD9D0DBB79649C8E6D901398ED720 /* JLRRouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E78BC0C1CFE436E9E979CF6180A1D742 /* JLRRouteRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,7 +132,7 @@
 			buildConfigurationList = 117FE51829A24289FD1A04AA3B74631C /* Build configuration list for PBXNativeTarget "JLRoutes" */;
 			buildPhases = (
 				DDF662CC12E8C81C27A59229432D7A2B /* Headers */,
-				32480C920CC73E6991D31566D75373C3 /* Sources */,
+				8E6C80346F407D63A29BA23066A94AEF /* Sources */,
 				7A4F37B620017546BB88C2F7204DE584 /* Frameworks */,
 			);
 			buildRules = (
@@ -171,17 +171,17 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		32480C920CC73E6991D31566D75373C3 /* Sources */ = {
+		8E6C80346F407D63A29BA23066A94AEF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEFF5F442E204F79E8A31E15711F4D60 /* JLRoutes-dummy.m in Sources */,
-				C8AF0A5330CE8BF5B59F46D4875EB666 /* JLRoutes.m in Sources */,
-				A6D3F4EECBD3CFBFAE8ABFB063C3C430 /* JLRParsingUtilities.m in Sources */,
-				D9EC3844336994073B5A8A081E2D197E /* JLRRouteDefinition.m in Sources */,
-				FF521CFD19CBF6D274A152FF24E9D51B /* JLRRouteHandler.m in Sources */,
-				19409A27A6EDAB3BCF96CF5524CACBD5 /* JLRRouteRequest.m in Sources */,
-				069BE83EE88F292DEC8A839C361E801D /* JLRRouteResponse.m in Sources */,
+				6FDAC76867360C6A2552AE6A92A16064 /* JLRoutes-dummy.m in Sources */,
+				96942C28F1D317CE7D34656DE5A6FFA8 /* JLRoutes.m in Sources */,
+				51CEC35BB6412DF910D354EB4ED0C991 /* JLRParsingUtilities.m in Sources */,
+				8FBBF557AE000FACB3AF21DBB06D7027 /* JLRRouteDefinition.m in Sources */,
+				409F24F720DBBE586F3D542387615BF5 /* JLRRouteHandler.m in Sources */,
+				A3ACD9D0DBB79649C8E6D901398ED720 /* JLRRouteRequest.m in Sources */,
+				49A8CFE366DFD0E170B6E94D23824835 /* JLRRouteResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

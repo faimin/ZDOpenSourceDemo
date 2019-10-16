@@ -1,6 +1,6 @@
 AFNetworking:
   LABEL: AFNetworking
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/AFNetworking.xcodeproj"
+  PROJECT_PATH: AFNetworking.xcodeproj
   UUID: B561AD1B13C486A61C9BF66B4E6D8F89
 boost-for-react-native:
   LABEL: boost-for-react-native
@@ -8,7 +8,7 @@ boost-for-react-native:
   UUID: AA4CE39926C0C12D02F874C1C48A5710
 ChameleonFramework:
   LABEL: ChameleonFramework
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/ChameleonFramework.xcodeproj"
+  PROJECT_PATH: ChameleonFramework.xcodeproj
   UUID: A32FC00F1F734852154E040D84A825BE
 CocoaAsyncSocket:
   LABEL: CocoaAsyncSocket
@@ -20,7 +20,7 @@ CocoaLibEvent:
   UUID: 0E4F8F3811F0945641866082B5F12145
 cocore:
   LABEL: cocore
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/cocore.xcodeproj"
+  PROJECT_PATH: cocore.xcodeproj
   UUID: 44B9F3DF1A76463ECB2E752DB51A596B
 ComponentKit:
   LABEL: ComponentKit
@@ -28,11 +28,11 @@ ComponentKit:
   UUID: 576314DE9261A44AC84C832AAA3627F4
 coobjc:
   LABEL: coobjc
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/coobjc.xcodeproj"
+  PROJECT_PATH: coobjc.xcodeproj
   UUID: 14AC47C7A598B026E762EA69CA696F0C
 DirectoryWatchdog:
   LABEL: DirectoryWatchdog
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/DirectoryWatchdog.xcodeproj"
+  PROJECT_PATH: DirectoryWatchdog.xcodeproj
   UUID: 39E6763E82B9FB1C1E0A2D49970C5787
 DoubleConversion:
   LABEL: DoubleConversion
@@ -40,11 +40,11 @@ DoubleConversion:
   UUID: 725D0E8C1060F8939288E8C91236BA4F
 fishhook:
   LABEL: fishhook
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/fishhook.xcodeproj"
+  PROJECT_PATH: fishhook.xcodeproj
   UUID: ADD6974CA0D12DB719FEB114A3109761
 FLEX:
   LABEL: FLEX
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/FLEX.xcodeproj"
+  PROJECT_PATH: FLEX.xcodeproj
   UUID: 328257E8FD8087B7D8F384487B63F309
 Flipper:
   LABEL: Flipper
@@ -68,7 +68,7 @@ FlipperKit:
   UUID: 21747C582544BA8AFFF8CE8331CB4D93
 GDPerformanceView:
   LABEL: GDPerformanceView
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/GDPerformanceView.xcodeproj"
+  PROJECT_PATH: GDPerformanceView.xcodeproj
   UUID: C43C09050575BD770FE7B06A65C88FAF
 glog:
   LABEL: glog
@@ -76,51 +76,51 @@ glog:
   UUID: 86F597DC3D8F3D7A34EC5A5C413F7255
 IGListKit:
   LABEL: IGListKit
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/IGListKit.xcodeproj"
+  PROJECT_PATH: IGListKit.xcodeproj
   UUID: 6C5D6FE2744F299C4B5885492E7CFF8C
 JLRoutes:
   LABEL: JLRoutes
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/JLRoutes.xcodeproj"
+  PROJECT_PATH: JLRoutes.xcodeproj
   UUID: A453ED4A5FDFD5773D8DB60CDC21B549
 LayoutInspector:
   LABEL: LayoutInspector
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/LayoutInspector.xcodeproj"
+  PROJECT_PATH: LayoutInspector.xcodeproj
   UUID: AC7C558203F7E3C618089877C3B1768E
 libextobjc:
   LABEL: libextobjc
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/libextobjc.xcodeproj"
+  PROJECT_PATH: libextobjc.xcodeproj
   UUID: 1D69075454E0C276645E4B3FCC2A354E
 libffi-core:
   LABEL: libffi-core
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/libffi-core.xcodeproj"
+  PROJECT_PATH: libffi-core.xcodeproj
   UUID: 5D86507D6D536364E65896648629885F
 LinqToObjectiveC:
   LABEL: LinqToObjectiveC
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/LinqToObjectiveC.xcodeproj"
+  PROJECT_PATH: LinqToObjectiveC.xcodeproj
   UUID: 97393B2D87F3D39BF937361F284052D7
 lottie-ios:
   LABEL: lottie-ios
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/lottie-ios.xcodeproj"
+  PROJECT_PATH: lottie-ios.xcodeproj
   UUID: 2FFD4CF15B40CE17E04F3BC6AAF7035A
 Masonry:
   LABEL: Masonry
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/Masonry.xcodeproj"
+  PROJECT_PATH: Masonry.xcodeproj
   UUID: C0965FF775F51458AD4A8E41ABAB7D1E
 MBProgressHUD:
   LABEL: MBProgressHUD
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/MBProgressHUD.xcodeproj"
+  PROJECT_PATH: MBProgressHUD.xcodeproj
   UUID: 0F48A71D28991325602E8C8A19DF1F64
 MMKV:
   LABEL: MMKV
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/MMKV.xcodeproj"
+  PROJECT_PATH: MMKV.xcodeproj
   UUID: 3F811D3AC87F4D64B1375E5A914346DB
 Objection:
   LABEL: Objection
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/Objection.xcodeproj"
+  PROJECT_PATH: Objection.xcodeproj
   UUID: 0116B5C05BE5914C5F398A0E08C6BA80
 ObjectiveSugar:
   LABEL: ObjectiveSugar
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/ObjectiveSugar.xcodeproj"
+  PROJECT_PATH: ObjectiveSugar.xcodeproj
   UUID: 419C8BD43B37AEA9DDC7372A027B947E
 OpenSSL-Static:
   LABEL: OpenSSL-Static
@@ -128,101 +128,101 @@ OpenSSL-Static:
   UUID: B4A38C596AEC99B2DB0FB0BCF9FC18B3
 PINCache:
   LABEL: PINCache
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/PINCache.xcodeproj"
+  PROJECT_PATH: PINCache.xcodeproj
   UUID: E6F935A450178DA7515843CC4A631A11
 PINOperation:
   LABEL: PINOperation
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/PINOperation.xcodeproj"
+  PROJECT_PATH: PINOperation.xcodeproj
   UUID: A40F164BE5BEC474AEE4414ADE73A710
 PINRemoteImage:
   LABEL: PINRemoteImage
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/PINRemoteImage.xcodeproj"
+  PROJECT_PATH: PINRemoteImage.xcodeproj
   UUID: 7DC60949DA1E6B84041E1D9F5D787838
 Pods-ZDOpenSourceOCDemo:
   LABEL: Pods-ZDOpenSourceOCDemo
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/Pods.xcodeproj"
+  PROJECT_PATH: Pods.xcodeproj
   UUID: A8D9B0512755AA1A625BDBD36B5E1FA8
 Pods-ZDOpenSourceOCDemoTests:
   LABEL: Pods-ZDOpenSourceOCDemoTests
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/Pods.xcodeproj"
+  PROJECT_PATH: Pods.xcodeproj
   UUID: A2726844268B2FEADD5810702972B273
 Pods-ZDOpenSourceOCDemoUITests:
   LABEL: Pods-ZDOpenSourceOCDemoUITests
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/Pods.xcodeproj"
+  PROJECT_PATH: Pods.xcodeproj
   UUID: FF77996FE7A49187D7E543C00CEE2FDD
 PromiseKit:
   LABEL: PromiseKit
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/PromiseKit.xcodeproj"
+  PROJECT_PATH: PromiseKit.xcodeproj
   UUID: 128C731E310A7738D156105948622A8D
 RDVTabBarController:
   LABEL: RDVTabBarController
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/RDVTabBarController.xcodeproj"
+  PROJECT_PATH: RDVTabBarController.xcodeproj
   UUID: 339AB980EF4F190EFB97EE17E3F23AE9
 ReactiveObjC:
   LABEL: ReactiveObjC
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/ReactiveObjC.xcodeproj"
+  PROJECT_PATH: ReactiveObjC.xcodeproj
   UUID: 58630A911E82956281CDF1C822E7FC41
 ResumableAssert:
   LABEL: ResumableAssert
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/ResumableAssert.xcodeproj"
+  PROJECT_PATH: ResumableAssert.xcodeproj
   UUID: C9D73F6AE2BAE6D4A4E5E5DA907D6105
 RSSwizzle:
   LABEL: RSSwizzle
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/RSSwizzle.xcodeproj"
+  PROJECT_PATH: RSSwizzle.xcodeproj
   UUID: C5C634D45CFEE9A286708BA3EE61B6FC
 RTRootNavigationController:
   LABEL: RTRootNavigationController
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/RTRootNavigationController.xcodeproj"
+  PROJECT_PATH: RTRootNavigationController.xcodeproj
   UUID: 1BDBE6048F447AF04992F739AC1CBBF6
 SVProgressHUD:
   LABEL: SVProgressHUD
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/SVProgressHUD.xcodeproj"
+  PROJECT_PATH: SVProgressHUD.xcodeproj
   UUID: 8A902363E0683102423DADEA0C0D4541
 Texture:
   LABEL: Texture
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/Texture.xcodeproj"
+  PROJECT_PATH: Texture.xcodeproj
   UUID: 6C96BA65ED37B8D7A14F109FC98B8C4A
 Toast:
   LABEL: Toast
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/Toast.xcodeproj"
+  PROJECT_PATH: Toast.xcodeproj
   UUID: 33C24699A9A19E75BC1DA302FBB8EA84
 Typhoon:
   LABEL: Typhoon
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/Typhoon.xcodeproj"
+  PROJECT_PATH: Typhoon.xcodeproj
   UUID: 2C9C377B9BAD2146378E9B27C83EBB5A
 Yoga:
   LABEL: Yoga
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/Yoga.xcodeproj"
+  PROJECT_PATH: Yoga.xcodeproj
   UUID: 8DB658880A3F558549A84D99BCFADCBC
 YogaKit:
   LABEL: YogaKit
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/YogaKit.xcodeproj"
+  PROJECT_PATH: YogaKit.xcodeproj
   UUID: 0329F50521131A4BC4034736FA91D109
 YTKNetwork:
   LABEL: YTKNetwork
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/YTKNetwork.xcodeproj"
+  PROJECT_PATH: YTKNetwork.xcodeproj
   UUID: 13DEDD4CF74A98558BAA9DBE7A6044BF
 YYCache:
   LABEL: YYCache
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/YYCache.xcodeproj"
+  PROJECT_PATH: YYCache.xcodeproj
   UUID: 73B4EFD655BE7A67C6F5C5E6F514BDB9
 YYDispatchQueuePool:
   LABEL: YYDispatchQueuePool
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/YYDispatchQueuePool.xcodeproj"
+  PROJECT_PATH: YYDispatchQueuePool.xcodeproj
   UUID: 14D3379E442FA9BF8A3C592328F82CD9
 YYModel:
   LABEL: YYModel
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/YYModel.xcodeproj"
+  PROJECT_PATH: YYModel.xcodeproj
   UUID: B24F71FDC23D2B2E241DE51DECC7ED5F
 ZDNetWorkHelper:
   LABEL: ZDNetWorkHelper
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/ZDNetWorkHelper.xcodeproj"
+  PROJECT_PATH: ZDNetWorkHelper.xcodeproj
   UUID: 7BDC8F869C893DFC9EB0D3245791DD72
 ZDToolKit:
   LABEL: ZDToolKit
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/ZDToolKit.xcodeproj"
+  PROJECT_PATH: ZDToolKit.xcodeproj
   UUID: F01D98A255D10FCA305E22F1C7AF6818
 ZIKRouter:
   LABEL: ZIKRouter
-  PROJECT_PATH: "/Users/momo/Documents/Github/ZDOpenSourceDemo/ZDOpenSourceOCDemo/Pods/ZIKRouter.xcodeproj"
+  PROJECT_PATH: ZIKRouter.xcodeproj
   UUID: 5DF9A7AD0BEB75757F2F0002D0D769B3

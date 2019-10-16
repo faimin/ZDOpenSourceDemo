@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31E3EAC891120A2E7290AA6D17EFC657 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F5E42F631C000D212E8356D8A83F4F /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		635EC41050127CCCE5820BA7BA53F21A /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7D4FEC163266AFB8EC05740454734 /* MBProgressHUD-dummy.m */; };
 		6AA035E83ABC497C88151B2912957867 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = CFE205C5791BD2110C69E4E9657A492B /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EF887A6CF97B3C3F62C020E7AA540631 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7D4FEC163266AFB8EC05740454734 /* MBProgressHUD-dummy.m */; };
+		917D7A03E1F2E67070B08494711FD69F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F5E42F631C000D212E8356D8A83F4F /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,7 +97,7 @@
 			buildConfigurationList = 77792561CB4E1678D59F162DF2A0C7CF /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
 			buildPhases = (
 				CB79E2023F0EBED3B61DA49ADD55572B /* Headers */,
-				E698D3B107113145501DF927E7625393 /* Sources */,
+				A9F3F242EFAF937CAE933AFFD4563C82 /* Sources */,
 				48859FCE588C5BB3F986898C2CC651DB /* Frameworks */,
 			);
 			buildRules = (
@@ -136,12 +136,12 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E698D3B107113145501DF927E7625393 /* Sources */ = {
+		A9F3F242EFAF937CAE933AFFD4563C82 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF887A6CF97B3C3F62C020E7AA540631 /* MBProgressHUD-dummy.m in Sources */,
-				31E3EAC891120A2E7290AA6D17EFC657 /* MBProgressHUD.m in Sources */,
+				635EC41050127CCCE5820BA7BA53F21A /* MBProgressHUD-dummy.m in Sources */,
+				917D7A03E1F2E67070B08494711FD69F /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

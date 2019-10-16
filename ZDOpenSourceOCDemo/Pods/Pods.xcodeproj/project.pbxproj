@@ -7,674 +7,602 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03A07A77B885A353D1573ED278FB6F9D /* Pods-ZDOpenSourceOCDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2613279E2C2FC9CD7C3D0165CB13858D /* Pods-ZDOpenSourceOCDemo-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		871A014C394EC76A3935BFA7E1B02976 /* Pods-ZDOpenSourceOCDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 126D134A1EBBC7D8A8A61B30F98C06D4 /* Pods-ZDOpenSourceOCDemoTests-dummy.m */; };
-		8FEC11D5E9698B5D51CB7E6D35C33A59 /* Pods-ZDOpenSourceOCDemoUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF8E90B8BDC90D88ABB8AEE8CC54E3 /* Pods-ZDOpenSourceOCDemoUITests-dummy.m */; };
-		DE897756E9C4EF4BB71531D2BB3BAEAB /* Pods-ZDOpenSourceOCDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EBB994BC1B0B61BA08250392EE06938 /* Pods-ZDOpenSourceOCDemo-dummy.m */; };
+		2DAFD91CC23815B9085DC587C06ACB23 /* Pods-ZDOpenSourceOCDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 485F3631B3E70A4E07B7534D29821005 /* Pods-ZDOpenSourceOCDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4467A78CB9BE09CBA09A68FA8AD7F87C /* Pods-ZDOpenSourceOCDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E59BEDBC40F2584C1ABAA21AAA00D7E4 /* Pods-ZDOpenSourceOCDemoTests-dummy.m */; };
+		705FBB2FAED7F797B96F55C8A09F9675 /* Pods-ZDOpenSourceOCDemoUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 835EDF3785B0F38CBE334DF9139EB704 /* Pods-ZDOpenSourceOCDemoUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0FF523122E2EB62E77883F03428D324 /* Pods-ZDOpenSourceOCDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5499249F459C45ED07A35513810E41 /* Pods-ZDOpenSourceOCDemo-dummy.m */; };
+		AECC4CB4878CD084FF67443414C891CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		B9313BF2EA15CA3C6E3F0F97EC6EC347 /* Pods-ZDOpenSourceOCDemoTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE826039A3827ECD63CC60747B624CCB /* Pods-ZDOpenSourceOCDemoTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4F5095C1964176705B39253DFD33F78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		E1238046B51E05EA47A7FCD3E47BE272 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		EEEBDD533BCEB8AF59E5E4C0D317EFA1 /* Pods-ZDOpenSourceOCDemoUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0359655ADAD1587E8564FB90EDFC92BF /* Pods-ZDOpenSourceOCDemoUITests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0E74A4E2406BA53A822BEC772A8B1A6D /* PBXContainerItemProxy */ = {
+		00AC1C118B1E2C946FE1C40E1373DF03 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 79706809927886EC4E4EE4DF8E06FBBB /* glog.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 86F597DC3D8F3D7A34EC5A5C413F7255;
-			remoteInfo = glog;
-		};
-		135201985B83A0839DA0A1347DB23113 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5DA0C0547DE1D2D96FEACE9E7E5BE713 /* DirectoryWatchdog.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 39E6763E82B9FB1C1E0A2D49970C5787;
-			remoteInfo = DirectoryWatchdog;
-		};
-		161B902D170EEF9C6D7ACE1155A2C778 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 38C2472D6C5DAADA45853CF466230C33 /* GDPerformanceView.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C43C09050575BD770FE7B06A65C88FAF;
-			remoteInfo = GDPerformanceView;
-		};
-		1B6053279FDAC2ADC7A8EF081FD1C868 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4231DBB21076AD83E0248378BD42A4E8 /* Texture.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 6C96BA65ED37B8D7A14F109FC98B8C4A;
-			remoteInfo = Texture;
-		};
-		2119CD05330CE355A308780D9A767AC2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A002285A0AB631C9A5D77EBA31314196 /* LinqToObjectiveC.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 97393B2D87F3D39BF937361F284052D7;
-			remoteInfo = LinqToObjectiveC;
-		};
-		21E2EACAE9362BCD87B2279B0B2E077E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB34E89A6DC9854896A54405A64710C3 /* OpenSSL-Static.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B4A38C596AEC99B2DB0FB0BCF9FC18B3;
-			remoteInfo = "OpenSSL-Static";
-		};
-		282A4BC6E75E4D7AE52188CEA3EBD236 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7F690B443ABDD274EF7B89CE6598E7BC /* AFNetworking.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B561AD1B13C486A61C9BF66B4E6D8F89;
-			remoteInfo = AFNetworking;
-		};
-		28FCC7F26947641E22D37674DC9F6216 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 528530274C934204F58D0F9789465D9B /* YYModel.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B24F71FDC23D2B2E241DE51DECC7ED5F;
-			remoteInfo = YYModel;
-		};
-		2B230004B9FD5BDB60AFAF6810AA870A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6D4C3CF5D27B05A0AA9ECB753F7FF526 /* FLEX.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 328257E8FD8087B7D8F384487B63F309;
-			remoteInfo = FLEX;
-		};
-		2BF36BFF5F1AD0FC3431EEC5633071A8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 50398824D004C9FA41C240BF6DF5D522 /* ResumableAssert.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C9D73F6AE2BAE6D4A4E5E5DA907D6105;
-			remoteInfo = ResumableAssert;
-		};
-		3295EE8525047EAF45D60BFCAFED020C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 957254F2231905255F961E7436C6D015 /* CocoaAsyncSocket.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 028565F879BDCF0F420E4AB07AAF9426;
-			remoteInfo = CocoaAsyncSocket;
-		};
-		3592D82A924124614B379C719F5AF184 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C8953DF0AE2BFC06421AF2491D937ACB /* PINOperation.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A40F164BE5BEC474AEE4414ADE73A710;
-			remoteInfo = PINOperation;
-		};
-		3F0B349D78D0DD7395039C4218128DF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 222A264D480EF210FDB3133069E8CDAF /* ObjectiveSugar.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 419C8BD43B37AEA9DDC7372A027B947E;
-			remoteInfo = ObjectiveSugar;
-		};
-		3FC5FBC008D1DACD397154C58A5B26D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2B6F2162E73CDCB878EAE375F3E5EF42 /* coobjc.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 14AC47C7A598B026E762EA69CA696F0C;
-			remoteInfo = coobjc;
-		};
-		493F537AA2522C35620BC5F8413E3EA3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 23D669A60C95922BE0E314F571ECDE4C /* ZDNetWorkHelper.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BDC8F869C893DFC9EB0D3245791DD72;
-			remoteInfo = ZDNetWorkHelper;
-		};
-		49BCBA504DEE5E0573E31B14F45EEA2D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EA3EAC39E6D7DEF4177DC8ECC5F9B39B /* MBProgressHUD.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 0F48A71D28991325602E8C8A19DF1F64;
-			remoteInfo = MBProgressHUD;
-		};
-		5A94E880647E92704A2C3872DFEA0846 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C2652D4B067EBE376C86C67A7294A940 /* FlipperKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 21747C582544BA8AFFF8CE8331CB4D93;
-			remoteInfo = FlipperKit;
-		};
-		5E0113C102D389570CF1E64A8A0265FB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CA4F78625DB3BA1A9ED7EC884A27897 /* ChameleonFramework.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A32FC00F1F734852154E040D84A825BE;
-			remoteInfo = ChameleonFramework;
-		};
-		652ABBD8D84218943DC1B71893AAF669 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C1A4AD9148E485884147334B402EC319 /* Masonry.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C0965FF775F51458AD4A8E41ABAB7D1E;
-			remoteInfo = Masonry;
-		};
-		67EB2D3F8EF5129509892C9E7A6AD69C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 971B686086E79B10E77A0CEABF82763F /* RDVTabBarController.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 339AB980EF4F190EFB97EE17E3F23AE9;
-			remoteInfo = RDVTabBarController;
-		};
-		6D57686A51BEC36818CF116F238742D1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4234839C21CAD431D64DA94D39B926AB /* boost-for-react-native.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AA4CE39926C0C12D02F874C1C48A5710;
-			remoteInfo = "boost-for-react-native";
-		};
-		6FE84DF2B88EE961BFA436B8166F81EF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07008D2C222439CA16201EBFB8C73D49 /* PINCache.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = E6F935A450178DA7515843CC4A631A11;
-			remoteInfo = PINCache;
-		};
-		7196B9B85A89D6E599F14899446E6C59 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A5AA3F0FB3493387000403B5B2C57CC5 /* Flipper.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = E37FFB87E7DF4D8CB6E3FBD5373DC6D0;
-			remoteInfo = Flipper;
-		};
-		769E08926ECB4093C23F8FDF89B6B447 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C396A508F0EEDAE25EFDF22A1BB4A0FE /* fishhook.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = ADD6974CA0D12DB719FEB114A3109761;
-			remoteInfo = fishhook;
-		};
-		7C274761B837884647B78B8B3BCCC93D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FC6A17FEB68530D2654258EE46E8EC9E /* ZDToolKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F01D98A255D10FCA305E22F1C7AF6818;
-			remoteInfo = ZDToolKit;
-		};
-		7C7C1062BA7BD72231AE3C2128282F40 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E50B60DEB38D70D21AE1045ADDAFE89E /* Flipper-RSocket.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 1A456A673F68CCC772569FBA33E4A9E0;
-			remoteInfo = "Flipper-RSocket";
-		};
-		8541A6DD629BDD45F1C2AE121C296DB8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AC3061D53F7E2C3E38A37DC5CD5467FC /* YogaKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 0329F50521131A4BC4034736FA91D109;
-			remoteInfo = YogaKit;
-		};
-		8C9F2AA6EFA121069B397387A1162AD9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EE6732AA11EF425455B676DE488401A2 /* YTKNetwork.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 13DEDD4CF74A98558BAA9DBE7A6044BF;
-			remoteInfo = YTKNetwork;
-		};
-		95051553293B39CB8B17585A7A69122B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ABB77B3CBC6C2FDAEC4A3E761F1058EC /* DoubleConversion.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 725D0E8C1060F8939288E8C91236BA4F;
-			remoteInfo = DoubleConversion;
-		};
-		9DA44186046EEE81A0B6EC7DE39E9436 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2E38ED550D6C141435D073A29634A7D8 /* Toast.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 33C24699A9A19E75BC1DA302FBB8EA84;
-			remoteInfo = Toast;
-		};
-		9F84A04DB656E2C8491DD74277E9C8AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D5A26105102C12BB16623F8D76486FF1 /* SVProgressHUD.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8A902363E0683102423DADEA0C0D4541;
-			remoteInfo = SVProgressHUD;
-		};
-		A30C899F6269225746C7F48C71593F87 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2DF88E43C53CD4339D88F3ED0A4C8954 /* YYCache.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 73B4EFD655BE7A67C6F5C5E6F514BDB9;
-			remoteInfo = YYCache;
-		};
-		A3E1DDB46A06DBAFF77CD68C593C7A86 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 16C8EA2AD53F9D3CA673B55230ECBB1F /* ReactiveObjC.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 58630A911E82956281CDF1C822E7FC41;
-			remoteInfo = ReactiveObjC;
-		};
-		A9C0B1D6E29B52D557BE1D4D1CC3A34E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7CD22E089804DF30B230683E07ADC484 /* Typhoon.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2C9C377B9BAD2146378E9B27C83EBB5A;
-			remoteInfo = Typhoon;
-		};
-		ACEA83F44E08CCC12C9CA82B65D1072F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 74729BC0F8477DB081BAA9D283090C35 /* lottie-ios.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2FFD4CF15B40CE17E04F3BC6AAF7035A;
-			remoteInfo = "lottie-ios";
-		};
-		ADD525DA76D6AF61EEF04A8B5CC933F5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 713B9417BF74BA73A1BD3BD76D065272 /* ComponentKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 576314DE9261A44AC84C832AAA3627F4;
-			remoteInfo = ComponentKit;
-		};
-		B2AE2FFF61DB3485E67F6EF936620282 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 89710FD34F2E5119A288DE16A0E36FDB /* libffi-core.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5D86507D6D536364E65896648629885F;
-			remoteInfo = "libffi-core";
-		};
-		B32EB53A9E311E5B22C81C7CA2C89A24 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6FB5AEF74EC68DA5679F5228784C7014 /* ZIKRouter.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5DF9A7AD0BEB75757F2F0002D0D769B3;
-			remoteInfo = ZIKRouter;
-		};
-		B47610B3E11E46F9C461EEDBA102ED68 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A8D9B0512755AA1A625BDBD36B5E1FA8;
-			remoteInfo = "Pods-ZDOpenSourceOCDemo";
-		};
-		BDDACC0144EDDE3F854BB3B5FCA8188C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E7BED850A144A88EA359A283C9D2D9D9 /* libextobjc.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 1D69075454E0C276645E4B3FCC2A354E;
-			remoteInfo = libextobjc;
-		};
-		BE8CE0F88C815400F75FB69A2311A768 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DC9A9EDB4D01F23EA52F42E2395C1A64 /* PromiseKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 128C731E310A7738D156105948622A8D;
-			remoteInfo = PromiseKit;
-		};
-		C542468ED22A46DB289B69B634416D80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6219DEEE4E6AEE26AE51979187245EBA /* Objection.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 0116B5C05BE5914C5F398A0E08C6BA80;
-			remoteInfo = Objection;
-		};
-		C9013BC7A897B85591BD1E3B11C98E22 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5447E248F33AB37180B34676FC3982BD /* Yoga.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DB658880A3F558549A84D99BCFADCBC;
-			remoteInfo = Yoga;
-		};
-		CDAE4E2256B80E038AF6940928524916 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 13B4ACCCDD8C12527A83733C43F3320B /* LayoutInspector.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AC7C558203F7E3C618089877C3B1768E;
-			remoteInfo = LayoutInspector;
-		};
-		D4DDE5603E25FF09BD105E495BA993D4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7DE2CCC5EC67838898D4A21B692BA494 /* IGListKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 6C5D6FE2744F299C4B5885492E7CFF8C;
-			remoteInfo = IGListKit;
-		};
-		D5165D8FCA42F4E4832126F926CA7B61 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A8D9B0512755AA1A625BDBD36B5E1FA8;
-			remoteInfo = "Pods-ZDOpenSourceOCDemo";
-		};
-		D9710AC6B08CABD20E58F49FDFF75FC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 50FB670A088D7215E4C3A4B48B492FFF /* RSSwizzle.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = C5C634D45CFEE9A286708BA3EE61B6FC;
-			remoteInfo = RSSwizzle;
-		};
-		DB6298C9BF0F4EA5325D0EA15F3AFC8D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 39635DD1F5A9885B35280CB702776F83 /* YYDispatchQueuePool.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 14D3379E442FA9BF8A3C592328F82CD9;
-			remoteInfo = YYDispatchQueuePool;
-		};
-		DC3BD04638BF2CA1185602E6E684FA62 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C92A7CCF70B07BCDFA113D35C1ACFB98 /* MMKV.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 3F811D3AC87F4D64B1375E5A914346DB;
-			remoteInfo = MMKV;
-		};
-		DCFE061C66A4931BC10A8F685E60B152 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5E6C58F0D188596D8C2C1801AC401B21 /* CocoaLibEvent.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 0E4F8F3811F0945641866082B5F12145;
-			remoteInfo = CocoaLibEvent;
-		};
-		E0DC6EE334CF901CD9700B5032AD6100 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 680E0B444E31B263B3060740A51C84C2 /* Flipper-PeerTalk.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 1A523ED12092D1D5730897FA5D8F0D95;
-			remoteInfo = "Flipper-PeerTalk";
-		};
-		ED1EC69BB5501710BC3B4775E8CCE05C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0CE7BB45AE1AA93D578EF92C30704D19 /* JLRoutes.xcodeproj */;
+			containerPortal = 17B31F6DB14B7DD06A83A4C33972846F /* JLRoutes.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = A453ED4A5FDFD5773D8DB60CDC21B549;
 			remoteInfo = JLRoutes;
 		};
-		EED8332E55B5296605AFA69E5E062068 /* PBXContainerItemProxy */ = {
+		03BC9DB0722EA9D02949DFBD8590F6DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = AD2CA42B0FF08730E997FEFB988A576E /* RTRootNavigationController.xcodeproj */;
+			containerPortal = 405D40C96D2048048F748D5BC2E16363 /* FLEX.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 1BDBE6048F447AF04992F739AC1CBBF6;
-			remoteInfo = RTRootNavigationController;
+			remoteGlobalIDString = 328257E8FD8087B7D8F384487B63F309;
+			remoteInfo = FLEX;
 		};
-		F39B7486769822C6546F8CE5CEC092D8 /* PBXContainerItemProxy */ = {
+		10CA4A1C5332008F13C32C4ADB9AE948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 219F695F71A04A691CBF3E72BF957AFE /* Flipper-Folly.xcodeproj */;
+			containerPortal = B0DF42FF4B2568890E501B08321B5D26 /* ZDToolKit.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = BC71C7B21753292689B3040E2CC24B53;
-			remoteInfo = "Flipper-Folly";
+			remoteGlobalIDString = F01D98A255D10FCA305E22F1C7AF6818;
+			remoteInfo = ZDToolKit;
 		};
-		FA27FD2C75453EEF4C72096BB7F0E684 /* PBXContainerItemProxy */ = {
+		10F13772CE6800728C0F8F31A60DE947 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1F4B1703E13A7FB92AA0C7FAB88E31A8 /* PINRemoteImage.xcodeproj */;
+			containerPortal = 892547C39FA22BA0B73D5D1AB00C1059 /* PINOperation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A40F164BE5BEC474AEE4414ADE73A710;
+			remoteInfo = PINOperation;
+		};
+		19D5CBB3618BE9886EC95D7264BF9DAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F694BA7CCF54B30AEE314435CED940F1 /* LinqToObjectiveC.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 97393B2D87F3D39BF937361F284052D7;
+			remoteInfo = LinqToObjectiveC;
+		};
+		1E9A56C514C6FC00FEEA6511EF226F3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1800F762E7396A59E0535D9FF0753806 /* PromiseKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 128C731E310A7738D156105948622A8D;
+			remoteInfo = PromiseKit;
+		};
+		3D78031707EEB6A4C5864226A246242F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E430C5B3C5BEC9B9B9279E2CDCBF420F /* MBProgressHUD.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F48A71D28991325602E8C8A19DF1F64;
+			remoteInfo = MBProgressHUD;
+		};
+		464D9E27E961F9FFFA4CBAF125AAEDA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39D5B823305DDC4DC2664E92055F3B82 /* coobjc.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 14AC47C7A598B026E762EA69CA696F0C;
+			remoteInfo = coobjc;
+		};
+		4C81846B67583953CDC53B78CA382CB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31BD7AAC12BA2FEEE6F0F9054EFBF820 /* libffi-core.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D86507D6D536364E65896648629885F;
+			remoteInfo = "libffi-core";
+		};
+		4CE47397BD3E179809BDCAF28697F40B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EFA61566B9C806B0432BFD5ECDF9A24 /* DirectoryWatchdog.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 39E6763E82B9FB1C1E0A2D49970C5787;
+			remoteInfo = DirectoryWatchdog;
+		};
+		5124A56804F00823AD979219C815613E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A4F27F84D51B2C75BDC1BCD194AD71F /* PINRemoteImage.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 7DC60949DA1E6B84041E1D9F5D787838;
 			remoteInfo = PINRemoteImage;
 		};
-		FE94CFC04113214101EC687648B0259D /* PBXContainerItemProxy */ = {
+		5234A0A21C75F916587B451CC394C976 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D64F6AB7DEDAB43A00C45D1D8C9A128B /* cocore.xcodeproj */;
+			containerPortal = 2EA1AA9AA667C2E9FAAE98D8D611A0CE /* ZDNetWorkHelper.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BDC8F869C893DFC9EB0D3245791DD72;
+			remoteInfo = ZDNetWorkHelper;
+		};
+		5E362FAFBF211FAF453E1C4FF33195F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33B8CEC92006F0C07029CC0A7DAC89A6 /* RSSwizzle.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C5C634D45CFEE9A286708BA3EE61B6FC;
+			remoteInfo = RSSwizzle;
+		};
+		67E157CCA10E2E116A57F048611BD3A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAFA2F3D472D1853D501F3330824999B /* Objection.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0116B5C05BE5914C5F398A0E08C6BA80;
+			remoteInfo = Objection;
+		};
+		6807B5E2F4F860DD05380616A99657A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6609404B61554D46E385838191FB1164 /* cocore.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 44B9F3DF1A76463ECB2E752DB51A596B;
 			remoteInfo = cocore;
 		};
+		6BB1F283DBFF15AF0236AF00D16E1D23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 578D75DF4949E4253A63366F94EFD3CA /* ObjectiveSugar.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 419C8BD43B37AEA9DDC7372A027B947E;
+			remoteInfo = ObjectiveSugar;
+		};
+		7462E8CA97EAC2326FA605CD844F2F71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 889201D4EC878F2F3272663187216EE4 /* YYModel.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B24F71FDC23D2B2E241DE51DECC7ED5F;
+			remoteInfo = YYModel;
+		};
+		79142F36AFD195E896FD5D36F41AF696 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B6619C80DDAA7E7CAA03E0C95402419 /* RDVTabBarController.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 339AB980EF4F190EFB97EE17E3F23AE9;
+			remoteInfo = RDVTabBarController;
+		};
+		79FD5634DEC92DAE0D0F402865C2E193 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A410635DDF5A288F10937CB2C2E8DE2 /* IGListKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C5D6FE2744F299C4B5885492E7CFF8C;
+			remoteInfo = IGListKit;
+		};
+		80B862F3C236253AC11763A4E1D7EF8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A695172E78D6FA312D0428DDC83D6257 /* SVProgressHUD.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A902363E0683102423DADEA0C0D4541;
+			remoteInfo = SVProgressHUD;
+		};
+		8399EF9F549ECCB30E5F86A3F77D1714 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C4B43A76824844831C801D3DF2E60F /* RTRootNavigationController.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1BDBE6048F447AF04992F739AC1CBBF6;
+			remoteInfo = RTRootNavigationController;
+		};
+		846428E71C132504D4098A9F024CBC7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70DA081B7BF96D83E66C95FAB1CF63C9 /* ResumableAssert.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C9D73F6AE2BAE6D4A4E5E5DA907D6105;
+			remoteInfo = ResumableAssert;
+		};
+		873F953DA0ED6BA2BABD4FE5E7FFA661 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22ACFA9AFF6E9F48C96CC672EB71BCAF /* ZIKRouter.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DF9A7AD0BEB75757F2F0002D0D769B3;
+			remoteInfo = ZIKRouter;
+		};
+		894B1B5B125370EF65263CA8155495FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C1090C4FC9FB79071EFE19A4F3ED7AD /* Masonry.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C0965FF775F51458AD4A8E41ABAB7D1E;
+			remoteInfo = Masonry;
+		};
+		8D5D3781F32D6BE47C875D9FADE1090B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6370B89FECCEDD0C3C434630BB3908B2 /* Typhoon.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C9C377B9BAD2146378E9B27C83EBB5A;
+			remoteInfo = Typhoon;
+		};
+		90EED1BD7139EF0B3C4A156B02D125CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11B86F3316EF5A803A365D2F710022B3 /* MMKV.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F811D3AC87F4D64B1375E5A914346DB;
+			remoteInfo = MMKV;
+		};
+		918198FD0AF881B7007E3F0982E53264 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8D9B0512755AA1A625BDBD36B5E1FA8;
+			remoteInfo = "Pods-ZDOpenSourceOCDemo";
+		};
+		94D63040EA04EFA55079780E58D78432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B93DB6E091282CF00A0E9FCEE1AB17A /* YogaKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0329F50521131A4BC4034736FA91D109;
+			remoteInfo = YogaKit;
+		};
+		9AB979851500562D50A1412D51C7E4D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F87C57375A6241E0397CC5AB58C2CA08 /* fishhook.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = ADD6974CA0D12DB719FEB114A3109761;
+			remoteInfo = fishhook;
+		};
+		A6840A7890D999B00C371DC2271D97BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E429D3F004DBF15567320EF65B7B00C /* Texture.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C96BA65ED37B8D7A14F109FC98B8C4A;
+			remoteInfo = Texture;
+		};
+		AB7536AA97A4C6D82006CC123DC9C3A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF9670FF35C3D894BE0C34898CA941BF /* Toast.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 33C24699A9A19E75BC1DA302FBB8EA84;
+			remoteInfo = Toast;
+		};
+		BAB536A9A04B9ECFE50C070209708E12 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A3CEF43DC539137E2E581FCC0ADF209D /* GDPerformanceView.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C43C09050575BD770FE7B06A65C88FAF;
+			remoteInfo = GDPerformanceView;
+		};
+		C3D15EB96BDFCF593D8AD8DB5A489438 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D0D0A1EFE39463BE57CB5BA434C5A3 /* YTKNetwork.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 13DEDD4CF74A98558BAA9DBE7A6044BF;
+			remoteInfo = YTKNetwork;
+		};
+		C4840FF5B5243D0287FCD9B9C1ABEF72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DB46F6DB903D78A9D29E60963A5FA12 /* LayoutInspector.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AC7C558203F7E3C618089877C3B1768E;
+			remoteInfo = LayoutInspector;
+		};
+		CF28418FFFD0B0A97514C1F52D67AB26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC08806EFC311F9020FEA37B7A0C86EA /* AFNetworking.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B561AD1B13C486A61C9BF66B4E6D8F89;
+			remoteInfo = AFNetworking;
+		};
+		D2AD0198FF293EF6297E24FA67A1B2F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22D22FEC8A376A3FCF835B18E8927CFF /* YYCache.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 73B4EFD655BE7A67C6F5C5E6F514BDB9;
+			remoteInfo = YYCache;
+		};
+		D6D7F5065D3B4EB647609C8506B9BECE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA1F67BCFC0DC137FDD708C703510793 /* PINCache.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E6F935A450178DA7515843CC4A631A11;
+			remoteInfo = PINCache;
+		};
+		DA377DBECD0424B6DC7733382E18DFC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98022A505DDF1D149FB7BF4F365B6A24 /* libextobjc.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D69075454E0C276645E4B3FCC2A354E;
+			remoteInfo = libextobjc;
+		};
+		DB7CA5067A6AAB8FF4DBC4C8596DCE78 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC4B1CC56600B1EDF92DA6FF8FD5E1D2 /* ReactiveObjC.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 58630A911E82956281CDF1C822E7FC41;
+			remoteInfo = ReactiveObjC;
+		};
+		DECD26EC786791F3E65CBA0ADA6C0F3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AE2BDBF03DFA6C678DB20B2C280CA41 /* Yoga.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DB658880A3F558549A84D99BCFADCBC;
+			remoteInfo = Yoga;
+		};
+		EB3017CDBB045148FA1DDD46603B0BDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8D9B0512755AA1A625BDBD36B5E1FA8;
+			remoteInfo = "Pods-ZDOpenSourceOCDemo";
+		};
+		F03D9ADFE4E965D0B57EEAF78CC9ACC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 322CE91227283B7A33E0F6AC194DFEAC /* lottie-ios.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FFD4CF15B40CE17E04F3BC6AAF7035A;
+			remoteInfo = "lottie-ios";
+		};
+		F484DCE6ACBB849F9612B85E57229EBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BC69E5B344E9990D067CDB519C8D61F /* YYDispatchQueuePool.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 14D3379E442FA9BF8A3C592328F82CD9;
+			remoteInfo = YYDispatchQueuePool;
+		};
+		FDCE9BD7A7C71CE2ECCFB2F1A5211183 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75A9496EE348D98C0E132D30B3515606 /* ChameleonFramework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A32FC00F1F734852154E040D84A825BE;
+			remoteInfo = ChameleonFramework;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07008D2C222439CA16201EBFB8C73D49 /* PINCache */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PINCache; path = PINCache.xcodeproj; sourceTree = "<group>"; };
-		0CE7BB45AE1AA93D578EF92C30704D19 /* JLRoutes */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JLRoutes; path = JLRoutes.xcodeproj; sourceTree = "<group>"; };
-		126D134A1EBBC7D8A8A61B30F98C06D4 /* Pods-ZDOpenSourceOCDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZDOpenSourceOCDemoTests-dummy.m"; sourceTree = "<group>"; };
-		13B4ACCCDD8C12527A83733C43F3320B /* LayoutInspector */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LayoutInspector; path = LayoutInspector.xcodeproj; sourceTree = "<group>"; };
-		16C8EA2AD53F9D3CA673B55230ECBB1F /* ReactiveObjC */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveObjC; path = ReactiveObjC.xcodeproj; sourceTree = "<group>"; };
-		1F4B1703E13A7FB92AA0C7FAB88E31A8 /* PINRemoteImage */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PINRemoteImage; path = PINRemoteImage.xcodeproj; sourceTree = "<group>"; };
-		219F695F71A04A691CBF3E72BF957AFE /* Flipper-Folly */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Flipper-Folly"; path = "Flipper-Folly.xcodeproj"; sourceTree = "<group>"; };
-		222A264D480EF210FDB3133069E8CDAF /* ObjectiveSugar */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectiveSugar; path = ObjectiveSugar.xcodeproj; sourceTree = "<group>"; };
-		23D669A60C95922BE0E314F571ECDE4C /* ZDNetWorkHelper */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZDNetWorkHelper; path = ZDNetWorkHelper.xcodeproj; sourceTree = "<group>"; };
-		2613279E2C2FC9CD7C3D0165CB13858D /* Pods-ZDOpenSourceOCDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZDOpenSourceOCDemo-umbrella.h"; sourceTree = "<group>"; };
-		27647C953DDF5A6E824611035ED919C1 /* Pods-ZDOpenSourceOCDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZDOpenSourceOCDemo-resources.sh"; sourceTree = "<group>"; };
-		2B6F2162E73CDCB878EAE375F3E5EF42 /* coobjc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = coobjc; path = coobjc.xcodeproj; sourceTree = "<group>"; };
-		2DF88E43C53CD4339D88F3ED0A4C8954 /* YYCache */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YYCache; path = YYCache.xcodeproj; sourceTree = "<group>"; };
-		2E38ED550D6C141435D073A29634A7D8 /* Toast */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Toast; path = Toast.xcodeproj; sourceTree = "<group>"; };
-		2EBB994BC1B0B61BA08250392EE06938 /* Pods-ZDOpenSourceOCDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZDOpenSourceOCDemo-dummy.m"; sourceTree = "<group>"; };
-		34E54739B24C76D4D783A46008ADD3EB /* Pods-ZDOpenSourceOCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemo.release.xcconfig"; sourceTree = "<group>"; };
-		38C2472D6C5DAADA45853CF466230C33 /* GDPerformanceView */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GDPerformanceView; path = GDPerformanceView.xcodeproj; sourceTree = "<group>"; };
-		39635DD1F5A9885B35280CB702776F83 /* YYDispatchQueuePool */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YYDispatchQueuePool; path = YYDispatchQueuePool.xcodeproj; sourceTree = "<group>"; };
-		4231DBB21076AD83E0248378BD42A4E8 /* Texture */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Texture; path = Texture.xcodeproj; sourceTree = "<group>"; };
-		4234839C21CAD431D64DA94D39B926AB /* boost-for-react-native */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "boost-for-react-native"; path = "boost-for-react-native.xcodeproj"; sourceTree = "<group>"; };
-		439BD7A484D3A78093EDB8E326B409AA /* Pods-ZDOpenSourceOCDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZDOpenSourceOCDemo.modulemap"; sourceTree = "<group>"; };
-		4875271D1174341EB36D4C917F02CA71 /* libPods-ZDOpenSourceOCDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ZDOpenSourceOCDemo.a"; path = "libPods-ZDOpenSourceOCDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		50398824D004C9FA41C240BF6DF5D522 /* ResumableAssert */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResumableAssert; path = ResumableAssert.xcodeproj; sourceTree = "<group>"; };
-		50FB670A088D7215E4C3A4B48B492FFF /* RSSwizzle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSSwizzle; path = RSSwizzle.xcodeproj; sourceTree = "<group>"; };
-		528530274C934204F58D0F9789465D9B /* YYModel */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YYModel; path = YYModel.xcodeproj; sourceTree = "<group>"; };
-		5447E248F33AB37180B34676FC3982BD /* Yoga */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Yoga; path = Yoga.xcodeproj; sourceTree = "<group>"; };
-		5DA0C0547DE1D2D96FEACE9E7E5BE713 /* DirectoryWatchdog */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DirectoryWatchdog; path = DirectoryWatchdog.xcodeproj; sourceTree = "<group>"; };
-		5E6C58F0D188596D8C2C1801AC401B21 /* CocoaLibEvent */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaLibEvent; path = CocoaLibEvent.xcodeproj; sourceTree = "<group>"; };
-		6219DEEE4E6AEE26AE51979187245EBA /* Objection */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Objection; path = Objection.xcodeproj; sourceTree = "<group>"; };
-		643C58B5E1C79DCF825217213B57034C /* libPods-ZDOpenSourceOCDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ZDOpenSourceOCDemoTests.a"; path = "libPods-ZDOpenSourceOCDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		680E0B444E31B263B3060740A51C84C2 /* Flipper-PeerTalk */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Flipper-PeerTalk"; path = "Flipper-PeerTalk.xcodeproj"; sourceTree = "<group>"; };
-		6AB282044C1A852A6462E1ACC9243FA3 /* Pods-ZDOpenSourceOCDemoUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZDOpenSourceOCDemoUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6D4C3CF5D27B05A0AA9ECB753F7FF526 /* FLEX */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FLEX; path = FLEX.xcodeproj; sourceTree = "<group>"; };
-		6FB5AEF74EC68DA5679F5228784C7014 /* ZIKRouter */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZIKRouter; path = ZIKRouter.xcodeproj; sourceTree = "<group>"; };
-		713B9417BF74BA73A1BD3BD76D065272 /* ComponentKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ComponentKit; path = ComponentKit.xcodeproj; sourceTree = "<group>"; };
-		74729BC0F8477DB081BAA9D283090C35 /* lottie-ios */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "lottie-ios"; path = "lottie-ios.xcodeproj"; sourceTree = "<group>"; };
-		79706809927886EC4E4EE4DF8E06FBBB /* glog */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = glog; path = glog.xcodeproj; sourceTree = "<group>"; };
-		7B7B374AEA5813580CDC85F2EB22010E /* libPods-ZDOpenSourceOCDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ZDOpenSourceOCDemoUITests.a"; path = "libPods-ZDOpenSourceOCDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CD22E089804DF30B230683E07ADC484 /* Typhoon */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Typhoon; path = Typhoon.xcodeproj; sourceTree = "<group>"; };
-		7DE2CCC5EC67838898D4A21B692BA494 /* IGListKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IGListKit; path = IGListKit.xcodeproj; sourceTree = "<group>"; };
-		7F690B443ABDD274EF7B89CE6598E7BC /* AFNetworking */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking; path = AFNetworking.xcodeproj; sourceTree = "<group>"; };
-		89710FD34F2E5119A288DE16A0E36FDB /* libffi-core */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "libffi-core"; path = "libffi-core.xcodeproj"; sourceTree = "<group>"; };
-		957254F2231905255F961E7436C6D015 /* CocoaAsyncSocket */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CocoaAsyncSocket; path = CocoaAsyncSocket.xcodeproj; sourceTree = "<group>"; };
-		971B686086E79B10E77A0CEABF82763F /* RDVTabBarController */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RDVTabBarController; path = RDVTabBarController.xcodeproj; sourceTree = "<group>"; };
-		9CA4F78625DB3BA1A9ED7EC884A27897 /* ChameleonFramework */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChameleonFramework; path = ChameleonFramework.xcodeproj; sourceTree = "<group>"; };
+		0359655ADAD1587E8564FB90EDFC92BF /* Pods-ZDOpenSourceOCDemoUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZDOpenSourceOCDemoUITests-dummy.m"; sourceTree = "<group>"; };
+		09C4B43A76824844831C801D3DF2E60F /* RTRootNavigationController */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RTRootNavigationController; path = RTRootNavigationController.xcodeproj; sourceTree = "<group>"; };
+		09D0D0A1EFE39463BE57CB5BA434C5A3 /* YTKNetwork */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YTKNetwork; path = YTKNetwork.xcodeproj; sourceTree = "<group>"; };
+		0C1090C4FC9FB79071EFE19A4F3ED7AD /* Masonry */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Masonry; path = Masonry.xcodeproj; sourceTree = "<group>"; };
+		0D5499249F459C45ED07A35513810E41 /* Pods-ZDOpenSourceOCDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZDOpenSourceOCDemo-dummy.m"; sourceTree = "<group>"; };
+		11B86F3316EF5A803A365D2F710022B3 /* MMKV */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MMKV; path = MMKV.xcodeproj; sourceTree = "<group>"; };
+		12F92C6A70C465C3AD08DDE3A513AF31 /* Pods-ZDOpenSourceOCDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		17B31F6DB14B7DD06A83A4C33972846F /* JLRoutes */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JLRoutes; path = JLRoutes.xcodeproj; sourceTree = "<group>"; };
+		1800F762E7396A59E0535D9FF0753806 /* PromiseKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromiseKit; path = PromiseKit.xcodeproj; sourceTree = "<group>"; };
+		18F09F1160099D679D349F6ACB996DC1 /* Pods-ZDOpenSourceOCDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1AE2BDBF03DFA6C678DB20B2C280CA41 /* Yoga */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Yoga; path = Yoga.xcodeproj; sourceTree = "<group>"; };
+		1FC6C8F916CCD0B13CDF3F12B2D5BE6A /* Pods-ZDOpenSourceOCDemoUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZDOpenSourceOCDemoUITests.modulemap"; sourceTree = "<group>"; };
+		22ACFA9AFF6E9F48C96CC672EB71BCAF /* ZIKRouter */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZIKRouter; path = ZIKRouter.xcodeproj; sourceTree = "<group>"; };
+		22D22FEC8A376A3FCF835B18E8927CFF /* YYCache */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YYCache; path = YYCache.xcodeproj; sourceTree = "<group>"; };
+		2A44C9AC1D01F9027D9543A83B97134C /* Pods-ZDOpenSourceOCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		2BC69E5B344E9990D067CDB519C8D61F /* YYDispatchQueuePool */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YYDispatchQueuePool; path = YYDispatchQueuePool.xcodeproj; sourceTree = "<group>"; };
+		2E429D3F004DBF15567320EF65B7B00C /* Texture */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Texture; path = Texture.xcodeproj; sourceTree = "<group>"; };
+		2EA1AA9AA667C2E9FAAE98D8D611A0CE /* ZDNetWorkHelper */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZDNetWorkHelper; path = ZDNetWorkHelper.xcodeproj; sourceTree = "<group>"; };
+		31BD7AAC12BA2FEEE6F0F9054EFBF820 /* libffi-core */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "libffi-core"; path = "libffi-core.xcodeproj"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		322CE91227283B7A33E0F6AC194DFEAC /* lottie-ios */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "lottie-ios"; path = "lottie-ios.xcodeproj"; sourceTree = "<group>"; };
+		33B8CEC92006F0C07029CC0A7DAC89A6 /* RSSwizzle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSSwizzle; path = RSSwizzle.xcodeproj; sourceTree = "<group>"; };
+		39D5B823305DDC4DC2664E92055F3B82 /* coobjc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = coobjc; path = coobjc.xcodeproj; sourceTree = "<group>"; };
+		405D40C96D2048048F748D5BC2E16363 /* FLEX */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FLEX; path = FLEX.xcodeproj; sourceTree = "<group>"; };
+		478E8BE91F538314E3701CD33CCEF8F5 /* Pods-ZDOpenSourceOCDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZDOpenSourceOCDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		485F3631B3E70A4E07B7534D29821005 /* Pods-ZDOpenSourceOCDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZDOpenSourceOCDemo-umbrella.h"; sourceTree = "<group>"; };
+		4875271D1174341EB36D4C917F02CA71 /* Pods_ZDOpenSourceOCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZDOpenSourceOCDemo.framework; path = "Pods-ZDOpenSourceOCDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A4F27F84D51B2C75BDC1BCD194AD71F /* PINRemoteImage */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PINRemoteImage; path = PINRemoteImage.xcodeproj; sourceTree = "<group>"; };
+		4B199CB2A0BC763BED021165D39E8774 /* Pods-ZDOpenSourceOCDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZDOpenSourceOCDemo-resources.sh"; sourceTree = "<group>"; };
+		4D1AFF2F1566A3E4669BE849803DBA99 /* Pods-ZDOpenSourceOCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemo.release.xcconfig"; sourceTree = "<group>"; };
+		4EFA61566B9C806B0432BFD5ECDF9A24 /* DirectoryWatchdog */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DirectoryWatchdog; path = DirectoryWatchdog.xcodeproj; sourceTree = "<group>"; };
+		51E1B9164980C889B7D3BE9D8AE6B82F /* Pods-ZDOpenSourceOCDemoUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZDOpenSourceOCDemoUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		578D75DF4949E4253A63366F94EFD3CA /* ObjectiveSugar */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectiveSugar; path = ObjectiveSugar.xcodeproj; sourceTree = "<group>"; };
+		5D712C9D695C597F09F3C6FCBB2B3556 /* Pods-ZDOpenSourceOCDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZDOpenSourceOCDemo-frameworks.sh"; sourceTree = "<group>"; };
+		6370B89FECCEDD0C3C434630BB3908B2 /* Typhoon */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Typhoon; path = Typhoon.xcodeproj; sourceTree = "<group>"; };
+		643C58B5E1C79DCF825217213B57034C /* Pods_ZDOpenSourceOCDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZDOpenSourceOCDemoTests.framework; path = "Pods-ZDOpenSourceOCDemoTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6609404B61554D46E385838191FB1164 /* cocore */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocore; path = cocore.xcodeproj; sourceTree = "<group>"; };
+		70DA081B7BF96D83E66C95FAB1CF63C9 /* ResumableAssert */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResumableAssert; path = ResumableAssert.xcodeproj; sourceTree = "<group>"; };
+		74D8C966207A36BE882007BF9C400648 /* Pods-ZDOpenSourceOCDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		75A9496EE348D98C0E132D30B3515606 /* ChameleonFramework */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChameleonFramework; path = ChameleonFramework.xcodeproj; sourceTree = "<group>"; };
+		77518AF0567CCD117C5C74FBCEAF9E73 /* Pods-ZDOpenSourceOCDemoTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZDOpenSourceOCDemoTests-Info.plist"; sourceTree = "<group>"; };
+		7A410635DDF5A288F10937CB2C2E8DE2 /* IGListKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IGListKit; path = IGListKit.xcodeproj; sourceTree = "<group>"; };
+		7B7B374AEA5813580CDC85F2EB22010E /* Pods_ZDOpenSourceOCDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZDOpenSourceOCDemoUITests.framework; path = "Pods-ZDOpenSourceOCDemoUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B93DB6E091282CF00A0E9FCEE1AB17A /* YogaKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YogaKit; path = YogaKit.xcodeproj; sourceTree = "<group>"; };
+		835EDF3785B0F38CBE334DF9139EB704 /* Pods-ZDOpenSourceOCDemoUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZDOpenSourceOCDemoUITests-umbrella.h"; sourceTree = "<group>"; };
+		889201D4EC878F2F3272663187216EE4 /* YYModel */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YYModel; path = YYModel.xcodeproj; sourceTree = "<group>"; };
+		892547C39FA22BA0B73D5D1AB00C1059 /* PINOperation */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PINOperation; path = PINOperation.xcodeproj; sourceTree = "<group>"; };
+		8AB4305D0DFD4495715209208F21BA34 /* Pods-ZDOpenSourceOCDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZDOpenSourceOCDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8B6619C80DDAA7E7CAA03E0C95402419 /* RDVTabBarController */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RDVTabBarController; path = RDVTabBarController.xcodeproj; sourceTree = "<group>"; };
+		8DB46F6DB903D78A9D29E60963A5FA12 /* LayoutInspector */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LayoutInspector; path = LayoutInspector.xcodeproj; sourceTree = "<group>"; };
+		91C7641911562F9EDC9E6E7EDAAA115C /* Pods-ZDOpenSourceOCDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZDOpenSourceOCDemo.modulemap"; sourceTree = "<group>"; };
+		98022A505DDF1D149FB7BF4F365B6A24 /* libextobjc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libextobjc; path = libextobjc.xcodeproj; sourceTree = "<group>"; };
+		9A1D9BF2EA52FB6FE6236D58FEEAA94D /* Pods-ZDOpenSourceOCDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZDOpenSourceOCDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FAF8E90B8BDC90D88ABB8AEE8CC54E3 /* Pods-ZDOpenSourceOCDemoUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZDOpenSourceOCDemoUITests-dummy.m"; sourceTree = "<group>"; };
-		A002285A0AB631C9A5D77EBA31314196 /* LinqToObjectiveC */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LinqToObjectiveC; path = LinqToObjectiveC.xcodeproj; sourceTree = "<group>"; };
-		A37A9856327F6284B9D7B6B2FD894149 /* Pods-ZDOpenSourceOCDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A5AA3F0FB3493387000403B5B2C57CC5 /* Flipper */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Flipper; path = Flipper.xcodeproj; sourceTree = "<group>"; };
-		ABB77B3CBC6C2FDAEC4A3E761F1058EC /* DoubleConversion */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DoubleConversion; path = DoubleConversion.xcodeproj; sourceTree = "<group>"; };
-		AC3061D53F7E2C3E38A37DC5CD5467FC /* YogaKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YogaKit; path = YogaKit.xcodeproj; sourceTree = "<group>"; };
-		AD2CA42B0FF08730E997FEFB988A576E /* RTRootNavigationController */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RTRootNavigationController; path = RTRootNavigationController.xcodeproj; sourceTree = "<group>"; };
-		B1A0E6220305C288C82FB52D89C0BFBD /* Pods-ZDOpenSourceOCDemoUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZDOpenSourceOCDemoUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B266D3FAFD83D6546A031733C222476C /* Pods-ZDOpenSourceOCDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemoTests.release.xcconfig"; sourceTree = "<group>"; };
-		C1A4AD9148E485884147334B402EC319 /* Masonry */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Masonry; path = Masonry.xcodeproj; sourceTree = "<group>"; };
-		C2652D4B067EBE376C86C67A7294A940 /* FlipperKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FlipperKit; path = FlipperKit.xcodeproj; sourceTree = "<group>"; };
-		C3925466B43752F3242C4E5B8EF97EDB /* Pods-ZDOpenSourceOCDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZDOpenSourceOCDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C396A508F0EEDAE25EFDF22A1BB4A0FE /* fishhook */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = fishhook; path = fishhook.xcodeproj; sourceTree = "<group>"; };
-		C8953DF0AE2BFC06421AF2491D937ACB /* PINOperation */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PINOperation; path = PINOperation.xcodeproj; sourceTree = "<group>"; };
-		C92A7CCF70B07BCDFA113D35C1ACFB98 /* MMKV */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MMKV; path = MMKV.xcodeproj; sourceTree = "<group>"; };
-		CB34E89A6DC9854896A54405A64710C3 /* OpenSSL-Static */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "OpenSSL-Static"; path = "OpenSSL-Static.xcodeproj"; sourceTree = "<group>"; };
-		D07C48F8B7AF93504BB5357440F67CE6 /* Pods-ZDOpenSourceOCDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D110F8E0F3DE2A42E5C75FE21A69C6C3 /* Pods-ZDOpenSourceOCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		D5A26105102C12BB16623F8D76486FF1 /* SVProgressHUD */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SVProgressHUD; path = SVProgressHUD.xcodeproj; sourceTree = "<group>"; };
-		D64F6AB7DEDAB43A00C45D1D8C9A128B /* cocore */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocore; path = cocore.xcodeproj; sourceTree = "<group>"; };
-		DC9A9EDB4D01F23EA52F42E2395C1A64 /* PromiseKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromiseKit; path = PromiseKit.xcodeproj; sourceTree = "<group>"; };
-		E21A6B406E93D19ABA2DDA6E4E105C49 /* Pods-ZDOpenSourceOCDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		E50B60DEB38D70D21AE1045ADDAFE89E /* Flipper-RSocket */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Flipper-RSocket"; path = "Flipper-RSocket.xcodeproj"; sourceTree = "<group>"; };
-		E7BED850A144A88EA359A283C9D2D9D9 /* libextobjc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libextobjc; path = libextobjc.xcodeproj; sourceTree = "<group>"; };
-		EA3EAC39E6D7DEF4177DC8ECC5F9B39B /* MBProgressHUD */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MBProgressHUD; path = MBProgressHUD.xcodeproj; sourceTree = "<group>"; };
-		ED9B3A59522D92F99FEAC25504D34E48 /* Pods-ZDOpenSourceOCDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZDOpenSourceOCDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		EE6732AA11EF425455B676DE488401A2 /* YTKNetwork */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YTKNetwork; path = YTKNetwork.xcodeproj; sourceTree = "<group>"; };
-		F2324F5775FA57DBBB4FF3547A6CFFA9 /* Pods-ZDOpenSourceOCDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZDOpenSourceOCDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F487AB193856F8F0D926C45658DB4B9D /* Pods-ZDOpenSourceOCDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZDOpenSourceOCDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FC6A17FEB68530D2654258EE46E8EC9E /* ZDToolKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZDToolKit; path = ZDToolKit.xcodeproj; sourceTree = "<group>"; };
+		9FD3B80495F0FD6FF150CA603099D900 /* Pods-ZDOpenSourceOCDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZDOpenSourceOCDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		A12764CD1A0A8BBCAC099332C64E12B0 /* Pods-ZDOpenSourceOCDemoUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZDOpenSourceOCDemoUITests-Info.plist"; sourceTree = "<group>"; };
+		A2DAC54ADA4124542A1E1A3B15A83D54 /* Pods-ZDOpenSourceOCDemoTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZDOpenSourceOCDemoTests.modulemap"; sourceTree = "<group>"; };
+		A3CEF43DC539137E2E581FCC0ADF209D /* GDPerformanceView */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GDPerformanceView; path = GDPerformanceView.xcodeproj; sourceTree = "<group>"; };
+		A695172E78D6FA312D0428DDC83D6257 /* SVProgressHUD */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SVProgressHUD; path = SVProgressHUD.xcodeproj; sourceTree = "<group>"; };
+		B0DF42FF4B2568890E501B08321B5D26 /* ZDToolKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZDToolKit; path = ZDToolKit.xcodeproj; sourceTree = "<group>"; };
+		B106200D32A74C546AB9B9AC39B8DE0A /* Pods-ZDOpenSourceOCDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BA1F67BCFC0DC137FDD708C703510793 /* PINCache */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PINCache; path = PINCache.xcodeproj; sourceTree = "<group>"; };
+		BAFA2F3D472D1853D501F3330824999B /* Objection */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Objection; path = Objection.xcodeproj; sourceTree = "<group>"; };
+		BC08806EFC311F9020FEA37B7A0C86EA /* AFNetworking */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking; path = AFNetworking.xcodeproj; sourceTree = "<group>"; };
+		D7EE2FACA684E92030612B822B20ED2E /* Pods-ZDOpenSourceOCDemoUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZDOpenSourceOCDemoUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D9EDA6BB63DEA130B0E140717E95A1BE /* Pods-ZDOpenSourceOCDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZDOpenSourceOCDemo-Info.plist"; sourceTree = "<group>"; };
+		DF9670FF35C3D894BE0C34898CA941BF /* Toast */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Toast; path = Toast.xcodeproj; sourceTree = "<group>"; };
+		E430C5B3C5BEC9B9B9279E2CDCBF420F /* MBProgressHUD */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MBProgressHUD; path = MBProgressHUD.xcodeproj; sourceTree = "<group>"; };
+		E59BEDBC40F2584C1ABAA21AAA00D7E4 /* Pods-ZDOpenSourceOCDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZDOpenSourceOCDemoTests-dummy.m"; sourceTree = "<group>"; };
+		F694BA7CCF54B30AEE314435CED940F1 /* LinqToObjectiveC */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LinqToObjectiveC; path = LinqToObjectiveC.xcodeproj; sourceTree = "<group>"; };
+		F87C57375A6241E0397CC5AB58C2CA08 /* fishhook */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = fishhook; path = fishhook.xcodeproj; sourceTree = "<group>"; };
+		FC4B1CC56600B1EDF92DA6FF8FD5E1D2 /* ReactiveObjC */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveObjC; path = ReactiveObjC.xcodeproj; sourceTree = "<group>"; };
+		FE826039A3827ECD63CC60747B624CCB /* Pods-ZDOpenSourceOCDemoTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZDOpenSourceOCDemoTests-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		05A0701A879E52F5B1344AF404F14D8C /* Frameworks */ = {
+		03D4E611C14608D7C9A0A21333AC3A11 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AECC4CB4878CD084FF67443414C891CF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C48795E9DD7DCA39FCC66BBA5A7A277A /* Frameworks */ = {
+		AE6EAD8EA1297582A18B3E6D10A640F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1238046B51E05EA47A7FCD3E47BE272 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D6F5C38EAD194E512EC73FBE09A16F58 /* Frameworks */ = {
+		D9807968BC22A7E759835A8F46D2C16F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F5095C1964176705B39253DFD33F78 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		73C3A2D3E5A993FFCC38462691E5D48B /* Pods-ZDOpenSourceOCDemo */ = {
+		1F58313D4F421C7262CFBF92E3A9C8B8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				439BD7A484D3A78093EDB8E326B409AA /* Pods-ZDOpenSourceOCDemo.modulemap */,
-				F487AB193856F8F0D926C45658DB4B9D /* Pods-ZDOpenSourceOCDemo-acknowledgements.markdown */,
-				ED9B3A59522D92F99FEAC25504D34E48 /* Pods-ZDOpenSourceOCDemo-acknowledgements.plist */,
-				2EBB994BC1B0B61BA08250392EE06938 /* Pods-ZDOpenSourceOCDemo-dummy.m */,
-				27647C953DDF5A6E824611035ED919C1 /* Pods-ZDOpenSourceOCDemo-resources.sh */,
-				2613279E2C2FC9CD7C3D0165CB13858D /* Pods-ZDOpenSourceOCDemo-umbrella.h */,
-				D110F8E0F3DE2A42E5C75FE21A69C6C3 /* Pods-ZDOpenSourceOCDemo.debug.xcconfig */,
-				34E54739B24C76D4D783A46008ADD3EB /* Pods-ZDOpenSourceOCDemo.release.xcconfig */,
+				BC08806EFC311F9020FEA37B7A0C86EA /* AFNetworking */,
+				75A9496EE348D98C0E132D30B3515606 /* ChameleonFramework */,
+				6609404B61554D46E385838191FB1164 /* cocore */,
+				39D5B823305DDC4DC2664E92055F3B82 /* coobjc */,
+				4EFA61566B9C806B0432BFD5ECDF9A24 /* DirectoryWatchdog */,
+				F87C57375A6241E0397CC5AB58C2CA08 /* fishhook */,
+				405D40C96D2048048F748D5BC2E16363 /* FLEX */,
+				A3CEF43DC539137E2E581FCC0ADF209D /* GDPerformanceView */,
+				7A410635DDF5A288F10937CB2C2E8DE2 /* IGListKit */,
+				17B31F6DB14B7DD06A83A4C33972846F /* JLRoutes */,
+				8DB46F6DB903D78A9D29E60963A5FA12 /* LayoutInspector */,
+				98022A505DDF1D149FB7BF4F365B6A24 /* libextobjc */,
+				31BD7AAC12BA2FEEE6F0F9054EFBF820 /* libffi-core */,
+				F694BA7CCF54B30AEE314435CED940F1 /* LinqToObjectiveC */,
+				322CE91227283B7A33E0F6AC194DFEAC /* lottie-ios */,
+				0C1090C4FC9FB79071EFE19A4F3ED7AD /* Masonry */,
+				E430C5B3C5BEC9B9B9279E2CDCBF420F /* MBProgressHUD */,
+				11B86F3316EF5A803A365D2F710022B3 /* MMKV */,
+				BAFA2F3D472D1853D501F3330824999B /* Objection */,
+				578D75DF4949E4253A63366F94EFD3CA /* ObjectiveSugar */,
+				BA1F67BCFC0DC137FDD708C703510793 /* PINCache */,
+				892547C39FA22BA0B73D5D1AB00C1059 /* PINOperation */,
+				4A4F27F84D51B2C75BDC1BCD194AD71F /* PINRemoteImage */,
+				1800F762E7396A59E0535D9FF0753806 /* PromiseKit */,
+				8B6619C80DDAA7E7CAA03E0C95402419 /* RDVTabBarController */,
+				FC4B1CC56600B1EDF92DA6FF8FD5E1D2 /* ReactiveObjC */,
+				70DA081B7BF96D83E66C95FAB1CF63C9 /* ResumableAssert */,
+				33B8CEC92006F0C07029CC0A7DAC89A6 /* RSSwizzle */,
+				09C4B43A76824844831C801D3DF2E60F /* RTRootNavigationController */,
+				A695172E78D6FA312D0428DDC83D6257 /* SVProgressHUD */,
+				2E429D3F004DBF15567320EF65B7B00C /* Texture */,
+				DF9670FF35C3D894BE0C34898CA941BF /* Toast */,
+				6370B89FECCEDD0C3C434630BB3908B2 /* Typhoon */,
+				1AE2BDBF03DFA6C678DB20B2C280CA41 /* Yoga */,
+				7B93DB6E091282CF00A0E9FCEE1AB17A /* YogaKit */,
+				09D0D0A1EFE39463BE57CB5BA434C5A3 /* YTKNetwork */,
+				22D22FEC8A376A3FCF835B18E8927CFF /* YYCache */,
+				2BC69E5B344E9990D067CDB519C8D61F /* YYDispatchQueuePool */,
+				889201D4EC878F2F3272663187216EE4 /* YYModel */,
+				2EA1AA9AA667C2E9FAAE98D8D611A0CE /* ZDNetWorkHelper */,
+				B0DF42FF4B2568890E501B08321B5D26 /* ZDToolKit */,
+				22ACFA9AFF6E9F48C96CC672EB71BCAF /* ZIKRouter */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		384D3CAD30C934C544A69A78C61B661F /* Pods-ZDOpenSourceOCDemo */ = {
+			isa = PBXGroup;
+			children = (
+				91C7641911562F9EDC9E6E7EDAAA115C /* Pods-ZDOpenSourceOCDemo.modulemap */,
+				8AB4305D0DFD4495715209208F21BA34 /* Pods-ZDOpenSourceOCDemo-acknowledgements.markdown */,
+				9FD3B80495F0FD6FF150CA603099D900 /* Pods-ZDOpenSourceOCDemo-acknowledgements.plist */,
+				0D5499249F459C45ED07A35513810E41 /* Pods-ZDOpenSourceOCDemo-dummy.m */,
+				5D712C9D695C597F09F3C6FCBB2B3556 /* Pods-ZDOpenSourceOCDemo-frameworks.sh */,
+				D9EDA6BB63DEA130B0E140717E95A1BE /* Pods-ZDOpenSourceOCDemo-Info.plist */,
+				4B199CB2A0BC763BED021165D39E8774 /* Pods-ZDOpenSourceOCDemo-resources.sh */,
+				485F3631B3E70A4E07B7534D29821005 /* Pods-ZDOpenSourceOCDemo-umbrella.h */,
+				2A44C9AC1D01F9027D9543A83B97134C /* Pods-ZDOpenSourceOCDemo.debug.xcconfig */,
+				4D1AFF2F1566A3E4669BE849803DBA99 /* Pods-ZDOpenSourceOCDemo.release.xcconfig */,
 			);
 			name = "Pods-ZDOpenSourceOCDemo";
 			path = "Target Support Files/Pods-ZDOpenSourceOCDemo";
 			sourceTree = "<group>";
 		};
-		9A3C29D1717C7DE4D9DA96588AAC524C /* Pods-ZDOpenSourceOCDemoUITests */ = {
+		5B9882416BF47E806437FCDA5E8B3754 /* Pods-ZDOpenSourceOCDemoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				6AB282044C1A852A6462E1ACC9243FA3 /* Pods-ZDOpenSourceOCDemoUITests-acknowledgements.markdown */,
-				B1A0E6220305C288C82FB52D89C0BFBD /* Pods-ZDOpenSourceOCDemoUITests-acknowledgements.plist */,
-				9FAF8E90B8BDC90D88ABB8AEE8CC54E3 /* Pods-ZDOpenSourceOCDemoUITests-dummy.m */,
-				E21A6B406E93D19ABA2DDA6E4E105C49 /* Pods-ZDOpenSourceOCDemoUITests.debug.xcconfig */,
-				D07C48F8B7AF93504BB5357440F67CE6 /* Pods-ZDOpenSourceOCDemoUITests.release.xcconfig */,
+				1FC6C8F916CCD0B13CDF3F12B2D5BE6A /* Pods-ZDOpenSourceOCDemoUITests.modulemap */,
+				D7EE2FACA684E92030612B822B20ED2E /* Pods-ZDOpenSourceOCDemoUITests-acknowledgements.markdown */,
+				51E1B9164980C889B7D3BE9D8AE6B82F /* Pods-ZDOpenSourceOCDemoUITests-acknowledgements.plist */,
+				0359655ADAD1587E8564FB90EDFC92BF /* Pods-ZDOpenSourceOCDemoUITests-dummy.m */,
+				A12764CD1A0A8BBCAC099332C64E12B0 /* Pods-ZDOpenSourceOCDemoUITests-Info.plist */,
+				835EDF3785B0F38CBE334DF9139EB704 /* Pods-ZDOpenSourceOCDemoUITests-umbrella.h */,
+				18F09F1160099D679D349F6ACB996DC1 /* Pods-ZDOpenSourceOCDemoUITests.debug.xcconfig */,
+				B106200D32A74C546AB9B9AC39B8DE0A /* Pods-ZDOpenSourceOCDemoUITests.release.xcconfig */,
 			);
 			name = "Pods-ZDOpenSourceOCDemoUITests";
 			path = "Target Support Files/Pods-ZDOpenSourceOCDemoUITests";
 			sourceTree = "<group>";
 		};
-		9C54FE5C15906763123CDDABCF26051B /* Pods */ = {
+		94C039CEB6C90B26A727AF89F2B61C8D /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7F690B443ABDD274EF7B89CE6598E7BC /* AFNetworking */,
-				4234839C21CAD431D64DA94D39B926AB /* boost-for-react-native */,
-				9CA4F78625DB3BA1A9ED7EC884A27897 /* ChameleonFramework */,
-				957254F2231905255F961E7436C6D015 /* CocoaAsyncSocket */,
-				5E6C58F0D188596D8C2C1801AC401B21 /* CocoaLibEvent */,
-				D64F6AB7DEDAB43A00C45D1D8C9A128B /* cocore */,
-				713B9417BF74BA73A1BD3BD76D065272 /* ComponentKit */,
-				2B6F2162E73CDCB878EAE375F3E5EF42 /* coobjc */,
-				5DA0C0547DE1D2D96FEACE9E7E5BE713 /* DirectoryWatchdog */,
-				ABB77B3CBC6C2FDAEC4A3E761F1058EC /* DoubleConversion */,
-				C396A508F0EEDAE25EFDF22A1BB4A0FE /* fishhook */,
-				6D4C3CF5D27B05A0AA9ECB753F7FF526 /* FLEX */,
-				A5AA3F0FB3493387000403B5B2C57CC5 /* Flipper */,
-				219F695F71A04A691CBF3E72BF957AFE /* Flipper-Folly */,
-				680E0B444E31B263B3060740A51C84C2 /* Flipper-PeerTalk */,
-				E50B60DEB38D70D21AE1045ADDAFE89E /* Flipper-RSocket */,
-				C2652D4B067EBE376C86C67A7294A940 /* FlipperKit */,
-				38C2472D6C5DAADA45853CF466230C33 /* GDPerformanceView */,
-				79706809927886EC4E4EE4DF8E06FBBB /* glog */,
-				7DE2CCC5EC67838898D4A21B692BA494 /* IGListKit */,
-				0CE7BB45AE1AA93D578EF92C30704D19 /* JLRoutes */,
-				13B4ACCCDD8C12527A83733C43F3320B /* LayoutInspector */,
-				E7BED850A144A88EA359A283C9D2D9D9 /* libextobjc */,
-				89710FD34F2E5119A288DE16A0E36FDB /* libffi-core */,
-				A002285A0AB631C9A5D77EBA31314196 /* LinqToObjectiveC */,
-				74729BC0F8477DB081BAA9D283090C35 /* lottie-ios */,
-				C1A4AD9148E485884147334B402EC319 /* Masonry */,
-				EA3EAC39E6D7DEF4177DC8ECC5F9B39B /* MBProgressHUD */,
-				C92A7CCF70B07BCDFA113D35C1ACFB98 /* MMKV */,
-				6219DEEE4E6AEE26AE51979187245EBA /* Objection */,
-				222A264D480EF210FDB3133069E8CDAF /* ObjectiveSugar */,
-				CB34E89A6DC9854896A54405A64710C3 /* OpenSSL-Static */,
-				07008D2C222439CA16201EBFB8C73D49 /* PINCache */,
-				C8953DF0AE2BFC06421AF2491D937ACB /* PINOperation */,
-				1F4B1703E13A7FB92AA0C7FAB88E31A8 /* PINRemoteImage */,
-				DC9A9EDB4D01F23EA52F42E2395C1A64 /* PromiseKit */,
-				971B686086E79B10E77A0CEABF82763F /* RDVTabBarController */,
-				16C8EA2AD53F9D3CA673B55230ECBB1F /* ReactiveObjC */,
-				50398824D004C9FA41C240BF6DF5D522 /* ResumableAssert */,
-				50FB670A088D7215E4C3A4B48B492FFF /* RSSwizzle */,
-				AD2CA42B0FF08730E997FEFB988A576E /* RTRootNavigationController */,
-				D5A26105102C12BB16623F8D76486FF1 /* SVProgressHUD */,
-				4231DBB21076AD83E0248378BD42A4E8 /* Texture */,
-				2E38ED550D6C141435D073A29634A7D8 /* Toast */,
-				7CD22E089804DF30B230683E07ADC484 /* Typhoon */,
-				5447E248F33AB37180B34676FC3982BD /* Yoga */,
-				AC3061D53F7E2C3E38A37DC5CD5467FC /* YogaKit */,
-				EE6732AA11EF425455B676DE488401A2 /* YTKNetwork */,
-				2DF88E43C53CD4339D88F3ED0A4C8954 /* YYCache */,
-				39635DD1F5A9885B35280CB702776F83 /* YYDispatchQueuePool */,
-				528530274C934204F58D0F9789465D9B /* YYModel */,
-				23D669A60C95922BE0E314F571ECDE4C /* ZDNetWorkHelper */,
-				FC6A17FEB68530D2654258EE46E8EC9E /* ZDToolKit */,
-				6FB5AEF74EC68DA5679F5228784C7014 /* ZIKRouter */,
+				384D3CAD30C934C544A69A78C61B661F /* Pods-ZDOpenSourceOCDemo */,
+				FF72E674E481623D132F9705AB5C4E1B /* Pods-ZDOpenSourceOCDemoTests */,
+				5B9882416BF47E806437FCDA5E8B3754 /* Pods-ZDOpenSourceOCDemoUITests */,
 			);
-			name = Pods;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		AB061E86A9F28B812D6D642ACA4134A9 /* Products */ = {
+		BFBAAF48C52EFE3785B1AA807D5B075B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4875271D1174341EB36D4C917F02CA71 /* libPods-ZDOpenSourceOCDemo.a */,
-				643C58B5E1C79DCF825217213B57034C /* libPods-ZDOpenSourceOCDemoTests.a */,
-				7B7B374AEA5813580CDC85F2EB22010E /* libPods-ZDOpenSourceOCDemoUITests.a */,
+				4875271D1174341EB36D4C917F02CA71 /* Pods_ZDOpenSourceOCDemo.framework */,
+				643C58B5E1C79DCF825217213B57034C /* Pods_ZDOpenSourceOCDemoTests.framework */,
+				7B7B374AEA5813580CDC85F2EB22010E /* Pods_ZDOpenSourceOCDemoUITests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B7042D281ABBE3F8D7774E9343A49C18 /* Pods-ZDOpenSourceOCDemoTests */ = {
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F2324F5775FA57DBBB4FF3547A6CFFA9 /* Pods-ZDOpenSourceOCDemoTests-acknowledgements.markdown */,
-				C3925466B43752F3242C4E5B8EF97EDB /* Pods-ZDOpenSourceOCDemoTests-acknowledgements.plist */,
-				126D134A1EBBC7D8A8A61B30F98C06D4 /* Pods-ZDOpenSourceOCDemoTests-dummy.m */,
-				A37A9856327F6284B9D7B6B2FD894149 /* Pods-ZDOpenSourceOCDemoTests.debug.xcconfig */,
-				B266D3FAFD83D6546A031733C222476C /* Pods-ZDOpenSourceOCDemoTests.release.xcconfig */,
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
 			);
-			name = "Pods-ZDOpenSourceOCDemoTests";
-			path = "Target Support Files/Pods-ZDOpenSourceOCDemoTests";
-			sourceTree = "<group>";
-		};
-		C63E481DC7C3542DF2E6A6ED6682AA23 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				73C3A2D3E5A993FFCC38462691E5D48B /* Pods-ZDOpenSourceOCDemo */,
-				B7042D281ABBE3F8D7774E9343A49C18 /* Pods-ZDOpenSourceOCDemoTests */,
-				9A3C29D1717C7DE4D9DA96588AAC524C /* Pods-ZDOpenSourceOCDemoUITests */,
-			);
-			name = "Targets Support Files";
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				9C54FE5C15906763123CDDABCF26051B /* Pods */,
-				AB061E86A9F28B812D6D642ACA4134A9 /* Products */,
-				C63E481DC7C3542DF2E6A6ED6682AA23 /* Targets Support Files */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				1F58313D4F421C7262CFBF92E3A9C8B8 /* Pods */,
+				BFBAAF48C52EFE3785B1AA807D5B075B /* Products */,
+				94C039CEB6C90B26A727AF89F2B61C8D /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF72E674E481623D132F9705AB5C4E1B /* Pods-ZDOpenSourceOCDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2DAC54ADA4124542A1E1A3B15A83D54 /* Pods-ZDOpenSourceOCDemoTests.modulemap */,
+				478E8BE91F538314E3701CD33CCEF8F5 /* Pods-ZDOpenSourceOCDemoTests-acknowledgements.markdown */,
+				9A1D9BF2EA52FB6FE6236D58FEEAA94D /* Pods-ZDOpenSourceOCDemoTests-acknowledgements.plist */,
+				E59BEDBC40F2584C1ABAA21AAA00D7E4 /* Pods-ZDOpenSourceOCDemoTests-dummy.m */,
+				77518AF0567CCD117C5C74FBCEAF9E73 /* Pods-ZDOpenSourceOCDemoTests-Info.plist */,
+				FE826039A3827ECD63CC60747B624CCB /* Pods-ZDOpenSourceOCDemoTests-umbrella.h */,
+				12F92C6A70C465C3AD08DDE3A513AF31 /* Pods-ZDOpenSourceOCDemoTests.debug.xcconfig */,
+				74D8C966207A36BE882007BF9C400648 /* Pods-ZDOpenSourceOCDemoTests.release.xcconfig */,
+			);
+			name = "Pods-ZDOpenSourceOCDemoTests";
+			path = "Target Support Files/Pods-ZDOpenSourceOCDemoTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		45636AFC50AF91BE0C7B1291ED5D4E53 /* Headers */ = {
+		1A71FBAD54CFE9EA51D792D254E29BB6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9313BF2EA15CA3C6E3F0F97EC6EC347 /* Pods-ZDOpenSourceOCDemoTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		658430D96B7C4B63179E6287E09FCF1D /* Headers */ = {
+		DF036E9D2FF43D57424A6FD2FDA9E4C6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03A07A77B885A353D1573ED278FB6F9D /* Pods-ZDOpenSourceOCDemo-umbrella.h in Headers */,
+				705FBB2FAED7F797B96F55C8A09F9675 /* Pods-ZDOpenSourceOCDemoUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		917E2492A1CEE4AA91691A2EBD173508 /* Headers */ = {
+		FC8C07B589E1C8466157AE6F98252E4F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DAFD91CC23815B9085DC587C06ACB23 /* Pods-ZDOpenSourceOCDemo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,110 +611,101 @@
 /* Begin PBXNativeTarget section */
 		A2726844268B2FEADD5810702972B273 /* Pods-ZDOpenSourceOCDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ABF303295E9F46F3CF0442AC34F260F0 /* Build configuration list for PBXNativeTarget "Pods-ZDOpenSourceOCDemoTests" */;
+			buildConfigurationList = D533B54B18E864B0CABAAEFA706A448F /* Build configuration list for PBXNativeTarget "Pods-ZDOpenSourceOCDemoTests" */;
 			buildPhases = (
-				917E2492A1CEE4AA91691A2EBD173508 /* Headers */,
-				2C7B0E0D791BAF8DC2A8937930F8BA3C /* Sources */,
-				05A0701A879E52F5B1344AF404F14D8C /* Frameworks */,
+				1A71FBAD54CFE9EA51D792D254E29BB6 /* Headers */,
+				0A302D7ADAA210F8D6ED14A5018F8451 /* Sources */,
+				AE6EAD8EA1297582A18B3E6D10A640F2 /* Frameworks */,
+				D1F871E4A8AD65A42B81447734FB5963 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				69788511846EF31ECA88C56EBD53EB22 /* PBXTargetDependency */,
+				18A9F4382172E91750CE28DD06D17749 /* PBXTargetDependency */,
 			);
 			name = "Pods-ZDOpenSourceOCDemoTests";
 			productName = "Pods-ZDOpenSourceOCDemoTests";
-			productReference = 643C58B5E1C79DCF825217213B57034C /* libPods-ZDOpenSourceOCDemoTests.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 643C58B5E1C79DCF825217213B57034C /* Pods_ZDOpenSourceOCDemoTests.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		A8D9B0512755AA1A625BDBD36B5E1FA8 /* Pods-ZDOpenSourceOCDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B83B7B31539F89AB50905297322FF43 /* Build configuration list for PBXNativeTarget "Pods-ZDOpenSourceOCDemo" */;
+			buildConfigurationList = 8C97D2F9C8B9698A99C0DE836CDE9245 /* Build configuration list for PBXNativeTarget "Pods-ZDOpenSourceOCDemo" */;
 			buildPhases = (
-				658430D96B7C4B63179E6287E09FCF1D /* Headers */,
-				F986BBF2631F1E311AE63A433C5205FD /* Sources */,
-				C48795E9DD7DCA39FCC66BBA5A7A277A /* Frameworks */,
+				FC8C07B589E1C8466157AE6F98252E4F /* Headers */,
+				FE71F986ACCCDBEA35FD61B5A08767AC /* Sources */,
+				03D4E611C14608D7C9A0A21333AC3A11 /* Frameworks */,
+				0075CBB6FC5F94294B44CDED1E064BE4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				873D80075E5675D86A9D8B579B4ACE16 /* PBXTargetDependency */,
-				3A140C6AE9BFC586E7197F36ECEB2302 /* PBXTargetDependency */,
-				F600767092B68F697CB598E752D8226F /* PBXTargetDependency */,
-				8FC1373FD5A1A61BAD21545AC9E2F67D /* PBXTargetDependency */,
-				821518543577DF54B8CB3E63561C4A9C /* PBXTargetDependency */,
-				D9DAC655FB671684C2B8EE59EFB41DC5 /* PBXTargetDependency */,
-				E08524321978AFA55C506D694870008E /* PBXTargetDependency */,
-				5F2DA98B5A5BD410CB4E2AEC65726251 /* PBXTargetDependency */,
-				294218C44407EEDE483FE576FBF32462 /* PBXTargetDependency */,
-				71D6BD1AFDBD2A42F21016B428C51D81 /* PBXTargetDependency */,
-				28B4BBFEB7F432565FA1D278ABB1E0AD /* PBXTargetDependency */,
-				CB450D8827F7B48E50EF4A0A4EDDE9BA /* PBXTargetDependency */,
-				06D5AA45C2DFE2473B2E4DD3C8668E2A /* PBXTargetDependency */,
-				923E4D0F688E4A054ADFA40E14412B73 /* PBXTargetDependency */,
-				FB5FE2439AEE9D6C5C6FDA6D5D045DFC /* PBXTargetDependency */,
-				52E1AA98ED020281C46B89DEAC78E082 /* PBXTargetDependency */,
-				B2038D132D68F2E61F4EA74642A6950B /* PBXTargetDependency */,
-				63094ACD1344F1F53693FFF8A039002E /* PBXTargetDependency */,
-				CE6A63605CC5D41FC6E5C081808F68E8 /* PBXTargetDependency */,
-				BDB75B57B67E8F9D1F9858E99EF2BF56 /* PBXTargetDependency */,
-				5D8DB73C69C338D6AB343FA361065B56 /* PBXTargetDependency */,
-				BEB5ACF85D9A82E354E16FA27EE77547 /* PBXTargetDependency */,
-				7D8F40674A37EED0BFF0153F129AB35A /* PBXTargetDependency */,
-				BBCD1665C883C8A62720A70D79953A72 /* PBXTargetDependency */,
-				92A9D4173959B690637335B8F4478BC7 /* PBXTargetDependency */,
-				CF6969D5957F06D2F37713A37C70C2A8 /* PBXTargetDependency */,
-				DC56D6B7DFAF7A5C0A7285339683C8CC /* PBXTargetDependency */,
-				15B95533E11BAF66EBF0AF36A2FFCC42 /* PBXTargetDependency */,
-				06E1E3DACA33379FD4F545ABB1B68962 /* PBXTargetDependency */,
-				B16A8562CA3063A5AF61E06E20EE8754 /* PBXTargetDependency */,
-				9AC3EDD3D3CC7EA01A0C305305204C82 /* PBXTargetDependency */,
-				28B90F2DD2E248E6E4B30448F25EE6EE /* PBXTargetDependency */,
-				CBC5659B6488DB833A104EA1F2309AF2 /* PBXTargetDependency */,
-				31AE0CCCAACAB6C2F7C5E5C474FA8C68 /* PBXTargetDependency */,
-				16D497FB56D638903DE04C4E9DDE81A7 /* PBXTargetDependency */,
-				0EE2B11D83EBDA9052A89E947F2C9936 /* PBXTargetDependency */,
-				5F9CB7B086F322A481549D7CBE66D763 /* PBXTargetDependency */,
-				51061A51FC7008B40F3D9765F822A21C /* PBXTargetDependency */,
-				5061E43C8096250B0676C4DE0E53D116 /* PBXTargetDependency */,
-				004371F0311019B42CBDA196B0AAB13D /* PBXTargetDependency */,
-				58ED7FD27157C256A41D5F5F282EA1D9 /* PBXTargetDependency */,
-				A32F0ACBF9B7CB38FF50F1FF3EAEF717 /* PBXTargetDependency */,
-				E0D5501B9EE4D56F9F7D24F15B798096 /* PBXTargetDependency */,
-				C900B71E04A3F45A9A95068EDD531097 /* PBXTargetDependency */,
-				308A8971EA39DA8ED3F857BCFE28ED4E /* PBXTargetDependency */,
-				2B2BDDBE1FAAFF52B1182A140C637ECF /* PBXTargetDependency */,
-				A2C8A204C9BEF0FE415B4C64C2C8E520 /* PBXTargetDependency */,
-				E8FB63AE1D356E9BB7126B545083DCA4 /* PBXTargetDependency */,
-				665CB0830327605336ACC10EDDD861EB /* PBXTargetDependency */,
-				4BAB65E798D9A6B61EB963B822AB96A9 /* PBXTargetDependency */,
-				782E0B00CEA8291EC04568C3A382D8C3 /* PBXTargetDependency */,
-				1ED1EE25B339D4BED42DFFC304432FC3 /* PBXTargetDependency */,
-				1F63BA07448FD06790DBAC217C5BFEAF /* PBXTargetDependency */,
-				AC3D2C104ECAF637267FF5CB1BA4F08F /* PBXTargetDependency */,
+				6BA45373153680515A49045739ABAB27 /* PBXTargetDependency */,
+				3987926BE8A17317626C65FDA42F85D1 /* PBXTargetDependency */,
+				718D66730172EEA00A00B16BADF740C7 /* PBXTargetDependency */,
+				794BEB26785F58EBD26A169127A42B1C /* PBXTargetDependency */,
+				0189104879A46203F1C5BC2C739BE794 /* PBXTargetDependency */,
+				1E878BFE211384D563A2FE0C5701EFE7 /* PBXTargetDependency */,
+				E3E25AEB891E243434530D0A58C578A9 /* PBXTargetDependency */,
+				7F37EF810F503E600ED50B595811135A /* PBXTargetDependency */,
+				B994F320C726C88E2F7344A5CAFDEB0E /* PBXTargetDependency */,
+				87758DE8EC724A0EC2BB45F837A19811 /* PBXTargetDependency */,
+				82936C45650A1613558FF879640AFBBB /* PBXTargetDependency */,
+				EF5A2E8B674596C83ABFC3478BD0F537 /* PBXTargetDependency */,
+				B08D5C6FB32AB38EFA576DA2F2EE86A4 /* PBXTargetDependency */,
+				1D2EC467DF0FEBAA8E6816F21AF4063B /* PBXTargetDependency */,
+				B626BC01BD58F3C4A4D79463E93D21C0 /* PBXTargetDependency */,
+				8CC0F2137B62046D3A761745B5CFBD1E /* PBXTargetDependency */,
+				460E6FA75977F30EDCAB1C4117F9E37C /* PBXTargetDependency */,
+				A1531225B86ED23738D60A68059A002D /* PBXTargetDependency */,
+				85D6F639D4385C37B0DB06E2DC34080B /* PBXTargetDependency */,
+				89B9E6F2A4B303A115427BB28D043057 /* PBXTargetDependency */,
+				89913CBAF4398346B9468F7C22F5F3EB /* PBXTargetDependency */,
+				B5E0A6F39449A0E542033E7AE9AEDC4C /* PBXTargetDependency */,
+				C5B69AA26EBC4AA0D4799CD8253FDB9C /* PBXTargetDependency */,
+				087DD8000642CFC6ED6FA0252270925B /* PBXTargetDependency */,
+				06087D893131789B82B95D896D7737EF /* PBXTargetDependency */,
+				F828AD0E7FD7360C0C896E869D4B3614 /* PBXTargetDependency */,
+				93B151B42ADB2154AAD00A660CA85642 /* PBXTargetDependency */,
+				8E6BD6183ED8F77DA7B834572296E3A1 /* PBXTargetDependency */,
+				059DFA845E26818544E9C7678F903660 /* PBXTargetDependency */,
+				68940BAD930777730B9440DC52C6B951 /* PBXTargetDependency */,
+				AFFFB876A9AB89C191ECAB1B8763F589 /* PBXTargetDependency */,
+				0DE143F768682E1EFC18E078E60C12B0 /* PBXTargetDependency */,
+				0FCFA7B06E83B31A94303348B7402A81 /* PBXTargetDependency */,
+				E4ABA8CFAE1729C1D01DD1AB1468E565 /* PBXTargetDependency */,
+				9072E00F26FEED5DA042680F3E4D0FC5 /* PBXTargetDependency */,
+				DC1C88BD2967D2AAAFE6F5B4518C9B66 /* PBXTargetDependency */,
+				59FEA73B9F80CCE8ECED28D5A8F7D252 /* PBXTargetDependency */,
+				BE98121748C4EA82ED90714C6B14E48A /* PBXTargetDependency */,
+				788276B98820A6B8B4ECC94B87A3A2DF /* PBXTargetDependency */,
+				C91F85CDCCEE51E500E2E22C10CBB590 /* PBXTargetDependency */,
+				255E2710C5516D59B8BBF24A90ED1B7C /* PBXTargetDependency */,
+				8D8F1BD2D717B990E28D0C6A905D9014 /* PBXTargetDependency */,
 			);
 			name = "Pods-ZDOpenSourceOCDemo";
 			productName = "Pods-ZDOpenSourceOCDemo";
-			productReference = 4875271D1174341EB36D4C917F02CA71 /* libPods-ZDOpenSourceOCDemo.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 4875271D1174341EB36D4C917F02CA71 /* Pods_ZDOpenSourceOCDemo.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		FF77996FE7A49187D7E543C00CEE2FDD /* Pods-ZDOpenSourceOCDemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF9687D6782DBD41979BE4E68BAE376B /* Build configuration list for PBXNativeTarget "Pods-ZDOpenSourceOCDemoUITests" */;
+			buildConfigurationList = E8B1811886BFF5AF0922FA88739C6468 /* Build configuration list for PBXNativeTarget "Pods-ZDOpenSourceOCDemoUITests" */;
 			buildPhases = (
-				45636AFC50AF91BE0C7B1291ED5D4E53 /* Headers */,
-				6F7A8992DA48511974DFEDA945062AFC /* Sources */,
-				D6F5C38EAD194E512EC73FBE09A16F58 /* Frameworks */,
+				DF036E9D2FF43D57424A6FD2FDA9E4C6 /* Headers */,
+				3D92466E7BF5E1FD2447CB38311A41C5 /* Sources */,
+				D9807968BC22A7E759835A8F46D2C16F /* Frameworks */,
+				9A1EAF89E9092973D363E4065B3FBD36 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2761BC739E1A3D2A2C6ABF527AE0F10B /* PBXTargetDependency */,
+				7F2478CC3F1FBAFC3E2A3E8721DDCDD8 /* PBXTargetDependency */,
 			);
 			name = "Pods-ZDOpenSourceOCDemoUITests";
 			productName = "Pods-ZDOpenSourceOCDemoUITests";
-			productReference = 7B7B374AEA5813580CDC85F2EB22010E /* libPods-ZDOpenSourceOCDemoUITests.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 7B7B374AEA5813580CDC85F2EB22010E /* Pods_ZDOpenSourceOCDemoUITests.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -805,170 +724,134 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = AB061E86A9F28B812D6D642ACA4134A9 /* Products */;
+			productRefGroup = BFBAAF48C52EFE3785B1AA807D5B075B /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProjectRef = 957254F2231905255F961E7436C6D015 /* CocoaAsyncSocket */;
+					ProjectRef = 1AE2BDBF03DFA6C678DB20B2C280CA41 /* Yoga */;
 				},
 				{
-					ProjectRef = 5E6C58F0D188596D8C2C1801AC401B21 /* CocoaLibEvent */;
+					ProjectRef = 7B93DB6E091282CF00A0E9FCEE1AB17A /* YogaKit */;
 				},
 				{
-					ProjectRef = 713B9417BF74BA73A1BD3BD76D065272 /* ComponentKit */;
+					ProjectRef = BC08806EFC311F9020FEA37B7A0C86EA /* AFNetworking */;
 				},
 				{
-					ProjectRef = ABB77B3CBC6C2FDAEC4A3E761F1058EC /* DoubleConversion */;
+					ProjectRef = 75A9496EE348D98C0E132D30B3515606 /* ChameleonFramework */;
 				},
 				{
-					ProjectRef = A5AA3F0FB3493387000403B5B2C57CC5 /* Flipper */;
+					ProjectRef = 4EFA61566B9C806B0432BFD5ECDF9A24 /* DirectoryWatchdog */;
 				},
 				{
-					ProjectRef = 219F695F71A04A691CBF3E72BF957AFE /* Flipper-Folly */;
+					ProjectRef = 405D40C96D2048048F748D5BC2E16363 /* FLEX */;
 				},
 				{
-					ProjectRef = 680E0B444E31B263B3060740A51C84C2 /* Flipper-PeerTalk */;
+					ProjectRef = A3CEF43DC539137E2E581FCC0ADF209D /* GDPerformanceView */;
 				},
 				{
-					ProjectRef = E50B60DEB38D70D21AE1045ADDAFE89E /* Flipper-RSocket */;
+					ProjectRef = 7A410635DDF5A288F10937CB2C2E8DE2 /* IGListKit */;
 				},
 				{
-					ProjectRef = C2652D4B067EBE376C86C67A7294A940 /* FlipperKit */;
+					ProjectRef = 17B31F6DB14B7DD06A83A4C33972846F /* JLRoutes */;
 				},
 				{
-					ProjectRef = CB34E89A6DC9854896A54405A64710C3 /* OpenSSL-Static */;
+					ProjectRef = 8DB46F6DB903D78A9D29E60963A5FA12 /* LayoutInspector */;
 				},
 				{
-					ProjectRef = 4234839C21CAD431D64DA94D39B926AB /* boost-for-react-native */;
+					ProjectRef = F694BA7CCF54B30AEE314435CED940F1 /* LinqToObjectiveC */;
 				},
 				{
-					ProjectRef = 79706809927886EC4E4EE4DF8E06FBBB /* glog */;
+					ProjectRef = E430C5B3C5BEC9B9B9279E2CDCBF420F /* MBProgressHUD */;
 				},
 				{
-					ProjectRef = 7F690B443ABDD274EF7B89CE6598E7BC /* AFNetworking */;
+					ProjectRef = 11B86F3316EF5A803A365D2F710022B3 /* MMKV */;
 				},
 				{
-					ProjectRef = 9CA4F78625DB3BA1A9ED7EC884A27897 /* ChameleonFramework */;
+					ProjectRef = 0C1090C4FC9FB79071EFE19A4F3ED7AD /* Masonry */;
 				},
 				{
-					ProjectRef = 5DA0C0547DE1D2D96FEACE9E7E5BE713 /* DirectoryWatchdog */;
+					ProjectRef = BAFA2F3D472D1853D501F3330824999B /* Objection */;
 				},
 				{
-					ProjectRef = 6D4C3CF5D27B05A0AA9ECB753F7FF526 /* FLEX */;
+					ProjectRef = 578D75DF4949E4253A63366F94EFD3CA /* ObjectiveSugar */;
 				},
 				{
-					ProjectRef = 38C2472D6C5DAADA45853CF466230C33 /* GDPerformanceView */;
+					ProjectRef = BA1F67BCFC0DC137FDD708C703510793 /* PINCache */;
 				},
 				{
-					ProjectRef = 7DE2CCC5EC67838898D4A21B692BA494 /* IGListKit */;
+					ProjectRef = 892547C39FA22BA0B73D5D1AB00C1059 /* PINOperation */;
 				},
 				{
-					ProjectRef = 0CE7BB45AE1AA93D578EF92C30704D19 /* JLRoutes */;
+					ProjectRef = 4A4F27F84D51B2C75BDC1BCD194AD71F /* PINRemoteImage */;
 				},
 				{
-					ProjectRef = 13B4ACCCDD8C12527A83733C43F3320B /* LayoutInspector */;
+					ProjectRef = 1800F762E7396A59E0535D9FF0753806 /* PromiseKit */;
 				},
 				{
-					ProjectRef = A002285A0AB631C9A5D77EBA31314196 /* LinqToObjectiveC */;
+					ProjectRef = 8B6619C80DDAA7E7CAA03E0C95402419 /* RDVTabBarController */;
 				},
 				{
-					ProjectRef = EA3EAC39E6D7DEF4177DC8ECC5F9B39B /* MBProgressHUD */;
+					ProjectRef = 33B8CEC92006F0C07029CC0A7DAC89A6 /* RSSwizzle */;
 				},
 				{
-					ProjectRef = C92A7CCF70B07BCDFA113D35C1ACFB98 /* MMKV */;
+					ProjectRef = 09C4B43A76824844831C801D3DF2E60F /* RTRootNavigationController */;
 				},
 				{
-					ProjectRef = C1A4AD9148E485884147334B402EC319 /* Masonry */;
+					ProjectRef = FC4B1CC56600B1EDF92DA6FF8FD5E1D2 /* ReactiveObjC */;
 				},
 				{
-					ProjectRef = 6219DEEE4E6AEE26AE51979187245EBA /* Objection */;
+					ProjectRef = 70DA081B7BF96D83E66C95FAB1CF63C9 /* ResumableAssert */;
 				},
 				{
-					ProjectRef = 222A264D480EF210FDB3133069E8CDAF /* ObjectiveSugar */;
+					ProjectRef = A695172E78D6FA312D0428DDC83D6257 /* SVProgressHUD */;
 				},
 				{
-					ProjectRef = 07008D2C222439CA16201EBFB8C73D49 /* PINCache */;
+					ProjectRef = 2E429D3F004DBF15567320EF65B7B00C /* Texture */;
 				},
 				{
-					ProjectRef = C8953DF0AE2BFC06421AF2491D937ACB /* PINOperation */;
+					ProjectRef = DF9670FF35C3D894BE0C34898CA941BF /* Toast */;
 				},
 				{
-					ProjectRef = 1F4B1703E13A7FB92AA0C7FAB88E31A8 /* PINRemoteImage */;
+					ProjectRef = 6370B89FECCEDD0C3C434630BB3908B2 /* Typhoon */;
 				},
 				{
-					ProjectRef = DC9A9EDB4D01F23EA52F42E2395C1A64 /* PromiseKit */;
+					ProjectRef = 09D0D0A1EFE39463BE57CB5BA434C5A3 /* YTKNetwork */;
 				},
 				{
-					ProjectRef = 971B686086E79B10E77A0CEABF82763F /* RDVTabBarController */;
+					ProjectRef = 22D22FEC8A376A3FCF835B18E8927CFF /* YYCache */;
 				},
 				{
-					ProjectRef = 50FB670A088D7215E4C3A4B48B492FFF /* RSSwizzle */;
+					ProjectRef = 2BC69E5B344E9990D067CDB519C8D61F /* YYDispatchQueuePool */;
 				},
 				{
-					ProjectRef = AD2CA42B0FF08730E997FEFB988A576E /* RTRootNavigationController */;
+					ProjectRef = 889201D4EC878F2F3272663187216EE4 /* YYModel */;
 				},
 				{
-					ProjectRef = 16C8EA2AD53F9D3CA673B55230ECBB1F /* ReactiveObjC */;
+					ProjectRef = 2EA1AA9AA667C2E9FAAE98D8D611A0CE /* ZDNetWorkHelper */;
 				},
 				{
-					ProjectRef = 50398824D004C9FA41C240BF6DF5D522 /* ResumableAssert */;
+					ProjectRef = B0DF42FF4B2568890E501B08321B5D26 /* ZDToolKit */;
 				},
 				{
-					ProjectRef = D5A26105102C12BB16623F8D76486FF1 /* SVProgressHUD */;
+					ProjectRef = 22ACFA9AFF6E9F48C96CC672EB71BCAF /* ZIKRouter */;
 				},
 				{
-					ProjectRef = 4231DBB21076AD83E0248378BD42A4E8 /* Texture */;
+					ProjectRef = 6609404B61554D46E385838191FB1164 /* cocore */;
 				},
 				{
-					ProjectRef = 2E38ED550D6C141435D073A29634A7D8 /* Toast */;
+					ProjectRef = 39D5B823305DDC4DC2664E92055F3B82 /* coobjc */;
 				},
 				{
-					ProjectRef = 7CD22E089804DF30B230683E07ADC484 /* Typhoon */;
+					ProjectRef = F87C57375A6241E0397CC5AB58C2CA08 /* fishhook */;
 				},
 				{
-					ProjectRef = EE6732AA11EF425455B676DE488401A2 /* YTKNetwork */;
+					ProjectRef = 98022A505DDF1D149FB7BF4F365B6A24 /* libextobjc */;
 				},
 				{
-					ProjectRef = 2DF88E43C53CD4339D88F3ED0A4C8954 /* YYCache */;
+					ProjectRef = 31BD7AAC12BA2FEEE6F0F9054EFBF820 /* libffi-core */;
 				},
 				{
-					ProjectRef = 39635DD1F5A9885B35280CB702776F83 /* YYDispatchQueuePool */;
-				},
-				{
-					ProjectRef = 528530274C934204F58D0F9789465D9B /* YYModel */;
-				},
-				{
-					ProjectRef = 5447E248F33AB37180B34676FC3982BD /* Yoga */;
-				},
-				{
-					ProjectRef = AC3061D53F7E2C3E38A37DC5CD5467FC /* YogaKit */;
-				},
-				{
-					ProjectRef = 23D669A60C95922BE0E314F571ECDE4C /* ZDNetWorkHelper */;
-				},
-				{
-					ProjectRef = FC6A17FEB68530D2654258EE46E8EC9E /* ZDToolKit */;
-				},
-				{
-					ProjectRef = 6FB5AEF74EC68DA5679F5228784C7014 /* ZIKRouter */;
-				},
-				{
-					ProjectRef = D64F6AB7DEDAB43A00C45D1D8C9A128B /* cocore */;
-				},
-				{
-					ProjectRef = 2B6F2162E73CDCB878EAE375F3E5EF42 /* coobjc */;
-				},
-				{
-					ProjectRef = C396A508F0EEDAE25EFDF22A1BB4A0FE /* fishhook */;
-				},
-				{
-					ProjectRef = E7BED850A144A88EA359A283C9D2D9D9 /* libextobjc */;
-				},
-				{
-					ProjectRef = 89710FD34F2E5119A288DE16A0E36FDB /* libffi-core */;
-				},
-				{
-					ProjectRef = 74729BC0F8477DB081BAA9D283090C35 /* lottie-ios */;
+					ProjectRef = 322CE91227283B7A33E0F6AC194DFEAC /* lottie-ios */;
 				},
 			);
 			projectRoot = "";
@@ -980,319 +863,317 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		0075CBB6FC5F94294B44CDED1E064BE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A1EAF89E9092973D363E4065B3FBD36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1F871E4A8AD65A42B81447734FB5963 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		2C7B0E0D791BAF8DC2A8937930F8BA3C /* Sources */ = {
+		0A302D7ADAA210F8D6ED14A5018F8451 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				871A014C394EC76A3935BFA7E1B02976 /* Pods-ZDOpenSourceOCDemoTests-dummy.m in Sources */,
+				4467A78CB9BE09CBA09A68FA8AD7F87C /* Pods-ZDOpenSourceOCDemoTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F7A8992DA48511974DFEDA945062AFC /* Sources */ = {
+		3D92466E7BF5E1FD2447CB38311A41C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FEC11D5E9698B5D51CB7E6D35C33A59 /* Pods-ZDOpenSourceOCDemoUITests-dummy.m in Sources */,
+				EEEBDD533BCEB8AF59E5E4C0D317EFA1 /* Pods-ZDOpenSourceOCDemoUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F986BBF2631F1E311AE63A433C5205FD /* Sources */ = {
+		FE71F986ACCCDBEA35FD61B5A08767AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE897756E9C4EF4BB71531D2BB3BAEAB /* Pods-ZDOpenSourceOCDemo-dummy.m in Sources */,
+				A0FF523122E2EB62E77883F03428D324 /* Pods-ZDOpenSourceOCDemo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		004371F0311019B42CBDA196B0AAB13D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = YYDispatchQueuePool;
-			targetProxy = DB6298C9BF0F4EA5325D0EA15F3AFC8D /* PBXContainerItemProxy */;
-		};
-		06D5AA45C2DFE2473B2E4DD3C8668E2A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FlipperKit;
-			targetProxy = 5A94E880647E92704A2C3872DFEA0846 /* PBXContainerItemProxy */;
-		};
-		06E1E3DACA33379FD4F545ABB1B68962 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RDVTabBarController;
-			targetProxy = 67EB2D3F8EF5129509892C9E7A6AD69C /* PBXContainerItemProxy */;
-		};
-		0EE2B11D83EBDA9052A89E947F2C9936 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Toast;
-			targetProxy = 9DA44186046EEE81A0B6EC7DE39E9436 /* PBXContainerItemProxy */;
-		};
-		15B95533E11BAF66EBF0AF36A2FFCC42 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PromiseKit;
-			targetProxy = BE8CE0F88C815400F75FB69A2311A768 /* PBXContainerItemProxy */;
-		};
-		16D497FB56D638903DE04C4E9DDE81A7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Texture;
-			targetProxy = 1B6053279FDAC2ADC7A8EF081FD1C868 /* PBXContainerItemProxy */;
-		};
-		1ED1EE25B339D4BED42DFFC304432FC3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = libextobjc;
-			targetProxy = BDDACC0144EDDE3F854BB3B5FCA8188C /* PBXContainerItemProxy */;
-		};
-		1F63BA07448FD06790DBAC217C5BFEAF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "libffi-core";
-			targetProxy = B2AE2FFF61DB3485E67F6EF936620282 /* PBXContainerItemProxy */;
-		};
-		2761BC739E1A3D2A2C6ABF527AE0F10B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-ZDOpenSourceOCDemo";
-			target = A8D9B0512755AA1A625BDBD36B5E1FA8 /* Pods-ZDOpenSourceOCDemo */;
-			targetProxy = D5165D8FCA42F4E4832126F926CA7B61 /* PBXContainerItemProxy */;
-		};
-		28B4BBFEB7F432565FA1D278ABB1E0AD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Flipper-PeerTalk";
-			targetProxy = E0DC6EE334CF901CD9700B5032AD6100 /* PBXContainerItemProxy */;
-		};
-		28B90F2DD2E248E6E4B30448F25EE6EE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ReactiveObjC;
-			targetProxy = A3E1DDB46A06DBAFF77CD68C593C7A86 /* PBXContainerItemProxy */;
-		};
-		294218C44407EEDE483FE576FBF32462 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Flipper;
-			targetProxy = 7196B9B85A89D6E599F14899446E6C59 /* PBXContainerItemProxy */;
-		};
-		2B2BDDBE1FAAFF52B1182A140C637ECF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ZIKRouter;
-			targetProxy = B32EB53A9E311E5B22C81C7CA2C89A24 /* PBXContainerItemProxy */;
-		};
-		308A8971EA39DA8ED3F857BCFE28ED4E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ZDToolKit;
-			targetProxy = 7C274761B837884647B78B8B3BCCC93D /* PBXContainerItemProxy */;
-		};
-		31AE0CCCAACAB6C2F7C5E5C474FA8C68 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SVProgressHUD;
-			targetProxy = 9F84A04DB656E2C8491DD74277E9C8AC /* PBXContainerItemProxy */;
-		};
-		3A140C6AE9BFC586E7197F36ECEB2302 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ChameleonFramework;
-			targetProxy = 5E0113C102D389570CF1E64A8A0265FB /* PBXContainerItemProxy */;
-		};
-		4BAB65E798D9A6B61EB963B822AB96A9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = fishhook;
-			targetProxy = 769E08926ECB4093C23F8FDF89B6B447 /* PBXContainerItemProxy */;
-		};
-		5061E43C8096250B0676C4DE0E53D116 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = YYCache;
-			targetProxy = A30C899F6269225746C7F48C71593F87 /* PBXContainerItemProxy */;
-		};
-		51061A51FC7008B40F3D9765F822A21C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = YTKNetwork;
-			targetProxy = 8C9F2AA6EFA121069B397387A1162AD9 /* PBXContainerItemProxy */;
-		};
-		52E1AA98ED020281C46B89DEAC78E082 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JLRoutes;
-			targetProxy = ED1EC69BB5501710BC3B4775E8CCE05C /* PBXContainerItemProxy */;
-		};
-		58ED7FD27157C256A41D5F5F282EA1D9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = YYModel;
-			targetProxy = 28FCC7F26947641E22D37674DC9F6216 /* PBXContainerItemProxy */;
-		};
-		5D8DB73C69C338D6AB343FA361065B56 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Masonry;
-			targetProxy = 652ABBD8D84218943DC1B71893AAF669 /* PBXContainerItemProxy */;
-		};
-		5F2DA98B5A5BD410CB4E2AEC65726251 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FLEX;
-			targetProxy = 2B230004B9FD5BDB60AFAF6810AA870A /* PBXContainerItemProxy */;
-		};
-		5F9CB7B086F322A481549D7CBE66D763 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Typhoon;
-			targetProxy = A9C0B1D6E29B52D557BE1D4D1CC3A34E /* PBXContainerItemProxy */;
-		};
-		63094ACD1344F1F53693FFF8A039002E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LinqToObjectiveC;
-			targetProxy = 2119CD05330CE355A308780D9A767AC2 /* PBXContainerItemProxy */;
-		};
-		665CB0830327605336ACC10EDDD861EB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = coobjc;
-			targetProxy = 3FC5FBC008D1DACD397154C58A5B26D9 /* PBXContainerItemProxy */;
-		};
-		69788511846EF31ECA88C56EBD53EB22 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-ZDOpenSourceOCDemo";
-			target = A8D9B0512755AA1A625BDBD36B5E1FA8 /* Pods-ZDOpenSourceOCDemo */;
-			targetProxy = B47610B3E11E46F9C461EEDBA102ED68 /* PBXContainerItemProxy */;
-		};
-		71D6BD1AFDBD2A42F21016B428C51D81 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Flipper-Folly";
-			targetProxy = F39B7486769822C6546F8CE5CEC092D8 /* PBXContainerItemProxy */;
-		};
-		782E0B00CEA8291EC04568C3A382D8C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = glog;
-			targetProxy = 0E74A4E2406BA53A822BEC772A8B1A6D /* PBXContainerItemProxy */;
-		};
-		7D8F40674A37EED0BFF0153F129AB35A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ObjectiveSugar;
-			targetProxy = 3F0B349D78D0DD7395039C4218128DF8 /* PBXContainerItemProxy */;
-		};
-		821518543577DF54B8CB3E63561C4A9C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ComponentKit;
-			targetProxy = ADD525DA76D6AF61EEF04A8B5CC933F5 /* PBXContainerItemProxy */;
-		};
-		873D80075E5675D86A9D8B579B4ACE16 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AFNetworking;
-			targetProxy = 282A4BC6E75E4D7AE52188CEA3EBD236 /* PBXContainerItemProxy */;
-		};
-		8FC1373FD5A1A61BAD21545AC9E2F67D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CocoaLibEvent;
-			targetProxy = DCFE061C66A4931BC10A8F685E60B152 /* PBXContainerItemProxy */;
-		};
-		923E4D0F688E4A054ADFA40E14412B73 /* PBXTargetDependency */ = {
+		0189104879A46203F1C5BC2C739BE794 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GDPerformanceView;
-			targetProxy = 161B902D170EEF9C6D7ACE1155A2C778 /* PBXContainerItemProxy */;
+			targetProxy = BAB536A9A04B9ECFE50C070209708E12 /* PBXContainerItemProxy */;
 		};
-		92A9D4173959B690637335B8F4478BC7 /* PBXTargetDependency */ = {
+		059DFA845E26818544E9C7678F903660 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = PINCache;
-			targetProxy = 6FE84DF2B88EE961BFA436B8166F81EF /* PBXContainerItemProxy */;
+			name = YYCache;
+			targetProxy = D2AD0198FF293EF6297E24FA67A1B2F9 /* PBXContainerItemProxy */;
 		};
-		9AC3EDD3D3CC7EA01A0C305305204C82 /* PBXTargetDependency */ = {
+		06087D893131789B82B95D896D7737EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = RTRootNavigationController;
-			targetProxy = EED8332E55B5296605AFA69E5E062068 /* PBXContainerItemProxy */;
+			name = Texture;
+			targetProxy = A6840A7890D999B00C371DC2271D97BF /* PBXContainerItemProxy */;
 		};
-		A2C8A204C9BEF0FE415B4C64C2C8E520 /* PBXTargetDependency */ = {
+		087DD8000642CFC6ED6FA0252270925B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "boost-for-react-native";
-			targetProxy = 6D57686A51BEC36818CF116F238742D1 /* PBXContainerItemProxy */;
+			name = SVProgressHUD;
+			targetProxy = 80B862F3C236253AC11763A4E1D7EF8D /* PBXContainerItemProxy */;
 		};
-		A32F0ACBF9B7CB38FF50F1FF3EAEF717 /* PBXTargetDependency */ = {
+		0DE143F768682E1EFC18E078E60C12B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Yoga;
-			targetProxy = C9013BC7A897B85591BD1E3B11C98E22 /* PBXContainerItemProxy */;
+			targetProxy = DECD26EC786791F3E65CBA0ADA6C0F3C /* PBXContainerItemProxy */;
 		};
-		AC3D2C104ECAF637267FF5CB1BA4F08F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "lottie-ios";
-			targetProxy = ACEA83F44E08CCC12C9CA82B65D1072F /* PBXContainerItemProxy */;
-		};
-		B16A8562CA3063A5AF61E06E20EE8754 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RSSwizzle;
-			targetProxy = D9710AC6B08CABD20E58F49FDFF75FC4 /* PBXContainerItemProxy */;
-		};
-		B2038D132D68F2E61F4EA74642A6950B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LayoutInspector;
-			targetProxy = CDAE4E2256B80E038AF6940928524916 /* PBXContainerItemProxy */;
-		};
-		BBCD1665C883C8A62720A70D79953A72 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "OpenSSL-Static";
-			targetProxy = 21E2EACAE9362BCD87B2279B0B2E077E /* PBXContainerItemProxy */;
-		};
-		BDB75B57B67E8F9D1F9858E99EF2BF56 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MMKV;
-			targetProxy = DC3BD04638BF2CA1185602E6E684FA62 /* PBXContainerItemProxy */;
-		};
-		BEB5ACF85D9A82E354E16FA27EE77547 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Objection;
-			targetProxy = C542468ED22A46DB289B69B634416D80 /* PBXContainerItemProxy */;
-		};
-		C900B71E04A3F45A9A95068EDD531097 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ZDNetWorkHelper;
-			targetProxy = 493F537AA2522C35620BC5F8413E3EA3 /* PBXContainerItemProxy */;
-		};
-		CB450D8827F7B48E50EF4A0A4EDDE9BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Flipper-RSocket";
-			targetProxy = 7C7C1062BA7BD72231AE3C2128282F40 /* PBXContainerItemProxy */;
-		};
-		CBC5659B6488DB833A104EA1F2309AF2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ResumableAssert;
-			targetProxy = 2BF36BFF5F1AD0FC3431EEC5633071A8 /* PBXContainerItemProxy */;
-		};
-		CE6A63605CC5D41FC6E5C081808F68E8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MBProgressHUD;
-			targetProxy = 49BCBA504DEE5E0573E31B14F45EEA2D /* PBXContainerItemProxy */;
-		};
-		CF6969D5957F06D2F37713A37C70C2A8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PINOperation;
-			targetProxy = 3592D82A924124614B379C719F5AF184 /* PBXContainerItemProxy */;
-		};
-		D9DAC655FB671684C2B8EE59EFB41DC5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DirectoryWatchdog;
-			targetProxy = 135201985B83A0839DA0A1347DB23113 /* PBXContainerItemProxy */;
-		};
-		DC56D6B7DFAF7A5C0A7285339683C8CC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PINRemoteImage;
-			targetProxy = FA27FD2C75453EEF4C72096BB7F0E684 /* PBXContainerItemProxy */;
-		};
-		E08524321978AFA55C506D694870008E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DoubleConversion;
-			targetProxy = 95051553293B39CB8B17585A7A69122B /* PBXContainerItemProxy */;
-		};
-		E0D5501B9EE4D56F9F7D24F15B798096 /* PBXTargetDependency */ = {
+		0FCFA7B06E83B31A94303348B7402A81 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = YogaKit;
-			targetProxy = 8541A6DD629BDD45F1C2AE121C296DB8 /* PBXContainerItemProxy */;
+			targetProxy = 94D63040EA04EFA55079780E58D78432 /* PBXContainerItemProxy */;
 		};
-		E8FB63AE1D356E9BB7126B545083DCA4 /* PBXTargetDependency */ = {
+		18A9F4382172E91750CE28DD06D17749 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = cocore;
-			targetProxy = FE94CFC04113214101EC687648B0259D /* PBXContainerItemProxy */;
+			name = "Pods-ZDOpenSourceOCDemo";
+			target = A8D9B0512755AA1A625BDBD36B5E1FA8 /* Pods-ZDOpenSourceOCDemo */;
+			targetProxy = EB3017CDBB045148FA1DDD46603B0BDD /* PBXContainerItemProxy */;
 		};
-		F600767092B68F697CB598E752D8226F /* PBXTargetDependency */ = {
+		1D2EC467DF0FEBAA8E6816F21AF4063B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = CocoaAsyncSocket;
-			targetProxy = 3295EE8525047EAF45D60BFCAFED020C /* PBXContainerItemProxy */;
+			name = ObjectiveSugar;
+			targetProxy = 6BB1F283DBFF15AF0236AF00D16E1D23 /* PBXContainerItemProxy */;
 		};
-		FB5FE2439AEE9D6C5C6FDA6D5D045DFC /* PBXTargetDependency */ = {
+		1E878BFE211384D563A2FE0C5701EFE7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IGListKit;
-			targetProxy = D4DDE5603E25FF09BD105E495BA993D4 /* PBXContainerItemProxy */;
+			targetProxy = 79FD5634DEC92DAE0D0F402865C2E193 /* PBXContainerItemProxy */;
+		};
+		255E2710C5516D59B8BBF24A90ED1B7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "libffi-core";
+			targetProxy = 4C81846B67583953CDC53B78CA382CB5 /* PBXContainerItemProxy */;
+		};
+		3987926BE8A17317626C65FDA42F85D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ChameleonFramework;
+			targetProxy = FDCE9BD7A7C71CE2ECCFB2F1A5211183 /* PBXContainerItemProxy */;
+		};
+		460E6FA75977F30EDCAB1C4117F9E37C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINRemoteImage;
+			targetProxy = 5124A56804F00823AD979219C815613E /* PBXContainerItemProxy */;
+		};
+		59FEA73B9F80CCE8ECED28D5A8F7D252 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = cocore;
+			targetProxy = 6807B5E2F4F860DD05380616A99657A0 /* PBXContainerItemProxy */;
+		};
+		68940BAD930777730B9440DC52C6B951 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YYDispatchQueuePool;
+			targetProxy = F484DCE6ACBB849F9612B85E57229EBF /* PBXContainerItemProxy */;
+		};
+		6BA45373153680515A49045739ABAB27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			targetProxy = CF28418FFFD0B0A97514C1F52D67AB26 /* PBXContainerItemProxy */;
+		};
+		718D66730172EEA00A00B16BADF740C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DirectoryWatchdog;
+			targetProxy = 4CE47397BD3E179809BDCAF28697F40B /* PBXContainerItemProxy */;
+		};
+		788276B98820A6B8B4ECC94B87A3A2DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = fishhook;
+			targetProxy = 9AB979851500562D50A1412D51C7E4D3 /* PBXContainerItemProxy */;
+		};
+		794BEB26785F58EBD26A169127A42B1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FLEX;
+			targetProxy = 03BC9DB0722EA9D02949DFBD8590F6DB /* PBXContainerItemProxy */;
+		};
+		7F2478CC3F1FBAFC3E2A3E8721DDCDD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ZDOpenSourceOCDemo";
+			target = A8D9B0512755AA1A625BDBD36B5E1FA8 /* Pods-ZDOpenSourceOCDemo */;
+			targetProxy = 918198FD0AF881B7007E3F0982E53264 /* PBXContainerItemProxy */;
+		};
+		7F37EF810F503E600ED50B595811135A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LayoutInspector;
+			targetProxy = C4840FF5B5243D0287FCD9B9C1ABEF72 /* PBXContainerItemProxy */;
+		};
+		82936C45650A1613558FF879640AFBBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MMKV;
+			targetProxy = 90EED1BD7139EF0B3C4A156B02D125CC /* PBXContainerItemProxy */;
+		};
+		85D6F639D4385C37B0DB06E2DC34080B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RDVTabBarController;
+			targetProxy = 79142F36AFD195E896FD5D36F41AF696 /* PBXContainerItemProxy */;
+		};
+		87758DE8EC724A0EC2BB45F837A19811 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			targetProxy = 3D78031707EEB6A4C5864226A246242F /* PBXContainerItemProxy */;
+		};
+		89913CBAF4398346B9468F7C22F5F3EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RTRootNavigationController;
+			targetProxy = 8399EF9F549ECCB30E5F86A3F77D1714 /* PBXContainerItemProxy */;
+		};
+		89B9E6F2A4B303A115427BB28D043057 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RSSwizzle;
+			targetProxy = 5E362FAFBF211FAF453E1C4FF33195F6 /* PBXContainerItemProxy */;
+		};
+		8CC0F2137B62046D3A761745B5CFBD1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINOperation;
+			targetProxy = 10F13772CE6800728C0F8F31A60DE947 /* PBXContainerItemProxy */;
+		};
+		8D8F1BD2D717B990E28D0C6A905D9014 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "lottie-ios";
+			targetProxy = F03D9ADFE4E965D0B57EEAF78CC9ACC5 /* PBXContainerItemProxy */;
+		};
+		8E6BD6183ED8F77DA7B834572296E3A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YTKNetwork;
+			targetProxy = C3D15EB96BDFCF593D8AD8DB5A489438 /* PBXContainerItemProxy */;
+		};
+		9072E00F26FEED5DA042680F3E4D0FC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZDToolKit;
+			targetProxy = 10CA4A1C5332008F13C32C4ADB9AE948 /* PBXContainerItemProxy */;
+		};
+		93B151B42ADB2154AAD00A660CA85642 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Typhoon;
+			targetProxy = 8D5D3781F32D6BE47C875D9FADE1090B /* PBXContainerItemProxy */;
+		};
+		A1531225B86ED23738D60A68059A002D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromiseKit;
+			targetProxy = 1E9A56C514C6FC00FEEA6511EF226F3F /* PBXContainerItemProxy */;
+		};
+		AFFFB876A9AB89C191ECAB1B8763F589 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YYModel;
+			targetProxy = 7462E8CA97EAC2326FA605CD844F2F71 /* PBXContainerItemProxy */;
+		};
+		B08D5C6FB32AB38EFA576DA2F2EE86A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Objection;
+			targetProxy = 67E157CCA10E2E116A57F048611BD3A9 /* PBXContainerItemProxy */;
+		};
+		B5E0A6F39449A0E542033E7AE9AEDC4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ReactiveObjC;
+			targetProxy = DB7CA5067A6AAB8FF4DBC4C8596DCE78 /* PBXContainerItemProxy */;
+		};
+		B626BC01BD58F3C4A4D79463E93D21C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINCache;
+			targetProxy = D6D7F5065D3B4EB647609C8506B9BECE /* PBXContainerItemProxy */;
+		};
+		B994F320C726C88E2F7344A5CAFDEB0E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LinqToObjectiveC;
+			targetProxy = 19D5CBB3618BE9886EC95D7264BF9DAF /* PBXContainerItemProxy */;
+		};
+		BE98121748C4EA82ED90714C6B14E48A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = coobjc;
+			targetProxy = 464D9E27E961F9FFFA4CBAF125AAEDA9 /* PBXContainerItemProxy */;
+		};
+		C5B69AA26EBC4AA0D4799CD8253FDB9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ResumableAssert;
+			targetProxy = 846428E71C132504D4098A9F024CBC7E /* PBXContainerItemProxy */;
+		};
+		C91F85CDCCEE51E500E2E22C10CBB590 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libextobjc;
+			targetProxy = DA377DBECD0424B6DC7733382E18DFC5 /* PBXContainerItemProxy */;
+		};
+		DC1C88BD2967D2AAAFE6F5B4518C9B66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZIKRouter;
+			targetProxy = 873F953DA0ED6BA2BABD4FE5E7FFA661 /* PBXContainerItemProxy */;
+		};
+		E3E25AEB891E243434530D0A58C578A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JLRoutes;
+			targetProxy = 00AC1C118B1E2C946FE1C40E1373DF03 /* PBXContainerItemProxy */;
+		};
+		E4ABA8CFAE1729C1D01DD1AB1468E565 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ZDNetWorkHelper;
+			targetProxy = 5234A0A21C75F916587B451CC394C976 /* PBXContainerItemProxy */;
+		};
+		EF5A2E8B674596C83ABFC3478BD0F537 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Masonry;
+			targetProxy = 894B1B5B125370EF65263CA8155495FA /* PBXContainerItemProxy */;
+		};
+		F828AD0E7FD7360C0C896E869D4B3614 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Toast;
+			targetProxy = AB7536AA97A4C6D82006CC123DC9C3A0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		063E16D98769E83DB41AC1630A4A7A87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A44C9AC1D01F9027D9543A83B97134C /* Pods-ZDOpenSourceOCDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		196DFA3E4A09A28224918543529A1885 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1357,52 +1238,109 @@
 			};
 			name = Debug;
 		};
-		691A6BEBDA8EEC42BF9E776D6CE56487 /* Debug */ = {
+		2608AA1979BDB4CD44892C2591DF5323 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A37A9856327F6284B9D7B6B2FD894149 /* Pods-ZDOpenSourceOCDemoTests.debug.xcconfig */;
+			baseConfigurationReference = 74D8C966207A36BE882007BF9C400648 /* Pods-ZDOpenSourceOCDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZDOpenSourceOCDemoTests/Pods-ZDOpenSourceOCDemoTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZDOpenSourceOCDemoTests/Pods-ZDOpenSourceOCDemoTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		780D0A0BB3D810D1CAEFBFD2C0C6C384 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B266D3FAFD83D6546A031733C222476C /* Pods-ZDOpenSourceOCDemoTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		6D610BE2DBEFCB40B801A020CE72ABE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D1AFF2F1566A3E4669BE849803DBA99 /* Pods-ZDOpenSourceOCDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8356916F450B92F4769F07043617B3E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18F09F1160099D679D349F6ACB996DC1 /* Pods-ZDOpenSourceOCDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZDOpenSourceOCDemoUITests/Pods-ZDOpenSourceOCDemoUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZDOpenSourceOCDemoUITests/Pods-ZDOpenSourceOCDemoUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		B01D14FDC83DCF9D4BE53066BEA96D05 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1464,114 +1402,78 @@
 			};
 			name = Release;
 		};
-		BA6571FB0CDA346CEC7E1E50168BC894 /* Debug */ = {
+		D244B7BC37051B7DD669D0297A27BAFC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D110F8E0F3DE2A42E5C75FE21A69C6C3 /* Pods-ZDOpenSourceOCDemo.debug.xcconfig */;
+			baseConfigurationReference = B106200D32A74C546AB9B9AC39B8DE0A /* Pods-ZDOpenSourceOCDemoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZDOpenSourceOCDemoUITests/Pods-ZDOpenSourceOCDemoUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-ZDOpenSourceOCDemoUITests/Pods-ZDOpenSourceOCDemoUITests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D43960376403890FBC19606B2AA199BC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E21A6B406E93D19ABA2DDA6E4E105C49 /* Pods-ZDOpenSourceOCDemoUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		DCB1910C181924CF68C0964C16555830 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 34E54739B24C76D4D783A46008ADD3EB /* Pods-ZDOpenSourceOCDemo.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ZDOpenSourceOCDemo/Pods-ZDOpenSourceOCDemo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		F6D0E6792874C2DCAEF48CAB135FF506 /* Release */ = {
+		D8EF982F2223FA13373187333F8E4C54 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D07C48F8B7AF93504BB5357440F67CE6 /* Pods-ZDOpenSourceOCDemoUITests.release.xcconfig */;
+			baseConfigurationReference = 12F92C6A70C465C3AD08DDE3A513AF31 /* Pods-ZDOpenSourceOCDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ZDOpenSourceOCDemoTests/Pods-ZDOpenSourceOCDemoTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ZDOpenSourceOCDemoTests/Pods-ZDOpenSourceOCDemoTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1B83B7B31539F89AB50905297322FF43 /* Build configuration list for PBXNativeTarget "Pods-ZDOpenSourceOCDemo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BA6571FB0CDA346CEC7E1E50168BC894 /* Debug */,
-				DCB1910C181924CF68C0964C16555830 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1581,20 +1483,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ABF303295E9F46F3CF0442AC34F260F0 /* Build configuration list for PBXNativeTarget "Pods-ZDOpenSourceOCDemoTests" */ = {
+		8C97D2F9C8B9698A99C0DE836CDE9245 /* Build configuration list for PBXNativeTarget "Pods-ZDOpenSourceOCDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				691A6BEBDA8EEC42BF9E776D6CE56487 /* Debug */,
-				780D0A0BB3D810D1CAEFBFD2C0C6C384 /* Release */,
+				063E16D98769E83DB41AC1630A4A7A87 /* Debug */,
+				6D610BE2DBEFCB40B801A020CE72ABE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EF9687D6782DBD41979BE4E68BAE376B /* Build configuration list for PBXNativeTarget "Pods-ZDOpenSourceOCDemoUITests" */ = {
+		D533B54B18E864B0CABAAEFA706A448F /* Build configuration list for PBXNativeTarget "Pods-ZDOpenSourceOCDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D43960376403890FBC19606B2AA199BC /* Debug */,
-				F6D0E6792874C2DCAEF48CAB135FF506 /* Release */,
+				D8EF982F2223FA13373187333F8E4C54 /* Debug */,
+				2608AA1979BDB4CD44892C2591DF5323 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8B1811886BFF5AF0922FA88739C6468 /* Build configuration list for PBXNativeTarget "Pods-ZDOpenSourceOCDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8356916F450B92F4769F07043617B3E1 /* Debug */,
+				D244B7BC37051B7DD669D0297A27BAFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

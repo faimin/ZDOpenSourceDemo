@@ -13,7 +13,7 @@
 #if __has_include(<Buglife/Buglife.h>)
 #import <Buglife/Buglife.h>
 #endif
-#if __has_include(<FlipperKit-umbrella>)
+#if __has_include(<FlipperKit-umbrella.h>)
 #import <FlipperKit/FlipperClient.h>
 #import <FlipperKitLayoutPlugin/FlipperKitLayoutPlugin.h>
 #import <FlipperKitLayoutComponentKitSupport/FlipperKitLayoutComponentKitSupport.h>
@@ -63,7 +63,7 @@
     FlipperClient *client = [FlipperClient sharedClient];
     SKDescriptorMapper *layoutDescriptorMapper = [[SKDescriptorMapper alloc] initWithDefaults];
     [FlipperKitLayoutComponentKitSupport setUpWithDescriptorMapper: layoutDescriptorMapper];
-    [client addPlugin: [[FlipperKitLayoutPlugin alloc] initWithRootNode:application
+    [client addPlugin: [[FlipperKitLayoutPlugin alloc] initWithRootNode:UIApplication.sharedApplication
                                                    withDescriptorMapper: layoutDescriptorMapper]];
     
     [client addPlugin:[[FKUserDefaultsPlugin alloc] initWithSuiteName:nil]];

@@ -629,12 +629,10 @@ NSErrorDomain const ZIKRouteErrorDomain = @"ZIKRouteErrorDomain";
             hasMakedDestination = YES;            
         }
     }
-    if (!hasMakedDestination) {
-        if (configuration._prepareDestination) {
-            configuration._prepareDestination(destination);
-        }
-        [self prepareDestination:destination configuration:configuration];
+    if (configuration._prepareDestination) {
+        configuration._prepareDestination(destination);
     }
+    [self prepareDestination:destination configuration:configuration];
     [self didFinishPrepareDestination:destination configuration:configuration];
     if ([configuration conformsToProtocol:@protocol(ZIKConfigurationAsyncMakeable)] && [configuration respondsToSelector:@selector(didMakeDestination)]) {
         id<ZIKConfigurationAsyncMakeable> makeableConfig = (id)configuration;
@@ -915,7 +913,7 @@ NSErrorDomain const ZIKRouteErrorDomain = @"ZIKRouteErrorDomain";
 }
 
 + (NSInteger)recursiveDepth {
-    NSNumber *depth = objc_getAssociatedObject(self, @"ZIKRouter_recursiveDepth");
+    NSNumber *depth = objc_getAssociatedObject(self, @selector(recursiveDepth));
     if ([depth isKindOfClass:[NSNumber class]]) {
         return [depth unsignedIntegerValue];
     }
@@ -926,7 +924,7 @@ NSErrorDomain const ZIKRouteErrorDomain = @"ZIKRouteErrorDomain";
     if (depth < 0) {
         depth = 0;
     }
-    objc_setAssociatedObject(self, @"ZIKRouter_recursiveDepth", @(depth), OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(self, @selector(recursiveDepth), @(depth), OBJC_ASSOCIATION_RETAIN);
 }
 
 #pragma mark Getter/Setter

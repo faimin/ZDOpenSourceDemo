@@ -11,7 +11,7 @@
 ![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)
 ![license](https://img.shields.io/github/license/mashape/apistatus.svg)
 
-An interface-oriented router for discovering modules and injecting dependencies with protocol.
+An interface-oriented router for managing modules and injecting dependencies with protocol.
 
 The view router can perform all navigation types in UIKit / AppKit through one method.
 
@@ -31,24 +31,25 @@ Service Router 可以管理任意自定义模块。View Router 进一步封装�
 
 ## Features
 
-- [x] Support Swift and Objective-C
-- [x] Support iOS, macOS and tvOS
-- [x] Routing for UIViewController / NSViewController, UIView / NSView and any OC class and swift class
+- [x] Swift and Objective-C support
+- [x] iOS, macOS and tvOS support
+- [x] File template for quickly creating router
+- [x] Routing for UIViewController / NSViewController, UIView / NSView and any class
 - [x] Dependency injection, including dynamic injection and static injection
-- [x] **Declare routable protocol for compile-time checking. Using undeclared protocol will bring compile error. This is one of the most powerful feature**
-- [x] **Locate module with its protocol**
-- [x] **Locate module with identifier, compatible with other URL router frameworks**
-- [x] **Prepare the module with its protocol when performing route, rather than passing a parameter dictionary**
-- [x] **Use different required protocol and provided protocol inside module and module's user to make thorough decouple**
-- [x] **Decouple modules and add compatible interfaces with adapter**
-- [x] **Support storyboard. UIViewController / NSViewController and UIView / NSView from a segue can auto create it's registered router**
-- [x] Encapsulate navigation methods in UIKit and AppKit (push, present modally, present as popover present as sheet, segue, show, showDetail, addChildViewController, addSubview) and custom transitions into one method
-- [x] Remove an UIViewController/UIView or unload a module through one method, without using pop、dismiss、removeFromParentViewController、removeFromSuperview in different situations. Router can choose the proper method
+- [x] **Declaration of routable protocol for compile-time checking. Using undeclared protocol will bring compiler error. This is one of the most powerful feature**
+- [x] **Module matching with its protocol**
+- [x] **URL routing support**
+- [x] **Configure the module with its protocol rather than a parameter dictionary**
+- [x] **Required protocol and provided protocol for making thorough decouple**
+- [x] **Adapter for decoupling modules and add compatible interfaces**
+- [x] **Storyboard support. Views from a segue can be auto prepared**
+- [x] Encapsulation for all transition methods and unwind methods in UIKit / AppKit, and also custom transition
 - [x] Error checking for view transition
 - [x] AOP for view transition
-- [x] Detect memory leaks
-- [x] Send custom events to router
-- [x] Auto register all routers
+- [x] Memory leak detection
+- [x] Custom events handling
+- [x] Auto registration
+- [x] Highly scalable
 
 ## Quick Start Guide
 
@@ -65,7 +66,9 @@ Service Router 可以管理任意自定义模块。View Router 进一步封装�
    6. [Prepare on Destination](#Prepare-on-Destination)
    7. [Remove](#Remove)
    8. [Adapter](#Adapter)
-   9. [URL Router](#URL-Router)
+   9. [Modularization](#Modularization)
+   10. [URL Router](#URL-Router)
+   11. [Other Features](#Other-Features)
 4. [Service Router](#Service-Router)
 5. [Demo and Practice](#Demo-and-Practice)
 6. [File Template](#File-Template)
@@ -94,6 +97,7 @@ Service Router 可以管理任意自定义模块。View Router 进一步封装�
 4. [Dependency Injection](Documentation/English/DependencyInjection.md)
 5. [Circular Dependency](Documentation/English/CircularDependencies.md)
 6. [Module Adapter](Documentation/English/ModuleAdapter.md)
+7. [Unit Test](Documentation/English/UnitTest.md)
 
 [FAQ](Documentation/English/FAQ.md)
 
@@ -112,18 +116,18 @@ Add this to your Podfile.
 For Objective-C project:
 
 ```
-pod 'ZIKRouter', '>= 1.0.12'
+pod 'ZIKRouter', '>= 1.1.1'
 
 # or only use ServiceRouter
-pod 'ZIKRouter/ServiceRouter' , '>=1.0.12'
+pod 'ZIKRouter/ServiceRouter' , '>=1.1.1'
 ```
 For Swift project:
 
 ```
-pod 'ZRouter', '>= 1.0.12'
+pod 'ZRouter', '>= 1.1.1'
 
 # or only use ServiceRouter
-pod 'ZRouter/ServiceRouter' , '>=1.0.12'
+pod 'ZRouter/ServiceRouter' , '>=1.1.1'
 ```
 
 ### Carthage
@@ -131,7 +135,7 @@ pod 'ZRouter/ServiceRouter' , '>=1.0.12'
 Add this to your Cartfile:
 
 ```
-github "Zuikyo/ZIKRouter" >= 1.0.12
+github "Zuikyo/ZIKRouter" >= 1.1.1
 ```
 
 Build frameworks:
@@ -258,6 +262,8 @@ class NoteEditorViewRouter: ZIKViewRouter<NoteEditorViewController, ViewRouteCon
 ```
 
 </details>
+
+Each router can control their own routing, such as using different custom transition. And the router can be very easy to add additional features.
 
 Read the documentation for more details and more methods to override.
 
@@ -492,7 +498,7 @@ For more detail, read [Perform Route](Documentation/English/PerformRoute.md).
 
 #### Make Destination
 
-If you don't wan't to show a view, but only need to get instance of the module, you can use `makeDestination`:
+If you don't want to show a view, but only need to get instance of the module, you can use `makeDestination`:
 
 ```swift
 // destination is inferred as EditorViewInput
@@ -508,7 +514,7 @@ id<EditorViewInput> destination = [ZIKRouterToView(EditorViewInput) makeDestinat
 
 #### Required Parameter and Special Parameter
 
-Some parameters can be delivered though destination's protocol:
+Some parameters can't be delivered though destination's protocol:
 
 * the destination class uses custom initializers to create instance, router needs to get required parameter from the caller
 
@@ -521,7 +527,7 @@ Instead of  `EditorViewInput`, we use another routable protocol `EditorViewModul
 ```swift
 // In general, a module config protocol only contains `makeDestinationWith`, for declaring parameters and destination type. You can also add other properties or methods
 protocol EditorViewModuleInput: class {
-    // Transfer parameters and make destination
+    // Factory method for transferring parameters and making destination
     var makeDestinationWith: (_ note: Note) -> EditorViewInput? { get }
 }
 ```
@@ -531,187 +537,14 @@ protocol EditorViewModuleInput: class {
 ```objectivec
 // In general, a module config protocol only contains `makeDestinationWith`, for declaring parameters and destination type. You can also add other properties or methods
 @protocol EditorViewModuleInput <ZIKViewModuleRoutable>
- // Transfer parameters and make destination
+ // Factory method for transferring parameters and making destination
 @property (nonatomic, copy, readonly) id<EditorViewInput> _Nullable(^makeDestinationWith)(Note *note);
 @end
 ```
 
 </details>
 
-You can use a configuration subclass and store parameters on its properties.
-
-<details><summary>Configuration Subclass</summary>
-
-```swift
-// Configuration subclass conforming to EditorViewModuleInput
-// Swift generic class won't be in the `__objc_classlist` section of the Mach-O file. So it won't affect the app launching time.
-class EditorViewModuleConfiguration<T>: ZIKViewMakeableConfiguration<NoteEditorViewController>, EditorViewModuleInput {
-    // User is responsible for calling makeDestinationWith and giving parameters
-    var makeDestinationWith: (_ note: Note) -> EditorViewInput? {
-        return { note in
-            // Capture parameters in makeDestination, so we don't need configuration subclass to hold the parameters
-            // MakeDestination will be used for creating destination instance
-            self.makeDestination = { [unowned self] () in
-                // Use custom initializer
-                let destination = NoteEditorViewController(note: note)
-                return destination
-            }
-            if let destination = self.makeDestination?() {
-                // Set makedDestination so router will use this destination when performing
-                self.makedDestination = destination
-                return destination
-            }
-            return nil
-        }
-    }
-}
-
-func makeEditorViewModuleConfiguration() -> ZIKViewMakeableConfiguration<NoteEditorViewController> & EditorViewModuleInput {
-	return EditorViewModuleConfiguration<Any>()
-}
-```
-
-</details>
-
-If the protocol is very simple and you don't need a configuration subclass,or you're using Objective-C and don't want too many subclass, you can choose generic class`ViewMakeableConfiguration`and`ZIKViewMakeableConfiguration`:
-
-```swift
-extension ViewMakeableConfiguration: EditorViewModuleInput where Destination == EditorViewInput, Constructor == (Note) -> EditorViewInput? {
-}
-
-// ViewMakeableConfiguration with generic arguments works as the same as  EditorViewModuleConfiguration
-// The config works like EditorViewModuleConfiguration<Any>()
-func makeEditorViewModuleConfiguration() -> ViewMakeableConfiguration<EditorViewInput, (Note) -> EditorViewInput?> {
-    let config = ViewMakeableConfiguration<EditorViewInput, (Note) -> EditorViewInput?>({ _ in})
-    
-    // User is responsible for calling makeDestinationWith and giving parameters
-    config.makeDestinationWith = { [unowned config] note in
-        // Capture parameters in makeDestination, so we don't need configuration subclass to hold the parameters
-        // MakeDestination will be used for creating destination instance
-        config.makeDestination = { () in
-            // Use custom initializer
-            let destination = NoteEditorViewController(note: note)
-            return destination
-        }
-        if let destination = config.makeDestination?() {
-            // Set makedDestination so router will use this destination when performing
-            config.makedDestination = destination
-            return destination
-        }
-        return nil
-    }
-    return config
-}
-
-```
-
-<details><summary>Objective-C Sample</summary>
-
-Generic class`ZIKViewMakeableConfiguration`has property`makeDestinationWith`with`id(^)()`type. `id(^)()`means the block can accept any parameters. So you can declare your custom parameters of `makeDestinationWith` in protocol.
-
-```objectivec
-// The config works like EditorViewModuleConfiguration
-ZIKViewMakeableConfiguration<NoteEditorViewController *> * makeEditorViewModuleConfiguration() {
-    ZIKViewMakeableConfiguration<NoteEditorViewController *> *config = [ZIKViewMakeableConfiguration<NoteEditorViewController *> new];
-    __weak typeof(config) weakConfig = config;
-    
-    // User is responsible for calling makeDestinationWith and giving parameters
-    config.makeDestinationWith = ^id<EditorViewInput> _Nullable(Note *note) {
-        // Capture parameters in makeDestination, so we don't need configuration subclass to hold the parameters
-        // MakeDestination will be used for creating destination instance
-        weakConfig.makeDestination = ^ NoteEditorViewController * _Nullable{
-            // Use custom initializer
-            NoteEditorViewController *destination = [NoteEditorViewController alloc] initWithNote:note];
-            return destination;
-        };
-        // Set makedDestination so router will use this destination when performing
-        weakConfig.makedDestination = weakConfig.makeDestination();
-        return weakConfig.makedDestination;
-    };
-    return config;
-}
-```
-
-</details>
-
-Override`defaultRouteConfiguration`in router to use your custom configuration:
-
-```swift
-class EditorViewRouter: ZIKViewRouter<NoteEditorViewController, ZIKViewMakeableConfiguration<NoteEditorViewController>> {
-    
-    override class func registerRoutableDestination() {
-        // Register class
-        registerView(NoteEditorViewController.self)
-        // Register module config protocol, then we can use this protocol to fetch the router
-        register(RoutableViewModule<EditorViewModuleInput>())
-    }
-    
-    // Use custom configuration
-    override class func defaultRouteConfiguration() -> ZIKViewMakeableConfiguration<NoteEditorViewController> {
-        return makeEditorViewModuleConfiguration()
-    }
-    
-    override func destination(with configuration: ZIKViewMakeableConfiguration<NoteEditorViewController>) -> NoteEditorViewController? {
-        if let makeDestination = configuration.makeDestination {
-            return makeDestination()
-        }
-        return nil
-    }
-    ...
-}
-```
-
-<details><summary>Objective-C Sample</summary>
-
-```swift
-@interface EditorViewRouter: ZIKViewRouter<NoteEditorViewController, ZIKViewMakeableConfiguration<NoteEditorViewController>>
-@end
-@implementation EditorViewRouter {
-    
-+ (void) registerRoutableDestination {
-    // Register class
-    [self registerView:[NoteEditorViewController class]];
-    // Register module config protocol, then we can use this protocol to fetch the router
-    [self registerModuleProtocol:ZIKRoutable(EditorViewModuleInput)];
-}
-    
-// Use custom configuration
-+(ZIKViewMakeableConfiguration<NoteEditorViewController *> *)defaultRouteConfiguration() {
-    return makeEditorViewModuleConfiguration();
-}
-
-- (NoteEditorViewController *)destinationWithConfiguration:(ZIKViewMakeableConfiguration<NoteEditorViewController *> *)configuration {
-	if (configuration.makeDestination) {
-	    return configuration.makeDestination();
-	}
-	return nil;
-}
-...
-}
-```
-
-</details>
-
-If you're not using router subclass, you can register config factory to create route:
-
-```swift
-// Register EditorViewModuleInput and factory function of custom configuration
-ZIKAnyViewRouter.register(RoutableViewModule<EditorViewModuleInput>(),
-   forMakingView: NoteEditorViewController.self, 
-   making: makeEditorViewModuleConfiguration)
-```
-
-<details><summary>Objective-C Sample</summary>
-
-```objectivec
-// Register EditorViewModuleInput and factory function of custom configuration
-[ZIKModuleViewRouter(EditorViewModuleInput)
-     registerModuleProtocol:ZIKRoutable(EditorViewModuleInput)
-     forMakingView:[NoteEditorViewController class]
-     factory: makeEditorViewModuleConfiguration];
-```
-
-</details>
+This configuration works like a factory for the destination with `EditorViewModuleInput` protocol. It declares parameters for creating the destination.
 
 Now the user can use the module with its module config protocol and transfer parameters:
 
@@ -736,8 +569,6 @@ Note *note = ...
 ```
 
 </details>
-
-In this design pattern, we reduce much glue code for transferring parameters, and the module can re-declare their parameters with generic arguments and module config protocol.
 
 For more detail, read [Transfer Parameters with Custom Configuration](Documentation/English/CustomConfiguration.md).
 
@@ -1026,13 +857,19 @@ class TestViewController: UIViewController {
 
 Use `required protocol` and `provided protocol` to perfectly decouple modules, adapt interface and declare dependencies of the module. And you don't have to use a public header to manage those protocols.
 
-You need to connect required protocol and provided protocol. For more detail, read [Module Adapter](Documentation/English/ModuleAdapter.md).
+### Modularization
+
+Separating `required protocol` and `provided protocol` makes your code truly modular. The caller declares its `required protocol`, and the provided module can easily be replaced by another module with the same `required protocol`.
+
+Read the `ZIKLoginModule` module in demo. The login module depends on an alert module, and the alert module is different in `ZIKRouterDemo ` and `ZIKRouterDemo-macOS`. You can change the provided module without changing anything in the login module.
+
+For more detail, read [Module Adapter](Documentation/English/ModuleAdapter.md).
 
 ### URL Router
 
 ZIKRouter also provides a default URLRouter. It's easy to communicate with modules via url.
 
-URLRouter is not contained by default. If you wan't to use it, add submodule `pod 'ZIKRouter/URLRouter'` to your  `Podfile` , and call `[ZIKRouter enableDefaultURLRouteRule]` to enable URLRouter.
+URLRouter is not contained by default. If you want to use it, add submodule `pod 'ZIKRouter/URLRouter'` to your  `Podfile` , and call `[ZIKRouter enableDefaultURLRouteRule]` to enable URLRouter.
 
 You can register router with a url:
 
@@ -1111,6 +948,15 @@ public func application(_ app: UIApplication, open url: URL, options: [UIApplica
 
 If your project has different requirements for URL router, you can write your URL router by yourself. You can create custom ZIKRouter as parent class, add more powerful features in it. See `ZIKRouter+URLRouter.h`.
 
+### Other Features
+
+There're other features, you can get details in the documentation:
+
+- [Custom Transition](Documentation/English/PerformRoute.md#Custom-Transition) in each router, such as switching view controller in tab bar
+- [Storyboard](Documentation/English/Storyboard.md)
+-  [AOP](Documentation/English/AOP.md) callback in view transition
+- [Handle Custom Event](Documentation/English/PerformRoute.md#Custom-Event)
+
 ### Service Router
 
 Instead of view, you can also get any service modules:
@@ -1168,7 +1014,7 @@ class TestViewController: UIViewController {
 
 ZIKRouter is designed for VIPER architecture at first. But you can also use it in MVC or anywhere.
 
-The demo (ZIKRouterDemo) in this repository shows how to use ZIKRouter to perform each route type.
+The demo (ZIKRouterDemo) in this repository shows how to use ZIKRouter to perform each route type. Open `Router.xcworkspace` to run it.
 
 If you want to see how it works in a VIPER architecture app, go to [ZIKViper](https://github.com/Zuikyo/ZIKViper).
 

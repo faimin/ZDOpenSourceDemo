@@ -20,7 +20,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZIKViewMakeableConfiguration<__covariant Destination> ()
-/// Prepare the destination from the router internal before `prepareDestination:configuration:`.
+/**
+ Prepare the destination from the router internal before `prepareDestination:configuration:`.
+
+ When it's removed and routed again, this method may be called more than once. You should check whether the destination is already prepared to avoid unnecessary preparation.
+ */
 @property (nonatomic, copy, nullable) void(^_prepareDestination)(Destination destination);
 @end
 
@@ -31,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark Required Override
 
-/// Register the destination class with those +registerXXX: methods. ZIKViewRouter will call this method before app did finish launching. If a router was not registered with any view class, there'll be an assert failure.
+/// Register the destination class with those +registerXXX: methods. ZIKViewRouter will call this method before app did finish launching. You can also initialize your module in it. If a router was not registered with any view class, there'll be an assert failure.
 + (void)registerRoutableDestination;
 
 /**
@@ -58,7 +62,36 @@ NS_ASSUME_NONNULL_BEGIN
 + (ZIKViewRouteTypeMask)supportedRouteTypes;
 
 /**
- Whether the destination is all prepared, if not, it requires the performer to prepare it. This method is for destination from storyboard and UIView from -addSubview:.
+ Whether the router should be auto created for destination from storyboard segue or from external addSubview:.
+ @discussion
+ A router will be auto created when destination is routing from storyboard or UIView/NSView from external -addSubview:. See -destinationFromExternalPrepared: for more details.
+ 
+ Sometimes you don't want to auto create the router when the destination already has a router or is already prepared. It's OK to recreate the router but it's recommanded to check and avoid those unnecessary auto creating.
+ 
+ @note
+ UIKit may implicitly remove and add the UIView during some animation. If the routable UIView is the root view of a view controller, it may be removed and added to an animating view when the view controller performs some view transition to another view controller, such as -pushViewController:animated: and popViewControllerAnimated:. So the router may be auto created again because the view is removed and added again when pushed to another view controller and poping back.
+ Sample code:
+ @code
+ + (BOOL)shouldAutoCreateForDestination:(id)destination fromSource:(nullable id)source {
+     // You can check whether the destination already has a router or is already prepared, then you can ignore this auto creating.
+     if ([destination isKindOfClass:[UIView class]]) {
+         UIView *view = destination;
+         if ([view zix_isRootView] && [view zix_isDuringNavigationTransitionBack]) {
+            return NO;
+         }
+     }
+     return YES;
+ }
+ @endcode
+ 
+ @param destination The view from external, such as UIViewController from storyboard and UIView from -addSubview:.
+ @param source The source UIViewController or UIView.
+ @return Return YES to create the router, otherwise return NO. Default is YES.
+ */
++ (BOOL)shouldAutoCreateForDestination:(Destination)destination fromSource:(nullable id)source;
+
+/**
+ Whether the destination is all prepared, if not, it requires the performer to prepare it. This method is for destination from storyboard and UIView from external -addSubview:.
  @discussion
  Destination created from external will use this method to determine whether the router have to search the performer to prepare itself by invoking performer's -prepareDestinationFromExternal:configuration:.
  
@@ -69,7 +102,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  When an UIViewController conforms to ZIKRoutableView, and is routing from storyboard segue or from -instantiateInitialViewController, a router will be auto created to prepare the UIViewController. If the destination needs preparing (-destinationFromExternalPrepared: returns NO), the segue's sourceViewController is responsible for preparing in delegate method -prepareDestinationFromExternal:configuration:. But When you show destination without router, such as use `[source presentViewController:destination animated:NO completion:nil]`, the routers can get AOP callback, but can't search source view controller to prepare the destination. So the router won't be auto created. If you use a router as a dependency injector for preparing the UIViewController, you should always display the UIViewController instance with router.
  
- When Adding a registered UIView by code or xib, a router will be auto created. We search the view controller of custom class (not system class like native UINavigationController, or any container view controller) in its responder hierarchy as the performer. If the registered UIView needs preparing (-destinationFromExternalPrepared: returns NO), you have to add the view to a superview in a view controller before it's removed from superview. There will be an assert failure if there is no view controller to prepare it (such as: 1. add it to a superview, and the superview is never added to a view controller; 2. add it to an UIWindow). If your custom class view use a routable view as its subview, the custom view should use a router to add and prepare the routable view, then the routable view doesn't need to search performer because it's already prepared.
+ When Adding a routable UIView with -addSubview: or from xib, a router will be auto created. We search the view controller of custom class (not system class like native UINavigationController, or any container view controller) in its responder hierarchy as the performer. If the registered UIView needs preparing (-destinationFromExternalPrepared: returns NO), you have to add the view to a superview in a view controller before it's removed from superview. There will be an assert failure if there is no view controller to prepare it (such as: 1. add it to a superview, and the superview is never added to a view controller; 2. add it to an UIWindow). If your custom class view use a routable view as its subview, the custom view should use a router to add and prepare the routable view, then the routable view doesn't need to search performer because it's already prepared.
  
  @param destination The view from external, such as UIViewController from storyboard and UIView from -addSubview:.
  @return If the destination requires the performer to prepare it, return NO, then router will call performer's -prepareDestinationFromExternal:configuration:. Default is YES.
@@ -79,16 +112,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)destinationPrepared:(Destination)destination API_DEPRECATED_WITH_REPLACEMENT("destinationFromExternalPrepared:", ios(7.0, 7.0));
 
 /**
- Prepare the destination with the configuration when view first appears.
+ Prepare the destination with the configuration when view first appears. When it's removed and routed again, it's alse treated as first appearance, so this method may be called more than once. You should check whether the destination is already prepared to avoid unnecessary preparation.
  
  The reason of separating instantiation and preparation of destination, is that not all destination are creating from `destinationWithConfiguration:` (destination from storyboard or external), we can reuse the preparation code if we put them in this method.
  
- @note
- When it's removed and routed again, it's alse treated as first appearance, so this method may be called more than once. You should check whether the destination is already prepared to avoid unnecessary preparation.
- 
  If you get a prepared destination by ZIKViewRouteTypeMakeDestination or -prepareDestination:configuring:removing:, this method will be called. When the destination is routing, this method will also be called, because the destination may be changed.
- 
- If configuration conforms to ZIKConfigurationSyncMakeable and makedDestination is not nil, this method won't be called, because destination should already be prepared.
  
  Unwind segue to destination won't call this method.
  

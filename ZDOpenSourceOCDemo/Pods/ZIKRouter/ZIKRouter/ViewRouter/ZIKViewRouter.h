@@ -42,7 +42,6 @@ NS_ASSUME_NONNULL_BEGIN
  + (void)registerRoutableDestination {
     [self registerView:[LoginViewController class]];
     [self registerViewProtocol:ZIKRoutable(LoginViewInput)];
-    [self registerIdentifier:@"app://urlscheme/aview"];
  }
  
  - (id<LoginViewInput>)destinationWithConfiguration:(ZIKViewRouteConfiguration *)configuration {
@@ -450,9 +449,6 @@ typedef void(^ZIKViewRouteGlobalErrorHandler)(__kindof ZIKViewRouter * _Nullable
         };
         // Set makedDestination, so the router won't make destination and prepare destination again when perform with this configuration
         weakConfig.makedDestination = weakConfig.makeDestination();
-        if (weakConfig._prepareDestination) {
-            weakConfig._prepareDestination(weakConfig.makedDestination);
-        }
         return weakConfig.makedDestination;
     };
     return config;
@@ -523,9 +519,6 @@ typedef void(^ZIKViewRouteGlobalErrorHandler)(__kindof ZIKViewRouter * _Nullable
             };
             // Set makedDestination, so the router won't make destination and prepare destination again when perform with this configuration
             weakConfig.makedDestination = weakConfig.makeDestination();
-            if (weakConfig._prepareDestination) {
-                weakConfig._prepareDestination(weakConfig.makedDestination);
-            }
             return weakConfig.makedDestination;
         };
         return config;
@@ -624,7 +617,7 @@ typedef void(^ZIKViewRouteGlobalErrorHandler)(__kindof ZIKViewRouter * _Nullable
 @end
 
 /// Add module config protocol that only has makeDestinationWith, or constructDestination and didMakeDestination to ZIKViewMakeableConfiguration.
-#define DeclareRoutableViewModuleProtocol(PROTOCOL) DeclareMakeableConfig(ZIKViewMakeableConfiguration, PROTOCOL)
+#define DeclareRoutableViewModuleProtocol(PROTOCOL) ZIX_ADD_CATEGORY(ZIKViewMakeableConfiguration, PROTOCOL)
 
 @interface ZIKViewRouter (Utility)
 

@@ -220,9 +220,6 @@ typedef void(^ZIKServiceRouteGlobalErrorHandler)(__kindof ZIKServiceRouter * _Nu
         };
         // Set makedDestination, so the router won't make destination and prepare destination again when perform with this configuration
         weakConfig.makedDestination = weakConfig.makeDestination();
-        if (weakConfig._prepareDestination) {
-            weakConfig._prepareDestination(weakConfig.makedDestination);
-        }
         return weakConfig.makedDestination;
     };
     return config;
@@ -290,9 +287,6 @@ typedef void(^ZIKServiceRouteGlobalErrorHandler)(__kindof ZIKServiceRouter * _Nu
             };
             // Set makedDestination, so the router won't make destination and prepare destination again when perform with this configuration
             weakConfig.makedDestination = weakConfig.makeDestination();
-            if (weakConfig._prepareDestination) {
-                weakConfig._prepareDestination(weakConfig.makedDestination);
-            }
             return weakConfig.makedDestination;
         };
         return config;
@@ -389,7 +383,7 @@ typedef void(^ZIKServiceRouteGlobalErrorHandler)(__kindof ZIKServiceRouter * _Nu
 @end
 
 /// Add module config protocol that only has makeDestinationWith, or constructDestination and didMakeDestination to ZIKServiceMakeableConfiguration.
-#define DeclareRoutableServiceModuleProtocol(PROTOCOL) DeclareMakeableConfig(ZIKServiceMakeableConfiguration, PROTOCOL)
+#define DeclareRoutableServiceModuleProtocol(PROTOCOL) ZIX_ADD_CATEGORY(ZIKServiceMakeableConfiguration, PROTOCOL)
 
 @interface ZIKServiceRouter (Utility)
 

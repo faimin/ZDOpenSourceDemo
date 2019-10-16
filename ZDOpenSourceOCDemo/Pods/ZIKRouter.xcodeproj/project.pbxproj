@@ -7,91 +7,91 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		014AEBAD066193369977693A6CC25272 /* ZIKRouterRuntimeDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 6843F7421231B1907A65351614084606 /* ZIKRouterRuntimeDebug.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		037ADA2F643315028052EA8F0312C086 /* ZIKRouteConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B591591BFEE06AD6DEFA2B6FB6810E /* ZIKRouteConfiguration.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		08F865EC6BDDAF74F487851FF535462C /* ZIKServiceRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 96190532ED9F5F9033C19687BAAD2C2D /* ZIKServiceRouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0AA8F69FC926ED6CD998881BFBB799E6 /* ZIKViewRouterType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C99BE92EA66F0826F50C22730D32A0F /* ZIKViewRouterType.m */; };
 		0EBA93771A20D668779C772C943D3FA2 /* ZIKViewRouterPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F71FC7C1D11218A34F489AD38C327D /* ZIKViewRouterPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		103868218A0FE286CD3993E8D875BAC8 /* ZIKViewRouteError.h in Headers */ = {isa = PBXBuildFile; fileRef = F95EB7068699D7308C54B6D6153AFC5C /* ZIKViewRouteError.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		12B9A6DADD53E81D81A71FA1AAA2EC56 /* ZIKClassCapabilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 44476CDB4B541CB93EF9D8FB26C93BB5 /* ZIKClassCapabilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		13A0C178DD14A2DD29B9EDDECB9E1C4A /* ZIKServiceRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA70D95D4B3269BF3301E015B1E6FBB /* ZIKServiceRouter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1494B303A553BA981A162C8B511BF2AD /* ZIKRouterRuntimeDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 6843F7421231B1907A65351614084606 /* ZIKRouterRuntimeDebug.m */; };
 		16808AA103DBB199318E42B0C620DAF2 /* UIViewController+ZIKViewRouterPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB81A04BB5AF0AC0054FD52D8F4FA7F /* UIViewController+ZIKViewRouterPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		17F72B82C69DD302986BA34CFED235FE /* UIViewController+ZIKViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ED900278A17B59176C8447083E5602 /* UIViewController+ZIKViewRouter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		16DB0ED9699608F007C420A5EC4333FA /* ZIKPresentationState.m in Sources */ = {isa = PBXBuildFile; fileRef = D19617C4A4ACD1BC1C8CF96FC9F43930 /* ZIKPresentationState.m */; };
+		1B4A959678801F332B84517D18DE6544 /* ZIKRouteConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B591591BFEE06AD6DEFA2B6FB6810E /* ZIKRouteConfiguration.m */; };
+		20353F97207DA77B25195C34F0A81D00 /* ZIKRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 1552ADCB2C203C396BB34BBD85B14491 /* ZIKRoute.m */; };
+		291A1E25A9C976927C936A9770835B05 /* ZIKServiceRouter+Discover.m in Sources */ = {isa = PBXBuildFile; fileRef = A544E5610F82DF52D805F925C50FB7E2 /* ZIKServiceRouter+Discover.m */; };
 		2B50DBCE87FC9A2D7B14E84B1562A4FE /* ZIKRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F3734F7BEA1EF0E2AC257F996DA0520 /* ZIKRouter-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2DDC0335365BDAB26FF6E379E723E5C5 /* ZIKViewRouteRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE83AAEF61AA81C642739ADB117531 /* ZIKViewRouteRegistry.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2EB386E06F3E54871B409EABDE6C4912 /* ZIKRoutePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F7EF8A494137C0AE62853208F415F31 /* ZIKRoutePrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		30447FB9461E055B9C30D30ED15924DE /* ZIKViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6948D119613A732BD56495A397147E /* ZIKViewRouter.m */; };
 		323AB2CF4C7E8847BA8A209251C6004E /* ZIKServiceRouteAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = 979A7F7143AFBA833BC524C2678A09B2 /* ZIKServiceRouteAdapter.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		332F5A7E621316EC9FE93E3A8D5CEF4D /* ZIKServiceRouteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FCDC376E26A5DA0FB8A4889C326AD0 /* ZIKServiceRouteAdapter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		32DE822A08E39AD7D49E617A0189BE4C /* ZIKViewRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4F09448A3E01AD53A16D99D28E5347 /* ZIKViewRoute.m */; };
 		362EF9420E44013ED465BAAA653AFB40 /* ZIKRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FDC6D77585223EB0D0F740BFDF42328 /* ZIKRouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		38B6CFE606769BAC8AD9431756CCFC78 /* ZIKImageSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = EBBD03FE71995995A19D80F648BE06BD /* ZIKImageSymbol.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3EE882AEC5D70CCFE69AE861D56EFF9B /* ZIKFindSymbol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55CFF47CBA8DBD94216F7242D201BF78 /* ZIKFindSymbol.cpp */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		397DE66ACB76283678E136B721CE2102 /* ZIKRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5EEB9C496940915C26BDC7E9FDE91B /* ZIKRouter.m */; };
 		3F2D9E096FF67F61BE6F429550E9E3AC /* ZIKBlockViewRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EB07BC366BA7388874A59BC6DADDB37 /* ZIKBlockViewRouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4249160CD5E12231760D1307FBEBDF13 /* ZIKBlockServiceRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5214F3A52B5DACB39537474DE6CBA1B5 /* ZIKBlockServiceRouter.m */; };
 		4665F4393DDABCDAFAEC60D708747B13 /* exec.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C13ECDB61FBA71C10876A63951EF009 /* exec.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		468C252E811089527E7C83721C42736C /* ZIKBlockServiceRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5214F3A52B5DACB39537474DE6CBA1B5 /* ZIKBlockServiceRouter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		473C1F637B3A3146BD7110DA39B4A364 /* ZIKViewRouterInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = BB6C78D54E0BB10BFA9532542219F030 /* ZIKViewRouterInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		47611FDBE7479E2AF147E6CC7B5DB54E /* ZIKViewRouteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6803FFC0C7A0F0CBFB11602916D22549 /* ZIKViewRouteAdapter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		49D3D08D5A93C19121F87D890F38F1B4 /* ZIKRouterType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2C0D98860BB3B95255DFFC402DCB93 /* ZIKRouterType.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4B718B0195EAA152FB2FC22D02B567FB /* ZIKRouterRuntimeDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 19835DCD1ADF2A9DED431A03BECEDBE2 /* ZIKRouterRuntimeDebug.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		4E66F264987AECB716767A4F65817A39 /* ZIKViewRouteConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B8CE156EBB55C162AAB5A7F59FD884B /* ZIKViewRouteConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		51A27ED0F96D4F5CCC988E85F2B72BB3 /* ZIKViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6948D119613A732BD56495A397147E /* ZIKViewRouter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		55FAE580CCD4D74AD64887543B463626 /* UIViewController+ZIKViewRouterPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10DF8DDE40CF9F5F85FA82C4834E7E /* UIViewController+ZIKViewRouterPrivate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5763789931E21D38DCD5EFF4D54F5079 /* ZIKServiceRouterType.m in Sources */ = {isa = PBXBuildFile; fileRef = 598498A186EF8106DAAEEF76A7A4F324 /* ZIKServiceRouterType.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		5AACEE33BF4F3AA6389917E60A49166E /* ZIKViewRouteRegistryPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 21401A390C3A89369F1AEE45BA555DC8 /* ZIKViewRouteRegistryPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5AF27EA6529E97759737C0EDC316BAD6 /* ZIKViewRoute.h in Headers */ = {isa = PBXBuildFile; fileRef = 48887C572F4FAF07ACA0E4A7C4C358FA /* ZIKViewRoute.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5E01D7A98FC97E1D9DEB41441F7F09AD /* ZIKViewRouter+Discover.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AEB74F907CFB868009AC980909BF6F /* ZIKViewRouter+Discover.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5D873B679C5A5D87F271B473C0DFE62F /* NSString+Demangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C1D258171D8975197428E031A6EBD5 /* NSString+Demangle.m */; };
+		5DF88FB513C0C4691E2F263887310787 /* ZIKServiceRouteRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB758608B7A74F3F885F7FCDC92B131 /* ZIKServiceRouteRegistry.m */; };
 		5E0B3A4FA7A2A62B8603E549435C1897 /* ZIKFindSymbol.h in Headers */ = {isa = PBXBuildFile; fileRef = EB4D04F4BF7BBFBB56F8C9903DFB5CF2 /* ZIKFindSymbol.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6070E90367A6EDEEAD43376DE9879529 /* ZIKServiceRouterInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = BD403C3A4B31D78F4DC1A6AB56E61C17 /* ZIKServiceRouterInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		621CEE99BBE05FD500E9DF8835E74A6C /* ZIKFindSymbol.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55CFF47CBA8DBD94216F7242D201BF78 /* ZIKFindSymbol.cpp */; };
 		6449CECB850AED964AD2D1CA9D1144B9 /* ZIKRouterType.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B34C6D0D2FD8645B58A6615E5C82B6B /* ZIKRouterType.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		669985A392A18F79BCCE16AB56E89935 /* ZIKViewRouterType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C99BE92EA66F0826F50C22730D32A0F /* ZIKViewRouterType.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		67D2FC2FA3385A062BDE85BC7CEEBE7D /* ZIKImageSymbol.mm in Sources */ = {isa = PBXBuildFile; fileRef = 745FF805AC853942F60D50ABB5693875 /* ZIKImageSymbol.mm */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6F870240A7D678514F41A6706201D228 /* ZIKViewRouteError.m in Sources */ = {isa = PBXBuildFile; fileRef = 866799BE398D2A6DD62ECC698771EE87 /* ZIKViewRouteError.m */; };
 		702E56FB7A098988C118DE4E29154249 /* ZIKViewRouteRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = E194AD992CB624C927EA93EFE04AB313 /* ZIKViewRouteRegistry.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		720544A1154EB71AA4F80146C8A5D526 /* ZIKServiceRouter+Discover.m in Sources */ = {isa = PBXBuildFile; fileRef = A544E5610F82DF52D805F925C50FB7E2 /* ZIKServiceRouter+Discover.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7866889CB12F2D46882D6400248A7810 /* ZIKPresentationState.m in Sources */ = {isa = PBXBuildFile; fileRef = D19617C4A4ACD1BC1C8CF96FC9F43930 /* ZIKPresentationState.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7A7636CCE01744729D1E44D89F70BDAD /* ZIKRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = EB5EEB9C496940915C26BDC7E9FDE91B /* ZIKRouter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		71E250747478AD3E145848055BFD6DFD /* UIStoryboardSegue+ZIKViewRouterPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E18CC7136E6CF7F52189F933090B02 /* UIStoryboardSegue+ZIKViewRouterPrivate.m */; };
+		7440B78B8F0EB2407AF10A4CF4F6E414 /* ZIKRouteRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6538C11EA50FA3B050A7B2C3A3FEE5 /* ZIKRouteRegistry.m */; };
+		74FC21BAFFAD185297B082A59DA3CCFF /* ZIKRouterType.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2C0D98860BB3B95255DFFC402DCB93 /* ZIKRouterType.m */; };
+		76C2B5A87D7CD0A6A31411430102A3D4 /* UIView+ZIKViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D6BA3475B3C709F594DE63EC04B1AF /* UIView+ZIKViewRouter.m */; };
 		7D52DFDD6E6FE8DFC3A7E79F6D64D9AF /* ZIKRouteRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B2EA31C4F2E203402DAF667C456E532 /* ZIKRouteRegistry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7D840EC4751CE70B9D0A100CA6F57942 /* ZIKServiceRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = E241E482658667D85A77322A72E76D85 /* ZIKServiceRoute.m */; };
 		81B8BF1A968E758DBB8D9D6ACDC606FB /* ZIKViewRoutable.h in Headers */ = {isa = PBXBuildFile; fileRef = 188385B734E6BC5371A1FBF20FFC31ED /* ZIKViewRoutable.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		81FD57DBE1A05F0F39977451C63B7FB8 /* ZIKViewRouterType.h in Headers */ = {isa = PBXBuildFile; fileRef = 82B3037343BCC618C13B5240D041C018 /* ZIKViewRouterType.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		835E1F52F0A23E9920B731489A84DBAE /* ZIKRouterInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 843E0B8FA2D0E95CCD932D5B202D341F /* ZIKRouterInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		840CBC9260FC00D0003A79937725BFF0 /* ZIKServiceRouter+Discover.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FBF69D568832525C07AAC45E0519C8B /* ZIKServiceRouter+Discover.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		88EEB6DDEF25435A696FB7137BE4A5FE /* ZIKRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B43F3EE3EF3322A368E41368729F33 /* ZIKRouter-dummy.m */; };
+		88353E53DBEB9C3CA5BE8C61FCE99C84 /* ZIKServiceRouteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FCDC376E26A5DA0FB8A4889C326AD0 /* ZIKServiceRouteAdapter.m */; };
 		8948E3A6E545B2ACAC10FAA56602983C /* UIStoryboardSegue+ZIKViewRouterPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = EF244E05145A1C4F8D4A57D9F5DA5134 /* UIStoryboardSegue+ZIKViewRouterPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8D3EE1D654EE9AFA6832F124CFEAF4DD /* ZIKViewRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4F09448A3E01AD53A16D99D28E5347 /* ZIKViewRoute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		8E00112BE6D03E07C2E543389B77976C /* ZIKViewRoutePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A5791DF655565F7436357D853A8884B /* ZIKViewRoutePrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		92E414C69C129D56BEC3322558DFE9A4 /* UIView+ZIKViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D6BA3475B3C709F594DE63EC04B1AF /* UIView+ZIKViewRouter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		94705180DC6C3A38E1B5F29CDA485179 /* UIView+ZIKViewRouterPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = E839498ED1960871491F31767DFD5511 /* UIView+ZIKViewRouterPrivate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9560B8A6EA360D4C226E54F2FCDEE3EE /* ZIKBlockViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FFFA4675617B3A2687F81BE44F7482 /* ZIKBlockViewRouter.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9661B68C84C1256FD0BB804539C311F7 /* ZIKRouteConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 82121D819E09F2DF35635B00C0BF2466 /* ZIKRouteConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		993119793311D4C6C000212D0E3615AF /* UIViewController+ZIKViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ED900278A17B59176C8447083E5602 /* UIViewController+ZIKViewRouter.m */; };
+		9C65B4E50284F918A4FFEC7CE4AA003A /* ZIKServiceRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA70D95D4B3269BF3301E015B1E6FBB /* ZIKServiceRouter.m */; };
 		9E1810CE9EA9795E7A95D7981BC5C050 /* ZIKServiceRoutable.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B69BFF8F4309D0E317C860C92F9E586 /* ZIKServiceRoutable.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		9E6591FFE45F43EF8F282F97A9FE6ABA /* ZIKViewRouterTypePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 634537C0C9D8BF9064610B7631C71A5B /* ZIKViewRouterTypePrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9F7A6CB5063D8C474B795C68CFC26593 /* UIViewController+ZIKViewRouterPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10DF8DDE40CF9F5F85FA82C4834E7E /* UIViewController+ZIKViewRouterPrivate.m */; };
 		9F8C06D4B799351191F422945201F2D1 /* UIView+ZIKViewRouterPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 475363AFE20874D42C7220F4DBF691E5 /* UIView+ZIKViewRouterPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A1C167C53E49824D0208278862AD841E /* ZIKRouterRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = C58BEAD146924EF38741A36A4DCA0762 /* ZIKRouterRuntime.m */; };
 		A1C2DD6E0DDD92FAC39934D88F12DCC4 /* ZIKViewRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B2C8B330CAA80E820035F6BE54355D1 /* ZIKViewRouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A3ADAF6990D9271B46179D90570D3289 /* ZIKBlockViewRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FFFA4675617B3A2687F81BE44F7482 /* ZIKBlockViewRouter.m */; };
+		A4C1AE0E1A4A9FF4B2F2C973C7427C31 /* UIView+ZIKViewRouterPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = E839498ED1960871491F31767DFD5511 /* UIView+ZIKViewRouterPrivate.m */; };
+		AAFD22FC4A0ED2D7A1F7D9FBE4ABC68A /* ZIKViewRouter+Discover.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AEB74F907CFB868009AC980909BF6F /* ZIKViewRouter+Discover.m */; };
 		B427E6294B948560B10114D528855965 /* ZIKBlockServiceRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 44E6A6F94D2C0173E5A25DC9299266D7 /* ZIKBlockServiceRouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BADA63EB57496DB6D2265422C36F9750 /* ZIKRouteConfigurationPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A0B911478F8AF34D8AE5EEC8D559427D /* ZIKRouteConfigurationPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BCC34AB145D10325623514D176B096E8 /* ZIKServiceRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = E241E482658667D85A77322A72E76D85 /* ZIKServiceRoute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C193804268B1AB21E42D6C8C6D92014A /* ZIKRouteRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A6538C11EA50FA3B050A7B2C3A3FEE5 /* ZIKRouteRegistry.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BC1CF717EACB6226439EC85D41DBCF29 /* ZIKServiceRouterType.m in Sources */ = {isa = PBXBuildFile; fileRef = 598498A186EF8106DAAEEF76A7A4F324 /* ZIKServiceRouterType.m */; };
 		C24F39D5A2A2689BBE9AFB4C10478C8A /* UIViewController+ZIKViewRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D711ACF35C08047FD360257512DDD72 /* UIViewController+ZIKViewRouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C290BFCEDA72C21CC8B459BBBC9D4EAC /* ZIKServiceModuleRoutable.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D062856CB6B27F87F518F5680D72455 /* ZIKServiceModuleRoutable.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C2E45309BCE41A5F971BE4D05DAB7D36 /* ZIKRouteRegistryInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 472C7D384F380FAA1FEA510C25A3281C /* ZIKRouteRegistryInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C36C28E083D770753C8066B780888FA1 /* ZIKViewRouteAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = FDC26788650544352CD6797BABF6A822 /* ZIKViewRouteAdapter.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C9969F0A945031899F20FDB44D552E85 /* UIStoryboardSegue+ZIKViewRouterPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9E18CC7136E6CF7F52189F933090B02 /* UIStoryboardSegue+ZIKViewRouterPrivate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C8B664E10338BBBFADCC39D6833002D9 /* ZIKViewRouteAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6803FFC0C7A0F0CBFB11602916D22549 /* ZIKViewRouteAdapter.m */; };
+		C9650A416C3867EE6AA51E82CEC1354D /* ZIKRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B43F3EE3EF3322A368E41368729F33 /* ZIKRouter-dummy.m */; };
 		CF09DFE53DA9052D7156EF46FD35D397 /* ZIKServiceRoute.h in Headers */ = {isa = PBXBuildFile; fileRef = 2820C43FF4E7DFBE3179E13DFC8A6ADC /* ZIKServiceRoute.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CF4FF5657DC369CC6EDE23BAF8D3EF86 /* ZIKServiceRouterType.h in Headers */ = {isa = PBXBuildFile; fileRef = 25BAB8B56D97AFAFDB9B9F89210C4DFE /* ZIKServiceRouterType.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D37BBA4688E695FB8613667CDFD733E4 /* NSString+Demangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 39C1D258171D8975197428E031A6EBD5 /* NSString+Demangle.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D497EAF917A0514D79A7F815798D307B /* ZIKPresentationState.h in Headers */ = {isa = PBXBuildFile; fileRef = C38AB547A86D86B45D01D82FD13BA6F4 /* ZIKPresentationState.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D49BCE8446E65FA83B43D36018553ABE /* ZIKImageSymbol.mm in Sources */ = {isa = PBXBuildFile; fileRef = 745FF805AC853942F60D50ABB5693875 /* ZIKImageSymbol.mm */; };
 		D49CC050598CC3D482D149444438A042 /* ZIKPlatformCapabilities.h in Headers */ = {isa = PBXBuildFile; fileRef = DB84174C44A6DA25C0720B4FC300F381 /* ZIKPlatformCapabilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D5DAEA3BB4BE63AE78E731008CD76EAE /* ZIKRoute.h in Headers */ = {isa = PBXBuildFile; fileRef = EEF51CD933486D138142DC8D043FBB09 /* ZIKRoute.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D8004472349DE63215CACAACE11CBF20 /* ZIKRouterRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = C58BEAD146924EF38741A36A4DCA0762 /* ZIKRouterRuntime.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D986ED7C0E67B6EDDD25517F11403CCA /* ZIKViewRouteConfigurationPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = A98B5FF9F1E01E04AEEE433BDE2D2B90 /* ZIKViewRouteConfigurationPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DF2AEB6A31CEC3CE73D8A9E64F484633 /* ZIKViewRouteConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8A4340CDB8881C1F9D80AF3EC7A346 /* ZIKViewRouteConfiguration.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		DFBF6BDCA4FC540531942E7502946581 /* ZIKServiceRouteRegistry.h in Headers */ = {isa = PBXBuildFile; fileRef = C9364522ACC1DBD8DBE975C6674BA39E /* ZIKServiceRouteRegistry.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E35E498CDABFA7A607B11663A3DDFDF3 /* ZIKViewModuleRoutable.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C3679E9CAFD176167E578204C629D5 /* ZIKViewModuleRoutable.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E7E5FA87BAE086B1494A272B5D564AA2 /* UIView+ZIKViewRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = 03815D3DFB002A8694831D12CD8EE469 /* UIView+ZIKViewRouter.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E9FCD6DDEFEB4882F5B93067E98E2385 /* ZIKServiceRouteRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB758608B7A74F3F885F7FCDC92B131 /* ZIKServiceRouteRegistry.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EA93A127CC05ED8D735EDBA54D240CBB /* ZIKViewRouteConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8A4340CDB8881C1F9D80AF3EC7A346 /* ZIKViewRouteConfiguration.m */; };
 		EE94DB6943EDE6B6AD0693F47709A1C1 /* ZIKRouterPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = EC314C44F1A0A71195D5BB95BDB6FFF2 /* ZIKRouterPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EEBC94860B81A03EAE26ED508003B9CC /* ZIKViewRouter+Discover.h in Headers */ = {isa = PBXBuildFile; fileRef = F93FE9135B87F0F5796FE40FCE9FB95F /* ZIKViewRouter+Discover.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F13088C9ACA5CEC74D43D1251B86511E /* NSString+Demangle.h in Headers */ = {isa = PBXBuildFile; fileRef = 9668460E7824B78D55EAF20CAA4C6F43 /* NSString+Demangle.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F2D9AE443F826BA9C0431B4A8555CC55 /* ZIKRouterRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F6E68F8627A1A49B64540AA82EABB9 /* ZIKRouterRuntime.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F43C4A1287BE380A0AE4877C64CDE3A0 /* ZIKViewRouteError.m in Sources */ = {isa = PBXBuildFile; fileRef = 866799BE398D2A6DD62ECC698771EE87 /* ZIKViewRouteError.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FF0E3633BCF30E46193ECF7A641A30B1 /* ZIKRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 1552ADCB2C203C396BB34BBD85B14491 /* ZIKRoute.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F348AF2F1F519D6CC329FC5C9AE123FC /* ZIKViewRouteRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE83AAEF61AA81C642739ADB117531 /* ZIKViewRouteRegistry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -410,7 +410,7 @@
 			buildConfigurationList = 0B4E27086596CAB4FE713D8E7336394B /* Build configuration list for PBXNativeTarget "ZIKRouter" */;
 			buildPhases = (
 				C56AA20989F2264646A022A8AA2951BD /* Headers */,
-				A99F656F55FD8B1664B43A5AA3E9B9F5 /* Sources */,
+				37A0A65BB1A309700BE96B6AED6EA869 /* Sources */,
 				2DB45E9549670E6DB41A01AB39026DC5 /* Frameworks */,
 			);
 			buildRules = (
@@ -449,97 +449,50 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A99F656F55FD8B1664B43A5AA3E9B9F5 /* Sources */ = {
+		37A0A65BB1A309700BE96B6AED6EA869 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D37BBA4688E695FB8613667CDFD733E4 /* NSString+Demangle.m in Sources */,
-				C9969F0A945031899F20FDB44D552E85 /* UIStoryboardSegue+ZIKViewRouterPrivate.m in Sources */,
-				92E414C69C129D56BEC3322558DFE9A4 /* UIView+ZIKViewRouter.m in Sources */,
-				94705180DC6C3A38E1B5F29CDA485179 /* UIView+ZIKViewRouterPrivate.m in Sources */,
-				17F72B82C69DD302986BA34CFED235FE /* UIViewController+ZIKViewRouter.m in Sources */,
-				55FAE580CCD4D74AD64887543B463626 /* UIViewController+ZIKViewRouterPrivate.m in Sources */,
-				468C252E811089527E7C83721C42736C /* ZIKBlockServiceRouter.m in Sources */,
-				9560B8A6EA360D4C226E54F2FCDEE3EE /* ZIKBlockViewRouter.m in Sources */,
-				3EE882AEC5D70CCFE69AE861D56EFF9B /* ZIKFindSymbol.cpp in Sources */,
-				67D2FC2FA3385A062BDE85BC7CEEBE7D /* ZIKImageSymbol.mm in Sources */,
-				7866889CB12F2D46882D6400248A7810 /* ZIKPresentationState.m in Sources */,
-				FF0E3633BCF30E46193ECF7A641A30B1 /* ZIKRoute.m in Sources */,
-				037ADA2F643315028052EA8F0312C086 /* ZIKRouteConfiguration.m in Sources */,
-				88EEB6DDEF25435A696FB7137BE4A5FE /* ZIKRouter-dummy.m in Sources */,
-				7A7636CCE01744729D1E44D89F70BDAD /* ZIKRouter.m in Sources */,
-				C193804268B1AB21E42D6C8C6D92014A /* ZIKRouteRegistry.m in Sources */,
-				D8004472349DE63215CACAACE11CBF20 /* ZIKRouterRuntime.m in Sources */,
-				014AEBAD066193369977693A6CC25272 /* ZIKRouterRuntimeDebug.m in Sources */,
-				49D3D08D5A93C19121F87D890F38F1B4 /* ZIKRouterType.m in Sources */,
-				BCC34AB145D10325623514D176B096E8 /* ZIKServiceRoute.m in Sources */,
-				332F5A7E621316EC9FE93E3A8D5CEF4D /* ZIKServiceRouteAdapter.m in Sources */,
-				720544A1154EB71AA4F80146C8A5D526 /* ZIKServiceRouter+Discover.m in Sources */,
-				13A0C178DD14A2DD29B9EDDECB9E1C4A /* ZIKServiceRouter.m in Sources */,
-				E9FCD6DDEFEB4882F5B93067E98E2385 /* ZIKServiceRouteRegistry.m in Sources */,
-				5763789931E21D38DCD5EFF4D54F5079 /* ZIKServiceRouterType.m in Sources */,
-				8D3EE1D654EE9AFA6832F124CFEAF4DD /* ZIKViewRoute.m in Sources */,
-				47611FDBE7479E2AF147E6CC7B5DB54E /* ZIKViewRouteAdapter.m in Sources */,
-				DF2AEB6A31CEC3CE73D8A9E64F484633 /* ZIKViewRouteConfiguration.m in Sources */,
-				F43C4A1287BE380A0AE4877C64CDE3A0 /* ZIKViewRouteError.m in Sources */,
-				5E01D7A98FC97E1D9DEB41441F7F09AD /* ZIKViewRouter+Discover.m in Sources */,
-				51A27ED0F96D4F5CCC988E85F2B72BB3 /* ZIKViewRouter.m in Sources */,
-				2DDC0335365BDAB26FF6E379E723E5C5 /* ZIKViewRouteRegistry.m in Sources */,
-				669985A392A18F79BCCE16AB56E89935 /* ZIKViewRouterType.m in Sources */,
+				5D873B679C5A5D87F271B473C0DFE62F /* NSString+Demangle.m in Sources */,
+				71E250747478AD3E145848055BFD6DFD /* UIStoryboardSegue+ZIKViewRouterPrivate.m in Sources */,
+				76C2B5A87D7CD0A6A31411430102A3D4 /* UIView+ZIKViewRouter.m in Sources */,
+				A4C1AE0E1A4A9FF4B2F2C973C7427C31 /* UIView+ZIKViewRouterPrivate.m in Sources */,
+				993119793311D4C6C000212D0E3615AF /* UIViewController+ZIKViewRouter.m in Sources */,
+				9F7A6CB5063D8C474B795C68CFC26593 /* UIViewController+ZIKViewRouterPrivate.m in Sources */,
+				4249160CD5E12231760D1307FBEBDF13 /* ZIKBlockServiceRouter.m in Sources */,
+				A3ADAF6990D9271B46179D90570D3289 /* ZIKBlockViewRouter.m in Sources */,
+				621CEE99BBE05FD500E9DF8835E74A6C /* ZIKFindSymbol.cpp in Sources */,
+				D49BCE8446E65FA83B43D36018553ABE /* ZIKImageSymbol.mm in Sources */,
+				16DB0ED9699608F007C420A5EC4333FA /* ZIKPresentationState.m in Sources */,
+				20353F97207DA77B25195C34F0A81D00 /* ZIKRoute.m in Sources */,
+				1B4A959678801F332B84517D18DE6544 /* ZIKRouteConfiguration.m in Sources */,
+				C9650A416C3867EE6AA51E82CEC1354D /* ZIKRouter-dummy.m in Sources */,
+				397DE66ACB76283678E136B721CE2102 /* ZIKRouter.m in Sources */,
+				7440B78B8F0EB2407AF10A4CF4F6E414 /* ZIKRouteRegistry.m in Sources */,
+				A1C167C53E49824D0208278862AD841E /* ZIKRouterRuntime.m in Sources */,
+				1494B303A553BA981A162C8B511BF2AD /* ZIKRouterRuntimeDebug.m in Sources */,
+				74FC21BAFFAD185297B082A59DA3CCFF /* ZIKRouterType.m in Sources */,
+				7D840EC4751CE70B9D0A100CA6F57942 /* ZIKServiceRoute.m in Sources */,
+				88353E53DBEB9C3CA5BE8C61FCE99C84 /* ZIKServiceRouteAdapter.m in Sources */,
+				291A1E25A9C976927C936A9770835B05 /* ZIKServiceRouter+Discover.m in Sources */,
+				9C65B4E50284F918A4FFEC7CE4AA003A /* ZIKServiceRouter.m in Sources */,
+				5DF88FB513C0C4691E2F263887310787 /* ZIKServiceRouteRegistry.m in Sources */,
+				BC1CF717EACB6226439EC85D41DBCF29 /* ZIKServiceRouterType.m in Sources */,
+				32DE822A08E39AD7D49E617A0189BE4C /* ZIKViewRoute.m in Sources */,
+				C8B664E10338BBBFADCC39D6833002D9 /* ZIKViewRouteAdapter.m in Sources */,
+				EA93A127CC05ED8D735EDBA54D240CBB /* ZIKViewRouteConfiguration.m in Sources */,
+				6F870240A7D678514F41A6706201D228 /* ZIKViewRouteError.m in Sources */,
+				AAFD22FC4A0ED2D7A1F7D9FBE4ABC68A /* ZIKViewRouter+Discover.m in Sources */,
+				30447FB9461E055B9C30D30ED15924DE /* ZIKViewRouter.m in Sources */,
+				F348AF2F1F519D6CC329FC5C9AE123FC /* ZIKViewRouteRegistry.m in Sources */,
+				0AA8F69FC926ED6CD998881BFBB799E6 /* ZIKViewRouterType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		04D97A5AA0E982C2A3F8276205D4C435 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61A27210843DDDFB115491F99AEBADD9 /* ZIKRouter.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/ZIKRouter/ZIKRouter-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = ZIKRouter;
-				PRODUCT_NAME = ZIKRouter;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		370880D4F577475DB98772322A5530EE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61A27210843DDDFB115491F99AEBADD9 /* ZIKRouter.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/ZIKRouter/ZIKRouter-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = ZIKRouter;
-				PRODUCT_NAME = ZIKRouter;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		3E7D80C6775952CFB9491CFC55C3E507 /* Debug */ = {
+		5A69798D33E7765D01E64B0DB90ECB61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -590,7 +543,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -603,7 +556,7 @@
 			};
 			name = Debug;
 		};
-		F26FD691DAED9C4936D67F2EB6079BC1 /* Release */ = {
+		6FA50A1549D8CDC317C0F82693781317 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -651,7 +604,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -663,14 +616,61 @@
 			};
 			name = Release;
 		};
+		A996C12A37C244CB1A2F3653338D14C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A27210843DDDFB115491F99AEBADD9 /* ZIKRouter.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ZIKRouter/ZIKRouter-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ZIKRouter;
+				PRODUCT_NAME = ZIKRouter;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BCF358554E02D1805A9FD47ABD08D22E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61A27210843DDDFB115491F99AEBADD9 /* ZIKRouter.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/ZIKRouter/ZIKRouter-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ZIKRouter;
+				PRODUCT_NAME = ZIKRouter;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		0B4E27086596CAB4FE713D8E7336394B /* Build configuration list for PBXNativeTarget "ZIKRouter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				370880D4F577475DB98772322A5530EE /* Debug */,
-				04D97A5AA0E982C2A3F8276205D4C435 /* Release */,
+				BCF358554E02D1805A9FD47ABD08D22E /* Debug */,
+				A996C12A37C244CB1A2F3653338D14C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -678,8 +678,8 @@
 		1E2EF603B260A21FC9CD1FD1AC9EA5BB /* Build configuration list for PBXProject "ZIKRouter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3E7D80C6775952CFB9491CFC55C3E507 /* Debug */,
-				F26FD691DAED9C4936D67F2EB6079BC1 /* Release */,
+				5A69798D33E7765D01E64B0DB90ECB61 /* Debug */,
+				6FA50A1549D8CDC317C0F82693781317 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D286EB99278383F2A3403D45017E400 /* RDVTabBarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C40E8FA16D22C09E5A54B5A5C1FCD7 /* RDVTabBarController-dummy.m */; };
 		381D2373DAED4576596B02BCB5AEF68C /* RDVTabBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 166486B2D00E90E552BF7FBDA7C2F1A8 /* RDVTabBar.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		549E94A705E9CA39BE11576E33FA8338 /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1856CB282C8175EE60223010943EDE2 /* RDVTabBarController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5F18E310D80501E5954540B2A3F75976 /* RDVTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1856CB282C8175EE60223010943EDE2 /* RDVTabBarController.m */; };
 		788F3EE9D52ECC0E5EB2824531F85A9D /* RDVTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 28EBE53BDCCD7B8DEE6C3C9691DBC73E /* RDVTabBarController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7A9CD63D096388F57C63EB84C28E4F08 /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBEE17CD688D5335EC6C574C03FD49C /* RDVTabBarItem.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B358A948A55EFC756CCEE02934E718CB /* RDVTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBEE17CD688D5335EC6C574C03FD49C /* RDVTabBarItem.m */; };
 		D6B22A0F6C2FD5217B0F2652E6A4C0C8 /* RDVTabBarItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BAD6D37E0DAA567F52C6E0E3CE11506 /* RDVTabBarItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EFE493B4AA23F1847F64F93A142B48A9 /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 933E016577202CC88F0354D1DBC19341 /* RDVTabBar.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DF194B3EF07234727E8F476C4687195D /* RDVTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 933E016577202CC88F0354D1DBC19341 /* RDVTabBar.m */; };
+		FF83619A324786C2840DD10AF5385CF5 /* RDVTabBarController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C40E8FA16D22C09E5A54B5A5C1FCD7 /* RDVTabBarController-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,7 +111,7 @@
 			buildConfigurationList = 674AEC1658B9190AB20633BD68444258 /* Build configuration list for PBXNativeTarget "RDVTabBarController" */;
 			buildPhases = (
 				A6B8A3711A9A3A00E3DBA12AFA0AC024 /* Headers */,
-				4D095D94DB76389C8F99F8997B6C0779 /* Sources */,
+				176CE09E9726CE40F74D2CE5410EF101 /* Sources */,
 				CDD28E34222AF13AAA6F6082014438FC /* Frameworks */,
 			);
 			buildRules = (
@@ -150,14 +150,14 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4D095D94DB76389C8F99F8997B6C0779 /* Sources */ = {
+		176CE09E9726CE40F74D2CE5410EF101 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFE493B4AA23F1847F64F93A142B48A9 /* RDVTabBar.m in Sources */,
-				2D286EB99278383F2A3403D45017E400 /* RDVTabBarController-dummy.m in Sources */,
-				549E94A705E9CA39BE11576E33FA8338 /* RDVTabBarController.m in Sources */,
-				7A9CD63D096388F57C63EB84C28E4F08 /* RDVTabBarItem.m in Sources */,
+				DF194B3EF07234727E8F476C4687195D /* RDVTabBar.m in Sources */,
+				FF83619A324786C2840DD10AF5385CF5 /* RDVTabBarController-dummy.m in Sources */,
+				5F18E310D80501E5954540B2A3F75976 /* RDVTabBarController.m in Sources */,
+				B358A948A55EFC756CCEE02934E718CB /* RDVTabBarItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

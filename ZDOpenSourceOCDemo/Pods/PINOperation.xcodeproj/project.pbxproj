@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0753A81900E73EB78FA432E537174F2D /* PINOperationMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = C9FE1BB86B7E8DBE7200FB5177155A1F /* PINOperationMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1A58C171A66E73218BDA0A661DA2AB4D /* PINOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC0A806FC19E112873355B43D5E3EB7 /* PINOperationQueue.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5358F162D55629834BB21A64BC6B8DD3 /* PINOperation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3423F90649349FD66D61EDA06FC892B /* PINOperation-dummy.m */; };
+		4BE29A264F5C400C8C0AEF64AC033F82 /* PINOperation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3423F90649349FD66D61EDA06FC892B /* PINOperation-dummy.m */; };
 		74C54C24EA502FB29023E1FC73E962EE /* PINOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = A9E92AC8F715BD737B9078EA8C64233B /* PINOperationQueue.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9D13F2CCE3603BDB3229BF70FA383104 /* PINOperationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 837F19AAD9756F9DA37441AFE6839906 /* PINOperationGroup.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		75AAB2C3F64D719F0B9B49CD86D8E00C /* PINOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC0A806FC19E112873355B43D5E3EB7 /* PINOperationQueue.m */; };
+		7687EA30F2150BD74EFDF367C83A1F41 /* PINOperationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 837F19AAD9756F9DA37441AFE6839906 /* PINOperationGroup.m */; };
 		9FD0557522F47B39D2870C50DA4FA6E5 /* PINOperationGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = C32885F095B345D6C965B76078EC656B /* PINOperationGroup.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E0040E307B7EBB92D80BE09A192576BB /* PINOperationTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B1F239ACA3938AFA5F09A4AFB09CA4E /* PINOperationTypes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		E536ABE016D4CCEA9EE01C81CA32C239 /* PINOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 77B33A64F1888F834131A818483015E8 /* PINOperation.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -116,7 +116,7 @@
 			buildConfigurationList = 215302041E34F853863011BB5C2FAB14 /* Build configuration list for PBXNativeTarget "PINOperation" */;
 			buildPhases = (
 				6A6BF9A46FE015BD7B495001D974919A /* Headers */,
-				8E28A91F058E107E3F272C909CB4324E /* Sources */,
+				F2A6CCD9A417E418518F010D50E4B3D0 /* Sources */,
 				C66A96CEF112FAD5309251721EFAC1BE /* Frameworks */,
 			);
 			buildRules = (
@@ -155,13 +155,13 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8E28A91F058E107E3F272C909CB4324E /* Sources */ = {
+		F2A6CCD9A417E418518F010D50E4B3D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5358F162D55629834BB21A64BC6B8DD3 /* PINOperation-dummy.m in Sources */,
-				9D13F2CCE3603BDB3229BF70FA383104 /* PINOperationGroup.m in Sources */,
-				1A58C171A66E73218BDA0A661DA2AB4D /* PINOperationQueue.m in Sources */,
+				4BE29A264F5C400C8C0AEF64AC033F82 /* PINOperation-dummy.m in Sources */,
+				7687EA30F2150BD74EFDF367C83A1F41 /* PINOperationGroup.m in Sources */,
+				75AAB2C3F64D719F0B9B49CD86D8E00C /* PINOperationQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

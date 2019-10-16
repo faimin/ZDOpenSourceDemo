@@ -8,33 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		004E623AAD39BCD8952898F3C7171FFE /* UIView+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5370D528E1336AC4104E9F64241A58E0 /* UIView+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1491EABAC7830BFBF72A6578C69F601E /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = F52304B94FDC95AF99483D22960E1308 /* NSArray+Chameleon.m */; };
+		166A8BAC5FED9D06B81FAB06AD014AD9 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F074727274CE8E37AD8AFE089830DD /* UIImage+ChameleonPrivate.m */; };
+		2A3BEA9BD2171805B9CEBBE576393CF7 /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 807A83769601AAD6ADD7024331FE5EA8 /* UIColor+Chameleon.m */; };
 		388A1401CCA2ACECAE9381CA181DE95F /* NSArray+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A814B224F32380EA9C7ABD2EE5AC6DA /* NSArray+Chameleon.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		38B09563B4C29223EC77D88FF0D2B27F /* UIAppearance+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = F870042312A57056F6872EC954DC60D3 /* UIAppearance+Swift.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		38DADFCF36C83F9F4895B624554E34EB /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = B825D5BDBA026782DDB1AF14B5CF51D8 /* UIAppearance+Swift.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3DF1D05C048CAAAA513CA5659577F2E5 /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 807A83769601AAD6ADD7024331FE5EA8 /* UIColor+Chameleon.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3B189D2F07EB70F17AB23F498E919A77 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 884EDECDE3AF47F54FE44581334606DC /* UIView+ChameleonPrivate.m */; };
+		3F6919F26AC677DC0E068708442CF07F /* ChameleonFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D6DB11E9E3A814588CA9A93CBBA654 /* ChameleonFramework-dummy.m */; };
 		44DFE9D2E9D5754B5334829F78F373AD /* Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A58782E5E5589A86A843B835C567A07 /* Chameleon.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		529DC10190918707820C12B8A595EF99 /* UINavigationController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = C0268C9C9AEF4C43CF0DF098331C8D31 /* UINavigationController+Chameleon.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5670C0346897C0FC8CCC4D8E4FD22F8C /* UIButton+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 14B1027B6339C7FF981318080F2BC4D1 /* UIButton+Chameleon.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5D6BC80E038CF208F3DE6E0CCEE4ABB8 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9F074727274CE8E37AD8AFE089830DD /* UIImage+ChameleonPrivate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5705E519DF1697784A21B1B063CAC596 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7DD3267AD556732AF0E89EE50A153 /* UINavigationController+Chameleon.m */; };
 		5EB54B3AC75267FD5B66A8A9FD667BF9 /* Chameleon_.h in Headers */ = {isa = PBXBuildFile; fileRef = 0811DD9DE1B16D9D8BB16CBC66FF957B /* Chameleon_.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		606F735B08C02A9BED67CEB586FCB69E /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = B825D5BDBA026782DDB1AF14B5CF51D8 /* UIAppearance+Swift.m */; };
 		63B60965CC2932EB6926E89E86D0198B /* UIViewController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E90EF72451F1C33F138FBA0C94E3E5B /* UIViewController+Chameleon.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		662FBAA49A123369261D0F3A2B8B0EB5 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 308F99190ED44A15427B4A6E7053FF7B /* UIColor+ChameleonPrivate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		73A59E7A41F7FEDE0DA6A19B81799467 /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B45EE7621F305D32CB1C8C8AD6BDB60 /* ChameleonConstants.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		73EE3CD6102388096260DA3E12995DB0 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = E90706281918C0E13B57C38DF604F9F3 /* Chameleon_.m */; };
+		772B9B5C165BBCA83AB8E96248D5DB50 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = A40FEC9A3C49CCE477895D6FF638C29B /* UIButton+Chameleon.m */; };
 		824D3679DDBD1222012026CB217E34E4 /* ChameleonEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2F47B5DDC0F84C1C51E0CBF793189F /* ChameleonEnums.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		8D8B7CD755CBA4C3B750D5996CD7F0A2 /* ChameleonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = A28C3455A28F2198BF905D690A67BE8B /* ChameleonConstants.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8FE60094629DF8EF2B1C6DE3D2E03279 /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 798CC2FC1964168914877510CAB0D4E5 /* UILabel+Chameleon.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A7BCE31D9C77428F333D9F1EC15568D8 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 884EDECDE3AF47F54FE44581334606DC /* UIView+ChameleonPrivate.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C0A6CFD2CDC08E537BD78F039602BE83 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = E90706281918C0E13B57C38DF604F9F3 /* Chameleon_.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C2B3FCB91D6B1A2759D22280EECEB112 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB25970DA723151C8CE881556749653 /* UIViewController+Chameleon.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A219B61F6D992145F3A43E47BD64A091 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB25970DA723151C8CE881556749653 /* UIViewController+Chameleon.m */; };
+		BD18E967BC14ECCEDDEB9A9A5723E86D /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B45EE7621F305D32CB1C8C8AD6BDB60 /* ChameleonConstants.m */; };
 		CEF2275AEEC9961A7A9DE7DBD6A36B66 /* UIColor+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C0235B8F2E03291F7AF11EAC4B0A490 /* UIColor+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D0C6CE46188AFF90012772C1B9348E91 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = A40FEC9A3C49CCE477895D6FF638C29B /* UIButton+Chameleon.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D1687BF8D409B98689A6DE114D24E9D7 /* UIImage+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 2965AD08D1AF28F4200517337C07FAF5 /* UIImage+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D46A3BFACA40EE48D3DBE19D9DB505DD /* UILabel+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = DEF33FAB61F9EAB9F923BDADB9F39433 /* UILabel+Chameleon.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D486BFD4C97AAE56BB1E53F5F417D907 /* UIColor+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F6B3D51C29FA3D0E0939D1400CAD793 /* UIColor+Chameleon.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E19C73C1137AE816AF5EEC00AF5669A9 /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = F52304B94FDC95AF99483D22960E1308 /* NSArray+Chameleon.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E685969993B46079160DA0BA2A19B3A9 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AD7DD3267AD556732AF0E89EE50A153 /* UINavigationController+Chameleon.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D91E7FA146991E5FF593E01A9BE33290 /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 798CC2FC1964168914877510CAB0D4E5 /* UILabel+Chameleon.m */; };
 		EC4C919BA96A39275626A5DB1CA3CA00 /* ChameleonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 4622B43591A437AD40768079F5458DC0 /* ChameleonMacros.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EC59DC44605575292095A9EA5DB214B3 /* ChameleonFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9D6DB11E9E3A814588CA9A93CBBA654 /* ChameleonFramework-dummy.m */; };
+		F9A61C014E8B6D9951692B680CD8B40D /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 308F99190ED44A15427B4A6E7053FF7B /* UIColor+ChameleonPrivate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,7 +194,7 @@
 			buildConfigurationList = 91863F18D12EFF7BF8185049713014D5 /* Build configuration list for PBXNativeTarget "ChameleonFramework" */;
 			buildPhases = (
 				6F0E2480A9654DEAF892AC2469BEA32A /* Headers */,
-				9CF7490DD81A373DC58CD5004DB7CD8A /* Sources */,
+				1F95E8D88EDA864C9A4260B68DAC8CD6 /* Sources */,
 				61FB9503CEFEC466266B4B1EFF284C1C /* Frameworks */,
 			);
 			buildRules = (
@@ -233,23 +233,23 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9CF7490DD81A373DC58CD5004DB7CD8A /* Sources */ = {
+		1F95E8D88EDA864C9A4260B68DAC8CD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0A6CFD2CDC08E537BD78F039602BE83 /* Chameleon_.m in Sources */,
-				73A59E7A41F7FEDE0DA6A19B81799467 /* ChameleonConstants.m in Sources */,
-				EC59DC44605575292095A9EA5DB214B3 /* ChameleonFramework-dummy.m in Sources */,
-				E19C73C1137AE816AF5EEC00AF5669A9 /* NSArray+Chameleon.m in Sources */,
-				38DADFCF36C83F9F4895B624554E34EB /* UIAppearance+Swift.m in Sources */,
-				D0C6CE46188AFF90012772C1B9348E91 /* UIButton+Chameleon.m in Sources */,
-				3DF1D05C048CAAAA513CA5659577F2E5 /* UIColor+Chameleon.m in Sources */,
-				662FBAA49A123369261D0F3A2B8B0EB5 /* UIColor+ChameleonPrivate.m in Sources */,
-				5D6BC80E038CF208F3DE6E0CCEE4ABB8 /* UIImage+ChameleonPrivate.m in Sources */,
-				8FE60094629DF8EF2B1C6DE3D2E03279 /* UILabel+Chameleon.m in Sources */,
-				E685969993B46079160DA0BA2A19B3A9 /* UINavigationController+Chameleon.m in Sources */,
-				A7BCE31D9C77428F333D9F1EC15568D8 /* UIView+ChameleonPrivate.m in Sources */,
-				C2B3FCB91D6B1A2759D22280EECEB112 /* UIViewController+Chameleon.m in Sources */,
+				73EE3CD6102388096260DA3E12995DB0 /* Chameleon_.m in Sources */,
+				BD18E967BC14ECCEDDEB9A9A5723E86D /* ChameleonConstants.m in Sources */,
+				3F6919F26AC677DC0E068708442CF07F /* ChameleonFramework-dummy.m in Sources */,
+				1491EABAC7830BFBF72A6578C69F601E /* NSArray+Chameleon.m in Sources */,
+				606F735B08C02A9BED67CEB586FCB69E /* UIAppearance+Swift.m in Sources */,
+				772B9B5C165BBCA83AB8E96248D5DB50 /* UIButton+Chameleon.m in Sources */,
+				2A3BEA9BD2171805B9CEBBE576393CF7 /* UIColor+Chameleon.m in Sources */,
+				F9A61C014E8B6D9951692B680CD8B40D /* UIColor+ChameleonPrivate.m in Sources */,
+				166A8BAC5FED9D06B81FAB06AD014AD9 /* UIImage+ChameleonPrivate.m in Sources */,
+				D91E7FA146991E5FF593E01A9BE33290 /* UILabel+Chameleon.m in Sources */,
+				5705E519DF1697784A21B1B063CAC596 /* UINavigationController+Chameleon.m in Sources */,
+				3B189D2F07EB70F17AB23F498E919A77 /* UIView+ChameleonPrivate.m in Sources */,
+				A219B61F6D992145F3A43E47BD64A091 /* UIViewController+Chameleon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

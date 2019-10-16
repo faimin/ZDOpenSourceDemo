@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0718A19BF1D1D10BDC8DC34610687F61 /* COActorChan.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8DD0C88FFDC751124BFD07217B6C23 /* COActorChan.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		117D66FB7DD8700C0B383CA796966D58 /* COActorCompletable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8363E78E3C82B09205E861787E912BD6 /* COActorCompletable.m */; };
+		1AF685AC81ABF1B0769D7E4D032FA4B5 /* COActorChan.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E8DD0C88FFDC751124BFD07217B6C23 /* COActorChan.m */; };
 		36DC2FCF500DA02C90854C5FC26D5E82 /* coobjc.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EEE8E93F6F45573BD66D72E555E2DDC /* coobjc.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3979E99418FFA4D249CC6C9D4114B45B /* coobjc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BA583079690FCB9887EAEA070C62CE /* coobjc-dummy.m */; };
 		4E591C2274262AAFCC51A364FE11300F /* COPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F3611D3FBD10B4061523FEC1960CFC7 /* COPromise.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5B4E15C3C53A60F31E99FD486C1F1E2F /* COActor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D5CFCA1A1EDB9E7C7C9687EE129AE31 /* COActor.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5ED638664951006B8DCD1D8D79BB8E98 /* COCoroutine.h in Headers */ = {isa = PBXBuildFile; fileRef = 0193A4C7183A008A1C32A295FB327340 /* COCoroutine.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		68B624A200A9E3F96B2035E8F6702915 /* co_tuple.m in Sources */ = {isa = PBXBuildFile; fileRef = B45B7E087A39A16FBA11AF971BEADA4D /* co_tuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		73DE9C2E898A9958007C907885FB41D7 /* COChan.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CC10B1ECCBBF2B5230CD94140326C6 /* COChan.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6119A3D1D0103279042D369376831D1E /* COCoroutine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFC8A47BC1021141195E0CE3869AA2 /* COCoroutine.m */; };
 		8B150169F0FD227EC676F4CA7A8553BF /* COChan.h in Headers */ = {isa = PBXBuildFile; fileRef = DF56E3AD2D930E81C559125961E5498B /* COChan.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9390742AF048F17E7EFC467336F4700B /* COGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB76669E5CE6DDDE529EBADD57589 /* COGenerator.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		918EC96CEAA0E5F31F2383C652EA070C /* coobjc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BA583079690FCB9887EAEA070C62CE /* coobjc-dummy.m */; };
 		9843D5B8B89D0C4944F28C22328053CB /* COActorChan.h in Headers */ = {isa = PBXBuildFile; fileRef = 1241B727CE81BFF828F866E5721A8B82 /* COActorChan.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A24147AA33A3CEC9079CF063808610C3 /* COActorCompletable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E73E0B45FBC3A7D6F86A89E1996620B /* COActorCompletable.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A613866174DD3377866492E3CACE5F9E /* COActorMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FFB1C4EB11590240F8338879FF2D1DB /* COActorMessage.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B4100BBD70818EDFC27CA4347348624F /* COActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B9C76B889132EBF1B0E817AC3CE04E /* COActor.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B68ED0A29F9F407194E81CD2B50FF719 /* COPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 745CF164C710CAB5B08F2A407C20E594 /* COPromise.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C4330DA7B9660799A90BB73937A355F0 /* COCoroutine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFC8A47BC1021141195E0CE3869AA2 /* COCoroutine.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C94D78E6E7F8BCF7279A61DBAF4C4A3D /* COActorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A01A269313309434B83608DA6ACE01 /* COActorMessage.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B7E8827D537CA15129877AEF1C43D99F /* COActorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A01A269313309434B83608DA6ACE01 /* COActorMessage.m */; };
+		C0B84F35039F4E377AA8EB7D82FC11FB /* COGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7BB76669E5CE6DDDE529EBADD57589 /* COGenerator.m */; };
+		CC1C7E7555729FE08FFEA0ECF937ACA1 /* COChan.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CC10B1ECCBBF2B5230CD94140326C6 /* COChan.m */; };
+		CDA595424D4D4626E2B53BB47F75A858 /* COActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B9C76B889132EBF1B0E817AC3CE04E /* COActor.m */; };
 		CE81897007E42F7C07F5D691B9595016 /* co_tuple.h in Headers */ = {isa = PBXBuildFile; fileRef = 2513CA473CEEB9D7C1CF88F704EF2C16 /* co_tuple.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CEF3A0471BB8D451754B29FD9B24ABE7 /* COLock.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B38B004553A6AD8F374F666E9EAB50D /* COLock.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CFF2A5C3319E6335E42EEF642E0571BE /* COActorCompletable.m in Sources */ = {isa = PBXBuildFile; fileRef = 8363E78E3C82B09205E861787E912BD6 /* COActorCompletable.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D4FEFB27B91B156DBF3D0585E4FC5DB5 /* COPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 745CF164C710CAB5B08F2A407C20E594 /* COPromise.m */; };
+		DD5433C19A7D664313C3EF06F017F65F /* co_tuple.m in Sources */ = {isa = PBXBuildFile; fileRef = B45B7E087A39A16FBA11AF971BEADA4D /* co_tuple.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E134F40E902C9A5D61697924AB7703E5 /* COGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = C7DFDD6BC4E5188F3B669B5CAB158FD9 /* COGenerator.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
@@ -181,7 +181,7 @@
 			buildConfigurationList = ADAC98094965014E6917DAA5A8005B9C /* Build configuration list for PBXNativeTarget "coobjc" */;
 			buildPhases = (
 				4AB03F7CD46FA7D578BB9BF0E8C798A0 /* Headers */,
-				A7D6F89E7349A95638E29B0933406AF8 /* Sources */,
+				CEA487D4D3F993CEBFC9B60994B493CB /* Sources */,
 				4F8C4D5E2D932EBB47D6C028A7FCB96B /* Frameworks */,
 			);
 			buildRules = (
@@ -226,20 +226,20 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A7D6F89E7349A95638E29B0933406AF8 /* Sources */ = {
+		CEA487D4D3F993CEBFC9B60994B493CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68B624A200A9E3F96B2035E8F6702915 /* co_tuple.m in Sources */,
-				B4100BBD70818EDFC27CA4347348624F /* COActor.m in Sources */,
-				0718A19BF1D1D10BDC8DC34610687F61 /* COActorChan.m in Sources */,
-				CFF2A5C3319E6335E42EEF642E0571BE /* COActorCompletable.m in Sources */,
-				C94D78E6E7F8BCF7279A61DBAF4C4A3D /* COActorMessage.m in Sources */,
-				73DE9C2E898A9958007C907885FB41D7 /* COChan.m in Sources */,
-				C4330DA7B9660799A90BB73937A355F0 /* COCoroutine.m in Sources */,
-				9390742AF048F17E7EFC467336F4700B /* COGenerator.m in Sources */,
-				3979E99418FFA4D249CC6C9D4114B45B /* coobjc-dummy.m in Sources */,
-				B68ED0A29F9F407194E81CD2B50FF719 /* COPromise.m in Sources */,
+				DD5433C19A7D664313C3EF06F017F65F /* co_tuple.m in Sources */,
+				CDA595424D4D4626E2B53BB47F75A858 /* COActor.m in Sources */,
+				1AF685AC81ABF1B0769D7E4D032FA4B5 /* COActorChan.m in Sources */,
+				117D66FB7DD8700C0B383CA796966D58 /* COActorCompletable.m in Sources */,
+				B7E8827D537CA15129877AEF1C43D99F /* COActorMessage.m in Sources */,
+				CC1C7E7555729FE08FFEA0ECF937ACA1 /* COChan.m in Sources */,
+				6119A3D1D0103279042D369376831D1E /* COCoroutine.m in Sources */,
+				C0B84F35039F4E377AA8EB7D82FC11FB /* COGenerator.m in Sources */,
+				918EC96CEAA0E5F31F2383C652EA070C /* coobjc-dummy.m in Sources */,
+				D4FEFB27B91B156DBF3D0585E4FC5DB5 /* COPromise.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

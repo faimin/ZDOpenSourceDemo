@@ -1,4 +1,4 @@
-module Pods_ZDOpenSourceOCDemo {
+framework module Pods_ZDOpenSourceOCDemo {
   umbrella header "Pods-ZDOpenSourceOCDemo-umbrella.h"
 
   export *

@@ -1,7 +1,10 @@
 # Uncomment the next line to define a global platform for your project
 
+source 'https://cdn.cocoapods.org/'
+require 'pry'
+
 platform :ios, '10.0'
-inhibit_all_warnings!
+#inhibit_all_warnings!
 
 def pods_git
   	# pod 'ZDTableViewBinding', :git => 'https://github.com/faimin/ZDTableViewBinding'
@@ -37,7 +40,7 @@ def pods_network
 end
 
 def pods_animation
-  pod 'lottie-ios'
+  pod 'lottie-ios', '~> 2.5.3'
 end
 
 def pods_tabBarController
@@ -85,15 +88,6 @@ def pods_tools
   pod 'MMKV'      # mmap
 end
 
-def pod_flipper
-  flipperkit_version = '0.22.0'
-    
-  pod 'FlipperKit', '~>' + flipperkit_version
-  pod 'FlipperKit/FlipperKitLayoutComponentKitSupport', '~>' + flipperkit_version
-  pod 'FlipperKit/SKIOSNetworkPlugin', '~>' + flipperkit_version
-  pod 'FlipperKit/FlipperKitUserDefaultsPlugin', '~>' + flipperkit_version
-end
-
 def pods_debug
 	# pod 'KZPlayground', :inhibit_warnings => true
 	# pod 'Buglife', :configurations => ['Debug']
@@ -101,8 +95,6 @@ def pods_debug
 	pod 'FLEX', :configurations => ['Debug']
   pod 'LayoutInspector', :configurations => ['Debug']
   pod 'ResumableAssert', :configurations => ['Debug']
-  
-  pod_flipper
 end
 
 # ----------------------------
@@ -128,8 +120,8 @@ end
 
 target 'ZDOpenSourceOCDemo' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
-  supports_swift_versions '>= 4.0', '<= 5.0' # cocoaPods 1.7
+  use_frameworks!
+  supports_swift_versions '>= 4.0', '<= 5.1' # cocoaPods 1.7
 
   # Pods for ZDOpenSourceOCDemo
   pods_oc
@@ -156,45 +148,40 @@ install! 'cocoapods',
 
 ############################################################
 
-
+# https://www.rubydoc.info/gems/cocoapods/Pod
 # https://github.com/facebook/flipper/issues/254
-$dynamic_framework = ['LayoutInspector', 'PromiseKit']
+# https://github.com/facebook/flipper/blob/master/docs/getting-started.md
+$dynamic_framework = ['LayoutInspector', 'PromiseKit', 'Yoga', 'YogaKit']
 pre_install do |installer|
-    installer.pod_targets.each do |pod|
-        if $dynamic_framework.include?(pod.name)
-            pod.instance_variable_set(:@host_requires_frameworks, true)
-        end
-    end
+#    installer.pod_targets.each do |pod|
+#        if $dynamic_framework.include?(pod.name)
+#            pod.instance_variable_set(:@host_requires_frameworks, true)
+#        end
+#    end
+
+  Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
+  installer.pod_targets.each do |pod|
+     if not $dynamic_framework.include?(pod.name)
+       def pod.build_type;
+          Pod::Target::BuildType.static_library
+       end
+     end
+  end
 end
 
 #config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'NO' #可以让pod中的类调用[UIApplication shareApplication]
 #关闭`This block declaration is not a prototype,Insert ‘void'`警告
 #config.build_settings['CLANG_WARN_STRICT_PROTOTYPES'] = 'NO'
 post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            #关闭block内直接引用全局变量的警告
-            config.build_settings['CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'] = 'NO'
-        end
-    end
-    
-    # **************** flipper ************
-    # https://github.com/facebook/flipper/blob/master/docs/getting-started.md
-    file_name = Dir.glob("*.xcodeproj")[0]
-    app_project = Xcodeproj::Project.open(file_name)
-    app_project.native_targets.each do |target|
-      target.build_configurations.each do |config|
-        cflags = config.build_settings['OTHER_CFLAGS'] || '$(inherited) '
-        unless cflags.include? '-DFB_SONARKIT_ENABLED=1'
-          puts 'Adding -DFB_SONARKIT_ENABLED=1 in OTHER_CFLAGS...'
-          cflags << '-DFB_SONARKIT_ENABLED=1'
-        end
-        config.build_settings['OTHER_CFLAGS'] = cflags
-      end
-      app_project.save
-    end
-    installer.pods_project.save
-    
-    # Pod::PodTarget.send(:define_method, :static_framework?) { return true }
+  
+    #binding.pry
+  
+#    installer.pod_targets.each do |target|
+#        target.build_configurations.each do |config|
+#            #关闭block内直接引用全局变量的警告
+#            config.build_settings['CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'] = 'NO'
+#        end
+#    end
+
 end
 

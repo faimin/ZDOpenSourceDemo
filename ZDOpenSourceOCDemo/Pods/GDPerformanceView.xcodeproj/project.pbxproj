@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13E847B42938D377366DDA88AA10E7AF /* GDPerformanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E0F4DA6C02A4E3582D58236ABFC1AD /* GDPerformanceView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2D75197BFD4E2DF5BFC35AB90C7C3261 /* GDPerformanceView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CBF3D89083F4AC85DAFBBC58546AF /* GDPerformanceView-dummy.m */; };
 		43E2D3A55CDF8A2EBFF7D7399DF96932 /* GDPerformanceMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = 25AF7AD4B0D1535D86A08AA32F51B45C /* GDPerformanceMonitor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		544A5461C8AE14C27614A7EE4EFABEBA /* GDPerformanceView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0CBF3D89083F4AC85DAFBBC58546AF /* GDPerformanceView-dummy.m */; };
+		7B2FD2997629312D06DB99301916FA41 /* GDWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB95648705EC7675AB6E96377C7DEE3 /* GDWindowViewController.m */; };
+		8C7CF3B25BC40A9FC190D73D1D2F43B3 /* GDPerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC11F164E533F4379DFBB7FEA9DA7EE /* GDPerformanceMonitor.m */; };
 		9DA8B98AB72399133C64F17BD18BDC7F /* GDWindowViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1162010688886CA577FBECE239B1D920 /* GDWindowViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C5CE66682A2073A492C03C2DDCB9CC73 /* GDWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB95648705EC7675AB6E96377C7DEE3 /* GDWindowViewController.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		CAB2A6245239942E45BEF11CCFAFACBF /* GDPerformanceMonitorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B3189BCED252A3D27D00276EB45CABD3 /* GDPerformanceMonitorProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CC12F420D1C461FB52E71F57FF507C22 /* GDMarginLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45653BA64097EC2935E8924FA1B6872A /* GDMarginLabel.m */; };
 		D4B0611F038AB089D96F3E4FCFE82C79 /* GDMarginLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 60046AC8AF1E96693114BC3099F5BB28 /* GDMarginLabel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E2F264ADEEBEE9D259C17AE64124B0FD /* GDMarginLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 45653BA64097EC2935E8924FA1B6872A /* GDMarginLabel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E60ABB6C1E0C087A9970C26D03AED077 /* GDPerformanceMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EC11F164E533F4379DFBB7FEA9DA7EE /* GDPerformanceMonitor.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E6DAF5C01741031782C11BB81D3F3D88 /* GDPerformanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E0F4DA6C02A4E3582D58236ABFC1AD /* GDPerformanceView.m */; };
 		F22EA3BF080E80B09727FE6976E3DA13 /* GDPerformanceView.h in Headers */ = {isa = PBXBuildFile; fileRef = E4FCA71061351436BC8060D0E7D3DB29 /* GDPerformanceView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
@@ -122,7 +122,7 @@
 			buildConfigurationList = 8E6102D12BA911266521F28740DC1F55 /* Build configuration list for PBXNativeTarget "GDPerformanceView" */;
 			buildPhases = (
 				6CB50621C63FCA784D54516CD610F772 /* Headers */,
-				68FE92AFD42BEB41453238CB93357D41 /* Sources */,
+				33D4D87BD13E52FAA0BC954A920988C6 /* Sources */,
 				081202A6CBB46C01CD6E7B313A732CD8 /* Frameworks */,
 			);
 			buildRules = (
@@ -161,15 +161,15 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		68FE92AFD42BEB41453238CB93357D41 /* Sources */ = {
+		33D4D87BD13E52FAA0BC954A920988C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2F264ADEEBEE9D259C17AE64124B0FD /* GDMarginLabel.m in Sources */,
-				E60ABB6C1E0C087A9970C26D03AED077 /* GDPerformanceMonitor.m in Sources */,
-				2D75197BFD4E2DF5BFC35AB90C7C3261 /* GDPerformanceView-dummy.m in Sources */,
-				13E847B42938D377366DDA88AA10E7AF /* GDPerformanceView.m in Sources */,
-				C5CE66682A2073A492C03C2DDCB9CC73 /* GDWindowViewController.m in Sources */,
+				CC12F420D1C461FB52E71F57FF507C22 /* GDMarginLabel.m in Sources */,
+				8C7CF3B25BC40A9FC190D73D1D2F43B3 /* GDPerformanceMonitor.m in Sources */,
+				544A5461C8AE14C27614A7EE4EFABEBA /* GDPerformanceView-dummy.m in Sources */,
+				E6DAF5C01741031782C11BB81D3F3D88 /* GDPerformanceView.m in Sources */,
+				7B2FD2997629312D06DB99301916FA41 /* GDWindowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08915A029F7E7D7038845A7FCC473F3F /* ResumableAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98D1493876BD04BFFD7ED727411469 /* ResumableAssert.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3DEC085E71A8C14FF33178AFB0A0D872 /* ResumableAssert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8CD02A9035A5A9786B7E8175978DA /* ResumableAssert-dummy.m */; };
 		44FA4E3D9A565AC49F3A9CBDE8713299 /* ResumableAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = 16BDCADB91F90979832318AEF55E363E /* ResumableAssert.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		68E8F157B9D604017A68664BFCBA980E /* ResumableAssert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8CD02A9035A5A9786B7E8175978DA /* ResumableAssert-dummy.m */; };
+		EB9BD068EA897CB3CC84A31E02B6CB4D /* ResumableAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = DB98D1493876BD04BFFD7ED727411469 /* ResumableAssert.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,7 +95,7 @@
 			buildConfigurationList = B08C731F03E2E7857EE59991BA4B6A9E /* Build configuration list for PBXNativeTarget "ResumableAssert" */;
 			buildPhases = (
 				57B7BD34FC247443CB0C4CA8B3DCCDBE /* Headers */,
-				CB4B8357F39D2518F05ABE07248C6B4B /* Sources */,
+				1387E1BF94BB21243175BF585ADC9345 /* Sources */,
 				C5DD2D056FCFDD2CA0D1689D8FAB0BD7 /* Frameworks */,
 			);
 			buildRules = (
@@ -134,12 +134,12 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CB4B8357F39D2518F05ABE07248C6B4B /* Sources */ = {
+		1387E1BF94BB21243175BF585ADC9345 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DEC085E71A8C14FF33178AFB0A0D872 /* ResumableAssert-dummy.m in Sources */,
-				08915A029F7E7D7038845A7FCC473F3F /* ResumableAssert.m in Sources */,
+				68E8F157B9D604017A68664BFCBA980E /* ResumableAssert-dummy.m in Sources */,
+				EB9BD068EA897CB3CC84A31E02B6CB4D /* ResumableAssert.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		062B8B141A9EB986A553352347C7BD8D /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B41BA45978144C6DB2BFDDEFCC660E1 /* SVIndefiniteAnimatedView.m */; };
 		17278DA7CCF3C9CB5643FB064426EF32 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB2875CB604212B04E02FCF351CE25B /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2C0BCC410C4C93B0BEC260B18018E96C /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BA1859CCCA5B006C69746F3AAFE051 /* SVProgressHUD.m */; };
 		2E09BBF17B770C7CC7B6318B87AC99D0 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = D2F49E3507FACCB6120855686BA317F7 /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		37BA8A6DB020C07214853998A57438EC /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B41BA45978144C6DB2BFDDEFCC660E1 /* SVIndefiniteAnimatedView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		481788A61468C9D2EAAC9ABAABC772BA /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCB746ECCF2D9C5758F92CEAD7601F0 /* SVRadialGradientLayer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4EA68E1E71AF19336CC32475B44B100F /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D3A438485978CC19BC2879E3B9F39 /* SVProgressAnimatedView.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4F09ADBC2DC651FE0B1FF7B8DA072D53 /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AC408336145D6CC9193DB83AC5D325 /* SVProgressHUD-dummy.m */; };
+		6B19A6426192D762E75E17C8BFEFFC2A /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D3A438485978CC19BC2879E3B9F39 /* SVProgressAnimatedView.m */; };
+		6C6CC8F066CABB8C5E4F2A7CF7CC6A03 /* SVProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3AC408336145D6CC9193DB83AC5D325 /* SVProgressHUD-dummy.m */; };
 		D1BA50B5DA9217B866A5D23755389DE1 /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 918C4DCED2B0B34E70E76E3A3022BD2E /* SVProgressAnimatedView.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D490945469C474A7A5E38E9CE15005BD /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 58A8FBD9F8EAE914B36D4AB848AEBC05 /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F0CB0C0AC735436C6AD49C278EA55666 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BA1859CCCA5B006C69746F3AAFE051 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DF6FA257CC301B87D23CD54F14FE8A9D /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DDCB746ECCF2D9C5758F92CEAD7601F0 /* SVRadialGradientLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,7 +128,7 @@
 			buildConfigurationList = AB3AFB0617AE137A70949F36557BB73A /* Build configuration list for PBXNativeTarget "SVProgressHUD" */;
 			buildPhases = (
 				EC94545C556E80DF26FB9EFEFDD1EFC5 /* Headers */,
-				B332565C7184FCD021616FE32C23B320 /* Sources */,
+				46C47A65CEE0B58CD80E2177BB4A8F5B /* Sources */,
 				2E224FF74860ED88640FFE6B0E525B0F /* Frameworks */,
 			);
 			buildRules = (
@@ -167,15 +167,15 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B332565C7184FCD021616FE32C23B320 /* Sources */ = {
+		46C47A65CEE0B58CD80E2177BB4A8F5B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37BA8A6DB020C07214853998A57438EC /* SVIndefiniteAnimatedView.m in Sources */,
-				4EA68E1E71AF19336CC32475B44B100F /* SVProgressAnimatedView.m in Sources */,
-				4F09ADBC2DC651FE0B1FF7B8DA072D53 /* SVProgressHUD-dummy.m in Sources */,
-				F0CB0C0AC735436C6AD49C278EA55666 /* SVProgressHUD.m in Sources */,
-				481788A61468C9D2EAAC9ABAABC772BA /* SVRadialGradientLayer.m in Sources */,
+				062B8B141A9EB986A553352347C7BD8D /* SVIndefiniteAnimatedView.m in Sources */,
+				6B19A6426192D762E75E17C8BFEFFC2A /* SVProgressAnimatedView.m in Sources */,
+				6C6CC8F066CABB8C5E4F2A7CF7CC6A03 /* SVProgressHUD-dummy.m in Sources */,
+				2C0BCC410C4C93B0BEC260B18018E96C /* SVProgressHUD.m in Sources */,
+				DF6FA257CC301B87D23CD54F14FE8A9D /* SVRadialGradientLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
