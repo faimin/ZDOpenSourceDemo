@@ -26,7 +26,6 @@
         cell = [tableView dequeueReusableCellWithIdentifier:cellId];
         self.templateCellCache[cellId] = cell;
     }
-    [cell prepareForReuse];
     return cell;
 }
 

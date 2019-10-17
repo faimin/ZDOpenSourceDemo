@@ -39,7 +39,7 @@
 }
 
 - (void)setupUI {
-    self.contentView.backgroundColor = [UIColor redColor];//ZD_RandomColor();
+    self.contentView.backgroundColor = ZD_RandomColor();
     
     [self.contentView addSubview:self.titleLabel];
     [self.contentView addSubview:self.contentLabel];
@@ -50,6 +50,7 @@
     [bottomContainerView addSubview:self.timeLabel];
     [self.contentView addSubview:bottomContainerView];
     
+    self.titleLabel.yoga.isEnabled = YES;
     
     [self.contentLabel configureLayoutWithBlock:^(YGLayout * _Nonnull layout) {
         layout.isEnabled = YES;
@@ -81,6 +82,7 @@
 
 - (void)setModel:(TextureModel *)model {
     if (!model) return;
+    _model = model;
     
     self.titleLabel.text = model.title;
     self.contentLabel.text = model.content;
