@@ -108,31 +108,3 @@ let jsonData2 = """
 let myStruct2 = try JSONDecoder().decode(Beer.self, from: jsonData2!)
 print(myStruct2)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

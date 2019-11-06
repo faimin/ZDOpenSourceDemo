@@ -91,6 +91,7 @@
 		FA55967820CFD00D00B5AF9D /* ZDFeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDFeedModel.swift; sourceTree = "<group>"; };
 		FA55967A20CFDF4300B5AF9D /* ZDFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDFeedController.swift; sourceTree = "<group>"; };
 		FA581700223136FC00A6F8D9 /* ZDSwiftFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDSwiftFunction.swift; sourceTree = "<group>"; };
+		FAB9567F2372BC0A0017D737 /* Playground_SwiftFeature.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground_SwiftFeature.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FABACA5521F815B800AE1E8D /* ZDExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZDExtension.swift; sourceTree = "<group>"; };
 		FAFD822321EC727400D2E0EC /* UIApplication+ZDUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+ZDUtility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -239,6 +240,7 @@
 		DAA098171F39F19700303DD4 /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				FAB9567F2372BC0A0017D737 /* Playground_SwiftFeature.playground */,
 				FA55966B20CF871000B5AF9D /* Playground_Codable.playground */,
 				DAA098181F39F1CD00303DD4 /* Playground_YogaKit.playground */,
 				DAA098261F3B09FA00303DD4 /* Playground_RxSwift.playground */,
