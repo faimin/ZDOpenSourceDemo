@@ -7,57 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05507295D38EDAAC8B23934DAFA19F6C /* UIViewController+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44BAF5BEC7D47074D31C422DE17CAD5 /* UIViewController+Hero.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		06BE374B3D7697506ACADA1E9D22454C /* HeroTargetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F1D593C691CA2901E62C332BC15BF /* HeroTargetState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1381C64A77FA564BDC0E57578E3C9428 /* HeroTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3EA151661AC90106C71B27BDF0ACB /* HeroTransition.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		144376C254AA09BB47FFE00BFE636C04 /* HeroCoreAnimationViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B042E30B2C9CDEBD9AC16F059EE0C /* HeroCoreAnimationViewContext.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		18A0A5B542578C1F8D2B13335669A18A /* DispatchQueue+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF3EED3AD1618B27BE193FB6C052FC /* DispatchQueue+Hero.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1C2CB78068F5F8880A69609E0F525EE1 /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1846082D765537EF68EA528C459C8A /* Regex.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		25EDE0B6F2319A2CE7CC6111E9FDCF43 /* CALayer+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE273C2A8B029EB8D21F57748F8C46 /* CALayer+Hero.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2A0B65C770C92A3D34B6DF4A52BF02D5 /* HeroTransition+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200C1BEA3576317ACE1E8B86F774CAA /* HeroTransition+Animate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		032487FA3CC8DF1FF23582EFE69B5274 /* MatchPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3126CD3631053DB792263ED2A24A0A89 /* MatchPreprocessor.swift */; };
+		0415D1E9CA6D745E673CBE9300381DD1 /* HeroDebugPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BF9033C406FACC5883B16C5A8F422 /* HeroDebugPlugin.swift */; };
+		056C8F11FC6C4E363ADD5EA9E387326C /* HeroTransition+UIViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED1AF220DEBC0B3B5ECBB7EAE05059E /* HeroTransition+UIViewControllerTransitioningDelegate.swift */; };
+		085F2B7461E767A784F0397BEDE952DB /* HeroTransitionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD3789D5076B1178EEFFD9B4FED8A9 /* HeroTransitionState.swift */; };
+		08A3ECD81E0A14C017E2C002CE56A23F /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BB89C5AD46C8D88FF2BD477B45DF8 /* Lexer.swift */; };
+		09D15AF289203A314EB9965D078C1A52 /* HeroModifier+Advanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878C3EF642D8175D66DAE71AE2C41B5 /* HeroModifier+Advanced.swift */; };
+		14EA3CEB98E3FB34BED979C6D5877081 /* HeroTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B2B84169A86462C533C4547105549 /* HeroTypes.swift */; };
 		2FBFACC430851B75A9B89CD625823F7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFDDD5E1AA43288F2FF93F0DC4BD82A /* UIKit.framework */; };
-		302786DC0508CAA5BDB11CC185DCC1F0 /* HeroDebugPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BF9033C406FACC5883B16C5A8F422 /* HeroDebugPlugin.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		33136A47EF4180D9285F5C8844843960 /* HeroTransition+Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65410C14523274D1E67FA479636FA77D /* HeroTransition+Start.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		39027154A1AF0A953FD3996777ED71B2 /* HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19350E7AFB0F81F8F685FC707E02365B /* HeroStringConvertible.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3C6AE182F396E82F1989BCED80A5D5AA /* BasePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA96B99F00BC0B7879D1A32283E65DE1 /* BasePreprocessor.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3D8F73037C8383DBB3F34F7E600140DB /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DBC8D2C28A4481D8DF4889E0BDD6 /* SwiftSupport.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		421C296C4CB298220FE4B2FFD85ED7A0 /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140B053B3E497113F00BDB5C5B02E20 /* Nodes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4741FB0032A1D6B1BE1EBBDC4BE7D85D /* Array+HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF4DB751528DDD0E81F43F7FEB9C4DE /* Array+HeroModifier.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		47E1687F58196A01F46B2F26A2747D74 /* Lexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8BB89C5AD46C8D88FF2BD477B45DF8 /* Lexer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		480041169F9EE50285E8F781EB6E5DF0 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE2DC38F06B3B20953F12AC51A48E91 /* IgnoreSubviewModifiersPreprocessor.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4F38910F118EB256388BEBB9785EFE99 /* HeroViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A02F86393012BA89D67F48FB20116 /* HeroViewControllerDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5A7300A9A50CCC02B6494E942A3BB3D3 /* HeroModifier+HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028911CAA3AD0F5279F8D6D93166B534 /* HeroModifier+HeroStringConvertible.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5DBE4A42589FEB15276B6B7CD0481E19 /* CG+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616B335AF6C3BBDA1F4B95835D1F9593 /* CG+Hero.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5E0A0FFB28FE40654FEA2FDFAF424020 /* HeroDefaultAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF0D49E5D2DAFAAED1805B18DD2EDA /* HeroDefaultAnimator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5E773BEFD891A34B95530D3F674A8824 /* HeroTransition+Interactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A811DA8E2025C547748508FB6155C /* HeroTransition+Interactive.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		63279F9F88F8BCEA7E69B3EAF295F4A2 /* HeroTransition+UIViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED1AF220DEBC0B3B5ECBB7EAE05059E /* HeroTransition+UIViewControllerTransitioningDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		679F46D425ECA72B0FECC69503E1542D /* HeroTransitionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD3789D5076B1178EEFFD9B4FED8A9 /* HeroTransitionState.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		696248E8D7388793390456E1A1F60F72 /* HeroTransition+CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF972310106EBAF706041765D3DC72B /* HeroTransition+CustomTransition.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		72EC97B94273240C691B8AD1E975BCAC /* UIKit+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5892AD8C7DFF32137E58D817BDD4389F /* UIKit+Hero.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		78F3BB7094444C75786BCBDACAE7A94E /* HeroTransition+UITabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77777363BFACF58FBBDF5E8784581A99 /* HeroTransition+UITabBarControllerDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7C55F4B70B37BDCB2975E8A54368FECD /* HeroModifier+Advanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7878C3EF642D8175D66DAE71AE2C41B5 /* HeroModifier+Advanced.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7DC272D77F5B080FACCDDCC2E119B2D6 /* MatchPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3126CD3631053DB792263ED2A24A0A89 /* MatchPreprocessor.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		83F6E2078C807555C19A02924158EE3D /* HeroProgressRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC10C8C66A3AD9039C5B891EFDAB3DB /* HeroProgressRunner.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		976AD9F295B5347512F6243F58E17A3C /* HeroTransition+Complete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24986312797659B12D5282C18FA65E0D /* HeroTransition+Complete.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		983476D2AF9E65BA23DF0D5452E705AB /* UIView+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04245FC24EC7054F0B8D9950DD687662 /* UIView+Hero.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A08F8C54DEDA2F31DF0EEF201ABB32CA /* ConditionalPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E4F3204F779819227306233763B7D3 /* ConditionalPreprocessor.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A5D9F6120CC69449A90C0DACB523D908 /* CAMediaTimingFunction+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982A4967DCF00F7BECCB8B65B4FBCF2B /* CAMediaTimingFunction+Hero.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AA3527AF7D97338B81C04669558CEE8C /* SourcePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACD7EF03F7155E007CB62C10236BF7F /* SourcePreprocessor.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AF64C315C2244F5D4B9534554C8FAE84 /* HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8F942D936B0B1982DBEFB1B15B632 /* HeroModifier.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B845CBE6AE876C3D505A4914F2A0C5AA /* HeroAnimatorViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6180A1D51FEA49DB5CB7BFC145EB6 /* HeroAnimatorViewContext.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B96BB2D8541A12425E472B76491F3EF1 /* HeroContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D1998AB3A4D1498CB58D1DBF75A95 /* HeroContext.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		324C867E4B6AB5985247B52180F08DD0 /* HeroTransition+CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF972310106EBAF706041765D3DC72B /* HeroTransition+CustomTransition.swift */; };
+		37B59683CBBE950052088643A28E9C75 /* SourcePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACD7EF03F7155E007CB62C10236BF7F /* SourcePreprocessor.swift */; };
+		4348BB376198096F712F4CF0A7EA9952 /* HeroTransition+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200C1BEA3576317ACE1E8B86F774CAA /* HeroTransition+Animate.swift */; };
+		436B5C87DF9D9A3222F88408CA0478F8 /* DispatchQueue+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFF3EED3AD1618B27BE193FB6C052FC /* DispatchQueue+Hero.swift */; };
+		4683B64AEDBF441BC11C3460DEA25BB3 /* HeroProgressRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC10C8C66A3AD9039C5B891EFDAB3DB /* HeroProgressRunner.swift */; };
+		4A1F70F6FC90397B8B459DDC3E95077C /* HeroModifier+HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028911CAA3AD0F5279F8D6D93166B534 /* HeroModifier+HeroStringConvertible.swift */; };
+		4EF3458CD9C4079F6CECB19D9839C9EF /* HeroTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3EA151661AC90106C71B27BDF0ACB /* HeroTransition.swift */; };
+		50AD908DA886E51A33228D6E6FBC9E67 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC7DBC8D2C28A4481D8DF4889E0BDD6 /* SwiftSupport.swift */; };
+		56DA50CFB3973D76A3C8659AC01DDF60 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044066FDE2552D64E3F23693C6E1FB69 /* Parser.swift */; };
+		5A5590D16BC196DC19BD9810B1AC1E87 /* HeroViewPropertyViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C532DD7040289D20C36A7F43B7A614 /* HeroViewPropertyViewContext.swift */; };
+		669D40BF63D11A40E696F031B7D0E2EF /* UIKit+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5892AD8C7DFF32137E58D817BDD4389F /* UIKit+Hero.swift */; };
+		6875C06AD6AF60B27FE51D93374191EC /* HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B8F942D936B0B1982DBEFB1B15B632 /* HeroModifier.swift */; };
+		6A4CDC57E5A90800435C2B2D0ADB5D97 /* DefaultAnimationPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A70EE775CCE64F3AA6D43E79F02979 /* DefaultAnimationPreprocessor.swift */; };
+		6B543400B700DED411E546F465EE414A /* BasePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA96B99F00BC0B7879D1A32283E65DE1 /* BasePreprocessor.swift */; };
+		70F0F6E010B069A33D04A0E5E8DE7A20 /* HeroTransition+Interactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A811DA8E2025C547748508FB6155C /* HeroTransition+Interactive.swift */; };
+		71496D5BA1F5C12925B720A7B932AC13 /* HeroPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C12CB7B63F3AD40B865FB32C49ED74 /* HeroPlugin.swift */; };
+		71B0D3D7AC18CEB00FC1D5306A78D75E /* HeroTargetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632F1D593C691CA2901E62C332BC15BF /* HeroTargetState.swift */; };
+		7397A8CB74A5FFAD448E8E426758D757 /* HeroTransition+UITabBarControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77777363BFACF58FBBDF5E8784581A99 /* HeroTransition+UITabBarControllerDelegate.swift */; };
+		7894096CAFBDD83B820565E310E3FC72 /* HeroCoreAnimationViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0B042E30B2C9CDEBD9AC16F059EE0C /* HeroCoreAnimationViewContext.swift */; };
+		8C0CAE0B793068F8196262DF5F6C7A83 /* CG+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616B335AF6C3BBDA1F4B95835D1F9593 /* CG+Hero.swift */; };
+		8E09E148848D09B92D8B2C8E012B533F /* HeroDefaultAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BF0D49E5D2DAFAAED1805B18DD2EDA /* HeroDefaultAnimator.swift */; };
+		8E7049DFFF726BAD1A5707257F36A133 /* HeroStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19350E7AFB0F81F8F685FC707E02365B /* HeroStringConvertible.swift */; };
+		9078A946594B2FF56D9ED3F196238561 /* UIViewController+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44BAF5BEC7D47074D31C422DE17CAD5 /* UIViewController+Hero.swift */; };
+		936DD96C7B0E401073B784215F49A5DB /* HeroTransition+Complete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24986312797659B12D5282C18FA65E0D /* HeroTransition+Complete.swift */; };
+		939FFAC9BFA82D6397D9EC79C386D026 /* HeroAnimatorViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6180A1D51FEA49DB5CB7BFC145EB6 /* HeroAnimatorViewContext.swift */; };
+		A0E32E420C058ED7C4901D81B4482D90 /* CascadePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7402B80F43C4F2472D35DBA6AE51A /* CascadePreprocessor.swift */; };
+		A29E7D0A100A87269441A0A0AA0C8B0D /* CAMediaTimingFunction+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982A4967DCF00F7BECCB8B65B4FBCF2B /* CAMediaTimingFunction+Hero.swift */; };
+		AB983FE821EC337CB5B241BF51E54EA8 /* HeroTransition+UINavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BB0AD68A229D09FCC97200B71AE0B /* HeroTransition+UINavigationControllerDelegate.swift */; };
+		BB51290BB7C7005B74D8FA791DC3BF5D /* Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9140B053B3E497113F00BDB5C5B02E20 /* Nodes.swift */; };
+		BE6B27D6E674A8A43AD1DE46707D3FC3 /* ConditionalPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E4F3204F779819227306233763B7D3 /* ConditionalPreprocessor.swift */; };
+		BF94763122798F7FE42390B8923ECE98 /* UIView+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04245FC24EC7054F0B8D9950DD687662 /* UIView+Hero.swift */; };
+		BFCD14CA3C88B32B32E6E17436DC2DED /* Array+HeroModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF4DB751528DDD0E81F43F7FEB9C4DE /* Array+HeroModifier.swift */; };
 		C44528E6A7A910656EE0C5C1F9A18CB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB49C30889F8AE4B893BA45AF1F61653 /* Foundation.framework */; };
-		C62CE0DE6B515C2282A769AD48FC756C /* HeroTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B2B84169A86462C533C4547105549 /* HeroTypes.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D2A6C0646A00A4C06F2E22347DE12182 /* HeroTransition+UINavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BB0AD68A229D09FCC97200B71AE0B /* HeroTransition+UINavigationControllerDelegate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D3E5657CEC13C8686EAAE7404A079590 /* HeroDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2407621B95DA7F6CA7A5C5FBA3D32B0 /* HeroDebugView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D6271B7650243205ED36BEC8370E5FFA /* CascadePreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C7402B80F43C4F2472D35DBA6AE51A /* CascadePreprocessor.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DE322ED4B671B5EA08F1C27466C78348 /* HeroCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = D703B5D83AED7BC236BD26C9FBD7D040 /* HeroCompatible.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DFC2E1E16EF1933B5E52D8BD838A902D /* Hero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF949228B8A992B63FDA4B132FA79E7C /* Hero-dummy.m */; };
+		DB2000C1D084D443173FD43B4FDCB005 /* HeroDebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2407621B95DA7F6CA7A5C5FBA3D32B0 /* HeroDebugView.swift */; };
+		DD32799B781B2EFE0CA5F8825F22C7EA /* IgnoreSubviewModifiersPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE2DC38F06B3B20953F12AC51A48E91 /* IgnoreSubviewModifiersPreprocessor.swift */; };
+		DDE5CC26A9C5360CD13A849F938B2C7D /* HeroTransition+Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65410C14523274D1E67FA479636FA77D /* HeroTransition+Start.swift */; };
+		E04F3649F16CD68DE3C7951990F6FDE1 /* Hero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF949228B8A992B63FDA4B132FA79E7C /* Hero-dummy.m */; };
+		E8324086878ECE75BDCFCAC4D7E17EDD /* CALayer+Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE273C2A8B029EB8D21F57748F8C46 /* CALayer+Hero.swift */; };
 		EB5C573FB693422A02703A8175C5ECA9 /* Hero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 924C1FEFC0A2EF313CCB5B0DBFEE36E8 /* Hero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EDE3D78DE82A392718F9BB9BB40713FC /* HeroPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C12CB7B63F3AD40B865FB32C49ED74 /* HeroPlugin.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F23AA996E47772E434C2A1571F9AE07F /* DefaultAnimationPreprocessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A70EE775CCE64F3AA6D43E79F02979 /* DefaultAnimationPreprocessor.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F96123889A813125A8D4F000FFDE06EE /* HeroViewPropertyViewContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C532DD7040289D20C36A7F43B7A614 /* HeroViewPropertyViewContext.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FE14FE48DF088715680861555F1F80CE /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044066FDE2552D64E3F23693C6E1FB69 /* Parser.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F069458F90630EBB96318AEC6B801ECF /* HeroViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01A02F86393012BA89D67F48FB20116 /* HeroViewControllerDelegate.swift */; };
+		F1024DA3A8CED93D2E1D6E7B13C8AA8C /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1846082D765537EF68EA528C459C8A /* Regex.swift */; };
+		F168E752050B569DA396857832FB244A /* HeroCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = D703B5D83AED7BC236BD26C9FBD7D040 /* HeroCompatible.swift */; };
+		FF0C167A356B32B07207CBC593023B7E /* HeroContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D1998AB3A4D1498CB58D1DBF75A95 /* HeroContext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,7 +84,7 @@
 		454BB0AD68A229D09FCC97200B71AE0B /* HeroTransition+UINavigationControllerDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+UINavigationControllerDelegate.swift"; path = "Sources/Transition/HeroTransition+UINavigationControllerDelegate.swift"; sourceTree = "<group>"; };
 		4A4B2B84169A86462C533C4547105549 /* HeroTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HeroTypes.swift; path = Sources/HeroTypes.swift; sourceTree = "<group>"; };
 		5892AD8C7DFF32137E58D817BDD4389F /* UIKit+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIKit+Hero.swift"; path = "Sources/Extensions/UIKit+Hero.swift"; sourceTree = "<group>"; };
-		5A87EC8DA6B4F3A3ED915266E9F272C0 /* Hero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Hero.framework; path = Hero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A87EC8DA6B4F3A3ED915266E9F272C0 /* Hero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Hero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1846082D765537EF68EA528C459C8A /* Regex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Regex.swift; path = Sources/Parser/Regex.swift; sourceTree = "<group>"; };
 		5EF972310106EBAF706041765D3DC72B /* HeroTransition+CustomTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HeroTransition+CustomTransition.swift"; path = "Sources/Transition/HeroTransition+CustomTransition.swift"; sourceTree = "<group>"; };
 		616B335AF6C3BBDA1F4B95835D1F9593 /* CG+Hero.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CG+Hero.swift"; path = "Sources/Extensions/CG+Hero.swift"; sourceTree = "<group>"; };
@@ -223,7 +223,6 @@
 				E44BAF5BEC7D47074D31C422DE17CAD5 /* UIViewController+Hero.swift */,
 				718E373531975F2CBB74CAB487EE25C9 /* Support Files */,
 			);
-			name = Hero;
 			path = Hero;
 			sourceTree = "<group>";
 		};
@@ -255,7 +254,7 @@
 			buildConfigurationList = D82A09BEC4342470B8D15BAB9433833B /* Build configuration list for PBXNativeTarget "Hero" */;
 			buildPhases = (
 				02DB08F2E3F51EB74C1038244811214C /* Headers */,
-				9888169E311F0A71B15B89518EE6CB26 /* Sources */,
+				9F58E99D82C032D462EB78AA4208C9EC /* Sources */,
 				13093CE9835EB923FF48262E7E1E49C0 /* Frameworks */,
 				A891F00C97AE6D186D56E6C5CD44C2EA /* Resources */,
 			);
@@ -305,58 +304,58 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9888169E311F0A71B15B89518EE6CB26 /* Sources */ = {
+		9F58E99D82C032D462EB78AA4208C9EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4741FB0032A1D6B1BE1EBBDC4BE7D85D /* Array+HeroModifier.swift in Sources */,
-				3C6AE182F396E82F1989BCED80A5D5AA /* BasePreprocessor.swift in Sources */,
-				25EDE0B6F2319A2CE7CC6111E9FDCF43 /* CALayer+Hero.swift in Sources */,
-				A5D9F6120CC69449A90C0DACB523D908 /* CAMediaTimingFunction+Hero.swift in Sources */,
-				D6271B7650243205ED36BEC8370E5FFA /* CascadePreprocessor.swift in Sources */,
-				5DBE4A42589FEB15276B6B7CD0481E19 /* CG+Hero.swift in Sources */,
-				A08F8C54DEDA2F31DF0EEF201ABB32CA /* ConditionalPreprocessor.swift in Sources */,
-				F23AA996E47772E434C2A1571F9AE07F /* DefaultAnimationPreprocessor.swift in Sources */,
-				18A0A5B542578C1F8D2B13335669A18A /* DispatchQueue+Hero.swift in Sources */,
-				DFC2E1E16EF1933B5E52D8BD838A902D /* Hero-dummy.m in Sources */,
-				B845CBE6AE876C3D505A4914F2A0C5AA /* HeroAnimatorViewContext.swift in Sources */,
-				DE322ED4B671B5EA08F1C27466C78348 /* HeroCompatible.swift in Sources */,
-				B96BB2D8541A12425E472B76491F3EF1 /* HeroContext.swift in Sources */,
-				144376C254AA09BB47FFE00BFE636C04 /* HeroCoreAnimationViewContext.swift in Sources */,
-				302786DC0508CAA5BDB11CC185DCC1F0 /* HeroDebugPlugin.swift in Sources */,
-				D3E5657CEC13C8686EAAE7404A079590 /* HeroDebugView.swift in Sources */,
-				5E0A0FFB28FE40654FEA2FDFAF424020 /* HeroDefaultAnimator.swift in Sources */,
-				7C55F4B70B37BDCB2975E8A54368FECD /* HeroModifier+Advanced.swift in Sources */,
-				5A7300A9A50CCC02B6494E942A3BB3D3 /* HeroModifier+HeroStringConvertible.swift in Sources */,
-				AF64C315C2244F5D4B9534554C8FAE84 /* HeroModifier.swift in Sources */,
-				EDE3D78DE82A392718F9BB9BB40713FC /* HeroPlugin.swift in Sources */,
-				83F6E2078C807555C19A02924158EE3D /* HeroProgressRunner.swift in Sources */,
-				39027154A1AF0A953FD3996777ED71B2 /* HeroStringConvertible.swift in Sources */,
-				06BE374B3D7697506ACADA1E9D22454C /* HeroTargetState.swift in Sources */,
-				2A0B65C770C92A3D34B6DF4A52BF02D5 /* HeroTransition+Animate.swift in Sources */,
-				976AD9F295B5347512F6243F58E17A3C /* HeroTransition+Complete.swift in Sources */,
-				696248E8D7388793390456E1A1F60F72 /* HeroTransition+CustomTransition.swift in Sources */,
-				5E773BEFD891A34B95530D3F674A8824 /* HeroTransition+Interactive.swift in Sources */,
-				33136A47EF4180D9285F5C8844843960 /* HeroTransition+Start.swift in Sources */,
-				D2A6C0646A00A4C06F2E22347DE12182 /* HeroTransition+UINavigationControllerDelegate.swift in Sources */,
-				78F3BB7094444C75786BCBDACAE7A94E /* HeroTransition+UITabBarControllerDelegate.swift in Sources */,
-				63279F9F88F8BCEA7E69B3EAF295F4A2 /* HeroTransition+UIViewControllerTransitioningDelegate.swift in Sources */,
-				1381C64A77FA564BDC0E57578E3C9428 /* HeroTransition.swift in Sources */,
-				679F46D425ECA72B0FECC69503E1542D /* HeroTransitionState.swift in Sources */,
-				C62CE0DE6B515C2282A769AD48FC756C /* HeroTypes.swift in Sources */,
-				4F38910F118EB256388BEBB9785EFE99 /* HeroViewControllerDelegate.swift in Sources */,
-				F96123889A813125A8D4F000FFDE06EE /* HeroViewPropertyViewContext.swift in Sources */,
-				480041169F9EE50285E8F781EB6E5DF0 /* IgnoreSubviewModifiersPreprocessor.swift in Sources */,
-				47E1687F58196A01F46B2F26A2747D74 /* Lexer.swift in Sources */,
-				7DC272D77F5B080FACCDDCC2E119B2D6 /* MatchPreprocessor.swift in Sources */,
-				421C296C4CB298220FE4B2FFD85ED7A0 /* Nodes.swift in Sources */,
-				FE14FE48DF088715680861555F1F80CE /* Parser.swift in Sources */,
-				1C2CB78068F5F8880A69609E0F525EE1 /* Regex.swift in Sources */,
-				AA3527AF7D97338B81C04669558CEE8C /* SourcePreprocessor.swift in Sources */,
-				3D8F73037C8383DBB3F34F7E600140DB /* SwiftSupport.swift in Sources */,
-				72EC97B94273240C691B8AD1E975BCAC /* UIKit+Hero.swift in Sources */,
-				983476D2AF9E65BA23DF0D5452E705AB /* UIView+Hero.swift in Sources */,
-				05507295D38EDAAC8B23934DAFA19F6C /* UIViewController+Hero.swift in Sources */,
+				BFCD14CA3C88B32B32E6E17436DC2DED /* Array+HeroModifier.swift in Sources */,
+				6B543400B700DED411E546F465EE414A /* BasePreprocessor.swift in Sources */,
+				E8324086878ECE75BDCFCAC4D7E17EDD /* CALayer+Hero.swift in Sources */,
+				A29E7D0A100A87269441A0A0AA0C8B0D /* CAMediaTimingFunction+Hero.swift in Sources */,
+				A0E32E420C058ED7C4901D81B4482D90 /* CascadePreprocessor.swift in Sources */,
+				8C0CAE0B793068F8196262DF5F6C7A83 /* CG+Hero.swift in Sources */,
+				BE6B27D6E674A8A43AD1DE46707D3FC3 /* ConditionalPreprocessor.swift in Sources */,
+				6A4CDC57E5A90800435C2B2D0ADB5D97 /* DefaultAnimationPreprocessor.swift in Sources */,
+				436B5C87DF9D9A3222F88408CA0478F8 /* DispatchQueue+Hero.swift in Sources */,
+				E04F3649F16CD68DE3C7951990F6FDE1 /* Hero-dummy.m in Sources */,
+				939FFAC9BFA82D6397D9EC79C386D026 /* HeroAnimatorViewContext.swift in Sources */,
+				F168E752050B569DA396857832FB244A /* HeroCompatible.swift in Sources */,
+				FF0C167A356B32B07207CBC593023B7E /* HeroContext.swift in Sources */,
+				7894096CAFBDD83B820565E310E3FC72 /* HeroCoreAnimationViewContext.swift in Sources */,
+				0415D1E9CA6D745E673CBE9300381DD1 /* HeroDebugPlugin.swift in Sources */,
+				DB2000C1D084D443173FD43B4FDCB005 /* HeroDebugView.swift in Sources */,
+				8E09E148848D09B92D8B2C8E012B533F /* HeroDefaultAnimator.swift in Sources */,
+				09D15AF289203A314EB9965D078C1A52 /* HeroModifier+Advanced.swift in Sources */,
+				4A1F70F6FC90397B8B459DDC3E95077C /* HeroModifier+HeroStringConvertible.swift in Sources */,
+				6875C06AD6AF60B27FE51D93374191EC /* HeroModifier.swift in Sources */,
+				71496D5BA1F5C12925B720A7B932AC13 /* HeroPlugin.swift in Sources */,
+				4683B64AEDBF441BC11C3460DEA25BB3 /* HeroProgressRunner.swift in Sources */,
+				8E7049DFFF726BAD1A5707257F36A133 /* HeroStringConvertible.swift in Sources */,
+				71B0D3D7AC18CEB00FC1D5306A78D75E /* HeroTargetState.swift in Sources */,
+				4348BB376198096F712F4CF0A7EA9952 /* HeroTransition+Animate.swift in Sources */,
+				936DD96C7B0E401073B784215F49A5DB /* HeroTransition+Complete.swift in Sources */,
+				324C867E4B6AB5985247B52180F08DD0 /* HeroTransition+CustomTransition.swift in Sources */,
+				70F0F6E010B069A33D04A0E5E8DE7A20 /* HeroTransition+Interactive.swift in Sources */,
+				DDE5CC26A9C5360CD13A849F938B2C7D /* HeroTransition+Start.swift in Sources */,
+				AB983FE821EC337CB5B241BF51E54EA8 /* HeroTransition+UINavigationControllerDelegate.swift in Sources */,
+				7397A8CB74A5FFAD448E8E426758D757 /* HeroTransition+UITabBarControllerDelegate.swift in Sources */,
+				056C8F11FC6C4E363ADD5EA9E387326C /* HeroTransition+UIViewControllerTransitioningDelegate.swift in Sources */,
+				4EF3458CD9C4079F6CECB19D9839C9EF /* HeroTransition.swift in Sources */,
+				085F2B7461E767A784F0397BEDE952DB /* HeroTransitionState.swift in Sources */,
+				14EA3CEB98E3FB34BED979C6D5877081 /* HeroTypes.swift in Sources */,
+				F069458F90630EBB96318AEC6B801ECF /* HeroViewControllerDelegate.swift in Sources */,
+				5A5590D16BC196DC19BD9810B1AC1E87 /* HeroViewPropertyViewContext.swift in Sources */,
+				DD32799B781B2EFE0CA5F8825F22C7EA /* IgnoreSubviewModifiersPreprocessor.swift in Sources */,
+				08A3ECD81E0A14C017E2C002CE56A23F /* Lexer.swift in Sources */,
+				032487FA3CC8DF1FF23582EFE69B5274 /* MatchPreprocessor.swift in Sources */,
+				BB51290BB7C7005B74D8FA791DC3BF5D /* Nodes.swift in Sources */,
+				56DA50CFB3973D76A3C8659AC01DDF60 /* Parser.swift in Sources */,
+				F1024DA3A8CED93D2E1D6E7B13C8AA8C /* Regex.swift in Sources */,
+				37B59683CBBE950052088643A28E9C75 /* SourcePreprocessor.swift in Sources */,
+				50AD908DA886E51A33228D6E6FBC9E67 /* SwiftSupport.swift in Sources */,
+				669D40BF63D11A40E696F031B7D0E2EF /* UIKit+Hero.swift in Sources */,
+				BF94763122798F7FE42390B8923ECE98 /* UIView+Hero.swift in Sources */,
+				9078A946594B2FF56D9ED3F196238561 /* UIViewController+Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +386,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -447,8 +446,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -478,7 +476,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

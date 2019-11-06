@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0654FC71724CE0CDADFAD80BC8719B10 /* YogaKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CC2B9B74716FC21F2E42C08A8B61B16 /* YogaKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0751CA4981D32AAAC6BFA1304EE9DE81 /* UIView+Yoga.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1DDDA5FD1A5FEF2365929F17A0731 /* UIView+Yoga.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		107077FA198DAF08053FC85BDB6E7006 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0C5080660ECFE555215FFE68BE9E086 /* UIKit.framework */; };
-		11D9DE637868876A3C3E81307B4B652A /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C146DD1CB021A671B54E0457160661 /* YGLayoutExtensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		12A4859AA9F018A6333684EBA83B6008 /* YogaKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2781A1F95D076B4471C4FA4E5D3630B /* YogaKit-dummy.m */; };
 		1E7ABEDDF60EE1F8A6A860E57F07E7A7 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F668F2C87DAFF1514F610656B5B768FC /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		23FA5B1DC3EE28B252A43FB5D04565F8 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = C50DE56703B0DBF239CA622EFFD5790C /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		60A2B754F3C3C153D3241949E3F43B8D /* YGLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F229B322FBDD8BA30DD11E00DEDCF637 /* YGLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2EE183A1FDEAFACBEAA1524AA6F357BA /* UIView+Yoga.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC1DDDA5FD1A5FEF2365929F17A0731 /* UIView+Yoga.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7628B32514B17C3E29D48CCCFF4D6806 /* YogaKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2781A1F95D076B4471C4FA4E5D3630B /* YogaKit-dummy.m */; };
 		A1D8EF6F141B86C8DA4A28BE79E3F454 /* yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED2C6E3E922FE0C4DF038B0E04385B3 /* yoga.framework */; };
+		A6B81F0731C7473079868227CF0905D6 /* YGLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F229B322FBDD8BA30DD11E00DEDCF637 /* YGLayout.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AA8A74E96B7174D24FA058967CA98CA8 /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C146DD1CB021A671B54E0457160661 /* YGLayoutExtensions.swift */; };
 		BF891E668B3E0FBBB171A94B29E708E9 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = DD17C9A9CFD2104D3B77FE25C8751DF4 /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		DF6C4AD5968DAA37EEE06AC13871C9E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1201D55479EDE0D140A68C20244337 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -159,7 +159,7 @@
 			buildConfigurationList = C5A753DC38402D30F0E624CE9176888D /* Build configuration list for PBXNativeTarget "YogaKit" */;
 			buildPhases = (
 				5E6FFA8F4D1FA9A90A1D1427F35C95DF /* Headers */,
-				D1EBAEC42C72F073562BC4A3A8022A5D /* Sources */,
+				39611ED0706E61D978DA024F8BEA1234 /* Sources */,
 				186BED8A3C37A3541D16A1F5BFCAFA24 /* Frameworks */,
 				5E70FBABB4F71115856CAE511907539F /* Resources */,
 			);
@@ -215,14 +215,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D1EBAEC42C72F073562BC4A3A8022A5D /* Sources */ = {
+		39611ED0706E61D978DA024F8BEA1234 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0751CA4981D32AAAC6BFA1304EE9DE81 /* UIView+Yoga.m in Sources */,
-				60A2B754F3C3C153D3241949E3F43B8D /* YGLayout.m in Sources */,
-				11D9DE637868876A3C3E81307B4B652A /* YGLayoutExtensions.swift in Sources */,
-				12A4859AA9F018A6333684EBA83B6008 /* YogaKit-dummy.m in Sources */,
+				2EE183A1FDEAFACBEAA1524AA6F357BA /* UIView+Yoga.m in Sources */,
+				A6B81F0731C7473079868227CF0905D6 /* YGLayout.m in Sources */,
+				AA8A74E96B7174D24FA058967CA98CA8 /* YGLayoutExtensions.swift in Sources */,
+				7628B32514B17C3E29D48CCCFF4D6806 /* YogaKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

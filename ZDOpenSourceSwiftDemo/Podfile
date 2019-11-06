@@ -1,6 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 
-#require 'pry' #debug
+source 'https://cdn.cocoapods.org/'
+require 'pry' #debug
 
 platform :ios, '10.0'
 
@@ -41,7 +42,7 @@ def pods_swift
   # extensition
   
   # color
-  pod 'ChameleonFramework/Swift'
+  #pod 'ChameleonFramework/Swift'
   # tools
   pod 'DeepDiff' # 对比集合内元素是否变化
   pod 'GDPerformanceView-Swift'
@@ -49,7 +50,8 @@ def pods_swift
   pod 'Watchdog'
   # debug
   pod 'Buglife'
-  pod 'Peek', :configurations => ['Debug']
+  #pod 'Peek', :configurations => ['Debug']
+  pod 'LookinServer', :configurations => ['Debug']
   pod 'FLEX', :configurations => ['Debug']
   pod 'LayoutInspector', :configurations => ['Debug']
 end
@@ -94,15 +96,16 @@ install! 'cocoapods',
 $static_framework = ['FlipperKit', 'Flipper', 'Folly',
 'CocoaAsyncSocket', 'ComponentKit', 'DoubleConversion',
 'glog', 'PeerTalk', 'RSocket', 'CocoaLibEvent',
-'OpenSSL-Static', 'boost-for-react-native'
-]
+'OpenSSL-Static', 'boost-for-react-native']
 
 pre_install do |installer|
+    Pod::Installer::Xcode::TargetValidator.send(:define_method, :verify_no_static_framework_transitive_dependencies) {}
     installer.pod_targets.each do |pod|
-        if $static_framework.include?(pod.name)
-            #pod.host_requires_frameworks = false
-            pod.instance_variable_set(:@host_requires_frameworks, false)
-        end
+       if $static_framework.include?(pod.name)
+         def pod.build_type;
+            Pod::Target::BuildType.static_library
+         end
+       end
     end
 end
 

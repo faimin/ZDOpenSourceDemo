@@ -4,216 +4,241 @@ BUILD_CONFIGURATIONS:
 CACHE_KEYS:
   Alamofire:
     BUILD_SETTINGS_CHECKSUM:
-      Alamofire: 45225c0e8313098e3378d223b7a62e0f
-    CHECKSUM: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+      Alamofire: 4e36501866026fa1aabe448d45f804a4
+    CHECKSUM: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+    PROJECT_NAME: Alamofire
     SPECS:
-      - Alamofire (4.8.2)
+      - Alamofire (4.9.1)
   Buglife:
     BUILD_SETTINGS_CHECKSUM:
-      Buglife: f9a9437d601315a7b740aff5146e173a
+      Buglife: 4b32537d510c2afe7150ccdbe3d5843d
     CHECKSUM: bc8e4931ebe37b2901c6dbcb0ca6dd76f62a98c3
+    PROJECT_NAME: Buglife
     SPECS:
       - Buglife (2.10.1)
   Cartography:
     BUILD_SETTINGS_CHECKSUM:
-      Cartography: f6e6ef3ac19287d5be40cb064bcb32c4
+      Cartography: 5f5065f9601d25b88173d917e666fdfb
     CHECKSUM: c5626d29056b20f1e95c017326ee4df57cc39ad8
+    PROJECT_NAME: Cartography
     SPECS:
       - Cartography (4.0.0)
-  ChameleonFramework:
-    BUILD_SETTINGS_CHECKSUM:
-      ChameleonFramework: f309d41724d3469c4b4a76be3545923c
-    CHECKSUM: d21a3cc247abfe5e37609a283a8238b03575cf64
-    SPECS:
-      - ChameleonFramework/Default (2.1.0)
-      - ChameleonFramework/Swift (2.1.0)
   DeepDiff:
     BUILD_SETTINGS_CHECKSUM:
-      DeepDiff: d0350830863983c6b1ae27658b1d8d03
+      DeepDiff: 2155e8314ef596c22f82a2a0a995d861
     CHECKSUM: e329bc46dd14ca788d8ec08d34420799ba1d77f2
+    PROJECT_NAME: DeepDiff
     SPECS:
       - DeepDiff (2.2.0)
   FLEX:
     BUILD_SETTINGS_CHECKSUM:
-      FLEX: f8f647f3326b03853f52a0b1796094d3
+      FLEX: 5ee6c789d5f2aeba1b0229da082d5f3d
     CHECKSUM: d66c759bce0f6ebbbf472c742380874d846f2883
+    PROJECT_NAME: FLEX
     SPECS:
       - FLEX (3.0.0)
   GDPerformanceView-Swift:
     BUILD_SETTINGS_CHECKSUM:
-      GDPerformanceView-Swift: 43a146798479d1dec4f8b32a3afd574a
+      GDPerformanceView-Swift: d0095414c6e69859cb06018763716759
     CHECKSUM: a40b2f675589449f5b5082f3178f01bfdb7882ce
+    PROJECT_NAME: GDPerformanceView-Swift
     SPECS:
       - GDPerformanceView-Swift (2.0.2)
   Gemini:
     BUILD_SETTINGS_CHECKSUM:
-      Gemini: 48d9b709b109b7d4c527a52d24ae4691
+      Gemini: 9160cc8612e476b756b1e6ddcd913da3
     CHECKSUM: 4ad915cca8805577fe3021e02feeca2b77dcdbfc
+    PROJECT_NAME: Gemini
     SPECS:
       - Gemini (1.4.0)
   Hero:
     BUILD_SETTINGS_CHECKSUM:
-      Hero: 07613f5aee21d62d191042b97ff73e1c
+      Hero: 6bf1ca5151d0e67844993fea4d77b5f5
     CHECKSUM: bac92350d7201a1a940003e0767c7b52ce7c99a1
+    PROJECT_NAME: Hero
     SPECS:
       - Hero (1.4.0)
   IGListKit:
     BUILD_SETTINGS_CHECKSUM:
-      IGListKit: 24088c0f0d7e5d1cd4a3d7a3ee369fbf
+      IGListKit: ff041e1bb4474a8c68bfdfc9398bfefa
     CHECKSUM: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
+    PROJECT_NAME: IGListKit
     SPECS:
       - IGListKit (3.4.0)
       - IGListKit/Default (3.4.0)
       - IGListKit/Diffing (3.4.0)
   Kingfisher:
     BUILD_SETTINGS_CHECKSUM:
-      Kingfisher: 4e3a9346b15966babfcd139d18f13919
-    CHECKSUM: 1a50df6880a60bae26f3e21a0df3d17b892f5e0b
+      Kingfisher: 6e9ef7615fc6ea0b21044cb8c0ec041d
+    CHECKSUM: ff98240aebb7302bdc4f1ecd701761030ce18b16
+    PROJECT_NAME: Kingfisher
     SPECS:
-      - Kingfisher (5.6.0)
+      - Kingfisher (5.9.0)
+      - Kingfisher/Core (5.9.0)
   LayoutInspector:
     BUILD_SETTINGS_CHECKSUM:
-      LayoutInspector: f7affb883a8a38fb9850ea04326b1041
+      LayoutInspector: bb71fde2dc9a4600d9b7831a5669120a
     CHECKSUM: 1078a54f993510f61101203f48a8a3db69c7afe1
+    PROJECT_NAME: LayoutInspector
     SPECS:
       - LayoutInspector (1.0.0)
   LayoutKit:
     BUILD_SETTINGS_CHECKSUM:
-      LayoutKit: 00ccf6595ba184fa1f7005500683b7f4
+      LayoutKit: 1fe7377122ae399e6df0d86bc91130b7
     CHECKSUM: 66478bb3af5ce4519a056d9465bc4c7585d2350b
+    PROJECT_NAME: LayoutKit
     SPECS:
       - LayoutKit (10.1.0)
   LifetimeTracker:
     BUILD_SETTINGS_CHECKSUM:
-      LifetimeTracker: 39a78d64e52d8a3b0de67f17fcc2db78
-    CHECKSUM: dcdb1cbd0dd4825c7634c02a6955799138fcaec9
+      LifetimeTracker: 50e3b3e14125d8f9f83c9b57a1cbdc82
+    CHECKSUM: cf663a0e0849d6dbcfac7704373d8e36e79688f6
+    PROJECT_NAME: LifetimeTracker
     SPECS:
-      - LifetimeTracker (1.6.1)
+      - LifetimeTracker (1.7.0)
+  LookinServer:
+    BUILD_SETTINGS_CHECKSUM:
+      LookinServer: 73179ce01803f635f5d62db2f62fb73e
+    CHECKSUM: 0002891cd3cec5e082a910e897dfe71b4f06b89e
+    PROJECT_NAME: LookinServer
+    SPECS:
+      - LookinServer (1.0.0)
   lottie-ios:
     BUILD_SETTINGS_CHECKSUM:
-      lottie-ios: 9a887701f93b155abe72bec6635139ac
-    CHECKSUM: 43a472d22b2dd2bed292cc4010c0b4d2e66d3ba8
+      lottie-ios: f7f0e2b5ee6c15bb06a3ab4d0d1b2eca
+    CHECKSUM: 32bf84389337d86fbc8b12266e88452e0abf1dee
+    PROJECT_NAME: lottie-ios
     SPECS:
-      - lottie-ios (3.1.1)
+      - lottie-ios (3.1.5)
   MBProgressHUD:
     BUILD_SETTINGS_CHECKSUM:
-      MBProgressHUD: 9ddcf1e04f61c1f52ce835899d840054
+      MBProgressHUD: fe14aaea9d3855bbc70639bc2189aa20
     CHECKSUM: e7baa36a220447d8aeb12769bf0585582f3866d9
+    PROJECT_NAME: MBProgressHUD
     SPECS:
       - MBProgressHUD (1.1.0)
   Neon:
     BUILD_SETTINGS_CHECKSUM:
-      Neon: ad427b9b1a0c710f453655649769cbb8
+      Neon: 2bc52c2ee99798e4ea84069254118c3d
     CHECKSUM: 7fb5a9327e7e57911843f608e08f4893a74deaf9
+    PROJECT_NAME: Neon
     SPECS:
       - Neon (0.4.0)
   ObjectMapper:
     BUILD_SETTINGS_CHECKSUM:
-      ObjectMapper: 21eea98855f08976126cfa955749b7fd
+      ObjectMapper: de28f41dd3c326b2e9a9006ee121d006
     CHECKSUM: 70187b8941977c62ccfb423caf6b50be405cabf0
+    PROJECT_NAME: ObjectMapper
     SPECS:
       - ObjectMapper (3.5.1)
-  Peek:
-    BUILD_SETTINGS_CHECKSUM:
-      Peek: 142811cdcd6811e1e361bddad1891f87
-    CHECKSUM: 77f6362167c00aab3f1147d92d51bdf80d259d45
-    SPECS:
-      - Peek (5.2.0)
   PINCache:
     BUILD_SETTINGS_CHECKSUM:
-      PINCache: e5fe269a85d27bed587f8b0ab2c9470e
+      PINCache: 8c623f073ffdf0a36d696f79a51593f2
     CHECKSUM: d195fdba255283f7e9900a55e3cced377f431f9b
+    PROJECT_NAME: PINCache
     SPECS:
       - PINCache (3.0.1-beta.6)
       - PINCache/Arc-exception-safe (3.0.1-beta.6)
       - PINCache/Core (3.0.1-beta.6)
   PINOperation:
     BUILD_SETTINGS_CHECKSUM:
-      PINOperation: 7520fff2d6884f926a061df04d147500
+      PINOperation: 3a09c08c802563bee0c27ccdf288e040
     CHECKSUM: 24b774353ca248fcf87d67b2d61eef42087c125a
+    PROJECT_NAME: PINOperation
     SPECS:
       - PINOperation (1.1.2)
   PINRemoteImage:
     BUILD_SETTINGS_CHECKSUM:
-      PINRemoteImage: 79bb222384691d1627d4772fb6975a8d
+      PINRemoteImage: 89b03d2809ebe9f378191165cf5a4bb7
     CHECKSUM: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
+    PROJECT_NAME: PINRemoteImage
     SPECS:
       - PINRemoteImage/Core (3.0.0-beta.13)
       - PINRemoteImage/iOS (3.0.0-beta.13)
       - PINRemoteImage/PINCache (3.0.0-beta.13)
   Pods-ZDOpenSourceSwiftDemo:
     BUILD_SETTINGS_CHECKSUM:
-      Debug: 5cee4324c2db6607402a8beedb6509e7
-      Release: 62f55de8db974a8bcec4fa9cbb500aea
+      Debug: 525c834efa1e5b63ee019833ef5be92a
+      Release: 94a0a64ac9e66522752bc153fe2558fc
   Pods-ZDOpenSourceSwiftDemoTests:
     BUILD_SETTINGS_CHECKSUM:
-      Debug: c746b5adab83b72bafeca6723f6c86bd
-      Release: 935ee79aca77ffc9c7adfcb21daf99e7
+      Debug: 5880c5e044c5d74142f1d17d37ad2bd9
+      Release: fbc728b349f72eb76f1d93aa496fc93a
   Pods-ZDOpenSourceSwiftDemoUITests:
     BUILD_SETTINGS_CHECKSUM:
-      Debug: c746b5adab83b72bafeca6723f6c86bd
-      Release: 935ee79aca77ffc9c7adfcb21daf99e7
+      Debug: 5880c5e044c5d74142f1d17d37ad2bd9
+      Release: fbc728b349f72eb76f1d93aa496fc93a
   PromiseKit:
     BUILD_SETTINGS_CHECKSUM:
-      PromiseKit: af7ccfc2ad4d81d380c03fc732c4dbf3
-    CHECKSUM: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
+      PromiseKit: 4d369604a4809d0b47d6a96cc31cb6ac
+    CHECKSUM: e4863d06976e7dee5e41c04fc7371c16b3600292
+    PROJECT_NAME: PromiseKit
     SPECS:
-      - PromiseKit (6.10.0)
-      - PromiseKit/CorePromise (6.10.0)
-      - PromiseKit/Foundation (6.10.0)
-      - PromiseKit/UIKit (6.10.0)
+      - PromiseKit (6.11.0)
+      - PromiseKit/CorePromise (6.11.0)
+      - PromiseKit/Foundation (6.11.0)
+      - PromiseKit/UIKit (6.11.0)
   PromisesObjC:
     BUILD_SETTINGS_CHECKSUM:
-      PromisesObjC: d76c92166c2a0b8ffc2935e31c369fc7
+      PromisesObjC: 594334d83a00c3675c1e0a8d4503b10d
     CHECKSUM: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+    PROJECT_NAME: PromisesObjC
     SPECS:
       - PromisesObjC (1.2.8)
   PromisesSwift:
     BUILD_SETTINGS_CHECKSUM:
-      PromisesSwift: f8979049c29de4e830d33c7e6cfa934b
+      PromisesSwift: a2ec4c9e7e1c7099ad6a61fd789a26ad
     CHECKSUM: 37bad6f4daddb02f7c9c531efe91e8b21c13ee2f
+    PROJECT_NAME: PromisesSwift
     SPECS:
       - PromisesSwift (1.2.8)
   ResponseDetective:
     BUILD_SETTINGS_CHECKSUM:
-      ResponseDetective: 98e35b0ab12cbb12b13d1de0ba00dcd9
+      ResponseDetective: 492f1bf03cedd36580e8575c09d11b2f
     CHECKSUM: 8422c5139cf6ff7d7db38b2bfea418b748b440cc
+    PROJECT_NAME: ResponseDetective
     SPECS:
       - ResponseDetective (1.3.0)
   RSSwizzle:
     BUILD_SETTINGS_CHECKSUM:
-      RSSwizzle: dd42ec2c4b4e8860635302bb3e9ba719
+      RSSwizzle: 37742ed25e3dc70f485eb2280d6f0f7a
     CHECKSUM: d561958f595028bfcef98c7d55c318b3878a61c6
+    PROJECT_NAME: RSSwizzle
     SPECS:
       - RSSwizzle (0.1.0)
   RxCocoa:
     BUILD_SETTINGS_CHECKSUM:
-      RxCocoa: b554b86b5dfe9e28f90a290e00171fca
-    CHECKSUM: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+      RxCocoa: a79cdea2fe4450fd3c5ef8f1de238597
+    CHECKSUM: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
+    PROJECT_NAME: RxCocoa
     SPECS:
-      - RxCocoa (5.0.0)
+      - RxCocoa (5.0.1)
   RxRelay:
     BUILD_SETTINGS_CHECKSUM:
-      RxRelay: 669f72136779f30caafb015ddf07ebe2
-    CHECKSUM: 4f7409406a51a55cd88483f21ed898c234d60f18
+      RxRelay: 8b991b1dd03a67fe2467cd7a6f3c2eb6
+    CHECKSUM: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
+    PROJECT_NAME: RxRelay
     SPECS:
-      - RxRelay (5.0.0)
+      - RxRelay (5.0.1)
   RxSwift:
     BUILD_SETTINGS_CHECKSUM:
-      RxSwift: 6f93ba9ad32447f1cf99440145a7ce8e
-    CHECKSUM: 8b0671caa829a763bbce7271095859121cbd895f
+      RxSwift: 0cea28b299040d952e301f5523edc6c3
+    CHECKSUM: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+    PROJECT_NAME: RxSwift
     SPECS:
-      - RxSwift (5.0.0)
+      - RxSwift (5.0.1)
   SnapKit:
     BUILD_SETTINGS_CHECKSUM:
-      SnapKit: f5f0fd32b0bbd5c4d1059d5c95a7c3d9
-    CHECKSUM: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+      SnapKit: e17ffba0c0eec7864b36e41daf07dae4
+    CHECKSUM: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+    PROJECT_NAME: SnapKit
     SPECS:
-      - SnapKit (5.0.0)
+      - SnapKit (5.0.1)
   Texture:
     BUILD_SETTINGS_CHECKSUM:
-      Texture: 531c3cca3592b1c641e8487866f25ee1
+      Texture: bf5dd2d64b3d510e0528b9c99e4ede35
     CHECKSUM: 8ecf6984065a1e54f06bf97b349ecca28582acd7
+    PROJECT_NAME: Texture
     SPECS:
       - Texture (2.8.1)
       - Texture/AssetsLibrary (2.8.1)
@@ -224,32 +249,37 @@ CACHE_KEYS:
       - Texture/Video (2.8.1)
   TinyConstraints:
     BUILD_SETTINGS_CHECKSUM:
-      TinyConstraints: f113f801222935031ad726e5453e6829
+      TinyConstraints: 8c8683b461072dd964734cb7f94def39
     CHECKSUM: 8dd91295e56797648c7bc335dd20e1d91ec4c192
+    PROJECT_NAME: TinyConstraints
     SPECS:
       - TinyConstraints (4.0.1)
   Toast-Swift:
     BUILD_SETTINGS_CHECKSUM:
-      Toast-Swift: a545e3660ca9e9d590fd12ff67e83362
+      Toast-Swift: 071a1489441d2153905ae3765c631050
     CHECKSUM: 36f4720243c8582c2be243a60a51e193c761f541
+    PROJECT_NAME: Toast-Swift
     SPECS:
       - Toast-Swift (5.0.0)
   Watchdog:
     BUILD_SETTINGS_CHECKSUM:
-      Watchdog: ad1443ab824d527c059b8ecedc20e6a6
+      Watchdog: fb2a6de56bb1e97752739e2dfd61d5e7
     CHECKSUM: 622647e6bc5a55665e6dbae0b7831ad8d95abeab
+    PROJECT_NAME: Watchdog
     SPECS:
       - Watchdog (5.2)
   Yoga:
     BUILD_SETTINGS_CHECKSUM:
-      Yoga: c0561970cffb151168e9b68df5db1c48
+      Yoga: 8e6f91e66940c2d4c98f65701bedd999
     CHECKSUM: cff67a400f6b74dc38eb0bad4f156673d9aa980c
+    PROJECT_NAME: Yoga
     SPECS:
       - Yoga (1.14.0)
   YogaKit:
     BUILD_SETTINGS_CHECKSUM:
-      YogaKit: 403733c42daa2d0e45ef521b831e3086
+      YogaKit: 6a69b89470a6f7d42fad3019812a9def
     CHECKSUM: 5d1dc899cecd5946e5a758a0c3997704a4b48d01
+    PROJECT_NAME: YogaKit
     SPECS:
       - YogaKit (1.14.0)
 OBJECT_VERSION: 46

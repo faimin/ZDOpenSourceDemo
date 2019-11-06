@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01283F36023342BE7F9ADAA9EF1450B1 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D5B2D63DE17306D80DCFA4DC3301D6 /* UITableView+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		05FD5C7D2F031A82CE0C0CBC31049A5F /* WagnerFischer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099EED15021AA093DBE8E4AB9EDBA942 /* WagnerFischer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2B06C386EBF6E64BF5612FAF44C1FC4C /* DeepDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BBC0994952CACE567198872D466D6 /* DeepDiff.swift */; };
 		2F1D0799B326E68FC8CE82A9372C849B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BB7C24BF8A0407265D512FAE9A1EF5 /* UIKit.framework */; };
-		45075D035265EF35DC1C789A4E7E7859 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E586BE9A0D90A8A2C56BD7A7A534D28 /* UICollectionView+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		596DC4E828CCF4ED58A5BDBF8B35DE9E /* DeepDiff-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A72389F932DA8D76DD5B35FC4ACBCF /* DeepDiff-dummy.m */; };
-		5AF022969AD681251EF53128B7E9A41A /* MoveReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D97512E85D115AD09754E92DBF9E323 /* MoveReducer.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7854453736D97FCE2E2FBE6E0F1E9BBC /* Heckel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E38A8486938C986B62210064546C36 /* Heckel.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7CDE8BDD1D5BADC0704307A42162FC95 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A2906903D5CC269E5208CC37F0E6E /* Array+Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		858CA5A2636998D14B865913C1B99BF1 /* DiffAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACF669C4F5A7F06E52CE36268CE2D3 /* DiffAware.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3A3B61105194616130687C8B1E58F295 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E586BE9A0D90A8A2C56BD7A7A534D28 /* UICollectionView+Extensions.swift */; };
+		4A69AA9E091D0B5E2CB4D02ED7A811CB /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D5B2D63DE17306D80DCFA4DC3301D6 /* UITableView+Extensions.swift */; };
+		850ECE206366E1345B6C4D796F6C0007 /* DeepDiff-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A72389F932DA8D76DD5B35FC4ACBCF /* DeepDiff-dummy.m */; };
+		88CBD755CA0BC9608156DEF128AA97E6 /* DiffAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ACF669C4F5A7F06E52CE36268CE2D3 /* DiffAware.swift */; };
 		933C27E06B47A7A430FCA553D0774B3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A67F7A52AF648BE77983141A43B6C0 /* Foundation.framework */; };
-		A86AD5DE188E5AAE6240473649C1A47C /* IndexPathConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35066FE017F1BABFE7D7C6B88CC18A /* IndexPathConverter.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AD28E895DB8559E999E916E2EFF9CC77 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6131FCACD6A0D60DCBDA1B61142DA2 /* Change.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		943004CEAD61C40D0950D4C46CEBC101 /* Change.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6131FCACD6A0D60DCBDA1B61142DA2 /* Change.swift */; };
+		95E9D404D6F247D2D3830CB71890A2D0 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09A2906903D5CC269E5208CC37F0E6E /* Array+Extensions.swift */; };
+		A6796F355BD0B97C3CC655932C91D46D /* Heckel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E38A8486938C986B62210064546C36 /* Heckel.swift */; };
+		B1191F85FE1A73F10DE1FCBB6D0618C8 /* WagnerFischer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099EED15021AA093DBE8E4AB9EDBA942 /* WagnerFischer.swift */; };
 		CC97981DDA05F634A84F70FE646EDE03 /* DeepDiff-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 722D8DC7BD96D220649820567CE2D32E /* DeepDiff-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EAC01B477F4C36220165F979DFDC8956 /* DeepDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BBC0994952CACE567198872D466D6 /* DeepDiff.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E555DD5C823BBD6AF1174142C724667E /* MoveReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D97512E85D115AD09754E92DBF9E323 /* MoveReducer.swift */; };
+		F9FB9C2A09A41F174AE5A2F50A8153AD /* IndexPathConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE35066FE017F1BABFE7D7C6B88CC18A /* IndexPathConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,7 +144,7 @@
 			buildConfigurationList = E717F096A18CEEF9074F0AB5CAB65F20 /* Build configuration list for PBXNativeTarget "DeepDiff" */;
 			buildPhases = (
 				454DEF7E165A32659B394E4CEE84A6EC /* Headers */,
-				F3EDC3A7556E622D86675CB480C4B393 /* Sources */,
+				ABF93E33A737BC3A350E42A4B523D3C2 /* Sources */,
 				2156A9F072F17E0EC887DAB1058F0D6F /* Frameworks */,
 				37A4F726E28A07CE8A7E13018C49AFB1 /* Resources */,
 			);
@@ -194,21 +194,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F3EDC3A7556E622D86675CB480C4B393 /* Sources */ = {
+		ABF93E33A737BC3A350E42A4B523D3C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CDE8BDD1D5BADC0704307A42162FC95 /* Array+Extensions.swift in Sources */,
-				AD28E895DB8559E999E916E2EFF9CC77 /* Change.swift in Sources */,
-				596DC4E828CCF4ED58A5BDBF8B35DE9E /* DeepDiff-dummy.m in Sources */,
-				EAC01B477F4C36220165F979DFDC8956 /* DeepDiff.swift in Sources */,
-				858CA5A2636998D14B865913C1B99BF1 /* DiffAware.swift in Sources */,
-				7854453736D97FCE2E2FBE6E0F1E9BBC /* Heckel.swift in Sources */,
-				A86AD5DE188E5AAE6240473649C1A47C /* IndexPathConverter.swift in Sources */,
-				5AF022969AD681251EF53128B7E9A41A /* MoveReducer.swift in Sources */,
-				45075D035265EF35DC1C789A4E7E7859 /* UICollectionView+Extensions.swift in Sources */,
-				01283F36023342BE7F9ADAA9EF1450B1 /* UITableView+Extensions.swift in Sources */,
-				05FD5C7D2F031A82CE0C0CBC31049A5F /* WagnerFischer.swift in Sources */,
+				95E9D404D6F247D2D3830CB71890A2D0 /* Array+Extensions.swift in Sources */,
+				943004CEAD61C40D0950D4C46CEBC101 /* Change.swift in Sources */,
+				850ECE206366E1345B6C4D796F6C0007 /* DeepDiff-dummy.m in Sources */,
+				2B06C386EBF6E64BF5612FAF44C1FC4C /* DeepDiff.swift in Sources */,
+				88CBD755CA0BC9608156DEF128AA97E6 /* DiffAware.swift in Sources */,
+				A6796F355BD0B97C3CC655932C91D46D /* Heckel.swift in Sources */,
+				F9FB9C2A09A41F174AE5A2F50A8153AD /* IndexPathConverter.swift in Sources */,
+				E555DD5C823BBD6AF1174142C724667E /* MoveReducer.swift in Sources */,
+				3A3B61105194616130687C8B1E58F295 /* UICollectionView+Extensions.swift in Sources */,
+				4A69AA9E091D0B5E2CB4D02ED7A811CB /* UITableView+Extensions.swift in Sources */,
+				B1191F85FE1A73F10DE1FCBB6D0618C8 /* WagnerFischer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

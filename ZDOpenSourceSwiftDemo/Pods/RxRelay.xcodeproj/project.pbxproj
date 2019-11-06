@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		64F35013594D2BE028BD0632E7666AEF /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6127464BC31C853BDEA07CEE8A2B69ED /* Utils.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		700BDE4BC205D2A09DEEDFF5E6DBFA2A /* RxRelay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A87CCE360B4966D71CCB285B12E6B /* RxRelay-dummy.m */; };
+		02BC7F9490C12C6A00205C3EFB5A37A0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6127464BC31C853BDEA07CEE8A2B69ED /* Utils.swift */; };
+		34BAF0BA21A7ACAC542BEB9693AD781C /* BehaviorRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCEC782962B6DA1BB2C4C5E75D9495 /* BehaviorRelay.swift */; };
+		3B122E08740911CF5FDB625CA085B915 /* Observable+Bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4801B260DBD18090DFA093DAE4212E /* Observable+Bind.swift */; };
 		7F7F89B6FA3C5E04B9165D0D25957561 /* RxRelay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2509CEB0E40D44EC4387747222D589 /* RxRelay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		83D3BA808860409C6C9AC02B477DAD76 /* PublishRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BAC98EF6475BD5F9005E010C781A /* PublishRelay.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A54E6D92ACAF4B2FC5249E9D2D0FC24E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13FE5EAF526BC15D3E55FF5F050C088B /* Foundation.framework */; };
+		AD09D109F0F64B1CA6622A5AC5B7AAC7 /* RxRelay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A87CCE360B4966D71CCB285B12E6B /* RxRelay-dummy.m */; };
+		AED4406A7FAEE2051E179E5F87CCE03F /* PublishRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5833BAC98EF6475BD5F9005E010C781A /* PublishRelay.swift */; };
 		BF9E0EB51F975156AF8750843693151F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 073E1C8F2CE27456CA386C6BC81B3E1F /* RxSwift.framework */; };
-		D65F762535CCA1E6A543EE5A329F953B /* Observable+Bind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4801B260DBD18090DFA093DAE4212E /* Observable+Bind.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EDB2E807C76DA74ADFDFE00037A05CAD /* BehaviorRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCEC782962B6DA1BB2C4C5E75D9495 /* BehaviorRelay.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,7 +146,7 @@
 			buildConfigurationList = CB1ABC75D1AD6492CBD1F4AD7F4D36B1 /* Build configuration list for PBXNativeTarget "RxRelay" */;
 			buildPhases = (
 				AE292E7B023D5D47DC3A8D1BEA6ED4BA /* Headers */,
-				420F146A8FF97866E7118EF90D323E2A /* Sources */,
+				1930AB270AF3302AD47BA5CB8F04CBD5 /* Sources */,
 				9AC63B43FF574A97E1356B7CEDE40465 /* Frameworks */,
 				19F1CA3D21C8B34764622F43F70F272C /* Resources */,
 			);
@@ -202,15 +202,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		420F146A8FF97866E7118EF90D323E2A /* Sources */ = {
+		1930AB270AF3302AD47BA5CB8F04CBD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDB2E807C76DA74ADFDFE00037A05CAD /* BehaviorRelay.swift in Sources */,
-				D65F762535CCA1E6A543EE5A329F953B /* Observable+Bind.swift in Sources */,
-				83D3BA808860409C6C9AC02B477DAD76 /* PublishRelay.swift in Sources */,
-				700BDE4BC205D2A09DEEDFF5E6DBFA2A /* RxRelay-dummy.m in Sources */,
-				64F35013594D2BE028BD0632E7666AEF /* Utils.swift in Sources */,
+				34BAF0BA21A7ACAC542BEB9693AD781C /* BehaviorRelay.swift in Sources */,
+				3B122E08740911CF5FDB625CA085B915 /* Observable+Bind.swift in Sources */,
+				AED4406A7FAEE2051E179E5F87CCE03F /* PublishRelay.swift in Sources */,
+				AD09D109F0F64B1CA6622A5AC5B7AAC7 /* RxRelay-dummy.m in Sources */,
+				02BC7F9490C12C6A00205C3EFB5A37A0 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

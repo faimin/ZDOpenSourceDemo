@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		079F8226AE42AAC1F9BF9B103CC71CCB /* ScaleAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464A1B9A2CD50D7EDEAC7B9116D44BDA /* ScaleAnimatable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		09DAD2D72A6CE0A4722A71643C0BF6A2 /* CircleRotateAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C42B974A9FE9DF35489997F628D8D /* CircleRotateAnimatable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		1805C6318CD81234F6F47688E59085E4 /* YawRotationAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C56D1E01F69C839DA0A627682F39672 /* YawRotationAnimatable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2645B2F98D5AD0881F3D01E6B118DD90 /* EasingAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC945BDB947FDD6D343603E901DBC03D /* EasingAnimatable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2D095A98635A783785232565815787FA /* CustomAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4E7FBB5E2A1F71B7268D8EB7ACB90 /* CustomAnimatable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		476C58FE860E7CA4F322948C39757D56 /* UIAppearanceAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CDFC1DA1CEB67337C0A1CC41679939 /* UIAppearanceAnimatable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		06DE22A4B3D722CC69E4D23A8167686C /* RollRotationAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BF65D457C591EF65548319E10F8AD /* RollRotationAnimatable.swift */; };
+		1093E116B51C4FEE00F6F135ED4B0314 /* GeminiAnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B066174E8AA5B522A6010381087A7AC /* GeminiAnimationModel.swift */; };
+		2A5944F2264353ECB89105F198D4B259 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E53DCB7D1BF8A0DB309577F42B1971 /* UIViewExtension.swift */; };
+		46DCDA84D472ADD2F9E349FCBE31A0BB /* CubeAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E429215C70D56B86D2A0CDBB1C9E84 /* CubeAnimatable.swift */; };
 		537658C5B322E304D134681C299DA588 /* Gemini-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 65669CE208FBC414B207F3E639DBB66B /* Gemini-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		69F3EF01B58FA95A9A3A8D15087A6F70 /* GeminiAnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B066174E8AA5B522A6010381087A7AC /* GeminiAnimationModel.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6A9BDFBE067F10DFE6E34E5CF5E2D37B /* GeminiCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE17832F8799C3A044A9DAB3B42B0D /* GeminiCollectionView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		78887EB0BD2ABC3C6F3DE0FED0262847 /* RollRotationAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0BF65D457C591EF65548319E10F8AD /* RollRotationAnimatable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A5EBBBD3790E628C8803DF973A0AFB32 /* EasingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA859EAD03DCA6F7B8DD944AE4D1926C /* EasingFunction.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		AEDE302EAB7A4BE656D248DF65211576 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E53DCB7D1BF8A0DB309577F42B1971 /* UIViewExtension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		958461C79A67CCEC5D6C3346730F252E /* YawRotationAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C56D1E01F69C839DA0A627682F39672 /* YawRotationAnimatable.swift */; };
+		A9078674EB0EBF8F71D83A10D7203EE4 /* PitchRotationAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE9B0FC48B13D89A119AD6969937BB2 /* PitchRotationAnimatable.swift */; };
+		ADF206CA711EEA3F8013C04E7C4F39A8 /* UIAppearanceAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CDFC1DA1CEB67337C0A1CC41679939 /* UIAppearanceAnimatable.swift */; };
+		B19DBB82CF7D9CB3D9A75245217F674D /* EasingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA859EAD03DCA6F7B8DD944AE4D1926C /* EasingFunction.swift */; };
 		B300D55CEEC8F86BD133CBE8E7C54C42 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4117698BD8EBAF10710A24EDBD603F /* Foundation.framework */; };
-		E1A5E25F353A3543AEE9F2DA2EBC498F /* CubeAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E429215C70D56B86D2A0CDBB1C9E84 /* CubeAnimatable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E3A16A40B167FC34247122E57EC69193 /* GeminiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437EA9B484480CA27B99DB3C1395A883 /* GeminiCell.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E910BA6728DF2B63A8CEFB0AD28A375D /* PitchRotationAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE9B0FC48B13D89A119AD6969937BB2 /* PitchRotationAnimatable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		ECCE82B21CBFB43B99918FB400192A0D /* Gemini-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 121C8719F89B134773FADFFD4E19D526 /* Gemini-dummy.m */; };
+		CC7E422ABDEE7CAEFE625FBD6871CF03 /* GeminiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437EA9B484480CA27B99DB3C1395A883 /* GeminiCell.swift */; };
+		CE12D9964E6CE222BCEB1435BD503914 /* CircleRotateAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C42B974A9FE9DF35489997F628D8D /* CircleRotateAnimatable.swift */; };
+		D9676CB206E639E41A6DF2AEC43AE067 /* CustomAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4E7FBB5E2A1F71B7268D8EB7ACB90 /* CustomAnimatable.swift */; };
+		E88219CEBCA20F0EAAABC38082E85630 /* GeminiCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DE17832F8799C3A044A9DAB3B42B0D /* GeminiCollectionView.swift */; };
+		F55BDFA25C70021E10E59AECB6868479 /* EasingAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC945BDB947FDD6D343603E901DBC03D /* EasingAnimatable.swift */; };
+		F62A2541505A0200050EF7265A3C4474 /* Gemini-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 121C8719F89B134773FADFFD4E19D526 /* Gemini-dummy.m */; };
+		FAE67BE74B4EBA7E2CA6CE6FB3DA8C5F /* ScaleAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464A1B9A2CD50D7EDEAC7B9116D44BDA /* ScaleAnimatable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,7 +152,7 @@
 			buildConfigurationList = 2D31FA9E170E075D6F127FE7C2523CAD /* Build configuration list for PBXNativeTarget "Gemini" */;
 			buildPhases = (
 				7DEEA9F184F63065CAFC86498B44BA98 /* Headers */,
-				F2DB86E10BA6D4A993CB41D83971A085 /* Sources */,
+				101F35F3BEC16380A3BE0979B6C34E7A /* Sources */,
 				A957FA377A5D9023A6C10C2237F4618A /* Frameworks */,
 				8E98CC7F80D0067E61B7680AC8F18695 /* Resources */,
 			);
@@ -202,25 +202,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F2DB86E10BA6D4A993CB41D83971A085 /* Sources */ = {
+		101F35F3BEC16380A3BE0979B6C34E7A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09DAD2D72A6CE0A4722A71643C0BF6A2 /* CircleRotateAnimatable.swift in Sources */,
-				E1A5E25F353A3543AEE9F2DA2EBC498F /* CubeAnimatable.swift in Sources */,
-				2D095A98635A783785232565815787FA /* CustomAnimatable.swift in Sources */,
-				2645B2F98D5AD0881F3D01E6B118DD90 /* EasingAnimatable.swift in Sources */,
-				A5EBBBD3790E628C8803DF973A0AFB32 /* EasingFunction.swift in Sources */,
-				ECCE82B21CBFB43B99918FB400192A0D /* Gemini-dummy.m in Sources */,
-				69F3EF01B58FA95A9A3A8D15087A6F70 /* GeminiAnimationModel.swift in Sources */,
-				E3A16A40B167FC34247122E57EC69193 /* GeminiCell.swift in Sources */,
-				6A9BDFBE067F10DFE6E34E5CF5E2D37B /* GeminiCollectionView.swift in Sources */,
-				E910BA6728DF2B63A8CEFB0AD28A375D /* PitchRotationAnimatable.swift in Sources */,
-				78887EB0BD2ABC3C6F3DE0FED0262847 /* RollRotationAnimatable.swift in Sources */,
-				079F8226AE42AAC1F9BF9B103CC71CCB /* ScaleAnimatable.swift in Sources */,
-				476C58FE860E7CA4F322948C39757D56 /* UIAppearanceAnimatable.swift in Sources */,
-				AEDE302EAB7A4BE656D248DF65211576 /* UIViewExtension.swift in Sources */,
-				1805C6318CD81234F6F47688E59085E4 /* YawRotationAnimatable.swift in Sources */,
+				CE12D9964E6CE222BCEB1435BD503914 /* CircleRotateAnimatable.swift in Sources */,
+				46DCDA84D472ADD2F9E349FCBE31A0BB /* CubeAnimatable.swift in Sources */,
+				D9676CB206E639E41A6DF2AEC43AE067 /* CustomAnimatable.swift in Sources */,
+				F55BDFA25C70021E10E59AECB6868479 /* EasingAnimatable.swift in Sources */,
+				B19DBB82CF7D9CB3D9A75245217F674D /* EasingFunction.swift in Sources */,
+				F62A2541505A0200050EF7265A3C4474 /* Gemini-dummy.m in Sources */,
+				1093E116B51C4FEE00F6F135ED4B0314 /* GeminiAnimationModel.swift in Sources */,
+				CC7E422ABDEE7CAEFE625FBD6871CF03 /* GeminiCell.swift in Sources */,
+				E88219CEBCA20F0EAAABC38082E85630 /* GeminiCollectionView.swift in Sources */,
+				A9078674EB0EBF8F71D83A10D7203EE4 /* PitchRotationAnimatable.swift in Sources */,
+				06DE22A4B3D722CC69E4D23A8167686C /* RollRotationAnimatable.swift in Sources */,
+				FAE67BE74B4EBA7E2CA6CE6FB3DA8C5F /* ScaleAnimatable.swift in Sources */,
+				ADF206CA711EEA3F8013C04E7C4F39A8 /* UIAppearanceAnimatable.swift in Sources */,
+				2A5944F2264353ECB89105F198D4B259 /* UIViewExtension.swift in Sources */,
+				958461C79A67CCEC5D6C3346730F252E /* YawRotationAnimatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

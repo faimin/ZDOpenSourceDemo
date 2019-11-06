@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		265921917ACF4761CF78B6481947ECF3 /* Neon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BED904C0E7B3D1A1399A7CEBC0BDC /* Neon-dummy.m */; };
-		28F10136198B3C9F5CB2907662ED2D51 /* NeonFrameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885749D4E5FD685BEF867231601DDE4 /* NeonFrameable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2D3586EE51031CF0482BCDC733896B43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 772367A1B192576516E575927C9C2F24 /* Foundation.framework */; };
-		37A1B41990C8F26618448F445ACC5053 /* NeonAnchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66487A048AF9E3D598DFB575D7027185 /* NeonAnchorable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		41A9B8F137D1B4B41E6094F1913CBC0E /* NeonAlignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC83E5134E8D1970CB2C80A3C20126 /* NeonAlignable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		939C21EDDD2FDCCE28788E0EBEC55B47 /* NeonGroupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A716833D3EF458584E68AF7802375431 /* NeonGroupable.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4934E994AA8FA6E42FB462F51892A8A6 /* NeonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84919F500EFD71A947A4970C423AC65 /* NeonExtensions.swift */; };
+		6427A8013256CE7D3BE476FD5F88C22B /* NeonAlignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CC83E5134E8D1970CB2C80A3C20126 /* NeonAlignable.swift */; };
+		691B8F88AFF208166D0FE64158A1E85F /* NeonAnchorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66487A048AF9E3D598DFB575D7027185 /* NeonAnchorable.swift */; };
+		809418AC14518D8495CEEC5AFB170027 /* NeonFrameable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885749D4E5FD685BEF867231601DDE4 /* NeonFrameable.swift */; };
+		93FE72578CEE40B40431AF4A72740C0E /* Neon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A0BED904C0E7B3D1A1399A7CEBC0BDC /* Neon-dummy.m */; };
 		9FEA0AB6567BB0D0136A2511B7DD198D /* Neon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7594E7655DBF4E8882C096B9413860DA /* Neon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA947B80CA3B400B6ADE67C095CFEE32 /* NeonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84919F500EFD71A947A4970C423AC65 /* NeonExtensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		ACD4DCB05F2416D1D4155830AD664958 /* Neon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8DD27D982AF47A37CB9D39F3655B51 /* Neon.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		AAC3B68B9723F59740188D0FAE864DC6 /* NeonGroupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A716833D3EF458584E68AF7802375431 /* NeonGroupable.swift */; };
+		B3960A9B06879F78086B7770D9F4B5EA /* Neon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8DD27D982AF47A37CB9D39F3655B51 /* Neon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,7 +128,7 @@
 			buildConfigurationList = 318F787278167159A09073AD69B649CE /* Build configuration list for PBXNativeTarget "Neon" */;
 			buildPhases = (
 				DE313D71F91B1234180A5FA83121A7E7 /* Headers */,
-				8D3BB1B4CD113D9D1D7B673A48F837E8 /* Sources */,
+				D1C259D2ABC42E7F9BBBE1FCC9F5B2C9 /* Sources */,
 				A8EC4CFDFD62BDEDC0605D07BC8359BD /* Frameworks */,
 				AB518298B6852B8A4C468EB22C4C98B3 /* Resources */,
 			);
@@ -178,17 +178,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8D3BB1B4CD113D9D1D7B673A48F837E8 /* Sources */ = {
+		D1C259D2ABC42E7F9BBBE1FCC9F5B2C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				265921917ACF4761CF78B6481947ECF3 /* Neon-dummy.m in Sources */,
-				ACD4DCB05F2416D1D4155830AD664958 /* Neon.swift in Sources */,
-				41A9B8F137D1B4B41E6094F1913CBC0E /* NeonAlignable.swift in Sources */,
-				37A1B41990C8F26618448F445ACC5053 /* NeonAnchorable.swift in Sources */,
-				AA947B80CA3B400B6ADE67C095CFEE32 /* NeonExtensions.swift in Sources */,
-				28F10136198B3C9F5CB2907662ED2D51 /* NeonFrameable.swift in Sources */,
-				939C21EDDD2FDCCE28788E0EBEC55B47 /* NeonGroupable.swift in Sources */,
+				93FE72578CEE40B40431AF4A72740C0E /* Neon-dummy.m in Sources */,
+				B3960A9B06879F78086B7770D9F4B5EA /* Neon.swift in Sources */,
+				6427A8013256CE7D3BE476FD5F88C22B /* NeonAlignable.swift in Sources */,
+				691B8F88AFF208166D0FE64158A1E85F /* NeonAnchorable.swift in Sources */,
+				4934E994AA8FA6E42FB462F51892A8A6 /* NeonExtensions.swift in Sources */,
+				809418AC14518D8495CEEC5AFB170027 /* NeonFrameable.swift in Sources */,
+				AAC3B68B9723F59740188D0FAE864DC6 /* NeonGroupable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

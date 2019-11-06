@@ -7,36 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0705E80F8AFEE86FE1755BEFF9E15736 /* Distribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0786A876066592FE71D169EA8C2A75CD /* Distribute.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		11298AC59CDB782F8C2E7203EF45A5F7 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FA5F2319C93194B3518427D871C12D /* Dimension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3AC465C1C88D67D50C2355B50E6B085A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963A9676A6C0232059EE51D1C073966A /* Extensions.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3BD2E7D372829DDDA746BB769C52F97E /* ConstraintGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694C7690DE8443BB9370194CC6A1010 /* ConstraintGroup.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3ED4086447F0F595E7E307DBACC5D85B /* LayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614229DCF2E5BCB6EE7CD03C7065AAB3 /* LayoutGuide.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		43F4D8A589A7C8082B1BE364F035C70A /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74764C8A5F14A1DF13BD882488B348B7 /* Context.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4D91D393CD7B05ACC19011A9F3E376D4 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B48EE20B47ACA3BF2C6E80D42F0F2 /* Property.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		650D7B56791265D3FB3A4D8660C70B38 /* AutoresizingMaskLayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAE22C15A8F4A9C6F00C82F816C2612 /* AutoresizingMaskLayoutProxy.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		6DB841A9E2F520F7EB1D4AB88B7610DA /* LayoutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F4CBC88FD9292E89218F88CFEFC7D /* LayoutItem.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		72B52432C871985E7B9BEE82121A58A7 /* LayoutGuideProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099FF806B9B6FF5A13D02B8D55EF21C /* LayoutGuideProxy.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7D6DFC9596CBACF83599616F2B955455 /* LayoutSupportProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C069D3F01D8EC33B363DC79CB55A47 /* LayoutSupportProxy.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		82E789C2A7D35DFD0DC20EAA7419F717 /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85096611FFBDC8C99704F95BD690EF7 /* Coefficients.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		048BC0CBF7BFE221F32516704038C81A /* ConstraintGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A694C7690DE8443BB9370194CC6A1010 /* ConstraintGroup.swift */; };
+		14A669DDB355613477EBF9046E98A4B3 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B0BC51F9163B5842FB3C48C85B6E28 /* Size.swift */; };
+		14D5938E91C951437AE22EC3C25530AB /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DF77C1DD83AF5550598D8E0CFB4B59 /* Constrain.swift */; };
+		2B26C6DD317030393615A2CB8D6223D5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963A9676A6C0232059EE51D1C073966A /* Extensions.swift */; };
+		2E263F25AF951B7A34AF47B3C505D1FD /* Cartography-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6594E04A3AACE1A9F5DCD8EC721BD5 /* Cartography-dummy.m */; };
+		322A8B41EAA237C285E8FF26E270FABE /* ViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749F6797A6AE70BA1D4C20BF38F827C3 /* ViewProxy.swift */; };
+		3577D6B582A6AC93911D884C3B1E6D07 /* LayoutGuideProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099FF806B9B6FF5A13D02B8D55EF21C /* LayoutGuideProxy.swift */; };
+		481E49E85231C4FD831789CA05B0C863 /* LayoutProxy+TypeErasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565929E9419F8EC158DE64F60035BC71 /* LayoutProxy+TypeErasure.swift */; };
+		550F34C88FAF999934FD2BD4D1287C2C /* LayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623D2469AE4FBD106CEDE4E1BE3005E9 /* LayoutSupport.swift */; };
+		573CFD4AABF41301695FE2AD5D21ADEF /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8830F5C305E4B757C8865917825186D0 /* Expression.swift */; };
+		5C27A8F65769F20200284D0602F45AB6 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1142A74DA7F0FD0DCEDEBEC31397B /* Priority.swift */; };
+		6C218DCFF58FAC264755066D0D6C9A7F /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74764C8A5F14A1DF13BD882488B348B7 /* Context.swift */; };
+		72E54BFDEF90F6EF6A015AA2F694A3D5 /* LayoutSupportProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C069D3F01D8EC33B363DC79CB55A47 /* LayoutSupportProxy.swift */; };
+		730AC15DB3D1DC9EFFDDD8EE000A7270 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C34A3903B543DE92036F25D778EDA2C /* Constraint.swift */; };
+		764637F109681D1AED936658C29948FC /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1966E2C3A9E2BA759D4C69007955EAFE /* Compound.swift */; };
+		7AAAB9C7BCDED10D9A5A6315E6737147 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59645499569F65F627B32AFB8BBED82A /* Edge.swift */; };
+		82BB5FABC71AA15C229DADCBF63D27B1 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A64CEBD9FE4DBDF63916F27E7E9293 /* LayoutProxy.swift */; };
 		8B5A3EFC509E293C1DC772EF86C46553 /* Cartography-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B53DA2BC9A756372775BC7FE07A476DC /* Cartography-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A969D12D7BB0E26CFBF8C18996BE48CA /* Cartography-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A6594E04A3AACE1A9F5DCD8EC721BD5 /* Cartography-dummy.m */; };
+		AB082EA57134117D50A46F2A102DFBEE /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F7ACA886A2317AE1C5036E39A4A0C5 /* Edges.swift */; };
+		AB0A9CE9F62ECFBA0C2D3A68FDF97ECB /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FA5F2319C93194B3518427D871C12D /* Dimension.swift */; };
 		AD95419AFADAADB8A571AE9FE3B14FED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA6DB63ECC86C9A65C91CA9CF78016C7 /* Foundation.framework */; };
-		B1C76DBC388BDA7798F2A7E4F97A75F4 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC49468F5E63A3D4A159EA8CC4DE04B4 /* View.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BB36F56A901E94EC73A9926DABCD93DF /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1142A74DA7F0FD0DCEDEBEC31397B /* Priority.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BD801D66EC7EF29938FE1F3E3DF5E211 /* ViewProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749F6797A6AE70BA1D4C20BF38F827C3 /* ViewProxy.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BE2A46903E7594FEB48E0DF10BFB1BA8 /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1966E2C3A9E2BA759D4C69007955EAFE /* Compound.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BE9039B3D124614502EF4B563FC8985E /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597996F95584B2F04988FD117159E02 /* Align.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C30ABE09F86B3BE3EC203FE9E6A44758 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59645499569F65F627B32AFB8BBED82A /* Edge.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CE4884369B52A928356C42B7B7330E22 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9139F3FD0E97598C1111F01C53447ECE /* Point.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		CF9D57CCF88B66DA779D5992B0017370 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8830F5C305E4B757C8865917825186D0 /* Expression.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D89A303DC8CDE9DA609AE71774E7EBBD /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B0BC51F9163B5842FB3C48C85B6E28 /* Size.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		D9EE01F9ACF6CDD945744C177C73BC74 /* LayoutProxy+TypeErasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565929E9419F8EC158DE64F60035BC71 /* LayoutProxy+TypeErasure.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E734862C27F35781D7877CB4C3F2132D /* LayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623D2469AE4FBD106CEDE4E1BE3005E9 /* LayoutSupport.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EF6D9C20C7091574E9AE97990F132637 /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DF77C1DD83AF5550598D8E0CFB4B59 /* Constrain.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EFB203D2D417C533B2B40FB0737479F2 /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F7ACA886A2317AE1C5036E39A4A0C5 /* Edges.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		F9AA3CC717B8454E29C5AFD2C9DC1271 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A64CEBD9FE4DBDF63916F27E7E9293 /* LayoutProxy.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FFF4DE3D519FDAAD1D8AF6E801FE9409 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C34A3903B543DE92036F25D778EDA2C /* Constraint.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B76E364EEC2AB09F9BFB8B99B9137043 /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85096611FFBDC8C99704F95BD690EF7 /* Coefficients.swift */; };
+		B93F6D4BDFB751AE3A276BF877862CD5 /* LayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614229DCF2E5BCB6EE7CD03C7065AAB3 /* LayoutGuide.swift */; };
+		B9685953565C748A70B0EF151DE8F9EA /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9139F3FD0E97598C1111F01C53447ECE /* Point.swift */; };
+		B9A8B897F018FA152C6A8D64C20F691E /* LayoutItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769F4CBC88FD9292E89218F88CFEFC7D /* LayoutItem.swift */; };
+		BE3DAC8E25111D0C2FDF8228855FD615 /* AutoresizingMaskLayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAE22C15A8F4A9C6F00C82F816C2612 /* AutoresizingMaskLayoutProxy.swift */; };
+		DD347FD69B38EBC4A33C45B8E621F47F /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC49468F5E63A3D4A159EA8CC4DE04B4 /* View.swift */; };
+		DF2A9B49EA1CD8F9F075B9B07DE5B746 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2B48EE20B47ACA3BF2C6E80D42F0F2 /* Property.swift */; };
+		EB6FC3498CD63D723A972771C6450DE4 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597996F95584B2F04988FD117159E02 /* Align.swift */; };
+		EF109838587F0A54099F5C4596E9673F /* Distribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0786A876066592FE71D169EA8C2A75CD /* Distribute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -191,7 +191,7 @@
 			buildConfigurationList = 7B92D4FD5B851824DDCF75815ADE9324 /* Build configuration list for PBXNativeTarget "Cartography" */;
 			buildPhases = (
 				321B075CF0175362F0291C9330D79884 /* Headers */,
-				043B529E84AF6EB64252BDECD747BDA7 /* Sources */,
+				52EBE3E659F53FAAF6CC15BA8D7FC18B /* Sources */,
 				1507F05B883A26D5BE562A75292F6505 /* Frameworks */,
 				F37497DE8C7AAF3660661089B58F14E6 /* Resources */,
 			);
@@ -241,38 +241,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		043B529E84AF6EB64252BDECD747BDA7 /* Sources */ = {
+		52EBE3E659F53FAAF6CC15BA8D7FC18B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE9039B3D124614502EF4B563FC8985E /* Align.swift in Sources */,
-				650D7B56791265D3FB3A4D8660C70B38 /* AutoresizingMaskLayoutProxy.swift in Sources */,
-				A969D12D7BB0E26CFBF8C18996BE48CA /* Cartography-dummy.m in Sources */,
-				82E789C2A7D35DFD0DC20EAA7419F717 /* Coefficients.swift in Sources */,
-				BE2A46903E7594FEB48E0DF10BFB1BA8 /* Compound.swift in Sources */,
-				EF6D9C20C7091574E9AE97990F132637 /* Constrain.swift in Sources */,
-				FFF4DE3D519FDAAD1D8AF6E801FE9409 /* Constraint.swift in Sources */,
-				3BD2E7D372829DDDA746BB769C52F97E /* ConstraintGroup.swift in Sources */,
-				43F4D8A589A7C8082B1BE364F035C70A /* Context.swift in Sources */,
-				11298AC59CDB782F8C2E7203EF45A5F7 /* Dimension.swift in Sources */,
-				0705E80F8AFEE86FE1755BEFF9E15736 /* Distribute.swift in Sources */,
-				C30ABE09F86B3BE3EC203FE9E6A44758 /* Edge.swift in Sources */,
-				EFB203D2D417C533B2B40FB0737479F2 /* Edges.swift in Sources */,
-				CF9D57CCF88B66DA779D5992B0017370 /* Expression.swift in Sources */,
-				3AC465C1C88D67D50C2355B50E6B085A /* Extensions.swift in Sources */,
-				3ED4086447F0F595E7E307DBACC5D85B /* LayoutGuide.swift in Sources */,
-				72B52432C871985E7B9BEE82121A58A7 /* LayoutGuideProxy.swift in Sources */,
-				6DB841A9E2F520F7EB1D4AB88B7610DA /* LayoutItem.swift in Sources */,
-				D9EE01F9ACF6CDD945744C177C73BC74 /* LayoutProxy+TypeErasure.swift in Sources */,
-				F9AA3CC717B8454E29C5AFD2C9DC1271 /* LayoutProxy.swift in Sources */,
-				E734862C27F35781D7877CB4C3F2132D /* LayoutSupport.swift in Sources */,
-				7D6DFC9596CBACF83599616F2B955455 /* LayoutSupportProxy.swift in Sources */,
-				CE4884369B52A928356C42B7B7330E22 /* Point.swift in Sources */,
-				BB36F56A901E94EC73A9926DABCD93DF /* Priority.swift in Sources */,
-				4D91D393CD7B05ACC19011A9F3E376D4 /* Property.swift in Sources */,
-				D89A303DC8CDE9DA609AE71774E7EBBD /* Size.swift in Sources */,
-				B1C76DBC388BDA7798F2A7E4F97A75F4 /* View.swift in Sources */,
-				BD801D66EC7EF29938FE1F3E3DF5E211 /* ViewProxy.swift in Sources */,
+				EB6FC3498CD63D723A972771C6450DE4 /* Align.swift in Sources */,
+				BE3DAC8E25111D0C2FDF8228855FD615 /* AutoresizingMaskLayoutProxy.swift in Sources */,
+				2E263F25AF951B7A34AF47B3C505D1FD /* Cartography-dummy.m in Sources */,
+				B76E364EEC2AB09F9BFB8B99B9137043 /* Coefficients.swift in Sources */,
+				764637F109681D1AED936658C29948FC /* Compound.swift in Sources */,
+				14D5938E91C951437AE22EC3C25530AB /* Constrain.swift in Sources */,
+				730AC15DB3D1DC9EFFDDD8EE000A7270 /* Constraint.swift in Sources */,
+				048BC0CBF7BFE221F32516704038C81A /* ConstraintGroup.swift in Sources */,
+				6C218DCFF58FAC264755066D0D6C9A7F /* Context.swift in Sources */,
+				AB0A9CE9F62ECFBA0C2D3A68FDF97ECB /* Dimension.swift in Sources */,
+				EF109838587F0A54099F5C4596E9673F /* Distribute.swift in Sources */,
+				7AAAB9C7BCDED10D9A5A6315E6737147 /* Edge.swift in Sources */,
+				AB082EA57134117D50A46F2A102DFBEE /* Edges.swift in Sources */,
+				573CFD4AABF41301695FE2AD5D21ADEF /* Expression.swift in Sources */,
+				2B26C6DD317030393615A2CB8D6223D5 /* Extensions.swift in Sources */,
+				B93F6D4BDFB751AE3A276BF877862CD5 /* LayoutGuide.swift in Sources */,
+				3577D6B582A6AC93911D884C3B1E6D07 /* LayoutGuideProxy.swift in Sources */,
+				B9A8B897F018FA152C6A8D64C20F691E /* LayoutItem.swift in Sources */,
+				481E49E85231C4FD831789CA05B0C863 /* LayoutProxy+TypeErasure.swift in Sources */,
+				82BB5FABC71AA15C229DADCBF63D27B1 /* LayoutProxy.swift in Sources */,
+				550F34C88FAF999934FD2BD4D1287C2C /* LayoutSupport.swift in Sources */,
+				72E54BFDEF90F6EF6A015AA2F694A3D5 /* LayoutSupportProxy.swift in Sources */,
+				B9685953565C748A70B0EF151DE8F9EA /* Point.swift in Sources */,
+				5C27A8F65769F20200284D0602F45AB6 /* Priority.swift in Sources */,
+				DF2A9B49EA1CD8F9F075B9B07DE5B746 /* Property.swift in Sources */,
+				14A669DDB355613477EBF9046E98A4B3 /* Size.swift in Sources */,
+				DD347FD69B38EBC4A33C45B8E621F47F /* View.swift in Sources */,
+				322A8B41EAA237C285E8FF26E270FABE /* ViewProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

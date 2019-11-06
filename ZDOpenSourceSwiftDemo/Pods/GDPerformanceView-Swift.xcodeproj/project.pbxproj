@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B7CF5ED1587885A93297AFC5A334EFD /* MarginLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02490A62F1814497F3128EF07C7B4A /* MarginLabel.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		21776D9C4A03D1B22A71AD61677EA8B0 /* PerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3ABB177EABE0C5FAAC9FB9278EF519 /* PerformanceView.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4BFE65BD9092B137DFDD3440037CC6A3 /* GDPerformanceView-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05CA04D7A1F728EC8ECB6099DD56C7CA /* GDPerformanceView-Swift-dummy.m */; };
+		4EDDD4BAFE1DCDA7E7300952E0365D94 /* PerformanceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E191FA9663EA6478891E867A66AAB07 /* PerformanceMonitor.swift */; };
 		657D5E03E9D0E9DBC835CC8FB2D20B65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA79BE54BED39AAF8EEB3B8C5EB25179 /* UIKit.framework */; };
-		6E2C6D493A84C76B1CAB2407BAB231FC /* GDPerformanceView-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05CA04D7A1F728EC8ECB6099DD56C7CA /* GDPerformanceView-Swift-dummy.m */; };
-		B1C48E5683A4602B223881A442034598 /* WindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC465DDAA512563D21525AF4BBB84EBF /* WindowViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B9A3350BD00A354012DD1F9F2D9C6573 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399296D5494157C4694074BA8D912902 /* Protocols.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A5DCC95814A81CB78A676CB3F1867CA4 /* LinkedFramesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E92329B1977379DC0A43801B31EDE65 /* LinkedFramesList.swift */; };
+		BE752ED597546ED80C1EEA93F70B70DD /* PerformanceСalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E85647A52E91BFAFC54FDA36C6DC89B /* PerformanceСalculator.swift */; };
+		C1CC61A8885798E25C4045108E020277 /* WindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC465DDAA512563D21525AF4BBB84EBF /* WindowViewController.swift */; };
+		C83F17993E5177AD538325D328442263 /* PerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3ABB177EABE0C5FAAC9FB9278EF519 /* PerformanceView.swift */; };
 		D4C2BEC11F723C299F057D6DC146E88F /* GDPerformanceView-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E52CD6113CA1C711384DE41D2B919E8 /* GDPerformanceView-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE1952E244E078652C1386144AA6E5D4 /* PerformanceСalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E85647A52E91BFAFC54FDA36C6DC89B /* PerformanceСalculator.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E377C2153AD70F9B8307405651EE0AF5 /* LinkedFramesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E92329B1977379DC0A43801B31EDE65 /* LinkedFramesList.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		E7E277F9E7F647242D8554DE26B63B94 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 676F2A0A6D823CCE3C1075D037549E23 /* QuartzCore.framework */; };
-		F60F127B52A343FA04D43DCE5C18FA96 /* PerformanceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E191FA9663EA6478891E867A66AAB07 /* PerformanceMonitor.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F067B9EC53379CBA6D6ADC8F73777360 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399296D5494157C4694074BA8D912902 /* Protocols.swift */; };
+		F1DE8F047714FFF90D74C7A51DE72FD1 /* MarginLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02490A62F1814497F3128EF07C7B4A /* MarginLabel.swift */; };
 		FFF6232700CE60F28B917F91830CB937 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51ED6AC083580D5CEB25155559733604 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -139,7 +139,7 @@
 			buildConfigurationList = 522BD957CDF457BB0105D0B1D33F30D7 /* Build configuration list for PBXNativeTarget "GDPerformanceView-Swift" */;
 			buildPhases = (
 				4EEC3BF3C08CEFAD4F40C19C8398F436 /* Headers */,
-				D05410737A9FEDBE2A0C55CF73C69FE3 /* Sources */,
+				9C930B3B3878495750166AFAC79A378B /* Sources */,
 				A092D59F5D6FDCDC956101F538E45A4E /* Frameworks */,
 				7FAAB644371DAA3E852FCFB9B34BD239 /* Resources */,
 			);
@@ -189,18 +189,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D05410737A9FEDBE2A0C55CF73C69FE3 /* Sources */ = {
+		9C930B3B3878495750166AFAC79A378B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E2C6D493A84C76B1CAB2407BAB231FC /* GDPerformanceView-Swift-dummy.m in Sources */,
-				E377C2153AD70F9B8307405651EE0AF5 /* LinkedFramesList.swift in Sources */,
-				1B7CF5ED1587885A93297AFC5A334EFD /* MarginLabel.swift in Sources */,
-				F60F127B52A343FA04D43DCE5C18FA96 /* PerformanceMonitor.swift in Sources */,
-				21776D9C4A03D1B22A71AD61677EA8B0 /* PerformanceView.swift in Sources */,
-				DE1952E244E078652C1386144AA6E5D4 /* PerformanceСalculator.swift in Sources */,
-				B9A3350BD00A354012DD1F9F2D9C6573 /* Protocols.swift in Sources */,
-				B1C48E5683A4602B223881A442034598 /* WindowViewController.swift in Sources */,
+				4BFE65BD9092B137DFDD3440037CC6A3 /* GDPerformanceView-Swift-dummy.m in Sources */,
+				A5DCC95814A81CB78A676CB3F1867CA4 /* LinkedFramesList.swift in Sources */,
+				F1DE8F047714FFF90D74C7A51DE72FD1 /* MarginLabel.swift in Sources */,
+				4EDDD4BAFE1DCDA7E7300952E0365D94 /* PerformanceMonitor.swift in Sources */,
+				C83F17993E5177AD538325D328442263 /* PerformanceView.swift in Sources */,
+				BE752ED597546ED80C1EEA93F70B70DD /* PerformanceСalculator.swift in Sources */,
+				F067B9EC53379CBA6D6ADC8F73777360 /* Protocols.swift in Sources */,
+				C1CC61A8885798E25C4045108E020277 /* WindowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

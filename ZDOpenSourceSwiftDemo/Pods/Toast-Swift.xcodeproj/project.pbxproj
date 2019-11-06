@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		0CCD4CF4C3E5C5CA7BC1A3490DCF46AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB4B95C98DD1A8D3F08F635F67252C8 /* QuartzCore.framework */; };
 		14A0A70B4F08DAEF9BDEF236118A8343 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5AC2AA7FB146F24E4068EEAC88B110 /* Foundation.framework */; };
-		1F3C8C7F51C49D85331EB6303CEC98E8 /* Toast-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E42DA4D085C63B2DDAA3BC91E00630E8 /* Toast-Swift-dummy.m */; };
-		A84DC735F8832A30E7E3139C0514AE29 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3CA86AAC8D957AFAD8A371041FF55E /* Toast.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		567A53D2C829D38E2B937397A1DDC385 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3CA86AAC8D957AFAD8A371041FF55E /* Toast.swift */; };
+		66113E469716620E13CB97EAAF966AFE /* Toast-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E42DA4D085C63B2DDAA3BC91E00630E8 /* Toast-Swift-dummy.m */; };
 		EAB0101C2A9A5EEE78A1383DC9AA14DD /* Toast-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 37A10C585F3171B22587B5E68CBCE048 /* Toast-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -117,7 +117,7 @@
 			buildConfigurationList = 83440865DB9613CA7CD28B4B9E56A71E /* Build configuration list for PBXNativeTarget "Toast-Swift" */;
 			buildPhases = (
 				71607B08ECEDC214DF45F0A72BF22D80 /* Headers */,
-				D25A1F28FF3FC96FA780291E3763337E /* Sources */,
+				236230DDA3F1DCE6E37A397E9A59D1E2 /* Sources */,
 				4E78790F39FFE60F9C574C12A777BF1C /* Frameworks */,
 				1B09C0BD248903AAE33B954C263737E9 /* Resources */,
 			);
@@ -167,12 +167,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D25A1F28FF3FC96FA780291E3763337E /* Sources */ = {
+		236230DDA3F1DCE6E37A397E9A59D1E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F3C8C7F51C49D85331EB6303CEC98E8 /* Toast-Swift-dummy.m in Sources */,
-				A84DC735F8832A30E7E3139C0514AE29 /* Toast.swift in Sources */,
+				66113E469716620E13CB97EAAF966AFE /* Toast-Swift-dummy.m in Sources */,
+				567A53D2C829D38E2B937397A1DDC385 /* Toast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

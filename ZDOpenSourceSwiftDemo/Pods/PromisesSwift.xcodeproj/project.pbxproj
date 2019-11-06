@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		16C930C46326D0CA0F12A71E4A0E154C /* Promise+Do.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14D6EC19F17FF5D9B0430732020C65 /* Promise+Do.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4B3057C6CD66D4A976AE80153A8FB909 /* Promise+Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C893D64FE71A29701AB52F1AEDECA6 /* Promise+Timeout.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4BC3EB29254E242E6BF8F6782DB4C840 /* Promise+Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE410AA0E50D373456F0C63B9E656D68 /* Promise+Reduce.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4D00647E33D348C9B35F31A7308178E3 /* Promise+Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6EFA5C924399D98876C1BC11C57840 /* Promise+Validate.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4ECA7183BC28133FB3A0089E311858A1 /* Promise+Retry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AD2FEFD92399385770036576FA1004 /* Promise+Retry.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		59A45325DCF12C84635FEBD3B8335343 /* Promise+Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18B9D12C6A878A5412DB01537B76093 /* Promise+Then.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		69F9B2DBC48316321C4F40961E4F5F66 /* Promise+Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156DED9F63BBB4859460C795DD9FE751 /* Promise+Race.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7C5C0B240C020FE9F9DC8B9501835E2F /* Promise+Await.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84E9DFD6A1265DE5C7749DAF6483C91 /* Promise+Await.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7EE5D1A58972265B840A852100A0D81A /* Promise+Recover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4985C0505008AE7F09C025503F380 /* Promise+Recover.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		8F1B2FA117FD755677BE2ECF21C6D778 /* Promise+Catch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F73CCBB7E03690995B38755F1FB968 /* Promise+Catch.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		924C678DE644EFD78D33F555171837BC /* Promise+Always.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD4904CF10A6817B5470E8673491F9 /* Promise+Always.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		101D4C265454CAA3B36ABF51426840F0 /* Promise+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C04FB14F7739D178C6238DC2234D1 /* Promise+Testing.swift */; };
+		113549BA53D75B70DFC382BAE2BDEBDE /* Promise+Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C893D64FE71A29701AB52F1AEDECA6 /* Promise+Timeout.swift */; };
+		1C3297DA9FBA61E155D00E1E9540C0C0 /* Promise+Recover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D4985C0505008AE7F09C025503F380 /* Promise+Recover.swift */; };
+		30F672C5C1FD3C8CC6E0ABED9BB14651 /* PromisesSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53688FF29E42E2CD88596AC1A0A91B /* PromisesSwift-dummy.m */; };
+		324422CF0ABBB1C644BA37ADE3A57889 /* Promise+Do.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14D6EC19F17FF5D9B0430732020C65 /* Promise+Do.swift */; };
+		46E1039C2BFF93DC292E32E15CC8FA3F /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9584C1E051BB79C29A880E8F28DB6FF6 /* Promise.swift */; };
+		5B53A609FFBEA2957E8204FE4E5C0A5F /* Promise+Catch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F73CCBB7E03690995B38755F1FB968 /* Promise+Catch.swift */; };
+		5D2935E419DDEBD894A81E8DBFF96752 /* Promise+Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE410AA0E50D373456F0C63B9E656D68 /* Promise+Reduce.swift */; };
+		5E0746E9EECCFBA65D8EED8ECD1408CF /* Promise+Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6C248A68CFA44DD09824445C70AB8C /* Promise+Any.swift */; };
+		6EF7F07E79AD24AFCAA7D5213B31A194 /* Promise+Retry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10AD2FEFD92399385770036576FA1004 /* Promise+Retry.swift */; };
+		70DFC40C876E562F14CFE64989A9EDEB /* Promise+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD59F6A2F4E9A022F0FA94B8549E9F4E /* Promise+All.swift */; };
+		74DF5CE66BD4654534F665B336B3DBDC /* Promise+Always.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD4904CF10A6817B5470E8673491F9 /* Promise+Always.swift */; };
+		8542205BBC96858BFDA34903B28C37CE /* Promise+Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18B9D12C6A878A5412DB01537B76093 /* Promise+Then.swift */; };
+		934015DF1BFEE336E009B91D36E62541 /* Promise+Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDB164705FC3A8BD6DC1BA1DDDABCA /* Promise+Delay.swift */; };
 		993156F3E2CEFCB97FAD7A6528EEEFEE /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC45475DA2910F0BA66B06A27DB7B48 /* FBLPromises.framework */; };
-		9AD6E914087CA2205CB4C55525F23026 /* PromisesSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E53688FF29E42E2CD88596AC1A0A91B /* PromisesSwift-dummy.m */; };
-		A457B1CEED8C994E863A7DB370AB41AE /* Promise+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD59F6A2F4E9A022F0FA94B8549E9F4E /* Promise+All.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A8DBF7CE4908541DC45F19CFF8CA7C99 /* Promise+Wrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8FA2C0A32DC4954B1702CC5667FDCB /* Promise+Wrap.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A3EA42AD8A3D0543F17F06E418BCF3A5 /* Promise+Wrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8FA2C0A32DC4954B1702CC5667FDCB /* Promise+Wrap.swift */; };
+		AAF4D339CE40EBA939CF87431F0E050D /* Promise+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD09D0BFDF05147F53F142815D5555 /* Promise+Async.swift */; };
 		AB937DA8018103AE75A7E05F4D545303 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 720CC928D313D580EB2BEEFA5B56084C /* Foundation.framework */; };
 		B024D56D32B1429E0CB0A3DE5AF9C299 /* PromisesSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E25927D61F426208611FFA7096199D48 /* PromisesSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B386C41E8BF98CD57013F44C5BC70D35 /* Promise+Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6C248A68CFA44DD09824445C70AB8C /* Promise+Any.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B534FF48D52211BE003A370CD9101B17 /* Promise+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD09D0BFDF05147F53F142815D5555 /* Promise+Async.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B67D84C20AC58DF82FA51B980FDC81BD /* PromiseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB33AAFA612F3908DE6AE812C51BC4 /* PromiseError.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C44EB9FFA911CA17DFFDD67BA21CDB8E /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9584C1E051BB79C29A880E8F28DB6FF6 /* Promise.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C5605EC7F2E55BC2EEA584DB6B4F1F69 /* Promise+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C04FB14F7739D178C6238DC2234D1 /* Promise+Testing.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DB253A637FB9AA58873215FEF585D240 /* Promise+Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FDB164705FC3A8BD6DC1BA1DDDABCA /* Promise+Delay.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C0A680A7F9F30C3DBB9187677C4E920C /* Promise+Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156DED9F63BBB4859460C795DD9FE751 /* Promise+Race.swift */; };
+		C74AF48D74B006E25CDA436E43A27EA0 /* Promise+Await.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84E9DFD6A1265DE5C7749DAF6483C91 /* Promise+Await.swift */; };
+		E56D615F1DF334BEDAA39C659AB630F4 /* Promise+Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6EFA5C924399D98876C1BC11C57840 /* Promise+Validate.swift */; };
+		E9D9A20F1D99A698141AE4EA8CB6FD73 /* PromiseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EB33AAFA612F3908DE6AE812C51BC4 /* PromiseError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,7 +191,7 @@
 			buildConfigurationList = 906D25209E0BC0D5DC4B3B7F2F51ED39 /* Build configuration list for PBXNativeTarget "PromisesSwift" */;
 			buildPhases = (
 				5B6C31264254C7993727302744205EB4 /* Headers */,
-				28E0E5FFAA299115E07CE36BEE1CC59A /* Sources */,
+				A4F3BB4AECD242D48981950C11A17EBA /* Sources */,
 				3A1C8BC73F189A4397E93418CDDD1DF3 /* Frameworks */,
 				105E54F771987ACEEEA38AC42BB81934 /* Resources */,
 			);
@@ -247,30 +247,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		28E0E5FFAA299115E07CE36BEE1CC59A /* Sources */ = {
+		A4F3BB4AECD242D48981950C11A17EBA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A457B1CEED8C994E863A7DB370AB41AE /* Promise+All.swift in Sources */,
-				924C678DE644EFD78D33F555171837BC /* Promise+Always.swift in Sources */,
-				B386C41E8BF98CD57013F44C5BC70D35 /* Promise+Any.swift in Sources */,
-				B534FF48D52211BE003A370CD9101B17 /* Promise+Async.swift in Sources */,
-				7C5C0B240C020FE9F9DC8B9501835E2F /* Promise+Await.swift in Sources */,
-				8F1B2FA117FD755677BE2ECF21C6D778 /* Promise+Catch.swift in Sources */,
-				DB253A637FB9AA58873215FEF585D240 /* Promise+Delay.swift in Sources */,
-				16C930C46326D0CA0F12A71E4A0E154C /* Promise+Do.swift in Sources */,
-				69F9B2DBC48316321C4F40961E4F5F66 /* Promise+Race.swift in Sources */,
-				7EE5D1A58972265B840A852100A0D81A /* Promise+Recover.swift in Sources */,
-				4BC3EB29254E242E6BF8F6782DB4C840 /* Promise+Reduce.swift in Sources */,
-				4ECA7183BC28133FB3A0089E311858A1 /* Promise+Retry.swift in Sources */,
-				C5605EC7F2E55BC2EEA584DB6B4F1F69 /* Promise+Testing.swift in Sources */,
-				59A45325DCF12C84635FEBD3B8335343 /* Promise+Then.swift in Sources */,
-				4B3057C6CD66D4A976AE80153A8FB909 /* Promise+Timeout.swift in Sources */,
-				4D00647E33D348C9B35F31A7308178E3 /* Promise+Validate.swift in Sources */,
-				A8DBF7CE4908541DC45F19CFF8CA7C99 /* Promise+Wrap.swift in Sources */,
-				C44EB9FFA911CA17DFFDD67BA21CDB8E /* Promise.swift in Sources */,
-				B67D84C20AC58DF82FA51B980FDC81BD /* PromiseError.swift in Sources */,
-				9AD6E914087CA2205CB4C55525F23026 /* PromisesSwift-dummy.m in Sources */,
+				70DFC40C876E562F14CFE64989A9EDEB /* Promise+All.swift in Sources */,
+				74DF5CE66BD4654534F665B336B3DBDC /* Promise+Always.swift in Sources */,
+				5E0746E9EECCFBA65D8EED8ECD1408CF /* Promise+Any.swift in Sources */,
+				AAF4D339CE40EBA939CF87431F0E050D /* Promise+Async.swift in Sources */,
+				C74AF48D74B006E25CDA436E43A27EA0 /* Promise+Await.swift in Sources */,
+				5B53A609FFBEA2957E8204FE4E5C0A5F /* Promise+Catch.swift in Sources */,
+				934015DF1BFEE336E009B91D36E62541 /* Promise+Delay.swift in Sources */,
+				324422CF0ABBB1C644BA37ADE3A57889 /* Promise+Do.swift in Sources */,
+				C0A680A7F9F30C3DBB9187677C4E920C /* Promise+Race.swift in Sources */,
+				1C3297DA9FBA61E155D00E1E9540C0C0 /* Promise+Recover.swift in Sources */,
+				5D2935E419DDEBD894A81E8DBFF96752 /* Promise+Reduce.swift in Sources */,
+				6EF7F07E79AD24AFCAA7D5213B31A194 /* Promise+Retry.swift in Sources */,
+				101D4C265454CAA3B36ABF51426840F0 /* Promise+Testing.swift in Sources */,
+				8542205BBC96858BFDA34903B28C37CE /* Promise+Then.swift in Sources */,
+				113549BA53D75B70DFC382BAE2BDEBDE /* Promise+Timeout.swift in Sources */,
+				E56D615F1DF334BEDAA39C659AB630F4 /* Promise+Validate.swift in Sources */,
+				A3EA42AD8A3D0543F17F06E418BCF3A5 /* Promise+Wrap.swift in Sources */,
+				46E1039C2BFF93DC292E32E15CC8FA3F /* Promise.swift in Sources */,
+				E9D9A20F1D99A698141AE4EA8CB6FD73 /* PromiseError.swift in Sources */,
+				30F672C5C1FD3C8CC6E0ABED9BB14651 /* PromisesSwift-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

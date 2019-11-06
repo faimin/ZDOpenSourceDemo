@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07807F1A27D97E6ED43074B307BD7732 /* Watchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90289F4CE117BD1994FD523B005C92F8 /* Watchdog.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		297A5FD48F4ECAC5B2A6DD80D302BC1D /* Watchdog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90289F4CE117BD1994FD523B005C92F8 /* Watchdog.swift */; };
+		452D3998C44F4D5DF5A700D9DA5482BC /* Watchdog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAC3CC0B82990535CC6EE74F079D940 /* Watchdog-dummy.m */; };
 		707885CB7386AA800C34289108BFC86F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1010737A7021284EA7B50A6E15FDF153 /* Foundation.framework */; };
-		7C326BF4958542BE1F2497319F01A279 /* Watchdog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FAC3CC0B82990535CC6EE74F079D940 /* Watchdog-dummy.m */; };
 		D88C6DDE0499343CFC5773A74BC555BB /* Watchdog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8DCA5E47F3BE25A1A04B01F9033E8AC /* Watchdog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -113,7 +113,7 @@
 			buildConfigurationList = C871524F2D440DB0B50C0D7B8455C7DB /* Build configuration list for PBXNativeTarget "Watchdog" */;
 			buildPhases = (
 				3F49B15CC1307AAE5C0275CCCB0C5A72 /* Headers */,
-				5C63A9937A62E0194D2016B391E87F08 /* Sources */,
+				7CD59C2398FE30D8A370E64C96A3F778 /* Sources */,
 				3D1BC635D0CAF1DF5CF1FBC49879FCDC /* Frameworks */,
 				764EE0A86F974CC2A6B2A6B016FB884D /* Resources */,
 			);
@@ -163,12 +163,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5C63A9937A62E0194D2016B391E87F08 /* Sources */ = {
+		7CD59C2398FE30D8A370E64C96A3F778 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C326BF4958542BE1F2497319F01A279 /* Watchdog-dummy.m in Sources */,
-				07807F1A27D97E6ED43074B307BD7732 /* Watchdog.swift in Sources */,
+				452D3998C44F4D5DF5A700D9DA5482BC /* Watchdog-dummy.m in Sources */,
+				297A5FD48F4ECAC5B2A6DD80D302BC1D /* Watchdog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
