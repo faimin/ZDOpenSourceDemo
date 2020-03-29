@@ -572,6 +572,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = A7325F264FC1BC750D54CEE975335AC6;
 			productRefGroup = 2A83AAB24DD568622804EF88E01233F2 /* Products */;
@@ -660,6 +661,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A578E60D145EB78AD15C2FD85D61DF7 /* lottie-ios.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -744,6 +746,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A578E60D145EB78AD15C2FD85D61DF7 /* lottie-ios.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

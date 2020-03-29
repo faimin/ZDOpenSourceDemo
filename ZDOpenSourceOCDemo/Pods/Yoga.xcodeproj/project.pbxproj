@@ -235,6 +235,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = B68E6B1B2C26E93951841E844E3FCDD2;
 			productRefGroup = 6A832570A3034DA8E30E24DF4AA463A8 /* Products */;
@@ -283,6 +284,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 770C81E7AFFB7C34C3D2BA4B2E94C06D /* Yoga.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -376,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 770C81E7AFFB7C34C3D2BA4B2E94C06D /* Yoga.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

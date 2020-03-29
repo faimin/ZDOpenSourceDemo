@@ -128,6 +128,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 72937EF6E4BB8FB9A2787FBEDB30FFA0;
 			productRefGroup = D860F59609205893A77912083EE31E96 /* Products */;
@@ -216,6 +217,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F946D301DCF459515D3CD2365C3CD45 /* Toast.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -240,6 +242,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9F946D301DCF459515D3CD2365C3CD45 /* Toast.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

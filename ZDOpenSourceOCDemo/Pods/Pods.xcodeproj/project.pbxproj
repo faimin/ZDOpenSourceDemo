@@ -21,182 +21,182 @@
 /* Begin PBXContainerItemProxy section */
 		00AC1C118B1E2C946FE1C40E1373DF03 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 17B31F6DB14B7DD06A83A4C33972846F /* JLRoutes.xcodeproj */;
+			containerPortal = B8818B8BCD8C2B291001351E392B729C /* JLRoutes.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = A453ED4A5FDFD5773D8DB60CDC21B549;
 			remoteInfo = JLRoutes;
 		};
 		03BC9DB0722EA9D02949DFBD8590F6DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 405D40C96D2048048F748D5BC2E16363 /* FLEX.xcodeproj */;
+			containerPortal = 9A52B5FD09551A6FD08A29DDE76EDD8D /* FLEX.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 328257E8FD8087B7D8F384487B63F309;
 			remoteInfo = FLEX;
 		};
 		10CA4A1C5332008F13C32C4ADB9AE948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B0DF42FF4B2568890E501B08321B5D26 /* ZDToolKit.xcodeproj */;
+			containerPortal = 9C8FB6D3CA7FE71D822AF8632571369F /* ZDToolKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = F01D98A255D10FCA305E22F1C7AF6818;
 			remoteInfo = ZDToolKit;
 		};
 		10F13772CE6800728C0F8F31A60DE947 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 892547C39FA22BA0B73D5D1AB00C1059 /* PINOperation.xcodeproj */;
+			containerPortal = D319F7FB171552876E3910AAE921FE85 /* PINOperation.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = A40F164BE5BEC474AEE4414ADE73A710;
 			remoteInfo = PINOperation;
 		};
 		19D5CBB3618BE9886EC95D7264BF9DAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F694BA7CCF54B30AEE314435CED940F1 /* LinqToObjectiveC.xcodeproj */;
+			containerPortal = 208916051D4EAA9B5E75AC3596425DB4 /* LinqToObjectiveC.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 97393B2D87F3D39BF937361F284052D7;
 			remoteInfo = LinqToObjectiveC;
 		};
 		1E9A56C514C6FC00FEEA6511EF226F3F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1800F762E7396A59E0535D9FF0753806 /* PromiseKit.xcodeproj */;
+			containerPortal = 150968224784EF0DCA4145502076B517 /* PromiseKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 128C731E310A7738D156105948622A8D;
 			remoteInfo = PromiseKit;
 		};
 		3D78031707EEB6A4C5864226A246242F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E430C5B3C5BEC9B9B9279E2CDCBF420F /* MBProgressHUD.xcodeproj */;
+			containerPortal = 76C1F7A31E9944113B8863AFE85AED7B /* MBProgressHUD.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 0F48A71D28991325602E8C8A19DF1F64;
 			remoteInfo = MBProgressHUD;
 		};
 		464D9E27E961F9FFFA4CBAF125AAEDA9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 39D5B823305DDC4DC2664E92055F3B82 /* coobjc.xcodeproj */;
+			containerPortal = ABC4CD14C1F2D2EE16A2761E1AB4C8FC /* coobjc.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 14AC47C7A598B026E762EA69CA696F0C;
 			remoteInfo = coobjc;
 		};
 		4C81846B67583953CDC53B78CA382CB5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 31BD7AAC12BA2FEEE6F0F9054EFBF820 /* libffi-core.xcodeproj */;
+			containerPortal = 9B6DFA8DB4324215AF3728EA8A2EA4E8 /* libffi-core.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 5D86507D6D536364E65896648629885F;
 			remoteInfo = "libffi-core";
 		};
 		4CE47397BD3E179809BDCAF28697F40B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4EFA61566B9C806B0432BFD5ECDF9A24 /* DirectoryWatchdog.xcodeproj */;
+			containerPortal = A2973E048BD55BD50E8EFA9504ADDEE1 /* DirectoryWatchdog.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 39E6763E82B9FB1C1E0A2D49970C5787;
 			remoteInfo = DirectoryWatchdog;
 		};
 		5124A56804F00823AD979219C815613E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4A4F27F84D51B2C75BDC1BCD194AD71F /* PINRemoteImage.xcodeproj */;
+			containerPortal = E5A220DFEE42E42EC3992C5E7DAA1D0A /* PINRemoteImage.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 7DC60949DA1E6B84041E1D9F5D787838;
 			remoteInfo = PINRemoteImage;
 		};
 		5234A0A21C75F916587B451CC394C976 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2EA1AA9AA667C2E9FAAE98D8D611A0CE /* ZDNetWorkHelper.xcodeproj */;
+			containerPortal = 54A55265E68EC1BD62EB399419677101 /* ZDNetWorkHelper.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 7BDC8F869C893DFC9EB0D3245791DD72;
 			remoteInfo = ZDNetWorkHelper;
 		};
 		5E362FAFBF211FAF453E1C4FF33195F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 33B8CEC92006F0C07029CC0A7DAC89A6 /* RSSwizzle.xcodeproj */;
+			containerPortal = 3D069A89822B23261267809216247DBF /* RSSwizzle.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = C5C634D45CFEE9A286708BA3EE61B6FC;
 			remoteInfo = RSSwizzle;
 		};
 		67E157CCA10E2E116A57F048611BD3A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BAFA2F3D472D1853D501F3330824999B /* Objection.xcodeproj */;
+			containerPortal = 37F593E6E3103CDA77DBCA05030F0455 /* Objection.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 0116B5C05BE5914C5F398A0E08C6BA80;
 			remoteInfo = Objection;
 		};
 		6807B5E2F4F860DD05380616A99657A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6609404B61554D46E385838191FB1164 /* cocore.xcodeproj */;
+			containerPortal = 1B1D167F9250EEBD16755C969AF9FBFA /* cocore.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 44B9F3DF1A76463ECB2E752DB51A596B;
 			remoteInfo = cocore;
 		};
 		6BB1F283DBFF15AF0236AF00D16E1D23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 578D75DF4949E4253A63366F94EFD3CA /* ObjectiveSugar.xcodeproj */;
+			containerPortal = A3A5A2E09E6F11E7371A345C7233A5F7 /* ObjectiveSugar.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 419C8BD43B37AEA9DDC7372A027B947E;
 			remoteInfo = ObjectiveSugar;
 		};
 		7462E8CA97EAC2326FA605CD844F2F71 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 889201D4EC878F2F3272663187216EE4 /* YYModel.xcodeproj */;
+			containerPortal = 0442D6927944AB3C53461C33AE0B8999 /* YYModel.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = B24F71FDC23D2B2E241DE51DECC7ED5F;
 			remoteInfo = YYModel;
 		};
 		79142F36AFD195E896FD5D36F41AF696 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8B6619C80DDAA7E7CAA03E0C95402419 /* RDVTabBarController.xcodeproj */;
+			containerPortal = ED8DF521DDD94D7DED45399E0F5197FA /* RDVTabBarController.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 339AB980EF4F190EFB97EE17E3F23AE9;
 			remoteInfo = RDVTabBarController;
 		};
 		79FD5634DEC92DAE0D0F402865C2E193 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7A410635DDF5A288F10937CB2C2E8DE2 /* IGListKit.xcodeproj */;
+			containerPortal = 476F6195AE954DCC765EA28D5BB595F0 /* IGListKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 6C5D6FE2744F299C4B5885492E7CFF8C;
 			remoteInfo = IGListKit;
 		};
 		80B862F3C236253AC11763A4E1D7EF8D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A695172E78D6FA312D0428DDC83D6257 /* SVProgressHUD.xcodeproj */;
+			containerPortal = 1BE5852BA23667CF299637CF251543B6 /* SVProgressHUD.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 8A902363E0683102423DADEA0C0D4541;
 			remoteInfo = SVProgressHUD;
 		};
 		8399EF9F549ECCB30E5F86A3F77D1714 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 09C4B43A76824844831C801D3DF2E60F /* RTRootNavigationController.xcodeproj */;
+			containerPortal = 83B277705263CC0212EAD60967351431 /* RTRootNavigationController.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 1BDBE6048F447AF04992F739AC1CBBF6;
 			remoteInfo = RTRootNavigationController;
 		};
 		846428E71C132504D4098A9F024CBC7E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 70DA081B7BF96D83E66C95FAB1CF63C9 /* ResumableAssert.xcodeproj */;
+			containerPortal = 3B8EF28654AC065757C5912AAE135CDE /* ResumableAssert.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = C9D73F6AE2BAE6D4A4E5E5DA907D6105;
 			remoteInfo = ResumableAssert;
 		};
 		873F953DA0ED6BA2BABD4FE5E7FFA661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 22ACFA9AFF6E9F48C96CC672EB71BCAF /* ZIKRouter.xcodeproj */;
+			containerPortal = 0BD0D9BB526A3E2857AAB620D09DF2F3 /* ZIKRouter.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 5DF9A7AD0BEB75757F2F0002D0D769B3;
 			remoteInfo = ZIKRouter;
 		};
 		894B1B5B125370EF65263CA8155495FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0C1090C4FC9FB79071EFE19A4F3ED7AD /* Masonry.xcodeproj */;
+			containerPortal = 83DE32C5DE8CDEEB3C9FA1F7427931C2 /* Masonry.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = C0965FF775F51458AD4A8E41ABAB7D1E;
 			remoteInfo = Masonry;
 		};
 		8D5D3781F32D6BE47C875D9FADE1090B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6370B89FECCEDD0C3C434630BB3908B2 /* Typhoon.xcodeproj */;
+			containerPortal = 175DC21B1E5AF132B7C17B16ED5FB698 /* Typhoon.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 2C9C377B9BAD2146378E9B27C83EBB5A;
 			remoteInfo = Typhoon;
 		};
 		90EED1BD7139EF0B3C4A156B02D125CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 11B86F3316EF5A803A365D2F710022B3 /* MMKV.xcodeproj */;
+			containerPortal = 635DCBFC027CA223F4C56D9E86BC7408 /* MMKV.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 3F811D3AC87F4D64B1375E5A914346DB;
 			remoteInfo = MMKV;
@@ -210,91 +210,91 @@
 		};
 		94D63040EA04EFA55079780E58D78432 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7B93DB6E091282CF00A0E9FCEE1AB17A /* YogaKit.xcodeproj */;
+			containerPortal = BF7265929B625E4D4573A7CBB55A4242 /* YogaKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 0329F50521131A4BC4034736FA91D109;
 			remoteInfo = YogaKit;
 		};
 		9AB979851500562D50A1412D51C7E4D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F87C57375A6241E0397CC5AB58C2CA08 /* fishhook.xcodeproj */;
+			containerPortal = 9B2DC7D4E21E5517F1DED3778DB3CA65 /* fishhook.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = ADD6974CA0D12DB719FEB114A3109761;
 			remoteInfo = fishhook;
 		};
 		A6840A7890D999B00C371DC2271D97BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2E429D3F004DBF15567320EF65B7B00C /* Texture.xcodeproj */;
+			containerPortal = ECCCEDA57954A954F3CCBB4D99E6D8D5 /* Texture.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 6C96BA65ED37B8D7A14F109FC98B8C4A;
 			remoteInfo = Texture;
 		};
 		AB7536AA97A4C6D82006CC123DC9C3A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DF9670FF35C3D894BE0C34898CA941BF /* Toast.xcodeproj */;
+			containerPortal = 8E2224AC5E9DBD1F6BDDDD195C773E90 /* Toast.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 33C24699A9A19E75BC1DA302FBB8EA84;
 			remoteInfo = Toast;
 		};
 		BAB536A9A04B9ECFE50C070209708E12 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A3CEF43DC539137E2E581FCC0ADF209D /* GDPerformanceView.xcodeproj */;
+			containerPortal = C39350536F40A9B4B3A826DDA47693DC /* GDPerformanceView.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = C43C09050575BD770FE7B06A65C88FAF;
 			remoteInfo = GDPerformanceView;
 		};
 		C3D15EB96BDFCF593D8AD8DB5A489438 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 09D0D0A1EFE39463BE57CB5BA434C5A3 /* YTKNetwork.xcodeproj */;
+			containerPortal = AF2132AB3FCA2DB23F467FAE2BED0403 /* YTKNetwork.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 13DEDD4CF74A98558BAA9DBE7A6044BF;
 			remoteInfo = YTKNetwork;
 		};
 		C4840FF5B5243D0287FCD9B9C1ABEF72 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8DB46F6DB903D78A9D29E60963A5FA12 /* LayoutInspector.xcodeproj */;
+			containerPortal = 2022E86BED03F872D8A5432E6DE52017 /* LayoutInspector.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = AC7C558203F7E3C618089877C3B1768E;
 			remoteInfo = LayoutInspector;
 		};
 		CF28418FFFD0B0A97514C1F52D67AB26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BC08806EFC311F9020FEA37B7A0C86EA /* AFNetworking.xcodeproj */;
+			containerPortal = 9BCE7134A26182AB1A2F9F058103DC45 /* AFNetworking.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = B561AD1B13C486A61C9BF66B4E6D8F89;
 			remoteInfo = AFNetworking;
 		};
 		D2AD0198FF293EF6297E24FA67A1B2F9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 22D22FEC8A376A3FCF835B18E8927CFF /* YYCache.xcodeproj */;
+			containerPortal = 6658BBCEB0ECC4B88B4C358643C55CDA /* YYCache.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 73B4EFD655BE7A67C6F5C5E6F514BDB9;
 			remoteInfo = YYCache;
 		};
 		D6D7F5065D3B4EB647609C8506B9BECE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = BA1F67BCFC0DC137FDD708C703510793 /* PINCache.xcodeproj */;
+			containerPortal = 929543823E266D993CA507D62A341A35 /* PINCache.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = E6F935A450178DA7515843CC4A631A11;
 			remoteInfo = PINCache;
 		};
 		DA377DBECD0424B6DC7733382E18DFC5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 98022A505DDF1D149FB7BF4F365B6A24 /* libextobjc.xcodeproj */;
+			containerPortal = 57DFFEC8AA3D498C18793F141E46A8B0 /* libextobjc.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 1D69075454E0C276645E4B3FCC2A354E;
 			remoteInfo = libextobjc;
 		};
 		DB7CA5067A6AAB8FF4DBC4C8596DCE78 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FC4B1CC56600B1EDF92DA6FF8FD5E1D2 /* ReactiveObjC.xcodeproj */;
+			containerPortal = E97A9896C36FA2D574B89520B686461A /* ReactiveObjC.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 58630A911E82956281CDF1C822E7FC41;
 			remoteInfo = ReactiveObjC;
 		};
 		DECD26EC786791F3E65CBA0ADA6C0F3C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1AE2BDBF03DFA6C678DB20B2C280CA41 /* Yoga.xcodeproj */;
+			containerPortal = 4ACA6B4F8BAF3BA240FDA7E9981FA0AD /* Yoga.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 8DB658880A3F558549A84D99BCFADCBC;
 			remoteInfo = Yoga;
@@ -308,21 +308,21 @@
 		};
 		F03D9ADFE4E965D0B57EEAF78CC9ACC5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 322CE91227283B7A33E0F6AC194DFEAC /* lottie-ios.xcodeproj */;
+			containerPortal = 95EB3F4DF8485B1980E4BBDE8E5C4177 /* lottie-ios.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 2FFD4CF15B40CE17E04F3BC6AAF7035A;
 			remoteInfo = "lottie-ios";
 		};
 		F484DCE6ACBB849F9612B85E57229EBF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2BC69E5B344E9990D067CDB519C8D61F /* YYDispatchQueuePool.xcodeproj */;
+			containerPortal = 9FBF4C67E520CFA5728014D1A5ED4830 /* YYDispatchQueuePool.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 14D3379E442FA9BF8A3C592328F82CD9;
 			remoteInfo = YYDispatchQueuePool;
 		};
 		FDCE9BD7A7C71CE2ECCFB2F1A5211183 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 75A9496EE348D98C0E132D30B3515606 /* ChameleonFramework.xcodeproj */;
+			containerPortal = E3F7461BE7AD78345F077428DBB2C1CE /* ChameleonFramework.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = A32FC00F1F734852154E040D84A825BE;
 			remoteInfo = ChameleonFramework;
@@ -331,77 +331,77 @@
 
 /* Begin PBXFileReference section */
 		0359655ADAD1587E8564FB90EDFC92BF /* Pods-ZDOpenSourceOCDemoUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZDOpenSourceOCDemoUITests-dummy.m"; sourceTree = "<group>"; };
-		09C4B43A76824844831C801D3DF2E60F /* RTRootNavigationController */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RTRootNavigationController; path = RTRootNavigationController.xcodeproj; sourceTree = "<group>"; };
-		09D0D0A1EFE39463BE57CB5BA434C5A3 /* YTKNetwork */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YTKNetwork; path = YTKNetwork.xcodeproj; sourceTree = "<group>"; };
-		0C1090C4FC9FB79071EFE19A4F3ED7AD /* Masonry */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Masonry; path = Masonry.xcodeproj; sourceTree = "<group>"; };
+		0442D6927944AB3C53461C33AE0B8999 /* YYModel */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YYModel; path = YYModel.xcodeproj; sourceTree = "<group>"; };
+		0BD0D9BB526A3E2857AAB620D09DF2F3 /* ZIKRouter */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZIKRouter; path = ZIKRouter.xcodeproj; sourceTree = "<group>"; };
 		0D5499249F459C45ED07A35513810E41 /* Pods-ZDOpenSourceOCDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZDOpenSourceOCDemo-dummy.m"; sourceTree = "<group>"; };
-		11B86F3316EF5A803A365D2F710022B3 /* MMKV */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MMKV; path = MMKV.xcodeproj; sourceTree = "<group>"; };
 		12F92C6A70C465C3AD08DDE3A513AF31 /* Pods-ZDOpenSourceOCDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		17B31F6DB14B7DD06A83A4C33972846F /* JLRoutes */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JLRoutes; path = JLRoutes.xcodeproj; sourceTree = "<group>"; };
-		1800F762E7396A59E0535D9FF0753806 /* PromiseKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromiseKit; path = PromiseKit.xcodeproj; sourceTree = "<group>"; };
+		150968224784EF0DCA4145502076B517 /* PromiseKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PromiseKit; path = PromiseKit.xcodeproj; sourceTree = "<group>"; };
+		175DC21B1E5AF132B7C17B16ED5FB698 /* Typhoon */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Typhoon; path = Typhoon.xcodeproj; sourceTree = "<group>"; };
 		18F09F1160099D679D349F6ACB996DC1 /* Pods-ZDOpenSourceOCDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		1AE2BDBF03DFA6C678DB20B2C280CA41 /* Yoga */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Yoga; path = Yoga.xcodeproj; sourceTree = "<group>"; };
+		1B1D167F9250EEBD16755C969AF9FBFA /* cocore */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocore; path = cocore.xcodeproj; sourceTree = "<group>"; };
+		1BE5852BA23667CF299637CF251543B6 /* SVProgressHUD */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SVProgressHUD; path = SVProgressHUD.xcodeproj; sourceTree = "<group>"; };
 		1FC6C8F916CCD0B13CDF3F12B2D5BE6A /* Pods-ZDOpenSourceOCDemoUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZDOpenSourceOCDemoUITests.modulemap"; sourceTree = "<group>"; };
-		22ACFA9AFF6E9F48C96CC672EB71BCAF /* ZIKRouter */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZIKRouter; path = ZIKRouter.xcodeproj; sourceTree = "<group>"; };
-		22D22FEC8A376A3FCF835B18E8927CFF /* YYCache */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YYCache; path = YYCache.xcodeproj; sourceTree = "<group>"; };
+		2022E86BED03F872D8A5432E6DE52017 /* LayoutInspector */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LayoutInspector; path = LayoutInspector.xcodeproj; sourceTree = "<group>"; };
+		208916051D4EAA9B5E75AC3596425DB4 /* LinqToObjectiveC */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LinqToObjectiveC; path = LinqToObjectiveC.xcodeproj; sourceTree = "<group>"; };
 		2A44C9AC1D01F9027D9543A83B97134C /* Pods-ZDOpenSourceOCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		2BC69E5B344E9990D067CDB519C8D61F /* YYDispatchQueuePool */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YYDispatchQueuePool; path = YYDispatchQueuePool.xcodeproj; sourceTree = "<group>"; };
-		2E429D3F004DBF15567320EF65B7B00C /* Texture */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Texture; path = Texture.xcodeproj; sourceTree = "<group>"; };
-		2EA1AA9AA667C2E9FAAE98D8D611A0CE /* ZDNetWorkHelper */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZDNetWorkHelper; path = ZDNetWorkHelper.xcodeproj; sourceTree = "<group>"; };
-		31BD7AAC12BA2FEEE6F0F9054EFBF820 /* libffi-core */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "libffi-core"; path = "libffi-core.xcodeproj"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		322CE91227283B7A33E0F6AC194DFEAC /* lottie-ios */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "lottie-ios"; path = "lottie-ios.xcodeproj"; sourceTree = "<group>"; };
-		33B8CEC92006F0C07029CC0A7DAC89A6 /* RSSwizzle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSSwizzle; path = RSSwizzle.xcodeproj; sourceTree = "<group>"; };
-		39D5B823305DDC4DC2664E92055F3B82 /* coobjc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = coobjc; path = coobjc.xcodeproj; sourceTree = "<group>"; };
-		405D40C96D2048048F748D5BC2E16363 /* FLEX */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FLEX; path = FLEX.xcodeproj; sourceTree = "<group>"; };
+		37F593E6E3103CDA77DBCA05030F0455 /* Objection */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Objection; path = Objection.xcodeproj; sourceTree = "<group>"; };
+		3B8EF28654AC065757C5912AAE135CDE /* ResumableAssert */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResumableAssert; path = ResumableAssert.xcodeproj; sourceTree = "<group>"; };
+		3D069A89822B23261267809216247DBF /* RSSwizzle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RSSwizzle; path = RSSwizzle.xcodeproj; sourceTree = "<group>"; };
+		476F6195AE954DCC765EA28D5BB595F0 /* IGListKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IGListKit; path = IGListKit.xcodeproj; sourceTree = "<group>"; };
 		478E8BE91F538314E3701CD33CCEF8F5 /* Pods-ZDOpenSourceOCDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZDOpenSourceOCDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		485F3631B3E70A4E07B7534D29821005 /* Pods-ZDOpenSourceOCDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZDOpenSourceOCDemo-umbrella.h"; sourceTree = "<group>"; };
 		4875271D1174341EB36D4C917F02CA71 /* Pods_ZDOpenSourceOCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZDOpenSourceOCDemo.framework; path = "Pods-ZDOpenSourceOCDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A4F27F84D51B2C75BDC1BCD194AD71F /* PINRemoteImage */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PINRemoteImage; path = PINRemoteImage.xcodeproj; sourceTree = "<group>"; };
+		4ACA6B4F8BAF3BA240FDA7E9981FA0AD /* Yoga */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Yoga; path = Yoga.xcodeproj; sourceTree = "<group>"; };
 		4B199CB2A0BC763BED021165D39E8774 /* Pods-ZDOpenSourceOCDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZDOpenSourceOCDemo-resources.sh"; sourceTree = "<group>"; };
 		4D1AFF2F1566A3E4669BE849803DBA99 /* Pods-ZDOpenSourceOCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemo.release.xcconfig"; sourceTree = "<group>"; };
-		4EFA61566B9C806B0432BFD5ECDF9A24 /* DirectoryWatchdog */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DirectoryWatchdog; path = DirectoryWatchdog.xcodeproj; sourceTree = "<group>"; };
 		51E1B9164980C889B7D3BE9D8AE6B82F /* Pods-ZDOpenSourceOCDemoUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZDOpenSourceOCDemoUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		578D75DF4949E4253A63366F94EFD3CA /* ObjectiveSugar */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectiveSugar; path = ObjectiveSugar.xcodeproj; sourceTree = "<group>"; };
+		54A55265E68EC1BD62EB399419677101 /* ZDNetWorkHelper */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZDNetWorkHelper; path = ZDNetWorkHelper.xcodeproj; sourceTree = "<group>"; };
+		57DFFEC8AA3D498C18793F141E46A8B0 /* libextobjc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libextobjc; path = libextobjc.xcodeproj; sourceTree = "<group>"; };
 		5D712C9D695C597F09F3C6FCBB2B3556 /* Pods-ZDOpenSourceOCDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZDOpenSourceOCDemo-frameworks.sh"; sourceTree = "<group>"; };
-		6370B89FECCEDD0C3C434630BB3908B2 /* Typhoon */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Typhoon; path = Typhoon.xcodeproj; sourceTree = "<group>"; };
+		635DCBFC027CA223F4C56D9E86BC7408 /* MMKV */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MMKV; path = MMKV.xcodeproj; sourceTree = "<group>"; };
 		643C58B5E1C79DCF825217213B57034C /* Pods_ZDOpenSourceOCDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZDOpenSourceOCDemoTests.framework; path = "Pods-ZDOpenSourceOCDemoTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6609404B61554D46E385838191FB1164 /* cocore */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocore; path = cocore.xcodeproj; sourceTree = "<group>"; };
-		70DA081B7BF96D83E66C95FAB1CF63C9 /* ResumableAssert */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResumableAssert; path = ResumableAssert.xcodeproj; sourceTree = "<group>"; };
+		6658BBCEB0ECC4B88B4C358643C55CDA /* YYCache */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YYCache; path = YYCache.xcodeproj; sourceTree = "<group>"; };
 		74D8C966207A36BE882007BF9C400648 /* Pods-ZDOpenSourceOCDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemoTests.release.xcconfig"; sourceTree = "<group>"; };
-		75A9496EE348D98C0E132D30B3515606 /* ChameleonFramework */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChameleonFramework; path = ChameleonFramework.xcodeproj; sourceTree = "<group>"; };
+		76C1F7A31E9944113B8863AFE85AED7B /* MBProgressHUD */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MBProgressHUD; path = MBProgressHUD.xcodeproj; sourceTree = "<group>"; };
 		77518AF0567CCD117C5C74FBCEAF9E73 /* Pods-ZDOpenSourceOCDemoTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZDOpenSourceOCDemoTests-Info.plist"; sourceTree = "<group>"; };
-		7A410635DDF5A288F10937CB2C2E8DE2 /* IGListKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = IGListKit; path = IGListKit.xcodeproj; sourceTree = "<group>"; };
 		7B7B374AEA5813580CDC85F2EB22010E /* Pods_ZDOpenSourceOCDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ZDOpenSourceOCDemoUITests.framework; path = "Pods-ZDOpenSourceOCDemoUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B93DB6E091282CF00A0E9FCEE1AB17A /* YogaKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YogaKit; path = YogaKit.xcodeproj; sourceTree = "<group>"; };
 		835EDF3785B0F38CBE334DF9139EB704 /* Pods-ZDOpenSourceOCDemoUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZDOpenSourceOCDemoUITests-umbrella.h"; sourceTree = "<group>"; };
-		889201D4EC878F2F3272663187216EE4 /* YYModel */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YYModel; path = YYModel.xcodeproj; sourceTree = "<group>"; };
-		892547C39FA22BA0B73D5D1AB00C1059 /* PINOperation */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PINOperation; path = PINOperation.xcodeproj; sourceTree = "<group>"; };
+		83B277705263CC0212EAD60967351431 /* RTRootNavigationController */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RTRootNavigationController; path = RTRootNavigationController.xcodeproj; sourceTree = "<group>"; };
+		83DE32C5DE8CDEEB3C9FA1F7427931C2 /* Masonry */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Masonry; path = Masonry.xcodeproj; sourceTree = "<group>"; };
 		8AB4305D0DFD4495715209208F21BA34 /* Pods-ZDOpenSourceOCDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZDOpenSourceOCDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8B6619C80DDAA7E7CAA03E0C95402419 /* RDVTabBarController */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RDVTabBarController; path = RDVTabBarController.xcodeproj; sourceTree = "<group>"; };
-		8DB46F6DB903D78A9D29E60963A5FA12 /* LayoutInspector */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LayoutInspector; path = LayoutInspector.xcodeproj; sourceTree = "<group>"; };
+		8E2224AC5E9DBD1F6BDDDD195C773E90 /* Toast */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Toast; path = Toast.xcodeproj; sourceTree = "<group>"; };
 		91C7641911562F9EDC9E6E7EDAAA115C /* Pods-ZDOpenSourceOCDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZDOpenSourceOCDemo.modulemap"; sourceTree = "<group>"; };
-		98022A505DDF1D149FB7BF4F365B6A24 /* libextobjc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libextobjc; path = libextobjc.xcodeproj; sourceTree = "<group>"; };
+		929543823E266D993CA507D62A341A35 /* PINCache */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PINCache; path = PINCache.xcodeproj; sourceTree = "<group>"; };
+		95EB3F4DF8485B1980E4BBDE8E5C4177 /* lottie-ios */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "lottie-ios"; path = "lottie-ios.xcodeproj"; sourceTree = "<group>"; };
 		9A1D9BF2EA52FB6FE6236D58FEEAA94D /* Pods-ZDOpenSourceOCDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZDOpenSourceOCDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9A52B5FD09551A6FD08A29DDE76EDD8D /* FLEX */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FLEX; path = FLEX.xcodeproj; sourceTree = "<group>"; };
+		9B2DC7D4E21E5517F1DED3778DB3CA65 /* fishhook */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = fishhook; path = fishhook.xcodeproj; sourceTree = "<group>"; };
+		9B6DFA8DB4324215AF3728EA8A2EA4E8 /* libffi-core */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "libffi-core"; path = "libffi-core.xcodeproj"; sourceTree = "<group>"; };
+		9BCE7134A26182AB1A2F9F058103DC45 /* AFNetworking */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking; path = AFNetworking.xcodeproj; sourceTree = "<group>"; };
+		9C8FB6D3CA7FE71D822AF8632571369F /* ZDToolKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZDToolKit; path = ZDToolKit.xcodeproj; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FBF4C67E520CFA5728014D1A5ED4830 /* YYDispatchQueuePool */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YYDispatchQueuePool; path = YYDispatchQueuePool.xcodeproj; sourceTree = "<group>"; };
 		9FD3B80495F0FD6FF150CA603099D900 /* Pods-ZDOpenSourceOCDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZDOpenSourceOCDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		A12764CD1A0A8BBCAC099332C64E12B0 /* Pods-ZDOpenSourceOCDemoUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZDOpenSourceOCDemoUITests-Info.plist"; sourceTree = "<group>"; };
+		A2973E048BD55BD50E8EFA9504ADDEE1 /* DirectoryWatchdog */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DirectoryWatchdog; path = DirectoryWatchdog.xcodeproj; sourceTree = "<group>"; };
 		A2DAC54ADA4124542A1E1A3B15A83D54 /* Pods-ZDOpenSourceOCDemoTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ZDOpenSourceOCDemoTests.modulemap"; sourceTree = "<group>"; };
-		A3CEF43DC539137E2E581FCC0ADF209D /* GDPerformanceView */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GDPerformanceView; path = GDPerformanceView.xcodeproj; sourceTree = "<group>"; };
-		A695172E78D6FA312D0428DDC83D6257 /* SVProgressHUD */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SVProgressHUD; path = SVProgressHUD.xcodeproj; sourceTree = "<group>"; };
-		B0DF42FF4B2568890E501B08321B5D26 /* ZDToolKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZDToolKit; path = ZDToolKit.xcodeproj; sourceTree = "<group>"; };
+		A3A5A2E09E6F11E7371A345C7233A5F7 /* ObjectiveSugar */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ObjectiveSugar; path = ObjectiveSugar.xcodeproj; sourceTree = "<group>"; };
+		ABC4CD14C1F2D2EE16A2761E1AB4C8FC /* coobjc */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = coobjc; path = coobjc.xcodeproj; sourceTree = "<group>"; };
+		AF2132AB3FCA2DB23F467FAE2BED0403 /* YTKNetwork */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YTKNetwork; path = YTKNetwork.xcodeproj; sourceTree = "<group>"; };
 		B106200D32A74C546AB9B9AC39B8DE0A /* Pods-ZDOpenSourceOCDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZDOpenSourceOCDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		BA1F67BCFC0DC137FDD708C703510793 /* PINCache */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PINCache; path = PINCache.xcodeproj; sourceTree = "<group>"; };
-		BAFA2F3D472D1853D501F3330824999B /* Objection */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Objection; path = Objection.xcodeproj; sourceTree = "<group>"; };
-		BC08806EFC311F9020FEA37B7A0C86EA /* AFNetworking */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AFNetworking; path = AFNetworking.xcodeproj; sourceTree = "<group>"; };
+		B8818B8BCD8C2B291001351E392B729C /* JLRoutes */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JLRoutes; path = JLRoutes.xcodeproj; sourceTree = "<group>"; };
+		BF7265929B625E4D4573A7CBB55A4242 /* YogaKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = YogaKit; path = YogaKit.xcodeproj; sourceTree = "<group>"; };
+		C39350536F40A9B4B3A826DDA47693DC /* GDPerformanceView */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GDPerformanceView; path = GDPerformanceView.xcodeproj; sourceTree = "<group>"; };
+		D319F7FB171552876E3910AAE921FE85 /* PINOperation */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PINOperation; path = PINOperation.xcodeproj; sourceTree = "<group>"; };
 		D7EE2FACA684E92030612B822B20ED2E /* Pods-ZDOpenSourceOCDemoUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZDOpenSourceOCDemoUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D9EDA6BB63DEA130B0E140717E95A1BE /* Pods-ZDOpenSourceOCDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZDOpenSourceOCDemo-Info.plist"; sourceTree = "<group>"; };
-		DF9670FF35C3D894BE0C34898CA941BF /* Toast */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Toast; path = Toast.xcodeproj; sourceTree = "<group>"; };
-		E430C5B3C5BEC9B9B9279E2CDCBF420F /* MBProgressHUD */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MBProgressHUD; path = MBProgressHUD.xcodeproj; sourceTree = "<group>"; };
+		E3F7461BE7AD78345F077428DBB2C1CE /* ChameleonFramework */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ChameleonFramework; path = ChameleonFramework.xcodeproj; sourceTree = "<group>"; };
 		E59BEDBC40F2584C1ABAA21AAA00D7E4 /* Pods-ZDOpenSourceOCDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZDOpenSourceOCDemoTests-dummy.m"; sourceTree = "<group>"; };
-		F694BA7CCF54B30AEE314435CED940F1 /* LinqToObjectiveC */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LinqToObjectiveC; path = LinqToObjectiveC.xcodeproj; sourceTree = "<group>"; };
-		F87C57375A6241E0397CC5AB58C2CA08 /* fishhook */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = fishhook; path = fishhook.xcodeproj; sourceTree = "<group>"; };
-		FC4B1CC56600B1EDF92DA6FF8FD5E1D2 /* ReactiveObjC */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveObjC; path = ReactiveObjC.xcodeproj; sourceTree = "<group>"; };
+		E5A220DFEE42E42EC3992C5E7DAA1D0A /* PINRemoteImage */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PINRemoteImage; path = PINRemoteImage.xcodeproj; sourceTree = "<group>"; };
+		E97A9896C36FA2D574B89520B686461A /* ReactiveObjC */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveObjC; path = ReactiveObjC.xcodeproj; sourceTree = "<group>"; };
+		ECCCEDA57954A954F3CCBB4D99E6D8D5 /* Texture */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Texture; path = Texture.xcodeproj; sourceTree = "<group>"; };
+		ED8DF521DDD94D7DED45399E0F5197FA /* RDVTabBarController */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RDVTabBarController; path = RDVTabBarController.xcodeproj; sourceTree = "<group>"; };
 		FE826039A3827ECD63CC60747B624CCB /* Pods-ZDOpenSourceOCDemoTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ZDOpenSourceOCDemoTests-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -433,51 +433,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F58313D4F421C7262CFBF92E3A9C8B8 /* Pods */ = {
+		205B5C359D3D583906B27BAB47EBF206 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BC08806EFC311F9020FEA37B7A0C86EA /* AFNetworking */,
-				75A9496EE348D98C0E132D30B3515606 /* ChameleonFramework */,
-				6609404B61554D46E385838191FB1164 /* cocore */,
-				39D5B823305DDC4DC2664E92055F3B82 /* coobjc */,
-				4EFA61566B9C806B0432BFD5ECDF9A24 /* DirectoryWatchdog */,
-				F87C57375A6241E0397CC5AB58C2CA08 /* fishhook */,
-				405D40C96D2048048F748D5BC2E16363 /* FLEX */,
-				A3CEF43DC539137E2E581FCC0ADF209D /* GDPerformanceView */,
-				7A410635DDF5A288F10937CB2C2E8DE2 /* IGListKit */,
-				17B31F6DB14B7DD06A83A4C33972846F /* JLRoutes */,
-				8DB46F6DB903D78A9D29E60963A5FA12 /* LayoutInspector */,
-				98022A505DDF1D149FB7BF4F365B6A24 /* libextobjc */,
-				31BD7AAC12BA2FEEE6F0F9054EFBF820 /* libffi-core */,
-				F694BA7CCF54B30AEE314435CED940F1 /* LinqToObjectiveC */,
-				322CE91227283B7A33E0F6AC194DFEAC /* lottie-ios */,
-				0C1090C4FC9FB79071EFE19A4F3ED7AD /* Masonry */,
-				E430C5B3C5BEC9B9B9279E2CDCBF420F /* MBProgressHUD */,
-				11B86F3316EF5A803A365D2F710022B3 /* MMKV */,
-				BAFA2F3D472D1853D501F3330824999B /* Objection */,
-				578D75DF4949E4253A63366F94EFD3CA /* ObjectiveSugar */,
-				BA1F67BCFC0DC137FDD708C703510793 /* PINCache */,
-				892547C39FA22BA0B73D5D1AB00C1059 /* PINOperation */,
-				4A4F27F84D51B2C75BDC1BCD194AD71F /* PINRemoteImage */,
-				1800F762E7396A59E0535D9FF0753806 /* PromiseKit */,
-				8B6619C80DDAA7E7CAA03E0C95402419 /* RDVTabBarController */,
-				FC4B1CC56600B1EDF92DA6FF8FD5E1D2 /* ReactiveObjC */,
-				70DA081B7BF96D83E66C95FAB1CF63C9 /* ResumableAssert */,
-				33B8CEC92006F0C07029CC0A7DAC89A6 /* RSSwizzle */,
-				09C4B43A76824844831C801D3DF2E60F /* RTRootNavigationController */,
-				A695172E78D6FA312D0428DDC83D6257 /* SVProgressHUD */,
-				2E429D3F004DBF15567320EF65B7B00C /* Texture */,
-				DF9670FF35C3D894BE0C34898CA941BF /* Toast */,
-				6370B89FECCEDD0C3C434630BB3908B2 /* Typhoon */,
-				1AE2BDBF03DFA6C678DB20B2C280CA41 /* Yoga */,
-				7B93DB6E091282CF00A0E9FCEE1AB17A /* YogaKit */,
-				09D0D0A1EFE39463BE57CB5BA434C5A3 /* YTKNetwork */,
-				22D22FEC8A376A3FCF835B18E8927CFF /* YYCache */,
-				2BC69E5B344E9990D067CDB519C8D61F /* YYDispatchQueuePool */,
-				889201D4EC878F2F3272663187216EE4 /* YYModel */,
-				2EA1AA9AA667C2E9FAAE98D8D611A0CE /* ZDNetWorkHelper */,
-				B0DF42FF4B2568890E501B08321B5D26 /* ZDToolKit */,
-				22ACFA9AFF6E9F48C96CC672EB71BCAF /* ZIKRouter */,
+				9BCE7134A26182AB1A2F9F058103DC45 /* AFNetworking */,
+				E3F7461BE7AD78345F077428DBB2C1CE /* ChameleonFramework */,
+				1B1D167F9250EEBD16755C969AF9FBFA /* cocore */,
+				ABC4CD14C1F2D2EE16A2761E1AB4C8FC /* coobjc */,
+				A2973E048BD55BD50E8EFA9504ADDEE1 /* DirectoryWatchdog */,
+				9B2DC7D4E21E5517F1DED3778DB3CA65 /* fishhook */,
+				9A52B5FD09551A6FD08A29DDE76EDD8D /* FLEX */,
+				C39350536F40A9B4B3A826DDA47693DC /* GDPerformanceView */,
+				476F6195AE954DCC765EA28D5BB595F0 /* IGListKit */,
+				B8818B8BCD8C2B291001351E392B729C /* JLRoutes */,
+				2022E86BED03F872D8A5432E6DE52017 /* LayoutInspector */,
+				57DFFEC8AA3D498C18793F141E46A8B0 /* libextobjc */,
+				9B6DFA8DB4324215AF3728EA8A2EA4E8 /* libffi-core */,
+				208916051D4EAA9B5E75AC3596425DB4 /* LinqToObjectiveC */,
+				95EB3F4DF8485B1980E4BBDE8E5C4177 /* lottie-ios */,
+				83DE32C5DE8CDEEB3C9FA1F7427931C2 /* Masonry */,
+				76C1F7A31E9944113B8863AFE85AED7B /* MBProgressHUD */,
+				635DCBFC027CA223F4C56D9E86BC7408 /* MMKV */,
+				37F593E6E3103CDA77DBCA05030F0455 /* Objection */,
+				A3A5A2E09E6F11E7371A345C7233A5F7 /* ObjectiveSugar */,
+				929543823E266D993CA507D62A341A35 /* PINCache */,
+				D319F7FB171552876E3910AAE921FE85 /* PINOperation */,
+				E5A220DFEE42E42EC3992C5E7DAA1D0A /* PINRemoteImage */,
+				150968224784EF0DCA4145502076B517 /* PromiseKit */,
+				ED8DF521DDD94D7DED45399E0F5197FA /* RDVTabBarController */,
+				E97A9896C36FA2D574B89520B686461A /* ReactiveObjC */,
+				3B8EF28654AC065757C5912AAE135CDE /* ResumableAssert */,
+				3D069A89822B23261267809216247DBF /* RSSwizzle */,
+				83B277705263CC0212EAD60967351431 /* RTRootNavigationController */,
+				1BE5852BA23667CF299637CF251543B6 /* SVProgressHUD */,
+				ECCCEDA57954A954F3CCBB4D99E6D8D5 /* Texture */,
+				8E2224AC5E9DBD1F6BDDDD195C773E90 /* Toast */,
+				175DC21B1E5AF132B7C17B16ED5FB698 /* Typhoon */,
+				4ACA6B4F8BAF3BA240FDA7E9981FA0AD /* Yoga */,
+				BF7265929B625E4D4573A7CBB55A4242 /* YogaKit */,
+				AF2132AB3FCA2DB23F467FAE2BED0403 /* YTKNetwork */,
+				6658BBCEB0ECC4B88B4C358643C55CDA /* YYCache */,
+				9FBF4C67E520CFA5728014D1A5ED4830 /* YYDispatchQueuePool */,
+				0442D6927944AB3C53461C33AE0B8999 /* YYModel */,
+				54A55265E68EC1BD62EB399419677101 /* ZDNetWorkHelper */,
+				9C8FB6D3CA7FE71D822AF8632571369F /* ZDToolKit */,
+				0BD0D9BB526A3E2857AAB620D09DF2F3 /* ZIKRouter */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -549,7 +549,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				1F58313D4F421C7262CFBF92E3A9C8B8 /* Pods */,
+				205B5C359D3D583906B27BAB47EBF206 /* Pods */,
 				BFBAAF48C52EFE3785B1AA807D5B075B /* Products */,
 				94C039CEB6C90B26A727AF89F2B61C8D /* Targets Support Files */,
 			);
@@ -722,136 +722,137 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = BFBAAF48C52EFE3785B1AA807D5B075B /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProjectRef = 1AE2BDBF03DFA6C678DB20B2C280CA41 /* Yoga */;
+					ProjectRef = 9BCE7134A26182AB1A2F9F058103DC45 /* AFNetworking */;
 				},
 				{
-					ProjectRef = 7B93DB6E091282CF00A0E9FCEE1AB17A /* YogaKit */;
+					ProjectRef = E3F7461BE7AD78345F077428DBB2C1CE /* ChameleonFramework */;
 				},
 				{
-					ProjectRef = BC08806EFC311F9020FEA37B7A0C86EA /* AFNetworking */;
+					ProjectRef = A2973E048BD55BD50E8EFA9504ADDEE1 /* DirectoryWatchdog */;
 				},
 				{
-					ProjectRef = 75A9496EE348D98C0E132D30B3515606 /* ChameleonFramework */;
+					ProjectRef = 9A52B5FD09551A6FD08A29DDE76EDD8D /* FLEX */;
 				},
 				{
-					ProjectRef = 4EFA61566B9C806B0432BFD5ECDF9A24 /* DirectoryWatchdog */;
+					ProjectRef = C39350536F40A9B4B3A826DDA47693DC /* GDPerformanceView */;
 				},
 				{
-					ProjectRef = 405D40C96D2048048F748D5BC2E16363 /* FLEX */;
+					ProjectRef = 476F6195AE954DCC765EA28D5BB595F0 /* IGListKit */;
 				},
 				{
-					ProjectRef = A3CEF43DC539137E2E581FCC0ADF209D /* GDPerformanceView */;
+					ProjectRef = B8818B8BCD8C2B291001351E392B729C /* JLRoutes */;
 				},
 				{
-					ProjectRef = 7A410635DDF5A288F10937CB2C2E8DE2 /* IGListKit */;
+					ProjectRef = 2022E86BED03F872D8A5432E6DE52017 /* LayoutInspector */;
 				},
 				{
-					ProjectRef = 17B31F6DB14B7DD06A83A4C33972846F /* JLRoutes */;
+					ProjectRef = 208916051D4EAA9B5E75AC3596425DB4 /* LinqToObjectiveC */;
 				},
 				{
-					ProjectRef = 8DB46F6DB903D78A9D29E60963A5FA12 /* LayoutInspector */;
+					ProjectRef = 76C1F7A31E9944113B8863AFE85AED7B /* MBProgressHUD */;
 				},
 				{
-					ProjectRef = F694BA7CCF54B30AEE314435CED940F1 /* LinqToObjectiveC */;
+					ProjectRef = 635DCBFC027CA223F4C56D9E86BC7408 /* MMKV */;
 				},
 				{
-					ProjectRef = E430C5B3C5BEC9B9B9279E2CDCBF420F /* MBProgressHUD */;
+					ProjectRef = 83DE32C5DE8CDEEB3C9FA1F7427931C2 /* Masonry */;
 				},
 				{
-					ProjectRef = 11B86F3316EF5A803A365D2F710022B3 /* MMKV */;
+					ProjectRef = 37F593E6E3103CDA77DBCA05030F0455 /* Objection */;
 				},
 				{
-					ProjectRef = 0C1090C4FC9FB79071EFE19A4F3ED7AD /* Masonry */;
+					ProjectRef = A3A5A2E09E6F11E7371A345C7233A5F7 /* ObjectiveSugar */;
 				},
 				{
-					ProjectRef = BAFA2F3D472D1853D501F3330824999B /* Objection */;
+					ProjectRef = 929543823E266D993CA507D62A341A35 /* PINCache */;
 				},
 				{
-					ProjectRef = 578D75DF4949E4253A63366F94EFD3CA /* ObjectiveSugar */;
+					ProjectRef = D319F7FB171552876E3910AAE921FE85 /* PINOperation */;
 				},
 				{
-					ProjectRef = BA1F67BCFC0DC137FDD708C703510793 /* PINCache */;
+					ProjectRef = E5A220DFEE42E42EC3992C5E7DAA1D0A /* PINRemoteImage */;
 				},
 				{
-					ProjectRef = 892547C39FA22BA0B73D5D1AB00C1059 /* PINOperation */;
+					ProjectRef = 150968224784EF0DCA4145502076B517 /* PromiseKit */;
 				},
 				{
-					ProjectRef = 4A4F27F84D51B2C75BDC1BCD194AD71F /* PINRemoteImage */;
+					ProjectRef = ED8DF521DDD94D7DED45399E0F5197FA /* RDVTabBarController */;
 				},
 				{
-					ProjectRef = 1800F762E7396A59E0535D9FF0753806 /* PromiseKit */;
+					ProjectRef = 3D069A89822B23261267809216247DBF /* RSSwizzle */;
 				},
 				{
-					ProjectRef = 8B6619C80DDAA7E7CAA03E0C95402419 /* RDVTabBarController */;
+					ProjectRef = 83B277705263CC0212EAD60967351431 /* RTRootNavigationController */;
 				},
 				{
-					ProjectRef = 33B8CEC92006F0C07029CC0A7DAC89A6 /* RSSwizzle */;
+					ProjectRef = E97A9896C36FA2D574B89520B686461A /* ReactiveObjC */;
 				},
 				{
-					ProjectRef = 09C4B43A76824844831C801D3DF2E60F /* RTRootNavigationController */;
+					ProjectRef = 3B8EF28654AC065757C5912AAE135CDE /* ResumableAssert */;
 				},
 				{
-					ProjectRef = FC4B1CC56600B1EDF92DA6FF8FD5E1D2 /* ReactiveObjC */;
+					ProjectRef = 1BE5852BA23667CF299637CF251543B6 /* SVProgressHUD */;
 				},
 				{
-					ProjectRef = 70DA081B7BF96D83E66C95FAB1CF63C9 /* ResumableAssert */;
+					ProjectRef = ECCCEDA57954A954F3CCBB4D99E6D8D5 /* Texture */;
 				},
 				{
-					ProjectRef = A695172E78D6FA312D0428DDC83D6257 /* SVProgressHUD */;
+					ProjectRef = 8E2224AC5E9DBD1F6BDDDD195C773E90 /* Toast */;
 				},
 				{
-					ProjectRef = 2E429D3F004DBF15567320EF65B7B00C /* Texture */;
+					ProjectRef = 175DC21B1E5AF132B7C17B16ED5FB698 /* Typhoon */;
 				},
 				{
-					ProjectRef = DF9670FF35C3D894BE0C34898CA941BF /* Toast */;
+					ProjectRef = AF2132AB3FCA2DB23F467FAE2BED0403 /* YTKNetwork */;
 				},
 				{
-					ProjectRef = 6370B89FECCEDD0C3C434630BB3908B2 /* Typhoon */;
+					ProjectRef = 6658BBCEB0ECC4B88B4C358643C55CDA /* YYCache */;
 				},
 				{
-					ProjectRef = 09D0D0A1EFE39463BE57CB5BA434C5A3 /* YTKNetwork */;
+					ProjectRef = 9FBF4C67E520CFA5728014D1A5ED4830 /* YYDispatchQueuePool */;
 				},
 				{
-					ProjectRef = 22D22FEC8A376A3FCF835B18E8927CFF /* YYCache */;
+					ProjectRef = 0442D6927944AB3C53461C33AE0B8999 /* YYModel */;
 				},
 				{
-					ProjectRef = 2BC69E5B344E9990D067CDB519C8D61F /* YYDispatchQueuePool */;
+					ProjectRef = 4ACA6B4F8BAF3BA240FDA7E9981FA0AD /* Yoga */;
 				},
 				{
-					ProjectRef = 889201D4EC878F2F3272663187216EE4 /* YYModel */;
+					ProjectRef = BF7265929B625E4D4573A7CBB55A4242 /* YogaKit */;
 				},
 				{
-					ProjectRef = 2EA1AA9AA667C2E9FAAE98D8D611A0CE /* ZDNetWorkHelper */;
+					ProjectRef = 54A55265E68EC1BD62EB399419677101 /* ZDNetWorkHelper */;
 				},
 				{
-					ProjectRef = B0DF42FF4B2568890E501B08321B5D26 /* ZDToolKit */;
+					ProjectRef = 9C8FB6D3CA7FE71D822AF8632571369F /* ZDToolKit */;
 				},
 				{
-					ProjectRef = 22ACFA9AFF6E9F48C96CC672EB71BCAF /* ZIKRouter */;
+					ProjectRef = 0BD0D9BB526A3E2857AAB620D09DF2F3 /* ZIKRouter */;
 				},
 				{
-					ProjectRef = 6609404B61554D46E385838191FB1164 /* cocore */;
+					ProjectRef = 1B1D167F9250EEBD16755C969AF9FBFA /* cocore */;
 				},
 				{
-					ProjectRef = 39D5B823305DDC4DC2664E92055F3B82 /* coobjc */;
+					ProjectRef = ABC4CD14C1F2D2EE16A2761E1AB4C8FC /* coobjc */;
 				},
 				{
-					ProjectRef = F87C57375A6241E0397CC5AB58C2CA08 /* fishhook */;
+					ProjectRef = 9B2DC7D4E21E5517F1DED3778DB3CA65 /* fishhook */;
 				},
 				{
-					ProjectRef = 98022A505DDF1D149FB7BF4F365B6A24 /* libextobjc */;
+					ProjectRef = 57DFFEC8AA3D498C18793F141E46A8B0 /* libextobjc */;
 				},
 				{
-					ProjectRef = 31BD7AAC12BA2FEEE6F0F9054EFBF820 /* libffi-core */;
+					ProjectRef = 9B6DFA8DB4324215AF3728EA8A2EA4E8 /* libffi-core */;
 				},
 				{
-					ProjectRef = 322CE91227283B7A33E0F6AC194DFEAC /* lottie-ios */;
+					ProjectRef = 95EB3F4DF8485B1980E4BBDE8E5C4177 /* lottie-ios */;
 				},
 			);
 			projectRoot = "";
@@ -1146,6 +1147,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1244,6 +1246,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1279,6 +1282,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1314,6 +1318,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1408,6 +1413,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1443,6 +1449,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

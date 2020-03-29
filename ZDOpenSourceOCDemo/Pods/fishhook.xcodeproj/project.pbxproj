@@ -124,6 +124,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 432CE249B8F5560B7A40704C914F7387;
 			productRefGroup = A71BE48E5C34AB7DC97A405A14D7CAA3 /* Products */;
@@ -152,6 +153,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E21C72A727E10ED097D0CEF280822BBD /* fishhook.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -235,6 +237,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E21C72A727E10ED097D0CEF280822BBD /* fishhook.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

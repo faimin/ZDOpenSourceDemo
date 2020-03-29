@@ -122,6 +122,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = FABD0E08E49FF108A30FA30D6A35B342;
 			productRefGroup = 813A4CAF1A0B351D00C06EFA1047AEED /* Products */;
@@ -274,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8996626276F774FF0E9908B8026047E2 /* ResumableAssert.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -297,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8996626276F774FF0E9908B8026047E2 /* ResumableAssert.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

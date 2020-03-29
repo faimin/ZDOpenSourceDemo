@@ -163,6 +163,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 15EE2500829D1135ACCEA737BC0BEC43;
 			productRefGroup = EC287D933A5B8822AFA7870E403CE523 /* Products */;
@@ -196,6 +197,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D556C030F8187C633A5092B4593D214 /* ObjectiveSugar.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -279,6 +281,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D556C030F8187C633A5092B4593D214 /* ObjectiveSugar.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";

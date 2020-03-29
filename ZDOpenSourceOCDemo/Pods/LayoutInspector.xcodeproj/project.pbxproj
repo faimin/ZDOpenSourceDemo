@@ -245,6 +245,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 5F4895BF18D7E23E1433AD710A340349;
 			productRefGroup = EAF8CFF615E8257867C95864C9B7443F /* Products */;
@@ -316,6 +317,7 @@
 			baseConfigurationReference = 80C2AF241791B752B38D29557CA4FC40 /* LayoutInspector.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -349,6 +351,7 @@
 			baseConfigurationReference = 80C2AF241791B752B38D29557CA4FC40 /* LayoutInspector.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
