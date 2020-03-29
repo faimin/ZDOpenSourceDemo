@@ -113,15 +113,28 @@ end
 # https://github.com/CocoaPods/CocoaPods/issues/8604
 post_install do |installer|
   # binding.pry  #debug
-    installer.pod_target_subprojects.flat_map { |p| p.targets }.each do |target|
-        target.build_configurations.each do |config|
-            if target.name == 'LayoutKit'
-                config.build_settings['SWIFT_VERSION'] = '4.1'
-            elsif target.name == 'AlamofireObjectMapper'
-              #config.build_settings['SWIFT_VERSION'] = '4.2'
-            end
+#  installer.pod_target_subprojects.flat_map { |p| p.targets }.each do |target|
+#      target.build_configurations.each do |config|
+#          if target.name == 'LayoutKit'
+#              config.build_settings['SWIFT_VERSION'] = '4.1'
+#          elsif target.name == 'AlamofireObjectMapper'
+#            #config.build_settings['SWIFT_VERSION'] = '4.2'
+#          end
+#      end
+#  end
+  
+  installer.generated_projects.each do |project|
+    project.targets.each do |target|
+      #puts target.name
+      target.build_configurations.each do |config|
+        if target.name == 'LayoutKit'
+            config.build_settings['SWIFT_VERSION'] = '4.1'
+        elsif target.name == 'AlamofireObjectMapper'
+          #config.build_settings['SWIFT_VERSION'] = '4.2'
         end
+      end
     end
+  end
 end
 
 

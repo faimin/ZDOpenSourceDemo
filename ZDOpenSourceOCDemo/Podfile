@@ -173,15 +173,21 @@ end
 #关闭`This block declaration is not a prototype,Insert ‘void'`警告
 #config.build_settings['CLANG_WARN_STRICT_PROTOTYPES'] = 'NO'
 post_install do |installer|
-  
-    #binding.pry
-  
-#    installer.pod_targets.each do |target|
-#        target.build_configurations.each do |config|
-#            #关闭block内直接引用全局变量的警告
-#            config.build_settings['CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'] = 'NO'
-#        end
+  #binding.pry
+  installer.generated_projects.each do |project|
+    project.targets.each do |target|
+      #puts target.name
+      target.build_configurations.each do |config|
+          #关闭block内直接引用全局变量的警告
+          config.build_settings['CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'] = 'NO'
+      end
+    end
+  end
+      
+#  installer.pod_targets.each do |target|
+#    target.build_configurations.each do |config|
+#      config.build_settings['CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'] = 'NO'
 #    end
-
+#  end
 end
 
