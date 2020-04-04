@@ -169,6 +169,23 @@ pre_install do |installer|
   end
 end
 
+#https://github.com/CocoaPods/CocoaPods/issues/9099
+#dynamic_frameworks = ['PromiseKit', 'Yoga', 'YogaKit']
+#pre_install do |installer|
+#  installer.pod_targets.each do |pod|
+#    puts "pod 名称 = #{pod.name}"
+#    if !dynamic_frameworks.include?(pod.name) and !pod.build_as_static_framework?
+#      puts "Forcing static_framework true for #{pod.name}"
+#      def pod.build_as_static_framework?
+#        true
+#      end
+#      def pod.build_as_dynamic_framework?
+#        false
+#      end
+#    end
+#  end
+#end
+
 #config.build_settings['APPLICATION_EXTENSION_API_ONLY'] = 'NO' #可以让pod中的类调用[UIApplication shareApplication]
 #关闭`This block declaration is not a prototype,Insert ‘void'`警告
 #config.build_settings['CLANG_WARN_STRICT_PROTOTYPES'] = 'NO'
